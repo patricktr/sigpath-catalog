@@ -1,0 +1,56 @@
+name: Publish catalog
+
+# Build the snapshot from devices/** and publish dist/ (manifest.json +
+# catalog-<rev>.json) to GitHub Pages — the CDN the app's pull client syncs from.
+# Source of truth stays in git; dist/ is ephemeral CI output, never committed.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "devices/**"
+      - "connectors/**"
+      - "scripts/**"
+      - ".github/workflows/publish.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one publish at a time; a newer push supersedes an in-flight one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Zero-dependency build: validates every device + connector, stamps
+      # rev/contentHash, writes dist/catalog-<rev>.json + dist/manifest.json.
+      - name: Build snapshot
+        run: node scripts/build-snapshot.mjs
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload dist as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
