@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Samsung",
+  "model": "Samsung QM85R",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.samsung.com/us/business/support/owners/product/qmr-series-digital-signage-qm85r/",
+  "confidence": "medium",
+  "notes": "Port listing cross-confirmed from Samsung US business support page (spec text: 'RS232C (In/Out) Thru Stereo Jack, RJ45', 'RGB: DVI-D, Display Port 1.2, VIDEO: HDMI 2.0 (2), HDMI 2.0 (Loop-out)'), the QBR/QMR shared user manual on ManualsLib (page 9 rear panel diagram), and the Samsung QB Series user manual (same hardware platform). The QM85R-B is a revised variant (IP5x rated); port layout is the same as the base QM85R. RS232C in/out use 3.5mm stereo mini-jack connectors requiring a Samsung-supplied adapter — connector type set to trs-3.5 with note. IR IN also uses a 3.5mm jack. Power connector is IEC C14 (detachable cord; not a captive/NEMA cord as on consumer displays). No VGA port. DVI port is DVI-D (single-link, also serves as MagicInfo player module slot).",
+  "ports": [
+    {
+      "name": "HDMI IN 1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 2 (DAISY CHAIN IN)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT (DAISY CHAIN OUT)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DVI/MAGICINFO IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DP IN (DAISY CHAIN IN)",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "DVI/HDMI AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-jack for audio input (used when source is connected via DVI or HDMI without embedded audio)"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS232C IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "RS-232C control via 3.5mm stereo mini-jack adapter (Samsung spec lists as 'RS232C Thru Stereo Jack')"
+    },
+    {
+      "name": "RS232C OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "RS-232C control via 3.5mm stereo mini-jack adapter"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "External IR extender input via 3.5mm jack"
+    },
+    {
+      "name": "USB 1 (1.0A)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2 (0.5A)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; detachable power cord, 100–240 V AC 50/60 Hz"
+    }
+  ]
+}

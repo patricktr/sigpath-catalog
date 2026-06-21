@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/patricktr/sigpath-catalog/blob/main/schema/device.schema.json",
+  "title": "sigpath catalog device",
+  "description": "Source spec for one community device. id, source, rev and contentHash are derived by the build (scripts/build-snapshot.mjs), never stored in the file. The file path is the id.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["model", "category", "ports"],
+  "properties": {
+    "manufacturer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Brand. Omit for generic gear (it then lives under devices/generic/)."
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Model name, e.g. \"BRAVIA X90L\"."
+    },
+    "category": {
+      "description": "Coarse internal bucket.",
+      "enum": [
+        "source", "display", "switcher", "matrix", "amplifier", "audio",
+        "recorder", "converter", "network", "control", "power", "other"
+      ]
+    },
+    "type": {
+      "description": "Finer, user-facing type. Optional.",
+      "enum": [
+        "Media source", "Camera", "Computer", "Video switcher", "Matrix router",
+        "Converter", "Scaler", "Extender", "AV receiver", "Audio mixer", "Amplifier",
+        "Speaker", "Display", "Projector", "Network switch", "Control processor",
+        "Recorder", "Audio interface", "Power conditioner", "Wireless mic", "Microphone",
+        "DSP", "PDU", "Touch panel", "Media player", "Encoder/Decoder", "Other"
+      ]
+    },
+    "rackUnits": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60,
+      "description": "Height in 19\" rack units, for the rack-elevation view."
+    },
+    "imageUrl": { "type": "string", "format": "uri" },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Citation — the manufacturer spec page / datasheet the port data was taken from. Kept in the published snapshot."
+    },
+    "confidence": {
+      "enum": ["high", "medium", "low"],
+      "description": "Reviewer aid — how sure we are of the port data. Build-time only; not published. Spot-check the low/medium ones."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal notes (variant caveats, ambiguities). Build-time only; not published."
+    },
+    "ports": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "direction", "connector"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "description": "e.g. \"HDMI 1\", \"Mic In 3\", \"eARC\"." },
+          "direction": { "enum": ["input", "output", "bidirectional"] },
+          "connector": {
+            "type": "string",
+            "minLength": 1,
+            "description": "An id from connectors/connectors.json — the port type, source of truth for color/cabling/validation. The build cross-checks it."
+          },
+          "accepts": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "description": "Additional connector ids this one physical jack also mates with (e.g. a combo XLR/TRS input). Each is cross-checked against the vocabulary."
+          },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

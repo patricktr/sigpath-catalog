@@ -1,0 +1,96 @@
+{
+  "manufacturer": "Tripp Lite (Eaton)",
+  "model": "Tripp Lite PDUMH15",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://tripplite.eaton.com/metered-pdu-15a-13-outlet-120v-15ft-cord-1u-rackmount~PDUMH15",
+  "confidence": "high",
+  "notes": "Local-metered PDU with front-panel 2-digit digital display showing total output current in amps. No network, USB, or serial management ports — this is a purely local-metered unit. 15A circuit breaker for overload protection. Grounding lug on back panel. Outlets enumerated individually (13 total: 1 front-facing, 12 rear-facing). 1U rack-mount; also supports 0U vertical mount and wall/under-counter mount via detachable flanges. Input uses a captive cord (not an IEC inlet), so the power input port connector type is nema-5-15 (plug end). Total capacity 1.44 kW / 120V 12A continuous.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15P plug on 15 ft (4.57 m) captive cord, 120V 15A input (derated to 12A continuous)"
+    },
+    {
+      "name": "AC Out 1 (Front)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R front-facing outlet, 120V"
+    },
+    {
+      "name": "AC Out 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 5",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 7",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 9",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 10",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 11",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 12",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    },
+    {
+      "name": "AC Out 13",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R rear-facing outlet"
+    }
+  ]
+}

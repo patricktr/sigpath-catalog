@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Belden (Hirschmann)",
+  "model": "Hirschmann SPIDER 8TX",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.doc.hirschmann.com/pdf/IG_SPIDER_I_05_0618_en_2018-06-22.pdf",
+  "confidence": "medium",
+  "notes": "The query asks for a \"Managed\" variant, but all authoritative sources — Hirschmann's own official installation guide, Belden product page, Newark, RS-Online, DigiKey, and multiple distributors — consistently classify every SPIDER 8TX variant (SPIDER 8TX, SPIDER 8TX EEC, SPIDER II 8TX, SPIDER III SL-20-08T1) as an UNMANAGED switch. There is no managed 8-port SPIDER in the product line; Belden's managed DIN-rail switches are a separate product family. This entry is cataloged as the SPIDER 8TX (unmanaged) because no managed version exists. The source PDF is the official Hirschmann installation guide (Release 05, June 2018) which covers all SPIDER I variants. Power connector: a 3-pin pluggable screw terminal block — closest controlled-list match is 'euroblock' (pluggable screw-terminal block). DIN-rail mounted; not rack-mountable so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "3-pin screw terminal block; pins: +V, 0V, GND (chassis ground); 12–24V DC nominal (9.6–32V DC range); Class 2 / SELV supply required; max 3.9W at 24V DC"
+    }
+  ]
+}

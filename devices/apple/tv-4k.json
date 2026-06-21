@@ -1,0 +1,9 @@
+{
+  "manufacturer": "Apple",
+  "model": "TV 4K",
+  "category": "source",
+  "type": "Media source",
+  "ports": [
+    { "name": "HDMI", "direction": "output", "connector": "hdmi" }
+  ]
+}

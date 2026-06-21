@@ -1,0 +1,17 @@
+{
+  "manufacturer": "AKG",
+  "model": "AKG C414 XLII",
+  "category": "audio",
+  "type": "Media source",
+  "sourceUrl": "https://www.manua.ls/akg/c414-xlii/manual",
+  "confidence": "medium",
+  "notes": "The AKG C414 XLII is a large-diaphragm multipattern condenser microphone. It has a single physical connector: a 3-pin XLR output (balanced, pin 2 hot). Phantom power (48V nominal, 44–52 VDC accepted, ~4–4.5 mA) is delivered over the XLR signal cable per IEC 61938 — there is no separate power port or inlet. No rack mount; handheld/stand-mount form factor. The phantom power delivery via XLR is not modeled as a separate port because it shares the same physical connector as the audio output.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR-3 output, pin 2 hot. Phantom power (44–52 VDC, ~4–4.5 mA per IEC 61938) is supplied to the mic over this same cable — there is no separate power connector."
+    }
+  ]
+}

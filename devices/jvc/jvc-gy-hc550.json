@@ -1,0 +1,83 @@
+{
+  "manufacturer": "JVC",
+  "model": "JVC GY-HC550",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.jvc.com/usa/pro/professional-video/handheld-cameras/gy-hc550u/",
+  "confidence": "medium",
+  "notes": "Primary source: JVC USA product page (jvc.com/usa). Supplemented by JVC Europe spec page (eu.jvc.com) and corroborated by VidOvation's spec listing which quotes JVC specs verbatim, Filmtools, and Studio Depot spec tables. Timecode as RCA (not BNC) confirmed by ProVideo Coalition editorial review citing JVC response. HDMI confirmed full-size Type A by manua.ls manual reference. LANC/Remote is a 2.5mm mini jack — the closest connector in the controlled list is trs-3.5 (standard 3.5mm); noted in port note. AV Out is a 3.5mm TRRS (composite video + audio) labeled as such by retailers. The battery (7.2V BN-VC296 series) is a hot-shoe-style battery slot, not a panel connector, and is excluded from ports. No rackUnits: handheld camcorder, not rack-mountable.",
+  "ports": [
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI, up to 1080/60p 4:2:2 10-bit with embedded audio and timecode"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Full-size Type A; up to UHD (3840x2160) 60p 4:2:2 10-bit"
+    },
+    {
+      "name": "AV Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS composite A/V output"
+    },
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR 3-pin Mic/Line input, +48V phantom power"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR 3-pin Mic/Line input, +48V phantom power"
+    },
+    {
+      "name": "AUX In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack mic-level input"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo headphone monitor output"
+    },
+    {
+      "name": "TC",
+      "direction": "bidirectional",
+      "connector": "rca",
+      "note": "Timecode input/output via RCA connector; confirmed by ProVideo Coalition review and VidOvation spec listing"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1000Base-T Ethernet; used for streaming, IFB, and remote control"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.0 Type-A; supports USB LAN adapters and optional accessories"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm mini jack LANC (Control-L) wired remote; closest controlled-list connector is trs-3.5 — actual connector is 2.5mm TS/TRRS, not standard 3.5mm"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 12V input via AC adapter (battery is 7.2V but mounts in battery slot, not a panel connector)"
+    }
+  ]
+}

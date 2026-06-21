@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Pro Convert HDMI 4K Plus",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.magewell.com/tech-specs/pro-convert-hdmi-4k-plus",
+  "confidence": "high",
+  "notes": "Standalone unit (model 64010), not to be confused with the Pro Convert HDMI 4K Plus Module (slot-based). Power is supplied either via PoE (IEEE 802.3af) on the RJ45 port or via 5V/2.1A through the USB-B port using the included adapter — there is no separate DC barrel or IEC power inlet. The Mini-DIN-8 control/tally port is mapped to midi-din as the closest connector id in the controlled list; the actual physical connector is an 8-pin Mini-DIN. No discrete analog audio input exists; all audio is HDMI-embedded. The forefrontimaging.com reseller listing incorrectly listed a 3.5mm audio input — not confirmed by Magewell's official spec page or any other authoritative source.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 2.0 / HDMI 1.4 / DVI-D; supports up to 4096×2160 60fps 4:4:4; carries up to 8-channel embedded audio"
+    },
+    {
+      "name": "HDMI Loop Through",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI loop-through of the input signal; maximum 4096×2160 60fps 4:4:4"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Mbps Gigabit; primary NDI output path; also powers the device via IEEE 802.3af PoE"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB 2.0 Type B; used for device configuration, RNDIS/ECM network access, and as an alternative 5V/2.1A power input via included adapter; no separate DC barrel jack — USB-B is the only discrete power connector"
+    },
+    {
+      "name": "Control/Tally",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Mini-DIN-8 jack shared with tally function; supports PTZ camera control (VISCA, PELCO-P, PELCO-D) and RS-232/RS-422 via included Mini-DIN-8 to DIN-8+DB9 breakout cable. midi-din is the closest available connector id for an 8-pin Mini-DIN (the standard list has no mini-din-8 entry)"
+    }
+  ]
+}

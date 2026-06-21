@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Atlona",
+  "model": "AT-HD4-V41",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.manualslib.com/manual/748028/Atlona-At-Hd4-V41.html?page=7",
+  "confidence": "medium",
+  "notes": "RS-232 gender (DB9 female) is now confirmed from manual page 7 ('RS-232 is connected through a 9-pin female D connector'). S/PDIF connector type remains unspecified in all available documentation (Atlona product page, manual pages 3–10, spec table). RCA coaxial is used as the most likely physical connector for this class of device, but no source explicitly states optical vs. coaxial — this field should be treated as low-confidence. Device dimensions (44 × 241 × 104 mm) confirm it is a desktop/shelf unit; rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Supports ARC and HEC (100 Mbps HDMI Ethernet Channel)"
+    },
+    {
+      "name": "S/PDIF OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Connector type (optical Toslink vs. coaxial RCA) is not explicitly stated in any available documentation. RCA coaxial is used here as the default for budget HDMI switchers of this era, but this remains unverified. Supports PCM 2ch, Dolby Digital, DTS 5.1."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "100 Mbps Ethernet for HEC-capable devices"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin female D-sub connector confirmed on manual page 7. 9600 baud, 8N1, no flow control."
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "For included Atlona IR receiver module"
+    },
+    {
+      "name": "DC 5V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5V/2.6A from included external power supply (AC 100–240V input)"
+    }
+  ]
+}

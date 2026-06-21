@@ -1,0 +1,23 @@
+{
+  "manufacturer": "TP-Link",
+  "model": "TL-PA7017",
+  "category": "network",
+  "type": "Extender",
+  "sourceUrl": "https://www.tp-link.com/us/home-networking/powerline/tl-pa7017/",
+  "confidence": "medium",
+  "notes": "Powerline Ethernet adapter (HomePlug AV2, AV1000 class) that carries network traffic over existing electrical wiring. Wall-plug form factor; plugs directly into a standard outlet — no rack mounting, so rackUnits omitted. Has no passthrough outlet (the passthrough variant is the TL-PA7017P, a different SKU). Product is actively listed for sale on the TP-Link US site as of the source fetch; no end-of-life or discontinuation indication. The NEMA 5-15 connector for the power input is inferred from the 'Plug Type: US' specification — the source page does not use the term 'NEMA 5-15' explicitly.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single Gigabit Ethernet port for connecting a wired device to the powerline network"
+    },
+    {
+      "name": "Power / Wall Plug",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Built-in US wall-plug prongs; source page states 'Plug Type: US' without specifying NEMA 5-15 by name — designation inferred from standard US plug form factor"
+    }
+  ]
+}

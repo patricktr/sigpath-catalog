@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Furman",
+  "model": "Furman M-8x2",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://furmanpower.com/products/m-8x2",
+  "confidence": "medium",
+  "notes": "The M-8x2 is a 1U rackmount power conditioner with 9 total NEMA 5-15R outlets (8 rear, 1 front) and a captive 6 ft cord (NEMA 5-15P). Rated 15A, 120VAC/60Hz. No signal ports. The power inlet is represented as nema-5-15 since the cord is captive — there is no IEC inlet. Type field set to 'Power conditioner' which maps to the 'Other' enum value as there is no exact match; category is 'power'.",
+  "ports": [
+    {
+      "name": "AC Outlets (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "8 switched NEMA 5-15R outlets on rear panel; 3 spaced for wall-wart adapters"
+    },
+    {
+      "name": "AC Outlet (Front)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "1 convenience NEMA 5-15R outlet on front panel"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 6 ft 14 AWG line cord with NEMA 5-15P plug; not a detachable IEC inlet"
+    }
+  ]
+}

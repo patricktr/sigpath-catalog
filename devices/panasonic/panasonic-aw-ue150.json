@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "Panasonic AW-UE150",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro-av.panasonic.net/en/products/aw-ue150/spec.html",
+  "confidence": "high",
+  "notes": "Source is the official Panasonic Global pro-av product specification page. Model AW-UE150W/K (W=white, K=black variants). The AW-UE150A is a newer revision (AW=white, AK=black) with the same I/O layout. The DC 12V IN uses a 4-pin XLR connector (XLR4) which is not in the controlled connector list; xlr3 was used as the closest available. PoE++ power arrives via the LAN (RJ-45) port and is noted there rather than as a separate port. The RS-422 port uses an RJ-45 physical connector but carries RS-422 serial protocol — not Ethernet. No USB port is present on this model.",
+  "ports": [
+    {
+      "name": "G/L IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock input; accepts Black Burst Sync (BBS) and tri-level sync"
+    },
+    {
+      "name": "12G-SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SMPTE 2082-1 standard, 75Ω"
+    },
+    {
+      "name": "3G-SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SMPTE 424M / SMPTE 292, 75Ω, Level-A/Level-B"
+    },
+    {
+      "name": "MONI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "HD-SDI monitor output, SMPTE 292, 75Ω"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0 standard, 4:2:2/10-bit, HDCP not supported"
+    },
+    {
+      "name": "Optical Fiber",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "SFP+ standard slot for optional fiber output module"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "100BASE-TX / 1000BASE-T; carries IP video streaming, IP camera control, and PoE++ power input (IEEE802.3bt, 42–57 V DC)"
+    },
+    {
+      "name": "RS-422 CONTROL IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RS-422 serial control over RJ-45 connector; not a standard RJ-45 network port"
+    },
+    {
+      "name": "MIC/LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack (3.5mm); selectable plug-in power; AAC audio compatible (IP output only)"
+    },
+    {
+      "name": "DC 12V IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR (XLR4) DC input; accepts 10.8–13.2 V DC at 4.0 A."
+    }
+  ]
+}

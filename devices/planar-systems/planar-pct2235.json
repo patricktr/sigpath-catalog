@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Planar Systems",
+  "model": "Planar PCT2235",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://avlgear.com/products/planar-pct2235-22-inch-full-hd-lcd-touch-screen-monitor",
+  "confidence": "medium",
+  "notes": "Port list is consistent across multiple secondary sources (AVLGear, Newegg, TycoTouch, manua.ls). Authoritative Planar spec page (planar.com/products/.../pct2235-specifications/) did not render full spec content via fetch. Power connector is listed as \"AC power-in\" without explicit IEC/captive designation — assigned iec (IEC C14) as the most common inlet type for this class of desktop monitor, but this should be verified against the physical unit or the official PDF user guide. No dedicated audio output jack; audio output is via integrated 2W/ch speakers only.",
+  "ports": [
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin VGA analog video input"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "19-pin HDMI digital video input"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "note": "20-pin DisplayPort digital video input"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo audio input for built-in 2W x 2 speakers"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B connector for touchscreen (projected capacitive, 10-point) interface to host; connects via A-to-B cable"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply; connector type listed as AC power-in without explicit IEC/captive detail — assumed IEC C14 inlet based on product class; confirm from unit or user guide if precision required"
+    }
+  ]
+}

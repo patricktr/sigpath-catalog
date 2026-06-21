@@ -1,0 +1,21 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM Mini Pro",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/atemmini/techspecs",
+  "confidence": "high",
+  "notes": "The original non-Pro ATEM Mini is discontinued; current tech specs cover the Pro.",
+  "ports": [
+    { "name": "HDMI In 1", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI In 2", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI In 3", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI In 4", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI Out", "direction": "output", "connector": "hdmi" },
+    { "name": "USB-C", "direction": "bidirectional", "connector": "usb-c", "note": "Webcam out / record / control" },
+    { "name": "Mic In 1", "direction": "input", "connector": "trs-3.5" },
+    { "name": "Mic In 2", "direction": "input", "connector": "trs-3.5" },
+    { "name": "Ethernet", "direction": "bidirectional", "connector": "rj45", "note": "Stream / control" },
+    { "name": "12V DC", "direction": "input", "connector": "dc-barrel" }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 9200L-24P-4G",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/3005287/Cisco-Catalyst-9200-Series.html",
+  "confidence": "medium",
+  "notes": "ManualsLib manual 3005287 explicitly covers the C9200L-24P-4G (not a different variant). USB console port is mini-Type B (connector mapped to usb-b as the closest schema value; not micro-B). Power inlet on the switch is IEC C14 male (accepts a C13 power cord), confirmed by the Cisco-branded CAB-AC-C9200L power cord (C13-to-NEMA-5-15P). The 4 uplink SFP ports are 1G fixed (not 10G). PoE+ budget is 370W standard, up to 740W with optional second PSU (PWR-C5-600WAC). Model is sold with -E (Network Essentials) or -A (Network Advantage) license suffix; base model number is C9200L-24P-4G.",
+  "ports": [
+    {
+      "name": "10/100/1000 PoE+ Ethernet 1–24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "24 downlink ports with full PoE+ (up to 30W per port)"
+    },
+    {
+      "name": "1G SFP Uplink 1–4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4 fixed 1G SFP uplink ports"
+    },
+    {
+      "name": "Management Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dedicated out-of-band management Gigabit Ethernet port"
+    },
+    {
+      "name": "RJ-45 Console",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Serial console port; requires RJ-45-to-DB-9 adapter cable for PC connection"
+    },
+    {
+      "name": "USB Console (mini-B)",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "USB mini-Type B (5-pin) console port; requires USB-A to USB-mini-B cable. Not micro-B."
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A port for external flash storage; NOT a console port"
+    },
+    {
+      "name": "AC Power Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 male inlet on the switch; accepts standard C13 power cord (e.g. CAB-AC-C9200L, C13-to-NEMA-5-15P). 100–240 VAC, 50–60 Hz."
+    }
+  ]
+}

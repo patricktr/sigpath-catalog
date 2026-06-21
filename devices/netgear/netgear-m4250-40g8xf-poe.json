@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Netgear",
+  "model": "Netgear M4250-40G8XF-PoE+",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.netguardstore.com/gsm4248px.asp",
+  "confidence": "medium",
+  "notes": "Model GSM4248PX. Port data cross-confirmed across multiple secondary sources (NetGuardStore, MediaCastSys, Creation Networks, Dell, Netgear product pages, CDW). Authoritative Netgear product page (netgear.com/business/wired/switches/fully-managed/gsm4248px/) and support page did not render spec tables via WebFetch. Key details confirmed: 40x RJ45 PoE+, 8x SFP+, 1x out-of-band RJ45 management, 1x USB-C console, 1x RJ45/RS232 console, 1x USB-A storage, IEC C14 power inlet, 1U rack form factor. The RJ45 console port carries RS232 signaling (Cisco-style rollover/straight-through to DB9 adapter included). Ports 1–40 and SFP+ 1–8 are represented as single entries each due to repetition; physical panel has 48 discrete port apertures total. Power connector is an IEC C14 inlet (mapped to 'iec' in controlled list).",
+  "ports": [
+    {
+      "name": "PoE+ Port 1–40",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "40x 10/100/1000BASE-T PoE+ ports (802.3at), 960W total PoE budget, rear-facing for clean AV rack integration"
+    },
+    {
+      "name": "SFP+ Port 1–8",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "8x 1G/10G SFP+ fiber uplink ports"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1x out-of-band 1G Ethernet management port"
+    },
+    {
+      "name": "Console (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C console port for CLI management; included cable: USB-C to USB-A 2.0"
+    },
+    {
+      "name": "Console (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 RS232 serial console port; included cable: RJ45 straight-through to DB9. Closest controlled-list connector is rj45 (carries RS232 signaling via Cisco-style rollover cable)."
+    },
+    {
+      "name": "USB-A Storage",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "1x USB-A port for configuration files, logs, and firmware images"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with on/off switch; uses standard IEC C13-to-C14 power cord"
+    }
+  ]
+}

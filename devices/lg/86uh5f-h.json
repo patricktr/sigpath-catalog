@@ -1,0 +1,103 @@
+{
+  "manufacturer": "LG",
+  "model": "86UH5F-H",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://solutions.lg.com/us/digital-signage/lg-86uh5f-h",
+  "confidence": "high",
+  "notes": "86-inch Slim UHD IPS commercial digital signage display (4K/120Hz). DisplayPort Out supports loop-through from HDMI1/2, DVI, DP, USB-C, or OPS inputs per LG spec (note: the connectivity table lists 'USB-C In: No,' but USB-C appears in LG's own DP-Out loop-through source list). RS-232C uses 3.5mm 4-pin connectors (not standard DE-9). Built-in Wi-Fi. OPS slot included. Not rack-mountable.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.2/1.4"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.2/1.4"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 1.4"
+    },
+    {
+      "name": "DVI-D In",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "HDCP 1.4"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "note": "HDCP 2.2/1.3"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "note": "Loop-through; accepts signal from HDMI1/2, DVI, DP, USB-C, or OPS inputs"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS-232C In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm 4-pin; RS-232C control"
+    },
+    {
+      "name": "RS-232C Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm; RS-232C daisy-chain"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "USB 2.0"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "USB 2.0"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC 100-240V~, 50/60 Hz; 215W typical"
+    }
+  ]
+}

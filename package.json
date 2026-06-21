@@ -1,0 +1,12 @@
+{
+  "name": "sigpath-catalog",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Community equipment catalog for sigpath — device specs compiled to a synced snapshot.",
+  "license": "CC0-1.0",
+  "scripts": {
+    "validate": "node scripts/build-snapshot.mjs --check",
+    "build": "node scripts/build-snapshot.mjs"
+  }
+}

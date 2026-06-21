@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Roku",
+  "model": "Roku Express 4K+",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.amazon.com/Roku-Express-Streaming-Wireless-Controls/dp/B0916TKFF2",
+  "confidence": "medium",
+  "notes": "Model numbers: 3941R, 3941R2 (with premium HDMI cable bundle), 3941X (international variant). Discontinued as of 2024. Supports HDR10, HDR10+, and HLG — Dolby Vision is NOT supported. Audio: Dolby Atmos passthrough via Dolby Digital Plus over HDMI, DTS Digital Surround passthrough, digital stereo. Wi-Fi: 802.11ac dual-band (2.4/5 GHz). Wired Ethernet requires separately purchased Micro USB-to-Ethernet adapter. No built-in Ethernet port. HDMI version confirmed as 2.0 (per retailer spec sheets citing Roku data); HDCP 2.2 required on TV for 4K HDR playback. Power spec 5V 1A confirmed via Roku community power guide and third-party adapter listings.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0, HDCP 2.2; supports up to 4K/60fps, HDR10, HDR10+, HLG. Dolby Vision is NOT supported."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Micro USB power input; 5V 1A, ~2.5W typical during 4K streaming. Can be powered from TV USB port or included AC adapter."
+    }
+  ]
+}

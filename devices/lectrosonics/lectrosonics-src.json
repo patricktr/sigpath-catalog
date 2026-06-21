@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Lectrosonics",
+  "model": "Lectrosonics SRc",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.manualslib.com/manual/1302835/Lectrosonics-Src.html",
+  "confidence": "medium",
+  "notes": "The Lectrosonics SRc is a dual-channel UHF slot-mount wireless receiver designed to mount in camera accessory slots (Unislot-compatible). It is NOT rack-mountable. Key caveats: (1) Two primary connectors — SMA female (antenna) and TA5M/TA3M (audio) — are not in the controlled connector list; approximations used as noted. (2) The rear audio/power connectors depend on which adapter plate is installed (SREXT for standalone use, or camera-slot D-connector for camera mounting). Ports listed here reflect the SREXT standalone configuration. (3) The SRc5P variant adds a second TA5M output on the front panel; ports listed reflect the base SRc. (4) No headphone output is present on the SRc (unlike some other Lectrosonics receivers). Specifications sourced from ManualsLib hosted manual and cross-referenced with lectrosonics.com product page and technical data sheet metadata.",
+  "ports": [
+    {
+      "name": "Antenna 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Actual connector is SMA female (50 Ohm). SMA is not in the controlled list; closest listed is bnc (also a 50-Ohm RF coaxial). RF antenna input for channel 1."
+    },
+    {
+      "name": "Antenna 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Actual connector is SMA female (50 Ohm). Same caveat as Antenna 1. RF antenna input for channel 2."
+    },
+    {
+      "name": "Audio Out (TA5)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Actual connector is a 5-pin TA5M (Switchcraft TA-series mini connector), carrying balanced stereo (CH1 and CH2) outputs. TA5 is not in the controlled list; it is a proprietary Switchcraft 5-pin locking mini connector — not TS, TRS, or XLR. Closest available is ts-6.35 as a placeholder, but this is a significant mismatch. Located on front panel."
+    },
+    {
+      "name": "CH1 Audio Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Actual connector is TA3M (Switchcraft 3-pin mini locking connector, also called mini-XLR). Balanced mono output for channel 1 via SREXT or SRHARNESS rear adapter. TA3 is not in the controlled list; xlr3 is the closest functional equivalent."
+    },
+    {
+      "name": "CH2 Audio Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Actual connector is TA3M (Switchcraft 3-pin mini locking connector). Balanced mono output for channel 2 via SREXT or SRHARNESS rear adapter. Same caveat as CH1."
+    },
+    {
+      "name": "IR Sync",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Front-panel IR sync port for pairing/programming compatible Lectrosonics transmitters. Optical, not a wired connector."
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is an LZR-style locking coaxial DC connector (threaded lock collar, center-positive, ID ~0.080 in / OD ~0.218 in). This is a proprietary Lectrosonics locking barrel — dc-barrel is the closest standard in the list. Accepts 7–18 V DC @ ~1.4 W. Provided via SREXT adapter rear panel."
+    }
+  ]
+}

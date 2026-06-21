@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Mersive",
+  "model": "Solstice Pod Gen3",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://documentation.mersive.com/en/solstice/deploy-solstice/solstice-setup/gen3-solstice-pod-specs.html",
+  "confidence": "high",
+  "notes": "Source is the official Mersive documentation site. The Gen3 Pod is a wireless presentation and collaboration appliance (not a traditional AV switcher or display), categorized here as 'other'. Two HDMI outputs support either 1x 4K display (via HDMI Out 1 only) or 2x 1080p displays. HDMI In is for local wired content. The device has no RS-232, contact closure, or dedicated control port. Power is either DC barrel OR PoE+ via the Ethernet port — not both simultaneously. The 3.5mm Stereo Out is a separate analog audio output in addition to HDMI audio (7.1 via HDMI). No rack mount form factor — desktop unit (184.2 x 86.2 x 26.3 mm).",
+  "ports": [
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0; supports up to 4K when used as sole display output"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 1.4; supports up to 1080p; 4K only available on HDMI Out 1 when used alone"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 1.4b; HDCP not supported"
+    },
+    {
+      "name": "Stereo Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo analog audio output"
+    },
+    {
+      "name": "USB 3.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.0 host port"
+    },
+    {
+      "name": "USB 3.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.0 host port"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Reserved for future features per Mersive documentation"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Gigabit Ethernet with PoE+ support (IEEE 802.3 Type 2); device can be powered via this port instead of DC barrel"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC, 2A max; 5.5mm OD / 2.1mm ID, center positive. UL/IEC/EN certified PS2/LPS supply. Mutually exclusive with PoE+ power."
+    }
+  ]
+}

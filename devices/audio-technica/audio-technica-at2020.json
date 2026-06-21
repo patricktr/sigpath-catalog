@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "Audio-Technica AT2020",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.audio-technica.com/en/at2020",
+  "confidence": "medium",
+  "notes": "The AT2020 is a cardioid condenser side-address microphone with a single 3-pin XLRM output. It requires 48V DC phantom power (2 mA typical) supplied through the XLR cable by a mixer, preamp, or standalone phantom power supply — there is no separate power connector on the device. No rack-mount form factor; desktop/stand-mounted mic. The AT2020USB+ is a distinct USB variant with a different connector and should not be confused with the standard AT2020.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLRM balanced output; 48V phantom power is received over this same cable — there is no separate power inlet"
+    }
+  ]
+}

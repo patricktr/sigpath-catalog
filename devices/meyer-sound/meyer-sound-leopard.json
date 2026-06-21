@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Meyer Sound",
+  "model": "Meyer Sound LEOPARD",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://docs.meyersound.com/products/en/datasheet---leopard---leopard-m80.html",
+  "confidence": "high",
+  "notes": "Self-powered compact linear line array loudspeaker. Standard units ship with XLR 5-pin connectors supporting both balanced audio and RMS (Remote Monitoring System) network on pins 4/5. XLR 3-pin variants exist that provide audio only without RMS. The XLR5 connector type is not in the controlled list — xlr5 is used. powerCON 20 maps to the schema's 'powercon' connector. RMS is a two-conductor twisted-pair network embedded in the XLR 5-pin connector (pins 4/5), not a separate physical port. Not rack-mountable (line array cabinet).",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "xlr5",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "XLR 5-pin female; pins 2/3 carry balanced audio, pins 4/5 carry RMS network signal. XLR 3-pin female variant available (audio only, no RMS)."
+    },
+    {
+      "name": "Loop Output",
+      "direction": "output",
+      "connector": "xlr5",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "XLR 5-pin male loop output; wired in parallel to Input, passes unbuffered source signal even when unit is powered off. XLR 3-pin male variant available."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "powerCON 20 (Neutrik blue, NAC3MPA-1 style) AC power input. 100–240 V AC, 50/60 Hz, auto-selecting."
+    },
+    {
+      "name": "AC Loop Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "powerCON 20 loop output for daisy-chaining AC power to adjacent cabinet."
+    }
+  ]
+}

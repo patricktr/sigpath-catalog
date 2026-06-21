@@ -1,0 +1,108 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio HD Plus",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/hyperdeckstudio/techspecs/W-HYD-12",
+  "confidence": "high",
+  "notes": "Half-rack width, 1RU device. SDI carries 16 channels embedded audio (not 8 — HDMI carries 8 channels). Power: internal 100-240V AC 50/60Hz supply (max 100W); the AC inlet connector type is not explicitly named on the spec page so no IEC port is listed. A 4-pin XLR 12V DC input is confirmed for external/battery power. Media slots: 2x SD card (UHS-I/UHS-II). Video: SD/HD up to 1080p60, 2K DCI, Ultra HD up to 2160p30. 10-bit 4:2:2. Audio: 24-bit 48 kHz.",
+  "ports": [
+    {
+      "name": "SDI Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1x SDI; supports 270Mb, 1.5G, 3G, 6G; 16 channels embedded audio"
+    },
+    {
+      "name": "SDI Output 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SDI output; 16 channels embedded audio"
+    },
+    {
+      "name": "SDI Output 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SDI output; 16 channels embedded audio"
+    },
+    {
+      "name": "SDI Monitor Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SDI monitor output; 16 channels embedded audio"
+    },
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 2.0; 8 channels embedded audio"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0; 8 channels embedded audio"
+    },
+    {
+      "name": "Timecode Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC timecode input"
+    },
+    {
+      "name": "Timecode Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "BNC timecode output"
+    },
+    {
+      "name": "Reference Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Tri-Sync / Black Burst reference input"
+    },
+    {
+      "name": "Reference Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Tri-Sync / Black Burst reference output"
+    },
+    {
+      "name": "RS-422 In",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "Deck control input"
+    },
+    {
+      "name": "RS-422 Out",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "Deck control output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1 Gb/s Ethernet for network control and streaming"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB 3.0 Type-C, up to 5 Gb/s; external media recording/expansion"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.35mm headphone output with mono speaker monitoring"
+    },
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR 12V DC input for external/battery power; device also has internal 100-240V AC 50/60Hz supply (max 100W) — physical AC inlet type not explicitly stated in source"
+    }
+  ]
+}

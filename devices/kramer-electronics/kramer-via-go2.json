@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Kramer Electronics",
+  "model": "Kramer VIA GO2",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://www.markertek.com/Attachments/Manuals/Kramer/KR-VIA-GO2_User-Manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Kramer VIA GO² User Manual Rev 5 (P/N 2900-301300), hosted on Markertek. The spec table definitively lists: Ports — 1 Ethernet (RJ-45), 1 USB 3.0 (female Type-A), 1 USB 2.0 (female Type-A); Outputs — 1 HDMI (female HDMI connector). Power is 12V DC via included external adapter (dc-barrel). The manual body references an 'HDMI IN Connector' feature for presenting from a wired HDMI source, but the official spec table only lists the one HDMI port under Outputs — it may be the same physical connector used bidirectionally depending on firmware/mode. Not rack-mountable (7×7×3.34 cm compact form factor).",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Labeled 'HDMI™ Connector' (item 6 in the product diagram). Official spec table lists it under Outputs. Manual Rev 5 also describes an HDMI IN feature (software-switchable), but the hardware spec table lists only one HDMI port under Outputs."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Labeled 'RJ-45 Connector' (item 7). Used for LAN network connectivity."
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled 'USB 3.0 Connector' (item 3). Female Type-A. Used for keyboard, mouse, or other USB peripherals."
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled 'USB 2.0 Connector' (item 4). Female Type-A. Used for keyboard, mouse, or other USB peripherals."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Labeled 'Power Connector' (item 8). Connects to included 12V DC / 2A external power adapter."
+    }
+  ]
+}

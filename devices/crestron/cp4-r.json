@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Crestron",
+  "model": "CP4-R",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.crestron.com/en-us/8559/Content/Topics/Specifications/CP4-R-Specifications.htm",
+  "confidence": "high",
+  "notes": "All port data sourced from Crestron's official 4-Series Control Systems Manual. The CP4-R is a 1U rack-mount residential/MDU control processor. Euroblock (3.5mm detachable terminal block) is the closest match for all the screw-terminal control ports (relay, IR/serial, COM, I/O, Cresnet). The SD card slot is not included as it does not have a connector type in the allowed list and is a storage accessory slot rather than a signal port. COM1 supports RS-232/422/485; COM2-3 support RS-232 only. The device ships with an external 24VDC power pack.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "100BASE-TX/1000BASE-T Ethernet, 8-pin RJ-45 female"
+    },
+    {
+      "name": "COM 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm detachable terminal block; RS-232/422/485; 115.2k baud max"
+    },
+    {
+      "name": "COM 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; RS-232 only; 115.2k baud max"
+    },
+    {
+      "name": "COM 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; RS-232 only; 115.2k baud max"
+    },
+    {
+      "name": "IR/Serial 1-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin 3.5mm detachable terminal block (shared with IR/Serial 5-8); IR up to 1.2 MHz or TTL/RS-232 serial output; 4 ports per block"
+    },
+    {
+      "name": "IR/Serial 5-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin 3.5mm detachable terminal block; IR up to 1.2 MHz or TTL/RS-232 serial output; 4 ports per block"
+    },
+    {
+      "name": "Relay 1-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin 3.5mm detachable terminal block (shared with Relay 5-8); 8 normally open isolated relays, 1A 30VAC/VDC"
+    },
+    {
+      "name": "Relay 5-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin 3.5mm detachable terminal block; 8 normally open isolated relays, 1A 30VAC/VDC"
+    },
+    {
+      "name": "I/O 1-8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "9-pin 3.5mm detachable terminal block; Versiport digital I/O (0-24VDC) or analog input (0-10VDC)"
+    },
+    {
+      "name": "NET (Cresnet)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; Cresnet network for compatible Crestron devices"
+    },
+    {
+      "name": "USB (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0 Type-A female; rear panel; for mass storage devices"
+    },
+    {
+      "name": "USB (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB 2.0 Type-B female; front panel; console/setup port"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1x5.5mm DC barrel connector; 24VDC 2.0A input; external power pack included"
+    }
+  ]
+}

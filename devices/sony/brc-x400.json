@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Sony",
+  "model": "BRC-X400",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.manualslib.com/manual/1664613/Sony-Brc-X400.html",
+  "confidence": "medium",
+  "notes": "Specs sourced from the official Sony BRC-X400 Operating Instructions manual (ManualsLib), cross-referenced with the Lee Hartman & Sons AV catalog (av-iq.com). The MIC ports are labeled as a pair (×2) in the spec table; they appear as individual 3.5mm mini-jacks on the rear panel. The VISCA RS-422 terminals are labeled IN and OUT separately, each on an RJ-45 jack (total ×2 RJ-45 for RS-422). The EXT SYNC IN is present on BRC-X400 and BRC-X401 but absent on SRG-X400/X402/X120 variants. Power connector is the JEITA RC-5320A TYPE4 dc-barrel (closest match in controlled list); not a standard iec inlet.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A × 1; 4K output available via HDMI (and IP); version 1.4b compatible"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "BNC × 1; 3G-SDI; HD output only (4K not supported via SDI)"
+    },
+    {
+      "name": "EXT SYNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC × 1; 75Ω; accepts HD 3-level sync or SD Black Burst; BRC-X400/X401 models only, not on SRG variants"
+    },
+    {
+      "name": "MIC 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini jack ø3.5mm; Mic/Line selectable"
+    },
+    {
+      "name": "MIC 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini jack ø3.5mm; Mic/Line selectable; Y-adapter connection supported"
+    },
+    {
+      "name": "VISCA RS-422 IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ-45; RS-422 serial VISCA control; connect from remote controller or previous camera in daisy chain"
+    },
+    {
+      "name": "VISCA RS-422 OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ-45; RS-422 serial VISCA control; connect to next camera in daisy chain; max cable length 1.2 km"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45; 10/100/1000BASE-T; PoE+ (IEEE802.3at) power input; VISCA over IP, S700PTP, CGI control, and IP video streaming"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "IEC60130-10 (JEITA RC-5320A TYPE4); 5.5mm OD / 3.3mm ID / 1.0mm pin; DC 10.8–13.2V; supplied AC adapter (100–240V, 50/60Hz). Camera can also be powered via PoE+ on the LAN port instead."
+    }
+  ]
+}

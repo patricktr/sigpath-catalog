@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Electro-Voice",
+  "model": "ZLX-15P",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.manualslib.com/manual/593410/Electro-Voice-Zlx-12p.html",
+  "confidence": "high",
+  "notes": "Original generation ZLX-15P (not the G2). Connector details confirmed from the official ZLX Series Owner's Manual (covering ZLX-12P, ZLX-15P, ZLX-12, ZLX-15) via ManualsLib, corroborated by multiple retailer listings. The G2 (ZLX-15P-G2) has a different connector set: it drops the 3.5mm aux input and adds Bluetooth, and has an updated 4-channel mixer section. This entry covers the original ZLX-15P only.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, balanced mic/line input with gain control"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, balanced mic/line input with gain control"
+    },
+    {
+      "name": "Aux In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo auxiliary input for media devices"
+    },
+    {
+      "name": "Link Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR output carrying sum of all inputs; used for daisy-chaining additional speakers"
+    },
+    {
+      "name": "Mains In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC AC power inlet; operates 100–240V AC"
+    }
+  ]
+}

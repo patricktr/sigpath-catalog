@@ -1,0 +1,126 @@
+{
+  "manufacturer": "Crestron",
+  "model": "DM-MD8X8",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.manualslib.com/manual/660703/Crestron-8x8-Digitalmedia-Dm-Md8x8.html",
+  "confidence": "medium",
+  "notes": "Discontinued (replaced by DM-MD8X8-CPU3). The 8 DMNet ports (4-pin, 3.5mm detachable terminal block) and 8 EIG ports (3-pin, 3.5mm detachable terminal block) are physically paired per DM port but are distinct named connectors — 16 terminal blocks total. The chassis also has a 6-32 screw chassis ground lug (not a signal port; omitted from port list as it has no matching connector type in schema). Signal/IO cards are not included in the chassis port list as they depend on the installed card configuration. Spec confirmed via Crestron operations manual (ManualsLib 660703) and official spec sheet (Crestron CDN ss_dm-md8x8_1).",
+  "ports": [
+    {
+      "name": "DMNet 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; DigitalMedia network data"
+    },
+    {
+      "name": "DMNet 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 5",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 6",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 7",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "DMNet 8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block"
+    },
+    {
+      "name": "EIG 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; External/Internal/Ground power selection for DMNet port 1; max 75W @ 24V DC from external supply"
+    },
+    {
+      "name": "EIG 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 2"
+    },
+    {
+      "name": "EIG 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 3"
+    },
+    {
+      "name": "EIG 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 4"
+    },
+    {
+      "name": "EIG 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 5"
+    },
+    {
+      "name": "EIG 6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 6"
+    },
+    {
+      "name": "EIG 7",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 7"
+    },
+    {
+      "name": "EIG 8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; power selection for DMNet port 8"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10Base-T/100Base-TX/1000Base-T Gigabit Ethernet"
+    },
+    {
+      "name": "Computer (Console)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B female console port on front panel"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet; 100-240V AC, 50/60 Hz, 4A max, 220W typical"
+    }
+  ]
+}

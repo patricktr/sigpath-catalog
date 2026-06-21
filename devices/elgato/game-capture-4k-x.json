@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Elgato",
+  "model": "Game Capture 4K X",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.elgato.com/us/en/p/game-capture-4k-x",
+  "confidence": "high",
+  "notes": "Bus-powered via USB-C; no mains power port. Desktop form factor — not rack-mountable, rackUnits omitted. The 3.5mm port is definitively a stereo line input (not a combo in/out jack) per the official spec page. No source documentation specifies which panel (front or rear) the 3.5mm jack is located on, so no panel location is asserted.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Unencrypted HDMI input from gaming source; supports up to 4K144"
+    },
+    {
+      "name": "HDMI Out (Passthrough)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Lag-free HDMI passthrough to display"
+    },
+    {
+      "name": "USB-C (Data/Power)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB 3.2 Gen 2 Type-C; connects to host computer and powers the device — no separate power supply"
+    },
+    {
+      "name": "3.5mm Stereo Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo line-level input; intended for use with Chat Link Pro accessory"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "manufacturer": "LG",
+  "model": "OLED C3",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.flatpanelshd.com/review.php?subaction=showfull&id=1686299145",
+  "confidence": "high",
+  "notes": "Series entry (all sizes share I/O). HDMI 2 is the eARC port; all four are HDMI 2.1. RF antenna (x2) and composite AV-in omitted pending F-type / composite connectors.",
+  "ports": [
+    { "name": "HDMI 1", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI 2 (eARC)", "direction": "input", "connector": "hdmi", "note": "eARC" },
+    { "name": "HDMI 3", "direction": "input", "connector": "hdmi" },
+    { "name": "HDMI 4", "direction": "input", "connector": "hdmi" },
+    { "name": "Optical Out", "direction": "output", "connector": "toslink" },
+    { "name": "Ethernet", "direction": "bidirectional", "connector": "rj45" },
+    { "name": "USB 1", "direction": "bidirectional", "connector": "usb-a", "note": "USB 2.0" },
+    { "name": "USB 2", "direction": "bidirectional", "connector": "usb-a", "note": "USB 2.0" },
+    { "name": "USB 3", "direction": "bidirectional", "connector": "usb-a", "note": "USB 2.0" },
+    { "name": "RS-232C", "direction": "bidirectional", "connector": "rs232", "note": "Service / control" },
+    { "name": "AC In", "direction": "input", "connector": "nema-5-15", "note": "Captive cord (US)" }
+  ]
+}

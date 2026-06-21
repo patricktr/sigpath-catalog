@@ -1,0 +1,22 @@
+{
+  "manufacturer": "Furman",
+  "model": "PL-8C",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/584417-REG/Furman_PL_8C_PL_8_C_Power_Conditioner.html",
+  "confidence": "high",
+  "notes": "9 NEMA 5-15R outlets (8 rear in two isolated banks + 1 front). 15A, captive 10 ft cord (NEMA 5-15P). Gooseneck-lamp BNC omitted (not a signal path).",
+  "ports": [
+    { "name": "AC In", "direction": "input", "connector": "nema-5-15", "note": "Captive 10 ft cord" },
+    { "name": "Rear Outlet 1", "direction": "output", "connector": "nema-5-15", "note": "Bank A" },
+    { "name": "Rear Outlet 2", "direction": "output", "connector": "nema-5-15", "note": "Bank A" },
+    { "name": "Rear Outlet 3", "direction": "output", "connector": "nema-5-15", "note": "Bank A" },
+    { "name": "Rear Outlet 4", "direction": "output", "connector": "nema-5-15", "note": "Bank B" },
+    { "name": "Rear Outlet 5", "direction": "output", "connector": "nema-5-15", "note": "Bank B" },
+    { "name": "Rear Outlet 6", "direction": "output", "connector": "nema-5-15", "note": "Bank B" },
+    { "name": "Rear Outlet 7", "direction": "output", "connector": "nema-5-15", "note": "Bank B" },
+    { "name": "Rear Outlet 8", "direction": "output", "connector": "nema-5-15", "note": "Bank B" },
+    { "name": "Front Outlet", "direction": "output", "connector": "nema-5-15" }
+  ]
+}

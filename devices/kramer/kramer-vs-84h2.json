@@ -1,0 +1,101 @@
+{
+  "manufacturer": "Kramer",
+  "model": "Kramer VS-84H2",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.markertek.com/product/kr-vs-84h2/kramer-vs-84h2-8x4-4k-hdr-hdcp-2-2-hdmi-matrix-switcher-with-digital-audio-routing",
+  "confidence": "medium",
+  "notes": "Signal and control ports confirmed across multiple sources (Markertek, ManualsLib VS-84H2 user manual, Ivojo, Conference Table Boxes). Audio is handled entirely via HDMI embedded audio and ARC — no discrete analog or optical audio connectors. Power connector type (IEC C14) is inferred: the manual references a detachable power cord and universal 100-240V AC input, which is consistent with Kramer's standard 1U rack units; exact inlet designation not explicitly stated in any source consulted. The PROG port is labeled \"mini USB\" in all sources — mapped to usb-micro (closest match in controlled list). RS-232 is a 3-pin terminal block, mapped to euroblock.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 5",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 6",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 7",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 8",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "OUTPUT 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "OUTPUT 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "OUTPUT 3",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "OUTPUT 4",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block for serial control from PC or control system"
+    },
+    {
+      "name": "PROG",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Mini USB port for firmware upgrade and PC/controller communication"
+    },
+    {
+      "name": "USB",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "5V/2A USB Type-A port for powering an external device"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal 100-240V AC 50/60Hz inlet; IEC C14 type inferred from detachable power cord reference in manual — exact inlet type not explicitly stated in available documentation"
+    }
+  ]
+}

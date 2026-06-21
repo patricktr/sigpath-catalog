@@ -1,0 +1,179 @@
+{
+  "manufacturer": "Roland",
+  "model": "V-60HD",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://proav.roland.com/global/products/v-60hd/specifications/",
+  "confidence": "high",
+  "notes": "Desktop unit — no rack-unit designation; Roland specs list dimensions as 356×221×96 mm with no RU rating. TALLY/GPI physical connector is DB-25 Female (12 tally outputs, 8 GPI), which has no exact match in the connector enum; mapped to rs485 as the closest multi-pin control-signal type — treat as approximate. RS-232 uses a DB-9 Male physical connector; mapped to rs232. AUDIO IN 1–4 are combo XLR/TRS jacks (xlr3 primary, accepts trs-6.35). HDMI IN 6 and RGB/COMPONENT IN 6 share the same physical input (HDMI Type A and HD DB-15 are on the same input slot). Power is supplied via included PSB-7U AC adapter (DC barrel); no IEC inlet on the unit itself.",
+  "ports": [
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "HDMI IN 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI Type A, HDCP supported, multi-format"
+    },
+    {
+      "name": "HDMI IN 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI Type A, shared input slot with RGB/COMPONENT IN 6; HDCP supported"
+    },
+    {
+      "name": "RGB/COMPONENT IN 6",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD DB-15 connector, shares input slot with HDMI IN 6; accepts RGB or component video"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A, HDCP supported"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A, HDCP supported"
+    },
+    {
+      "name": "HDMI MULTI-VIEW",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A, multi-view monitor output"
+    },
+    {
+      "name": "AUDIO IN 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4-inch TRS; 48V phantom power available"
+    },
+    {
+      "name": "AUDIO IN 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4-inch TRS; 48V phantom power available"
+    },
+    {
+      "name": "AUDIO IN 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4-inch TRS; 48V phantom power available"
+    },
+    {
+      "name": "AUDIO IN 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4-inch TRS; 48V phantom power available"
+    },
+    {
+      "name": "AUDIO IN 5",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono (stereo pair with AUDIO IN 6)"
+    },
+    {
+      "name": "AUDIO IN 6",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono (stereo pair with AUDIO IN 5)"
+    },
+    {
+      "name": "AUDIO OUT (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR master audio output"
+    },
+    {
+      "name": "AUDIO OUT (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced RCA phono master audio output"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo 1/4-inch headphone output"
+    },
+    {
+      "name": "TALLY/GPI",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Physical connector is DB-25 Female (not in schema enum — rs485 is nearest multi-pin control type); 12 tally outputs + 8 GPI"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 Male; remote control"
+    },
+    {
+      "name": "CONTROL (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "100BASE-TX Ethernet; remote control"
+    },
+    {
+      "name": "USB MEMORY",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A; for firmware update / still image capture to flash drive"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by included Roland PSB-7U AC adapter"
+    }
+  ]
+}

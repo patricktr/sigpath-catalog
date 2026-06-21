@@ -1,0 +1,198 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Ki Pro Ultra Plus",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.aja.com/products/ki-pro-ultra-plus",
+  "confidence": "high",
+  "notes": "1RU when shelf-mounted via optional KPU-Shelf (which holds two units in 2RU); chassis height is 3.31\" (84mm), which is greater than 1RU (44.45mm) but the unit ships as a desktop/portable device. AJA's own KPU-Shelf accessory mounts two units in 2RU, confirming each is 1RU equivalent. rackUnits set to 1 per reviewer guidance. DB-25 physical connector not present in schema — AES/EBU and analog audio DB-25 TASCAM-pinout ports mapped to aes3 with explanatory notes. 4-pin XLR DC inputs mapped to xlr3 (closest available) with notes. Fiber LC ports require optional SFP modules and occupy the same signal path as the corresponding SDI BNC ports. Second Ref BNC is loop-through. Power: dual redundant 4-pin XLR DC inputs (12–18V DC) plus included AC power adapter (100–240VAC, 50/60Hz) connected via separate IEC/brick — the AC adapter itself is external and connects via the 4-pin XLR.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI"
+    },
+    {
+      "name": "Fiber In 1",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module; replaces corresponding SDI BNC input when installed"
+    },
+    {
+      "name": "Fiber In 2",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber In 3",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber In 4",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber Out 1",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber Out 2",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber Out 3",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "Fiber Out 4",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 2.0 Type A; 8-ch embedded audio"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0 Type A; 8-ch embedded audio"
+    },
+    {
+      "name": "AES/EBU Audio",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "8-channel AES/EBU via DB-25 TASCAM pinout (physical connector is DB-25, not AES3 XLR); carries both input and output on a single connector per AJA spec '1/2x DB-25'"
+    },
+    {
+      "name": "Analog Audio In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "8-channel balanced analog via DB-25 TASCAM pinout; physical connector is DB-25 — no DB-25 type in schema, aes3 used as closest available; 24-bit A/D"
+    },
+    {
+      "name": "Analog Audio Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "8-channel balanced analog via DB-25 TASCAM pinout; physical connector is DB-25; 24-bit D/A"
+    },
+    {
+      "name": "Monitor Out L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced stereo monitor output"
+    },
+    {
+      "name": "Monitor Out R",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced stereo monitor output"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo headphone jack"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Linear timecode input"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Linear timecode output"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference (blackburst/tri-level sync), looping — 2 BNC connectors"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DE-9 female; Sony 9-pin machine control protocol"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Ethernet"
+    },
+    {
+      "name": "DC Power 1",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR DC input; 12–18V DC, 5.4A max; dual redundant with DC Power 2"
+    },
+    {
+      "name": "DC Power 2",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR DC input; second redundant DC input; 12–18V DC"
+    }
+  ]
+}

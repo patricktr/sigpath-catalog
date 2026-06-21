@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "RedNet D16R MkII",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://us.focusrite.com/products/rednet-d16r-mkii",
+  "confidence": "high",
+  "notes": "Power inlets are described by Focusrite only as 'Dual PSUs with locking IEC inlets' — the specific locking IEC variant (e.g. Neutrik PowerCON, powerCON TRUE1, latching C14) is not identified in any official documentation or reseller listing. Mapped as 'iec'. The DB25 connectors follow AES59 pinout (8 channels AES3 per connector, combined I/O). EtherCON ports accept standard RJ45 as well.",
+  "ports": [
+    {
+      "name": "AES3 I/O A",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "DB25 AES59 — carries 8 channels AES3 in + 8 channels AES3 out"
+    },
+    {
+      "name": "AES3 I/O B",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "DB25 AES59 — carries 8 channels AES3 in + 8 channels AES3 out"
+    },
+    {
+      "name": "AES3 / DARS In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Alternate AES3 input; also used as optional DARS (Digital Audio Reference Signal) input"
+    },
+    {
+      "name": "AES3 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Alternate AES3 output"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "S/PDIF input; replaces DB25 channels 3–4 when active"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "S/PDIF output; switchable"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75Ω; switchable termination"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75Ω"
+    },
+    {
+      "name": "Network A",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Primary Dante network; EtherCON NE8FBH-S; also accepts standard RJ45"
+    },
+    {
+      "name": "Network B",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Secondary/redundant Dante network; EtherCON NE8FBH-S; also accepts standard RJ45"
+    },
+    {
+      "name": "AC Power A",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC inlet (specific locking variant unconfirmed — Focusrite spec says only 'locking IEC inlets'); PSU A of dual redundant supply; 100–240V 50/60Hz 30VA"
+    },
+    {
+      "name": "AC Power B",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC inlet (specific locking variant unconfirmed); PSU B of dual redundant supply; 100–240V 50/60Hz 30VA"
+    }
+  ]
+}

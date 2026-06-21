@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TSW-1070",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://docs.crestron.com/en-us/8550/Content/Topics/Specifications/Specifications-TSW-1070.htm",
+  "confidence": "high",
+  "notes": "The TSW-1070 is a 10.1 in. wall-mount touch screen controller. It receives all operating power via PoE+ over the single RJ-45 port — there is no separate power inlet (no IEC, DC barrel, or other power connector). No rack-mount form factor. The device also supports Wi-Fi connectivity but has no additional wired I/O ports beyond the RJ-45 and two USB-A host ports.",
+  "ports": [
+    {
+      "name": "LAN PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "8-pin RJ-45 female; 100BASE-TX Ethernet; IEEE 802.3at Type 2 PoE+ PD (receives power, 15–30 W depending on configuration); green and yellow status LEDs"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0 host port; for optional room scheduling accessories (light bar, RFID card reader)"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0 host port; for optional room scheduling accessories; USB ports require PoE+ (802.3at Type 2) PSE to function"
+    }
+  ]
+}

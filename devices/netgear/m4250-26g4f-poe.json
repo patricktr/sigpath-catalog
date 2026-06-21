@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4250-26G4F-PoE+",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.netguardstore.com/gsm4230p.asp",
+  "confidence": "high",
+  "notes": "Model number GSM4230P. Specs cross-confirmed across Netgear's official product page (netgear.com/business/wired/switches/fully-managed/gsm4230p/), Netgear support (netgear.com/support/product/gsm4230p), and reseller detail pages. The RJ45 console port physically uses an RJ45 connector but carries RS232 signaling — mapped to rj45 connector with note. IEC inlet is C14 type with built-in on/off switch. Ports face rearward by default for clean AV rack integration; device can be reverse-mounted for front-facing access. 1U rackmount, 440×257×43.2 mm.",
+  "ports": [
+    {
+      "name": "Port 1–24 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "24x 10/100/1000BASE-T RJ45 with PoE+ (802.3at), 300W total budget, 30W per port"
+    },
+    {
+      "name": "Port 25–26",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "2x 10/100/1000BASE-T RJ45 non-PoE uplink ports"
+    },
+    {
+      "name": "SFP 1–4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x 1000BASE-X SFP fiber/copper uplink ports"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1x dedicated out-of-band management RJ45 port"
+    },
+    {
+      "name": "Console (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C console port; USB-C-to-serial cable included"
+    },
+    {
+      "name": "Console (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS232 serial console via RJ45 connector; RJ45-to-DB9 adapter cable included — physical connector is RJ45 but carries RS232 signal"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "1x USB Type-A port for storage/firmware"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with integral on/off switch; power consumption 35.8W (no PoE) to 401W (full PoE load)"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "manufacturer": "CyberPower",
+  "model": "PDU15B2F12R",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cyberpowersystems.com/product/pdus/basic/pdu15b2f12r/",
+  "confidence": "high",
+  "notes": "Basic PDU with no power conditioning, filtering, or surge suppression — pure electrical pass-through. Switch-free design. 14 NEMA 5-15R outlets total: 2 front-facing, 12 rear-facing. Protected by a 15A circuit breaker. Discontinued product; confirmed via manufacturer product page.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 15 ft cord, NEMA 5-15P plug, 15A max / 12A derated, 100–125V 50/60Hz"
+    },
+    {
+      "name": "AC Output 1 (Front)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, front panel"
+    },
+    {
+      "name": "AC Output 2 (Front)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, front panel"
+    },
+    {
+      "name": "AC Output 3 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 4 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 5 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 6 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 7 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 8 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 9 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 10 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 11 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 12 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 13 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    },
+    {
+      "name": "AC Output 14 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15R receptacle, rear"
+    }
+  ]
+}

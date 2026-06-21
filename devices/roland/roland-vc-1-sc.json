@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Roland",
+  "model": "Roland VC-1-SC",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://proav.roland.com/global/products/vc-1-sc/specifications/",
+  "confidence": "high",
+  "notes": "Up/Down/Cross scan converter between SDI and HDMI with frame sync. The RGB/Component In uses an HD DB-15 (VGA-shell) connector for analog RGB or YPbPr component signals — mapped to 'vga' as the closest connector in the list, but it carries component/RGB not a VGA signal. The SDI In and one SDI Out share the same physical port (loopthrough/re-clock). Audio RCA jacks are physically shared between input and output (switched by device mode). No rack ears; desktop/tabletop form factor (150 x 130 x 30 mm).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Combined/loopthrough with one of the SDI Out connectors. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C)."
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "One of two SDI outputs; this one is shared/combined with the SDI In connector (loopthrough or re-clocked output)."
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Dedicated second SDI output. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C)."
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI Type A (19-pin). Supports HDCP."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A (19-pin). Supports HDCP."
+    },
+    {
+      "name": "RGB/Component In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD DB-15 (VGA shell) used for analog RGB or YPbPr component input, not VGA-signal. Signal levels: 1.0Vp-p (Y), 0.7Vp-p (R/G/B/Pb/Pr), 5VTTL (H/V sync). Closest connector in list is 'vga'."
+    },
+    {
+      "name": "Composite In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite video input. 1.0Vp-p. Supports NTSC and PAL."
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference/sync input. 75 ohm. Accepts Black Burst, Bi-level, and Tri-level sync."
+    },
+    {
+      "name": "Audio In L/R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Analog audio RCA phono pair (L and R), combined/shared with Audio Out. Input level -6 dBV."
+    },
+    {
+      "name": "Audio Out L/R",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Analog audio RCA phono pair (L and R), combined/shared with Audio In. Max output level +6 dBV."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Hi-Speed USB Type B. Used for firmware updates and control."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "9V DC input from included external AC adapter."
+    }
+  ]
+}

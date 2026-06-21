@@ -1,0 +1,84 @@
+{
+  "manufacturer": "QSC",
+  "model": "GX5",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qscaudio.com/index.php?id=12667",
+  "confidence": "medium",
+  "notes": "2-channel Class H power amplifier, 500W/ch at 8 ohms. The Ch1 and Ch2 TRS jacks are NOT internally linked — driving both channels from a single source requires the user to physically patch an external TRS jumper cable between the Ch1 TRS and Ch2 TRS input jacks (per official GX user manual, 'Using Both Channels for the Same Signal', page 9). The XLR and TRS jacks within each individual channel are internally parallel to each other. The GX5 is non-bridgeable. Built-in 100 Hz crossover (3rd-order LP / 2nd-order HP) selectable via rear Full Range / Crossover switch.",
+  "ports": [
+    {
+      "name": "Ch1 XLR Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced, Pin 2 hot. Internally parallel with Ch1 TRS input jack."
+    },
+    {
+      "name": "Ch1 TRS Input",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced. Internally parallel with Ch1 XLR input. To drive both channels from the same source, an external TRS jumper cable must be physically patched by the user between the Ch1 and Ch2 TRS jacks — there is no built-in feed-through between channels."
+    },
+    {
+      "name": "Ch1 RCA Input",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced phono input, Ch1."
+    },
+    {
+      "name": "Ch2 XLR Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced, Pin 2 hot. Internally parallel with Ch2 TRS input jack."
+    },
+    {
+      "name": "Ch2 TRS Input",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced. Internally parallel with Ch2 XLR input."
+    },
+    {
+      "name": "Ch2 RCA Input",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced phono input, Ch2."
+    },
+    {
+      "name": "Ch1 Speaker Output (Speakon/TS Combo)",
+      "direction": "output",
+      "connector": "speakon",
+      "accepts": [
+        "ts-6.35"
+      ],
+      "note": "Neutrik combo jack; accepts Speakon 2-pole or 4-pole (2 poles connected) or 1/4\" TS plugs."
+    },
+    {
+      "name": "Ch1 Binding Posts",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Accepts banana plugs, bare wire, or spade terminals."
+    },
+    {
+      "name": "Ch2 Speaker Output (Speakon/TS Combo)",
+      "direction": "output",
+      "connector": "speakon",
+      "accepts": [
+        "ts-6.35"
+      ],
+      "note": "Neutrik combo jack; accepts Speakon 2-pole or 4-pole (2 poles connected) or 1/4\" TS plugs."
+    },
+    {
+      "name": "Ch2 Binding Posts",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Accepts banana plugs, bare wire, or spade terminals."
+    },
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Standard IEC power inlet with adjacent resettable circuit breaker on rear panel."
+    }
+  ]
+}

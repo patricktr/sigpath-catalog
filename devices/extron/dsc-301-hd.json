@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Extron",
+  "model": "dsc-301-hd",
+  "category": "converter",
+  "type": "Scaler",
+  "sourceUrl": "https://creationnetworks.net/products/extron-dsc-301-hd-three-input-compact-hdcp-compliant-video-scaler",
+  "confidence": "medium",
+  "notes": "Specs confirmed against Creation Networks (AV retailer) spec table and ManualsLib setup manual (Extron part 68-2338-50). The Extron product page was inaccessible (blocked). Two connector caveats: (1) The USB config port is a Mini-USB-B connector — the controlled list has no mini-usb entry; usb-micro was selected as the nearest match. (2) The DC power input is a 2-pole captive screw / euroblock connector on the rear panel (not a barrel jack); euroblock was used as there is no captive-screw power option in the list. The composite video input uses BNC (not RCA). The HDMI input also carries embedded digital audio; a separate 3.5mm TRS analog audio input (Audio In 3) is provided for that input channel as an analog alternative. This product has been discontinued by Extron.",
+  "ports": [
+    {
+      "name": "Composite In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Female BNC, composite video"
+    },
+    {
+      "name": "RGB/YUV In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Female 15-pin HD (HD-15); accepts RGBHV, RGBS, RGsB, YUV/component video"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Female HDMI Type A; accepts HDMI or DVI (with adapter); HDCP-compliant"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo TRS; unbalanced analog audio for Composite input"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo TRS; unbalanced analog audio for RGB/YUV input"
+    },
+    {
+      "name": "Audio In 3",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo TRS; unbalanced analog audio for HDMI input (analog passthrough); HDMI input also carries embedded digital audio"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Female HDMI Type A; scaled video with embedded audio output"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Rear panel 3-pole captive screw (euroblock); Tx, Rx, G pins; serial control"
+    },
+    {
+      "name": "USB Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front panel female Mini-USB-B connector (not micro-USB); closest match in controlled list is usb-micro. Used for Extron Configurator software connection and firmware upgrade."
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Rear panel 2-pole captive screw (euroblock); 12 VDC, 1.5 A external power supply."
+    }
+  ]
+}

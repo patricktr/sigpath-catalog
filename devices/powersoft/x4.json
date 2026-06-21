@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Powersoft",
+  "model": "X4",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.manualslib.com/manual/869671/Powersoft-X4.html",
+  "confidence": "high",
+  "notes": "2U rack-mount, 4-channel Class-D touring amplifier. 1600W/ch @ 8Ω, 3000W/ch @ 4Ω. USB-A firmware update port on front panel IS confirmed in the official manual (page 24, Software Update section) — the prior reviewer's claim that USB is absent from the manual was incorrect; the manual explicitly states 'insert the USB key into the USB port in the front panel.' AC mains connector part number corrected to PC 5/5-STF1-7,62 per manual pages 20–21. Optional 16-in/8-out Dante card available (not included by default). WiFi built in for wireless monitoring via web app and ArmoníaPlus software.",
+  "ports": [
+    {
+      "name": "Analog Input CH1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Neutrik XLR female, balanced analog, Pin 2 hot"
+    },
+    {
+      "name": "Analog Input CH2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Neutrik XLR female, balanced analog, Pin 2 hot"
+    },
+    {
+      "name": "Analog Input CH3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Neutrik XLR female, balanced analog, Pin 2 hot"
+    },
+    {
+      "name": "Analog Input CH4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Neutrik XLR female, balanced analog, Pin 2 hot"
+    },
+    {
+      "name": "AES3 Input CH1/CH2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Neutrik XLR female, AES3 110Ω, carries two AES3 channels (CH1+CH2)"
+    },
+    {
+      "name": "AES3 Input CH3/CH4",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Neutrik XLR female, AES3 110Ω, carries two AES3 channels (CH3+CH4)"
+    },
+    {
+      "name": "Speaker Output CH1/CH2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4MD speakON, one connector per channel pair; supports single-ended and bridge-tied loads"
+    },
+    {
+      "name": "Speaker Output CH3/CH4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4MD speakON, one connector per channel pair; supports single-ended and bridge-tied loads"
+    },
+    {
+      "name": "Network ETH1 (Primary)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Neutrik etherCON, primary network port; 100 Mbit/s (IEEE 802.3u) and 1 Gbit/s (IEEE 802.3ab)"
+    },
+    {
+      "name": "Network ETH2 (Secondary)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Neutrik etherCON, secondary/redundant network port"
+    },
+    {
+      "name": "Remote ON/OFF",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Phoenix euroblock connector for remote power control"
+    },
+    {
+      "name": "AC Mains Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Phoenix PC 5/5-STF1-7,62 flying connector; accepts single-phase (100–240 V), bi-phase, or three-phase (200–415 V) 50/60 Hz"
+    },
+    {
+      "name": "USB (Firmware Update)",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "Front-panel USB-A port for firmware updates via USB key (confirmed in manual page 24, section 13: Software Update)"
+    }
+  ]
+}

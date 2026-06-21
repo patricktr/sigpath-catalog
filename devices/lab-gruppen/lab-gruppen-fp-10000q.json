@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Lab.gruppen",
+  "model": "Lab.gruppen FP 10000Q",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.manualslib.com/manual/290497/Lab-Gruppen-FpPlus-Series-Fp-10000q.html",
+  "confidence": "high",
+  "notes": "Two hardware variants exist: SP (speakON outputs) and BP (binding post outputs); output connector type must be specified at time of order. The operation manual (ManualsLib #290497) and the farralane.com spec listing confirm: 4x balanced XLR-F inputs, 4x Neutrik NL4FC speakON or binding post outputs, 2x EtherCon RJ45 NomadLink network (IN and OUT), 2U rackmount chassis. Power is a captive hardwired cord — CEE7/Schuko (EU, 16A) or NEMA L6-30 twist-lock (US, 30A) — no panel-mount inlet. The 'iec' connector type in the port list is an approximation; the actual physical power connection is a captive cord on both regional versions. The 4-channel model does not have XLR loop-thru outputs (those exist only on 2-channel FP+ models). No USB, RS-232, or other control ports confirmed.",
+  "ports": [
+    {
+      "name": "Input A",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F, electronically balanced, channel A"
+    },
+    {
+      "name": "Input B",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F, electronically balanced, channel B"
+    },
+    {
+      "name": "Input C",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F, electronically balanced, channel C"
+    },
+    {
+      "name": "Input D",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F, electronically balanced, channel D"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4FC speakON on SP variant; binding posts on BP variant (must be specified at order). This port describes the SP variant."
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4FC speakON on SP variant; binding posts on BP variant."
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4FC speakON on SP variant; binding posts on BP variant."
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4FC speakON on SP variant; binding posts on BP variant."
+    },
+    {
+      "name": "NomadLink Network In",
+      "direction": "input",
+      "connector": "ethercon",
+      "note": "Neutrik EtherCon-housed RJ45 for NomadLink Ethernet control and monitoring network"
+    },
+    {
+      "name": "NomadLink Network Out",
+      "direction": "output",
+      "connector": "ethercon",
+      "note": "Neutrik EtherCon-housed RJ45 for NomadLink Ethernet daisy-chain output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Captive mains cord — 230V CE version uses 16A CEE7/Schuko cord; 115V ETL version uses 30A NEMA L6-30 twist-lock cord. Neither is a panel-mount IEC inlet; 'iec' is the closest available connector type. Actual connector is region-dependent hardwired cord."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Mini Converter SDI to HDMI 6G",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/miniconverters/techspecs",
+  "confidence": "medium",
+  "notes": "Core video path modeled (6G-SDI in, SDI loop out, HDMI out, 12V DC). The unit's AES/EBU + balanced analog audio outputs are omitted pending those connector types — verify exact audio-out jacks.",
+  "ports": [
+    { "name": "SDI In", "direction": "input", "connector": "sdi", "note": "Up to 6G-SDI" },
+    { "name": "SDI Loop Out", "direction": "output", "connector": "sdi" },
+    { "name": "HDMI Out", "direction": "output", "connector": "hdmi" },
+    { "name": "12V DC", "direction": "input", "connector": "dc-barrel" }
+  ]
+}

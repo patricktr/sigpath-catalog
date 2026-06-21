@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Crestron",
+  "model": "AM-3200",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://docs.crestron.com/en-us/9020/Content/Topics/QSG_to_PM/AM-3200%20Specs.htm",
+  "confidence": "high",
+  "notes": "Physical dimensions: 1.26in H x 7.40in W x 6.54in D (half-rack width, ~3/4U tall). Not a rack-mount device as shipped — Crestron describes mounting as freestanding, surface mount, or single-rack-rail only; rackUnits omitted. AirMedia Series 3 wireless presentation receiver. Also has a microSD card slot (no matching connector enum) used for digital signage content caching. Unit is powered either by the LAN PoE+ port (IEEE 802.3at Class 4) or by the optional 24 VDC power pack via dc-barrel.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Type A; accepts HDMI, DVI, and DisplayPort signals (with adapter)"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Type A; HDMI digital video/audio output"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm terminal block; balanced/unbalanced stereo, 4 Vrms balanced / 2 Vrms unbalanced"
+    },
+    {
+      "name": "RS-232/COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm terminal block; bidirectional RS-232 at up to 115.2k baud"
+    },
+    {
+      "name": "IR/Serial Out",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-pin 3.5mm terminal block; 1-way IR output at 1.1 MHz or TTL/RS-232 at 19.2k baud"
+    },
+    {
+      "name": "LAN PoE+",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "100Base-TX/1000Base-T; IEEE 802.3at Class 4 PoE+ powers the unit; primary network connection"
+    },
+    {
+      "name": "LAN AUX",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "100Base-TX/1000Base-T; secondary/auxiliary network port"
+    },
+    {
+      "name": "USB Type A (x2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "One USB 2.0 host and one USB 3.0 host port for peripherals"
+    },
+    {
+      "name": "USB Type B",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "USB 3.0 device port; used as computer console connection"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24 VDC at 1.25 A via 2.1x5.5 mm barrel connector; optional if powered via LAN PoE+"
+    }
+  ]
+}

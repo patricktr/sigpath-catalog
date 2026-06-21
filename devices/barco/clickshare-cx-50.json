@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Barco",
+  "model": "ClickShare CX-50",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.manualslib.com/manual/1797802/Barco-Cx-50.html",
+  "confidence": "high",
+  "notes": "Gen1 (model C5010S / R9861600D01C). Power input on the unit is a DC barrel jack from an included external adapter (12V DC, 4.2A min); the '110/220V AC' spec refers to the adapter's mains input, not a connector on the unit itself. S/PDIF is confirmed TOSLINK optical (not coaxial). No RS-232 port documented. Desktop form factor — not rack-mountable. The ATM090T-A190 adapter (19V/4.74A) is for the Gen2 only and does not apply here.",
+  "ports": [
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 1.4b, 4K UHD (3840x2160) @ 30Hz"
+    },
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 1.4b, up to 1920x1080 @ 30Hz"
+    },
+    {
+      "name": "USB-C (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB 2.0, rear panel; for USB peripherals/cameras"
+    },
+    {
+      "name": "USB-A 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0, rear panel"
+    },
+    {
+      "name": "USB-A 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0, rear panel"
+    },
+    {
+      "name": "USB-A (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0, front panel; for ClickShare Button"
+    },
+    {
+      "name": "Ethernet LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1 Gbit Ethernet"
+    },
+    {
+      "name": "Audio Line Out (Analog)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack, analog stereo line output"
+    },
+    {
+      "name": "S/PDIF Out (Digital)",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "TOSLINK optical digital audio output"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 4.2A min; supplied by included external Class 2 power adapter (110-220V AC mains input on adapter side)"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Sony",
+  "model": "UWP-D21",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.manualslib.com/manual/1740993/Sony-Uwp-D21.html",
+  "confidence": "high",
+  "notes": "Corrected type from Audio interface to Wireless mic. The UWP-D21 package includes UTX-B40 bodypack transmitter, URX-P40 portable diversity tuner receiver, and ECM-V1BMP lavalier mic. rackUnits omitted as this is a wearable/camera-mount system. UTX-B40 USB-C is a service port (manual p.10), not a user power input, though USB power is technically functional per p.16. URX-P40 USB-C is a normal user power port. Both units primarily run on 2x AA batteries. Phantom power on UTX-B40 MIC input is not confirmed in manual.",
+  "ports": [
+    {
+      "name": "UTX-B40 MIC Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm 3-pole locking mini jack on UTX-B40 bodypack transmitter. MIC and LINE modes selectable."
+    },
+    {
+      "name": "UTX-B40 USB-C (Service only)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Labeled 'For use by service personnel' in parts diagram (manual p.10). USB power at DC 5V/200mA+ is technically possible (p.16) but this is not a standard user-accessible power input."
+    },
+    {
+      "name": "URX-P40 Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm 3-pole locking mini jack on URX-P40 receiver. XLR-BMP conversion cable included for connecting to XLR camera inputs."
+    },
+    {
+      "name": "URX-P40 Headphone Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack on URX-P40 for monitoring received audio."
+    },
+    {
+      "name": "URX-P40 USB-C Power",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "User-accessible USB-C on URX-P40 receiver. DC 5.0V from a commercially available USB portable power supply."
+    }
+  ]
+}

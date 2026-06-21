@@ -1,0 +1,116 @@
+{
+  "manufacturer": "Extron",
+  "model": "DXP 88 HDMI",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.cinos.net/wp-content/uploads/resources/extron/matrix-switchers/cinos-extron-dxp-hdmi-series-specifications.pdf",
+  "confidence": "high",
+  "notes": "Source is the official Extron DXP 44/48/84/88 HDMI Series specification sheet (archived by Cinos but the original Extron document, part number 8.0-011812-D8). The DXP 88 HDMI is the original (non-4K) model supporting up to 1080p/1920x1200 at 6.75 Gbps. This series does NOT have audio de-embed outputs — that is a feature added in the later DXP HD 4K series. The front-panel RS-232 port is a 2.5 mm mini stereo jack; the controlled connector list has no 2.5 mm entry so trs-3.5 is used as the closest match. The power inlet connector type (IEC C14) is inferred from standard practice for this class of rack equipment — the spec sheet only states 'internal supply, 100-240 VAC 50-60 Hz' without naming the inlet. No USB port is present on this model. CEC is explicitly not supported.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 5",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 6",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 7",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 8",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 5",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 6",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 7",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 8",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Rear panel, 9-pin female DE-9 connector. Pins: 2=Tx, 3=Rx, 5=GND."
+    },
+    {
+      "name": "RS-232 (Front)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Front panel 2.5 mm mini stereo jack (not 3.5 mm — closest available connector is trs-3.5; actual is 2.5 mm TRS). Tip=Tx, Ring=Rx, Sleeve=GND."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100Base-T, supports Telnet, HTTP, DHCP."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply, 100-240 VAC 50-60 Hz. Standard IEC C14 inlet typical for 2U rack equipment with internal PSU; connector type inferred — spec sheet states internal supply but does not name the inlet type explicitly."
+    }
+  ]
+}

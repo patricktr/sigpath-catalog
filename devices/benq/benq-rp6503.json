@@ -1,0 +1,167 @@
+{
+  "manufacturer": "BenQ",
+  "model": "BenQ RP6503",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.benq.com/en-me/business/ifp/rp6503/specifications.html",
+  "confidence": "medium",
+  "notes": "Source is BenQ Middle East spec page (en-me), cross-referenced with Audio General Inc. retailer listing and ManualsLib quick-start manual. The RP6503 is a 65-inch interactive flat panel (education/corporate). Key caveats: (1) RS232 connector listed as 'rs232' (DB9 type inferred from BenQ IFP standard practice — not explicitly stated in spec page); (2) IEC power inlet type inferred from detachable regional power cords shipped in box — not explicitly labeled on spec page; (3) exact front/rear panel distribution of the 7× USB-A ports is partially inferred from the quick-start manual diagram description; (4) the RP6503 also has a separate 'Corporate' variant (RP6503-Corporate) which may differ slightly in connectivity; (5) device is not rack-mountable. The Corporate variant spec page returned a 404 during research.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Rear panel, HDMI 2.0"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Rear panel, HDMI 2.0"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Front panel, HDMI 2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Rear panel, HDMI 2.0, 4K@60Hz with audio"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "note": "Rear panel, DisplayPort 1.2a"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Rear panel"
+    },
+    {
+      "name": "PC Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Rear panel, 3.5mm line input to accompany VGA"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Front panel, 3.5mm microphone/mic input"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Rear panel, 3.5mm earphone/line out"
+    },
+    {
+      "name": "S/PDIF",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Rear panel, optical digital audio output"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0"
+    },
+    {
+      "name": "USB-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.2 Gen 1"
+    },
+    {
+      "name": "USB-A 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.2 Gen 1"
+    },
+    {
+      "name": "USB-A 5",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.2 Gen 1"
+    },
+    {
+      "name": "USB-A 6",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.2 Gen 1"
+    },
+    {
+      "name": "USB-A 7",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.2 Gen 1; front panel"
+    },
+    {
+      "name": "USB-B 1",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "USB 3.0, touch connection to host PC for rear HDMI inputs"
+    },
+    {
+      "name": "USB-B 2",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "USB 3.0, touch connection to host PC"
+    },
+    {
+      "name": "USB-B 3",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "USB 3.0, touch connection to host PC for front HDMI input"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB 3.0, front panel; supports display input and USB hub"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB 3.0 with Power Delivery 65W; rear panel"
+    },
+    {
+      "name": "LAN 1 (Android)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Mbps, for built-in Android OS"
+    },
+    {
+      "name": "LAN 2 (OPS)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Mbps, for optional OPS slot-in PC"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 connector; for serial control. Connector type DB9 inferred from standard BenQ IFP practice — spec page lists '1 × RS-232' without explicit connector label"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet inferred; BenQ ships multiple regional power cords in box confirming detachable cord. Spec states AC 100–240V 50/60Hz. Power inlet connector type not explicitly stated on spec page."
+    }
+  ]
+}

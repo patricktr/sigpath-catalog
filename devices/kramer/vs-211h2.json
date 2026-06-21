@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VS-211H2",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.manualslib.com/manual/1536717/Kramer-Vs-211h2.html",
+  "confidence": "medium",
+  "notes": "Specs confirmed from official Kramer VS-211H2 user manual (P/N 2900-300581) via ManualsLib. The device is a compact desktop unit (12 x 7.2 x 2.4 cm), not rack-mountable. Supports 4K@60 UHD, HDR10, HDCP 2.2, HDMI 2.0. The RS-232 CTRL port and REMOTE contact closure port are both 3-pin terminal blocks (euroblock). Power connector type is dc-barrel (5.2V DC external desktop adapter); exact barrel dimensions not confirmed in available sources.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI Type A female; connects to HDMI source 1"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI Type A female; connects to HDMI source 2"
+    },
+    {
+      "name": "OUTPUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A female; connects to HDMI display/acceptor"
+    },
+    {
+      "name": "CTRL RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block for RS-232 serial device control"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin terminal block (IN1, IN2, GND) for contact closure remote switching"
+    },
+    {
+      "name": "5V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input; supplied by included 5.2V DC / 4A desktop power adapter"
+    }
+  ]
+}

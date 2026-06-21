@@ -1,0 +1,59 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "SRX835P",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw11bc9856/pdfs/JBL_SRX800_UsersGuide_061515.pdf",
+  "confidence": "high",
+  "notes": "Connector list sourced directly from the official JBL SRX800 Series User's Guide (PDF). The back panel diagram and descriptions on pages 7-9 confirm: 2 XLR/TRS combo inputs, 2 XLR direct outputs (DSP bypass), 1 XLR Mix Out (post-DSP), 1 EtherCon network port, and a locking IEC power inlet. The Thomann listing cited by the prior reviewer only showed a subset of ports. The EtherCon connector is for HiQnet peer-to-peer networking between SRX800 units only - not for connection to a standard LAN. This is a floor-standing/pole-mount powered PA speaker; rackUnits omitted.",
+  "ports": [
+    {
+      "name": "CH1 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR female + 1/4\" TRS combo; accepts mic, line, and instrument levels"
+    },
+    {
+      "name": "CH1 Direct Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR male; passes CH1 signal directly from input, bypassing DSP for zero latency; for daisy-chaining"
+    },
+    {
+      "name": "CH2 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR female + 1/4\" TRS combo; accepts mic, line, and instrument levels"
+    },
+    {
+      "name": "CH2 Direct Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR male; passes CH2 signal directly from input, bypassing DSP for zero latency; for daisy-chaining"
+    },
+    {
+      "name": "Mix Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR male; post-DSP mix of CH1 and CH2; adds approx. 2ms latency"
+    },
+    {
+      "name": "Network (EtherCon)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "HiQnet network control; for linking multiple SRX800 units; NOT to be connected to a LAN"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC AC mains inlet"
+    }
+  ]
+}

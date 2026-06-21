@@ -1,0 +1,159 @@
+{
+  "manufacturer": "RME",
+  "model": "Fireface UFX III",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.rme-usa.com/fireface-ufx-3.html",
+  "confidence": "medium",
+  "notes": "1U rackmount USB 3.0 audio interface with 188 channels total I/O. The optical MADI connector is physically an SC/FDDI duplex (multimode fiber), listed here as fiber-lc because the allowed connector enum has no SC-duplex value — the actual hardware uses SC connectors, not LC. Official RME spec lists 6 rear TRS line outputs (channels 3-8) plus 2 XLR monitor outputs (channels 1-2); the Sound on Sound review phrase 'octets of balanced line inputs and outputs' refers to the 8-channel routing group, not 8 identical TRS sockets — the XLR pair breaks the octet on the output side. Word Clock BNC ports are switchable to coaxial MADI I/O. The two rear USB-A ports serve DURec direct USB recording and optional ARC USB remote; both are USB 2.0 speed. Power via standard IEC C14 inlet feeding internal universal switching PSU (100-240V AC, 19-25W).",
+  "ports": [
+    {
+      "name": "Line In 1-8",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "8 balanced analog line inputs on rear panel, servo-balanced, +24dBu max"
+    },
+    {
+      "name": "Mic/Inst/Line In 9-12",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "4 front-panel combo XLR/TRS inputs (mic, instrument, or line), 75dB gain range"
+    },
+    {
+      "name": "Monitor Out 1-2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "2 balanced XLR monitor outputs on rear panel, servo-balanced, +24dBu max"
+    },
+    {
+      "name": "Line Out 3-8",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6 balanced TRS analog line outputs on rear panel, servo-balanced"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel stereo headphone output, +19dBu, independent mix"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel stereo headphone output, +19dBu, independent mix"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Transformer-balanced AES/EBU digital input on rear panel"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Transformer-balanced AES/EBU digital output on rear panel"
+    },
+    {
+      "name": "ADAT In 1",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "ADAT optical input; also usable as S/PDIF optical in"
+    },
+    {
+      "name": "ADAT Out 1",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "ADAT optical output; also usable as S/PDIF optical out"
+    },
+    {
+      "name": "ADAT In 2",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "ADAT optical input; also usable as S/PDIF optical in"
+    },
+    {
+      "name": "ADAT Out 2",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "ADAT optical output; also usable as S/PDIF optical out"
+    },
+    {
+      "name": "MADI Optical In",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "MADI optical input, 64 channels bidirectional; actual physical connector is SC/FDDI duplex (multimode 62.5/125 or 50/125), not LC — listed as fiber-lc as the closest available enum value"
+    },
+    {
+      "name": "MADI Optical Out",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "MADI optical output, 64 channels; actual physical connector is SC/FDDI duplex (multimode), not LC"
+    },
+    {
+      "name": "Word Clock / MADI Coax In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC Word Clock input, switchable to coaxial MADI input (75 Ohm)"
+    },
+    {
+      "name": "Word Clock / MADI Coax Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "BNC Word Clock output, switchable to coaxial MADI output"
+    },
+    {
+      "name": "MIDI In (Front)",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI input on front panel"
+    },
+    {
+      "name": "MIDI Out (Front)",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI output on front panel"
+    },
+    {
+      "name": "MIDI In (Rear)",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI input on rear panel"
+    },
+    {
+      "name": "MIDI Out (Rear)",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI output on rear panel"
+    },
+    {
+      "name": "USB 3.0 Host",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Rear-panel USB Type-B 3.0 port for computer connection; also supports USB 2.0 mode (limited to non-MADI I/O)"
+    },
+    {
+      "name": "USB-A DURec (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB-A port for DURec direct recording to USB storage device"
+    },
+    {
+      "name": "USB-A ARC Remote (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB-A port for optional RME ARC USB advanced remote control unit"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 power inlet; internal universal switching PSU, 100-240V AC, 19-25W"
+    }
+  ]
+}

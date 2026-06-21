@@ -1,0 +1,65 @@
+{
+  "manufacturer": "PTZOptics",
+  "model": "PT30X-SE-GY-G3",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://ptzoptics.com/move-se/",
+  "confidence": "high",
+  "notes": "The queried SKU 'PT30X-SDI-GY-G3' does not exist; the correct model is PT30X-SE-GY-G3 (Move SE, gray). The 3.5mm audio input is specified as 'line level input' only — stereo is unconfirmed and has been omitted. PoE 802.3af is supplied via the RJ45 port. RS232 in/out use 8-pin Mini-DIN connectors. RS485 uses a 2-pin Phoenix connector. This is a desktop PTZ camera; no rackUnits applies.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI version 1.3"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3G-SDI, 800mVP-p, 75Ω, SMPTE 424M"
+    },
+    {
+      "name": "USB 3.0 Out",
+      "direction": "output",
+      "connector": "usb-c",
+      "note": "USB 3.0 Type-C video/UVC output"
+    },
+    {
+      "name": "RJ45 Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100 Adaptive Ethernet with PoE 802.3af input"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm line-level input; stereo unconfirmed"
+    },
+    {
+      "name": "RS232 In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "8-pin Mini-DIN, max 30m"
+    },
+    {
+      "name": "RS232 Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "8-pin Mini-DIN, max 30m"
+    },
+    {
+      "name": "RS485",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "2-pin Phoenix connector, max 1200m"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "JEITA type, DC 12V, 2A max"
+    }
+  ]
+}

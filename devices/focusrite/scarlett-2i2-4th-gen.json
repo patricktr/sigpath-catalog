@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "Scarlett 2i2 (4th Gen)",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://focusrite.com/products/scarlett-2i2",
+  "confidence": "medium",
+  "notes": "Inputs are combo XLR/TRS jacks (connector xlr3 + accepts trs-6.35). Front/back layout per 4th gen; spot-check exact jack placement.",
+  "ports": [
+    { "name": "Input 1", "direction": "input", "connector": "xlr3", "accepts": ["trs-6.35"], "note": "Combo XLR / 1/4\" TRS" },
+    { "name": "Input 2", "direction": "input", "connector": "xlr3", "accepts": ["trs-6.35"], "note": "Combo XLR / 1/4\" TRS" },
+    { "name": "Output L", "direction": "output", "connector": "trs-6.35" },
+    { "name": "Output R", "direction": "output", "connector": "trs-6.35" },
+    { "name": "Headphones", "direction": "output", "connector": "trs-6.35" },
+    { "name": "USB-C", "direction": "bidirectional", "connector": "usb-c", "note": "To computer" },
+    { "name": "USB-C Power", "direction": "input", "connector": "usb-c", "note": "5V external power" }
+  ]
+}
