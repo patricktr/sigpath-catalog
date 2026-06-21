@@ -26,8 +26,10 @@ const DEVICES_DIR = join(ROOT, "devices");
 const DIST_DIR = join(ROOT, "dist");
 const CHECK_ONLY = process.argv.includes("--check");
 
-// Bumped on each publish; CI will manage this once the publish workflow lands.
-const REV = 1;
+// Monotonic catalog revision. CI passes CATALOG_REV (the count of commits that
+// touched devices/connectors, so it advances only on real content changes); local
+// builds default to 1, matching the bundled snapshot the app ships with.
+const REV = Number(process.env.CATALOG_REV) || 1;
 const MIN_APP_VERSION = "0.4.0";
 
 const CATEGORIES = new Set([

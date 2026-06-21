@@ -30,16 +30,27 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # Full history so the rev can be derived from the commit count.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # Rev = number of commits that touched catalog content, so it advances only
+      # on real device/connector changes (not on workflow/readme edits).
+      - name: Compute catalog rev
+        id: rev
+        run: echo "rev=$(git rev-list --count HEAD -- devices connectors)" >> "$GITHUB_OUTPUT"
+
       # Zero-dependency build: validates every device + connector, stamps
       # rev/contentHash, writes dist/catalog-<rev>.json + dist/manifest.json.
       - name: Build snapshot
         run: node scripts/build-snapshot.mjs
+        env:
+          CATALOG_REV: ${{ steps.rev.outputs.rev }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
