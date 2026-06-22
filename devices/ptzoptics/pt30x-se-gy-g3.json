@@ -11,19 +11,22 @@
       "name": "HDMI Out",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI version 1.3"
+      "note": "HDMI version 1.3",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "3G-SDI Out",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI, 800mVP-p, 75Ω, SMPTE 424M"
+      "note": "3G-SDI, 800mVP-p, 75Ω, SMPTE 424M",
+      "grade": "sdi-3g"
     },
     {
       "name": "USB 3.0 Out",
       "direction": "output",
       "connector": "usb-c",
-      "note": "USB 3.0 Type-C video/UVC output"
+      "note": "USB 3.0 Type-C video/UVC output",
+      "grade": "usb-5g"
     },
     {
       "name": "RJ45 Ethernet",

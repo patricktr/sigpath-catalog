@@ -85,13 +85,15 @@
       "name": "USB-A 1",
       "direction": "input",
       "connector": "usb-a",
-      "note": "USB 2.0"
+      "note": "USB 2.0",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A 2",
       "direction": "input",
       "connector": "usb-a",
-      "note": "USB 2.0"
+      "note": "USB 2.0",
+      "grade": "usb-2.0"
     },
     {
       "name": "AC Power",

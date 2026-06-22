@@ -12,7 +12,8 @@
       "name": "SDI Input",
       "direction": "input",
       "connector": "bnc",
-      "note": "1x SDI; supports 270Mb, 1.5G, 3G, 6G; 16 channels embedded audio"
+      "note": "1x SDI; supports 270Mb, 1.5G, 3G, 6G; 16 channels embedded audio",
+      "grade": "sdi-6g"
     },
     {
       "name": "SDI Output 1",
@@ -36,13 +37,15 @@
       "name": "HDMI Input",
       "direction": "input",
       "connector": "hdmi",
-      "note": "HDMI 2.0; 8 channels embedded audio"
+      "note": "HDMI 2.0; 8 channels embedded audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI Output",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 2.0; 8 channels embedded audio"
+      "note": "HDMI 2.0; 8 channels embedded audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "Timecode Input",
@@ -84,13 +87,15 @@
       "name": "Ethernet",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "1 Gb/s Ethernet for network control and streaming"
+      "note": "1 Gb/s Ethernet for network control and streaming",
+      "grade": "eth-1g"
     },
     {
       "name": "USB-C",
       "direction": "bidirectional",
       "connector": "usb-c",
-      "note": "USB 3.0 Type-C, up to 5 Gb/s; external media recording/expansion"
+      "note": "USB 3.0 Type-C, up to 5 Gb/s; external media recording/expansion",
+      "grade": "usb-5g"
     },
     {
       "name": "Headphone",

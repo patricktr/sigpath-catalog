@@ -11,7 +11,8 @@
       "name": "SDI In",
       "direction": "input",
       "connector": "bnc",
-      "note": "Combined/loopthrough with one of the SDI Out connectors. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C)."
+      "note": "Combined/loopthrough with one of the SDI Out connectors. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C).",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI Out 1",
@@ -23,7 +24,8 @@
       "name": "SDI Out 2",
       "direction": "output",
       "connector": "bnc",
-      "note": "Dedicated second SDI output. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C)."
+      "note": "Dedicated second SDI output. Supports 3G-SDI (SMPTE 424M/425M-AB), HD-SDI (SMPTE 292M), and SD-SDI (SMPTE 259M-C).",
+      "grade": "sdi-3g"
     },
     {
       "name": "HDMI In",
@@ -71,7 +73,8 @@
       "name": "USB",
       "direction": "bidirectional",
       "connector": "usb-b",
-      "note": "Hi-Speed USB Type B. Used for firmware updates and control."
+      "note": "Hi-Speed USB Type B. Used for firmware updates and control.",
+      "grade": "usb-2.0"
     },
     {
       "name": "DC In",

@@ -24,7 +24,8 @@
       "name": "Management Ethernet",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "Dedicated out-of-band management Gigabit Ethernet port"
+      "note": "Dedicated out-of-band management Gigabit Ethernet port",
+      "grade": "eth-1g"
     },
     {
       "name": "RJ-45 Console",

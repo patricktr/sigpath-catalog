@@ -12,7 +12,8 @@
       "name": "PoE+ Port 1–40",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "40x 10/100/1000BASE-T PoE+ ports (802.3at), 960W total PoE budget, rear-facing for clean AV rack integration"
+      "note": "40x 10/100/1000BASE-T PoE+ ports (802.3at), 960W total PoE budget, rear-facing for clean AV rack integration",
+      "grade": "eth-1g"
     },
     {
       "name": "SFP+ Port 1–8",

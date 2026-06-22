@@ -6,55 +6,270 @@
   "rackUnits": 2,
   "confidence": "high",
   "ports": [
-    { "name": "SDI In 1", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 2", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 3", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 4", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 5", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 6", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 7", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 8", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 9", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 10", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 11", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 12", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 13", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 14", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 15", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 16", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 17", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 18", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 19", "direction": "input", "connector": "sdi" },
-    { "name": "SDI In 20", "direction": "input", "connector": "sdi" },
-    { "name": "Program Out 1", "direction": "output", "connector": "sdi" },
-    { "name": "Program Out 2", "direction": "output", "connector": "sdi" },
-    { "name": "Program Out 3", "direction": "output", "connector": "sdi" },
-    { "name": "Program Out (Down-Conv)", "direction": "output", "connector": "sdi", "note": "HD-SDI down-converted program output" },
-    { "name": "Preview Out", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 1", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 2", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 3", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 4", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 5", "direction": "output", "connector": "sdi" },
-    { "name": "Aux Out 6", "direction": "output", "connector": "sdi" },
-    { "name": "Multi-View Out 1", "direction": "output", "connector": "sdi" },
-    { "name": "Multi-View Out 2", "direction": "output", "connector": "sdi" },
-    { "name": "Ref In", "direction": "input", "connector": "bnc", "note": "Tri-Sync / Black Burst reference input" },
-    { "name": "Analog Audio In L", "direction": "input", "connector": "xlr3", "note": "Balanced stereo pair — left channel" },
-    { "name": "Analog Audio In R", "direction": "input", "connector": "xlr3", "note": "Balanced stereo pair — right channel" },
-    { "name": "RCA Audio In L", "direction": "input", "connector": "rca", "note": "HiFi stereo pair — left channel" },
-    { "name": "RCA Audio In R", "direction": "input", "connector": "rca", "note": "HiFi stereo pair — right channel" },
-    { "name": "Audio Program Out L", "direction": "output", "connector": "xlr3" },
-    { "name": "Audio Program Out R", "direction": "output", "connector": "xlr3" },
-    { "name": "Audio Monitor Out L", "direction": "output", "connector": "xlr3" },
-    { "name": "Audio Monitor Out R", "direction": "output", "connector": "xlr3" },
-    { "name": "Talkback In", "direction": "input", "connector": "xlr3" },
-    { "name": "Talkback Out", "direction": "output", "connector": "xlr3" },
-    { "name": "Timecode In", "direction": "input", "connector": "xlr3", "note": "LTC timecode input" },
-    { "name": "Timecode Out", "direction": "output", "connector": "xlr3", "note": "LTC timecode output" },
-    { "name": "Ethernet", "direction": "bidirectional", "connector": "rj45", "note": "10/100/1000 Base-T — control / network" },
-    { "name": "USB", "direction": "bidirectional", "connector": "usb-b", "note": "USB 2.0 Type-B — firmware / utility" },
-    { "name": "Power In 1", "direction": "input", "connector": "iec", "note": "Dual internal power supplies" },
-    { "name": "Power In 2", "direction": "input", "connector": "iec", "note": "Dual internal power supplies" }
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 5",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 6",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 7",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 8",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 9",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 10",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 11",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 12",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 13",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 14",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 15",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 16",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 17",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 18",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 19",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 20",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "Program Out 1",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Program Out 2",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Program Out 3",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Program Out (Down-Conv)",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "HD-SDI down-converted program output",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Preview Out",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 1",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 2",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 3",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 4",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 5",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Aux Out 6",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Multi-View Out 1",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Multi-View Out 2",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Tri-Sync / Black Burst reference input"
+    },
+    {
+      "name": "Analog Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced stereo pair — left channel"
+    },
+    {
+      "name": "Analog Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced stereo pair — right channel"
+    },
+    {
+      "name": "RCA Audio In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "HiFi stereo pair — left channel"
+    },
+    {
+      "name": "RCA Audio In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "HiFi stereo pair — right channel"
+    },
+    {
+      "name": "Audio Program Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Program Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Monitor Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Monitor Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Talkback In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Talkback Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Timecode In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "LTC timecode input"
+    },
+    {
+      "name": "Timecode Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "LTC timecode output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Base-T — control / network",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB 2.0 Type-B — firmware / utility",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Power In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual internal power supplies"
+    },
+    {
+      "name": "Power In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual internal power supplies"
+    }
   ]
 }

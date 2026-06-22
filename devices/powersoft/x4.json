@@ -60,7 +60,8 @@
       "name": "Network ETH1 (Primary)",
       "direction": "bidirectional",
       "connector": "ethercon",
-      "note": "Neutrik etherCON, primary network port; 100 Mbit/s (IEEE 802.3u) and 1 Gbit/s (IEEE 802.3ab)"
+      "note": "Neutrik etherCON, primary network port; 100 Mbit/s (IEEE 802.3u) and 1 Gbit/s (IEEE 802.3ab)",
+      "grade": "eth-1g"
     },
     {
       "name": "Network ETH2 (Secondary)",

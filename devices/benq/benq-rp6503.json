@@ -11,31 +11,36 @@
       "name": "HDMI In 1",
       "direction": "input",
       "connector": "hdmi",
-      "note": "Rear panel, HDMI 2.0"
+      "note": "Rear panel, HDMI 2.0",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI In 2",
       "direction": "input",
       "connector": "hdmi",
-      "note": "Rear panel, HDMI 2.0"
+      "note": "Rear panel, HDMI 2.0",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI In 3",
       "direction": "input",
       "connector": "hdmi",
-      "note": "Front panel, HDMI 2.0"
+      "note": "Front panel, HDMI 2.0",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI Out",
       "direction": "output",
       "connector": "hdmi",
-      "note": "Rear panel, HDMI 2.0, 4K@60Hz with audio"
+      "note": "Rear panel, HDMI 2.0, 4K@60Hz with audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "DisplayPort In",
       "direction": "input",
       "connector": "dp",
-      "note": "Rear panel, DisplayPort 1.2a"
+      "note": "Rear panel, DisplayPort 1.2a",
+      "grade": "dp-1.2"
     },
     {
       "name": "VGA In",
@@ -71,85 +76,99 @@
       "name": "USB-A 1",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0"
+      "note": "USB 2.0",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A 2",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0"
+      "note": "USB 2.0",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A 3",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.2 Gen 1"
+      "note": "USB 3.2 Gen 1",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-A 4",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.2 Gen 1"
+      "note": "USB 3.2 Gen 1",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-A 5",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.2 Gen 1"
+      "note": "USB 3.2 Gen 1",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-A 6",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.2 Gen 1"
+      "note": "USB 3.2 Gen 1",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-A 7",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.2 Gen 1; front panel"
+      "note": "USB 3.2 Gen 1; front panel",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-B 1",
       "direction": "input",
       "connector": "usb-b",
-      "note": "USB 3.0, touch connection to host PC for rear HDMI inputs"
+      "note": "USB 3.0, touch connection to host PC for rear HDMI inputs",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-B 2",
       "direction": "input",
       "connector": "usb-b",
-      "note": "USB 3.0, touch connection to host PC"
+      "note": "USB 3.0, touch connection to host PC",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-B 3",
       "direction": "input",
       "connector": "usb-b",
-      "note": "USB 3.0, touch connection to host PC for front HDMI input"
+      "note": "USB 3.0, touch connection to host PC for front HDMI input",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-C 1",
       "direction": "bidirectional",
       "connector": "usb-c",
-      "note": "USB 3.0, front panel; supports display input and USB hub"
+      "note": "USB 3.0, front panel; supports display input and USB hub",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-C 2",
       "direction": "bidirectional",
       "connector": "usb-c",
-      "note": "USB 3.0 with Power Delivery 65W; rear panel"
+      "note": "USB 3.0 with Power Delivery 65W; rear panel",
+      "grade": "usb-5g"
     },
     {
       "name": "LAN 1 (Android)",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100/1000 Mbps, for built-in Android OS"
+      "note": "10/100/1000 Mbps, for built-in Android OS",
+      "grade": "eth-1g"
     },
     {
       "name": "LAN 2 (OPS)",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100/1000 Mbps, for optional OPS slot-in PC"
+      "note": "10/100/1000 Mbps, for optional OPS slot-in PC",
+      "grade": "eth-1g"
     },
     {
       "name": "RS232",

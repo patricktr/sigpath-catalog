@@ -23,13 +23,15 @@
       "name": "USB 3.0",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "Labeled 'USB 3.0 Connector' (item 3). Female Type-A. Used for keyboard, mouse, or other USB peripherals."
+      "note": "Labeled 'USB 3.0 Connector' (item 3). Female Type-A. Used for keyboard, mouse, or other USB peripherals.",
+      "grade": "usb-5g"
     },
     {
       "name": "USB 2.0",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "Labeled 'USB 2.0 Connector' (item 4). Female Type-A. Used for keyboard, mouse, or other USB peripherals."
+      "note": "Labeled 'USB 2.0 Connector' (item 4). Female Type-A. Used for keyboard, mouse, or other USB peripherals.",
+      "grade": "usb-2.0"
     },
     {
       "name": "Power",

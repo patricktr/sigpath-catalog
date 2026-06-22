@@ -11,19 +11,22 @@
       "name": "LAN PoE",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "8-pin RJ-45 female; 100BASE-TX Ethernet; IEEE 802.3at Type 2 PoE+ PD (receives power, 15–30 W depending on configuration); green and yellow status LEDs"
+      "note": "8-pin RJ-45 female; 100BASE-TX Ethernet; IEEE 802.3at Type 2 PoE+ PD (receives power, 15–30 W depending on configuration); green and yellow status LEDs",
+      "grade": "eth-100m"
     },
     {
       "name": "USB 1",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0 host port; for optional room scheduling accessories (light bar, RFID card reader)"
+      "note": "USB 2.0 host port; for optional room scheduling accessories (light bar, RFID card reader)",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB 2",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0 host port; for optional room scheduling accessories; USB ports require PoE+ (802.3at Type 2) PSE to function"
+      "note": "USB 2.0 host port; for optional room scheduling accessories; USB ports require PoE+ (802.3at Type 2) PSE to function",
+      "grade": "usb-2.0"
     }
   ]
 }

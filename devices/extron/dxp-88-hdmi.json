@@ -104,7 +104,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100Base-T, supports Telnet, HTTP, DHCP."
+      "note": "10/100Base-T, supports Telnet, HTTP, DHCP.",
+      "grade": "eth-100m"
     },
     {
       "name": "AC In",

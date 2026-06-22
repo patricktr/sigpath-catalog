@@ -11,25 +11,29 @@
       "name": "SDI IN 1",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI IN 2",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI IN 3",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI IN 4",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "HDMI IN 5",
@@ -53,13 +57,15 @@
       "name": "SDI OUT 1",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI OUT 2",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)"
+      "note": "3G-SDI / HD-SDI (SMPTE 424M/425M-AB, 292M)",
+      "grade": "sdi-3g"
     },
     {
       "name": "HDMI OUT 1",
@@ -161,7 +167,8 @@
       "name": "CONTROL (LAN)",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "100BASE-TX Ethernet; remote control"
+      "note": "100BASE-TX Ethernet; remote control",
+      "grade": "eth-100m"
     },
     {
       "name": "USB MEMORY",

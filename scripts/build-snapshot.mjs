@@ -13,6 +13,7 @@
  * IMPORTANT: contentHash() below must stay byte-for-byte compatible with
  * deviceContentHash() in the app (src/schema/device.ts) — same canonical shape,
  * same FNV-1a — or the app can't verify or dedup synced rows. Keep them in sync.
+ * (port.grade joined the canonical on 2026-06-22 — signal-grade Phase C.)
  */
 import {
   readdirSync, readFileSync, writeFileSync, mkdirSync, statSync,
@@ -47,6 +48,17 @@ const DIRECTIONS = new Set(["input", "output", "bidirectional"]);
 
 const vocab = JSON.parse(readFileSync(join(ROOT, "connectors", "connectors.json"), "utf8"));
 const CONNECTOR_IDS = new Set(vocab.connectors.map((c) => c.id));
+// connector id → its bandwidth grade scale (only graded connectors have one).
+const CONNECTOR_GRADE_SCALE = new Map(
+  vocab.connectors.filter((c) => c.gradeScale).map((c) => [c.id, c.gradeScale]),
+);
+
+const gradesVocab = JSON.parse(readFileSync(join(ROOT, "grades", "grades.json"), "utf8"));
+// grade id → its scale, for cross-checking a port's grade against its connector's scale.
+const GRADE_SCALE_OF = new Map();
+for (const [scale, tiers] of Object.entries(gradesVocab.scales)) {
+  for (const t of tiers) GRADE_SCALE_OF.set(t.id, scale);
+}
 
 /** Lowercase, alphanumerics → single hyphens, trimmed. */
 function slugify(s) {
@@ -61,7 +73,7 @@ function contentHash(spec) {
     category: spec.category,
     type: spec.type ?? "",
     rackUnits: spec.rackUnits ?? null,
-    ports: spec.ports.map((p) => [p.direction, p.connector, p.name, p.note ?? ""]),
+    ports: spec.ports.map((p) => [p.direction, p.connector, p.grade ?? "", p.name, p.note ?? ""]),
   });
   let h = 0x811c9dc5;
   for (let i = 0; i < canonical.length; i++) {
@@ -129,11 +141,24 @@ for (const file of walk(DEVICES_DIR).sort()) {
         if (!CONNECTOR_IDS.has(a)) errors.push(`${at}: port ${i} unknown connector in accepts ${JSON.stringify(a)}`);
       }
     }
+    // A grade must be a known id AND belong to the connector's scale (a 12G-SDI grade
+    // on an HDMI port is a data error).
+    if (p?.grade != null) {
+      const gradeScale = GRADE_SCALE_OF.get(p.grade);
+      const connScale = CONNECTOR_GRADE_SCALE.get(p?.connector);
+      if (!gradeScale) errors.push(`${at}: port ${i} unknown grade ${JSON.stringify(p.grade)}`);
+      else if (gradeScale !== connScale) {
+        errors.push(
+          `${at}: port ${i} grade ${JSON.stringify(p.grade)} (${gradeScale}) doesn't match connector ${JSON.stringify(p?.connector)} scale ${JSON.stringify(connScale ?? "none")}`,
+        );
+      }
+    }
     let pid = slugify(p?.name) || `port-${i + 1}`;
     while (portIds.has(pid)) pid = `${pid}-${i + 1}`;
     portIds.add(pid);
     const port = { id: pid, name: p?.name, direction: p?.direction, connector: p?.connector };
     if (Array.isArray(p?.accepts) && p.accepts.length) port.accepts = p.accepts;
+    if (p?.grade) port.grade = p.grade;
     if (p?.note) port.note = p.note;
     return port;
   });

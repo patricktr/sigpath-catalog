@@ -6,15 +6,72 @@
   "confidence": "high",
   "notes": "Miniature pocket/field converter; no rack units. USB port is physically a Mini-B connector, mapped to usb-micro as the closest vocabulary match. Power connector is a threaded locking coaxial barrel, mapped to dc-barrel; accepts +5V to +32V DC.",
   "ports": [
-    { "name": "SDI In", "direction": "input", "connector": "sdi", "note": "12G/6G/3G/HD/SD-SDI" },
-    { "name": "HDMI In", "direction": "input", "connector": "hdmi", "note": "HDMI 2.0" },
-    { "name": "Ref In", "direction": "input", "connector": "bnc", "note": "Genlock / reference input" },
-    { "name": "SDI Loop Out 1", "direction": "output", "connector": "sdi", "note": "12G/6G/3G/HD/SD-SDI; re-clocked loop-through by default, assignable as auxiliary output" },
-    { "name": "SDI Loop Out 2", "direction": "output", "connector": "sdi", "note": "12G/6G/3G/HD/SD-SDI; re-clocked loop-through by default, assignable as auxiliary output" },
-    { "name": "SDI Main Out 1", "direction": "output", "connector": "sdi", "note": "12G/6G/3G/HD/SD-SDI; configurable primary output of the scaling engine" },
-    { "name": "SDI Main Out 2", "direction": "output", "connector": "sdi", "note": "12G/6G/3G/HD/SD-SDI; configurable primary output of the scaling engine" },
-    { "name": "HDMI Out", "direction": "output", "connector": "hdmi", "note": "HDMI 2.0" },
-    { "name": "USB", "direction": "bidirectional", "connector": "usb-micro", "note": "Physically USB Mini-B; control panel software and firmware updates" },
-    { "name": "DC Power In", "direction": "input", "connector": "dc-barrel", "note": "Threaded locking coaxial barrel; accepts +5V to +32V DC" }
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "note": "12G/6G/3G/HD/SD-SDI",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 2.0",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock / reference input"
+    },
+    {
+      "name": "SDI Loop Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "12G/6G/3G/HD/SD-SDI; re-clocked loop-through by default, assignable as auxiliary output",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Loop Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "12G/6G/3G/HD/SD-SDI; re-clocked loop-through by default, assignable as auxiliary output",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Main Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "12G/6G/3G/HD/SD-SDI; configurable primary output of the scaling engine",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Main Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "12G/6G/3G/HD/SD-SDI; configurable primary output of the scaling engine",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI 2.0",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Physically USB Mini-B; control panel software and firmware updates"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Threaded locking coaxial barrel; accepts +5V to +32V DC"
+    }
   ]
 }

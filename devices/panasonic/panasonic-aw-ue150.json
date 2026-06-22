@@ -17,25 +17,29 @@
       "name": "12G-SDI OUT",
       "direction": "output",
       "connector": "bnc",
-      "note": "SMPTE 2082-1 standard, 75Ω"
+      "note": "SMPTE 2082-1 standard, 75Ω",
+      "grade": "sdi-12g"
     },
     {
       "name": "3G-SDI OUT",
       "direction": "output",
       "connector": "bnc",
-      "note": "SMPTE 424M / SMPTE 292, 75Ω, Level-A/Level-B"
+      "note": "SMPTE 424M / SMPTE 292, 75Ω, Level-A/Level-B",
+      "grade": "sdi-3g"
     },
     {
       "name": "MONI OUT",
       "direction": "output",
       "connector": "bnc",
-      "note": "HD-SDI monitor output, SMPTE 292, 75Ω"
+      "note": "HD-SDI monitor output, SMPTE 292, 75Ω",
+      "grade": "sdi-hd"
     },
     {
       "name": "HDMI OUT",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 2.0 standard, 4:2:2/10-bit, HDCP not supported"
+      "note": "HDMI 2.0 standard, 4:2:2/10-bit, HDCP not supported",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "Optical Fiber",
@@ -47,7 +51,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "100BASE-TX / 1000BASE-T; carries IP video streaming, IP camera control, and PoE++ power input (IEEE802.3bt, 42–57 V DC)"
+      "note": "100BASE-TX / 1000BASE-T; carries IP video streaming, IP camera control, and PoE++ power input (IEEE802.3bt, 42–57 V DC)",
+      "grade": "eth-1g"
     },
     {
       "name": "RS-422 CONTROL IN",

@@ -23,7 +23,8 @@
       "name": "USB-C (Data/Power)",
       "direction": "bidirectional",
       "connector": "usb-c",
-      "note": "USB 3.2 Gen 2 Type-C; connects to host computer and powers the device — no separate power supply"
+      "note": "USB 3.2 Gen 2 Type-C; connects to host computer and powers the device — no separate power supply",
+      "grade": "usb-10g"
     },
     {
       "name": "3.5mm Stereo Line In",

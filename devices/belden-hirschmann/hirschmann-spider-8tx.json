@@ -11,49 +11,57 @@
       "name": "Port 1",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 2",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 3",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 4",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 5",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 6",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 7",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "Port 8",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing"
+      "note": "10/100BASE-TX, auto-negotiation, auto-polarity, autocrossing",
+      "grade": "eth-100m"
     },
     {
       "name": "DC In",

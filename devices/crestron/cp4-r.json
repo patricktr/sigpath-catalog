@@ -12,7 +12,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "100BASE-TX/1000BASE-T Ethernet, 8-pin RJ-45 female"
+      "note": "100BASE-TX/1000BASE-T Ethernet, 8-pin RJ-45 female",
+      "grade": "eth-1g"
     },
     {
       "name": "COM 1",
@@ -72,13 +73,15 @@
       "name": "USB (Rear)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0 Type-A female; rear panel; for mass storage devices"
+      "note": "USB 2.0 Type-A female; rear panel; for mass storage devices",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB (Front)",
       "direction": "bidirectional",
       "connector": "usb-b",
-      "note": "USB 2.0 Type-B female; front panel; console/setup port"
+      "note": "USB 2.0 Type-B female; front panel; console/setup port",
+      "grade": "usb-2.0"
     },
     {
       "name": "Power",

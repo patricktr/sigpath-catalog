@@ -11,7 +11,8 @@
       "name": "HDMI In",
       "direction": "input",
       "connector": "hdmi",
-      "note": "HDMI 2.0 / HDMI 1.4 / DVI-D; supports up to 4096×2160 60fps 4:4:4; carries up to 8-channel embedded audio"
+      "note": "HDMI 2.0 / HDMI 1.4 / DVI-D; supports up to 4096×2160 60fps 4:4:4; carries up to 8-channel embedded audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI Loop Through",
@@ -23,13 +24,15 @@
       "name": "Ethernet",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10/100/1000 Mbps Gigabit; primary NDI output path; also powers the device via IEEE 802.3af PoE"
+      "note": "10/100/1000 Mbps Gigabit; primary NDI output path; also powers the device via IEEE 802.3af PoE",
+      "grade": "eth-1g"
     },
     {
       "name": "USB",
       "direction": "bidirectional",
       "connector": "usb-b",
-      "note": "USB 2.0 Type B; used for device configuration, RNDIS/ECM network access, and as an alternative 5V/2.1A power input via included adapter; no separate DC barrel jack — USB-B is the only discrete power connector"
+      "note": "USB 2.0 Type B; used for device configuration, RNDIS/ECM network access, and as an alternative 5V/2.1A power input via included adapter; no separate DC barrel jack — USB-B is the only discrete power connector",
+      "grade": "usb-2.0"
     },
     {
       "name": "Control/Tally",

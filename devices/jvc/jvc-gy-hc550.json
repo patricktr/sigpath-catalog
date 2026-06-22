@@ -11,7 +11,8 @@
       "name": "SDI Out",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI, up to 1080/60p 4:2:2 10-bit with embedded audio and timecode"
+      "note": "3G-SDI, up to 1080/60p 4:2:2 10-bit with embedded audio and timecode",
+      "grade": "sdi-3g"
     },
     {
       "name": "HDMI Out",
@@ -59,13 +60,15 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "1000Base-T Ethernet; used for streaming, IFB, and remote control"
+      "note": "1000Base-T Ethernet; used for streaming, IFB, and remote control",
+      "grade": "eth-1g"
     },
     {
       "name": "USB Host",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.0 Type-A; supports USB LAN adapters and optional accessories"
+      "note": "USB 3.0 Type-A; supports USB LAN adapters and optional accessories",
+      "grade": "usb-5g"
     },
     {
       "name": "Remote",

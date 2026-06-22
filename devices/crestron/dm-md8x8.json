@@ -108,7 +108,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "10Base-T/100Base-TX/1000Base-T Gigabit Ethernet"
+      "note": "10Base-T/100Base-TX/1000Base-T Gigabit Ethernet",
+      "grade": "eth-1g"
     },
     {
       "name": "Computer (Console)",

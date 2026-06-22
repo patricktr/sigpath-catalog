@@ -41,25 +41,29 @@
       "name": "LAN PoE+",
       "direction": "input",
       "connector": "rj45",
-      "note": "100Base-TX/1000Base-T; IEEE 802.3at Class 4 PoE+ powers the unit; primary network connection"
+      "note": "100Base-TX/1000Base-T; IEEE 802.3at Class 4 PoE+ powers the unit; primary network connection",
+      "grade": "eth-1g"
     },
     {
       "name": "LAN AUX",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "100Base-TX/1000Base-T; secondary/auxiliary network port"
+      "note": "100Base-TX/1000Base-T; secondary/auxiliary network port",
+      "grade": "eth-1g"
     },
     {
       "name": "USB Type A (x2)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "One USB 2.0 host and one USB 3.0 host port for peripherals"
+      "note": "One USB 2.0 host and one USB 3.0 host port for peripherals",
+      "grade": "usb-5g"
     },
     {
       "name": "USB Type B",
       "direction": "input",
       "connector": "usb-b",
-      "note": "USB 3.0 device port; used as computer console connection"
+      "note": "USB 3.0 device port; used as computer console connection",
+      "grade": "usb-5g"
     },
     {
       "name": "Power",

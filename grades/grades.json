@@ -1,0 +1,39 @@
+{
+  "_comment": "Controlled bandwidth-grade vocabulary — the second half of the compatibility primitive. Mirrors GRADE_SCALES in the app's src/schema/grades.ts; keep the two in sync. Each scale is an ordered ladder (rank = array index; higher carries more) and grades are compared ONLY within a scale. A port's grade must belong to its connector's gradeScale (see connectors.json). gbps is for display/sorting, never the compare.",
+  "scales": {
+    "sdi": [
+      { "id": "sdi-sd", "label": "SD-SDI", "gbps": 0.27 },
+      { "id": "sdi-hd", "label": "HD-SDI", "gbps": 1.485 },
+      { "id": "sdi-3g", "label": "3G-SDI", "gbps": 2.97 },
+      { "id": "sdi-6g", "label": "6G-SDI", "gbps": 6 },
+      { "id": "sdi-12g", "label": "12G-SDI", "gbps": 12 },
+      { "id": "sdi-24g", "label": "24G-SDI", "gbps": 24 }
+    ],
+    "hdmi": [
+      { "id": "hdmi-1.4", "label": "HDMI 1.4", "gbps": 10.2 },
+      { "id": "hdmi-2.0", "label": "HDMI 2.0", "gbps": 18 },
+      { "id": "hdmi-2.1", "label": "HDMI 2.1", "gbps": 48 }
+    ],
+    "displayport": [
+      { "id": "dp-1.2", "label": "DP 1.2 (HBR2)", "gbps": 21.6 },
+      { "id": "dp-1.4", "label": "DP 1.4 (HBR3)", "gbps": 32.4 },
+      { "id": "dp-2.0", "label": "DP 2.0 (UHBR20)", "gbps": 80 }
+    ],
+    "usb": [
+      { "id": "usb-2.0", "label": "USB 2.0", "gbps": 0.48 },
+      { "id": "usb-5g", "label": "USB 5 Gbps", "gbps": 5 },
+      { "id": "usb-10g", "label": "USB 10 Gbps", "gbps": 10 },
+      { "id": "usb-20g", "label": "USB 20 Gbps", "gbps": 20 },
+      { "id": "usb-40g", "label": "USB4 / TB 40 Gbps", "gbps": 40 },
+      { "id": "usb-80g", "label": "USB4 v2 / TB5 80 Gbps", "gbps": 80 }
+    ],
+    "ethernet": [
+      { "id": "eth-100m", "label": "100BASE-TX", "gbps": 0.1 },
+      { "id": "eth-1g", "label": "1GBASE-T", "gbps": 1 },
+      { "id": "eth-2.5g", "label": "2.5GBASE-T", "gbps": 2.5 },
+      { "id": "eth-5g", "label": "5GBASE-T", "gbps": 5 },
+      { "id": "eth-10g", "label": "10GBASE-T", "gbps": 10 },
+      { "id": "eth-25g", "label": "25GBASE-T", "gbps": 25 }
+    ]
+  }
+}

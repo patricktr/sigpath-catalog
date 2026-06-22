@@ -11,13 +11,15 @@
       "name": "HDMI OUT",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI Type A × 1; 4K output available via HDMI (and IP); version 1.4b compatible"
+      "note": "HDMI Type A × 1; 4K output available via HDMI (and IP); version 1.4b compatible",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "SDI OUT",
       "direction": "output",
       "connector": "bnc",
-      "note": "BNC × 1; 3G-SDI; HD output only (4K not supported via SDI)"
+      "note": "BNC × 1; 3G-SDI; HD output only (4K not supported via SDI)",
+      "grade": "sdi-3g"
     },
     {
       "name": "EXT SYNC IN",
@@ -53,7 +55,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "RJ-45; 10/100/1000BASE-T; PoE+ (IEEE802.3at) power input; VISCA over IP, S700PTP, CGI control, and IP video streaming"
+      "note": "RJ-45; 10/100/1000BASE-T; PoE+ (IEEE802.3at) power input; VISCA over IP, S700PTP, CGI control, and IP video streaming",
+      "grade": "eth-1g"
     },
     {
       "name": "DC IN 12V",

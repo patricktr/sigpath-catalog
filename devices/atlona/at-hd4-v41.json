@@ -43,7 +43,8 @@
       "name": "LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "100 Mbps Ethernet for HEC-capable devices"
+      "note": "100 Mbps Ethernet for HEC-capable devices",
+      "grade": "eth-100m"
     },
     {
       "name": "RS-232",

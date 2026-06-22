@@ -11,43 +11,50 @@
       "name": "HDMI Output",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 1.4b, 4K UHD (3840x2160) @ 30Hz"
+      "note": "HDMI 1.4b, 4K UHD (3840x2160) @ 30Hz",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "HDMI Input",
       "direction": "input",
       "connector": "hdmi",
-      "note": "HDMI 1.4b, up to 1920x1080 @ 30Hz"
+      "note": "HDMI 1.4b, up to 1920x1080 @ 30Hz",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "USB-C (Rear)",
       "direction": "bidirectional",
       "connector": "usb-c",
-      "note": "USB 2.0, rear panel; for USB peripherals/cameras"
+      "note": "USB 2.0, rear panel; for USB peripherals/cameras",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A 1 (Rear)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0, rear panel"
+      "note": "USB 2.0, rear panel",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A 2 (Rear)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0, rear panel"
+      "note": "USB 2.0, rear panel",
+      "grade": "usb-2.0"
     },
     {
       "name": "USB-A (Front)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 2.0, front panel; for ClickShare Button"
+      "note": "USB 2.0, front panel; for ClickShare Button",
+      "grade": "usb-2.0"
     },
     {
       "name": "Ethernet LAN",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "1 Gbit Ethernet"
+      "note": "1 Gbit Ethernet",
+      "grade": "eth-1g"
     },
     {
       "name": "Audio Line Out (Analog)",

@@ -11,19 +11,22 @@
       "name": "HDMI Out 1",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 2.0; supports up to 4K when used as sole display output"
+      "note": "HDMI 2.0; supports up to 4K when used as sole display output",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI Out 2",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 1.4; supports up to 1080p; 4K only available on HDMI Out 1 when used alone"
+      "note": "HDMI 1.4; supports up to 1080p; 4K only available on HDMI Out 1 when used alone",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "HDMI In",
       "direction": "input",
       "connector": "hdmi",
-      "note": "HDMI 1.4b; HDCP not supported"
+      "note": "HDMI 1.4b; HDCP not supported",
+      "grade": "hdmi-1.4"
     },
     {
       "name": "Stereo Out",
@@ -35,13 +38,15 @@
       "name": "USB 3.0 (1)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.0 host port"
+      "note": "USB 3.0 host port",
+      "grade": "usb-5g"
     },
     {
       "name": "USB 3.0 (2)",
       "direction": "bidirectional",
       "connector": "usb-a",
-      "note": "USB 3.0 host port"
+      "note": "USB 3.0 host port",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-C",
@@ -53,7 +58,8 @@
       "name": "Ethernet",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "Gigabit Ethernet with PoE+ support (IEEE 802.3 Type 2); device can be powered via this port instead of DC barrel"
+      "note": "Gigabit Ethernet with PoE+ support (IEEE 802.3 Type 2); device can be powered via this port instead of DC barrel",
+      "grade": "eth-1g"
     },
     {
       "name": "DC Power In",

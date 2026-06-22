@@ -135,7 +135,8 @@
       "name": "USB 3.0 Host",
       "direction": "bidirectional",
       "connector": "usb-b",
-      "note": "Rear-panel USB Type-B 3.0 port for computer connection; also supports USB 2.0 mode (limited to non-MADI I/O)"
+      "note": "Rear-panel USB Type-B 3.0 port for computer connection; also supports USB 2.0 mode (limited to non-MADI I/O)",
+      "grade": "usb-5g"
     },
     {
       "name": "USB-A DURec (Front)",

@@ -11,7 +11,8 @@
       "name": "Ethernet",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "Single Gigabit Ethernet port for connecting a wired device to the powerline network"
+      "note": "Single Gigabit Ethernet port for connecting a wired device to the powerline network",
+      "grade": "eth-1g"
     },
     {
       "name": "Power / Wall Plug",

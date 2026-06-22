@@ -12,49 +12,57 @@
       "name": "SDI In 1",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI In 2",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI In 3",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI In 4",
       "direction": "input",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI Out 1",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI Out 2",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI Out 3",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "SDI Out 4",
       "direction": "output",
       "connector": "bnc",
-      "note": "3G-SDI"
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
     },
     {
       "name": "Fiber In 1",
@@ -108,13 +116,15 @@
       "name": "HDMI In",
       "direction": "input",
       "connector": "hdmi",
-      "note": "HDMI 2.0 Type A; 8-ch embedded audio"
+      "note": "HDMI 2.0 Type A; 8-ch embedded audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "HDMI Out",
       "direction": "output",
       "connector": "hdmi",
-      "note": "HDMI 2.0 Type A; 8-ch embedded audio"
+      "note": "HDMI 2.0 Type A; 8-ch embedded audio",
+      "grade": "hdmi-2.0"
     },
     {
       "name": "AES/EBU Audio",

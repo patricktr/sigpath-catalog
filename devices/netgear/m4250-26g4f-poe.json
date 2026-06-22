@@ -12,13 +12,15 @@
       "name": "Port 1–24 (PoE+)",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "24x 10/100/1000BASE-T RJ45 with PoE+ (802.3at), 300W total budget, 30W per port"
+      "note": "24x 10/100/1000BASE-T RJ45 with PoE+ (802.3at), 300W total budget, 30W per port",
+      "grade": "eth-1g"
     },
     {
       "name": "Port 25–26",
       "direction": "bidirectional",
       "connector": "rj45",
-      "note": "2x 10/100/1000BASE-T RJ45 non-PoE uplink ports"
+      "note": "2x 10/100/1000BASE-T RJ45 non-PoE uplink ports",
+      "grade": "eth-1g"
     },
     {
       "name": "SFP 1–4",

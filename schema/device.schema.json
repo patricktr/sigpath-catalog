@@ -74,6 +74,11 @@
             "items": { "type": "string", "minLength": 1 },
             "description": "Additional connector ids this one physical jack also mates with (e.g. a combo XLR/TRS input). Each is cross-checked against the vocabulary."
           },
+          "grade": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Max bandwidth grade this port supports — an id from grades/grades.json, and it must belong to the connector's grade scale (the build cross-checks both). Omit for ungraded connectors (analog audio, power, control), which are never grade-checked."
+          },
           "note": { "type": "string" }
         }
       }
