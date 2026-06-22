@@ -1,0 +1,19 @@
+{
+  "manufacturer": "Decimator Design",
+  "model": "MD-HX",
+  "category": "converter",
+  "type": "Converter",
+  "confidence": "high",
+  "notes": "Miniature pocket/field converter; no rack units (third-party shelves can rack-mount multiples). USB port is physically a Mini-B connector, mapped to usb-micro as the closest vocabulary match. Power connector is a threaded locking coaxial barrel (not a standard unthreaded barrel), mapped to dc-barrel; accepts +5V to +32V DC.",
+  "ports": [
+    { "name": "SDI In", "direction": "input", "connector": "sdi", "note": "3G/HD/SD-SDI" },
+    { "name": "HDMI In", "direction": "input", "connector": "hdmi" },
+    { "name": "SDI Out 1", "direction": "output", "connector": "sdi", "note": "3G/HD/SD-SDI; configurable as 1-to-4 DA or paired with SDI Out 2 as loop/scaled" },
+    { "name": "SDI Out 2", "direction": "output", "connector": "sdi", "note": "3G/HD/SD-SDI; configurable as 1-to-4 DA or paired with SDI Out 1 as loop/scaled" },
+    { "name": "SDI Out 3", "direction": "output", "connector": "sdi", "note": "3G/HD/SD-SDI; configurable as 1-to-4 DA or paired with SDI Out 4 as loop/scaled" },
+    { "name": "SDI Out 4", "direction": "output", "connector": "sdi", "note": "3G/HD/SD-SDI; configurable as 1-to-4 DA or paired with SDI Out 3 as loop/scaled" },
+    { "name": "HDMI Out", "direction": "output", "connector": "hdmi" },
+    { "name": "USB", "direction": "bidirectional", "connector": "usb-micro", "note": "Physically USB Mini-B; firmware updates and control software" },
+    { "name": "DC Power In", "direction": "input", "connector": "dc-barrel", "note": "Threaded locking coaxial barrel; accepts +5V to +32V DC" }
+  ]
+}
