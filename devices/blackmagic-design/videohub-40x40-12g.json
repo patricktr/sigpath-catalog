@@ -1,0 +1,494 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Videohub 40x40 12G",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 2,
+  "confidence": "high",
+  "notes": "Port layout also applies to the previous-generation Smart Videohub 40x40. RS-422 control connector varies by hardware revision: DB9 on older units, RJ45 on newer — mapped to rs422 in both cases.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 5",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 6",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 7",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 8",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 9",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 10",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 11",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 12",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 13",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 14",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 15",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 16",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 17",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 18",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 19",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 20",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 21",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 22",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 23",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 24",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 25",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 26",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 27",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 28",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 29",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 30",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 31",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 32",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 33",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 34",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 35",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 36",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 37",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 38",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 39",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI In 40",
+      "direction": "input",
+      "connector": "sdi"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 5",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 6",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 7",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 8",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 9",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 10",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 11",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 12",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 13",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 14",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 15",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 16",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 17",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 18",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 19",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 20",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 21",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 22",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 23",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 24",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 25",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 26",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 27",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 28",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 29",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 30",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 31",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 32",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 33",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 34",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 35",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 36",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 37",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 38",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 39",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "SDI Out 40",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Re-clocked"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Tri-Sync / Black Burst reference input"
+    },
+    {
+      "name": "Ref Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Terminating sync loop output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100/1000 Base-T — hardware control panels and software utility",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Physical connector is DB9 (older revisions) or RJ45 (newer revisions); crosspoint switching control"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "IP assignment and local service"
+    },
+    {
+      "name": "Power In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant internal 100–240V AC supplies"
+    },
+    {
+      "name": "Power In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant internal 100–240V AC supplies"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Canon",
+  "model": "CR-N500",
+  "category": "source",
+  "type": "Camera",
+  "confidence": "high",
+  "notes": "4K professional PTZ camera; no rack units (surface, tripod, or inverted ceiling mount). RS-422 serial control uses a physical RJ45 connector, mapped to rs422. LAN port supports PoE+ as a power input alternative to the DC barrel.",
+  "ports": [
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "3G-SDI",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1.0 Vp-p / 75 Ω"
+    },
+    {
+      "name": "XLR Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced; switchable Mic/Line level; +48V phantom power"
+    },
+    {
+      "name": "XLR Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced; switchable Mic/Line level; +48V phantom power"
+    },
+    {
+      "name": "3.5mm Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack; unbalanced mic level"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "1000Base-T; video streaming, VISCA/XC IP control, and PoE+ power input",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Physical connector is RJ45; legacy serial VISCA protocol"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Type-A; reserved for firmware and maintenance"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24V DC; for use with included AC adapter"
+    }
+  ]
+}
