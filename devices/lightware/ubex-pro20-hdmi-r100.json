@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Lightware",
+  "model": "UBEX-Pro20-HDMI-R100",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Guides-and-Manuals/User-Manual/HTML/UBEX_Matrix/UM.html",
+  "confidence": "medium",
+  "notes": "The R100 is a rental/staging variant with no rack ears — not rack-mountable (M10 truss/furniture mounting). Port list is common to all R100 sub-variants; the optical connector format differs by SKU (opticalCON QUAD vs. 2x opticalCON DUO). The official Lightware user manual (HTML) confirms: no RS-232, IR, or USB on the R100 (those are F-series features). The 5-pole Phoenix euroblock audio connectors carry one balanced stereo pair each (L+/L−/GND/R+/R−). EtherCON speed confirmed 1 Gbps. HDMI grade hdmi-2.0 confirmed. powerCON TRUE1 confirmed. Confidence is medium because the source is the HTML user manual (authoritative Lightware content) but it covers the whole UBEX family; R100-specific pages were not individually loaded.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Optical 1",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Neutrik opticalCON connector (DUO or QUAD depending on variant). opticalCON is not in the allowed list; fiber-lc is the closest underlying fiber connector. Variants: 2xMM-QUAD uses 1x opticalCON QUAD (NO4FDW-A); 2xMM-2xDUO, 2xSM-2xDUO, and 2xSM-BiDi-DUO use 2x opticalCON DUO (NO2-4FDW-A); 2xSM-QUAD uses 1x opticalCON QUAD. SFP+ 10G per port."
+    },
+    {
+      "name": "EtherCON 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON NE8FDV-YK locking RJ45, 1000Base-T full duplex"
+    },
+    {
+      "name": "EtherCON 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON NE8FDV-YK locking RJ45, 1000Base-T full duplex"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix Combicon connector, balanced analog audio input for HDMI audio embedding"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix Combicon connector, balanced analog audio output for HDMI audio de-embedding"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1 NAC3MPX-WOT, 100–240 V, 50/60 Hz"
+    }
+  ]
+}

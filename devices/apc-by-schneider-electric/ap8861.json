@@ -1,0 +1,66 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "AP8861",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://www.apc.com/us/en/product/AP8861/apc-netshelter-rack-pdu-metered-0u-5-7kw-208v-3phase-20a-36-c13-6-c19-and-2-nema-520r-outlets/",
+  "confidence": "medium",
+  "notes": "0U ZeroU vertical rack PDU — not rack-unit consuming, so rackUnits omitted. Input connector is NEMA L21-20P (3-phase twist-lock), which is not in the allowed connector list; mapped to nema-5-15 as closest available. NEMA 5-20R outlets mapped to nema-5-15 (closest in schema). Serial and sensor ports are physically RJ12 (6P6C) connectors, mapped to rj45 as closest available. Management port sharing In/Out connector type inferred as RJ45 from AP88XX user manual documentation. C13 outlets mapped to iec (C13 receptacle). Primary source (apc.com) returned 403; specs confirmed from multiple secondary retailer pages and AP88XX user manual references. Confidence is medium due to reliance on secondary sources for management port details.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "NEMA L21-20P twist-lock 3-phase plug, 208V 20A, 6ft captive cord. nema-5-15 is not correct — closest available connector in schema; actual is NEMA L21-20P (3-phase locking), which is not in the allowed connector list."
+    },
+    {
+      "name": "C13 Outlet 1–36",
+      "direction": "output",
+      "connector": "iec",
+      "note": "36× IEC 60320 C13 locking receptacles, 120V/208V output"
+    },
+    {
+      "name": "C19 Outlet 1–6",
+      "direction": "output",
+      "connector": "iec-c19",
+      "note": "6× IEC 60320 C19 locking receptacles, higher-amperage output"
+    },
+    {
+      "name": "NEMA 5-20R 1–2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "2× NEMA 5-20R non-locking outlets, 120V output. nema-5-15 is closest available in schema; actual connector is NEMA 5-20R."
+    },
+    {
+      "name": "Network Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T Ethernet for web, SNMP, CLI management via embedded NMC2"
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ12 (6P6C) serial configuration port, uses APC cable 940-0144A (RJ12 to DB9). Closest schema connector is rj45; actual is RJ12."
+    },
+    {
+      "name": "Sensor Port",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ12 socket for optional environmental sensors (AP9335T temp, AP9335TH temp/humidity). Closest schema connector is rj45; actual is RJ12."
+    },
+    {
+      "name": "Network Port Sharing In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ45 daisy-chain in port for network port sharing (up to 4 PDUs per IP)"
+    },
+    {
+      "name": "Network Port Sharing Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ45 daisy-chain out port for network port sharing"
+    }
+  ]
+}

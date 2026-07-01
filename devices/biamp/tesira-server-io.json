@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Biamp",
+  "model": "Tesira SERVER-IO",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.manualslib.com/manual/641476/Biamp-Tesira-Server.html",
+  "confidence": "medium",
+  "notes": "Primary sources: Biamp Tesira SERVER and SERVER-IO Operation Manual (ManualsLib, 15-page version); Tesira help site (tesira-help.biamp.com); Biamp support articles. The SERVER-IO is a modular chassis — audio I/O ports depend entirely on which expansion cards are installed (up to 12 cards, up to 48 channels). The base chassis fixed ports are: 2x RJ-45 Ethernet (SNC-1), 2x RS-232 (DB-9), 1x Logic I/O (euroblock GPIO), 1x IEC power inlet. Serial connector type inferred as DE-9 from the 9-pin numbering in the RS-232 documentation. Ethernet speed confirmed as gigabit (10/100/1000) from SNC-1 documentation. Power connector type inferred as IEC C14 from 'standard IEC three-conductor removable power cord' description (identical wording used for TesiraFORTÉ which is confirmed IEC C14). GPIO connector pitch inferred as 5.08mm euroblock from Biamp's general wiring documentation ('most Biamp products use 0.2-inch 5.08mm pitch Phoenix or euro-block'). STC-2 telephone card connector type is uncertain — sources conflict between spring-cage terminal block and RJ11; listed as rj45 is incorrect and should be noted as unconfirmed. Audio card barrier strip connectors are plug-in euroblock style per Biamp wiring documentation. No USB ports on the SERVER-IO (USB is a feature of TesiraFORTÉ models only). The SERVER-IO AVB variant (930-00301) adds an AVB-1 networking card slot but shares the same base chassis connectors.",
+  "ports": [
+    {
+      "name": "Control Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Ethernet control port on SNC-1 network card; auto-negotiates 10/100/1000"
+    },
+    {
+      "name": "Control Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary Ethernet control port on SNC-1 network card; disabled since firmware v3.16"
+    },
+    {
+      "name": "Serial 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DE-9 (DB-9) RS-232 connector; default 9600 baud; pins 2 (TxD), 3 (RxD), 5 (GND) used"
+    },
+    {
+      "name": "Serial 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DE-9 (DB-9) RS-232 connector; default 115200 baud"
+    },
+    {
+      "name": "Logic I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-pin GPIO block on SNC-1 network card: +5V, 4 logic/voltage control pins, GND; 0.2in (5.08mm) pitch typical for Biamp products"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with removable 3-conductor power cord; 100-240VAC 50/60Hz, <150W"
+    },
+    {
+      "name": "Audio In 1–48 (via SIC-4/SEC-4/SAC-4 cards)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Plug-in barrier strip (euroblock) connectors on modular input cards; balanced mic/line; up to 12 cards x 4 ch = 48 ch max. Cards are optional/field-installed."
+    },
+    {
+      "name": "Audio Out 1–48 (via SOC-4 cards)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Plug-in barrier strip (euroblock) connectors on modular output cards; balanced line level; up to 12 cards x 4 ch = 48 ch max. Cards are optional/field-installed."
+    },
+    {
+      "name": "Tel Line (via STC-2 cards)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "STC-2 analog telephone interface card; 2 lines per card; connector reported as spring-cage removable terminal block in some sources; may use RJ11 — exact connector type not definitively confirmed from available docs"
+    }
+  ]
+}

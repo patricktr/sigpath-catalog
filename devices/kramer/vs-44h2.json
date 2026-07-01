@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VS-44H2",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/2240107/Kramer-Vs-44h2.html",
+  "confidence": "medium",
+  "notes": "Source: official VS-44H2 user manual via ManualsLib (66-page document), corroborated by Markertek, AV-iQ, and ConferenceTableBoxes product pages. HDMI grade is 2.0 (confirmed: HDMI 2.0b, 18Gbps/4K60 4:4:4). RS-232 is a 3-pin terminal block (euroblock), NOT a DB9 — the DB9 is found on the VS-44H2A variant. The PROG USB connector is labeled Mini-USB in the spec table; mapped to usb-micro as the closest available enum value since mini-usb is not in the list (Mini-USB = USB-B Mini, distinct from Micro-USB). Ethernet grade is eth-100m (100M) — the spec does not state Gigabit; standard Kramer matrix gear of this era uses 100M management ports. IEC C14 power inlet is inferred from the accessory listing of a detachable power cord; not explicitly stated as C14 in the manual text. No dedicated IR input port on VS-44H2 (the VS-44H2A model adds IR IN, S/PDIF outputs, balanced audio outputs, and uses a DB9 RS-232 instead).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block for serial device control"
+    },
+    {
+      "name": "PROG USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Mini-USB connector for firmware/device control; closest match is usb-micro — actual connector is Mini-USB (USB-B mini)"
+    },
+    {
+      "name": "USB",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "USB Type-A, 5V/2A, for powering an external device"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet inferred; unit ships with detachable power cord; 100-240V AC 50/60Hz, 22VA"
+    }
+  ]
+}

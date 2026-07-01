@@ -1,0 +1,145 @@
+{
+  "manufacturer": "Epiphan Video",
+  "model": "Pearl-2",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.epiphan.com/userguides/pearl-2/Content/startHere/Pearl-2/techSpecs-2.htm",
+  "confidence": "medium",
+  "notes": "Based on the official Epiphan userguide tech-specs page (primary source) plus the manufacturer product page. The Pearl-2 is available as three SKUs: ESP1150 (portable desktop), ESP1151 (1 RU rackmount), and ESP1152 (1 RU rackmount twin/dual-channel). rackUnits of 1 applies to ESP1151/ESP1152 only; the desktop ESP1150 is not rack-mountable. The 4 XLR audio inputs are documented as female XLR accepting balanced and unbalanced signals; the spec does not explicitly state XLR3 vs combo XLR/TRS, but standard pro-audio XLR3 is the near-certain form. RCA audio: documented as 2× RCA female (1 stereo pair, -10 dBV). RS-232 is listed as female; DB9 is the universally standard physical connector for RS-232 on AV equipment and confirmed by Epiphan RS-232 control documentation, but the sub-type is inferred. Power inlet connector type is not explicitly stated in specs; internal 100–240 VAC PSU ships with a region-specific detachable power cord, consistent with an IEC C14 inlet (standard for this class of gear), which is inferred. HDMI Output 1 is HDMI 2.0 and Output 2 is HDMI 1.4a per the official spec page. The 2× USB-A rear ports are for UVC/UAC (webcams/USB audio) and the 1× USB-A front port is for general use/USB storage. Network RJ-45 is 10/100/1000 Base-T (Gigabit).",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Up to 1080p60; HDMI 1.4a"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Up to 1080p60; HDMI 1.4a"
+    },
+    {
+      "name": "4K HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Up to 4K/UHD; HDMI 1.4a"
+    },
+    {
+      "name": "4K HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Up to 4K/UHD; HDMI 1.4a"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "USB In 1 (UVC)",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear panel; UVC/UAC USB 3.0 for webcams and USB audio devices"
+    },
+    {
+      "name": "USB In 2 (UVC)",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear panel; UVC/UAC USB 3.0"
+    },
+    {
+      "name": "USB (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel; USB 3.0 for storage or peripherals"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T; used for streaming, recording, NDI, SRT, RTSP, and admin"
+    },
+    {
+      "name": "XLR In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Pro line level +4.0 dBu, balanced/unbalanced"
+    },
+    {
+      "name": "XLR In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Pro line level +4.0 dBu, balanced/unbalanced"
+    },
+    {
+      "name": "XLR In 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Pro line level +4.0 dBu, balanced/unbalanced"
+    },
+    {
+      "name": "XLR In 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Pro line level +4.0 dBu, balanced/unbalanced"
+    },
+    {
+      "name": "RCA In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Consumer line level -10 dBV; left channel of stereo pair"
+    },
+    {
+      "name": "RCA In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Consumer line level -10 dBV; right channel of stereo pair"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front panel; stereo headphone monitoring"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Female; DB9 connector inferred (standard RS-232 physical connector); 19200 bps; for third-party control"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet inferred; internal universal PSU 100–240 VAC 50–60 Hz; region-specific detachable power cord included"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Sharp NEC Display Solutions (NEC)",
+  "model": "MultiSync ME651",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://proav.sharpusa.com/products/displays/me651-avt3/publish/20210301",
+  "confidence": "medium",
+  "notes": "Primary sources used: Sharp USA ME651-AVT3 product page (proav.sharpusa.com), Sharp Display Solutions EU datasheet (sharpdisplays.eu/p/datasheet/en/datasheet/rp/me651.xhtml), and the NEC MultiSync ME651 user manual via ManualsLib. HDMI 2.0 grade confirmed via Ampronix and search-result snippets referencing HDCP 1.4/2.2; DisplayPort 1.2 inferred from search snippets referencing HDCP 1.3/2.2 and 4K60 support. RS-232C presence confirmed by the AVT3 variant page and user manual; 9-pin D-sub connector type inferred from the sibling M651-2 model manual (same product family). IEC C13 power inlet inferred from class of device (large-format commercial display with supplied power cord); exact IEC connector sub-type not stated in any retrieved source. LAN speed confirmed as 100Mbit from EU datasheet and AVT3 page. HDMI count is 2 per all official Sharp sources; a third-party listing (Ampronix) claimed 3x HDMI 2.0 but this was not corroborated. Audio IN connector presence confirmed from AVT3 page; EU datasheet only explicitly listed audio output. The ME651 is the base variant; ME651-IR, ME651-PT, ME651-MPi4, ME651-AVT3 are variant SKUs with added options (IR touch, PCAP touch, Raspberry Pi CM4, AVerMedia tuner).",
+  "ports": [
+    {
+      "name": "HDMI 1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 1 also supports ARC (Audio Return Channel) output; HDCP 1.4/2.2"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 1.4/2.2"
+    },
+    {
+      "name": "DisplayPort IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "HDCP 1.3/2.2; supports up to 4096x2160 60Hz"
+    },
+    {
+      "name": "Audio IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo analog audio input (3.5mm mini jack)"
+    },
+    {
+      "name": "Audio OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo analog audio output (3.5mm mini jack); carries audio from DisplayPort and HDMI sources"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for wired remote control / external IR sensor unit"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX; used for network control and management"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub; for external device control"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A; MediaPlayer input and firmware update"
+    },
+    {
+      "name": "USB (Powered)",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A power output, 10W; for powering connected devices"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/C14 inlet; internal power supply 100-240V AC 50/60Hz; supplied with power cord"
+    }
+  ]
+}

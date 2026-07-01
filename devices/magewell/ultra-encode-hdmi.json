@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Ultra Encode HDMI",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.magewell.com/tech-specs/ultra-encode-hdmi",
+  "confidence": "high",
+  "notes": "Desktop/compact form factor (106.6×106.2×25 mm); not rack-mountable. Also includes integrated 802.11 a/b/g/n/ac Wi-Fi (internal; not a physical connector port). USB-A port speed grade omitted — official spec page lists USB Type-A but does not state USB version; KB article references USB 3.0 for the Ultra Encode family but does not confirm this specific model. HDMI version confirmed as 1.4a on tech-specs page. Power is DC barrel from an included 5V adapter (no IEC inlet on the unit itself).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4a; supports up to 4096×2160 4:2:0 60fps or 4096×2160 4:4:4/4:2:2 30fps"
+    },
+    {
+      "name": "HDMI Loop Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4a loop-through output"
+    },
+    {
+      "name": "LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo line-level audio input; 48 kHz 16-bit up to 8-channel"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo line-level audio output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps Base-T"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A host port; used for USB storage (recording) and USB modem; exact USB version (2.0 vs 3.0) not explicitly stated on spec page"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 5V/3A; supplied via external AC adapter included in box; max power consumption ~8.62W"
+    }
+  ]
+}

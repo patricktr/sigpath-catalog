@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Airtame",
+  "model": "Airtame 2",
+  "category": "other",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.purple-cat.co.uk/airtame-2-with-lite-cloud-management-1.html",
+  "confidence": "medium",
+  "notes": "The Airtame 2 has no bare HDMI port on its body; HDMI output is delivered via the bundled AirCord Y-cable (USB-C on the device end, splitting to HDMI + USB-A). HDMI spec is 1.4b per official Airtame technical specification documents. Power is supplied through the same USB-C port at 5V up to 2.4A. The Micro USB OTG port is for optional wired Ethernet only. Official PDF spec sheets were not machine-readable; specs confirmed via multiple secondary retail/reseller sources referencing Airtame's published technical specification (September 2019 / November 2020 versions). Ethernet speed not explicitly stated in accessible sources — USB-2.0 OTG implies 100 Mbps class adapter at most. No rack-mount form factor.",
+  "ports": [
+    {
+      "name": "USB-C (AirCord / Power / HDMI / Ethernet)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Multifunctional: power input (5V/2.4A), HDMI 1.4b output via bundled AirCord Y-cable (USB-C to HDMI + USB-A), USB host, and Ethernet via adapter. No bare HDMI socket on device body — HDMI is provided through the AirCord cable assembly."
+    },
+    {
+      "name": "Micro USB OTG",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Used for wired Ethernet connectivity via an external USB-to-Ethernet adapter (sold separately)."
+    }
+  ]
+}

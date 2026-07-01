@@ -1,0 +1,108 @@
+{
+  "manufacturer": "Christie",
+  "model": "DHD555-GS",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.christiedigital.com/products/end-of-support/projectors/christie-dhd555-gs/",
+  "confidence": "medium",
+  "notes": "End-of-life / end-of-support product (discontinued August 2017). Source is the Christie manufacturer page plus the GS Series user manual (document 020-000724-01) via ManualsLib. HDMI version, DisplayPort version not stated in available documentation. S-Video uses a 4-pin mini-DIN connector — no exact enum match, mapped to 'dvi' as closest available (flag for review). Mini USB is USB Type B Mini — mapped to 'usb-micro' as closest available (flag for review). Power inlet type (IEC C14) is inferred from the class of product and the fact that the manual references detachable regional power cords (IEC C13); not explicitly labeled in the available spec pages. Ethernet is 10/100 (confirmed). No audio I/O ports. No internal speakers. DVI is DVI-D (digital only). HDBaseT port shares the RJ-45 form factor but is listed as a distinct labeled port from the separate Ethernet/RJ-45 control port.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI version not specified in available documentation"
+    },
+    {
+      "name": "DVI",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D (digital only) per Christie spec page"
+    },
+    {
+      "name": "Display Port",
+      "direction": "input",
+      "connector": "dp",
+      "note": "DisplayPort version not specified"
+    },
+    {
+      "name": "VGA IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD-15 / D-sub 15-pin"
+    },
+    {
+      "name": "VGA OUT",
+      "direction": "output",
+      "connector": "vga",
+      "note": "HD-15 / D-sub 15-pin monitor output"
+    },
+    {
+      "name": "Component IN",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Three RCA connectors (Green/Y, Blue/Pb, Red/Pr) for YPbPr component video"
+    },
+    {
+      "name": "CVBS",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Composite video via RCA"
+    },
+    {
+      "name": "S-Video",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "4-pin mini-DIN S-Video connector; closest enum is dvi — actual connector is 4-pin mini-DIN (S-Video)"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "bidirectional",
+      "connector": "hdbaset",
+      "note": "HDBaseT input/output over RJ-45"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet for ChristieNET control and network management"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 pin serial control"
+    },
+    {
+      "name": "Mini USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Type B Mini connector; labeled 'Mini USB' on panel; used for display over USB. Closest enum is usb-micro — actual connector is USB Type B Mini."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A; used for image viewer or optional WiFi dongle"
+    },
+    {
+      "name": "Remote IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for wired IR remote input"
+    },
+    {
+      "name": "Remote OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for IR pass-through / remote output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet (inferred — unit ships with detachable IEC C13 power cord in regional variants; exact inlet label not confirmed from available docs). 100-240V, 50/60Hz, 520W max."
+    }
+  ]
+}

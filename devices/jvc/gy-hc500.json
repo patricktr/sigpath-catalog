@@ -1,0 +1,86 @@
+{
+  "manufacturer": "JVC",
+  "model": "GY-HC500",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.manualslib.com/manual/2961784/Jvc-Connected-Cam-Gy-Hc500u.html",
+  "confidence": "medium",
+  "notes": "Source is the ManualsLib-hosted GY-HC500U instruction manual (268 pages) cross-referenced with EU JVC product page and multiple retailer listings. HDMI version listed as 2.0 is inferred from the maximum output resolution/rate (UHD 4K 60p 4:2:2 10-bit); the manual does not explicitly state the HDMI version number. The Remote connector is physically a 2.5mm sub-mini jack (not a standard 3.5mm TRS) — mapped to trs-3.5 as the closest available connector type; noted accordingly. The AV Out is a 3.5mm TRRS carrying composite video and audio. The camera also has a wireless LAN antenna terminal (SMA-type screw connector for external antenna), which is not a signal I/O and is omitted. Battery runs at 7.2V (BN-VC264 Li-Ion). US variant is GY-HC500U; European is GY-HC500E — I/O is identical between variants.",
+  "ports": [
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G-SDI/HD-SDI/SD-SDI; compliant with SMPTE ST424, ST292, ST259; supports embedded audio; max 1080/60p 4:2:2 10-bit"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A; max UHD 3840x2160 60p 4:2:2 10-bit — consistent with HDMI 2.0, but version not explicitly stated in manual"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR 3-pin; mic/line switchable; +48V phantom power; 3 kΩ impedance"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR 3-pin; mic/line switchable; +48V phantom power; 3 kΩ impedance"
+    },
+    {
+      "name": "AUX In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack; unbalanced; for wireless mic receivers; -22 dBu sensitivity"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack; audio monitoring output"
+    },
+    {
+      "name": "AV Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS; composite video + analog audio output"
+    },
+    {
+      "name": "TC In/Out",
+      "direction": "bidirectional",
+      "connector": "rca",
+      "note": "Timecode input/output; direction selectable via TC IN/OUT switch; input 1.0–4.0 V(p-p) high-Z; output 2.0±1.0 V(p-p) low-Z"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T; used for streaming, IFB, remote control"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A host port; for WiFi dongles, LTE adapters, or USB-Ethernet adapters; network function only per manual"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm sub-mini stereo jack; wired LANC remote control; closest standard is trs-3.5 but actual connector is 2.5mm sub-mini"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input; for supplied AC adapter"
+    }
+  ]
+}

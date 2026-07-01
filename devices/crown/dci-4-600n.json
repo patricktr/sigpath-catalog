@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Crown",
+  "model": "DCi 4|600N",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.manualslib.com/manual/678176/Crown-Dci-8-600n.html",
+  "confidence": "medium",
+  "notes": "Connectors confirmed from the DCi Network series operation manuals (ManualsLib DCi 8|600N manual ID 678176 and DCi 4|2400N manual ID 3835678), which cover the same platform as the DCi 4|600N. Audio inputs are 6-pin euroblock phoenix connectors (2 per 4-channel model). Speaker outputs are Crown's proprietary 4-pole touch-proof terminal strips — mapped to euroblock as the closest available connector type, but they are large-gauge output terminals accepting up to 10 AWG, not standard 3.81mm euroblock. GPIO is a 6-position RJ-11 connector mapped to rj45 (closest in list). BLU Link grade eth-1g is inferred from 'Gigabit Ethernet-based technology' per manual; not explicitly stated as 1G on the product page. Power connector listed as 15A IEC on multiple retailer spec pages; IEC 320 C14 type confirmed from manual text ('Standard IEC type 320 inlet'). Rack height 2U confirmed across multiple sources.",
+  "ports": [
+    {
+      "name": "Input 1/2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin phoenix/euroblock plug-in connector per input pair (channels 1–2). Balanced analog input, 3.81mm pin spacing. Crown P/N 5024623 replacement connector."
+    },
+    {
+      "name": "Input 3/4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin phoenix/euroblock plug-in connector per input pair (channels 3–4). Balanced analog input."
+    },
+    {
+      "name": "Output 1/2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip per channel pair (channels 1–2). Accepts bare wire or terminal forks up to 10 AWG. Not a standard euroblock — Crown proprietary touch-proof speaker terminal; euroblock is the closest listed connector."
+    },
+    {
+      "name": "Output 3/4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip per channel pair (channels 3–4). Same touch-proof terminal strip as Output 1/2."
+    },
+    {
+      "name": "BLU Link In",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "BLU Link digital audio transport input (HARMAN proprietary, Gigabit Ethernet-based, Cat5e). One of two BLU Link RJ45 ports on rear panel; up to 256 audio channels in a ring topology."
+    },
+    {
+      "name": "BLU Link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "BLU Link digital audio transport output. Ring topology — connect Out to In on next device. Do not connect to standard Ethernet switch."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "HiQnet TCP/IP network control and monitoring port for Audio Architect software. Cat5e cabling."
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "6-position RJ-11 connector (physically fits in RJ45 jack). 2 analog inputs, 2 digital outputs, +3.3V supply, and ground. Used for volume control, preset recall, error reporting. Closest listed connector is rj45; actual connector is RJ-11/6P6C."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 320 C14 inlet, 15A, 100–240V AC 50/60 Hz. Detachable power cord."
+    }
+  ]
+}

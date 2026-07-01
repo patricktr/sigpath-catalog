@@ -1,0 +1,212 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4300-28G",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.netguardstore.com/m4300-28g.asp",
+  "confidence": "medium",
+  "notes": "Primary spec source is NetGuardStore (secondary retailer), cross-referenced with Netgear's APS150W product page confirming IEC C14 power inlet. The GSM4328S is the non-PoE M4300-28G variant (150W PSU). Ports 17–24 do not support 10M/half-duplex per spec. The 'Console (USB)' port is described by Netgear as 'Mini-USB'; this maps to usb-micro in the connector vocabulary. The RJ45 console port carries RS-232 signals (Cisco-style). The SFP+ slots accept SFP or SFP+ modules at 1G or 10G respectively. Power connector listed as 'iec' (IEC C13/C14 family); specifically IEC C14 on the modular PSU confirmed from APS150W product page. The two PSU bays allow 1+1 redundancy with optional second APS150W.",
+  "ports": [
+    {
+      "name": "1G Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Ports 1–24: 24x 1000BASE-T RJ45; ports 17–24 do not support 10M/half-duplex"
+    },
+    {
+      "name": "1G Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1G Port 24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "10GBASE-T 25",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Ports 25–26: 2x 10GBASE-T RJ45, multi-speed 100M/1G/10G"
+    },
+    {
+      "name": "10GBASE-T 26",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "SFP+ 27",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Ports 27–28: 2x 10GBASE-X SFP+, multi-speed 1G/10G"
+    },
+    {
+      "name": "SFP+ 28",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Out-of-band 1G management port, front panel"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 serial console port, rear panel. RJ45 connector carrying RS-232 signals (Cisco-style rollover)"
+    },
+    {
+      "name": "Console (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Mini-USB console port, front panel. Labeled 'Mini-USB' by Netgear; closest connector id is usb-micro"
+    },
+    {
+      "name": "USB Storage",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A storage port, front panel"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet on the modular APS150W PSU (150W AC, 100–240V). Switch has two modular PSU bays; one PSU included. Connector is IEC C14 male receptacle on PSU module."
+    }
+  ]
+}

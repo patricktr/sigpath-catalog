@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Crestron",
+  "model": "DM-NVX-363",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.crestron.com/en-us/9496/Content/Topics/Specifications/Specifications-363.htm",
+  "confidence": "high",
+  "notes": "Authoritative source is the official Crestron docs spec page. HDMI version is not explicitly stated in the spec sheet, but 4K60 4:4:4 support confirms HDMI 2.0 capability — grade inferred. SFP transceiver (SFP-1G Series) is sold separately. Audio I/O euroblock is configurable as input or output, not both simultaneously. The device can be powered via either the DC barrel connector or PoE+ on Ethernet 1. Unit is 1/2 rack width but mounts 1RU.",
+  "ports": [
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A female; supports 4K60 4:4:4, HDR10, HDR10+, Dolby Vision, Deep Color; HDMI version not explicitly stated but 4K60 4:4:4 confirms HDMI 2.0 capability"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A female; built-in 4K60 4:4:4 scaler with motion-adaptive deinterlacing; DVI compatible; HDMI version not explicitly stated but 4K60 4:4:4 confirms HDMI 2.0 capability"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8-pin RJ-45 female; 100BASE-TX/1000BASE-T; PoE+ PD port (IEEE 802.3at Type 2 Class 4, 25.5 W)"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8-pin RJ-45 female; 100BASE-TX/1000BASE-T; courtesy/daisy-chain port"
+    },
+    {
+      "name": "Ethernet 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ-45 female; 100BASE-TX only; dedicated audio network or convenience port"
+    },
+    {
+      "name": "Ethernet 4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP port; accepts Crestron SFP-1G Series transceiver module (sold separately); fiber-optic connectivity"
+    },
+    {
+      "name": "USB Device",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB Type-C female; USB 2.0 device port; connection to host computers for signal extension"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A female; USB 2.0 host port; for mice, keyboards, peripherals; 500 mA at 5 VDC"
+    },
+    {
+      "name": "USB HID",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A female; USB 2.0 host port; hot key functionality; 500 mA at 5 VDC"
+    },
+    {
+      "name": "Audio I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5 mm detachable terminal block; balanced/unbalanced stereo line-level; configurable as input OR output (not both simultaneously)"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5 mm detachable terminal block; bidirectional RS-232 port; up to 115.2k baud"
+    },
+    {
+      "name": "IR 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin 3.5 mm detachable terminal block; two IR/serial ports; IR output to 1.1 MHz or serial TTL (0–5 V) to 19200 baud"
+    },
+    {
+      "name": "24VDC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm DC power connector; 24 VDC 1.25 A input; alternative power via PoE+ on Ethernet 1"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "manufacturer": "BrightSign",
+  "model": "XT1144",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://docs.brightsign.biz/hardware/xtx44-hardware-interfaces",
+  "confidence": "high",
+  "notes": "Desktop (non-rack) unit. Also has a microSD slot (SDHC/SDXC) and M.2 (E-key) slot for optional Wi-Fi/Bluetooth module with external antenna connectors — these are internal/expansion interfaces and not panel I/O. The HDMI version is listed as HDMI 2.0 in the official hardware interfaces doc; the datasheet PDF mentions HDMI 2.0a — confirmed as HDMI 2.0 from docs.brightsign.biz. Audio 3.5mm jack is a combo analog+optical (TOSLINK) output. USB both ports run at USB 2.0 speeds (480 Mbit/s) per official docs. The XT1144 is the expanded I/O model; XT244 omits the USB-C, HDMI In, and serial ports. Power connector is a proprietary 2-pin locking connector (Molex-style) — dc-barrel is the closest available enum value.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "4096x2160@60p max resolution"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "4096x2160@60p max, supports CEC; enables Live TV capture"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host/charging, up to 1.5A; supports content updates"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Dual-role port, up to 1A; 480 Mbit/s"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T Gigabit Ethernet with PoE+ (802.3at Types 1 & 2)"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Combination analog/optical (TOSLINK) 3.5mm jack"
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm IR in/out; supports NEC and Pronto hex signals"
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm UART jack with RS-232 levels; default 115200 8N1; TX, RX, Ground"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "12-pin connector: 8 button inputs, 4 LED outputs (24mA max/line), 3.3V output (polyfuse 500mA), ground pins"
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2-pin locking Molex-style connector, 12V @ 3A (36W); right-side positive; proprietary locking connector — dc-barrel is closest standard match"
+    }
+  ]
+}

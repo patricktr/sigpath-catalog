@@ -1,0 +1,120 @@
+{
+  "manufacturer": "Tripp Lite",
+  "model": "PDUMH30HVAT",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 2,
+  "sourceUrl": "https://tripplite.eaton.com/support/pdumh30hvat",
+  "confidence": "medium",
+  "notes": "The two power inputs are captive 10ft hardwired cords terminating in NEMA L6-30P twist-lock plugs (30A, 200-240V, single-phase). The L6-30P and L6-30R connector types are not in the allowed connector list; nema-5-15 was used as the closest available placeholder — these are categorically different (L6-30 is a 30A 240V twist-lock vs. the 15A 120V straight-blade nema-5-15). The L6-30R pass-through outlet is also a 240V twist-lock receptacle. This is the non-networked metered ATS variant; the PDUMH30HVATNET adds a network management card with an RJ45 port. No USB, serial, or other control ports are present on this model. Confidence is medium because the Eaton/Tripp Lite product page timed out; data confirmed from tripplite.eaton.com/support page and multiple retailer spec sheets.",
+  "ports": [
+    {
+      "name": "Input A (Primary)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 10ft hardwired cord terminating in NEMA L6-30P twist-lock plug (30A, 200-240V). NEMA L6-30P not in connector list; nema-5-15 used as closest available — see notes."
+    },
+    {
+      "name": "Input B (Secondary)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 10ft hardwired cord terminating in NEMA L6-30P twist-lock plug (30A, 200-240V). NEMA L6-30P not in connector list; nema-5-15 used as closest available — see notes."
+    },
+    {
+      "name": "C13 Outlet 1",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 2",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 3",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 4",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 5",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 6",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 7",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 8",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 9",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 10",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 11",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 12",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 13",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 14",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 15",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C13 Outlet 16",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "C19 Outlet 1",
+      "direction": "output",
+      "connector": "iec-c19"
+    },
+    {
+      "name": "C19 Outlet 2",
+      "direction": "output",
+      "connector": "iec-c19"
+    },
+    {
+      "name": "L6-30R Outlet",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actually a NEMA L6-30R twist-lock receptacle (30A, 200-240V). NEMA L6-30R not in connector list; nema-5-15 used as closest available — see notes."
+    }
+  ]
+}

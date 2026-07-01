@@ -1,0 +1,98 @@
+{
+  "manufacturer": "LG",
+  "model": "55UH7F-H",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.lg.com/sa_en/business/digital-signage/55uh7f-h/",
+  "confidence": "medium",
+  "notes": "Source: multiple LG regional product pages (SA, NZ, UK, US Solutions) cross-referenced with retailer specs. HDMI 2.0 grades are inferred from HDCP 2.2 support on a 4K display — not explicitly stated. DP 1.2 grade is inferred from HDCP 1.3 support. Power inlet (IEC C13) is inferred from included power cord accessory; not explicitly stated. USB count: official LG regional pages list 1x USB 2.0 Type A; some secondary sources (Newegg, Visionality) list 2x. RS232C uses a 4-pin 3.5mm phone/TRRS jack — closest connector in the schema is trs-3.5. The display is discontinued.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 2.2/1.4; grade inferred from HDCP 2.2 support and 4K capability"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 2.2/1.4; grade inferred from HDCP 2.2 support and 4K capability"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP 1.4 only; grade inferred"
+    },
+    {
+      "name": "DP In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "HDCP 2.2/1.3; DP 1.2 inferred from HDCP 1.3 support"
+    },
+    {
+      "name": "DP Out",
+      "direction": "output",
+      "connector": "dp",
+      "note": "Daisy-chain output; version not explicitly stated"
+    },
+    {
+      "name": "DVI-D In",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "HDCP 1.4"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack"
+    },
+    {
+      "name": "RS232C In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "4-pin 3.5mm phone jack (TRRS); used for RS-232C serial control; trs-3.5 is closest available connector type"
+    },
+    {
+      "name": "RS232C Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "4-pin 3.5mm phone jack (TRRS); used for RS-232C external control; trs-3.5 is closest available connector type"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet LAN; speed not specified in source"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in power supply, AC 100-240V 50/60Hz; IEC C13 inlet inferred — spec sheets do not explicitly state connector type but power cord is listed as included accessory, consistent with IEC C13"
+    }
+  ]
+}

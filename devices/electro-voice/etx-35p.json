@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Electro-Voice",
+  "model": "ETX-35P",
+  "category": "amplifier",
+  "type": "Speaker",
+  "sourceUrl": "https://products.electrovoice.com/na/en/etx-35p",
+  "confidence": "medium",
+  "notes": "Inputs and link output confirmed across multiple sources (EV product page, retailer spec tables). Power connector type confirmed as IEC C13/C14 (not PowerCON) from search results referencing the user manual; exact IEC variant (C13 vs C14) inferred as C14 inlet (standard for this class of powered speaker) — the user manual PDF was not directly parseable. No other control ports (no RJ45, USB, or digital audio I/O) are listed anywhere in the specs; the ETX-35P is purely an analog-input powered speaker.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "Link",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR link output for daisy-chaining"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; 100–240 V~, 50–60 Hz, 1.6–0.8 A; locking-type power cord recommended"
+    }
+  ]
+}

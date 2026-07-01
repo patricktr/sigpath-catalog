@@ -1,0 +1,123 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio 4K Pro",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/hyperdeckstudio/techspecs/W-HDB-12",
+  "confidence": "high",
+  "notes": "Specs sourced from the Blackmagic Design official tech specs page for model W-HDB-12. SDI Monitor Out corrected to sdi-12g per official specs (all SDI outputs on this model are 12G-SDI). RS-422 connector identified as DE-9 (standard for broadcast RS-422 on Blackmagic HyperDeck units; not explicitly stated on the spec page but universally used). The two AC inputs are IEC C14 inlets (standard for 1RU rack equipment with internal PSUs); the spec page says '2 x Internal 100-240V AC 50/60Hz' without naming the inlet style explicitly. 100W max power draw. Unit also has 2x internal 2.5-inch SSD bays and 2x SD card slots (not physical external connectors).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G-SDI, supports 270Mb/s, 1.5G, 3G, 6G, 12G"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Loop output"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G-SDI with graphic overlays"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Timecode In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Timecode Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Tri-Sync or Black Burst reference"
+    },
+    {
+      "name": "Ref Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Tri-Sync or Black Burst reference"
+    },
+    {
+      "name": "RS-422 In",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "DE-9 connector; deck control"
+    },
+    {
+      "name": "RS-422 Out",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "DE-9 connector; loop to multiple decks"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gb/s; network file transfer and remote control"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g",
+      "note": "USB 3.1 Gen 2, up to 10Gb/s; external disk recording"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.35mm headphone jack with built-in mono speaker"
+    },
+    {
+      "name": "AC In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100–240V AC 50/60Hz supply; dual redundant"
+    },
+    {
+      "name": "AC In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100–240V AC 50/60Hz supply; dual redundant"
+    },
+    {
+      "name": "12V DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR 12V DC; external power supply or battery"
+    }
+  ]
+}

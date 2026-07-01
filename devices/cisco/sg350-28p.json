@@ -1,0 +1,76 @@
+{
+  "manufacturer": "Cisco",
+  "model": "SG350-28P",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://community.cisco.com/t5/small-business-support-knowledge-base/get-to-know-the-sg350-28p-28-port-gigabit-poe-managed-switch/ta-p/3170417",
+  "confidence": "medium",
+  "notes": "Primary source is Cisco's own community knowledge base article. IEC C14 inlet inferred from third-party replacement power cords being listed as C13-to-NEMA-5-15P (i.e., device side is C14); this is consistent with standard practice for 1U rack switches of this class. USB port listed as USB-A Type-A based on Cisco 350 series documentation describing it as a standard USB slot for storage; USB 2.0 grade inferred (not explicitly stated in available sources). Console port is RJ45 confirmed by Cisco community article. The 350 series originally shipped with both RJ45 and mini-USB console ports; per a separate Cisco article, the mini-USB console port was later removed — the SG350-28P (non-CBS variant) retains the RJ45 console. Cisco.com product pages returned HTTP 403 and could not be accessed directly.",
+  "ports": [
+    {
+      "name": "Gigabit PoE+ 1–24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24 x 10/100/1000 PoE+ ports (802.3af/at/bt 60W); 195W total PoE budget"
+    },
+    {
+      "name": "Combo 25",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Shared with SFP slot 25; RJ45 and SFP are mutually exclusive"
+    },
+    {
+      "name": "Combo 25 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Shared combo port with RJ45 25; only one active at a time"
+    },
+    {
+      "name": "Combo 26",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Shared with SFP slot 26; RJ45 and SFP are mutually exclusive"
+    },
+    {
+      "name": "Combo 26 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Shared combo port with RJ45 26; only one active at a time"
+    },
+    {
+      "name": "SFP 27",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated Gigabit SFP uplink"
+    },
+    {
+      "name": "SFP 28",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated Gigabit SFP uplink"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 serial console port, 115200 bps default; located on back panel"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A for file management (config/firmware/SYSLOG backup); FAT32 read/write, NTFS read-only"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; 100–240V AC, 50/60 Hz universal; max 263W with full PoE load at 110V; power cord (C13 to NEMA 5-15P) included"
+    }
+  ]
+}

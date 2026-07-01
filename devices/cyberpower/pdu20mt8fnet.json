@@ -1,0 +1,79 @@
+{
+  "manufacturer": "CyberPower",
+  "model": "PDU20MT8FNET",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cyberpowersystems.com/product/pdus/monitored/pdu20mt8fnet/",
+  "confidence": "medium",
+  "notes": "Input plug is NEMA L5-20P (20A twist-lock); output receptacles are NEMA 5-20R (20A) — neither is in the allowed connector enum, so nema-5-15 (the closest 120V power connector in the list) is used for both with notes. Ethernet speed is not explicitly stated in the manufacturer spec page or user manual; eth-100m is inferred from the device class (management PDU of this era). Serial port on the unit is RJ45; the included cable converts to DB9 for RS-232 connectivity. No USB ports. 8 outlets are all front-facing on this MT (transverse/front) variant.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 12-ft cord with NEMA L5-20P twist-lock plug; nema-5-15 is the closest available connector type — actual plug is NEMA L5-20P (20A locking)"
+    },
+    {
+      "name": "AC Out 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle; nema-5-15 is the closest available connector — actual receptacle is NEMA 5-20R (20A)"
+    },
+    {
+      "name": "AC Out 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 5",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 7",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "AC Out 8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-20R receptacle"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet for SNMP/HTTP monitoring via CyberPower Management Console; speed not explicitly stated in public specs — eth-100m inferred from device class"
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 serial management port on unit; included RJ45-to-DB9 adapter cable in box for connecting to RS-232 equipment"
+    }
+  ]
+}

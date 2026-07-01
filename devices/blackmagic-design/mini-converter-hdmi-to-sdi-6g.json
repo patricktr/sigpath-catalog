@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Mini Converter HDMI to SDI 6G",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/miniconverters/techspecs/W-CONM-27",
+  "confidence": "medium",
+  "notes": "HDMI 2.0 grade confirmed via AVGear retailer listing. SDI outputs are BNC and auto-match up to 6G-SDI. The two 1/4\" TRS jacks carry both balanced analog audio (2ch) and AES/EBU digital audio (4ch total). USB 2.0 port for config/firmware — official specs do not state exact USB connector form factor; Mini-USB is typical for this Blackmagic Mini Converter family generation but this is inferred and should be verified against the physical unit. Power connector is a locking DC barrel (12V, Blackmagic proprietary locking style); exact barrel dimensions not stated in official specs. Model SKU: CONVMBHS24K6G.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A input"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Auto-matches SD, HD, and 6G-SDI from HDMI input; supports up to 2160p30"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Auto-matches SD, HD, and 6G-SDI from HDMI input; supports up to 2160p30"
+    },
+    {
+      "name": "Analog/AES In 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio or AES/EBU digital audio (same 1/4\" jack carries both); 2ch analog or 4ch AES/EBU total across both jacks"
+    },
+    {
+      "name": "Analog/AES In 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio or AES/EBU digital audio (same 1/4\" jack carries both)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Used for firmware updates and configuration via Blackmagic Converters software; exact connector type (Mini-USB vs Micro-USB) not explicitly stated in official specs — inferred as Mini-USB based on this product family era (2017), but could be Micro-USB"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12–18V DC; included 12V universal power supply with international socket adapters; uses Blackmagic locking DC barrel connector"
+    }
+  ]
+}

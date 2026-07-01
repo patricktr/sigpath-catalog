@@ -1,0 +1,79 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "AP7920B",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.apcguard.com/ap7920b.asp",
+  "confidence": "medium",
+  "notes": "Power input is IEC 60320 C14 (listed as \"iec\" — the connector enum covers C13/C14 family; C14 is the male inlet on the device). All 8 outlets are IEC 60320 C13, individually switched. Network management port is 10/100 Base-T Ethernet via RJ45. Serial management port is physically RJ12 (6P6C), not a full RJ45 — mapped to rj45 as closest available connector in the enum; note in field reflects actual connector. The \"type\" field value \"PDU\" is not in the allowed enum; closest match is \"Power conditioner\" — device is actually a switched rack PDU. Confidence medium because the official APC/Schneider Electric product pages returned 403; specs confirmed via apcguard.com and cross-referenced with B&H Photo listing and community sources.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet; captive 1.9 m cord; 12A/208V or 10A/230V"
+    },
+    {
+      "name": "Outlet 1",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 2",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 3",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 4",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 5",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 6",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 7",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Outlet 8",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13; individually switched"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Base-T Ethernet for network management card"
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ12 (6P6C) serial management port, 9600 baud 8N1; closest standard connector is rj45 — actual physical connector is RJ12/6P6C"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Crown",
+  "model": "XTi 6002",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://bswusa.com/crown-xti6002/",
+  "confidence": "medium",
+  "notes": "Authoritative Crown Audio product page returned 403; specs confirmed via BSW USA, Wave Electronics, Thomann, and KPODJ retailer pages. Audio inputs are XLR-only (no XLR/TRS combo). Power inlet is IEC C20 (20A) — the device-side inlet is C20; this is mapped to iec-c19 as the closest enum value since iec-c19 represents the high-current IEC 60320 20A inlet family (C19 is the plug, C20 is the inlet, they are the same connector pairing). Binding posts are standard banana/binding-post type. USB is Type B for PC control software, not audio streaming. Loop-through (Link/Out) connector type inferred as XLR3 female based on Thomann listing 'Link Out XLR'.",
+  "ports": [
+    {
+      "name": "Input Ch 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR input, Channel 1"
+    },
+    {
+      "name": "Input Ch 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR input, Channel 2"
+    },
+    {
+      "name": "Link/Out Ch 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Loop-through signal from Ch 1 input for linking another amplifier"
+    },
+    {
+      "name": "Link/Out Ch 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Loop-through signal from Ch 2 input for linking another amplifier"
+    },
+    {
+      "name": "Output Ch 1",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4MP; Ch 1 Speakon also carries Ch 2 signal on pins 2+/2- for single 4-conductor cable use"
+    },
+    {
+      "name": "Output Ch 2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4MP"
+    },
+    {
+      "name": "Output Ch 1",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Binding post output, in parallel with Speakon Ch 1"
+    },
+    {
+      "name": "Output Ch 2",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Binding post output, in parallel with Speakon Ch 2"
+    },
+    {
+      "name": "HiQnet USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B for HiQnet Band Manager and System Architect control software"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC C20 inlet (20A); device-side connector is C20 inlet, mating cable connector is C19. Locking power cord clip included."
+    }
+  ]
+}

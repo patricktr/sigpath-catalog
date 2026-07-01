@@ -1,0 +1,53 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "SRX828SP",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://jblpro.com/en-US/products/srx828sp",
+  "confidence": "medium",
+  "notes": "Specs confirmed from JBL Professional product page and SRX800 series user guide. The power inlet is described as a \"Locking IEC Inlet\" in the SRX800 User's Guide (same family document). Input connectors are Neutrik combo XLR/1/4\" (xlr3 primary, accepts trs-6.35). Two inputs and two outputs confirmed from multiple retailer specs and user guides. Ethercon confirmed as the network connector type. Exact locking IEC subtype (C14 vs C19) is not explicitly stated in spec sheets — mapped to `iec` as closest match. No rack-mount ears; this is a portable/floor subwoofer.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo XLR/1/4\" TRS mono line input"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo XLR/1/4\" TRS mono line input"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Neutrik XLR loop-through / mix out"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Neutrik XLR loop-through / mix out"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Ethercon RJ45 for HiQnet/Audio Architect control"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC inlet, 100–240 V~ 50/60 Hz"
+    }
+  ]
+}

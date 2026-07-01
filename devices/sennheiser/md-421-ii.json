@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "MD 421-II",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.sennheiser.com/en-us/catalog/products/microphones/md-421-ii/md-421-ii-000984",
+  "confidence": "high",
+  "notes": "Passive dynamic microphone with no power input — no battery, no phantom power required, no IEC/DC connector. Single 3-pin XLR balanced output is the only physical I/O. Includes a 5-position bass roll-off switch on the body.",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR balanced output; passive dynamic microphone, no phantom power required"
+    }
+  ]
+}

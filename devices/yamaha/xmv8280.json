@@ -1,0 +1,111 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "XMV8280",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/power_amps/xmv/specs.html",
+  "confidence": "medium",
+  "notes": "The XMV8280 is the non-Dante variant; the XMV8280-D adds two Dante RJ45 ports (PRIMARY/SECONDARY) replacing or supplementing the YDIF ports. Speaker outputs are described as 'barrier strip x 8 pairs' — these are screw-terminal barrier strips, mapped to euroblock as the closest listed connector. The Remote and Fault Output share a single described Euroblock(3P)x1 entry in Yamaha specs, but the manual shows them as two separate 3-pin Euroblock connectors. AC inlet exact IEC subtype (C14 vs C20) was not confirmed in available sources — IEC (C14) is inferred based on the device's power class and common practice for this amplifier category. Confidence is medium because: speaker output barrier strip is mapped to euroblock (closest available), AC inlet subtype is inferred, and the Remote/Fault connector count is ambiguous in official specs.",
+  "ports": [
+    {
+      "name": "Analog Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin Euroblock, balanced; carries channels 1–4 (one of two 6P input connectors)"
+    },
+    {
+      "name": "Analog Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin Euroblock, balanced; carries channels 5–8 (one of two 6P input connectors)"
+    },
+    {
+      "name": "YDIF IN",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "YDIF (Yamaha Digital Interface Format) digital audio input; CAT5e STP straight-through cable required"
+    },
+    {
+      "name": "YDIF OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "YDIF digital audio output; supports ring topology up to 8 devices, max 30m between devices"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX Ethernet for device control/monitoring via computer; CAT5e STP recommended"
+    },
+    {
+      "name": "Speaker Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs); supports low-impedance (4/8Ω) and high-impedance (70V/100V) loads"
+    },
+    {
+      "name": "Speaker Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 5",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 7",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Speaker Out 8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip screw terminals (one of 8 pairs)"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock (3.5mm pitch); pins: MUTE ALL, STANDBY, GND — for external mute/standby control"
+    },
+    {
+      "name": "Fault Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock (3.5mm pitch); relay contact pins: NO, C (Common), NC — rated 1A DC 30V resistive; Yamaha spec lists Remote and Fault Output as a shared Euroblock(3P)x1 connector block"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC Inlet; universal input 100V/120V/230–240V 50/60Hz with Power Factor Correction; exact IEC subtype (C14 vs C20) not specified in available documentation — IEC C14 inferred for this power class"
+    }
+  ]
+}

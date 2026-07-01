@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Kramer Electronics",
+  "model": "FC-69",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.av-iq.com/avcat/ctl1642/index.cfm?manufacturer=kramer-electronics-usa&product=fc-69",
+  "confidence": "medium",
+  "notes": "Kramer's own product page (kramerav.com) returned HTTP 403. Specs sourced from AV-iQ, avlgear.com, and ManualsLib. HDMI version not explicitly stated; hdmi-2.0 inferred from 4K@60Hz (4:2:0) support and 8.91 Gbps max data rate. Power current draw varies across sources (500mA vs 730mA). S/PDIF output is coaxial RCA (not optical/TOSLINK). Desktop unit — not rack-mountable (optional RK-3T rack adapter available separately).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI version inferred from 4K@60Hz (4:2:0) / 8.91 Gbps spec; not explicitly stated as HDMI 2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI version inferred from 4K@60Hz (4:2:0) / 8.91 Gbps spec; not explicitly stated as HDMI 2.0"
+    },
+    {
+      "name": "Analog Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio input on 3.5mm mini jack"
+    },
+    {
+      "name": "Analog Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio output on 3.5mm mini jack"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "S/PDIF digital audio output on RCA connector; de-embeds from HDMI input or ARC"
+    },
+    {
+      "name": "5V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5V DC, 500–730mA (sources vary); external power adapter included (model RK-3T optional rack adapter)"
+    }
+  ]
+}

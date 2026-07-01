@@ -1,0 +1,22 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio HD Mini",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "confidence": "high",
+  "notes": "1/3-rack-width Teranex Mini form factor; occupies 1 RU when shelf-mounted. Media: 2x SD card slots (UHS-I/UHS-II) on front panel — not listed as ports. Audio is embedded on the SDI (16 ch in/out) and HDMI (8 ch out) ports. RS-422 uses a DE-9/DB9 connector; pinout may vary by hardware revision.",
+  "ports": [
+    { "name": "SDI In", "direction": "input", "connector": "sdi", "grade": "sdi-3g" },
+    { "name": "SDI Out", "direction": "output", "connector": "sdi", "grade": "sdi-3g" },
+    { "name": "HDMI Out", "direction": "output", "connector": "hdmi", "grade": "hdmi-2.0" },
+    { "name": "Ref In", "direction": "input", "connector": "bnc", "note": "Tri-Sync / Black Burst reference input" },
+    { "name": "Ref Out", "direction": "output", "connector": "bnc", "note": "Sync output" },
+    { "name": "Timecode In", "direction": "input", "connector": "bnc" },
+    { "name": "Timecode Out", "direction": "output", "connector": "bnc" },
+    { "name": "Ethernet", "direction": "bidirectional", "connector": "rj45", "grade": "eth-1g", "note": "HyperDeck Protocol, FTP transfer, and PoE+ power input" },
+    { "name": "USB-C", "direction": "bidirectional", "connector": "usb-c", "grade": "usb-5g", "note": "USB 3.0; external media recording, webcam output, local configuration" },
+    { "name": "RS-422", "direction": "bidirectional", "connector": "rs422", "note": "DE-9/DB9; remote deck control input" },
+    { "name": "Power In", "direction": "input", "connector": "iec", "note": "Internal 100–240V AC 50/60Hz supply" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Furman",
+  "model": "P-1800 AR",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://furmanpower.com/products/p-1800-ar",
+  "confidence": "high",
+  "notes": "Pure power conditioner/voltage regulator — no signal I/O (no HDMI, SDI, audio, network, etc.). Accepts 97–137 VAC input, regulates to 120V ±5V output. 15A capacity. Features SMP (Series Multi-Stage Protection), LiFT (Linear Filtering Technology), and EVS (Extreme Voltage Shutdown). The power inlet is a captive cord (not a detachable IEC C13/C14 inlet), confirmed by multiple sources describing a \"captive 10 ft cord with NEMA 15 plug.\" USB-A port type inferred from product context (standard USB-A charger); spec sheets do not explicitly state USB-A vs. USB-C. BNC is confirmed rear panel, 12VAC output for rack lamp duty only.",
+  "ports": [
+    {
+      "name": "AC Outlet 1–8 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "8 regulated, spike-suppressed, RFI-filtered rear panel outlets; three widely spaced to accommodate bulky AC transformers"
+    },
+    {
+      "name": "AC Outlet 9 (Front)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "1 regulated front panel convenience outlet"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 10 ft 14 AWG cord with NEMA 5-15 plug; not a detachable IEC inlet"
+    },
+    {
+      "name": "Rear Rack Lamp",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "12VAC 500mA max; powers standard gooseneck rack lamp (lamp not included)"
+    },
+    {
+      "name": "USB Charger (Front)",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Front panel USB-A convenience port for charging media devices or powering a USB lamp; charging current not specified in sources"
+    }
+  ]
+}

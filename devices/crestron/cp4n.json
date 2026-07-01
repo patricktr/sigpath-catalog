@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Crestron",
+  "model": "CP4N",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.crestron.com/en-us/9214/Content/Topics/Specifications/Specifications-CP4N.htm",
+  "confidence": "high",
+  "notes": "The CP4N is the networked variant of the CP4 (adds dedicated Control Subnet port). All control I/O uses 3.5mm euroblock detachable terminal blocks. Ethernet rated 100/1000Base-TX on both LAN and Control Subnet ports. Power is external DC adapter (PW-2420RU included), not mains inlet on the unit itself. SD/SDHC memory card slot also present but is not a signal or power connector. Spec confirmed from Crestron official documentation.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Control Subnet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated Crestron device subnet port"
+    },
+    {
+      "name": "COM 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm detachable terminal block; RS-232/422/485 up to 115.2k baud"
+    },
+    {
+      "name": "COM 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; RS-232 up to 115.2k baud"
+    },
+    {
+      "name": "COM 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; RS-232 up to 115.2k baud"
+    },
+    {
+      "name": "IR/Serial Output 1–8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Two 8-pin 3.5mm detachable terminal blocks; IR up to 1.2 MHz or TTL/RS-232 up to 115.2k baud"
+    },
+    {
+      "name": "Relay Output 1–8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Two 8-pin 3.5mm detachable terminal blocks; normally open isolated relays, 1A at 30VAC/VDC"
+    },
+    {
+      "name": "I/O 1–8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "One 9-pin 3.5mm detachable terminal block; Versiport configurable digital input/output or 0–10V analog input"
+    },
+    {
+      "name": "NET",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; Cresnet master/input port"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel; USB 2.0 Type-A host for mass storage devices"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Front panel; USB 2.0 Type-B console port for computer setup"
+    },
+    {
+      "name": "24VDC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1x5.5mm DC barrel connector; 24VDC 2.0A; PW-2420RU power pack included"
+    }
+  ]
+}

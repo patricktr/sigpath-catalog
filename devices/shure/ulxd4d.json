@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Shure",
+  "model": "ULXD4D",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://tcfurlong.com/wp-content/uploads/Shure-ULX-D-Dual-and-Quad-Rental-Manual.pdf",
+  "confidence": "medium",
+  "notes": "Source is the official Shure ULX-D Dual and Quad User Guide (©2012 Shure Incorporated, 27A20228 Rev. 1), confirmed against current Shure product page. Back panel diagram on p.5 and specs table on p.25 used. There is no USB port on the ULXD4D — control is exclusively via the dual Ethernet/Dante ports. The front-panel IR sync window is a passive optical window for transmitter sync, not a wired electrical I/O port, so it is omitted. Ethernet ports auto-negotiate 10/100/1G; grade set to eth-1g. The IEC power inlet on a 1RU chassis is a standard IEC C14 inlet. This is the first-generation ULX-D guide; later firmware added High-Density mode and the G57 band variant but no physical connector changes.",
+  "ports": [
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC Connector, 100–240 V AC, 50–60 Hz, 0.26 A max"
+    },
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna diversity input; 50 Ω; 12–13 V DC bias at 150 mA max, switchable on/off"
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna diversity input; 50 Ω; 12–13 V DC bias at 150 mA max, switchable on/off"
+    },
+    {
+      "name": "RF Cascade A",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes RF signal from Antenna A to one additional receiver; unbalanced, passive; 50 Ω; 0 dB insertion loss"
+    },
+    {
+      "name": "RF Cascade B",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes RF signal from Antenna B to one additional receiver; unbalanced, passive; 50 Ω; 0 dB insertion loss"
+    },
+    {
+      "name": "Audio Output 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR output for channel 1; mic/line switchable (30 dB pad); +18 dBV line / –12 dBV mic full scale; 100 Ω"
+    },
+    {
+      "name": "Audio Output 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR output for channel 2; mic/line switchable (30 dB pad); +18 dBV line / –12 dBV mic full scale; 100 Ω"
+    },
+    {
+      "name": "Network Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante digital audio (primary) and Shure Control (WWB6/AMX/Crestron); auto-negotiates 10/100 Mbps or 1 Gbps"
+    },
+    {
+      "name": "Network Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante digital audio (secondary) and Shure Control; auto-negotiates 10/100 Mbps or 1 Gbps; supports Switched, Redundant Audio, or Split network modes"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Powersoft",
+  "model": "Ottocanali 8K4",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.dmmusic.com/shop/powersoft-ottocanali-8k4/",
+  "confidence": "medium",
+  "notes": "Base model (non-DSP, non-DSP+D variant). All signal and control I/O use pluggable terminal block (Phoenix/euroblock) connectors — no XLR, no Speakon, no Ethernet/RJ45 (those are DSP+D-only). Audio inputs accept balanced analog only (base model has no AES/EBU digital input, though the product page mentions 'analog and digital input' — this refers to DSP variants sharing the same Phoenix footprint). Speaker output connector part number Phoenix PC 5/8-STF1-7.62 (1777891) confirmed from DM Music and search results. Input connector part Phoenix MC 1.5/12-ST-3.81 (1803675) confirmed. IEC C20 inlet on device classified as iec-c19 (the matching cable connector). Primary source is the DM Music retailer page; manufacturer product page corroborates key details. Confidence is medium because connector details come from a retailer page rather than an official Powersoft spec PDF (PDFs returned as binary).",
+  "ports": [
+    {
+      "name": "Signal Input MAIN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix MC 1.5/12-ST-3.81 (3.81mm pitch pluggable terminal block); balanced analog input for all 8 channels (3 pins per channel)"
+    },
+    {
+      "name": "Signal Input AUX",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix MC 1.5/12-ST-3.81 (3.81mm pitch pluggable terminal block); switchable auxiliary balanced analog input for all 8 channels"
+    },
+    {
+      "name": "Speaker Output 1–4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Phoenix PC 5/8-STF1-7.62 (7.62mm pitch); covers channels 1–4; supports lo-Z and 70V/100V hi-Z"
+    },
+    {
+      "name": "Speaker Output 5–8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Phoenix PC 5/8-STF1-7.62 (7.62mm pitch); covers channels 5–8; supports lo-Z and 70V/100V hi-Z"
+    },
+    {
+      "name": "Alarm 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix MC 1.5/12-ST-3.81; configurable NC/NO alarm contacts per channel (channels 1–4 or per-channel grouping)"
+    },
+    {
+      "name": "Alarm 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix MC 1.5/12-ST-3.81; configurable NC/NO alarm contacts per channel"
+    },
+    {
+      "name": "Remote Line/AUX Switch + PWS Out",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin Phoenix MC 1.5/4-ST-3.81; remote main/aux input switching and 24VDC (0.2A max) power supply output"
+    },
+    {
+      "name": "Remote On/Off + Aux Voltage",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin Phoenix MC 1.5/4-ST-3.81; remote on/off switching and auxiliary voltage"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC C20 male inlet on device (accepts IEC C19 female detachable cord); 20A max; 90–264V AC universal input"
+    }
+  ]
+}

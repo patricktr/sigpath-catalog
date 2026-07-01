@@ -1,0 +1,258 @@
+{
+  "manufacturer": "MOTU",
+  "model": "MOTU 1248",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.soundpure.com/p/motu-1248-thunderbolt-audio-interface/11716",
+  "confidence": "medium",
+  "notes": "Primary sources: Sound on Sound review (confirmed combo XLR/jack mic inputs on the 1248; SOS explicitly describes 'combi' XLR/jack sockets for the mic preamps), Soundpure spec listing (confirmed 4x XLR mic, 8x TRS line in, 12x TRS line out, 2x guitar TS, 2x headphone, 2x optical ADAT banks, RCA S/PDIF, BNC word clock, 1x Thunderbolt, 1x USB 2.0, 1x AVB Ethernet RJ45; also confirms 'Stereo TOSLink optical S/PDIF on Bank A'). Mic inputs corrected from XLR-only to combo XLR/TRS per SOS review. ADAT Optical Bank A note updated to reflect dual-use as optical S/PDIF per Soundpure spec. Thunderbolt connector is mini-DisplayPort style (standard for Thunderbolt 1/2 era, 2014 product). USB connector type inferred as USB-B (standard for audio interfaces of this era). IEC C14 power inlet inferred from third-party detachable AC power cord availability; manual confirms internal auto-switching supply. The MOTU 1248 product page on motu.com now redirects to the newer 848 model.",
+  "ports": [
+    {
+      "name": "Mic In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3",
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack (combi); preamp with 63 dB gain, switchable 48V phantom, -20 dB pad"
+    },
+    {
+      "name": "Mic In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3",
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack (combi); preamp with 63 dB gain, switchable 48V phantom, -20 dB pad"
+    },
+    {
+      "name": "Mic In 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3",
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack (combi); preamp with 63 dB gain, switchable 48V phantom, -20 dB pad"
+    },
+    {
+      "name": "Mic In 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3",
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack (combi); preamp with 63 dB gain, switchable 48V phantom, -20 dB pad"
+    },
+    {
+      "name": "Guitar In 1",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Front panel; high-impedance hi-Z input"
+    },
+    {
+      "name": "Guitar In 2",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Front panel; high-impedance hi-Z input"
+    },
+    {
+      "name": "Analog In 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 3",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 4",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 5",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 6",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 7",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog In 8",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced line input; rear panel"
+    },
+    {
+      "name": "Analog Out 1-2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Main output pair; balanced"
+    },
+    {
+      "name": "Analog Out 3-4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Monitor output pair; balanced"
+    },
+    {
+      "name": "Analog Out 5",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 6",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 7",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 8",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 9",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 10",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 11",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Analog Out 12",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced line output"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel stereo headphone output"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel stereo headphone output"
+    },
+    {
+      "name": "ADAT Optical In A",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "8 ch ADAT at 1x sample rate; 4 ch S/MUX at 2x; also usable as stereo optical S/PDIF (TOSLink) input"
+    },
+    {
+      "name": "ADAT Optical Out A",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "8 ch ADAT at 1x sample rate; 4 ch S/MUX at 2x; also usable as stereo optical S/PDIF (TOSLink) output"
+    },
+    {
+      "name": "ADAT Optical In B",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "8 ch ADAT at 1x sample rate; 4 ch S/MUX at 2x"
+    },
+    {
+      "name": "ADAT Optical Out B",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "8 ch ADAT at 1x sample rate; 4 ch S/MUX at 2x"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo coaxial S/PDIF; sample rate conversion available"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo coaxial S/PDIF"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Word clock sync input"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Word clock sync output"
+    },
+    {
+      "name": "Thunderbolt",
+      "direction": "bidirectional",
+      "connector": "mini-dp",
+      "note": "Thunderbolt 1/2 (mini-DisplayPort physical connector); computer audio interface connection"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 (USB 3.0 compatible); computer audio interface connection; alternate to Thunderbolt"
+    },
+    {
+      "name": "AVB Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "IEEE 802.1 AVB/TSN networking; 1 Gbps"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal auto-switching power supply, 100-240V 50-60 Hz; IEC C14 inlet inferred from detachable AC cord compatibility"
+    }
+  ]
+}

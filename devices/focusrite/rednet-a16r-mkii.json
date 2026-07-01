@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "RedNet A16R MkII",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://us.focusrite.com/products/rednet-a16r-mkii",
+  "confidence": "high",
+  "notes": "The four analog I/O connectors are DB25 (D-sub 25-pin) wired to the AES59 standard — this connector type is not in the schema; rs422 (also a D-sub family) is used as the closest physical match. Ethernet grade eth-1g is confirmed by the Neutrik NE8FBH connector spec (Gigabit-rated) and by Dante requirements at 16 channels/96kHz; Focusrite's spec page does not explicitly print the word Gigabit but the hardware confirms it. IEC inlets are C14 type with locking retaining clips.",
+  "ports": [
+    {
+      "name": "Line In 1-8",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "Actual connector: DB25 (D-sub 25-pin), AES59 pinout, carries 8 channels of balanced analog line input. rs422 is the closest D-sub form factor in the schema."
+    },
+    {
+      "name": "Line In 9-16",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "Actual connector: DB25 (D-sub 25-pin), AES59 pinout, carries channels 9–16 of balanced analog line input."
+    },
+    {
+      "name": "Line Out 1-8",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "Actual connector: DB25 (D-sub 25-pin), AES59 pinout, carries 8 channels of balanced analog line output."
+    },
+    {
+      "name": "Line Out 9-16",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "Actual connector: DB25 (D-sub 25-pin), AES59 pinout, carries channels 9–16 of balanced analog line output."
+    },
+    {
+      "name": "AES3 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR3; AES3/EBU digital stereo input; also accepts DARS; switchable with analogue channels 15–16 at quad sample rates."
+    },
+    {
+      "name": "AES3 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR3; AES3/EBU digital stereo output."
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75Ω BNC word clock input with switchable termination."
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75Ω BNC word clock output."
+    },
+    {
+      "name": "Network Primary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik NE8FBH etherCON locking connector; Dante primary network; backward-compatible with standard RJ45."
+    },
+    {
+      "name": "Network Secondary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik NE8FBH etherCON locking connector; Dante secondary/redundant network; backward-compatible with standard RJ45."
+    },
+    {
+      "name": "AC In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with retaining clip; PSU 1 of dual redundant power supplies."
+    },
+    {
+      "name": "AC In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with retaining clip; PSU 2 of dual redundant power supplies."
+    }
+  ]
+}

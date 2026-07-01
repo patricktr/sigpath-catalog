@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Countryman",
+  "model": "E6 Earset",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://countryman.com/product/e6-earset/",
+  "confidence": "medium",
+  "notes": "The E6 is a miniature earset microphone sold in many variants — polar pattern (omni/directional), sensitivity (W5/W6/W7), cable diameter (1mm/2mm), boom style (classic/i/Flex), color, and transmitter-end connector. It has exactly one physical connection: the detachable snap-fit cable carrying the audio signal and bias power. No separate power port. Connector type depends on the wireless system: TA4F (Shure/Beyerdynamic), 3.5mm locking mini (Sennheiser/Sony), LEMO 3-pin, Hirose 4-pin (Audio-Technica), TA3F (AKG). TA4F is not in the connector list; trs-3.5 represents the 3.5mm locking variant only. Specs: frequency response 20Hz–20kHz (omni) or 30Hz–15kHz (directional); operating voltage 1–2V; operating current 500µA; weight 0.07oz (2g).",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Detachable snap-fit cable; transmitter-end connector varies by variant: 3.5mm locking mini (Sennheiser), TA4F 4-pin mini (Shure/Beyerdynamic — no exact match in connector list), LEMO 3-pin (Shure/Sennheiser/Zaxcom/Wisycom), Hirose 4-pin (Audio-Technica), TA3F (AKG). trs-3.5 used as closest match for the 3.5mm locking variant; TA4F is a proprietary 4-pin mini connector not in the connector list. Power (1–2V, 500µA bias) is supplied through this same cable from the wireless transmitter — no separate power port exists."
+    }
+  ]
+}

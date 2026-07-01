@@ -1,0 +1,110 @@
+{
+  "manufacturer": "QSC / Q-SYS",
+  "model": "Core 110f",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://help.qsys.com/Content/Hardware/Processing/Core_110f.htm",
+  "confidence": "medium",
+  "notes": "Source is the official Q-SYS Help documentation (help.qsys.com), corroborated by the QSC A&E specifications text file. The Core 110f has two hardware revisions: the original and v2. The v2 removes the front-panel OLED display, the 16-channel GPIO input/output euroblock connectors, the 12VDC output euroblock, and reduces front USB-A ports — leaving only the audio, RS232, HDMI, RJ11, dual RJ45, USB-B device, and rear USB-A host ports. The GPIO ports listed here are present on the original Core 110f only. The Tel Line port uses an RJ11 (6P2C) connector — mapped to 'rj45' as the closest available enum. HDMI is a standard output connector used solely for boot/diagnostic display; version not specified in any official documentation. USB speed grades not specified in official docs (USB 2.0 assumed for audio bridging use case but not confirmed). Euroblock audio connectors are 3.5mm pitch terminal blocks, not 3.5mm TRS jacks.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1–8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8 channels; 3-position, 3.5mm pitch euroblock (orange); balanced/unbalanced; phantom power supported"
+    },
+    {
+      "name": "Line Out 1–8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 channels; 3-position, 3.5mm pitch euroblock (green); balanced/unbalanced"
+    },
+    {
+      "name": "Flex 1–8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "8 channels; 3-position, 3.5mm pitch euroblock (blue); software-configurable as input or output in any combination; phantom power on inputs"
+    },
+    {
+      "name": "GPIO In 1–16",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "16 channels; 10-position, 3.5mm pitch euroblock (black); 0–24V analog input or contact closure; present on original Core 110f only — removed in v2 revision"
+    },
+    {
+      "name": "GPIO Out 1–16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "16 channels; 10-position, 3.5mm pitch euroblock (black); open collector 24V, 0.2A max; present on original Core 110f only — removed in v2 revision"
+    },
+    {
+      "name": "12VDC Out",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "10-position euroblock (black); 12VDC, 0.2A max per channel; present on original Core 110f only — removed in v2 revision"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin, 5mm pitch euroblock; RS-232 transmit and receive for legacy control"
+    },
+    {
+      "name": "HDMI Video Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Standard HDMI; used for diagnostics/boot-process display only — not a general video output; HDMI version not specified in documentation"
+    },
+    {
+      "name": "Tel Line",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ11 6P2C connector for POTS (Plain Old Telephone Service) telephony; closest enum is rj45 — actual connector is RJ11/6P2C"
+    },
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Q-LAN network connection; 1000 Mbps only"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary/redundancy Q-LAN network connection; 1000 Mbps only"
+    },
+    {
+      "name": "USB-A Host (Front) 1–2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "2× USB Type-A host ports on front panel"
+    },
+    {
+      "name": "USB-A Host (Rear) 1–4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "4× USB Type-A host ports on rear panel; marked 'for future use' in early documentation"
+    },
+    {
+      "name": "USB-B Device",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "1× USB Type-B device port; provides AV-to-USB bridging (up to 16×16 audio + video); reduces networked audio channel count when active"
+    },
+    {
+      "name": "Aux Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin, 5mm pitch euroblock; 12VDC, 10A auxiliary/redundant power input"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; 100–240V ~50/60 Hz, 150W max; internal universal power supply"
+    }
+  ]
+}

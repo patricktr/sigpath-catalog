@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Sony",
+  "model": "BRC-X1000",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.manualslib.com/manual/1217199/Sony-Brc-X1000.html",
+  "confidence": "medium",
+  "notes": "Source is the Sony BRC-X1000 operating instructions manual (ManualsLib). The Sony Pro product page (pro.sony/ue_US) returned HTTP 403. Key uncertainties: (1) HDMI grade listed as hdmi-2.0 — the spec does not state an HDMI version explicitly; inferred from 4K 30p capability which requires at minimum HDMI 1.4 but hdmi-2.0 is more likely given the bandwidth. (2) LAN Ethernet speed grade inferred as eth-100m based on typical BRC-series spec; not explicitly confirmed in retrieved text. (3) VISCA RS-422 uses a proprietary 8-pin terminal board connector supplied with the camera (not a standard RJ45 jack directly on the body); mapped to 'euroblock' as the closest match in the connector list. (4) The camera has exactly 4 SDI BNC outputs total: MONITOR OUT x2 and LINE OUT x2, which operate as dual-link 3G-SDI pairs in 4K mode or independent 3G-SDI outputs in HD mode. There is no dedicated analog audio output — audio is embedded in SDI and HDMI only. PoE+ power via LAN is an alternative to the DC barrel; both are listed.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A connector x1. Outputs 4K or HD depending on SYSTEM SELECT switch position."
+    },
+    {
+      "name": "MONITOR OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC 3G-SDI. In 4K mode, MONITOR OUT 1 and 2 carry dual-link 3G-SDI (2SI). In HD mode, carries a single 3G-SDI stream."
+    },
+    {
+      "name": "MONITOR OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC 3G-SDI. Second connector of the MONITOR OUT dual-link pair."
+    },
+    {
+      "name": "LINE OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC 3G-SDI video output (not audio). Second pair of SDI outputs. Dual-link in 4K mode."
+    },
+    {
+      "name": "LINE OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC 3G-SDI video output. Second connector of the LINE OUT dual-link pair."
+    },
+    {
+      "name": "EXT SYNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock/external sync input. BNC, 75 ohm, accepts HD tri-level sync or SD black burst."
+    },
+    {
+      "name": "VISCA RS-422 IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8-pin terminal board connector (supplied with camera). Accepts RS-422 VISCA control from remote controller. Manual recommends Cat 5e or higher STP cable."
+    },
+    {
+      "name": "VISCA RS-422 OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin terminal board connector (supplied). Daisy-chain RS-422 VISCA to next camera. Supports up to 1.2 km cable runs."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "IEEE 802.3at PoE+ compatible. Used for VISCA over IP control, network streaming, and PoE+ power input. Exact Ethernet speed grade (100M vs 1G) not explicitly confirmed in sources reviewed; eth-100m inferred from typical BRC-X1000 spec references."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "IEC60130-10 (JEITA standard RC-5320A) TYPE4 barrel connector. Accepts 10.8 V to 13.2 V DC (nominally 12 V DC). Power consumption max 21.5 W. AC adapter not supplied."
+    }
+  ]
+}

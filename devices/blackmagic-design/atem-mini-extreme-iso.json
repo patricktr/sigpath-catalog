@@ -1,0 +1,126 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM Mini Extreme ISO",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1625669-REG/blackmagic_design_atem_extreme_iso_switchter.html/specs",
+  "confidence": "medium",
+  "notes": "This is the original ATEM Mini Extreme ISO (SKU: SWATEMMINICEXTISO, introduced February 2021), distinct from the 2025 G2 variant. Key differences vs. G2: 2 HDMI outputs (G2 has 3), 3.5mm TRS audio inputs (G2 has XLR combo), single 1G Ethernet (G2 has dual 1G+10G), no Thunderbolt (G2 has Thunderbolt), no CFexpress slot (G2 only), no MADI/BNC (G2 only). HDMI input/output grade inferred as HDMI 1.4 based on max resolution support (up to 1080p60). USB grade is USB 5Gbps (USB 3.1 Gen 1) per spec. HDMI output rear-panel silk-screen labeling could not be confirmed from authoritative source; procam.com and avlfx.com are secondary retail sources. B&H source URL returned 403 at time of research; best available secondary sources used. Headphone output listed as trs-3.5 (some sources note TRRS, but connector body is standard 3.5mm).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, 10-bit HD switchable, 2-ch embedded audio"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Program/AUX output, selectable via front panel to show Program or MultiView"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Program/AUX output, selectable via front panel to show Program or MultiView"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo analog audio input"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo analog audio input"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS headphone output"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB-C 3.1 Gen 1; external drive recording, webcam out, software control"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB-C 3.1 Gen 1; external drive recording, software updates, panel connection"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BaseT; streaming, software control, ATEM Software Control panel connection"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input; external locking DC power supply included with international adapter set"
+    }
+  ]
+}

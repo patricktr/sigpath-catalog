@@ -1,0 +1,32 @@
+{
+  "manufacturer": "AMX",
+  "model": "MXT-1000",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.manualslib.com/manual/724504/Amx-Mxt-1000.html",
+  "confidence": "medium",
+  "notes": "The MXT-1000 is powered exclusively via PoE (802.3af, Class 3) through its single RJ-45 port — there is no separate power inlet. The AMX manufacturer product page (amx.com/en-US/products/mxt-1000) returned HTTP 403, so specifications were drawn from the ManualsLib operation/reference manual (44 pages). The manual overview explicitly states '3 USB host 2.0, Type A ports and 1 Micro-USB device port'; the connector-location section (page 12) describes 'two USB ports for peripherals' on the rear right corner. The entry uses the specification-table count of 3. The Micro-USB port is labeled as a device/output port for camera video and microphone data. Internal components (HD 720P camera, built-in microphone, built-in 2W speaker, NFC transceiver) have no external connector ports. No RS-232, IR, audio jacks, or other physical connectors are present. The MXT-1000-NC variant omits camera, microphone, and NFC. This is a desktop tabletop unit, not rack-mountable.",
+  "ports": [
+    {
+      "name": "Ethernet / PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Base-T; also delivers PoE 802.3af Class 3 power (up to 8 W max)"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "3x USB 2.0 Type-A host ports for peripherals (keyboard, mouse) and firmware updates; the manual overview states '3 USB host 2.0, Type A ports,' though the connector-location section (page 12) describes two rear-accessible USB ports for peripherals"
+    },
+    {
+      "name": "Micro-USB",
+      "direction": "output",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "5-pin Micro-USB device port; used for external camera video output (landscape only) and microphone audio output"
+    }
+  ]
+}

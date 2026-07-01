@@ -1,0 +1,17 @@
+{
+  "manufacturer": "DPA Microphones",
+  "model": "DPA 4099",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.dpamicrophones.com/document-portal/manual/product/4099/variant/29/",
+  "confidence": "medium",
+  "notes": "The DPA 4099 CORE+ uses DPA's proprietary MicroLock connector (upgraded from the older MicroDot connector on pre-CORE+ versions). This single connector carries both the audio signal output and receives power. Power is supplied externally via an adapter: the DAD9099 or DAD9001 adapter converts MicroLock to a balanced 3-pin XLR and provides P48 phantom power (also works from 12V minimum); a wireless adapter provides 5–10V. There is no standalone power inlet. The MicroLock connector has no equivalent in the standard connector list — trs-3.5 is used as the closest approximation. Backwards compatible with older MicroDot accessories. Confidence is medium because MicroLock is proprietary and the spec page did not fully enumerate connector pinout details.",
+  "ports": [
+    {
+      "name": "MicroLock Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "DPA proprietary MicroLock connector — a locking miniature connector used for both signal output and power input (phantom power 5–10V from wireless adapter, or P48 via DAD9099/DAD9001 XLR adapter). No direct match in connector list; trs-3.5 is the closest size approximation. Supercardioid output, 30–40Ω impedance."
+    }
+  ]
+}

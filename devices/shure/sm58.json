@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "SM58",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.markertek.com/product/sm58-10/shure-sm58-cn-handheld-dynamic-cardioid-microphone-with-25-foot-xlr-cable",
+  "confidence": "high",
+  "notes": "Passive dynamic microphone — no power input of any kind (no phantom power required, no battery, no external power supply). The SM58 has exactly one physical connector: a 3-pin male XLR output. Specs confirmed across Shure official documentation (pubs.shure.com user guide) and Markertek retailer listing. No rack-mount form factor.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin male XLR professional audio connector; balanced output; rated impedance 150Ω (300Ω actual); sensitivity -54.5 dBV/Pa (1.85 mV) at 1 kHz"
+    }
+  ]
+}

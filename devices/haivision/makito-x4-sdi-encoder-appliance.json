@@ -1,0 +1,58 @@
+{
+  "manufacturer": "Haivision",
+  "model": "Makito X4 SDI Encoder Appliance",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://doc.haivision.com/MakitoX4Enc/1.6/audio-video-interface-specifications",
+  "confidence": "high",
+  "notes": "This entry covers the standard Makito X4 SDI Encoder Appliance (model S-MX4E-SDI4 / quad-channel). The Makito X4 is a blade-based product; the appliance wraps one blade in a single-height desktop chassis. Audio is entirely embedded within SDI — there are no discrete analog audio connectors on the standard appliance. The Makito X4 Rugged variant (S-MX4E-R-SDI4-ISR) has a different connector set: waterproof BNC video inputs, a 20-pin Hirose audio/serial connector (2 analog audio inputs, 1 audio output, RS-232/RS-422 serial), two 12-pin Hirose Ethernet connectors, and a 4-pin Hirose 28 VDC power connector. A separate Makito X4 Decoder appliance exists with four HD-BNC outputs (up to 12G-SDI) and the same Ethernet/SFP+/power arrangement. The HD-BNC connectors are physically DIN 1.0/2.3 mini-BNC; 'bnc' was used as the closest available enum. The Conxall 3-pin power connector is mapped to 'dc-barrel' as the closest enum. The SFP+ port was marked 'future use' in documentation versions 1.1–1.6 for ST 2110 support. The appliance is not rack-mountable on its own; it slots into MB6 (1RU, 6-blade) or MB21 (4RU, 21-blade) rack chassis.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC (DIN 1.0/2.3 mini-BNC) connector; supports SD-SDI, HD-SDI, 3G-SDI, 6G-SDI, and 12G-SDI (UHD/4K). Only this port supports 6G/12G-SDI. Shipped with HD-BNC-to-BNC adapter. Connector enum 'bnc' chosen as closest; actual connector is HD-BNC."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-BNC (DIN 1.0/2.3 mini-BNC) connector; supports SD-SDI, HD-SDI, and 3G-SDI. Maximum 3G-SDI. Connector enum 'bnc' chosen as closest; actual connector is HD-BNC."
+    },
+    {
+      "name": "SDI 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-BNC (DIN 1.0/2.3 mini-BNC) connector; supports SD-SDI, HD-SDI, and 3G-SDI. Maximum 3G-SDI. Connector enum 'bnc' chosen as closest; actual connector is HD-BNC."
+    },
+    {
+      "name": "SDI 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-BNC (DIN 1.0/2.3 mini-BNC) connector; supports SD-SDI, HD-SDI, and 3G-SDI. Maximum 3G-SDI. Connector enum 'bnc' chosen as closest; actual connector is HD-BNC."
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single Ethernet 10/100/1000 Base-T, auto-detect, half/full-duplex. Used for both streaming output and management."
+    },
+    {
+      "name": "SFP+",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10GbE SFP+ expansion port. Labeled 'future use' in documentation at time of publication; intended for ST 2110 input support. May accept optical or copper SFP+ modules."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 VDC, 18 W. Proprietary Conxall 3-pin circular connector (on-unit: Conxall P/N 17282-3PG-300; mating: 16282-3SG-318). 'dc-barrel' is the closest enum; actual connector is a 3-pin Conxall circular locking connector, not a standard barrel."
+    }
+  ]
+}

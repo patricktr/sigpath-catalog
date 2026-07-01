@@ -1,0 +1,37 @@
+{
+  "manufacturer": "RØDE",
+  "model": "Wireless GO II",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://rode.com/en-us/user-guides/wireless-go-ii",
+  "confidence": "medium",
+  "notes": "The Wireless GO II is a 2-TX + 1-RX dual-channel wireless microphone system. Each of the two TX transmitters has a 3.5mm TRS input for external mics (with plug-in power) and a USB-C port for charging/firmware. The RX receiver has a 3.5mm TRS analog output and a USB-C port that doubles as a 24-bit/48kHz digital audio interface output and charging port. All USB-C ports charge via supplied USB-C cables; no separate DC barrel or IEC power connector is present. USB grade listed as usb-2.0 (sufficient for USB audio; exact USB version not explicitly stated in spec sheet but standard for this class of device). The transmitter 3.5mm is confirmed TRS (not TRRS).",
+  "ports": [
+    {
+      "name": "3.5mm Input (TX)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "On each transmitter unit. Accepts external lavalier or microphone with plug-in power. TRS connector."
+    },
+    {
+      "name": "USB-C (TX)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "On each transmitter unit. Used for charging and firmware updates via RØDE Central."
+    },
+    {
+      "name": "3.5mm Output (RX)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "On receiver unit. Analog stereo/dual-mono output to camera or recording device."
+    },
+    {
+      "name": "USB-C (RX)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "On receiver unit. Provides digital audio (24-bit/48kHz USB audio interface) to computers and mobile devices, and also charges the unit."
+    }
+  ]
+}

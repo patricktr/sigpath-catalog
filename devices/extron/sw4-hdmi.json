@@ -1,0 +1,64 @@
+{
+  "manufacturer": "Extron",
+  "model": "SW4 HDMI",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.manualslib.com/manual/1337372/Extron-Electronics-Sw4.html",
+  "confidence": "medium",
+  "notes": "Source is ManualsLib (secondary) — Extron's own product page blocked automated access. The SW4 HDMI uses HDMI 1.3 (6.75 Gbps max, 165 MHz pixel clock, 1080p/60 max); hdmi-1.4 is used as the closest available grade since hdmi-1.3 is not in the schema. The front-panel Config port is labeled 'mini Type B USB' in the manual — mapped to usb-micro as the closest connector id (usb-b is full-size; the actual port is mini-B, a distinct form factor not in the schema). Power connector is a 2-pole euroblock-dc captive screw on the device; the wall adapter is an external 12 VDC supply. No RJ45/Ethernet on this original SW4 HDMI model (that was added in the later SW HD 4K PLUS series).",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A female; max data rate 6.75 Gbps (HDMI 1.3 spec); hdmi-1.4 is the closest available grade"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A female; max data rate 6.75 Gbps (HDMI 1.3 spec)"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A female; max data rate 6.75 Gbps (HDMI 1.3 spec)"
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A female; max data rate 6.75 Gbps (HDMI 1.3 spec)"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A female; max data rate 6.75 Gbps (HDMI 1.3 spec)"
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pole 3.5mm captive screw connector; RS-232 (Tx, Rx, GND) and auto-input switching (pins 4-5 short); 9600 baud, 8N1"
+    },
+    {
+      "name": "Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Mini Type B USB on front panel; used for SIS command configuration and firmware updates; manual states 'mini Type B'"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pole 3.5mm captive screw connector; accepts 12 VDC, 1 A from included external power supply (100-240 VAC to 12 VDC)"
+    }
+  ]
+}

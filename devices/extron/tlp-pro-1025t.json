@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Extron",
+  "model": "TLP Pro 1025T",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://mlvteknologi.com/product/tlp-pro-1025t-10-tabletop-touchlink-pro-touchpanel/",
+  "confidence": "medium",
+  "notes": "The Extron.com product page and official datasheet PDF (TLP_Pro_1025T_6090-D6.pdf) returned bot-protection errors and could not be fetched directly. Specifications confirmed via multiple secondary sources (mlvteknologi.com, creationnetworks.net, manual-hub.com, usermanuals.au) that reproduce the official spec sheet data. The device is powered exclusively via PoE (802.3af, class 3) through the RJ-45 port — there is no separate DC barrel or IEC power inlet on the base unit. The built-in speaker is internal with no external audio connector. Serial ports, IR output, relay outputs, and digital input are only available via the optional TLCA 1 TouchLink Control Port Expansion Adapter, not built into this device. Ethernet grade eth-1g confirmed from \"10/100/1000Base-T\" spec. USB grade usb-2.0 confirmed from spec listing USB 2.0 high-speed (480 Mbps) Type-A receptacle.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T, half/full duplex with autodetect; also serves as PoE power input (802.3af, class 3)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A receptacle, high-speed (480 Mbps); provides 5 VDC at 275 mA to connected devices"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "manufacturer": "Extreme Networks",
+  "model": "X435-8P-2T-W",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.netsolutionstore.com/x435-8.asp",
+  "confidence": "high",
+  "notes": "The X435-8P-2T-W has no AC power inlet — it is powered entirely via IEEE 802.3bt Type 4 PoE over its two RJ45 uplink ports (up to 90W each, 100W total PoE budget downstream). The uplinks are labeled as 10/100/1000BASE-T; 2.5G uplink support is noted as a future capability in some documentation. The console port uses RJ45 with RS-232 signaling (standard Extreme Networks console pinout). Port speeds confirmed as 1G max; grade eth-1g applied. No SFP ports on this -2T (copper uplink) variant — the -2X variant has SFP uplinks instead. The -W suffix indicates wireless management capability (ExtremeCloud IQ). Confirmed via Extreme Networks official documentation and netsolutionstore specs.",
+  "ports": [
+    {
+      "name": "Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T PoE+ (802.3at, up to 30W output)"
+    },
+    {
+      "name": "Uplink 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T 802.3bt Type 4 PoE PD input (up to 90W); powers the switch; also carries data"
+    },
+    {
+      "name": "Uplink 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T 802.3bt Type 4 PoE PD input (up to 90W); powers the switch; also carries data"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 serial console/management port (RS-232 signaling over RJ45)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A port for external flash storage"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "HA5-Plus",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/products/ha5-plus",
+  "confidence": "medium",
+  "notes": "Source is the official AJA product page (aja.com/products/ha5-plus) and ManualsLib page 16 specs (manualslib.com/manual/746562/Aja-Ha5-Plus.html). HDMI v1.4 and 3G-SDI grade confirmed from official page. Two RCA analog audio inputs confirmed. USB connector sub-type (Mini-B vs Micro-B) was not explicitly stated in any available documentation; Micro-B noted as most likely for this product generation but should be verified physically. Power connector described as \"locking DC barrel\" in AJA documentation — exact barrel diameter not specified. Confidence is medium due to USB connector sub-type uncertainty.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Equalized input, supports runs up to 30m with 24 AWG cable. Does not pass HDCP-protected content."
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD/SD-SDI, SMPTE-259/292/296/424/425, Level A or B Dual Link mapping; also operates at 1.5G and 270 Mb/s SD rates."
+    },
+    {
+      "name": "Analog Audio In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced, -10 dBu nominal. One of two RCA analog audio inputs (2-channel stereo pair) for embedding into SDI output."
+    },
+    {
+      "name": "Analog Audio In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced, -10 dBu nominal. One of two RCA analog audio inputs (2-channel stereo pair) for embedding into SDI output."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Used for device configuration via AJA MiniConfig software on Mac or PC. Exact USB sub-type (Mini-B vs Micro-B) not explicitly stated in available specs; USB Micro-B is the most common on AJA mini-converters of this era but could be Mini-B — verify physically."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC barrel connector; +5V DC regulated, 3W. Powered by included AJA DWP-U-R1 universal supply (100–240V, 50/60 Hz). Optional P-TAP cable available for battery/field use."
+    }
+  ]
+}

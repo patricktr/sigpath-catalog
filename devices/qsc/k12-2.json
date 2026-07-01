@@ -1,0 +1,59 @@
+{
+  "manufacturer": "QSC",
+  "model": "K12.2",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.qscaudio.com/solutions-products/loudspeakers/portable/powered/portable-pa/k2-series/k122/",
+  "confidence": "high",
+  "notes": "The K12.2 is a 2000W 2-way 12\" powered portable PA loudspeaker. The power inlet is a standard IEC C14 (mapped to \"iec\") with a proprietary V-Lock locking cord mechanism — not a Neutrik PowerCON. Channel 1 combo jack is Mic/Line selectable; Channel 2 combo jack is Hi-Z/Line selectable. The 3.5mm input is stereo/consumer-level. Loop-thru XLR outputs carry the signal from each corresponding input channel; the Mix Output carries the summed signal from all inputs.",
+  "ports": [
+    {
+      "name": "Ch 1 Mic/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR-F / 1/4\" TRS; Mic or Line level selectable"
+    },
+    {
+      "name": "Ch 2 Hi-Z/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR-F / 1/4\" TRS; Hi-Z (instrument) or Line level selectable"
+    },
+    {
+      "name": "Stereo In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo auxiliary input for phones/computers/MP3 players"
+    },
+    {
+      "name": "Ch 1 Loop Thru Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-M pass-through of Channel 1 input signal"
+    },
+    {
+      "name": "Ch 2 Loop Thru Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-M pass-through of Channel 2 input signal"
+    },
+    {
+      "name": "Mix Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-M line-level output of the mixed signal from all inputs"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC C14 inlet; locking feature requires QSC V-Lock power cord; standard IEC cord also works"
+    }
+  ]
+}

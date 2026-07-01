@@ -1,0 +1,63 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Studio Camera 4K Plus G2",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.ggvideo.com/bm/studiocamera4kplusg2_specs.pdf",
+  "confidence": "high",
+  "notes": "Source is the official Blackmagic Design product technical specifications PDF (7 pages). The 4K Plus G2 (W-CST-13) is the mid-tier model — it lacks the XLR audio inputs, 10GbE RJ45, and 4-pin XLR DC input found on the 4K Pro G2. SDI grade confirmed as 12G (supports 1.5G/3G/6G/12G). USB-C confirmed as 3.1 Gen 1 = 5Gb/s. Power input is a locking 5.5mm DC barrel connector. The 3.5mm Headphone jack is TRRS (supports mic) but is functionally an output; the 3.5mm Mic In is a stereo TRS input that doubles as timecode input.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "1.5G/3G/6G/12G-SDI; carries program return, talkback (ch15/16), camera control, and timecode"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "1.5G/3G/6G/12G-SDI; embeds 2 channels program audio plus 2 talkback channels on 15 and 16"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "3.5mm Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo analog input; can also be used for Timecode input"
+    },
+    {
+      "name": "3.5mm Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS mini jack for headphones with mic"
+    },
+    {
+      "name": "USB-C Expansion Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1 (5Gb/s); used for external media recording (Blackmagic RAW), focus/zoom demand, and USB Ethernet (Camera Control REST API/software updates)"
+    },
+    {
+      "name": "USB-C Expansion Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1 (5Gb/s); used for external media recording (Blackmagic RAW), focus/zoom demand"
+    },
+    {
+      "name": "12V DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC 60W locking 5.5mm barrel connector (5525 style)"
+    }
+  ]
+}

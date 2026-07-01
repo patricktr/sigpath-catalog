@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Extron",
+  "model": "IPL Pro CR88",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/IPL_Pro_CR88_5628-D6.pdf",
+  "confidence": "high",
+  "notes": "Ports derived directly from the official Extron specification sheet (5628-D6, revised 2022). The IPL Pro CR88 has no RS-232, USB, IR, or audio ports — it is exclusively a contact-closure-input/relay-output control processor. The two contact input connectors are 5-pole 3.5mm captive screw blocks (4 inputs + 1 ground each); the four relay connectors are 4-pole 3.5mm captive screw blocks (2 relays + 2 grounds each). The power connector physical form is confirmed as a DC barrel jack by Extron IPL Pro series documentation; exact barrel dimensions (likely 2.1mm) not explicitly stated in the spec sheet. The device is 1U-high quarter-rack-wide and rack-mountable with optional shelf accessory. PoE (802.3af class 3) via the LAN port eliminates need for the external power supply.",
+  "ports": [
+    {
+      "name": "LAN/PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T with autodetect; also accepts PoE (802.3af class 3) as power source"
+    },
+    {
+      "name": "Contact In 1-4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 5-pole (pins 1-4 = inputs 1-4, pin G = ground); one of two connectors providing 8 total contact closure inputs"
+    },
+    {
+      "name": "Contact In 5-8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 5-pole (pins 1-4 = inputs 5-8, pin G = ground); second of two contact closure connectors"
+    },
+    {
+      "name": "Relay 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 4-pole; one of four relay connectors providing 8 total normally-open relays rated 24 VDC, 1 A"
+    },
+    {
+      "name": "Relay 3-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 4-pole; second relay connector"
+    },
+    {
+      "name": "Relay 5-6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 4-pole; third relay connector"
+    },
+    {
+      "name": "Relay 7-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw, 4-pole; fourth relay connector"
+    },
+    {
+      "name": "12V Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 VDC, 1 A max (12 W); powered by included external 100-240 VAC adapter (output 12 VDC, 0.5 A). Device can also be powered via PoE on LAN port instead."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Samsung",
+  "model": "QM65B",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://bluesquare.digital/samsung-commercial-display-24-7-qmb-series-65.html",
+  "confidence": "medium",
+  "notes": "Specifications aggregated from multiple secondary sources (bluesquare.digital, screenmoove.com, ManualsLib QM43B/QM65B user manual, LDLC.com, manua.ls). Samsung's official DisplaySolutions product page redirects; US business support page lists no specs. HDMI 2.0 and DP 1.2 grades confirmed by multiple retailers. RS232C uses Samsung Ex-Link 3.5mm TRS jacks (confirmed by Samsung RS232 documentation). Ethernet is 10/100 Mbps per manual (Cat7 STP recommended). Power connector is NEMA 5-15 captive cord for US market; other regions may differ. Audio Out and RS232C share the 3.5mm TRS connector form factor but are separate physical ports. DVI input is listed for the broader QM-B product family in some documentation but not confirmed for QM65B specifically — omitted here. Built-in speakers (10W+10W) are present but have no physical external connector.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports ARC (Audio Return Channel)"
+    },
+    {
+      "name": "DP In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Max 0.5A; host port for storage/peripherals"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Max 1.0A; host port for storage/peripherals"
+    },
+    {
+      "name": "RS232C In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Samsung Ex-Link 3.5mm TRS stereo jack; RS-232 serial control via adapter"
+    },
+    {
+      "name": "RS232C Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Samsung Ex-Link 3.5mm TRS stereo jack; daisy-chain RS-232 out via adapter"
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps; Cat7 STP recommended"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir",
+      "note": "IR receiver for remote control"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Internal PSU; AC 100–240V 50/60Hz; captive power cord on US model"
+    }
+  ]
+}

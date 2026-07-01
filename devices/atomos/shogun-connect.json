@@ -1,0 +1,95 @@
+{
+  "manufacturer": "Atomos",
+  "model": "Shogun Connect",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.filmtools.com/atomos-shogun-connect-7-network-connected-hdr-video.html",
+  "confidence": "medium",
+  "notes": "Specifications confirmed across two reputable AV retailers (Filmtools and Precision Camera), which agree exactly. Atomos support pages returned 403, so the authoritative manufacturer spec page could not be directly accessed. The product page at atomos.com now redirects to 'Shogun Ultra' — the Shogun Connect and Shogun Ultra appear to be the same product (ATOMSHGCO1). LANC connector is physically 2.5mm TRS but mapped to trs-3.5 as the closest available type. USB-C speed not confirmed in available sources. The two F-Type connectors are for attaching external Wi-Fi and AirGlu RF antennas, not signal routing. SDI ports are 12G-SDI (supports SD/HD/3G/6G/12G backward compatible). DC barrel voltage range is 6.2–16.8V.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) headphone output"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) analog audio input"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) analog audio output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LANC",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Actually 2.5mm TRS LANC control input; trs-3.5 is the closest available connector type"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Labeled 'Serial' — used for data/control; speed not specified in available sources"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Accepts 6.2–16.8 VDC via barrel connector"
+    },
+    {
+      "name": "Antenna 1",
+      "direction": "bidirectional",
+      "connector": "f-type",
+      "note": "External Wi-Fi 6 antenna connector"
+    },
+    {
+      "name": "Antenna 2",
+      "direction": "bidirectional",
+      "connector": "f-type",
+      "note": "External RF antenna connector for AirGlu wireless SYNC"
+    }
+  ]
+}

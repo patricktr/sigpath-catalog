@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Furman",
+  "model": "CN-2400S",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://furmanpower.com/products/cn-2400s",
+  "confidence": "high",
+  "notes": "Corrections applied per reviewer: (1) rackUnits corrected from 2 to 1 — the CN-2400S is a 1U device per the manufacturer page. (2) AC input plug corrected from NEMA 5-15P to NEMA 5-20P — the unit ships with a captive 10 ft 3/12AWG cord terminating in a NEMA 5-20P plug and is rated 20A. All NEMA 5-20R outlets (unswitched and sequenced rear) use nema-5-15 as the closest available connector enum — this is a known enum limitation, not a factual error. The front convenience outlet is correctly NEMA 5-15R. Confidence raised to high: manufacturer page confirms all port details directly.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 10 ft cord, 3/12AWG, with NEMA 5-20P plug; device is rated 20A internally. nema-5-15 used as closest available connector enum — actual plug is NEMA 5-20P"
+    },
+    {
+      "name": "Unswitched Out 1-2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "2x NEMA 5-20R unswitched outlets (1 duplex) on rear panel; nema-5-15 used as closest available connector enum — actual outlet is NEMA 5-20R"
+    },
+    {
+      "name": "Sequenced Out 1-2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "2x NEMA 5-20R sequenced outlets (1 duplex, relay bank 1) on rear panel; nema-5-15 used as closest available connector enum — actual outlet is NEMA 5-20R"
+    },
+    {
+      "name": "Sequenced Out 3-4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "2x NEMA 5-20R sequenced outlets (1 duplex, relay bank 2) on rear panel; nema-5-15 used as closest available connector enum — actual outlet is NEMA 5-20R"
+    },
+    {
+      "name": "Sequenced Out 5-6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "2x NEMA 5-20R sequenced outlets (1 duplex, relay bank 3) on rear panel; nema-5-15 used as closest available connector enum — actual outlet is NEMA 5-20R"
+    },
+    {
+      "name": "Convenience Out",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "1x NEMA 5-15R unswitched outlet on front panel"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 connector; used for control system integration and optional BlueBOLT IP adaptor (BB-RS232)"
+    },
+    {
+      "name": "SmartSequencing Primary/Secondary",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Phoenix 4-pin screw-terminal connector; current-loop link between units (Primary OUT and Secondary IN)"
+    },
+    {
+      "name": "Remote Terminal",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Phoenix 4-pin screw-terminal connector; pins: +12V, STAT, REM, GND (Class 2 wiring)"
+    },
+    {
+      "name": "Force Off / Delay 3 Terminal",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Phoenix 5-pin screw-terminal connector; provides force-off and delay-3 control"
+    }
+  ]
+}

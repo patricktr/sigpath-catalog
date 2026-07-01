@@ -1,0 +1,111 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "SQ-5",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.allen-heath.com/content/uploads/2023/05/SQ-5-Technical-Datasheet_G.pdf",
+  "confidence": "medium",
+  "notes": "Sources: official Allen & Heath SQ-5 Technical Datasheet PDF and ManualsLib SQ-5 Reference Manual (v1.5.0). The SQ-5 has no 5-pin DIN MIDI — MIDI is exclusively via USB-B and TCP/IP over the network port. The proprietary I/O Port option card slot (for Dante, Waves SoundGrid modules) is omitted as it has no matching standard connector type. ST1 and ST2 are each a pair of 1/4\\\" TRS jacks (L+R); listed individually here. The SQ-5 is a desktop surface mixer; it is not natively rack-mountable without an optional rack kit, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1–16",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR female, fully recallable digitally controlled preamp; 16 sockets"
+    },
+    {
+      "name": "ST1 In L",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS stereo line input, left channel of ST1 pair"
+    },
+    {
+      "name": "ST1 In R",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS stereo line input, right channel of ST1 pair"
+    },
+    {
+      "name": "ST2 In L",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS stereo line input, left channel of ST2 pair"
+    },
+    {
+      "name": "ST2 In R",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS stereo line input, right channel of ST2 pair"
+    },
+    {
+      "name": "ST3 In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo 3.5mm mini jack; for background music source"
+    },
+    {
+      "name": "Line Out 1–12",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR male, 12 fully assignable line-level outputs"
+    },
+    {
+      "name": "Line Out 13",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS jack, assignable line-level output"
+    },
+    {
+      "name": "Line Out 14",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS jack, assignable line-level output"
+    },
+    {
+      "name": "AES Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR male, stereo AES3 digital output; 96kHz default, switchable to 44.1/48/88.2kHz"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS jack on top surface with dedicated level control"
+    },
+    {
+      "name": "SLink",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Neutrik etherCON locking RJ45; digital multichannel audio expansion supporting dSnake (48kHz), DX and gigaACE (96kHz) protocols; up to 64x64 channels"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ45 Fast Ethernet (100 Mbit/s); TCP/IP control, MIDI over TCP/IP, wireless control via router"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B class-compliant audio/MIDI interface; 32x32 channels at 96kHz; also carries MIDI over USB; no 5-pin DIN MIDI ports on this mixer"
+    },
+    {
+      "name": "SQ-Drive",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB-A on front panel; direct multitrack recording/playback to USB drive (16ch@96kHz or 32ch@48kHz)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 mains inlet; 100–240V AC 50/60Hz; 75W consumption (SQ-5)"
+    }
+  ]
+}

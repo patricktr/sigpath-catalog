@@ -1,0 +1,85 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "TF5",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 6,
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/mixers/tf/specs.html",
+  "confidence": "medium",
+  "notes": "The TF5 is a 32-fader (32+1) digital mixing console. Rack-unit figure of 6U is approximate — the unit is not a standard rack-mount console but can be rack-mounted with optional accessories; physical dimensions are 866×225×599mm (WxHxD). The IEC inlet type (C13 vs C14) is inferred from standard practice for this class of console as the spec sheets do not explicitly name the inlet standard — only 'power cord included' is mentioned. Three USB ports total: USB-B (TO HOST, rear), USB-A (TO DEVICE, rear), USB-A (TO DEVICE, top panel). Network grade is eth-100m (100BASE-TX confirmed in specs). The expansion slot accommodates optional cards (e.g., NY64-D for Dante) but has no exposed connector in default configuration and is not listed as a port. Footswitch jack is TS (mono) per FC5 compatibility. Confidence is medium because the power connector type and the precise USB-B vs USB-A designation come from secondary/FAQ sources rather than the primary spec sheet directly.",
+  "ports": [
+    {
+      "name": "INPUT 1–32",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "32 mic/line combo jacks (XLR-3-31 female + TRS 6.35mm), with 48V phantom power and recallable D-PRE preamps"
+    },
+    {
+      "name": "ST IN 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo unbalanced line input pair (L/R RCA)"
+    },
+    {
+      "name": "ST IN 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo unbalanced line input pair (L/R RCA)"
+    },
+    {
+      "name": "OMNI OUT 1–16",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "16 balanced analog outputs, XLR-3-32 male"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output, TRS 6.35mm phone jack"
+    },
+    {
+      "name": "USB TO HOST",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Type-B, rear panel; 34ch x 34ch audio interface to host computer at 48 kHz / 24-bit"
+    },
+    {
+      "name": "USB TO DEVICE (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A, rear panel; for USB storage device recording/playback (2ch) and firmware updates"
+    },
+    {
+      "name": "USB TO DEVICE (top)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A, top panel; for iPad connection or additional USB storage"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "IEEE 802.3 10BASE-T/100BASE-TX; used for TF StageMix iPad control app and network control"
+    },
+    {
+      "name": "FOOT SW",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "TS 6.35mm phone jack for optional FC5 footswitch"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; 100–240V 50/60Hz, 120W; power cord included"
+    }
+  ]
+}

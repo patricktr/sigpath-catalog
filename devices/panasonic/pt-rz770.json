@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "PT-RZ770",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://eu.connect.panasonic.com/gb/en/projectors/pt-rz770",
+  "confidence": "high",
+  "notes": "Specs confirmed from Panasonic Connect EU product page and ManualsLib page 204 spec table. SDI IN supports SD-SDI, HD-SDI, and 3G-SDI (grade sdi-3g). HDMI version not explicitly stated in spec; listed as HDCP/Deep Color compatible — grade hdmi-1.4 is the safe minimum (likely HDMI 1.4). DIGITAL LINK/LAN is a single RJ-45 port supporting HDBaseT plus 100Base-TX Ethernet, Art-Net, PJLink. RGB 1 IN uses 5× BNC connectors (R/Pr/VIDEO, G/Y, B/Pb/C, SYNC/HD, VD) for composite/component/RGB. Power inlet is IEC C13 based on the detachable 3-pin AC power cord described in the manual for an 825W projector — not explicitly labeled as C13 in the retrieved spec pages. No USB ports. Discontinued August 2021.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 19-pin, HDCP compatible, Deep Color compatible. HDMI version not explicitly stated; grade inferred as 1.4 minimum."
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D 24-pin single link, DVI 1.0 compliant, HDCP compatible."
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC x1, SD-SDI / HD-SDI / 3G-SDI compliant. PT-RZ770 and PT-RZ660 only."
+    },
+    {
+      "name": "RGB 1 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC x5 (R/Pr/VIDEO, G/Y, B/Pb/C, SYNC/HD, VD). Accepts RGB, YPbPr/YCbCr, Y/C, and composite video signals."
+    },
+    {
+      "name": "RGB 2 IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "D-sub HD 15-pin female. Accepts RGB, YPbPr/YCbCr, SYNC/HD/VD signals."
+    },
+    {
+      "name": "DIGITAL LINK/LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Single RJ-45 port. Supports HDBaseT (uncompressed HD video + control over CAT5e/6 STP), 100Base-TX Ethernet, Art-Net, PJLink Class 1, HDCP, Deep Color."
+    },
+    {
+      "name": "SERIAL/MULTI PROJECTOR SYNC IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female. RS-232C compliant. Used for serial control and multi-projector sync (contrast balance / shutter sync)."
+    },
+    {
+      "name": "SERIAL/MULTI PROJECTOR SYNC OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "D-sub 9-pin male. RS-232C compliant. Daisy-chain output for multi-projector sync."
+    },
+    {
+      "name": "REMOTE 2 IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female. Contact/parallel external control input."
+    },
+    {
+      "name": "REMOTE 1 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini jack. Wired remote control input."
+    },
+    {
+      "name": "REMOTE 1 OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini jack. Wired remote link output for projector chaining."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13 inlet. Detachable 3-pin grounding AC power cord, 100–240 V, 50/60 Hz, 825 W. Supplied cord is 3.0 m. IEC C13 inferred from power class and cord description; not explicitly labeled in retrieved spec pages."
+    }
+  ]
+}

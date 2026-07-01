@@ -1,0 +1,58 @@
+{
+  "manufacturer": "HPE Aruba",
+  "model": "2930F 48G PoE+ 4SFP Switch (JL262A)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.securewirelessworks.com/jl262a.asp",
+  "confidence": "medium",
+  "notes": "The product name \"2930F-48G-PoE+\" refers to the JL262A (4x 1G SFP uplinks). A closely related model, JL256A (2930F-48G-PoE+ 4SFP+), has 4x SFP+ 10G uplinks instead. No USB-A port is listed in any specification source for either model. The IEC C14 inlet type is inferred from the compatible power cord (NEMA 5-15P to C13), which confirms a C14 device inlet — standard for 1U switches in this class. The console port is a dual-personality RJ-45/USB micro-B combo. SFP ports listed individually as 4 separate entries; labeled on-device as SFP 49–52 in some documentation. Source is a reputable reseller spec page; HPE official store page returned 403.",
+  "ports": [
+    {
+      "name": "Ports 1–48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x autosensing 10/100/1000BASE-T PoE+ (IEEE 802.3at) ports"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP uplink (PHY-less)"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP uplink (PHY-less)"
+    },
+    {
+      "name": "SFP 3",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP uplink (PHY-less)"
+    },
+    {
+      "name": "SFP 4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP uplink (PHY-less)"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "usb-micro"
+      ],
+      "note": "Dual-personality serial console port (RJ-45 or USB micro-B)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; ships with NEMA 5-15P to C13 power cord (100–240 VAC, 50/60 Hz)"
+    }
+  ]
+}

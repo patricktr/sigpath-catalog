@@ -1,0 +1,170 @@
+{
+  "manufacturer": "AMX",
+  "model": "NX-3200",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.farralane.com/amx-nx-3200-netlinx-nx-integrated-controller-with-8-digital-i-o-6-rs232-8-ir-serial-output-and-8-relay-ports.html",
+  "confidence": "high",
+  "notes": "Power input is a 3.5mm Phoenix/euroblock screw terminal connector (9–18 VDC, 400 mA @ 12 VDC, 6.6 W typical) — mapped to euroblock-dc as the closest connector type; no IEC mains inlet (requires external DC power supply). All serial, relay, IR, I/O, and AxLink ports use 3.5mm euroblock screw terminals. The 2 RS-232/422/485 ports (Ports 1 & 5) are 10-position euroblock; the 6 RS-232-only ports (Ports 2–4, 6–8) are 5-position euroblock. IR/Serial ports are 2-position euroblock. AxLink ports are 4-position euroblock. Relay ports use 8-position euroblock. Digital I/O uses 10-position euroblock. Ethernet ports are 10/100Base-T only (eth-100m). USB-B is the front programming port; two USB-A host ports (one front, one rear) support mass storage and firmware. An 8 GB SDHC card slot is also present (not a signal port, omitted). Confirmed 1U rack-mount form factor (1.75\" × 17\" × 9.13\").",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Primary network port for data network / external communications; supports IPv4, IPv6, 802.1X, auto MDI/MDI-X"
+    },
+    {
+      "name": "ICSLan",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Isolated AV network port for AMX and third-party AV devices; supports IPv4, IPv6, auto MDI/MDI-X"
+    },
+    {
+      "name": "RS-232/422/485 Port 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "10-position 3.5mm screw terminal; supports RS-232, RS-422, RS-485; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232/422/485 Port 5",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "10-position 3.5mm screw terminal; supports RS-232, RS-422, RS-485; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 6",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 7",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "RS-232 Port 8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw terminal; RS-232 only; 300–115,200 baud; XON/XOFF and CTS/RTS"
+    },
+    {
+      "name": "IR/Serial Port 11",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 12",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 13",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 14",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 15",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 17",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "IR/Serial Port 18",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal; IR transmit / 1-way serial; up to 1.142 MHz carrier"
+    },
+    {
+      "name": "Relay Port 21",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-position 3.5mm screw terminal; 8 SPST relays; each switches up to 24 VDC or 28 VAC @ 1 A"
+    },
+    {
+      "name": "Digital I/O Port 22",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "10-position 3.5mm screw terminal; 8-channel binary I/O"
+    },
+    {
+      "name": "AxLink 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position 3.5mm screw terminal; provides data and power to AxLink devices"
+    },
+    {
+      "name": "AxLink 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position 3.5mm screw terminal; provides data and power to AxLink devices"
+    },
+    {
+      "name": "Program Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel USB Standard-B programming port"
+    },
+    {
+      "name": "USB Host (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB Type-A host port; for mass storage, firmware updates, configuration files"
+    },
+    {
+      "name": "USB Host (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB Type-A host port; for mass storage, firmware updates, configuration files"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "3.5mm Phoenix screw terminal; 9–18 VDC input, 400 mA @ 12 VDC nominal (6.6 W typical); requires external DC power supply (not included)"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "manufacturer": "Atlona",
+  "model": "AT-HDR-EX-100CEA-KIT",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://atlona.com/product/at-hdr-ex-100cea-kit/",
+  "confidence": "medium",
+  "notes": "This is a TX/RX extender kit comprising two separate units: AT-HDR-EX-100CEA-TX (transmitter) and AT-HDR-EX-100CEA-RX (receiver). The HDMI ports are HDMI 2.0b (graded as hdmi-2.0). The UTILITY ports are physically Mini-USB (5-pin mini-A); the schema lacks a mini-usb entry so usb-micro is used as the closest match. The RS-232 and IR signals share a single captive screw (euroblock) connector on each unit (5-pin on TX, 6-pin on RX). The receiver has no separate power connector — it is powered over HDBaseT via PoE from the transmitter. The transmitter DC power input is a 2-pin captive screw terminal (euroblock-dc) fed by the included external 48V supply. LAN pass-through speed is 100 Mbps (HDBaseT limitation). The kit uses visually lossless compression for 4K/60 4:4:4 HDR extension over 100 m Cat6/6A.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "On transmitter unit (AT-HDR-EX-100CEA-TX). HDMI 2.0b spec, HDCP 2.2, 18 Gbps, 4K/UHD 60Hz 4:4:4, HDR10/Dolby Vision."
+    },
+    {
+      "name": "HDBaseT OUT",
+      "direction": "output",
+      "connector": "hdbaset",
+      "note": "On transmitter unit. RJ45 connector carrying HDBaseT signal (video, audio, Ethernet, control, PoE) up to 100 m over Cat6/6A."
+    },
+    {
+      "name": "OPTICAL OUT",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "On transmitter unit. Return audio output from receiver (ARC path from display back to TX side)."
+    },
+    {
+      "name": "RS-232 / IR",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "On transmitter unit. 5-pin captive screw (euroblock) carrying both RS-232 serial and IR control signals."
+    },
+    {
+      "name": "UTILITY",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "On transmitter unit. Listed as Mini-USB (5-pin); closest match in schema is usb-micro. Used for firmware updates."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "On transmitter unit. 100 Mbps Ethernet pass-through port."
+    },
+    {
+      "name": "DC 48V",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "On transmitter unit. 2-pin captive screw (euroblock) DC power input. Powered by included AT-PS-483125-C 48V/1.25A external supply. Transmitter powers receiver via PoE over HDBaseT."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "On receiver unit (AT-HDR-EX-100CEA-RX). HDMI 2.0b spec output to display."
+    },
+    {
+      "name": "HDBaseT IN",
+      "direction": "input",
+      "connector": "hdbaset",
+      "note": "On receiver unit. RJ45 connector receiving HDBaseT signal from transmitter. Also carries PoE power to receiver."
+    },
+    {
+      "name": "OPTICAL IN",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "On receiver unit. Return audio input (e.g. from TV optical out) sent back to transmitter over HDBaseT."
+    },
+    {
+      "name": "RS-232 / IR",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "On receiver unit. 6-pin captive screw (euroblock) carrying both RS-232 serial and IR control signals."
+    },
+    {
+      "name": "UTILITY",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "On receiver unit. Listed as Mini-USB (5-pin); closest match in schema is usb-micro. Used for firmware updates."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "On receiver unit. 100 Mbps Ethernet pass-through port."
+    }
+  ]
+}

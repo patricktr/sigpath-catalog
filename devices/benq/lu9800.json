@@ -1,0 +1,151 @@
+{
+  "manufacturer": "BenQ",
+  "model": "LU9800",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.benq.eu/en-uk/business/projector/lu9800/specifications.html",
+  "confidence": "high",
+  "notes": "Source: BenQ EU spec page (most complete listing) cross-referenced with BenQ US spec page and the official LU9800/LU9750 Installation Guide PDF. HDMI grade (2.0) confirmed by projectorcentral.com. The 5x BNC Computer In 2 (R/G/B/H/V) are five individual BNC connectors for RGBHV/component analog video. 3D Sync connector type (3.5mm) inferred from BenQ LU9715 sibling-model spec page, which explicitly labels it as 3.5mm mini jack — not directly stated on the LU9800 spec page. The installation guide covers LU9750 and LU9800 together and mentions an AUDIO OUT (L/R) terminal; however, neither the US nor EU official spec pages list an audio output, so it was not included. Remote control firmware supports optional SDI and DisplayPort expansion inputs, but these are not listed as built-in I/O on any spec page and are omitted. Power inlet is standard IEC C14 (detachable cord); not explicitly labeled on spec page but confirmed by detachable region-specific power cord accessory listing and projector wattage class.",
+  "ports": [
+    {
+      "name": "Computer In 1",
+      "direction": "input",
+      "connector": "vga",
+      "note": "D-sub 15-pin VGA"
+    },
+    {
+      "name": "Computer In 2 (R)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Part of 5-BNC (R/G/B/H/V) RGBHV component input set"
+    },
+    {
+      "name": "Computer In 2 (G)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Part of 5-BNC (R/G/B/H/V) RGBHV component input set"
+    },
+    {
+      "name": "Computer In 2 (B)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Part of 5-BNC (R/G/B/H/V) RGBHV component input set"
+    },
+    {
+      "name": "Computer In 2 (H)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Part of 5-BNC (R/G/B/H/V) RGBHV component input set"
+    },
+    {
+      "name": "Computer In 2 (V)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Part of 5-BNC (R/G/B/H/V) RGBHV component input set"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "D-sub 15-pin VGA"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0, HDCP 2.2"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0, HDCP 2.2"
+    },
+    {
+      "name": "DVI-D In",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D, HDCP compatible"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Network control (LAN Control)"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "bidirectional",
+      "connector": "hdbaset",
+      "note": "Cat5/Cat6; carries HD video, RS-232, LAN control up to 100m"
+    },
+    {
+      "name": "RS-232 In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Standard 9-pin D-sub for PC control"
+    },
+    {
+      "name": "RS-232 Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "9-pin D-sub; daisy-chain control to second projector"
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack; 3D sync input from computer or enabled device. Connector type inferred from LU9715 sibling model spec."
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack; output to 3D IR sync signal transmitter. Confirmed 3.5mm for BenQ LU family via LU9715 spec page."
+    },
+    {
+      "name": "Wired Remote In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack"
+    },
+    {
+      "name": "Wired Remote Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack; daisy-chain to second projector"
+    },
+    {
+      "name": "12V Trigger",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini earphone jack; 12V (+/-1.5V) screen/lift trigger, 200mA"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack stereo audio input"
+    },
+    {
+      "name": "USB-A (5V/2A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A; 5V/2A power output for accessories"
+    },
+    {
+      "name": "Service",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B service port; maintenance personnel only"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; detachable region-specific power cord included; 100-240V AC, 50/60Hz, 893W typical"
+    }
+  ]
+}

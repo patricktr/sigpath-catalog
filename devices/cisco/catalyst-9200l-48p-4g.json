@@ -1,0 +1,58 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 9200L-48P-4G",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/1505034/Cisco-C9200l-48p-4g.html",
+  "confidence": "medium",
+  "notes": "Source is the ManualsLib hardware installation manual (primary) supplemented by networktigers.com and networkdevicesinc.com product pages for power supply connector detail. The model has two variants: -E (Network Essentials) and -A (Network Advantage); ports are identical. Power input is IEC 320-C16 (high-temperature variant of C14 used on the PWR-C5-1KWAC supply); mapped to 'iec' as the closest allowed enum. USB console is USB mini-Type B (5-pin), mapped to 'usb-micro' as closest allowed enum. StackWise rear stacking connectors are proprietary and omitted (no matching connector type). A second optional hot-swap power supply slot exists on the rear but ships empty; only the populated AC In port is listed. SFP uplink speed confirmed as 1G (4x 1G fixed) per model designation \"4G\" in SKU.",
+  "ports": [
+    {
+      "name": "GE 1–48 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x 10/100/1000 PoE+ downlink ports"
+    },
+    {
+      "name": "Uplink 1–4 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x 1G fixed SFP uplink ports"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated out-of-band 10/100/1000 management Ethernet port"
+    },
+    {
+      "name": "Console (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 console port; supplied with RJ-45-to-DB-9 cable"
+    },
+    {
+      "name": "Console (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "USB mini-Type B (5-pin) console port; connector is mini-B not micro-B — closest available enum is usb-micro"
+    },
+    {
+      "name": "USB Storage",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A port for flash storage (supports up to 8 GB Cisco USB flash drives)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Power supply module PWR-C5-1KWAC; actual inlet is IEC 320-C16 (high-temp C14 variant / 'kettle' notch) — closest available enum is iec (C13/C14); 100–240 VAC, 1000 W"
+    }
+  ]
+}

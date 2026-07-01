@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Audinate",
+  "model": "AVIO Dante Adapter ADP-DAI-2X0",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://www.markertek.com/product/adn-adpdai-au2x0/audinate-adp-dai-au-2x0-dante-audio-converter-analog-input-adapter-rj45-to-2-channel-xlr-female",
+  "confidence": "high",
+  "notes": "Device is powered entirely via 802.3af PoE Class 1 through the RJ45 port — there is no separate power connector. Network speed confirmed as 100Mbps (Fast Ethernet / 100Base-T) per Audinate AVIO platform documentation. XLR connectors are female (input). No USB, no barrel jack, no other ports. Supports up to 24-bit/96kHz audio. Also compatible with AES67.",
+  "ports": [
+    {
+      "name": "Analog In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog audio input, XLR female (3-pin)"
+    },
+    {
+      "name": "Analog In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog audio input, XLR female (3-pin)"
+    },
+    {
+      "name": "Dante / PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dante audio network (100Base-T); also delivers power via 802.3af PoE Class 1 — no separate power connector on the device"
+    }
+  ]
+}

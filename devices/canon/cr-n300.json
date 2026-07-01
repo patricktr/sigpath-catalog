@@ -1,0 +1,63 @@
+{
+  "manufacturer": "Canon",
+  "model": "CR-N300",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.usa.canon.com/shop/p/cr-n300",
+  "confidence": "medium",
+  "notes": "Specs confirmed from Canon USA product page (usa.canon.com) and corroborated by SoundPro retailer listing. HDMI version not explicitly stated on any Canon spec page — HDMI 2.0 is inferred given the camera's 4K/30p output capability and 2021 product generation (grade omitted from output due to uncertainty). DC barrel connector type confirmed as barrel jack via third-party CR-N series accessory cross-reference; exact barrel dimensions not published. RS-422 terminal uses RJ45 connector (not a traditional RS-422 DE-9/terminal block). LAN port doubles as PoE+ power input (IEEE 802.3at). microSD card slot present but designated future expansion only (recording unavailable) — omitted as non-functional I/O.",
+  "ports": [
+    {
+      "name": "3G-SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "0.8 Vp-p/75Ω unbalanced; SMPTE 424, SMPTE 425, SMPTE ST 299-2 compliant; supports embedded audio and timecode (VITC/LTC)"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI version not explicitly stated in Canon spec pages; HDMI 2.0 inferred for 4K/30p capability"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T; also serves as PoE+ input (IEEE 802.3at Class 4, approx. 16.2W max)"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial control terminal; RJ45 connector; requires category 5e or higher STP cable"
+    },
+    {
+      "name": "Mic Terminal",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, unbalanced, plug-in power supported (2.2kΩ bias resistance)"
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0; labeled for future expansion"
+    },
+    {
+      "name": "USB Type-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.0 (USB 3.2 Gen 1 = 5 Gbps)"
+    },
+    {
+      "name": "DC IN 24V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24V DC via included compact power adapter; approx. 15.0W max (body only); cable clamp provided to prevent disconnection"
+    }
+  ]
+}

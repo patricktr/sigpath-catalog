@@ -1,0 +1,150 @@
+{
+  "manufacturer": "Behringer",
+  "model": "X32",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 6,
+  "sourceUrl": "https://www.altomusic.com/products/behringer-x32-digital-32-channel-mixer-console-x32",
+  "confidence": "medium",
+  "notes": "Full X32 console (not Rack, Compact, or Core). The AES50 ports physically accept standard RJ45 plugs; Neutrik etherCON is a locking cable-end shell, not a different panel socket. USB configuration confirmed as 2x USB-B (rear) + 1x USB-A (top panel) from Alto Music specs. AES/EBU output is a single XLR (digital stereo). RCA connectors: 2 pairs (stereo in and stereo out, sharing the same 2-of-6 aux channels). Monitor CR outputs are paralleled XLR+TRS. Word clock BNC is only available via optional X-ADAT expansion card, not built-in, so omitted. Power inlet confirmed as IEC type; C14 inferred (standard for internal-PSU equipment at this power class) but not explicitly stated in sources. The unit ships with an X-UF (USB/FireWire) card installed from factory; FireWire connector type is 6-pin IEEE 1394a, but this is an expansion card port and varies by unit/revision, so omitted. Rack unit height is 6U (7.9 inches / 200 mm per manufacturer dimensions).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1–32",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "32 MIDAS-designed preamps with 48V phantom power, rear panel"
+    },
+    {
+      "name": "Aux In 1–6",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "6 balanced TRS aux inputs; channels 1–2 also offer RCA alternative"
+    },
+    {
+      "name": "Aux In 1–2 (RCA)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced RCA alternative inputs sharing Aux In channels 1 and 2"
+    },
+    {
+      "name": "Talkback In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "External talkback mic input, top panel"
+    },
+    {
+      "name": "Main Out 1–16",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "16 balanced XLR line outputs, rear panel"
+    },
+    {
+      "name": "Monitor Out L/R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Stereo control room/monitor output, XLR, paralleled with TRS"
+    },
+    {
+      "name": "Monitor Out L/R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo control room/monitor output, TRS, paralleled with XLR"
+    },
+    {
+      "name": "Aux Out 1–6",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6 balanced TRS aux outputs; channels 1–2 also offer RCA alternative"
+    },
+    {
+      "name": "Aux Out 1–2 (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced RCA alternative outputs sharing Aux Out channels 1 and 2"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Single XLR AES3 digital stereo output"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output, front/side panel"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output, front/side panel"
+    },
+    {
+      "name": "AES50 A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "AES50 SuperMAC 48x48 channel digital audio network; physically RJ45, etherCON locking cable-ends recommended"
+    },
+    {
+      "name": "AES50 B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "AES50 SuperMAC 48x48 channel digital audio network; physically RJ45, etherCON locking cable-ends recommended"
+    },
+    {
+      "name": "ULTRANET",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "16-channel digital personal monitoring bus for P16 mixers; no power supplied"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Ethernet control port for remote control via OSC, rear panel"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI input"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "5-pin DIN MIDI output"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B rear panel; 32x32 audio interface to DAW"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Second USB-B rear panel connector (X-USB card)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB-A top panel for stereo recording/playback and file storage"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet (inferred; spec sheets state IEC socket, 100–240 V AC, 120 W); detachable power cord"
+    }
+  ]
+}

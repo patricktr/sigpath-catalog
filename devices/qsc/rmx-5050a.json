@@ -1,0 +1,66 @@
+{
+  "manufacturer": "QSC",
+  "model": "RMX 5050a",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.qscaudio.com/index.php?id=12673",
+  "confidence": "medium",
+  "notes": "2-channel Class H professional power amplifier, 5000W bridged at 4 ohms. 3RU chassis. Official QSC spec page lists inputs as XLR (pin 2+) and 3-pin Euro-style detachable terminal block (euroblock) only — some retailer listings also mention 1/4\\\" TRS inputs, but these are not confirmed by the authoritative QSC source and may reflect the older non-\\\"a\\\" RMX 5050 model. Speakon connector format (NL2 vs NL4) not explicitly stated in spec. Power cord is captive with NEMA 5-20 plug (20A); the nema-5-15 connector ID is used as the closest available match. 230V export versions use CEE 7/7 plug.",
+  "ports": [
+    {
+      "name": "Ch A Input (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Active balanced, pin 2+"
+    },
+    {
+      "name": "Ch B Input (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Active balanced, pin 2+"
+    },
+    {
+      "name": "Ch A Input (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style detachable terminal block, active balanced"
+    },
+    {
+      "name": "Ch B Input (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style detachable terminal block, active balanced"
+    },
+    {
+      "name": "Ch A Output (Speakon)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon; NL4 format typical for QSC but not explicitly stated in spec"
+    },
+    {
+      "name": "Ch B Output (Speakon)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon; NL4 format typical for QSC but not explicitly stated in spec"
+    },
+    {
+      "name": "Ch A Output (Binding Posts)",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Touch-proof binding posts"
+    },
+    {
+      "name": "Ch B Output (Binding Posts)",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Touch-proof binding posts"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive cord with NEMA 5-20 plug (20A, 120V); nema-5-15 is closest available connector ID but actual plug is NEMA 5-20. 230V models use CEE 7/7."
+    }
+  ]
+}

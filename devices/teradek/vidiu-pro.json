@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Teradek",
+  "model": "VidiU Pro",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.markertek.com/product/ter-vidiu-pro/teradek-vidiu-pro-wifi-ethernet-and-4g-lte-network-streamer-with-rtmp-support",
+  "confidence": "medium",
+  "notes": "The VidiU Pro is a compact H.264 live-streaming encoder. SD/SDHC card slot and internal Wi-Fi (dual-band 802.11 a/b/g/n MIMO) are present but are not physical signal or power I/O connectors. HDMI version is not stated in official documentation; 1.4 is inferred from max supported resolution of 1080p60. Audio jack sizes (3.5mm) are not explicitly stated in spec sheets but are standard for this device class and consistent with reference guide diagrams. Power connector barrel size (inner/outer diameter) not specified. Source is Markertek retailer spec page, corroborated by Teradek official reference guide (v3, 2017) and ManualsLib entry.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Full-size HDMI input; supports up to 1080p60. HDMI 1.4 inferred — spec sheet does not state version but max resolution is consistent with 1.4."
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog audio input; supports mic or line level, 2-channel."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm headphone/monitor output."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Powered USB 2.0 host port; primarily used for 3G/4G/LTE modem dongles or USB storage."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T wired network connection."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "6–18V DC barrel power input. Nominal consumption 4.5W; up to 10W while charging internal Li-ion battery."
+    }
+  ]
+}

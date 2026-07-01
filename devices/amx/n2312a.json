@@ -1,0 +1,81 @@
+{
+  "manufacturer": "AMX",
+  "model": "N2312A",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.farralane.com/amx-nmx-enc-n2312-n2300-series-4k-uhd-video-over-ip-stand-alone-encoder-with-kvm-and-poe.html",
+  "confidence": "medium",
+  "notes": "The query uses the SVSI designation \"N2312A\"; AMX's official product number is NMX-ENC-N2312 (part FGN2312-SA). No distinct \"N2312A\" SKU was found — the \"A\" appears to be an SVSI internal naming suffix or minor revision designation. The AMX product page (amx.com) returned HTTP 403, so specs were compiled from the farralane retailer page, ManualsLib instruction manual pages, and search result snippets from the official datasheet. The USB KVM port is a USB Mini-B physically; it was mapped to usb-micro (closest connector ID in the schema) with a note. The P0 RJ45 supports PoE in, enabling the unit to be powered without the 12V DC connector. DVI-D and DisplayPort inputs are supported only via adapters on the HDMI In port — they are not separate physical connectors on the chassis.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Passive passthrough from HDMI In only"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD-15 / DB-15 analog video input"
+    },
+    {
+      "name": "P0 (Network)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps auto-negotiating with PoE (IEEE 802.3af Class 3)"
+    },
+    {
+      "name": "P1 (Network/Fiber)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G SFP port; accepts fiber transceiver or direct attach cable (not included)"
+    },
+    {
+      "name": "USB (KVM)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "USB Mini-B port for KVM over IP; connects encoder to the source computer. Connector is Mini-B, mapped to usb-micro as closest available."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pin Phoenix/euroblock terminal; user-selectable balanced or unbalanced stereo analog audio input"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin Phoenix/euroblock terminal; supports 1200–115200 baud"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix terminal on front panel; 33–60 kHz infrared input"
+    },
+    {
+      "name": "IR Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix terminal; infrared emitter output (typically 39 kHz)"
+    },
+    {
+      "name": "+12V DC",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin Phoenix/euroblock terminal; 12V 2A optional local power input (device can also be powered via PoE on P0)"
+    }
+  ]
+}

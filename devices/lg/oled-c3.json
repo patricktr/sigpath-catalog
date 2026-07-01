@@ -68,8 +68,8 @@
     {
       "name": "AC In",
       "direction": "input",
-      "connector": "nema-5-15",
-      "note": "Captive cord (US)"
+      "connector": "iec-c7",
+      "note": "Detachable figure-8 (IEC C7/C8) cord into the panel's internal supply — standard on LG OLED C-series"
     }
   ]
 }

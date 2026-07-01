@@ -1,0 +1,69 @@
+{
+  "manufacturer": "PTZOptics",
+  "model": "PT20X-SE-GY-G3",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://ptzoptics.com/move-se/",
+  "confidence": "medium",
+  "notes": "The exact model number \"PT20X-SDI-GY-G3\" does not exist in PTZOptics' product lineup. PTZOptics' SDI camera line only reached G2 generation under that naming convention (PT20X-SDI-GY-G2). The G3 generation SDI cameras use a different naming scheme: PT20X-SE-GY-G3 (Move SE, 1080p) and PT20X-4K-GY-G3 (Move 4K). B&H Photo Video explicitly lists PT20X-4K-GY-G3 as the replacement for PT20X-SDI-GY-G2. This entry uses data for the PT20X-SE-GY-G3 (Move SE, the 1080p G3 SDI camera) as the closest real product matching the queried name. If the intended product is the 4K variant, use PT20X-4K-GY-G3 instead. HDMI is rated version 1.3 per the spec sheet; mapped to hdmi-1.4 grade as the nearest available enum value. RS-232 ports use 8-pin Mini-DIN physical connectors, not DE-9. Confidence is medium because the queried model number does not exist and the data is sourced for the closest real equivalent.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Spec sheet states HDMI version 1.3; mapped to hdmi-1.4 as the closest grade in the enum (1.3 is functionally equivalent and predates the 1.4 designation)"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC type, 800mVP-p, 75Ω, SMPTE 424M compliant"
+    },
+    {
+      "name": "USB Out",
+      "direction": "output",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.0 Type-C"
+    },
+    {
+      "name": "LAN / PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100M adaptive Ethernet port; supports PoE 802.3af for power input"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm line-level input"
+    },
+    {
+      "name": "RS-232 In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "8-pin Mini-DIN physical connector (not DE-9); VISCA/Pelco-D/Pelco-P, max 30m"
+    },
+    {
+      "name": "RS-232 Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "8-pin Mini-DIN physical connector (not DE-9); VISCA/Pelco-D/Pelco-P, max 30m — used to daisy-chain cameras"
+    },
+    {
+      "name": "RS-485",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix/euroblock port; VISCA/Pelco-D/Pelco-P, max 1200m"
+    },
+    {
+      "name": "DC 12V In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "JEITA-type DC 12V, 2A max; included AC adapter"
+    }
+  ]
+}

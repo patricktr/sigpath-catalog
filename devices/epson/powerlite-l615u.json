@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Epson",
+  "model": "PowerLite L615U",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://epson.com/For-Work/Projectors/Meeting-Room/PowerLite-L615U-Wireless-WUXGA-3LCD-Laser-Projector/p/V11H901120",
+  "confidence": "medium",
+  "notes": "HDMI version 1.4 confirmed by multiple retailer spec tables (projectorcentral, imageprointernational). The single VGA port labeled 'Computer' is switchable between input and monitor-out via menu; it is physically one D-Sub 15-pin connector. Audio inputs are 2x 3.5mm stereo mini-jack, confirmed by Epson product page description ('stereo mini'); prior entry incorrectly listed them as RCA connectors. LAN speed grade (eth-100m) is inferred — not stated in specs. Power inlet type (IEC C13) is inferred from standard projector design; Epson publishes only voltage range. USB grades (usb-2.0) are inferred for this 2018-era projector. HDBaseT RJ45 is the video/control input port; the separate LAN RJ45 is for network control only.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4; no MHL on this port"
+    },
+    {
+      "name": "HDMI 2 (MHL)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4 with MHL support"
+    },
+    {
+      "name": "Computer",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "D-Sub 15-pin; configurable as VGA input or Monitor Out (daisy chain output) via menu setting"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "hdbaset",
+      "note": "RJ45 jack; carries video, audio, RS-232C, and power over Cat cable"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Wired LAN for network control; speed grade inferred (100M typical for this era projector)"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin serial control"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A; used for USB memory/firmware/wireless adapter"
+    },
+    {
+      "name": "USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Type-B; used for USB display connection from computer"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-jack audio input; one of two stereo audio inputs"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-jack audio input; one of two stereo audio inputs"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack audio output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13 power inlet inferred — standard for this projector class; Epson specs only state 100–240V AC, connector type not explicitly published"
+    }
+  ]
+}

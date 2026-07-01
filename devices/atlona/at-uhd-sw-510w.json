@@ -1,0 +1,102 @@
+{
+  "manufacturer": "Atlona",
+  "model": "AT-UHD-SW-510W",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.manualslib.com/manual/1591888/Atlona-At-Uhd-Sw-510w.html",
+  "confidence": "medium",
+  "notes": "Primary spec sources: Atlona product page (atlona.com/product/sw-510w/) and ManualsLib user manual (manual/1591888). The device has 5 inputs: USB-C (input 1), DisplayPort (input 2), HDMI 3, HDMI 4, and a 5th wireless BYOD input (no physical connector). HDMI version confirmed as 2.0 (18 Gbps) from multiple sources. LAN speed confirmed 10/100 Mbps. Power connector described as \"4-pin locking\" — mapped to dc-barrel as closest available connector; the actual connector is a proprietary 4-pin locking DIN type. DisplayPort grade (dp-1.2) inferred from 18 Gbps / 4K60 capability; spec sheet does not explicitly state DP version. USB-C grade (usb-10g) from USB 3.1 spec. The 5-pin audio out and 3-pin/4-pin control euroblock connectors confirmed from specifications table page 97. Relay and trigger connectors confirmed. HDMI inputs labeled 3 and 4 per multiple manual sections (inputs 1 and 2 are USB-C and DP respectively). Product is discontinued.",
+  "ports": [
+    {
+      "name": "USB-C IN",
+      "direction": "input",
+      "connector": "usb-c",
+      "grade": "usb-10g",
+      "note": "USB Type-C 3.1, 24-pin, AV input via Alternate Mode (DP Alt Mode); also provides USB-C power delivery up to 60W"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "DisplayPort input, 20-pin female; grade inferred from 18 Gbps / 4K60 support"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A, 19-pin female; labeled as input 3 on front panel"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A, 19-pin female; labeled as input 4 on front panel"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A, 19-pin female; 18 Gbps, 4K/UHD @ 60 Hz 4:4:4"
+    },
+    {
+      "name": "HDBaseT OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT output; connect to compatible HDBaseT receiver (e.g. AT-UHD-EX-100CE-RX-PSE)"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm unbalanced 2-channel analog audio input"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin captive screw (euroblock), balanced/unbalanced 2-channel analog audio output"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin captive screw (euroblock) for RS-232 serial control"
+    },
+    {
+      "name": "RELAY",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin captive screw (euroblock), normally open (NO); 48V @ 1A rated; for controlling screens, curtains, etc."
+    },
+    {
+      "name": "TRIGGER I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin captive screw (euroblock); 30V @ 1A max; voltage-triggered input/output"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps Ethernet for network control and web GUI"
+    },
+    {
+      "name": "USB (Wi-Fi)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "3x USB 2.0 Type-A ports for wireless antenna modules (Miracast/BYOD); not general-purpose host ports"
+    },
+    {
+      "name": "DC 24V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "4-pin locking DIN connector (proprietary locking type, not a standard barrel jack); 24V DC power input from included external AC adapter"
+    }
+  ]
+}

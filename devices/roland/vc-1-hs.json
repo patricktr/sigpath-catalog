@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Roland",
+  "model": "VC-1-HS",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://proav.roland.com/global/products/vc-1-hs/specifications/",
+  "confidence": "medium",
+  "notes": "SDI outputs support 3G (Level A and B), HD-SDI, and SD-SDI; grade set to sdi-3g (maximum). HDMI version not explicitly stated in specs; max resolution is 1080p60, consistent with HDMI 1.4 — grade inferred. The digital audio TRS jacks share the same physical connectors as the analog R-channel jacks (combined use, mode-selectable); labeled accordingly. AES/EBU digital audio carried on TRS-6.35 (unbalanced/balanced per Roland convention for this series). USB Type B is Hi-Speed USB (USB 2.0). Two SDI outputs are identical; the device can feed two SDI destinations simultaneously. Power is 9V DC via external adapter with DC barrel connector.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI loop-through / monitoring output"
+    },
+    {
+      "name": "AUDIO IN L",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio, left channel"
+    },
+    {
+      "name": "AUDIO IN R / DIGITAL IN",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio right channel or AES/EBU digital audio input — shared jack, selectable via menu"
+    },
+    {
+      "name": "AUDIO OUT L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio, left channel"
+    },
+    {
+      "name": "AUDIO OUT R / DIGITAL OUT",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced analog audio right channel or AES/EBU digital audio output — shared jack, selectable via menu"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Hi-Speed USB Type B; used for PC/Mac remote control via VC-1 RCS application"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "9V DC from included external AC adapter"
+    }
+  ]
+}

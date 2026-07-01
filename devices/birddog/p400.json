@@ -1,0 +1,67 @@
+{
+  "manufacturer": "BirdDog",
+  "model": "P400",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://birddog.tv/p400-overview/p400-techspecs/",
+  "confidence": "medium",
+  "notes": "Official BirdDog tech specs page confirms: 3.5mm Audio In (Mono) and 3.5mm Audio Out (Mono) — both are mono, not stereo. Serial control ports are listed as '2x RJ45: RS232 / RS422 / RS485 Connectors', meaning each RJ45 port supports RS232, RS422, and RS485. NDI port also provides PoE+ (IEEE 802.3at) power input. Genlock supports BBS (Black Burst Sync) and Tri-level sync via BNC. HDMI version (1.4), Ethernet speed grade (1G), USB version (2.0), and power connector sub-type (JEITA type 4) are not confirmed on the official tech specs page and are sourced from secondary/retailer listings — confidence reduced to medium accordingly. The device is a PTZ camera, not rack-mountable.",
+  "ports": [
+    {
+      "name": "NDI / PoE+",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ45 for NDI video output, VISCA over IP control, and PoE+ (IEEE 802.3at) power input; 1G grade from secondary sources, not confirmed on official spec page"
+    },
+    {
+      "name": "RS232 / RS422 / RS485 Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Two RJ45 ports for RS232, RS422, and RS485 PTZ control (VISCA and PELCO D protocols); adapter cables supplied"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI Type A output with embedded audio; version 1.4 reported by secondary sources but not confirmed on official spec page"
+    },
+    {
+      "name": "6G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Supports 6G-SDI and 3G-SDI modes; YCbCr 4:2:2 10-bit; embedded audio"
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Accepts Black Burst Sync (BBS) and Tri-level sync for multi-camera synchronization"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mono analog line-level / mic-level input (official spec: 3.5mm Audio In Mono)"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Mono analog line-level output (official spec: 3.5mm Audio Out Mono)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A; used for firmware upgrades only; USB 2.0 reported by secondary sources but not confirmed on official spec page"
+    },
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC power input; JEITA type 4 sub-type reported by secondary sources but not confirmed on official spec page"
+    }
+  ]
+}

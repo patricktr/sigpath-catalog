@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EW 135P G4",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.sennheiser.com/en-us/catalog/products/wireless-systems/ew-135p-g4/ew-135p-g4-a-509754",
+  "confidence": "medium",
+  "notes": "The EW 135P G4 is a two-piece portable wireless system comprising the EK 100 G4 camera-mount receiver and the SKM 100 G4 handheld transmitter. The only wired signal I/O port on the system is the locking 3.5mm TRS audio output on the EK 100 G4 receiver. The IR sync window is an optical (non-wired) interface and is not counted as a connector port. Both units are battery-powered (2x AA each); there is no DC power inlet connector on either unit — the optional DC2 adapter inserts into the battery compartment rather than a dedicated power jack, so no power port is included here. The SKM 100 G4 transmitter has no wired audio input; the MMD 835-1 mic capsule threads on via a proprietary screw mount. Locking nature of the 3.5mm jack confirmed by third-party cable listings (e.g., Cable Techniques, eBay listings for locking 3.5mm TRS to XLR cables specifically for EK 100 G4). Not rack-mountable.",
+  "ports": [
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Locking 3.5mm TRS jack socket on EK 100 G4 receiver; +12 dBu, mono, unbalanced. Included CL 1 (3.5mm–3.5mm) and CL 100 (3.5mm–XLR) cables provided."
+    }
+  ]
+}

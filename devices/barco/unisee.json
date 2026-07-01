@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Barco",
+  "model": "UniSee",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://assets.barco.com/asset/ab4ac9a7-57da-451e-ba37-e205cf4fe77d/Barco-UniSee-en-Spec-sheet.pdf",
+  "confidence": "medium",
+  "notes": "This covers the standard Barco UniSee (700 nit, model R9867700 / article R9867700). The spec sheet (official Barco PDF from assets.barco.com) lists connectivity as: 2x DP1.2 inputs + 1x DP1.2 output, 2x HDMI 2.0 inputs (4K@60Hz), 2x Ethernet, 2x USB (power only), HDCP 2.2. Ethernet grade (1Gbit) is sourced from the service manual on ManualsLib which states '2 x 1Gbit Ethernet (RJ45)'. The AC power connector type is not named in the spec sheet — IEC (C13/C14) is the standard inlet for flat-panel displays with internal SMPS and is inferred. No RS-232, no audio ports. The high-brightness variant UNI-8002 is a different SKU and uses HDMI 1.4 (not 2.0) instead. USB ports are labeled 'power only' — no data function. The external power supply option connects via a proprietary Neutrik DC cable to the tiles.",
+  "ports": [
+    {
+      "name": "DP In 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP In 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Loop-through/daisy-chain output"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Control and firmware update; speed confirmed in service manual as 1Gbit"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Control and firmware update; speed confirmed in service manual as 1Gbit"
+    },
+    {
+      "name": "USB 1",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Power only, no data"
+    },
+    {
+      "name": "USB 2",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Power only, no data"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC, 50-60 Hz; internal SMPS standard; external SMPS option uses proprietary Neutrik DC connector on tiles. IEC C13/C14 type inferred for internal PSU — not explicitly named in spec sheet."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Hirschmann (Belden)",
+  "model": "SPIDER 8TX EEC",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.icomtechinc.com/ethernet-switches/industrial-din-rail-ethernet-switches/unmanaged-switches/10-n-100-unmanaged-switches/943376201-by-hirschmann.php",
+  "confidence": "medium",
+  "notes": "Part number 943376201. DIN-rail mount only — not rack-mountable. The 3-pin pluggable terminal block is the euroblock-style DC power inlet standard to Hirschmann SPIDER industrial switches; modeled as 'euroblock-dc' (captive-screw DC power). Voltage range confirmed as 9.6–32 V DC from SPIDER II manual (same platform); original SPIDER I EEC is similar. No signal/relay contact on the EEC (extended temperature) variant — that is confirmed by multiple sources ('no signaling contact'). Authoritative Belden catalog page did not render product detail; secondary sources (iComTech, Klinkmann, ManualsLib SPIDER II) used to confirm specs. Grades based on confirmed 10/100BASE-TX Fast Ethernet standard.",
+  "ports": [
+    {
+      "name": "Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-TX, auto-negotiation, auto-crossover, auto-polarity"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "3-pin pluggable terminal block; accepts 12–24 VDC (9.6–32 V DC range); no signal/relay contact on EEC variant"
+    }
+  ]
+}

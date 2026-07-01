@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Pro Convert HDMI TX",
+  "category": "converter",
+  "sourceUrl": "https://www.magewell.com/tech-specs/pro-convert-hdmi-tx",
+  "confidence": "high",
+  "notes": "Encoder only — converts HDMI input to NDI network output; it has no decoding capability (the corresponding decoder is the Pro Convert HDMI RX). The 'type' field is omitted because no encoder-only enum value exists; 'Encoder/Decoder' would be materially wrong. Device is powered via PoE (IEEE 802.3af on Ethernet) or 5V/2.1A via USB Type B — there is no separate DC barrel jack or IEC power inlet. The PTZ/Tally port is a Mini-DIN 8-pin connector; midi-din is used as the closest physical type (signaling is RS232/VISCA). No dedicated analog audio ports; audio is embedded in HDMI.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Also accepts DVI-D via adapter; up to 2048x1200 60fps 4:4:4/4:2:2"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Mbps; supports IEEE 802.3af PoE for device power"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type B; used for device configuration (RNDIS/ECM) and 5V/2.1A power input"
+    },
+    {
+      "name": "PTZ/Tally",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Mini-DIN 8-pin jack; shared PTZ camera control (RS232/VISCA/Pelco) and tally light output. Closest connector in schema is midi-din (physical Mini-DIN 8)."
+    }
+  ]
+}

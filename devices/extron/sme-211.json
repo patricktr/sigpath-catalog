@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Extron",
+  "model": "SME 211",
+  "category": "converter",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/1444984/Extron-Electronics-Sme-211.html",
+  "confidence": "medium",
+  "notes": "SME 211 is an encoder-only device (H.264 Streaming Media Encoder); the paired decoder is the separate SMD 101 product. USB ports corrected per reviewer: two USB 2.0 Type-A ports (rear panel for storage/keyboard-mouse, front panel for storage) plus a front-panel mini USB-B CONFIG port for SIS commands. Primary Extron sources rejected bot-defense requests; information assembled from ManualsLib setup manual pages and official spec sheet references. HDMI version confirmed as 1.4a. Ethernet confirmed as 10/100/1000Base-T (eth-1g). No separate analog audio output connector — audio output is only via HDMI re-embedding. IEC power inlet type assumed C14 (standard for 1U rack unit with internal PSU); exact sub-variant not confirmed. RS-232 connector typed as euroblock (3.5mm captive screw), Extron standard captive-screw terminal style. 1U half-rack width enclosure.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Preview Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Outputs mixed video with re-embedded stereo audio"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5mm 5-pole captive screw connector; accepts balanced or unbalanced stereo line-level analog audio"
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5mm 3-pole captive screw connector; RS-232 SIS serial control (Tx, Rx, Gnd)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T, half/full duplex with autodetect; used for streaming and device control"
+    },
+    {
+      "name": "USB Storage (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel USB 2.0 Type-A for external storage device or keyboard and mouse (network setup)"
+    },
+    {
+      "name": "USB Storage (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel USB 2.0 Type-A for external storage device or keyboard and mouse"
+    },
+    {
+      "name": "Config (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front panel mini USB-B configuration port; connect a control device to send SIS commands for device configuration and control"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC, 0.7A, 50-60 Hz; internal Extron Everlast power supply; exact IEC variant (C13/C14) not explicitly stated in available documentation, IEC assumed for standard rack unit"
+    }
+  ]
+}

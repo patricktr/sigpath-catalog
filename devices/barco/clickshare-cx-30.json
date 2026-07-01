@@ -1,0 +1,45 @@
+{
+  "manufacturer": "Barco",
+  "model": "ClickShare CX-30",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://knitec.com/pages/barco-clickshare-cx-30-specifications",
+  "confidence": "medium",
+  "notes": "Specs confirmed from multiple secondary sources (knitec.com specs page, avlgear.com, conferenceroomav.com, Barco spare parts page confirming 12VDC 2A power adapter, ManualsLib CX-20 installation manual confirming barrel connector power type for CX-series). Barco's own product page (barco.com) returned HTTP 403, preventing direct verification. The CX-30 is a wireless presentation/conferencing system — it has no SDI, XLR, or analog audio ports. Audio is routed via HDMI or USB peripherals only. Gen1 has USB 2.0 ports; Gen2 (model C3010S / R9861613USB2) upgrades to USB 3.0 and adds DP 1.2 + PD over USB-C. HDMI grade hdmi-1.4 confirmed (HDMI 1.4b spec stated in multiple sources).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b; outputs up to 4K UHD (3840×2160) @ 30Hz. Gen2 also supports DisplayPort 1.2 via USB-C."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Front panel; USB 2.0 on Gen1. Gen2 upgrades to USB 3.0 with DisplayPort 1.2 and Power Delivery support. Used for Button pairing and USB peripherals."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel; USB 2.0 on Gen1. Gen2 upgrades to USB 3.0. Used for USB peripherals (camera, mic, speakerphone)."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet; rear panel."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 VDC 2A via external power adapter with interchangeable regional AC plugs. Gen2 can also be powered via USB-C (Power Delivery)."
+    }
+  ]
+}

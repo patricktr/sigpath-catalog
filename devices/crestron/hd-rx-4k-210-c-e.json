@@ -1,0 +1,93 @@
+{
+  "manufacturer": "Crestron",
+  "model": "HD-RX-4K-210-C-E",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.crestron.com/Products/Catalog/Audio-Video-and-USB/DM-Essentials-Point-to-Point/Receiver-w-Switching/HD-RX-4K-210-C-E",
+  "confidence": "high",
+  "notes": "The -E suffix denotes the European variant using euroblock (detachable 3.5mm terminal block) connectors for audio and control ports instead of captive screw terminals. HDMI 2.0 grade is confirmed by product description (supports 4K60 4:2:0, HDCP 2.2). The DM Input 2 uses RJ-45 physically but carries DM Essentials (HDBaseT-based) signal — closest standard connector is rj45; grade set to eth-1g to reflect 1G-capable Cat cable link. COM port is RS-232 over euroblock (not a DB9). Power is supplied via included external 24VDC adapter (dc-barrel), not a direct AC inlet. Not rack-mountable (desktop/surface-mount unit).",
+  "ports": [
+    {
+      "name": "HDMI Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A female; supports HDMI 2.0, HDCP 2.2, DVI and Dual-Mode DisplayPort compatible"
+    },
+    {
+      "name": "DM Input 2",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8-pin shielded RJ-45 (yellow); DM Essentials HDBaseT input; accepts DM Essentials transmitter signal; up to 230 ft at 2K, 130 ft at 4K"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A female; scaling output; DVI compatible"
+    },
+    {
+      "name": "Audio L/R",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm detachable euroblock terminal block; balanced/unbalanced stereo line-level audio output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T"
+    },
+    {
+      "name": "I/O 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-pin detachable terminal block; Versiport digital I/O or analog input"
+    },
+    {
+      "name": "I/O 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-pin detachable terminal block; Versiport digital I/O or analog input"
+    },
+    {
+      "name": "Relay 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin detachable terminal block; normally open isolated relay; rated 1A, 30VAC/VDC"
+    },
+    {
+      "name": "Relay 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin detachable terminal block; normally open isolated relay; rated 1A, 30VAC/VDC"
+    },
+    {
+      "name": "IR",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin 3.5mm detachable terminal block; IR output control port"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm detachable terminal block; bidirectional RS-232 control port"
+    },
+    {
+      "name": "Service",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A female; for factory/service use only"
+    },
+    {
+      "name": "24V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1x5.5mm DC barrel; 24VDC 1.25A; includes PW-2412WU power pack (external adapter)"
+    }
+  ]
+}

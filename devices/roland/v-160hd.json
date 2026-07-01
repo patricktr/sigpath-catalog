@@ -1,0 +1,237 @@
+{
+  "manufacturer": "Roland",
+  "model": "V-160HD",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://proav.roland.com/global/products/v-160hd/specifications/",
+  "confidence": "medium",
+  "notes": "Source: Roland Pro A/V global product specifications page. HDMI version not explicitly stated by Roland; the V-160HD launched in 2021 and supports resolutions up to 1080p60/4K on inputs — HDMI grade is omitted rather than guessed. SDI grade confirmed as 3G-SDI (SMPTE 424M). LAN speed confirmed as 100BASE-TX. The TALLY/GPIO connector is a DB-25 female; mapped to 'rs232' as the closest available type but it is not RS-232 electrically — it carries TTL-level tally and GPIO signals. The RS-232 port is a separate DB-9 male connector. Power is via DC barrel from external AC adapter; exact barrel dimensions not published. The device is 2U rack-mountable. Bluetooth wireless is present for audio input and control but is not a physical port and is excluded. Two AUDIO OUT connectors (XLR and RCA) share the label 'AUDIO OUT' on the unit; both are listed.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported. HDMI version not stated by Roland; inferred HDMI 2.0 based on 2021 launch and supported resolutions."
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported, multi-format supported."
+    },
+    {
+      "name": "HDMI IN 6",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 7",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 8",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Conforms to SMPTE 424M (SMPTE 425M-AB), 292M."
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDCP supported. HDMI version not stated by Roland."
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Conforms to SMPTE 424M (SMPTE 425M-AB), 292M; audio embedded per SMPTE 299M."
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "USB STREAM",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C; used for video/audio streaming output, PC/iPad remote control, and Graphics Presenter input."
+    },
+    {
+      "name": "AUDIO IN 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR / 1/4-inch TRS phone; phantom power DC 48V available."
+    },
+    {
+      "name": "AUDIO IN 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR / 1/4-inch TRS phone; phantom power DC 48V available."
+    },
+    {
+      "name": "AUDIO IN 3/L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO IN 4/R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo 1/4-inch phone jack for headphone monitoring."
+    },
+    {
+      "name": "Reference IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Sync reference input; supports Black Burst, Bi-Level, Tri-Level sync."
+    },
+    {
+      "name": "Reference THRU",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Sync reference loop-through output."
+    },
+    {
+      "name": "LAN CONTROL",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX for network control."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 type male connector for remote control."
+    },
+    {
+      "name": "USB MEMORY",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A for flash drive storage and numeric keypad."
+    },
+    {
+      "name": "CTL/EXP",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4-inch TRS phone jack for footswitch or expression pedal."
+    },
+    {
+      "name": "TALLY/GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-25 female connector (not DB-9/RS-232 electrically); 16 tally/GPO channels + 8 GPI channels. Mapped to rs232 as closest available connector type — actual connector is a D-Sub 25-pin female."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary DC input from included AC adapter; 55W / 2.5A maximum draw. Exact barrel spec not published by Roland."
+    }
+  ]
+}

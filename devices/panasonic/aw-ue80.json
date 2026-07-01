@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AW-UE80",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro-av.panasonic.net/en/products/aw-ue80/spec.html",
+  "confidence": "high",
+  "notes": "Power can be supplied either via the DC 12V barrel jack (from the included AC adapter) or via PoE++ (IEEE 802.3bt) over the LAN RJ-45 port. The RS-422 control port uses an RJ-45 physical connector (not a standard DB9). USB is referenced in some marketing material as a control method but is not listed as a physical hardware port in the official spec table. SDI output is 3G-SDI (SMPTE 424M); the camera does not output 4K over SDI — 4K is HDMI and IP only. The G/L In BNC grade is omitted as it is an analog sync signal, not a bandwidth-graded interface.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "4:2:2/10bit; HDCP not supported"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE 292M/424M, 75Ω, Level-A/Level-B supported"
+    },
+    {
+      "name": "G/L In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock input; Black Burst Sync (BBS) and tri-level sync"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T; IP control, IP streaming (NDI/HX, SRT); also carries PoE++ power (IEEE 802.3bt, 42–57 V)"
+    },
+    {
+      "name": "RS-422 Control In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Serial control via RJ-45 (AW protocol); max cable 1000 m"
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack; Mic level -40 dBV, Line level -10 dBV; plug-in power 2.5 V±0.5 V"
+    },
+    {
+      "name": "DC 12V In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "10.8–13.2 V DC from supplied AC adapter; alternative to PoE++ via LAN"
+    }
+  ]
+}

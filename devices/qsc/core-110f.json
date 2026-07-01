@@ -1,0 +1,233 @@
+{
+  "manufacturer": "QSC",
+  "model": "Core 110f",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "http://help.qsys.com/q-sys_9.8/Content/Hardware/Processing/Core_110f.htm",
+  "confidence": "high",
+  "notes": "Source is the official QSC/Q-SYS help documentation (v9.8). The Core 110f is a 1RU device (44mm / 1U). It has two major hardware revisions: the original (v1) and Core 110f v2. The v2 removes: 16x16 GPIO connectors, front panel OLED display, and front panel USB Type-A ports; it replaces them with a simplified solution. This structured output describes the original Core 110f (v1). The POTS connector is physically an RJ11 (6P2C) — closest schema match is rj45 but they are different form factors; noted accordingly. The HDMI port is documented as 'for future use' with no version or direction specified — grade omitted. The 6 USB-A host ports and USB-B device port are present on original v1; v2 removes front USB-A ports. All 24 analog audio channels use 3.5mm 3-position euroblock connectors (not XLR). Ethernet is confirmed dual Gigabit (1G). RS232 uses a 3-pin 5mm euroblock. GPIO uses 10-position 3.5mm euroblock connectors.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5mm 3-position euroblock, balanced/unbalanced, phantom power available; channels 1–8 share same connector style"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5mm 3-position euroblock, balanced/unbalanced"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5mm 3-position euroblock; each of 8 Flex channels independently software-configurable as mic/line input or line output with phantom power on input"
+    },
+    {
+      "name": "Flex 2",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 3",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 4",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 5",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 6",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 7",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Flex 8",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Q-LAN / Q-SYS Control / VoIP / AES67 network connection"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary Gigabit Ethernet; supports redundancy or additional network functions"
+    },
+    {
+      "name": "USB Type-A 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-A 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-A 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-A 4 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-A 5 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-A 6 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear panel; spec notes 'for future use'"
+    },
+    {
+      "name": "USB Type-B (Device)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Rear panel USB-B device port; supports up to 16x16 USB audio + Q-SYS camera/AV bridging"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 5mm euroblock (TX, RX); serial control port"
+    },
+    {
+      "name": "GPI (GPIO Inputs)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "10-position 3.5mm euroblock; 16 general-purpose inputs, 0–24V analog or contact closure. Not present on Core 110f v2."
+    },
+    {
+      "name": "GPO (GPIO Outputs)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "10-position 3.5mm euroblock; 16 general-purpose open-collector outputs (24V, 0.2A max). Not present on Core 110f v2."
+    },
+    {
+      "name": "POTS",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ11 (6P2C) analog telephone line connection; connector physically is RJ11 but closest in schema is rj45 — actual connector is RJ11/6P2C"
+    },
+    {
+      "name": "HDMI",
+      "direction": "bidirectional",
+      "connector": "hdmi",
+      "note": "Marked 'for future use' in QSC documentation; version and direction not specified"
+    },
+    {
+      "name": "DC Auxiliary In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin 5mm euroblock; 12VDC 10A external/auxiliary power input"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/C14 inlet; 100–240V~ 50–60Hz, 150W universal power supply"
+    }
+  ]
+}

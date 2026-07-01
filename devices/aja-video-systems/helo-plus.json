@@ -1,0 +1,77 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "HELO Plus",
+  "category": "recorder",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.aja.com/products/helo-plus",
+  "confidence": "high",
+  "notes": "Desktop unit — not rack-mountable (dimensions 8.5 x 5.5 x 1.02 in, 1.2 lb). SD card slot (front-mounted, SD/SDHC/SDXC) omitted as it is a media slot, not a signal connector. Audio is embedded in SDI and HDMI as well as via the dedicated 3.5mm jacks. The 4-pin mini XLR DC power connector is described as latching with gold pins. USB-A port can supply 1A to connected storage devices. Source is the official AJA product page cross-checked against AJA's own manual on ManualsLib.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE-259/292/296/424, 10-bit, single link 4:2:2"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE-259/292/296/424, 10-bit, single link 4:2:2"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI v1.4a, standard Type A, RGB or YCbCr"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI v1.4a, standard Type A, RGB or YCbCr"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 2-channel, -10dBV line level"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 2-channel, line level"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1GigE for network control and SMB recording"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.2 Gen1 (5Gb/s), front-mounted, for external storage media (exFAT/FAT32)"
+    },
+    {
+      "name": "USB Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Rear-mounted, dedicated for AJA eMini-Setup configuration utility"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "12V DC, 4-pin mini XLR latching connector; included external supply is 100-240 VAC 50/60 Hz, 60W max"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TSW-760",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.crestron.com/Products/Control-Surfaces/Touch-Screens/Medium-Touch-Screens/TSW-760-NC-B-S",
+  "confidence": "high",
+  "notes": "The TSW-760 is a 7-inch PoE+ touch panel with a deliberate single-wire design: all power, data, video (RTSP/ONVIF), intercom, and control flow through the single RJ45/PoE+ connection. There is no discrete power inlet, RS-232, IR, or analog audio jack. Built-in microphone, speaker, and (on NC variant) 5MP camera are all internal with no external connectors. Multiple finish/camera variants exist (TSW-760-B-S black, TSW-760-W-S white, TSW-760-NC-B-S/-NC-W-S with built-in camera); all share the same I/O. Original -B-S and -W-S variants are discontinued; -NC variants are current.",
+  "ports": [
+    {
+      "name": "LAN PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ45 female; 100Base-TX, auto-switching/auto-negotiating, full/half duplex; IEEE 802.3at Type 2 PoE+ Powered Device — all power and data delivered over this single cable (no separate power inlet)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port; intended for optional Crestron room availability light bar or hallway sign accessories"
+    }
+  ]
+}

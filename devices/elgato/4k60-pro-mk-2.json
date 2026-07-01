@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Elgato",
+  "model": "4K60 Pro MK.2",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://help.elgato.com/hc/en-us/articles/360033795031-Elgato-Game-Capture-4K60-Pro-MK-2-Technical-Specifications",
+  "confidence": "medium",
+  "notes": "PCIe internal capture card (PCIe 2.0 x4 slot, x4/x8/x16 compatible) — the PCIe slot is the host connection, not a bracket-exposed I/O port, so it is omitted. The card draws power solely through the PCIe slot (rated ~6W); there is no external power connector. No USB, audio, or control ports exist on this card. HDMI 2.0 confirmed by multiple secondary sources; the official Elgato help page (primary source) returned HTTP 403 and could not be directly fetched, so confidence is medium. Model number: 10GAS9901.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Unencrypted HDMI 2.0 input; supports up to 2160p60 HDR10, 1440p144, 1080p240"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Lag-free HDMI 2.0 passthrough output; supports up to 2160p60 HDR10"
+    }
+  ]
+}

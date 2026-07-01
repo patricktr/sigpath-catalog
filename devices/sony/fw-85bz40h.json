@@ -1,0 +1,94 @@
+{
+  "manufacturer": "Sony",
+  "model": "FW-85BZ40H",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.manualslib.com/manual/2069287/Sony-Bravia-Fw-85bz40h.html",
+  "confidence": "medium",
+  "notes": "The product is officially named FW-85BZ40H by Sony; FWD-85BZ40H is an alternate designation used by some resellers for the same unit. HDMI version confirmed as 2.0 based on manual note that 18 Gbps requires setting HDMI signal format to Enhanced format (HDMI 2.0 maximum bandwidth). USB connector physical type (Type-A) inferred from standard practice for Sony professional displays; specification documents do not explicitly state Type-A vs Type-C but TSI Touch integration uses USB Type-A. RS-232C via 3.5mm mini jack is confirmed by manual (mini jack terminal for serial communication). Composite VIDEO IN uses a 3.5mm mini jack with a Sony-proprietary AV adapter for connecting standard RCA sources. Power connector confirmed as IEC C8 inlet (figure-8/C7) on rear. LAN confirmed as 10/100 Mbps (not Gigabit). HDMI IN 3 supports ARC; HDMI IN 4 accepts DVI via adapter. Ethernet speed grade set to eth-100m based on documented 10BASE-T/100BASE-TX spec.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports ARC (Audio Return Channel)"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Accepts DVI input via DVI-HDMI adaptor; also has AUDIO IN (3.5mm mini jack)"
+    },
+    {
+      "name": "HDMI 4 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo mini jack audio input paired with HDMI IN 4"
+    },
+    {
+      "name": "VIDEO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Composite video via 3.5mm mini jack (Sony AV adapter required for RCA connection)"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical digital audio output"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3-pole stereo mini jack; headphones only"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "High Speed USB 2.0; 5V 500mA max"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "SuperSpeed USB 3.1 Gen 1; 5V 900mA max"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Serial control via 3.5mm mini jack; Sony uses mini jack for RS-232C on this series"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "IEC C8 inlet (figure-8) on rear panel; AC 100-240V"
+    }
+  ]
+}

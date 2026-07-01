@@ -4,6 +4,7 @@
   "category": "source",
   "type": "Media source",
   "ports": [
-    { "name": "HDMI", "direction": "output", "connector": "hdmi" }
+    { "name": "HDMI", "direction": "output", "connector": "hdmi" },
+    { "name": "Power", "direction": "input", "connector": "iec-c7", "note": "Figure-8 (IEC C7/C8) detachable AC cord into the built-in power supply — no wall-wart" }
   ]
 }

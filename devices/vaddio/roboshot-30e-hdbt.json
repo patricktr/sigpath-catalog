@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Vaddio",
+  "model": "RoboSHOT 30E HDBT",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://res.cloudinary.com/avd/image/upload/v134079192/Resources/Vaddio/Cameras/Operation/411-0003-30-rev-f-roboshot-hdbt-complete-manual.pdf",
+  "confidence": "high",
+  "notes": "The RoboSHOT 30E HDBT (Elite series, e.g. 999-99630-000) has only two physical wired connectors on the camera body: an RJ-45 (OneLINK HDBaseT) and an HDMI output, plus a rotary resolution-select switch. Power is delivered exclusively via PoE+ through the HDBaseT RJ-45; there is no separate DC barrel jack (unlike the older non-E RoboSHOT 30 HDBT which had a 12 VDC EIAJ-04 jack). The older non-E model also had a discrete blue RS-232 RJ-45 port and DIP switches; these are absent on the 30E HDBT camera body — RS-232/VISCA serial control is accessed only through an OneLINK accessory device. IR remote receive sensors are built into the front of the camera base but are not a wired connector. No audio connectors are present on the camera body; audio capability is available only via OneLINK Bridge accessories. The HDBaseT port carries 100 Mbps Ethernet and HDBaseT video simultaneously. HDMI version is inferred as 1.4 based on 1080p maximum resolution (no 4K output claimed). Source is the authoritative Vaddio/Legrand AV complete manual (rev F).",
+  "ports": [
+    {
+      "name": "OneLINK HDBaseT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Carries PoE+ power input, HDBaseT video output, IP network/streaming, and Telnet/RS-232 control (RS-232 requires an OneLINK accessory — there is no separate RS-232 port on the camera body)"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Simultaneous 1080p HDMI video output; max resolution 1080p/60"
+    }
+  ]
+}

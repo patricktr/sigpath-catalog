@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "ATW-3211/831",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.manualslib.com/manual/2702381/Audio-Technica-Atw-R3210.html",
+  "confidence": "medium",
+  "notes": "System consists of ATW-R3210 receiver + ATW-T3201 bodypack transmitter + AT831cH lavalier mic. Receiver ports confirmed from manual (ManualsLib) and multiple retailer specs: XLR3 balanced out, 6.3mm TS unbalanced out, 2x BNC antenna inputs (50 ohm, with 12V DC antenna power), DC barrel power input (12V DC center-positive). Transmitter uses Audio-Technica proprietary cH-style 4-pin Hirose screw-lock connector for mic input — closest enum value is xlr4-dc; actual connector is TA4F/Hirose 4-pin screw-down. IR sync is a sensor window on both receiver and transmitter front panels, not a physical port connector. No USB port on this model. Transmitter is battery-powered (2x AA), no external power connector. DC barrel jack exact dimensions not specified in available sources.",
+  "ports": [
+    {
+      "name": "Balanced Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR 3-pin male balanced audio output on rear of ATW-R3210 receiver"
+    },
+    {
+      "name": "Unbalanced Out",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "6.3 mm (1/4\") mono TS jack unbalanced audio output on rear of ATW-R3210 receiver"
+    },
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC female, 50 ohm RF antenna input; provides switchable 12V DC for powered antenna accessories"
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC female, 50 ohm RF antenna input; provides switchable 12V DC for powered antenna accessories"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC center-positive input; powered by included 100–240V AC to 12V DC 1A external switching power supply"
+    },
+    {
+      "name": "IR Sync",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Infrared sync window on front panel of receiver (and transmitter); used to sync frequency settings from receiver to bodypack transmitter; no physical connector — sensor window only"
+    },
+    {
+      "name": "Mic In (Transmitter)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Audio-Technica proprietary cH-style 4-pin Hirose screw-down connector on ATW-T3201 bodypack transmitter; accepts cH-type lavalier/headset mics (e.g., AT831cH included). xlr4-dc is the closest available connector type; actual connector is a Hirose TA4F-style screw-lock 4-pin"
+    }
+  ]
+}
