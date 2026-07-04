@@ -1,0 +1,78 @@
+{
+  "manufacturer": "WyreStorm",
+  "model": "NHD-500-TX",
+  "category": "converter",
+  "sourceUrl": "https://www.ambertech.com.au/Documents/Manuals/Wyrestorm/Wyrestorm-NetworkHD%20Full%20Range_SpecSheet.pdf",
+  "confidence": "high",
+  "notes": "Specs taken from WyreStorm's own \"NetworkHD Full Product Range Specification Sheet\" (231130, Copyright 2023), page 7, which lists the NHD-500-TX as a distinct column from the NHD-500-RX/DNT-TX/IW-TX. This is the original (v1) NHD-500-TX (JPEG2000 encoder), not the newer NHD-500-TX v2 (which adds an HDMI loop-out and a second Ethernet port for Dante AV-A/local network) — WyreStorm's live product page now merges v1/v2 marketing copy under \"NHD-500-TX/RX V2\", but the linked spec-sheet PDF still documents the original single-HDMI, single-RJ45 I/O set used here. The 5-pin balanced analog audio output and 3-pin RS-232 connector are captive-screw terminal blocks (Phoenix-style); mapped to \"euroblock\" as the closest available connector id. Unit is a compact desktop enclosure (215 x 120 x 25 mm) — rack mounting requires the optional NHD-000-RACK4 accessory shelf (6U, holds up to 12 units), so it is not itself a fixed rack-unit device (rackUnits omitted). No grade stated for the SFP fiber port's electrical/optical class beyond \"1Gbps\" so it is graded eth-1g same as the copper RJ45 (spec sheet states \"1x 1GbE RJ45\" and \"1x 1Gbps SFP\" as parallel/uplinked 1GbE network ports, not simultaneous independent links — treated here as two physical ports of the same 1GbE network segment, consistent with the datasheet's Network row listing both together).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Analog Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Analog Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin balanced analog audio output, Phoenix-style captive screw terminal block"
+    },
+    {
+      "name": "Digital Audio Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1Gbps SFP cage; supports 1000Base-SX (550m OM3 MMF), 1000Base-LX (5km SMF), 1000Base-LX10 (10km SMF) modules"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix-style captive screw terminal block, 2-way API programmable"
+    },
+    {
+      "name": "IR TX",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "trs-3.5"
+      ],
+      "note": "3.5mm TS mono jack, API programmable; connector list has no 3.5mm TS id so mapped to closest 1/4in mono type"
+    },
+    {
+      "name": "IR RX",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo jack, API programmable"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A host port, max 300Mbps upstream"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC 1A external power supply; also 802.3af PoE compliant via the LAN port"
+    }
+  ]
+}

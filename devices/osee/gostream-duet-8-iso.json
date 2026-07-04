@@ -1,0 +1,132 @@
+{
+  "manufacturer": "Osee",
+  "model": "GoStream Duet 8 ISO",
+  "category": "switcher",
+  "sourceUrl": "https://osee-tech.com/products/gostream-duet-8-iso",
+  "confidence": "high",
+  "notes": "Manufacturer tech-spec table (osee-tech.com product page, embedded image \"duet8_iso_techspecs.png\") and rear-panel diagrams are the primary source; cross-checked against B&H's spec summary which independently confirms \"2 HDMI outputs and 1 SDI output.\" Physical inputs: 4x HDMI IN + 4x SDI IN (simultaneous, per \"SIMULTANEOUSLY 4 SDI + 4 HDMI\" rear-panel graphic) + 2x USB-C (labeled USB1/USB2, used as webcam inputs) + 2x XLR (Mic1/Mic2) + 2x separate 3.5mm mic/line jacks (Mic1/Mic2) + 1x RJ45 Ethernet + 1x DC power in (12V/3A barrel). Physical outputs: HDMI OUT 1, HDMI OUT 2, SDI OUT 1 (BNC), plus the two USB-C ports double as USB 3.0 UVC webcam output (up to 1080p60) — modeled as bidirectional rather than separate output ports since they are the same USB1/USB2 jacks. A 3.5mm headphone/monitor jack is also present on the rear panel. HDMI input is rated up to 4K/2160p60 (HDMI 2.0 grade); SDI input/output is rated up to 1080p60, consistent with multiple sources describing it as 3G-SDI (grade sdi-3g). USB-C ports are spec'd as \"USB 3.0\" (usb-5g). The device also accepts many non-physical/virtual channels (4x NDI|HX, 4x SRT, 4x RTMP, 2x MP4 player, web browser) counted toward its \"8 video input channels\" marketing claim — these are not physical ports and are excluded here. Ethernet speed (10/100/1000 Mbps) was stated only by a secondary manual-summary source (manuals.plus), not the manufacturer spec sheet, so eth-1g is a medium-confidence inference; core physical port counts/types are high confidence from the manufacturer's own tech-spec image and rear-panel product photography. One Osee \"Getting Started\" guide page refers to a \"HDMI OUT 3\" when describing connecting a monitor, which is inconsistent with the tech-spec sheet's \"HDMI OUT 1-2\" naming (likely inconsistent internal documentation) — the tech-spec sheet and B&H's independent confirmation of \"2 HDMI outputs\" were treated as authoritative. Desktop control-surface unit, not rack-mountable (rackUnits omitted). XLR and 3.5mm mic jacks are physically separate connectors on this unit (not combo jacks sharing one socket), so they are listed as distinct ports rather than connector+accepts.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Webcam/capture input; also usable as USB 3.0 UVC webcam output up to 1080p60"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Webcam/capture input; also usable as USB 3.0 UVC webcam output up to 1080p60"
+    },
+    {
+      "name": "MIC 1 (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Dynamic/condenser mic input with 48V phantom power"
+    },
+    {
+      "name": "MIC 2 (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Dynamic/condenser mic input with 48V phantom power"
+    },
+    {
+      "name": "MIC 1 (3.5mm)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Line-level audio input"
+    },
+    {
+      "name": "MIC 2 (3.5mm)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Line-level audio input"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Monitor/headphone output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "NDI|HX, SRT, RTMP streaming and PC control; speed stated by secondary source, not manufacturer spec sheet"
+    },
+    {
+      "name": "DC IN (12V 3A)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "Avantis",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://support.allen-heath.com/hc/en-gb/articles/40468836946065-Avantis-Getting-Started-Guide",
+  "confidence": "high",
+  "notes": "Base Avantis (dual-screen, 64x42) model. Rear panel and Technical Specifications drawn directly from the official Allen & Heath \"Avantis Getting Started Guide\" (AP11558 Issue 5, support.allen-heath.com), which lists a numbered rear-panel diagram (12 items) and front-panel diagram (2 items). Mic/Line Inputs are combo-style XLR sockets accepting balanced/unbalanced mic or line signals (documented as \"Balanced XLR\" in the Technical Specifications; treated here as XLR3 since no separate 1/4\" TRS combo barrel is called out, though many A&H consoles use XLR/TRS combo jacks — noted as a minor uncertainty). Digital Inputs/Outputs are stereo AES3 pairs, each physically an XLR3 connector carrying 2-channel AES3 (not RCA/BNC AES); labeled here as \"AES3 In\" / \"AES3 Out\" using xlr3 connector since that is the documented physical connector (AES3 is a protocol/grade context, not in the given grade enum, so grade omitted per instructions — AES3 is not one of the gradable connector types listed). The 2 \"I/O Ports\" are 128x128 expansion slots that accept optional cards (Dante, MADI, gigaACE, AES, DX Link, Waves SoundGrid, etc.) rather than fixed physical connectors themselves; they are not included as individual ports since their physical connector varies by installed card (uncertain/variable — see notes). SLink port is a locking Neutrik etherCON (RJ45-form-factor) carrying Allen & Heath's proprietary SLink protocol for remote I/O expanders (GX/DX/AB/AR ranges) and ME personal monitoring — mapped to connector \"ethercon\"; no grade applied since SLink is a proprietary protocol, not standard Ethernet, and the source does not state an IEEE speed. Network ports are standard Gigabit Ethernet (RJ45) for Avantis Editor/iOS app control — grade eth-1g per \"2 RJ45 Gigabit Ethernet ports.\" USB rear socket is USB 2.0 (Type-A, per Getting Started Guide); front sockets are USB 3.0 (Type-A) plus 1/4\" (TRS 6.35mm) and 1/8\" (TRS 3.5mm) headphone jacks. Word Clock I/O is a single BNC connector (bidirectional per device documentation: \"BNC connector for syncing from an external audio clock or providing a clock to other devices. In and Out LEDs indicate current mode\") — modeled as one bidirectional BNC port; no SDI-style grade applies since word clock is not video/data. Desktop/console form factor — no rackUnits (mixing console chassis, not rack-mount). Power: single IEC C14 inlet, 100-240V AC 50/60Hz, 150W max. Variants exist (Avantis Solo single-screen, Avantis Ultra) with different I/O counts — this entry is for the standard dual-screen Avantis console (64 channels/42 buses/12 XLR in/12 XLR out) as documented in the AP11558 Issue 5 guide.",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "1 of 12 recallable mic/line preamps, balanced XLR, +48V phantom, gain +5 to +60dB"
+    },
+    {
+      "name": "Mic/Line 2-12",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Remaining 11 of 12 recallable mic/line preamps, balanced XLR, +48V phantom"
+    },
+    {
+      "name": "AES3 In L/R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Stereo AES3 digital input pair, 32-192kHz sample rate, SRC bypassable"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "1 of 12 balanced line-level XLR outputs, +4dBu nominal, relay protected"
+    },
+    {
+      "name": "Line Out 2-12",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Remaining 11 of 12 balanced line-level XLR outputs, +4dBu nominal"
+    },
+    {
+      "name": "AES3 Out L/R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Stereo AES3 digital output pair, sample rate globally switchable 44.1/48/96kHz"
+    },
+    {
+      "name": "Word Clock",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "BNC word clock in/out; In/Out LEDs indicate current mode"
+    },
+    {
+      "name": "SLink",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Locking Neutrik etherCON port carrying proprietary SLink protocol for GX/DX/AB/AR remote I/O expanders, DX Hub, and ME personal monitoring; also digital console splits"
+    },
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1 of 2 RJ45 Gigabit Ethernet ports for Avantis Editor / iOS app control"
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "2 of 2 RJ45 Gigabit Ethernet ports"
+    },
+    {
+      "name": "USB 2.0 (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear-panel USB for show files, firmware update, USB playback/recording"
+    },
+    {
+      "name": "USB 3.0 (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB for show files, firmware update, USB playback/recording"
+    },
+    {
+      "name": "Headphone 1/4\"",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Front, under armrest; stereo headphone jack, commonly wired as TRS"
+    },
+    {
+      "name": "Headphone 1/8\"",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front, under armrest; stereo mini headphone jack"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC mains inlet with fuse and rocker switch; 100-240V AC 50/60Hz, 150W max"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "manufacturer": "LG",
+  "model": "55UH5F-H",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://solutions.lg.com/us/digital-signage/lg-55uh5f-h",
+  "confidence": "high",
+  "notes": "Discontinued commercial digital-signage display (55\" UHD IPS, webOS 4.1, part of UH5F-H series also sold as 43/49/75UH5F-H). Sources: LG Business USA solutions page and LG Hong Kong business spec page (manufacturer, consistent on all I/O). RS232C In/Out and IR In are LG's proprietary 3.5mm (TRS-style) mini-jacks, not DE-9 — mapped to trs-3.5 with an rs232 \"accepts\" tag since rs232/ir have no dedicated mini-jack id in the connector list; note this is an approximation of the physical jack. Audio In/Out are also 3.5mm stereo mini-jacks (trs-3.5). Power: display uses an internal (\"Built-in\") power supply with a standard detachable IEC C13/C14 country power cord per LG's commercial-display convention (100-240V~ 50/60Hz, 145W max) — exact inlet pin/shell not explicitly itemized on the spec page, so confidence on the power connector specifically is medium; everything else is confirmed directly from manufacturer spec tables. No separate external speaker output terminal is listed (display has no built-in speakers per LG's own spec sheet, despite some third-party resale listings claiming 10Wx2 speakers — manufacturer page does not list a speaker/speaker-out terminal, so it is omitted). No HDMI output. USB 2.0 Type-A is a single host port (bidirectional per USB host convention, though used for content playback content loading, not signal passthrough).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "RJ45(LAN) IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS232C IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "LG proprietary 3.5mm control jack carrying RS232C signal, not a DE-9 connector"
+    },
+    {
+      "name": "RS232C OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "LG proprietary 3.5mm control jack carrying RS232C signal, not a DE-9 connector"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "accepts": [
+        "ir"
+      ],
+      "note": "3.5mm mini-jack for wired IR receiver input"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in power supply, AC 100-240V~ 50/60Hz, detachable IEC power cord (exact C13/C14 shell not itemized on spec sheet)"
+    }
+  ]
+}

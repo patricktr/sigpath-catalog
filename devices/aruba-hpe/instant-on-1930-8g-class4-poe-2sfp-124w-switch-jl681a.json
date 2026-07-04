@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Aruba (HPE)",
+  "model": "Instant On 1930 8G Class4 PoE 2SFP 124W Switch (JL681A)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.hpe.com/psnow/doc/a00098249enw",
+  "confidence": "high",
+  "notes": "Confirmed via HPE official datasheet (a00098249enw) and QuickSpecs (a50000620enw), cross-checked with B&H, CDW, and multiple Aruba-authorized resellers. 8x RJ-45 10/100/1000 ports all support Class 4 PoE+ (up to 30W each) within a 124W total budget; 2x SFP slots are 1GbE only (not SFP+/10G, per model naming \"2SFP\" and datasheet). No console/serial port exists on this model — Instant On switches are managed exclusively via the Instant On mobile app, cloud web portal, or local web GUI (no CLI/console port). Power: internal AC power supply with a detachable IEC C13/C14-style cord (region-specific plug end, e.g. NEMA 5-15 on US #ABA SKU) — modeled here as a single \"iec\" power input port representing the switch-side inlet, which is standard for this class of device. Physical form factor is compact desktop-style but ships with rack-mount ears (1U rack-mountable) per HPE documentation and reseller listings (CDW lists it as rack-mountable). No USB ports on this model.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 RJ-45, Class 4 PoE+ (up to 30W)"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP slot (fiber uplink)"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GbE SFP slot (fiber uplink)"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal PSU; detachable AC power cord (IEC C13/C14 inlet), region-specific plug (e.g. US cord on #ABA variant)"
+    }
+  ]
+}

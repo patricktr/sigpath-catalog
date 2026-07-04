@@ -1,0 +1,183 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "DM3-D",
+  "category": "audio",
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/mixers/dm3/specs.html",
+  "confidence": "high",
+  "notes": "DM3-D is the Dante-equipped variant of the DM3 22-channel digital mixer; it adds two etherCON Dante ports (PRIMARY/SECONDARY) versus the base DM3, which is otherwise identical in I/O. Of the 16 Mic/Line inputs, 12 are XLR-only and 4 are XLR/TRS combo jacks (modeled as 12 separate XLR-only ports + 4 combo XLR-primary/TRS-accepts ports). Power is supplied via an external DC power supply (Yamaha PA-L500, 24V/2.5A) through a locking 4-pin XLR DC connector, not an internal PSU/IEC inlet. Desktop console form factor, not rack-mountable, so rackUnits omitted. Grades omitted for Ethernet/Dante and USB ports because Yamaha's spec sheet does not state a link-speed/USB generation beyond \"USB2.0\" for USB TO HOST (included as usb-2.0) and does not specify Dante/Network link speed (typically 100Mb/1Gb Dante over standard Ethernet, but not stated on spec page, so omitted rather than guessed for those ports).",
+  "ports": [
+    {
+      "name": "MIC/LINE 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MIC/LINE 13 (Combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "MIC/LINE 14 (Combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "MIC/LINE 15 (Combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "MIC/LINE 16 (Combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack"
+    },
+    {
+      "name": "OMNI OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Dante PRIMARY",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Dante SECONDARY",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB TO HOST",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB TO DEVICE",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR DC input for external PA-L500 power adapter, 24V/2.5A"
+    }
+  ]
+}

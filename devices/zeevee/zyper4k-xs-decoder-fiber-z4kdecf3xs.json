@@ -1,0 +1,50 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "ZyPer4K-XS Decoder Fiber (Z4KDECF3XS)",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.zeevee.com/wp-content/uploads/2024/10/ZyPer4K-XS-Z4KDECC3XS-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer data sheet used as primary source is the ZyPer4K-XS PDF (dated for Z4KDECC3XS, the copper-Ethernet sibling), which explicitly lists Z4KDECF3XS in the same product line/chassis with an identical front-panel port set except the network connector: the copper model's \"10Gb PoE Ethernet\" RJ45 port is replaced on the -F3XS fiber variant by a 10Gb fiber \"Media Transport\" port using a hot-swappable SFP+ cage (per ZeeVee's Z4KSFP10G... transceiver line and product-page description). This substitution is corroborated by the ZeeVee product page for Z4KDECF3XS and a reseller (Creation Networks) spec summary. Fiber reach depends on the SFP+ module used (multimode 850nm ~300m or single-mode 1310nm ~10-20km) — module not bundled. Audio-out jack confirmed as 3.5mm unbalanced stereo (not RCA) via reseller spec table; grade omitted on it (analog, ungraded). HDMI grade set to hdmi-2.0 per explicit \"HDMI 2.0 with HDCP pass-through\" spec. Ethernet utility port grade set to eth-1g (\"1 Gb Utility\"); fiber Media Transport port grade set to eth-10g (\"10Gb\" fiber). USB port is a single USB 2.0 Type-A used specifically for extending USB/HID between paired ZyPer4K-XS/XR encoder-decoder units, not a general host port; graded usb-2.0 per spec. Power input is 12V DC via locking barrel connector (approx. 8W) — mapped to dc-barrel as the closest listed connector id, noting the real connector is a locking (twist-lock) DC barrel variant, not a plain barrel jack. Desktop unit (7.8 x 4.6 x 1.9 in), not natively rack-mountable, so rackUnits omitted (optional Z4KRACKXS kit holds 8 units in 6RU, but that's an accessory, not the unit's native form factor).",
+  "ports": [
+    {
+      "name": "HDMI 2.0 Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Labeled \"Media Output / HDMI 2.0 OUT\" on copper sibling panel; identical on fiber variant. HDCP pass-through, embedded audio up to 8ch LPCM."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog breakout, labeled \"AUD-OUT\" on panel."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Single USB 2.0 Type-A; used to extend USB/HID between paired ZyPer4K-XS/XR encoder and decoder."
+    },
+    {
+      "name": "1 Gb Utility Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Utility/control Ethernet, separate from the main 10G media link."
+    },
+    {
+      "name": "Media Transport (Fiber)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10Gb fiber port for video/audio/control, via hot-swappable SFP+ cage; replaces the copper model's 10Gb PoE RJ45 port. Requires a ZeeVee SFP+ transceiver module (multimode ~300m or single-mode ~10-20km), not bundled."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, locking (twist-lock) barrel connector; ~8W consumption. External AC power supply included in box."
+    }
+  ]
+}

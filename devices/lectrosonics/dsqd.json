@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Lectrosonics",
+  "model": "DSQD",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://lectrosonics.com/wp-content/uploads/filr/3313/DSQD_TD.pdf",
+  "confidence": "high",
+  "notes": "Modeled as the Dante-equipped variant (base \"DSQD\"). A factory variant, \"DSQD/AES3\", replaces the two Dante RJ45 ports with two TA3M (mini-XLR3, male) jacks carrying AES3 digital audio instead — not modeled here as separate ports. Front panel also has a USB micro-B port (firmware update / Wireless Designer control, not bandwidth-graded in spec) and a bi-directional IR port (sync/setup, modeled as ir). Headphone jack is a 1/8 in (3.5mm) TRS monitor output. Antenna ports are RF antenna connectors (BNC, 50 ohm) rather than signal I/O in the AV sense, included for completeness with the closest connector id (bnc); no bandwidth grade applies. Dante ports are switched/daisy-chain ports (not independently addressable/redundant) — RJ45, Gigabit Ethernet confirmed by manufacturer spec sheet, graded eth-1g. Separate Ethernet control port (RJ45) is 10/100 class control-only per typical Lectrosonics control ports; manufacturer literature does not explicitly state its link speed, so grade omitted for that port to avoid an unconfirmed claim. Power inlet is a locking DC coaxial connector (7-18 VDC, 2.5A max per manufacturer spec); modeled as dc-barrel as the closest connector id since it's an external DC input rather than mains IEC.",
+  "ports": [
+    {
+      "name": "Antenna A In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "50 ohm RF antenna input, channel A"
+    },
+    {
+      "name": "Antenna A Out (loop-thru)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "50 ohm RF loop-thru to additional DSQD mainframe via internal multicoupler"
+    },
+    {
+      "name": "Antenna B In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "50 ohm RF antenna input, channel B"
+    },
+    {
+      "name": "Antenna B Out (loop-thru)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "50 ohm RF loop-thru to additional DSQD mainframe via internal multicoupler"
+    },
+    {
+      "name": "1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, receiver channel 1, -35 to +8 dBu"
+    },
+    {
+      "name": "2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, receiver channel 2, -35 to +8 dBu"
+    },
+    {
+      "name": "3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, receiver channel 3, -35 to +8 dBu"
+    },
+    {
+      "name": "4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, receiver channel 4, -35 to +8 dBu"
+    },
+    {
+      "name": "Dante (Primary/Secondary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Two switched Dante ports for daisy-chain/loop-through on a Dante audio network; not independently configurable as redundant ports"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control port for Wireless Designer / 3rd-party monitoring and control; link speed not stated by manufacturer"
+    },
+    {
+      "name": "Power Inlet",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC coaxial inlet, 7-18 VDC, 2.5A max"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front panel 1/8 in headphone monitor jack"
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Front panel bi-directional IrDA port for transmitter frequency/encryption key sync"
+    }
+  ]
+}

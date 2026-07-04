@@ -1,0 +1,36 @@
+{
+  "manufacturer": "RTI",
+  "model": "KX2",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.avproglobal.com/products/rti-kx2",
+  "confidence": "medium",
+  "notes": "RTI's own site (rticontrol.com / rticorp.com) now redirects to AVPro Global (RTI's parent/distributor), which hosts the current product page and cutsheet PDF — used as the primary source, cross-checked against RTI's original cutsheet_KX2.pdf (same content, mirrored at koaedi.com and via AV-iQ), and the RTI KX2 Quick Reference Manual (ManualsLib). The KX2 is an in-wall 2.8\" touchscreen + 12-button keypad controller (desktop/in-wall, not rack-mountable — rackUnits omitted/0). It has NO AV signal I/O (no HDMI/SDI/analog video or audio ports) — it is a pure control/UI device. Physical connectors: (1) a standard RJ45 Ethernet port (10/100Base-T, 802.3af PoE Class 2, can power the unit); (2) a \"Control Port\" — also RJ-45/Cat-5 terminated — that is a proprietary bus carrying RS-485 control comms, IR output, and +9-16VDC power/ground to/from an RTI XP-series control processor (pin-out: RS-485+, RS-485-, IR, +9-16VDC x2, GND x2); this is not standard Ethernet so no bandwidth grade was assigned to either RJ45. (3) A front-panel USB \"Mini-B\" programming port (USB-A-to-Mini-B cable) — Mini-B is not in the provided connector enum, so usb-micro was used as the closest match; no USB speed spec is published (treated as USB 2.0-class but grade omitted since not explicitly stated). Power can come from either PoE on the Ethernet port or +9-16VDC delivered over the Control Port's RJ45 pins — there is no separate standalone DC barrel jack on this unit, so no dc-barrel port was added. Confidence set to medium because: connector \"grade\" is unconfirmed/not applicable for the two RJ45s (deliberately omitted), and the USB Mini-B connector had to be approximated to the nearest enum value (usb-micro) since true Mini-B is absent from the allowed list.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T with 802.3af PoE (Class 2); can power the unit"
+    },
+    {
+      "name": "Control Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Cat-5/RJ-45 terminated proprietary link to RTI XP-series processors; carries RS-485 comms, IR, and +9-16VDC power/ground on pin pairs (not standard Ethernet, so no grade assigned)"
+    },
+    {
+      "name": "USB Programming Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel port beneath bezel; uses USB-A to Mini-B cable for firmware/programming. Mini-B is not in the enum list; usb-micro chosen as closest match. No speed grade published."
+    },
+    {
+      "name": "DC Power In (via Control Port)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "+9VDC to +16VDC, 0.5-1A, delivered over dedicated pins of the Control Port RJ45 (alternative to PoE); not a separate physical jack"
+    }
+  ]
+}

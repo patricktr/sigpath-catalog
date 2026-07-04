@@ -1,0 +1,31 @@
+{
+  "manufacturer": "Extron",
+  "model": "TLP Pro 1025M",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.extron.com/download/files/specs/tlp_pro_1025m_series_6089-D6.pdf",
+  "confidence": "high",
+  "notes": "Desktop/wall-mount touchpanel (mounts to wall, furniture, glass, or rack via optional accessory) — no rack units set since it is not inherently rack-mounted hardware. Sole power input is Power over Ethernet (802.3af, Class 3) via the RJ-45 jack; there is no separate AC or DC power connector, so no discrete power port is listed. The 1 digital input uses a 3.5 mm 2-pole captive screw connector (pin 1 = digital in, pin 2 = ground) — mapped to the closest allowed connector id \"euroblock\" since a true 3.5mm captive-screw terminal block isn't in the list; note it's actually a mini/3.5mm-pitch screw terminal, not a full-size Euroblock. The USB port is a micro-B USB 2.0 device/peripheral port (not a host port), used for panel connectivity (e.g. to a PC) rather than connecting USB peripherals to the panel, so it is marked bidirectional per USB convention but functions as a device-side connection. Audio output is to 2 built-in mono speakers only — there is no external audio output jack, so no analog audio port is listed. No RS-232 or IR ports exist on this model (control/communication is via Ethernet only). Source: official Extron spec sheet PDF (doc 4357-D2-062118, TLP Pro 1025M Series and TLS 1025M), fetched via www.extron.com/download/files/specs/tlp_pro_1025m_series_6089-D6.pdf.",
+  "ports": [
+    {
+      "name": "LAN (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T; also carries Power over Ethernet 802.3af Class 3 as the device's sole power input"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "1 micro-B receptacle, USB 2.0 high-speed device/peripheral port"
+    },
+    {
+      "name": "Digital I/O",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "1 configurable digital input; actual connector is a 3.5 mm 2-pole captive screw terminal (closest match in allowed connector list is euroblock/terminal block)"
+    }
+  ]
+}

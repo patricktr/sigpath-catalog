@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Kramer",
+  "model": "FC-46H2",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.markertek.com/Attachments/Specifications/Kramer/KR-FC-46H2_Data_Sheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer Kramer data sheet PDF (hosted via Markertek) confirms rear-panel layout: HDMI In, HDMI Out (with ARC), Balanced Stereo Analog audio on a 5-pin terminal block, S/PDIF on RCA, a DIP-switch/mute contact-closure block, and a 5V DC barrel power input. HDMI graded hdmi-2.0 since the datasheet states \"4K@60Hz and ARC as specified in HDMI 2.0\" and bandwidth up to 18Gbps. No rackUnits set - this is a compact desktop/surface-mount DigiTOOLS enclosure (4.72 x 2.81 x 0.96 in); Kramer offers an optional adapter to rack-mount 3 units side-by-side in 1U but the device itself is not natively rack-mountable. The front-panel mini/micro USB port is for firmware upgrade only (not used for signal I/O) and its USB version/speed is not published, so no grade was set. The 5-pin terminal block audio output is euroblock-style (closest available connector id); the list has no dedicated \"balanced audio terminal block\" id.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 4K@60 (4:4:4), 18Gbps, HDCP 2.2/1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports ARC (Audio Return Channel) as specified in HDMI 2.0"
+    },
+    {
+      "name": "S/PDIF",
+      "direction": "output",
+      "connector": "rca",
+      "note": "De-embedded digital audio output"
+    },
+    {
+      "name": "Analog (Balanced Stereo Audio Out)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin terminal block: L+, L-, GND, R+, R- balanced stereo analog audio de-embedded output"
+    },
+    {
+      "name": "5V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input from included 5.2V DC, 4A external power adapter; unit consumption 5V DC 370mA"
+    },
+    {
+      "name": "USB (firmware upgrade)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro/mini USB port for local firmware upgrade only; not a signal/data host port, no speed grade published"
+    }
+  ]
+}

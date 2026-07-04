@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Uniguest (ONELAN)",
+  "model": "NTB-HDN-1",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.eclipsedigitalmedia.co.uk/wp-content/uploads/2023/10/NTB-HDN-1-Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Official ONELAN/Uniguest datasheet (via Eclipse Digital Media, an authorized reseller hosting the manufacturer PDF) describes the NTB-HDN-1 as a 1st Generation budget 4-zone fanless signage player, sold as NTB-HDN-1-S (standard) or NTB-HDN-1-S-W (with Wi-Fi). Video connectors are listed simply as \"HDMI, DisplayPort\" and \"Ethernet 10/100/1000Base-T (RJ45)\" with no explicit port counts, so single HDMI-out and single DisplayPort-out and single RJ45 are assumed (consistent with the product photo, which shows one visible rear I/O cluster). No HDMI/DP version or Ethernet speed grade is stated in the datasheet, so grade is omitted per instructions (spec does not state a version). Power is 12V/2A via an external PSU with mains cable (weight spec explicitly includes \"PSU and mains cable\"), so modeled as a dc-barrel input — the exact barrel size is not published. RS-232 port is a DB9 \"COM\" connector visible in the product photo. Two USB 3.0 (blue, SuperSpeed-marked, seen front-facing in product photo) and two USB 2.0 ports are listed; USB 2.0 port locations are not visible in the available photo angle but confirmed in the spec table. Optional internal M.2 Wi-Fi card (802.11 a/b/g/n) is not a physical port and is omitted. This is a compact fanless media-player box (116.6 x 107.4 x 30 mm) intended for VESA/back-of-screen mounting, not rack-mountable, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "COM (RS-232)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "USB 3.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12V/2A PSU with mains cable; exact barrel size not published"
+    }
+  ]
+}

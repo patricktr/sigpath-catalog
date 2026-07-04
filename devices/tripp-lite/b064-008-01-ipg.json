@@ -1,0 +1,106 @@
+{
+  "manufacturer": "Tripp Lite",
+  "model": "B064-008-01-IPG",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://assets.tripplite.com/owners-manual/933595_b064-xxx-xx-ipg_ownersmanual_revd.pdf",
+  "confidence": "medium",
+  "notes": "Authoritative source is the manufacturer owner's manual (shared for B064-008-01-IPG and B064-016-01-IPG), which contains a per-model specifications table explicitly listing the B064-008-01-IPG's I/O. Local console breakout: a single HD18 connector on the rear panel connects via an included combo cable kit to 1 VGA, 2 USB-A, and 2 PS/2 (mini-DIN) connectors for keyboard/mouse/monitor — modeled here as the four discrete resulting connectors since the HD18 itself isn't a usable end-user port and isn't in the allowed connector list. Max video resolution is 1600x1200@60Hz over VGA; VGA has no defined grade scale so no grade was set. The front-panel \"Audio Ports\" (mic/speaker) shown in the component diagram appear in a component list shared across the B064 family front-panel image but are not called out in the per-model specifications table, so they were omitted for confidence reasons (may or may not be present on the 8-port model). Power: dual redundant IEC-320-C6 (figure-8/C7-style but rated per manual as C6 receptacles paired with C13-C14 cords elsewhere in the doc — modeled as iec-c7 for the closest connector-list match) inputs, 100-240V 50/60Hz auto-switching, either supply alone can power the unit.",
+  "ports": [
+    {
+      "name": "Computer/Server Port 1-8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "x8 RJ45 female ports to Cat5e/6 Server Interface Units (SIUs); carries KVM signal, not network data"
+    },
+    {
+      "name": "LAN 1 (Primary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary network port; LAN LED indicates up to 1000 Mbps"
+    },
+    {
+      "name": "LAN 2 (Secondary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary/backup network port"
+    },
+    {
+      "name": "Modem Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional dial-in RJ45 modem connection for out-of-band access"
+    },
+    {
+      "name": "Local Console VGA",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Part of HD18 local console breakout; max resolution 1600x1200@60Hz"
+    },
+    {
+      "name": "Local Console USB (Keyboard/Mouse) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Part of HD18 local console breakout cable kit"
+    },
+    {
+      "name": "Local Console USB (Keyboard/Mouse) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Part of HD18 local console breakout cable kit"
+    },
+    {
+      "name": "Local Console PS/2 (Keyboard)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "6-pin mini-DIN PS/2 keyboard connector; closest list match used since PS/2 mini-DIN isn't in the allowed connector set"
+    },
+    {
+      "name": "Local Console PS/2 (Mouse)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "6-pin mini-DIN PS/2 mouse connector; closest list match used since PS/2 mini-DIN isn't in the allowed connector set"
+    },
+    {
+      "name": "Front Panel USB Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel additional USB-A port; supports external keyboard/mouse and Virtual Media"
+    },
+    {
+      "name": "Front Panel USB Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Front Panel USB Port 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Laptop USB Console (LUC) Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB Micro-B port for direct laptop console connection"
+    },
+    {
+      "name": "Power Supply 1",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "IEC-320-C6 rear power inlet, one of two redundant supplies; 100-240V 50/60Hz, 1A; ships with C13-to-C14 or C13-to-5-15P cords depending on region"
+    },
+    {
+      "name": "Power Supply 2",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "Second of two redundant power inlets (IEC-320-C6); unit remains powered if either supply fails"
+    }
+  ]
+}

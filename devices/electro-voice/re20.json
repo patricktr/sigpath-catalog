@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Electro-Voice",
+  "model": "RE20",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://products.electrovoice.com/na/en/re20",
+  "confidence": "high",
+  "notes": "Passive dynamic (moving-coil) cardioid broadcast microphone with Variable-D design; requires no external/phantom power. Single balanced audio output on a 3-pin XLR male connector (pin 2 hot), 150 ohms balanced output impedance, 45 Hz-18 kHz frequency response. No bandwidth grade applies since XLR3 analog audio connectors are not in the graded connector list. A \"RE20-BLACK\" color variant exists with identical electrical specs. No rack mounting (handheld/stand-mounted mic, not rack equipment).",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR male, transformer-balanced, 150 ohms, pin 2 positive/hot"
+    }
+  ]
+}

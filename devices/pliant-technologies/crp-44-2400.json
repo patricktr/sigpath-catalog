@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Pliant Technologies",
+  "model": "CRP-44-2400",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://plianttechnologies.com/wp-content/uploads/2023/05/CRP_MANUAL_D0000215.pdf",
+  "confidence": "high",
+  "notes": "Belt-worn wireless intercom radio pack (CrewCom system), not rack-mountable (rackUnits omitted). Physical I/O is minimal: a 4-pin male XLR headset jack (combined mic input + speaker output on one connector, wired Pin1 Mic-, Pin2 Mic+, Pin3 Speaker-, Pin4 Speaker+) and a Micro USB port used for pairing with the Control Unit, firmware updates via CrewWare, and battery charging. No AC mains inlet on the unit itself; it is charged via the Micro USB port using an included 6W USB wall adapter (external adapter, not a device-body power connector), or runs on 3x AA batteries. No grade applies to the headset XLR (analog audio) or the USB port (spec sheet states only 'Micro USB' with no USB data-transfer speed/version). Category set to audio/Wireless mic as this is an intercom belt-pack transceiver, not a switcher/router. Model CRP-44-2400CE (ETSI-compliant EU variant) shares identical specs/connectors. Manufacturer manual confirms 'All RP models have identical rear views,' i.e. CRP-12/22/44 across 900MHz/2.4GHz variants share the same physical connector layout.",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "4-pin male XLR headset connector combining mic input and speaker output (Pin1 Mic-, Pin2 Mic+, Pin3 Speaker-, Pin4 Speaker+); not a DC power pin despite connector id name, closest match in allowed list for 4-pin XLR"
+    },
+    {
+      "name": "USB (Micro B)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Used for pairing with Control Unit, firmware updates via CrewWare, and battery charging; no data speed/version stated in spec"
+    }
+  ]
+}

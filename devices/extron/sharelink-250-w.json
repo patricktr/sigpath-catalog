@@ -1,0 +1,63 @@
+{
+  "manufacturer": "Extron",
+  "model": "ShareLink 250 W",
+  "category": "network",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.esistemas.pt/fotos/produtos/extron-slink250.pdf",
+  "confidence": "high",
+  "notes": "Specs drawn from Extron's official combined datasheet \"ShareLink 250 W and ShareLink 200 N Specifications\" (part 4568-D8; mirrored copy fetched via esistemas.pt because extron.com blocks automated fetches; cross-checked against Extron's ShareLink 250 W User Guide 68-2822-01). HDMI output has no version stated on the datasheet (max resolution given is 1920x1080@60Hz) so HDMI grade is omitted rather than guessed. Analog audio output is a 3.5mm stereo TRS mini-jack (tip=L, ring=R, sleeve=Gnd), modeled as trs-3.5 output. HDMI carries embedded 2-channel PCM digital audio (not a separate physical port) so it is not listed separately. Power is via an external desktop adapter (100-240VAC in; 5VDC/2.6A/13W out) terminating in a DC power jack on the unit — modeled as dc-barrel (exact barrel diameter not published); the unit can alternatively be powered via PoE (802.3at class 0/type 1) over the same RJ45 data port rather than a second physical power connector, so PoE is not listed as a separate port. Ethernet is Gigabit-capable (10/100/1000Base-T) — graded eth-1g. The 3 USB Type-A ports are USB 2.0 hosts (for the USB Player feature) — graded usb-2.0. Enclosure is a compact half-rack-width \"puck\" (1.0\"H x 6.51\"W x 3.3\"D) that needs an optional 1U rack shelf accessory to rack-mount, so rackUnits is omitted (not natively rack-mountable). Category/type chosen as closest fit for a wireless/wired BYOD content-sharing gateway; no better match exists in the given enum (it is not truly a network switch, converter, or media player in the traditional sense). Integrated dual-band 802.11a/b/g/n wireless AP is a wireless interface, not physical wired I/O, so it is omitted per task scope.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Female HDMI Type A output, up to 1920x1080@60Hz, with embedded 2-channel PCM digital audio. No HDMI version stated by manufacturer, so grade omitted."
+    },
+    {
+      "name": "VGA Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Female 15-pin HD (DE-15) RGBHV output, up to 1920x1080@60Hz."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, unbalanced analog audio output (tip=L, ring=R, sleeve=Gnd)."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Female RJ-45, 10/100/1000Base-T, half/full duplex with autodetect. Also accepts Power over Ethernet (802.3at, class 0/type 1) to power the unit."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "One of 3 identical USB Type-A host ports (high-speed USB 2.0) for the USB Player feature (flash-drive playback of documents/photos/video/audio)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "One of 3 identical USB Type-A host ports (high-speed USB 2.0) for the USB Player feature (flash-drive playback of documents/photos/video/audio)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "One of 3 identical USB Type-A host ports (high-speed USB 2.0) for the USB Player feature (flash-drive playback of documents/photos/video/audio)."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power supply input: 100-240VAC in, 5VDC/2.6A/13W out via included external adapter. Unit can alternatively be powered via PoE over the LAN port instead of this connector."
+    }
+  ]
+}

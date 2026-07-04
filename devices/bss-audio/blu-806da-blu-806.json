@@ -1,0 +1,104 @@
+{
+  "manufacturer": "BSS Audio",
+  "model": "BLU-806DA (BLU-806)",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://adn.harmanpro.com/product_documents/documents/3556_1507067987/BLU-806_Datasheet_100217_original.pdf",
+  "confidence": "high",
+  "notes": "Sourced from BSS Audio's official BLU-806DA datasheet (PDF), which includes a labeled rear-panel photograph confirming connector types. The chassis has 4 field-configurable card slots (A-D), each accepting one of six I/O card types (Analog In, Analog Out, Digital In, Digital Out, AEC In, Telephone Hybrid), 4 channels per card, using pluggable Euroblock terminal blocks (S/+/- per channel); actual signal direction and count depend on which cards are installed (up to 16 of any given I/O type across all slots, max 16 total I/O). The datasheet's rear-panel photo shows all 4 slots populated with analog-style cards, which is reflected here, but real-world units may have a different card mix or empty slots. Dante/AES67 Primary and Secondary ports and the separate control Ethernet port do not have a stated Ethernet speed in the datasheet (grade eth-100m is an inference based on typical Dante Ethernet ports of this product generation, not explicitly confirmed in the source - treat with medium confidence for those three grade values specifically). BLU link ports are a proprietary BSS digital audio bus (256 ch) run over standard Cat5e/RJ45 cabling, not general-purpose Ethernet data, so no grade was set for them. RS232 is a female DB9 connector per the photo. Power is auto-switching IEC C14 inlet, 100-240V 50/60Hz, 55W, fuse protected. Device is formerly named \"BLU-806\", later revised as \"BLU-806DA\" (Dante/AES67-equipped); model field reflects both names as they are used interchangeably by BSS and retailers.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dante/AES67 primary network port"
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dante/AES67 secondary (redundant) network port"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 male serial port for third-party control"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Control/HiQnet Ethernet port, separate from Dante ports"
+    },
+    {
+      "name": "BLU link In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary 256-channel low-latency digital audio bus over Cat5e (not standard Ethernet data)"
+    },
+    {
+      "name": "BLU link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary 256-channel low-latency digital audio bus over Cat5e (not standard Ethernet data)"
+    },
+    {
+      "name": "48K In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Word clock sync input, BNC, labeled 48K"
+    },
+    {
+      "name": "48K Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Word clock sync output, BNC, labeled 48K"
+    },
+    {
+      "name": "Control Inputs 1-12",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "GPIO control inputs, pluggable Euroblock terminal block, 12 total"
+    },
+    {
+      "name": "Logic Outputs 1-6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "GPIO logic outputs, pluggable Euroblock terminal block, 6 total"
+    },
+    {
+      "name": "Slot A Ch 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Card slot A shown populated with a 4-channel analog I/O card (S/+/- Euroblock per channel) in the datasheet photo; slots A-D are field-configurable with analog input, analog output, digital I/O (AES/EBU or S/PDIF), AEC input, or telephone hybrid cards"
+    },
+    {
+      "name": "Slot B Ch 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Card slot B, same modular/configurable I/O as slot A"
+    },
+    {
+      "name": "Slot C Ch 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Card slot C, same modular/configurable I/O as slot A"
+    },
+    {
+      "name": "Slot D Ch 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Card slot D, same modular/configurable I/O as slot A"
+    }
+  ]
+}

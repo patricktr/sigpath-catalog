@@ -1,0 +1,222 @@
+{
+  "manufacturer": "Lightware",
+  "model": "MX2-8x8-HDMI20-Audio-L",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://archive.lightware.com/pub/media/lightware/filedownloader/file/Product-Brief/MX2-8x8-HDMI20-Audio-L.pdf",
+  "confidence": "high",
+  "notes": "Source: official Lightware product brief PDF (archive.lightware.com), Part No. 9131 0050, confirmed against rear/front panel photos in the same document. Video: 8x HDMI 2.0 in / 8x HDMI 2.0 out, 18 Gbps per port, fully non-blocking, up to 4096x2160@60Hz RGB 4:4:4, HDCP 1.4/2.2, HDMI 1.x/2.0 and DVI 1.0 compliant. Audio: 8x stereo balanced analog audio embedder inputs and 8x de-embedded audio outputs, each on 5-pole Phoenix/euroblock connectors (only stereo LPCM can be de-embedded). Control: RS-232 on 3-pole Phoenix/euroblock, Ethernet RJ45, and a front-panel mini-USB (labeled 'USB CTRL') — mapped to 'usb-micro' since 'mini-usb' is not an available connector id in the schema; treat this as an approximation of the real mini-USB-B connector. Power: single IEC C14 inlet, 100-240VAC 50/60Hz, max 75W, fused F3.15A. Rack: 1RU, 442mm W (482mm with ears) x 277.5mm D x 43.7mm H, 3.25kg. No DisplayPort, SDI, or digital audio (AES/TOSLINK) ports on this model — confirmed both by the brief's connector table and the comparison table on page 4 showing DP='x' for this SKU. HDMI grade set to hdmi-2.0 per manufacturer's explicit \"HDMI 2.0\" labeling and 18Gbps bandwidth (matches HDMI 2.0 spec ceiling); note the brief also states 1080p@120Hz and optional 4:4:4→4:2:0 subsampling / horizontal splitting to 2x HDMI1.4 links as advanced features, not separate physical ports. This is the \"-Audio-L\" variant (adds the 8x8 balanced analog audio embed/de-embed connectors and front-panel LCD/buttons) versus the plain \"MX2-8x8-HDMI20-L\" (no audio ports) and \"MX2-8x8-HDMI20-CA\" (only 2x audio ports, no front panel controls) — do not conflate specs across these sibling SKUs.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 7",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "Audio In 8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced analog audio embedder input"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 5",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 6",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 5",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 7",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "Audio Out 8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock, stereo balanced de-embedded audio output (LPCM only), volume adjustable"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole Phoenix/euroblock serial control connector (TX/RX/GND)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet control port; link speed not stated in the product brief so grade omitted"
+    },
+    {
+      "name": "USB CTRL",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel port is labeled mini-USB on the physical device; 'usb-micro' chosen as closest available connector id since 'mini-usb' is not in the allowed list"
+    }
+  ]
+}

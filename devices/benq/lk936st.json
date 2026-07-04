@@ -1,0 +1,98 @@
+{
+  "manufacturer": "BenQ",
+  "model": "LK936ST",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.benq.com/en-us/business/projector/lk936st/specifications.html",
+  "confidence": "medium",
+  "notes": "Primary source: BenQ's own specification pages (benq.com/en-us/business/projector/lk936st/specifications.html and benq.com/en-us/projector/golf/lk936st/spec.html), which agree on all port counts and types. HDMI 1 & 2 are both confirmed HDMI 2.0b/HDCP2.2 (graded hdmi-2.0). LAN RJ45 speed not explicitly stated; graded eth-100m as a conservative default typical for projector control LAN ports (not confirmed gigabit). HDBaseT RJ45 port carries video/audio/control, not left ungraded since it isn't a standard Ethernet data-rate spec. USB Type-A is 2.0/5V-2A per manual, primarily for power/service (e.g., dongle power), not a full data host — marked as output since its stated purpose is power supply rather than data transfer, though physically it could pass USB 2.0 data. S/PDIF connector form (optical Toslink vs coaxial) and AC inlet connector type (assumed IEC C13/14) were not explicitly labeled with connector hardware type on the spec sheets or accessible manual excerpts, so these two are inferred from common BenQ projector design conventions — flagged for extra scrutiny. 3D Sync In/Out and 12V Trigger are all 3.5mm mini-jacks per spec but serve non-audio signaling purposes; mapped to the closest available connector ids (trs-3.5, dc-barrel) since no dedicated \"signal jack\" connector id exists in the allowed list. Unit is a fixed/ceiling-mount short-throw projector (0.8 throw ratio), not rack-mountable, so rackUnits omitted. Weight 7 kg, dimensions 416x166x351mm (WxHxD), power consumption 440W typical at 110V, universal AC 100-240V 50/60Hz input.",
+  "ports": [
+    {
+      "name": "HDMI-1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI-2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Display Port",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "HDBaseT (RJ45)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Video/audio/control over HDBaseT; not a standard Ethernet data grade"
+    },
+    {
+      "name": "LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0, 5V/2A power supply port (service/power only, not a data host in typical use)"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 pin serial control"
+    },
+    {
+      "name": "S/PDIF",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Digital audio out, multi-channel/RAW; exact optical vs coaxial form not explicitly stated on spec pages, assumed optical Toslink per common BenQ practice"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "VESA 3D sync; closest connector match is 3.5mm mini-jack"
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "VESA 3D sync; closest connector match is 3.5mm mini-jack"
+    },
+    {
+      "name": "Wired Remote In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Wired Remote Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC 12V Trigger",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "3.5mm jack carrying 12V trigger signal; closest listed connector id chosen since a signaling 3.5mm jack isn't its own category"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Power inlet type (IEC C13/14) inferred from typical BenQ mains-powered projector design; not explicitly labeled as a connector type on spec pages"
+    }
+  ]
+}

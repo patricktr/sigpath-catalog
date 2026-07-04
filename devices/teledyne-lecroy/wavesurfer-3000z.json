@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Teledyne LeCroy",
+  "model": "WaveSurfer 3000z",
+  "category": "other",
+  "sourceUrl": "https://cdn.teledynelecroy.com/files/pdf/wavesurfer-3000z-oscilloscope-datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Covers all five WaveSurfer 3000z models (3014z 100MHz, 3024z 200MHz, 3034z 350MHz, 3054z 500MHz, 3104z 1GHz) — physical I/O is identical across the line per the official datasheet and Getting Started Guide. Not an AV device; this is a bench oscilloscope, so category/type lists don't have a good fit (\"other\" used). BNC channel inputs (CH1-CH4), EXT Trigger In, AUX Out, and WaveSource Out are all 50-ohm BNC test-and-measurement signals, not video SDI, so no bandwidth \"grade\" applies to them (grade scale is video/data-specific per instructions). VGA output mapped to the \"vga\" connector id (DB-15, 1024x600 max resolution support). Ethernet is 10/100Base-T (RJ-45) so graded eth-100m (the port supports both 10 and 100 Mb/s; 100M chosen as the port's max rated speed). USB: 4 total USB 2.0 Host ports (2 front + 2 rear, USB-A, for peripherals/flash drives) graded usb-2.0; plus 1 rear USBTMC device port for remote PC control, wired via USB-A/B cable, so labeled as USB-B (device-side) per the manual's connection instructions, also graded usb-2.0. The optional 16-channel Mixed Signal digital leadset connects via a proprietary \"Mixed Signal Interface\" port on the front panel (a keyed ribbon/leadset connector, not a BNC) — no id in the allowed connector list matches this proprietary interface, so it is omitted from the port list rather than mis-mapped; treat the physical I/O list as slightly incomplete on that one interface. AC power inlet is a standard IEC C14 rear inlet with integrated fuse holder (universal 100-240VAC auto-sensing); cord ships per-region. Source: official Teledyne LeCroy datasheet (wavesurfer3000z_ds-20jan22, connectivity table on p.15) and official Getting Started Guide (934416-00 Rev A, labeled front/back panel diagrams on pp.4-7), both hosted on cdn.teledynelecroy.com — fully authoritative and consistent with each other.",
+  "ports": [
+    {
+      "name": "CH 1",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "CH 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "CH 3",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "CH 4",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "USB 2.0 Ports (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "2 front host ports for peripherals/flash drives"
+    },
+    {
+      "name": "USB 2.0 Ports (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "2 rear host ports; 4 USB 2.0 host ports total front+rear"
+    },
+    {
+      "name": "USBTMC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rear device port for remote PC control via USB-A/B cable"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T LAN, VICP/LXI compatible"
+    },
+    {
+      "name": "VGA Video Output",
+      "direction": "output",
+      "connector": "vga",
+      "note": "DB-15, supports external monitor up to 1024x600"
+    },
+    {
+      "name": "EXT Trigger Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "50-ohm BNC external trigger, not a video/data bandwidth-graded port"
+    },
+    {
+      "name": "AUX Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Trigger-out BNC to another instrument"
+    },
+    {
+      "name": "WaveSource Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Optional built-in function generator output, up to 25MHz"
+    },
+    {
+      "name": "AC Power Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with integrated fuse holder; 100-240VAC auto voltage selection"
+    }
+  ]
+}

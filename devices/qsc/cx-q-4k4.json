@@ -1,0 +1,68 @@
+{
+  "manufacturer": "QSC",
+  "model": "CX-Q 4K4",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/amp/cx-q/q_amp_cxq_usermanual.pdf",
+  "confidence": "high",
+  "notes": "4-channel, 4000W network amplifier for Q-SYS. Two RJ45 Q-LAN ports (LAN A required, LAN B optional/redundant) carry Q-SYS audio transport and control over standard gigabit Ethernet (per QSC datasheet \"gigabit Ethernet protocols and hardware\"); graded eth-1g. Four Mic/Line inputs use 3-pin Euroblock connectors (balanced or unbalanced), +12V phantom power switchable per channel in Q-SYS Designer. Four speaker outputs share a single 8-pin Euroblock connector block (2 pins per channel, A-D); channels can be bridged/paralleled in Q-SYS Designer for higher voltage/current (not modeled as separate ports here since the physical connector is fixed). GPIO is a single 16-pin Euroblock connector carrying 8 bidirectional GPIO lines plus 3.3V, ground, and relay (NO/COM/NC) pins - modeled here as one bidirectional euroblock control port. AC inlet is a locking IEC C14 (rear-panel locking IEC C-14, universal 100-240VAC 50/60Hz with active PFC). Sourced from QSC/Q-SYS official datasheet (qsys.com PDF) and official CX-Q/CX-Qn User Manual (TD-001586-01-B, qscaudio.com), both authoritative manufacturer sources. Unit is 2RU rack-mount, 3.5 x 19 x 16 in.",
+  "ports": [
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Q-LAN network primary port; required, carries Q-SYS audio transport, control, and firmware"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Q-LAN network secondary/redundant port; optional"
+    },
+    {
+      "name": "MIC/LINE 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style mic/line input, balanced or unbalanced, switchable +12V phantom power"
+    },
+    {
+      "name": "MIC/LINE 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style mic/line input, balanced or unbalanced, switchable +12V phantom power"
+    },
+    {
+      "name": "MIC/LINE 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style mic/line input, balanced or unbalanced, switchable +12V phantom power"
+    },
+    {
+      "name": "MIC/LINE 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style mic/line input, balanced or unbalanced, switchable +12V phantom power"
+    },
+    {
+      "name": "OUTPUTS TO SPEAKERS A-D",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Single 8-pin Euro-style connector carrying 4 amplifier channel outputs (A,B,C,D); Low-Z, 70V, or 100V direct drive; channels can be bridged/paralleled in Q-SYS Designer"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "16-pin Euro-style connector: 8 configurable bidirectional GPIO lines plus 3.3V, ground, and dry relay contacts (NO/COM/NC)"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC C14 inlet; universal 100-240 VAC, 50-60 Hz, with active Power Factor Correction"
+    }
+  ]
+}

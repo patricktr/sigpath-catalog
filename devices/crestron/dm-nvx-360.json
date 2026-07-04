@@ -1,0 +1,95 @@
+{
+  "manufacturer": "Crestron",
+  "model": "DM-NVX-360",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://docs.crestron.com/en-us/9496/Content/Topics/Specifications/Specifications-360.htm",
+  "confidence": "high",
+  "notes": "DM-NVX-360 is a 4K60 4:4:4 AV-over-IP encoder/decoder (works as either transmitter or receiver). HDMI in/out support HDCP 2.3, HDR10/HDR10+/Dolby Vision, up to 4096x2160@60 4:4:4 — graded hdmi-2.0 (spec does not explicitly state \"2.0\" version number but bandwidth/feature set, incl. 4K60 4:4:4 + HDR, matches HDMI 2.0; not confirmed verbatim as \"HDMI 2.0\" in source, so treat as inferred). Ethernet 1 supports PoE+ (802.3at) as power sourcing equipment input, not shown as a separate power port. Ethernet 3 is limited to 100BASE-TX (100m) per spec while Ethernet 1/2 are 100BASE-TX/1000BASE-T (eth-1g). Ethernet 4 is an SFP cage accepting a Crestron SFP-1G transceiver (graded eth-1g). USB Device is USB-C (2.0 speed only, not USB-C's higher data modes) and USB Host / USB HID are USB-A (2.0). Audio I/O is a 5-pin 3.5mm captive/detachable terminal block carrying balanced/unbalanced stereo line-level audio (configurable input or output) — modeled here as bidirectional trs-3.5 combining both channels into one physical connector since it's a single 5-pin block, not two mono euroblocks. IR 1-2 is a 4-pin 3.5mm detachable terminal block (mapped to nearest connector id \"trs-3.5\" is not appropriate since it's a multi-pin terminal block for two IR/serial ports, not a single audio jack; mapped to euroblock as closest screw-terminal analog). COM is a 5-pin 3.5mm detachable terminal block, bidirectional RS-232 (mapped to euroblock as closest screw-terminal connector, since no bare \"terminal block RS232\" id exists). Power input is 24VDC 1.25A via 2.1x5.5mm barrel connector (dc-barrel). Chassis ground lug (6-32 screw) omitted as not a signal/power I/O port in the required sense. Device is freestanding/surface-mount/single-rack-rail — not a standard rack-unit (RU) product, so rackUnits omitted. A companion model DM-NVX-360C has a slightly different form factor; do not confuse.",
+  "ports": [
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB Device",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB HID",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T; supports PoE+ input (802.3at)"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T"
+    },
+    {
+      "name": "Ethernet 3 (10/100)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX only"
+    },
+    {
+      "name": "Ethernet 4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage; accepts Crestron SFP-1G Series transceiver module"
+    },
+    {
+      "name": "Audio I/O",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "5-pin 3.5mm detachable terminal block; balanced/unbalanced stereo line-level, configurable as input or output"
+    },
+    {
+      "name": "IR 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block carrying two IR/serial control ports; closest listed connector id to a multi-pin screw terminal block"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "5-pin 3.5mm detachable terminal block, bidirectional RS-232; closest listed connector id to a multi-pin screw terminal block"
+    },
+    {
+      "name": "24VDC 1.25A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm DC power connector, 24VDC power input"
+    }
+  ]
+}

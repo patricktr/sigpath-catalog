@@ -1,0 +1,61 @@
+{
+  "manufacturer": "AIDA Imaging",
+  "model": "PTZ-NDI-X20",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://aidaimaging.com/ptz-ndi-x20/",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet (aidaimagingkorea.com PDF, same content as aidaimaging.com/ptz-ndi-x20/) lists Output as \"HD-SDI/3G-SDI, HDMI, RTSP/RTMP/NDI|HX2, USB 3.0 & 2.0\", Camera Control as \"RS-232C IN & OUT, RJ-45\", and Power as \"12VDC (+9 to +15VDC), PoE+ (IEEE802.3at)\". Exact rear-panel port labels were confirmed via AIDA's combined PTZ user manual (AIDA-IPNDI-PTZ-manual-V3.1.pdf, hosted at aidaimaging.com), whose \"Camera Interface PTZ-X12, X20\" diagram explicitly covers the PTZ-NDI-X20 and numbers: RS-232 Control Input, RS-232 Control Output, HDMI Output, 3.5mm Unbalanced Passive Line-in port, 3G-SDI Output, USB Port, RJ-45 Port, DC12V Plug-in port. That manual's spec table states \"Video Interface: HDMI (V1.4), 3G-SDI, RJ-45, USB 3.0\" confirming HDMI 1.4 and 3G-SDI (BNC) grades. The single USB port is USB 3.0 (also usable as USB 2.0/UVC 1.1 for legacy compatibility) - modeled as one bidirectional usb-5g port. RJ-45 carries Gigabit Ethernet (1000M per spec) plus PoE+ (IEEE802.3at) for combined power+data, VISCA-over-IP, and NDI|HX2 - graded eth-1g. RS-232 IN/OUT exact physical connector style (e.g. mini-DIN vs 3-pin terminal) was not visible in the diagrams reviewed; mapped to generic rs232 as the closest allowed match. The 3.5mm port is an unbalanced passive line-in for embedding audio (not mic-level), so no grade applies - modeled as ts-6.35's small-jack cousin trs-3.5 (closest connector id; likely mono/unbalanced but list has no distinct mono variant). Desktop PTZ camera, not rack-mountable, so rackUnits omitted. Manufacturer spec PDFs disagree slightly on overall dimensions (155x160x170mm vs 220x173x190mm in different AIDA documents) but this does not affect the port findings above.",
+  "ports": [
+    {
+      "name": "3G-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "RJ-45 Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Also carries PoE+ (IEEE802.3at) power, VISCA-over-IP control, and NDI|HX2 streaming"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 port (UVC 1.5), backward compatible with USB 2.0 (UVC 1.1) hosts"
+    },
+    {
+      "name": "RS-232 Control Input",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "VISCA serial control input; exact pin/connector style not confirmed from available diagrams"
+    },
+    {
+      "name": "RS-232 Control Output",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "VISCA serial daisy-chain output to next camera; exact pin/connector style not confirmed from available diagrams"
+    },
+    {
+      "name": "Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm unbalanced passive audio line-in, embedded into HDMI/SDI/IP outputs"
+    },
+    {
+      "name": "DC12V Plug-in Port",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC (+9 to +15VDC) power input via included AC adapter; camera can alternatively be powered via PoE+ on the RJ-45 port"
+    }
+  ]
+}

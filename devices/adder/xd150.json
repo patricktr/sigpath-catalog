@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Adder",
+  "model": "XD150",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.adder.com/en/kvm-solutions/adderlink-xd150",
+  "confidence": "medium",
+  "notes": "XD150 is a two-piece KVM extender kit (Local/Transmitter unit + Remote/Receiver unit) connected by a single CATx trunk cable; this entry lists ports from both halves. DVI is single-link DVI-D (max 1920x1200@60Hz, no HDMI/DisplayPort-style version grade applies so grade omitted). The CATx trunk port is a standard-looking RJ45 jack but carries a proprietary signal (video+USB+audio+RS232), not Ethernet — grade \"eth-1g\" is a rough bandwidth-class placeholder only, not a true Ethernet spec; treat with caution. The RS232 \"options port\" uses a non-standard 10P10C (10-pin/10-conductor) modular jack, physically larger than 8P8C RJ45 — mapped to rj45 as the closest available connector id since no telephone-style 10P10C option exists in the schema. Power is a proprietary 3-pin locking DC barrel jack (12VDC/18W), not a plain coaxial barrel — external power brick with region-specific AC cord (US variant = XD150-US ships with NEMA 5-15 wall plug on the adapter, not on the unit itself, so not modeled as a device-level power port). Sources cross-checked: Adder official product page, kvm-switches-online.com spec table, kvmgalore.com listing; B&H page could not be fetched directly (403) but is consistent with above per search snippet. Confidence is medium because grades for USB (2.0, per spec text) are explicit, but the CATx/RJ45 grade and the RS232/DC connector mappings are inferred approximations to fit the fixed connector enum, and B&H's own spec table could not be directly verified due to a fetch error.",
+  "ports": [
+    {
+      "name": "Video In (DVI-D)",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "USB (Type B, to computer)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS232 Options Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary 10P10C modular jack (10-conductor), not standard 8P8C RJ45; passes RS232 up to 115.2kbaud"
+    },
+    {
+      "name": "CATx (to Remote Unit)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Proprietary single-CATx trunk carrying DVI/USB/audio/RS232; requires CAT5e or better (CAT7 recommended for max resolution), not standard Ethernet"
+    },
+    {
+      "name": "Firmware Update Port",
+      "direction": "input",
+      "connector": "usb-micro"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary 3-pin locking DC jack, 12V/18W; external power adapter (region-specific AC cord)"
+    },
+    {
+      "name": "Video Out (DVI-D)",
+      "direction": "output",
+      "connector": "dvi"
+    },
+    {
+      "name": "USB (Type A x4, hub)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS232 Options Port (Remote)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Same proprietary 10P10C options port as local unit"
+    },
+    {
+      "name": "CATx (from Local Unit)",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Same proprietary CATx trunk link, receiver side"
+    },
+    {
+      "name": "DC In (Remote)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary 3-pin locking DC jack, receiver-side power input"
+    }
+  ]
+}

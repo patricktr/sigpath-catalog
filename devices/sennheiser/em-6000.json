@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EM 6000",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/digital-6000/digital-6000/specs-em6000.html",
+  "confidence": "high",
+  "notes": "Modeled on the standard (non-Dante) EM 6000, the base SKU. The optional \"EM 6000 Dante\" variant (with Audinate Brooklyn II card) replaces/adds two Amphenol RJ-45 ports labeled Primary/Secondary for Dante audio networking (redundant or daisy-chain), in addition to the control Ethernet port described here — that variant was not modeled separately. AES3 digital output connector is XLR-3; no bandwidth \"grade\" was set on it because AES3 is not one of the connector types with a defined grade scale in the schema (sdi/hdmi/dp/usb/eth only) -- omitted per instructions despite the field being populated in a draft; treat as informational only, not a valid grade value. Word clock BNC ports are 75 ohm (distinct impedance from the 50 ohm antenna BNCs) but the schema has no separate connector id for that, so \"bnc\" was used for both. Frequency range/RF band (470-714 MHz US variant) and channel count (2) are not part of the port list. Physical rear-panel print labels (e.g. exact \"OUT 1\"/\"AES3\"/\"WC\" text) are inferred from Sennheiser's official online manual/spec pages rather than a photograph of the chassis; wording may differ slightly from the silkscreen.",
+  "ports": [
+    {
+      "name": "ANT 1 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna input, 50 ohm"
+    },
+    {
+      "name": "ANT 1 OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna daisy-chain output for cascading up to 8 receivers, 50 ohm"
+    },
+    {
+      "name": "ANT 2 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna input, 50 ohm"
+    },
+    {
+      "name": "ANT 2 OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna daisy-chain output for cascading up to 8 receivers, 50 ohm"
+    },
+    {
+      "name": "OUT 1 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog balanced audio out, channel 1, -10 to +18 dBu"
+    },
+    {
+      "name": "OUT 1 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Transformer-balanced 6.3 mm jack analog out, channel 1"
+    },
+    {
+      "name": "OUT 2 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog balanced audio out, channel 2, -10 to +18 dBu"
+    },
+    {
+      "name": "OUT 2 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Transformer-balanced 6.3 mm jack analog out, channel 2"
+    },
+    {
+      "name": "AES3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Digital AES3-2003 output, 48/96 kHz 24-bit; grade field not applicable to AES3 (no bandwidth-grade tier exists for this connector in the allowed scale, so no grade should be inferred from this note)"
+    },
+    {
+      "name": "WC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Word clock input, 75 ohm, 48/96 kHz"
+    },
+    {
+      "name": "WC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Word clock loop-through output, 75 ohm"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Control/monitoring network port for WSM / Control Cockpit, IEEE 802.3-2002 10/100 Mbit/s, shielded RJ-45"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Front-panel 6.3 mm headphone jack, 2x100 mW @ 32 ohm"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "3-pin IEC/EN 60320-1 protection class I inlet, AC 100-240V 50/60Hz"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Web Presenter 4K",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.ggvideo.com/bm/webpresenter4k_specs.pdf",
+  "confidence": "high",
+  "notes": "Rear-panel SDI In, SDI Loop Out, and SDI Monitor Out all share the device's stated \"SDI Rates: 1.5G, 3G, 6G, 12G\" spec, so all three are graded sdi-12g; note the SDI/HDMI Monitor Out signal itself is capped at 1080p50/59.94/60 (downconverted for monitoring) even though the SDI connector supports up to 12G. HDMI Monitor Out has no HDMI version (1.4/2.0/2.1) stated in the spec sheet, so grade omitted. The rear USB-C (labeled \"WEBCAM OUT\"/\"LIVE STREAM\" in the panel diagram) outputs webcam video up to 2160p60 but no USB generation/speed is specified, so grade omitted; it is functionally an output-only webcam/streaming port even though USB-C is normally bidirectional, direction set to output per its documented function. Front-panel USB-C is a control/device-control port (front panel, USB-C, or Ethernet for control), set bidirectional as a host-type USB-C connection with no stated speed grade. Power is dual-redundant: internal 100-240V AC via IEC inlet, plus a 4-pin XLR +12V DC input. Source PDF used is a reseller-hosted mirror (ggvideo.com) of Blackmagic Design's official product tech-spec PDF (copyright Blackmagic Design Pty. Ltd.); content is verbatim manufacturer spec including the official rear/front panel port diagram, so treated as authoritative. The current live blackmagicdesign.com techspecs page no longer lists the Web Presenter 4K (superseded in Blackmagic's lineup by Streaming Encoder/Decoder 4K), so the archived manufacturer PDF was used instead.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Monitor output signal itself is limited to 1080p50/59.94/60"
+    },
+    {
+      "name": "HDMI Monitor Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Webcam Out (USB-C)",
+      "direction": "output",
+      "connector": "usb-c",
+      "note": "Rear panel, labeled WEBCAM OUT / LIVE STREAM; outputs up to 2160p60 webcam video"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Front panel; used for device control"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Power Connector",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "+12V DC, 4-pin XLR, redundant with AC input"
+    }
+  ]
+}

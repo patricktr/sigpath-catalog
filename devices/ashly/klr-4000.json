@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Ashly",
+  "model": "KLR-4000",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://ashly.com/wp-content/uploads/2015/08/klr-series.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet (Ashly KLR Series datasheet DS-0615) confirms: each of the 2 channels has balanced inputs available via combo XLR/1/4\" TRS phone jack AND a 3-pin Euroblock terminal, all wired in parallel (redundant access to the same balanced input, not 3 independent channels). Outputs are 4-pin Neutrik speakON connectors, one per channel. Power cable connector is 3-prong NEMA 5-15 (factory set for 120VAC or 240VAC, 50-60Hz) via a permanently attached cord — modeled as nema-5-15 per the closest list match. No digital/bandwidth-graded connectors are present (fully analog balanced amp), so no grade field applies to any port. Dimensions 19\"W x 3.5\"H x 16\"D, net weight 26.6-26.7 lbs (12 kg), 2RU rack-mount chassis. Also has front-panel attenuators and rear-panel gain/mode/HPF/limiter switches, which are not physical I/O connectors and were omitted.",
+  "ports": [
+    {
+      "name": "Input 1 (XLR/TRS)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4\" TRS balanced input jack, wired in parallel with the Ch.1 Euroblock terminal"
+    },
+    {
+      "name": "Input 1 (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock balanced input, wired in parallel with the Ch.1 combo XLR/TRS jack"
+    },
+    {
+      "name": "Input 2 (XLR/TRS)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/1/4\" TRS balanced input jack, wired in parallel with the Ch.2 Euroblock terminal"
+    },
+    {
+      "name": "Input 2 (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock balanced input, wired in parallel with the Ch.2 combo XLR/TRS jack"
+    },
+    {
+      "name": "Speaker Output 1",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pin Neutrik speakON output, Channel 1"
+    },
+    {
+      "name": "Speaker Output 2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pin Neutrik speakON output, Channel 2"
+    },
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "3-prong NEMA 5-15 permanently attached power cord; factory set 120VAC or 240VAC, 50-60Hz"
+    }
+  ]
+}

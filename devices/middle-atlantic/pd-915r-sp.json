@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Middle Atlantic",
+  "model": "PD-915R-SP",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.legrandav.com/products/power/horizontal_rackmount_power/series_protection_power_distribution/pd-915r-sp",
+  "confidence": "medium",
+  "notes": "Rack-mounted power distribution unit with Middle Atlantic's non-MOV \"Series Protection\" surge technology (over-voltage cutoff ≤135VAC, under-voltage cutoff ≥100VAC, auto-restore). 9 total NEMA 5-15R output outlets: 8 mounted on the rear panel, 1 convenience outlet on the front panel — modeled here as two grouped ports (Rear Outlets, Front Outlet) since individual outlets are not separately labeled. Input is a captive 9 ft SignalSAFE cord terminating in a NEMA L5-15P locking plug (distinguishing the -SP Series Protection variant from the base PD-915R, which ships with a standard non-locking NEMA 5-15P plug per manufacturer/retailer documentation) — mapped to the closest available connector id \"nema-5-15\" since a locking-twist variant is not in the provided enum. No data/signal ports (this is power-only). Specs cross-confirmed across Legrand AV (Middle Atlantic's parent brand) product page, B&H, AVLGEAR, Custom AV Rack, Graybar, and Full Compass listings, which agree on outlet count/layout, 1RU/19\"x9.43\"x1.735\" dimensions, 120VAC/60Hz/15A rating, and 9' cord length. Manufacturer's own PDF datasheet could not be fetched directly (blocked/404), so confidence is medium rather than high.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 9 ft SignalSAFE cord terminating in a NEMA L5-15P locking plug (not a bare inlet); closest available connector id used, actual plug is the locking L5-15P variant"
+    },
+    {
+      "name": "Rear Outlets",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "8 x NEMA 5-15R switched/protected outlets on rear panel"
+    },
+    {
+      "name": "Front Outlet",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "1 x NEMA 5-15R convenience outlet on front panel"
+    }
+  ]
+}

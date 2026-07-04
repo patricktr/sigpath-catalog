@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Neumann",
+  "model": "KMS 105",
+  "category": "audio",
+  "sourceUrl": "https://www.neumann.com/en-us/products/microphones/kms-105",
+  "confidence": "high",
+  "notes": "Handheld supercardioid condenser stage vocal microphone. Single balanced output on male XLR3 (matching connector: XLR 3 F on cable side); mic itself carries a male XLR3 pin-out. Powered entirely via 48V phantom power (P48, IEC 61938, 48V +/-4V, 3.5mA) delivered over the same XLR audio output — there is no separate power connector. No grade set on the XLR3 port since analog audio connectors are not part of the graded connector scale. Available in nickel (KMS 105) and black (KMS 105 BK) finishes with identical electrical specs; no other physical I/O variants.",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced mic-level output; also carries 48V phantom power (P48, IEC 61938) to power the microphone"
+    }
+  ]
+}

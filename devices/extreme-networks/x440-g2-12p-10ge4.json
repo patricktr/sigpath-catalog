@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Extreme Networks",
+  "model": "X440-G2-12p-10GE4",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.fca.com.pl/wp-content/uploads/x440-g2-data-sheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Extreme Networks X440-G2 series datasheet (ExtremeSwitching X440-G2, doc 10450-0921-08). The X440-G2-12p-10GE4 (Part # 16531) is a 1RU edge switch: 12x 10/100/1000BASE-T RJ-45 with PoE+ (802.3at, also 802.3af-compatible), 4x unpopulated 1GBASE-X SFP slots on the front panel (upgradeable to 10GbE SFP+ via a paid software license — datasheet lists this model's \"Maximum 10Gb SFP+ Ports\" as \"4 via license\", so grade shown here reflects shipped/default 1G state, not the licensed 10G capability), 1x RJ-45 serial console with RTS/CTS, 1x RJ-45 out-of-band 10/100/1000 management port, and a 2x7 terminal-block RPS port for an optional external redundant power supply (no single listed connector id matches a bare terminal block; \"euroblock\" was chosen as the closest analog — treat with caution). Internal power supply is fixed AC, IEC 320 C14 inlet / C13 cord (100-240VAC). No DC variant exists for this exact 12p model (a DC-only variant exists for the 24t/48t models, not for 12p). PoE budget is 200W total, with an external RPS able to provide an additional 200W for full PoE+ redundancy. Rack width/depth is 12.01 in x 10.28 in (narrower \"half-width\"-style 1RU chassis typical of 12-port X440-G2 models) — included rackUnits=1 since it's a formal 1RU rack-mount unit per the datasheet's Physical table, though it is narrower than full 19\" width.",
+  "ports": [
+    {
+      "name": "Ports 1-12 (10/100/1000BASE-T PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "12x RJ-45, IEEE 802.3at PoE+ (also supports 802.3af); 200W total PoE power budget"
+    },
+    {
+      "name": "SFP 13-16 (1GBASE-X, upgradeable to 10GbE)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x unpopulated front-panel 1GBASE-X SFP slots; upgradeable to 10Gb SFP+ via separate software license (part 16542/16543), not enabled by default on this SKU"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 serial console port over RJ-45 with RTS/CTS modem control; not a data-networking Ethernet port"
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T out-of-band management port"
+    },
+    {
+      "name": "RPS",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2x7 terminal-block port for connecting an external redundant power supply (e.g. STK-RPS-150PS); closest connector match to a terminal-block/pluggable-screw connector, not a true Euroblock but nearest listed id"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Fixed internal AC power supply; IEC 320 C14 inlet, IEC 320 C13 power cord plug, 100-240VAC 50/60Hz"
+    }
+  ]
+}

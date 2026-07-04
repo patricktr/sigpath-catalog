@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Adder",
+  "model": "ALIF2002T-US",
+  "category": "converter",
+  "type": "Extender",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.adder.com/en/kvm-solutions/adderlink-infinity-dual-2002",
+  "confidence": "high",
+  "notes": "This is the Transmitter (T) unit only; a matching ALIF2000R receiver is required to complete the extension link and is a separate SKU with its own port set (typically DVI outputs to displays, USB downstream ports, etc.) not covered here. DVI port labels (\"DVI 1\"/\"DVI 2\") are inferred — Adder's spec sheets list \"2x DVI-D\" without confirming on-chassis silkscreen text, so exact labels could not be verified from available sources. Ethernet grade (Gigabit) confirmed via manufacturer copy referencing \"standard gigabit ethernet network, on copper or fiber\" (kvmgalore.com) and corroborated by Markertek/kvm-switches-online spec tables; the RJ45+SFP counts (1 each) were cross-verified across Adder.com, Markertek, and kvm-switches-online — one reseller (kvm-switches-online) inconsistently described \"dual Gigabit Ethernet ports,\" which conflicts with the 1x RJ45 + 1x SFP figure given consistently elsewhere (including the Adder.com spec table) and was treated as a reseller error. Physical dimensions (44mm H x 198mm W x 150mm D) indicate a compact desktop-style enclosure; \"1U\" is stated in Adder's own spec sheet as the form-factor rating even though it ships as a shelf/desktop unit by default (rack kits sold separately), so rackUnits=1 is included per manufacturer spec but could be considered optional/no rack ears included standard. No separate power switch or grounding lug found. No HDMI ports are present — video I/O is DVI-D only.",
+  "ports": [
+    {
+      "name": "DVI 1",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D; supports single-link (up to 1920x1200@60Hz) independently or combines with DVI 2 for one dual-link output (up to 2560x1600@60Hz)"
+    },
+    {
+      "name": "DVI 2",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D; second single-link channel, or second half of dual-link pair"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Type B upstream to host computer for keyboard/mouse/mass-storage/tablet extension"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo analog audio input, 16-bit/48kHz"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo analog audio output, 16-bit/48kHz"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-type, bidirectional serial up to 115,200 baud, for touchscreens/printers/control"
+    },
+    {
+      "name": "Link (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet link port to receiver over CATx (up to 100m, extendable via switch)"
+    },
+    {
+      "name": "Link (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage accepts fiber or copper transceiver modules for extended link distances up to 10km"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.5mm DC barrel jack; powered by included external adapter, 100-240VAC input, 5VDC/20W output"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4250-8G2XF-PoE+ (GSM4210PX)",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: NETGEAR M4250 series official datasheet (Hardware-at-a-Glance table, page 2), which lists GSM4210PX specifically as: Desktop form factor 210x40x140mm, 56 Gbps switching fabric, 8 ports PoE+ (220W budget) on 10/100/1000BASE-T RJ45, 2 ports 1000/10G BASE-X SFP+, 1x external power adapter (254W PSU model APS254W), out-of-band 1G Ethernet management (rear), USB-C console (front), USB-A storage (rear). Corroborated by netgear.com product page, B&H, and Markertek listings. Caveats: (1) the exact DC barrel/proprietary connector pin dimensions for the power-adapter-to-switch connection are not published by Netgear in any consulted source, so dc-barrel is the closest available connector id but unverified pin spec; the adapter's mains-side plug is IEC C14/C13 (not modeled here since that's on the external brick, not the device's own inlet). (2) USB-C console and USB-A storage ports have no published USB speed/version, so grade is omitted per instructions. (3) SFP+ ports support both 1G and 10G; graded eth-10g as the max supported speed. (4) Desktop unit, not rack-mountable, so rackUnits omitted (other M4250 SKUs in the same family are 1U/2U rackmount, but GSM4210PX/GSM4210PD are desktop-only).",
+  "ports": [
+    {
+      "name": "Port 1-8 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8x RJ45 10/100/1000 ports, each PoE+ (802.3at) up to 30W, 220W total PoE budget"
+    },
+    {
+      "name": "SFP+ 1-2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x SFP+ slots supporting 1G or 10G fiber/DAC uplinks"
+    },
+    {
+      "name": "Out-of-Band Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear 1G out-of-band Ethernet management port"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Front USB-C console/management port; USB version not specified by manufacturer"
+    },
+    {
+      "name": "Storage (USB-A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear USB-A port for external storage; USB version not specified by manufacturer"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC input from included external 254W power adapter (adapter's AC side uses IEC C14 to mains); exact barrel/DC connector pin spec not published by Netgear"
+    }
+  ]
+}

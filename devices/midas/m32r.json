@@ -1,0 +1,294 @@
+{
+  "manufacturer": "Midas",
+  "model": "M32R",
+  "category": "audio",
+  "sourceUrl": "https://www.rent4event.de/pdf/midas-m32r-datasheet.pdf",
+  "confidence": "high",
+  "notes": "Rack-mount digital mixer (no motorized faders/control surface — those are on the M32R LIVE control surface variant sold separately; this M32R is the rack-mount engine). Source: official Music Group/Midas technical specification datasheet (matches midasconsoles.com content). AES50 A/B and the ULTRANET P-16 connector are RJ45/etherCON-style Ethernet-cable ports but carry proprietary digital-audio protocols, not standard networking — mapped to rj45/ethercon connector ids without a bandwidth grade since Midas does not publish an Ethernet PHY speed for them (typically 100Mb-class, not confirmed). Main USB-B and RJ45 are for remote control/DAW control only (no bandwidth grade published). USB Type-A is for audio/data file import-export (e.g. firmware, show files) — not a general USB-audio streaming class port per datasheet, no speed grade stated. The expansion card bay (accepts DN32-USB/DN32-MADI/DN32-Dante/DN32-ADAT cards, 32-channel I/O) is omitted as a discrete port because its physical connector depends on which card is fitted. Power inlet is stated as an auto-ranging 100-240VAC switch-mode supply with IEC mains socket; exact IEC variant (C13/C14) not explicitly printed in the datasheet but is the standard Midas/Behringer/Music Group convention for this power class, so listed as \"iec\" with medium-level inference noted here. All other counts (16 mic XLR, 1 talkback XLR, 2 RCA in/2 RCA out, 8 XLR out, 2+2 monitor out, 6+6 aux TRS, 1 stereo phones, 2 AES50, 1 ULTRANET, 1/1 MIDI, 1 USB-A, 1 USB-B, 1 RJ45) are taken verbatim from the manufacturer connector table.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 16",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "MIDAS PRO Series microphone preamplifier, +48V phantom power switchable per input"
+    },
+    {
+      "name": "Talkback Mic In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out L (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out R (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out L (TRS)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Monitor Out R (TRS)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 1",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 3",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 4",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 5",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux In 6",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 3",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 4",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 5",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Out 6",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "RCA In 1",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA In 2",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Out 1",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Out 2",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "AES50 A",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Klark Teknik SuperMAC, up to 48 in/48 out per port over Cat5 STP; no published Ethernet PHY grade"
+    },
+    {
+      "name": "AES50 B",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Klark Teknik SuperMAC, up to 48 in/48 out per port over Cat5 STP; no published Ethernet PHY grade"
+    },
+    {
+      "name": "ULTRANET P-16",
+      "direction": "output",
+      "connector": "ethercon",
+      "note": "16-channel digital output for personal monitoring systems (e.g. P16-M); no power supplied"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Audio and data import/export (files, firmware); no streaming-class speed published"
+    },
+    {
+      "name": "USB Type B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Rear panel, for remote control; no speed grade published"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Rear panel, for remote control; no PHY speed grade published"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Auto-ranging switch-mode supply, 100-240VAC 50/60Hz, 70W; exact IEC inlet variant (C13/C14) not explicitly stated in datasheet but standard for this console class"
+    }
+  ]
+}

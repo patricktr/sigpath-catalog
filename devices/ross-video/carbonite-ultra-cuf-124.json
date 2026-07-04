@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "Carbonite Ultra (CUF-124)",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://shop.ccisolutions.com/StoreFront/jsp/pdf/RSV-CUF-124_configurationGuide.pdf",
+  "confidence": "high",
+  "notes": "Source: Ross Video Carbonite Ultra Configuration Guide v5.0 (Ross P/N 4841DR-100-05.0, Nov 2020), the manufacturer's own document, cross-checked against the live rossvideo.com specifications page and third-party confirmations (Markertek/B&H listings, rossvideo.community forum) for the CUF-PSU brick PSU and DB-25 GPI/Tally connectors. Specs describe the base CUF-124 1RU frame only (24 HD-BNC in / 14 HD-BNC out, 1 ME); Carbonite Ultra is modular — ME count, I/O processor count, MultiViewer count, and UHD vs HD/SD input/output counts all vary with installed license options (e.g. UHD-12G mode drops usable inputs to 18 and outputs to 10-11). Video I/O connectors are physically miniature \"HD-BNC\" (not full-size BNC) — mapped to the \"bnc\" id since HD-BNC isn't in the allowed list; standard-BNC adapter cables are a separate purchased option. AES and LTC ports are 3-pin Weco/screw-terminal blocks (confirmed via Ross community forum and the config guide's own pin diagrams showing AES+/AES-/GND and LTC+/LTC-/LTC- on a 3-terminal connector), mapped to \"euroblock\" as the closest connector id — these are not XLR AES3 jacks. GPI and Tally ports are female DB-25 D-sub connectors (24 GPI I/Os + ground; 24 tallies + common) — DB-25 has no dedicated id in the allowed list, so \"rs232\" was used as the nearest D-sub-family approximation; treat this as a notation compromise, not a literal RS-232 serial port. The RS-422 device-control/editor port is listed as \"1 (RJ45)\" in Ross's own control-panel comparison table, so it is mapped to rj45 rather than a DB-9. Power: the CUF-124 frame does not include a power supply — it requires an external \"brick\" PSU (CUF-PSU) or an optional Ultripower/CUF-RACKPWR rack supply; the frame-side connector is very likely a locking DC connector fed by 12-15V DC, mapped to \"dc-barrel\" as the closest available id, but the exact pin count/locking mechanism could not be confirmed from available sources (medium confidence on this one port only). This is the Carbonite Ultra \"Engine\" frame; TouchDrive control panels (TD1/TD1C/TD2/TD2S/TD3S) are separate purchased items with their own I/O (not included here). A companion \"Carbonite Ultra Solo\" all-in-one variant with an integrated CB9 control panel also exists and may have different physical I/O (not covered by this record).",
+  "ports": [
+    {
+      "name": "SDI In 1-24",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Physically HD-BNC miniature connectors (24x), not full-size BNC; adapters sold separately (CUF-HDBNC-BNC). Supports up to 18x 12G-SDI single-link UHD or 24x SD/HD in HD mode."
+    },
+    {
+      "name": "SDI Out 1-14",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Physically HD-BNC miniature connectors (14x); 10 assignable + dedicated MultiViewer outputs. Up to 11 outputs in UHD-12G mode."
+    },
+    {
+      "name": "Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Physically HD-BNC. Accepts analog black burst (SD) or tri-level sync (HD); not bandwidth-graded so no grade set."
+    },
+    {
+      "name": "Reference Out 1-2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Physically HD-BNC, 2x independent reference outputs; not bandwidth-graded."
+    },
+    {
+      "name": "LTC",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin screw/Weco terminal block (LTC+, LTC-, LTC-) for SMPTE timecode input."
+    },
+    {
+      "name": "AES",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin screw/Weco terminal block (AES+, AES-, GND); single 24-bit AES3 stereo pair per port."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-422 editor/device-control port (RJ45 connector per Ross product-comparison table), 38.4k baud, 8 data bits, 1 stop, odd parity."
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "euroblock"
+      ],
+      "note": "Female DB-25 connector providing 24 independently assignable GPI I/Os + ground. DB-25 is not in the allowed connector list; rs232 chosen as the closest D-sub family match — physically it is a parallel GPI I/O connector, not an RS-232 serial line."
+    },
+    {
+      "name": "Tally",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Female DB-25 connector providing 24 fixed tally relay outputs + common. DB-25 not in the allowed list; rs232 used as closest D-sub approximation — physically a tally relay connector, not RS-232."
+    },
+    {
+      "name": "Network 1-2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "2x GigE ports for DashBoard/control-panel/automation connectivity."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "1x USB 2.0 port on frame for Media-Store/memory import-export (user-supplied USB drive)."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Frame ships without a power supply; requires external CUF-PSU 'brick' (reported ~12V DC output) or CUF-RACKPWR/Ultripower rack PSU. Frame power spec lists 114W, 7.6A, 15V. Physical connector is most likely a locking DC connector, not a plain barrel jack — dc-barrel chosen as closest list match; exact pin/locking style not confirmed."
+    }
+  ]
+}

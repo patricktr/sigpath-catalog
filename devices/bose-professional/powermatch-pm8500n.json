@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Bose Professional",
+  "model": "PowerMatch PM8500N",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://assets.bose.com/content/dam/Bose_DAM/Web/pro/global/products/amplifiers/PowerMatch_PM8500_PM8500N/Downloads/Technical_data_sheet/tds_pm8500n_ltr.pdf",
+  "confidence": "high",
+  "notes": "Source: official Bose Professional Technical Data Sheet (tds_pm8500n_ltr.pdf, 2015, mirrored copy verified at gaplasapro.com). All 8 analog inputs use 3-pin Phoenix Contact green terminal-block connectors (rear panel silkscreen groups them in pairs, e.g. \"Input A\"/\"Input B\" ... through H) — mapped to the closest allowed id \"euroblock\" (pluggable screw terminal block), consistent for the 8-pin speaker-output blocks and the 3-pin fault-relay connector (orange Phoenix Contact) as well. Speaker outputs are 2 physical 8-pin Phoenix Contact terminal-block headers on the rear panel that carry the amplifier's 2-8 configurable output channels (accepts 10-24 AWG wire) — modeled here as one representative 8-pin output connector block per Bose's own port diagram, since the datasheet does not assign individual channel-pair names to each block. AC inlet is IEC 60320-C20 (high-current IEC, mates with C19 cord) — mapped to \"iec-c19\". Ethernet RJ-45 (100 Mb) and rear Ethernet connector are present ONLY on the \"N\" (networked) variant, confirmed for PM8500N. No version/speed is stated for Ethernet beyond \"100 Mb\", so grade eth-100m is used. Front-panel USB Type-B port is used only for PC connection with ControlSpace Designer software; USB spec/version not stated in datasheet, so no grade was set (avoiding an unconfirmed guess). The rear panel also has a covered \"Digital expansion slot\" that accepts optional plug-in cards (Dante, CobraNet, AES3, ESPLink) — this is a modular bay rather than a fixed physical connector with a listed id, so it was omitted rather than force-mapped to a connector type not present without the card installed. Fault-notification output (3-pin Phoenix, NC/NO relay contact, 1A/30VDC) included as a control-style euroblock port.",
+  "ports": [
+    {
+      "name": "Input A",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input B",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input C",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input D",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input E",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input F",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input G",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Input H",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact balanced line-level analog audio input, +24 dBu max"
+    },
+    {
+      "name": "Output 1-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Phoenix Contact high-current terminal block, loudspeaker outputs (channels 1-4), accepts 10-24 AWG wire"
+    },
+    {
+      "name": "Output 5-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Phoenix Contact high-current terminal block, loudspeaker outputs (channels 5-8), accepts 10-24 AWG wire"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45, network version only, 100 Mb, for ControlSpace Designer control and Serial-over-Ethernet"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel Type B USB port for PC connection running ControlSpace Designer software; USB speed/version not specified by manufacturer"
+    },
+    {
+      "name": "Fault",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix Contact (orange) NC/NO relay contact closure, 1A/30VDC max, fault notification"
+    },
+    {
+      "name": "AC Mains",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC 60320-C20 inlet (high-current IEC, mates with C19 cord), 100-240V 50/60Hz, 16/20A"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "RedNet PCIeNX",
+  "category": "network",
+  "sourceUrl": "https://focusrite.com/products/rednet-pcienx",
+  "confidence": "high",
+  "notes": "RedNet PCIeNX is a PCIe expansion card providing Dante/AES67 networked audio I/O (128x128 channels, expandable to 256x256 via Dante Ready upgrade) to a host computer — it has no analog/digital audio connectors of its own; all audio is carried over the two Ethernet ports. The card is powered entirely from the PCIe slot (bus-powered) — no external power connector is present, so no power port is listed. The two RJ45 ports are Dante Primary and Secondary, supporting redundant or switched network modes; each is rated Gigabit Ethernet (1000BASE-T, Cat5e or better, Cat6 STP preferred) per Focusrite's documentation, hence eth-1g grade. The card itself mounts via a full-height, half-length PCIe 2.1 edge connector (x4 electrical, fits x4–x16 slots); this is an internal card-edge interface rather than a user-facing cable port, so it was omitted from the port list (no matching connector id exists for a PCIe edge connector, and it is not a signal/power cable the installer connects). Sources cross-checked: Focusrite product page, Focusrite User Guide hub, and web aggregation of Focusrite/B&H spec data.",
+  "ports": [
+    {
+      "name": "Network Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante primary network port; RJ45, Cat5e or better"
+    },
+    {
+      "name": "Network Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante secondary network port; used for redundant or switched network mode"
+    }
+  ]
+}

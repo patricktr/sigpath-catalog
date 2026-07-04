@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXA710",
+  "category": "audio",
+  "sourceUrl": "https://content-files.shure.com/Pubs/mxa710/mxa710-spec-sheet-letter-en.pdf",
+  "confidence": "high",
+  "notes": "The MXA710 Linear Array Microphone (Microflex Advance series) has exactly one physical connector: a single RJ-45 network port that carries Dante/AES67 digital audio, Shure control/network data, and Class 0 PoE power simultaneously — there is no separate power inlet. Available in 2-foot (4 transmit channels) and 4-foot (8 transmit channels) variants with identical I/O. The port's amber \"network speed\" LED indicates 10/100 Mbps (off) vs 1 Gbps (on), confirming the port auto-negotiates up to Gigabit Ethernet, so grade eth-1g is used (it also supports 100 Mbps operation). Cable requirement is Cat5e or higher, shielded recommended. No analog audio, USB, or other physical I/O is present on the device. Sources: Shure official spec sheet (mxa710-spec-sheet-letter-en.pdf) and official MXA710 User Guide (pubs.shure.com), both hosted on shure.com — fully authoritative and consistent with each other.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ-45 port carries Dante/AES67 audio + Shure control network data and receives Class 0 PoE power (10 W max); no separate power connector. Auto-negotiates 10/100 Mbps or 1 Gbps per the amber network-speed LED. Requires Cat5e or higher (shielded recommended)."
+    }
+  ]
+}

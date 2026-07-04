@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Barco",
+  "model": "E2 Gen 2",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 4,
+  "sourceUrl": "https://assets.barco.com/m/1da1a218bfbbede6/original/E2-Gen-2-en-Spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Model number per spec sheet: NGS-4U-V2. The E2 Gen 2 is a fully modular, build-to-order chassis (8 input-card slots + 4 output-card slots); the ports listed here represent the maximum documented I/O density from Barco's official spec sheet (last updated 27 Nov 2025), not a fixed fixed-port unit — a given unit may ship with fewer/different cards. Input SDI/HDMI/DisplayPort counts (16 SDI, 12 HDMI, 12 DP) are the max across 8 input cards; output counts (4 SDI, 13 HDMI, 1 DP) are the max across 4 output cards — actual simultaneous totals are capped at 40 in / 18 out combined. SDI ports are multi-rate SD/HD/3G/6G/12G; grade set to sdi-12g (top of stated range) per port since the spec does not separate individual BNCs by max rate. HDMI input/output rated \"up to 600 MHz\" (TMDS clock), consistent with HDMI 2.0 (18 Gbps class) — mapped to hdmi-2.0; note the spec sheet does not use the \"2.0\"/\"2.1\" version label for outputs, only \"up to 600 MHz,\" so this is a close inference. DisplayPort input stated as \"DisplayPort 1.2 (600 MHz max)\" -> dp-1.2; output DisplayPort stated only as \"up to 660 MHz\" with no version number, also mapped to dp-1.2 as the closest/most conservative match (inferred). Genlock: analog reference in/loop on BNC (bi-level/blackburst SD, tri-level HD) — no bandwidth grade applies to genlock BNCs so grade omitted. S3D Sync uses 4x input and 2x output DIN connectors — DIN mini-connector has no exact match in the allowed connector list; mapped to the closest available id \"midi-din\" and flagged as an approximation (these are not MIDI ports). Ethernet is RJ-45, 1000/100/10 Mbps autosense -> eth-1g. Power: spec sheet states \"100-240Vac, 50/60Hz, 12-5A (x2), 1,100W, dual-redundant hot-swappable power supplies\" but does not explicitly name the IEC inlet variant; Barco's own spare-parts catalog lists C20-C19 power cables for the E2/Encore3 power-supply family, consistent with a high-current inlet rather than standard C13/C14, so the AC inputs are mapped to iec-c19 (closest available id) for each of the two redundant power supplies — this specific inlet variant is inferred, not spec-sheet-stated verbatim. No USB or RS232 control ports are listed on the E2 Gen 2 spec sheet; control is via Ethernet (WebUI / Event Master software / controllers) only.",
+  "ports": [
+    {
+      "name": "SDI In (x16)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Up to 16 SD/HD/3G/6G/12G-SDI input connectors across up to 8 input cards; multi-rate per BNC, 12G is the top stated rate"
+    },
+    {
+      "name": "HDMI In (x12)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 12 HDMI inputs across input cards, rated up to 600 MHz max (HDMI 2.0 class); each input card supports up to 2x 4K@60p"
+    },
+    {
+      "name": "DisplayPort In (x12)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Up to 12 DisplayPort 1.2 inputs (600 MHz max) across input cards"
+    },
+    {
+      "name": "SDI Out (x4)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Up to 4 SD/HD/3G/6G/12G-SDI outputs across up to 4 output cards"
+    },
+    {
+      "name": "HDMI Out (x13)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 13 HDMI outputs, up to 600 MHz; includes Multiviewer HDMI outputs when MVR option installed"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "1 x DisplayPort output, up to 660 MHz (version not explicitly stated by Barco; mapped to closest grade)"
+    },
+    {
+      "name": "Reference In/Loop",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Analog genlock reference input/loop-through on BNC; bi-level and blackburst at SD, tri-level at HD"
+    },
+    {
+      "name": "3D Sync In (x4)",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "S3D Sync input, DIN connector x4; DIN is not in the allowed connector list, mapped to closest id (not a MIDI port)"
+    },
+    {
+      "name": "3D Sync Out (x2)",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "S3D Sync output, DIN connector x2; DIN is not in the allowed connector list, mapped to closest id (not a MIDI port)"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ-45, 1000/100/10 Mbps autosense; used for Event Master software, controllers, and WebUI"
+    },
+    {
+      "name": "AC In (PSU 1)",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Redundant hot-swappable power supply 1 of 2; 100-240Vac 50/60Hz, up to 12A; exact IEC inlet variant inferred from Barco's C19/C20 spare power cable listings for this product family, not stated verbatim on spec sheet"
+    },
+    {
+      "name": "AC In (PSU 2)",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Redundant hot-swappable power supply 2 of 2; 100-240Vac 50/60Hz, up to 12A; exact IEC inlet variant inferred, see PSU 1 note"
+    }
+  ]
+}

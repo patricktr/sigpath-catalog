@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Lightware",
+  "model": "UMX-TPS-TX140-Plus",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://archive.lightware.com/umx-tps-tx140-plus",
+  "confidence": "medium",
+  "notes": "Physical I/O confirmed via Lightware's own archived product page (archive.lightware.com/umx-tps-tx140-plus) cross-checked against AV-iQ, ivojo.co.uk, and DigiNet Pro distributor spec pages, which independently agree on the connector set. The current live lightware.com product pages render via JavaScript and returned no spec text to automated fetch, so the Wayback/archive mirror of Lightware's own page was used as the primary source together with the retailer/distributor tables. The \"Plus\" designation adds firmware/control features (CEC send/receive, HEX-code IR control, Event Manager automation, Cisco Room Kit RS-232 login support) versus the base UMX-TPS-TX140; physical connectors are identical between the two per all sources reviewed, so base-model documentation was used to fill in exact pinout/connector-count details not explicitly repeated on Plus-specific pages. DisplayPort input is DisplayPort 1.1 per all sources; the requested grade enum has no 1.1 option, so dp-1.2 was used as the nearest value — treat the true spec as DP 1.1 (lower than dp-1.2 implies). HDMI input confirmed HDMI 1.4. No USB, SDI, or additional Ethernet ports exist on this unit; a Lightware marketing PDF that also mentions this product depicts USB-C/Thunderbolt only in a generic \"Cisco Room\" ecosystem graphic unrelated to this specific model's own panel. Rack mounting is optional (rack-shelf or standalone desktop use) so rackUnits is omitted. Could not obtain the official current Lightware datasheet PDF directly (site is JS-rendered and blocks static scraping); confidence set to medium because grades/exact port counts rely on secondary/archived sources rather than a directly-opened current manufacturer PDF, though multiple independent sources agree.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Manufacturer lists DisplayPort 1.1 support; dp-1.2 is the closest available grade value (no dp-1.1 option in scale). Treat exact version as DP1.1 per source."
+    },
+    {
+      "name": "DVI-I IN",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Accepts DVI-D digital or DVI-A analog signal"
+    },
+    {
+      "name": "VGA IN",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "AUDIO IN (3.5mm)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio input"
+    },
+    {
+      "name": "AUDIO IN (Phoenix)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole Phoenix/euroblock balanced analog stereo audio input"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole Phoenix/euroblock connector, configurable 9600-115200 baud, pass-through and local control"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3-pole 3.5mm jack for IR receiver/detector"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3-pole 3.5mm jack for IR emitter"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "8-pole Phoenix/euroblock connector, configurable general-purpose I/O for room control (not AV signal)"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Locking RJ45 for network/control passthrough"
+    },
+    {
+      "name": "TPS OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Locking RJ45 HDBaseT (TPS) output carrying video/audio/control/PoH over CAT5e/6/7, up to 170m. No standard SDI/HDMI/Ethernet-grade enum applies to proprietary HDBaseT link; grade omitted."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 2.1/5.5mm DC barrel, 12V 2.5A external universal adapter. Device may alternatively be remote-powered at 48V over the TPS/RJ45 link (PoH) instead of using this local input."
+    }
+  ]
+}

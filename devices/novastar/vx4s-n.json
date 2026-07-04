@@ -1,0 +1,116 @@
+{
+  "manufacturer": "NovaStar",
+  "model": "VX4S-N",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://oss.novastar.tech/uploads/2021/05/VX4S-N-All-in-One-Controller-Specifications-V1.0.1.pdf",
+  "confidence": "high",
+  "notes": "Source: NovaStar official \"VX4S-N All-in-One Controller Specifications V1.0.1\" PDF (oss.novastar.tech). This is an LED display controller/video processor (categorized here as Converter/video processor since \"LED controller\" isn't in the provided type list). Rear panel has two BNC-style connectors for SDI IN+LOOP (2 physical jacks, 1 logical bidirectional port used as in+loop-through) - modeled as a single sdi-3g port with note. DVI input also has IN+LOOP (2 physical BNC/DVI jacks) - modeled similarly as one input port. Power connector confirmed as standard IEC inlet (100-240V~ 50/60Hz 1.5A, 25W) from rear-panel photo; exact IEC sub-type (C13/C14) not explicitly labeled in text so assumed standard IEC (C13/C14) grade omitted since power ports don't carry a grade. Audio input is a single 3.5mm-style \"AUDIO\" connector per rear panel photo and retailer listings (some distributor pages describe it as 1/8\" (3.5mm) audio input). USB Type-B (front panel) connects to control PC; USB Type-A and a separate rear USB Type-B are for linking additional units (device chaining) - both included. No HDMI/DP/DVI version-specific bandwidth grade beyond what's stated (HDMI 1.3, DP with HDCP 1.3, DVI single-link) was given as a formal \"grade\" spec in the graded scale sense beyond hdmi-1.4 minimum tier, so grade omitted for HDMI/DP/DVI since the connector's actual spec (HDMI 1.3) is below the lowest allowed enum value (hdmi-1.4) - only SDI and Ethernet grades set since those map cleanly to the provided enums (sdi-3g, eth-1g). Not rack-ear-mounted per photos but is standard 19\" wide 1U chassis (482.6mm W x 250mm D x 50mm H) - set rackUnits=1.",
+  "ports": [
+    {
+      "name": "3G-SDI IN+LOOP",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Two BNC jacks (IN + LOOP-through); loop output passes the same signal. Max 1920x1080@60Hz, supports ST-424 (3G) and ST-292 (HD)."
+    },
+    {
+      "name": "AUDIO",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "External audio input, 3.5mm connector"
+    },
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga",
+      "note": "VESA standard, up to 1920x1200@60Hz"
+    },
+    {
+      "name": "CVBS",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Composite video, PAL/NTSC"
+    },
+    {
+      "name": "DVI IN+LOOP",
+      "direction": "bidirectional",
+      "connector": "dvi",
+      "note": "Two DVI jacks (IN + LOOP-through). VESA standard, up to 1920x1200@60Hz, HDCP 1.4, single-link"
+    },
+    {
+      "name": "HDMI 1.3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI version 1.3, up to 1920x1200@60Hz input, HDCP 1.4 compliant. Below lowest gradable enum (hdmi-1.4) so grade omitted."
+    },
+    {
+      "name": "DP",
+      "direction": "input",
+      "connector": "dp",
+      "note": "Up to 1920x1200@60Hz input, HDCP 1.3 compliant. Version not specified beyond DisplayPort generic, so grade omitted."
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet output for LED panel data; also doubles as audio output when multifunction card used"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 3",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 4",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DVI OUT",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Monitor/loop output for previewing output image"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control port: connects to control PC and/or network"
+    },
+    {
+      "name": "USB (Type-B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front panel; connects to control PC for device control"
+    },
+    {
+      "name": "USB (Type-B)",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "Rear panel control section; input connector to link another device"
+    },
+    {
+      "name": "USB (Type-A)",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Rear panel; output connector to link another device"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V~, 50/60Hz, 1.5A, 25W max consumption; standard IEC inlet shown on rear panel"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "manufacturer": "Avocor",
+  "model": "AVE-7550",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.avocor.com/products/e50-series/",
+  "confidence": "medium",
+  "notes": "Manufacturer page (avocor.com/products/e50-series/) lists specs for the whole E50 Series (AVE-5550/6550/7550/8650); AVE-7550 is the 75\" model. HDMI input/output versions confirmed as HDMI 2.0 by manufacturer and corroborated by B&H/Almo/Staples listings. DisplayPort confirmed as 1.2. USB-A/USB-B ports stated as \"USB 3.0\" (mapped to usb-5g/SuperSpeed) but exact USB 3.x generation (3.0/3.1/3.2) not specified — treated as usb-5g baseline. RJ45 LAN in/out ports confirmed present but Ethernet speed (1G vs other) not stated by any source found; assumed eth-1g as typical for this display class — flagged as inferred. Power connector type (IEC C13/14 vs other) not explicitly published; inferred from the well-documented practice of shipping detachable, region-specific AC cords (US/UK/EU/AUS) with commercial displays of this class — a NEMA captive-cord design would not require multiple regional cord SKUs. OPS PC slot exists but is a modular compute slot rather than a physical A/V port, so it was not modeled as a port. Could not access Avocor's own PDF datasheet (Zendesk-hosted, returned 403 to automated fetch) or the B&H/Almo spec tables directly (403), so this relies on the manufacturer's live product page plus corroborating retailer search snippets (B&H, Almo Pro AV, Staples, Smartboards) that reported matching port counts/types.",
+  "ports": [
+    {
+      "name": "Front HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Front USB-C (65W PD)",
+      "direction": "input",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "65W USB Power Delivery, front guest connection"
+    },
+    {
+      "name": "Front USB-B 3.0 (touch)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "touch-return upstream port"
+    },
+    {
+      "name": "Front USB-A 3.0 (hub) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Front USB-A 3.0 (hub) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Side HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Side HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "Side USB-C (15W PD)",
+      "direction": "input",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "15W USB Power Delivery"
+    },
+    {
+      "name": "Side USB-B 3.0 (touch) 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "touch-return upstream port"
+    },
+    {
+      "name": "Side USB-B 3.0 (touch) 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "touch-return upstream port"
+    },
+    {
+      "name": "Side USB-B 3.0 (touch) 3",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "touch-return upstream port"
+    },
+    {
+      "name": "Side USB-A 3.0 (hub) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Side USB-A 3.0 (hub) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A (service port)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "service/maintenance port"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "loop-out, supports 4K@60Hz or 1080p@60Hz"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Optical Out (S/PDIF)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "LAN In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "speed inferred; not explicitly stated by source"
+    },
+    {
+      "name": "LAN Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "speed inferred; not explicitly stated by source"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Connector type inferred (IEC C13/C14) — multi-region detachable AC cords (US/UK/EU/AUS) confirm a standard IEC inlet, but exact C-type not stated by manufacturer. AC 100-240V 50/60Hz, max ~340-380W (sources vary), standby ≤0.5W"
+    }
+  ]
+}

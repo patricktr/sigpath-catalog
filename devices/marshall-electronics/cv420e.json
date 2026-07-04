@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Marshall Electronics",
+  "model": "CV420e",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://marshall-usa.com/pdf/CV420e-manual.pdf",
+  "confidence": "high",
+  "notes": "Desktop/tripod-mount ePTZ camera, 122.06 x 70 x 51 mm, not rack-mountable (rackUnits omitted). I/O verified directly from Marshall's official CV420e User Manual (Chapter 2.1/3.1, rear-panel diagram and port table) at marshall-usa.com/pdf/CV420e-manual.pdf, cross-checked against the product page marshall-usa.com/cameras/CV420e/. The Ethernet port supports simultaneous PoE power input (IEEE 802.3af) alongside IP video/control; PoE is not a separate physical port so it is noted on the Ethernet entry rather than modeled as its own port. Exact Ethernet link speed (1G vs 100M) is not explicitly stated in available documentation, so no eth-* grade was set (grade omitted rather than guessed). No SDI output on this model (that is the CV420-CS variant, a different SKU with 12G-SDI+HDMI and no lens). IR receiver and tally lamp are control/indicator features, not physical I/O ports, and were excluded.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB 3.0 Type-B port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "SuperSpeed USB 3.0 (backward compatible with USB 2.0); connects to computer for UVC video capture"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "IP streaming (RTSP/RTMP/RTMPS/SRT/MPEG-TS), VISCA-over-IP/ONVIF control, supports IEEE802.3af PoE power. Exact link speed (1G vs 100M) not stated in manual/spec sheet, so no grade set."
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack, switchable Line In / Mic In, feeds audio into HDMI and IP streams"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC barrel power jack (included external power adapter + cord); camera can alternatively be powered via PoE (802.3af) over the Ethernet port instead of this jack"
+    }
+  ]
+}

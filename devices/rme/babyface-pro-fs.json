@@ -1,0 +1,84 @@
+{
+  "manufacturer": "RME",
+  "model": "Babyface Pro FS",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://rme-audio.de/downloads/bface_pro_fs_e.pdf",
+  "confidence": "high",
+  "notes": "Desktop unit (no rackUnits). Source: RME's official Babyface Pro FS User's Guide PDF (rme-audio.de/downloads/bface_pro_fs_e.pdf), cross-checked against rme-audio.de/babyface-pro-fs.html and rme-usa.com/babyface-pro.html product pages. USB device-side connector is a right-angle USB Type-B socket (confirmed by manual's package contents: \"Cable USB 2.0 A plug to right angle B plug\" and \"Cable USB 2.0 C plug to right angle B plug\", and by RME selling BF2USBC as an optional replacement cable rather than a hardware revision); grade set to usb-2.0 since RME states \"When connected to USB 3, only the USB 2 protocol will be used.\" Optical TOSLINK is bidirectional ADAT/SPDIF; no grade applied since TOSLINK is not one of the graded connector families per the grading rules. Power connector is a locking round DC barrel jack (RME's proprietary locking type); closest listed id is dc-barrel. XLR mic inputs also function as line inputs at 0dB gain + PAD (up to +19dBu). Panel layout per RME's own description: XLR in/out on rear; TS instrument inputs 3/4 and both headphone jacks on right side; optical I/O, USB, power, and MIDI mini-DIN on left side.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Servo-balanced XLR mic/line input with switchable 48V phantom power, digitally controlled preamp"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Servo-balanced XLR mic/line input with switchable 48V phantom power, digitally controlled preamp"
+    },
+    {
+      "name": "Line Out 1 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR line output, switchable +19 dBu/+4 dBu max level"
+    },
+    {
+      "name": "Line Out 2 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR line output, switchable +19 dBu/+4 dBu max level"
+    },
+    {
+      "name": "Line/Inst In 3",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced, high-impedance instrument/line input, TS jack"
+    },
+    {
+      "name": "Line/Inst In 4",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced, high-impedance instrument/line input, TS jack"
+    },
+    {
+      "name": "Phones (6.3mm)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "High-impedance headphone output, independent driver stage; can double as unbalanced line out with adapter"
+    },
+    {
+      "name": "Phones (3.5mm)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Low-impedance headphone output, independent driver stage; can double as unbalanced line out with adapter"
+    },
+    {
+      "name": "Optical I/O",
+      "direction": "bidirectional",
+      "connector": "toslink",
+      "note": "TOSLINK, auto-detects; operates as ADAT (S/MUX) or SPDIF up to 192kHz depending on setting"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Device-side socket is a right-angle USB Type-B receptacle; included cables provide USB-A-to-B and USB-C-to-B to the host"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking-type DC barrel jack for optional RME external power supply (9-14V DC); unit is normally USB bus-powered"
+    },
+    {
+      "name": "MIDI I/O",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "6-pin mini-DIN port on the unit breaks out via included cable to two standard 5-pin DIN MIDI jacks (In/Out)"
+    }
+  ]
+}

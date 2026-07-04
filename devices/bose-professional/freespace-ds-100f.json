@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Bose Professional",
+  "model": "FreeSpace DS 100F",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://assets.boseprofessional.com/m/13d3a7c3584b5b2d/original/tds_fs_ds_100f_loudspeaker_en.pdf",
+  "confidence": "high",
+  "notes": "This is a passive, transformer-tapped 70V/100V/8Ω flush-mount ceiling loudspeaker (5.25\\\" woofer + 2.25\\\" Twiddler driver, 100W/400W peak, 8Ω nominal bypassed). It has no amplifier, no active electronics, and no mains power input — it draws audio/speaker-level signal through its single input terminal, which doubles as the power path. The official Bose data sheet specifies the connector only as a \\\"three-terminal barrier strip\\\" accepting 18-14 AWG wire; there is no barrier-strip/bare-wire id in the provided connector enum, so \\\"euroblock\\\" was chosen as the closest terminal-block-style analog. No bandwidth/version grade applies (analog speaker-level audio, not a graded digital/AV interface), so grade is omitted. Rack units omitted (ceiling-mounted, not rack equipment). Source: official Bose Professional technical data sheet (pro.Bose.com / assets.boseprofessional.com), confirmed directly via PDF fetch.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Three-terminal barrier strip (screw-terminal block), not a Euroblock/Phoenix connector per se — closest id available. Accepts 18 AWG to 14 AWG wire. Speaker-level input wired in parallel with the internal 70V/100V step-down transformer (with tap selector) or usable direct at 8 ohms low-impedance; no dedicated line-level or power connector on this passive ceiling loudspeaker."
+    }
+  ]
+}

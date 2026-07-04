@@ -1,0 +1,163 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "MTX3",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://data.yamaha.com/files/download/other_assets/5/329355/mtx3_en_om_h0.pdf",
+  "confidence": "high",
+  "notes": "Sourced directly from Yamaha's official MTX3 Owner's Manual (data.yamaha.com PDF) and corroborated by usa.yamaha.com/products/proaudio/processors/mtx/specs.html. All 8 analog inputs and 8 analog outputs use 3-pin, 5.08mm-pitch Euroblock (detachable screw-terminal) connectors, not XLR — confirmed in the manual's \"Euroblock plug connection\" section and the Input/Output Characteristics table. Stereo inputs (ST IN 1/2) are unbalanced RCA pairs. YDIF IN/OUT, DCP, and NETWORK all use RJ45 jacks but serve different, non-interchangeable purposes (proprietary digital-audio bus, proprietary control daisy-chain, and standard 100Base-TX Ethernet respectively) — only NETWORK is graded eth-100m since YDIF and DCP are not standard Ethernet data links per Yamaha's own connector-compatibility warning (\"connectors that are shaped identically but have a completely different function\"). GPI is a 16-pin Euroblock (not a simple binary connector) carrying 7 analog/digital inputs, one 24V-capable input, 4 open-collector outputs, +5V and ground — modeled here as a single bidirectional euroblock port since the port schema has no multi-pin GPI primitive. AC inlet is a standard IEC (C13/C14-style) inlet per the rear-panel diagram and included 2.5m power cord. No USB, HDMI, video, or Dante ports exist on this base MTX3 model (Dante variant is the separate MTX5-D, not covered here). Rack width/depth: 480 x 44 x 351mm (1U), weight 4.8kg.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable), gain +66dB/-6dB"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 7",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "INPUT 8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line, balanced, 3-pin 5.08mm Euroblock, +48V phantom (individually switchable)"
+    },
+    {
+      "name": "ST IN 1 (L/R)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced stereo line input, RCA pin jacks (L and R)"
+    },
+    {
+      "name": "ST IN 2 (L/R)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced stereo line input, RCA pin jacks (L and R)"
+    },
+    {
+      "name": "OUTPUT 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock, 75ohm source impedance"
+    },
+    {
+      "name": "OUTPUT 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 5",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 7",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "OUTPUT 8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced line output, 3-pin 5.08mm Euroblock"
+    },
+    {
+      "name": "YDIF IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary Yamaha YDIF digital audio transmission format, 16 channels + word clock, CAT5e/STP cable, up to 30m; not a standard Ethernet data link so no eth-x grade applies"
+    },
+    {
+      "name": "YDIF OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary Yamaha YDIF digital audio transmission format, 16 channels + word clock, CAT5e/STP cable, up to 30m"
+    },
+    {
+      "name": "DCP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary daisy-chain connector for Yamaha DCP-series wall control panels; CAT5e/STP straight cable, all 8 pins, up to 200m total; not standard Ethernet networking"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-TX, AutoMDI/MDI-X, for computer/AMX/Crestron/touch panel control"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub (male), for AMX/Crestron compatible controllers, 38.4/115.2 kbps"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "16-pin Euroblock: 7 analog/digital inputs (IN 1-7, 0-5V), 1 input supporting +24V (IN 8), 4 open-collector outputs (OUT 1-4), plus +5VDC and ground pins"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet, included detachable power cord (2.5m), 100-240V 50/60Hz, 50W max"
+    }
+  ]
+}

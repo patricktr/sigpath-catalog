@@ -1,0 +1,141 @@
+{
+  "manufacturer": "Sony",
+  "model": "PXW-Z750",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.manualslib.com/manual/3136538/Sony-Pxw-Z750.html",
+  "confidence": "high",
+  "notes": "Shoulder-mount 4K XDCAM broadcast camcorder (2/3-type 3-chip CMOS, global shutter). Ports extracted from Sony's official Operating Instructions manual (Specifications section and connector description pages, as mirrored on ManualsLib) plus B&H/search-corroborated details. Network is 100BASE-TX/10BASE-T only per the manual, so no eth-1g grade applies (mapped to eth-100m). USB is 2x Type-A + 1x Type-B, 4-pin each; USB generation/speed is not stated in the manual (no SuperSpeed/3.0 marking found in the primary spec table), so grade is omitted rather than guessed — some third-party listings call the control ports \\\"USB 3.0\\\" but this was not confirmed on the authoritative connector spec page. LENS (12-pin), VIEWFINDER (round 20-pin), and WRR (D-sub 15-pin, for wireless mic receiver slot) are proprietary Sony connectors with no exact match in the allowed connector list; they are omitted from the port list rather than mis-mapped (closest analogues would be euroblock/rs232-class control, but that would misrepresent them). The LIGHT connector is a 2-pin accessory DC power output (D-tap-style); mapped to dc-barrel as the closest available connector id since no dedicated 2-pin accessory/D-tap id exists. SxS (x2) and SD (x2, Proxy/Utility) media card slots exist but are storage media slots, not cable/signal connectors, so they are excluded per the port schema's focus on physical signal/power I/O. HDMI/USB/Ethernet lack explicit version numbers in Sony's spec table, so no bandwidth grade was set for those (per instructions, grade omitted when spec doesn't state version/speed) except Ethernet where 100BASE-TX is explicitly stated (eth-100m).",
+  "ports": [
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Switchable 12G/3G/1.5G-SDI, embedded audio, 0.8 Vp-p unbalanced"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Switchable 12G/3G/1.5G-SDI, embedded audio, 0.8 Vp-p unbalanced"
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE ST292-1/259 compliant; used for 1080p pool-feed recording"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Type A, 19-pin; outputs QFHD/HD video and audio; SD output not supported. No HDMI version stated by manufacturer."
+    },
+    {
+      "name": "GENLOCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1.0 Vp-p, 75 ohm, unbalanced reference input"
+    },
+    {
+      "name": "TC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "0.5 V to 18 Vp-p, 10 kohm timecode input"
+    },
+    {
+      "name": "TC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "1.0 Vp-p, 50 ohm timecode output"
+    },
+    {
+      "name": "SYNC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Tri-level sync output for external device synchronization"
+    },
+    {
+      "name": "AUDIO IN CH-1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin female; selectable LINE/AES-EBU/MIC/MIC+48V"
+    },
+    {
+      "name": "AUDIO IN CH-2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin female; selectable LINE/AES-EBU/MIC/MIC+48V"
+    },
+    {
+      "name": "MIC IN",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Front-mounted 5-pin female, -70 to -30 dBu"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin male, +4/0/-3 dBu balanced; outputs CH1/2 or CH3/4"
+    },
+    {
+      "name": "EARPHONE",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo minijack, -12 dBu reference; monitors E-E/playback audio"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX (IEEE 802.3u) / 10BASE-T (IEEE 802.3); shielded cable recommended"
+    },
+    {
+      "name": "USB (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "4-pin Type A port; wireless LAN module / peripheral connection. Speed/generation not stated by manufacturer."
+    },
+    {
+      "name": "USB (Type A) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Second 4-pin Type A port. Speed/generation not stated by manufacturer."
+    },
+    {
+      "name": "USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "4-pin Type B PC-connection port. Speed/generation not stated by manufacturer."
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "8-pin proprietary remote-control connector; closest listed connector family is serial control (rs232) — actual connector is a Sony 8-pin remote jack, not true RS-232 D-sub. Power must be off to connect/disconnect."
+    },
+    {
+      "name": "LIGHT",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "2-pin accessory DC power output for on-camera light (D-tap style); mapped to dc-barrel as closest available connector id"
+    },
+    {
+      "name": "DC OUT",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Round 4-pin, 11-17 V DC, 1.8 A max — accessory power output; mapped to dc-barrel as closest round DC connector id"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "XLR type, 4-pin male, 11 V to 17 V DC power input"
+    }
+  ]
+}

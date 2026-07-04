@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Ultra Encode AIO",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.magewell.com/static/tech-specs/Ultra%20Encode/Ultra_Encode_AIO.pdf",
+  "confidence": "high",
+  "notes": "SD card slot (1x) omitted from port list as it is storage media, not a signal/power I/O connector. The manufacturer's own \"Input/Output Ports\" table caps SDI at \"SD/HD/3G\" (sdi-3g); other prose sections of the same spec sheet and third-party summaries mention 6G support for encode/processing, but the literal physical-port table lists only up to 3G-SDI, so sdi-3g was used per the authoritative port listing. HDMI is specified as \"HDMI 1.4a, DVI-D\" (no 2.0/2.1 support, no 4:2:2 12-bit color note applies to HDMI in but connector grade is hdmi-1.4). USB Type-C is explicitly labeled \"(config)\" — a configuration/service port, not confirmed as a data/DisplayAltMode port; USB generation/speed not stated for any USB port, so grade omitted. Ethernet supports PoE+ (802.3at) as power-over-data-cable, not a separate power connector. Device also has Wi-Fi (802.11a/b/g/n/ac) and supports a 4G/5G USB modem (not supplied) via the USB-A ports — not modeled as a physical port since it's a plugged-in accessory, not a built-in radio jack. Unit is a compact desktop encoder (214.9 x 128.2 x 44.55 mm) that ships with an optional 1U rack-mount kit; rackUnits omitted per instructions for desktop-first units. Cross-checked manufacturer webpage (magewell.com/tech-specs/ultra-encode-aio) and B&H/Amazon listings, all consistent with the PDF.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Loop-through",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Loop-through of the SDI input signal, not an independent output"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Loop-through",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Loop-through of the HDMI input signal, not an independent output"
+    },
+    {
+      "name": "LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps Base-T, PoE+ (IEEE 802.3at) powered device input"
+    },
+    {
+      "name": "USB-C (config)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Configuration/service port; spec sheet does not state USB generation"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "One of two identical USB Type-A ports, for USB storage or 4G/5G modem; spec sheet does not state USB generation"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Second of two identical USB Type-A ports"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 9-18V, ~1.15A max (~11.5W); screw-locking barrel connector, included adapter"
+    }
+  ]
+}

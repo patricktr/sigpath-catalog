@@ -1,0 +1,109 @@
+{
+  "manufacturer": "RGB Spectrum",
+  "model": "QuadView UHDx",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.rgb.com/sites/default/files/products/brochures/QuadView-UHDx-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: RGB Spectrum official data sheet (QuadView-UHDx-Data-Sheet.pdf, rev QVUHDx09142020), cross-checked against Markertek's retail spec table (matches exactly) and ManualsLib excerpts of the user manual. Video output HDMI carries embedded audio, so it is not double-counted as a separate audio port. The 6x 3.5mm audio inputs correspond one-to-one with the 6 video inputs (4 HDMI + 2 DisplayPort) per the datasheet's \"Audio: 6x 3.5mm mini-pin, stereo\" input spec. LAN (RJ45) port: not itemized in the official datasheet's port table, but confirmed present via secondary sources (used for the built-in web GUI and Telnet control) and visible as a distinct connector on the rear-panel photo printed in the datasheet; direction set to bidirectional per convention. RS-232 is DB9 serial, used for third-party control. AC power connector type is not stated in text specs (only \"100-240 VAC/50-60Hz, 15W max\" given); the rear-panel photo in the datasheet shows a standard rectangular IEC-style inlet consistent with a compact 1RU AV unit, so \"iec\" (C13/C14 family) is inferred rather than confirmed from a text label — flagged as medium-confidence on that one port only. No USB ports are documented on this base QuadView UHDx model (a separate \"QuadView UHDx KVM Multiviewer\" variant exists with USB/KVM extension ports, which is a different SKU not covered here). Grades: HDMI ports set to hdmi-2.0 and DisplayPort to dp-1.2 per explicit datasheet spec (\"4x HDMI(2.0), 2x DisplayPort(1.2)\"). RJ45 and RS-232 left without a grade since no Ethernet speed is stated (RS-232 is not a graded connector type in the given scale).",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort In 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort In 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 3",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 4",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 5",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 6",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (Optical)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "Audio Out (Analog)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

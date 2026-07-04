@@ -1,0 +1,154 @@
+{
+  "manufacturer": "Datavideo",
+  "model": "HDR-90",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "sourceUrl": "https://datavideo.com/us/product/HDR-90",
+  "confidence": "high",
+  "notes": "Verified against the official Datavideo spec-sheet export (datavideo.com/us/product/HDR-90) and the official Instruction Manual PDF (resource.datavideo.com/Instruction_Manuals/HDR-90_E5_A4_EN.pdf), which includes the rear-panel connector diagram. SDI grade for the combo 3G/12G-SDI IN1 and OUT ports is set to sdi-12g (max supported, per SMPTE 2082 spec listed); the 3x SDI IN2-4 ports are 3G/HD only (sdi-3g). DC power input is a locking/screw-ring DC barrel connector (12V) per the manual's rear-panel description (\"screwing the outer fastening ring of the DC In plug to the socket\"), mapped to dc-barrel. GPI is a 3.5mm phone-jack control port (mapped to trs-3.5, no grade - control signal not audio). Genlock IN/OUT and Time Code IN/OUT are BNC sync/reference ports, not bandwidth-graded (no grade set, consistent with rule to omit grade for non-listed scales). Front-panel USB-A port and SD card slot are explicitly labeled \"Reserved for future development\" in the manual; USB-A port included as a physical port with no grade (version unstated/inactive) - SD card slot omitted as it is a media slot, not a signal/power connector. Front panel also has a 3.5mm stereo earphone/audio-monitor jack (TRS-3.5, output) not shown on rear panel diagrams. Ethernet port is labeled \"DVIP\" on the unit but functions as a standard RJ45 Ethernet control port; no speed/grade stated in specs so grade omitted.",
+  "ports": [
+    {
+      "name": "3G/12G-SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "3G-SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G/12G-SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HD/4K-HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI OUT MV",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "Audio In CH1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In CH2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out CH1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out CH2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Earphone Jack",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Genlock IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Genlock OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Time Code IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Time Code OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "DVIP (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "GPI control socket (pulse/level trigger), not audio"
+    },
+    {
+      "name": "RS-232/422",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ]
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel port, labeled reserved for future development in the manual"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking/screw-ring DC barrel connector, 12V"
+    }
+  ]
+}

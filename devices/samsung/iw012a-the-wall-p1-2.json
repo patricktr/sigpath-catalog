@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Samsung",
+  "model": "IW012A (The Wall P1.2)",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://cdn.assetserver.net/_assets/samsung/pdf/iw012a-manual.pdf",
+  "confidence": "medium",
+  "notes": "The IW012A is a modular direct-view LED display cabinet (part of Samsung's \"The Wall\" IWA series, 1.26mm pixel pitch), not a self-contained flat-panel display. It is one tile in a larger video wall; multiple cabinets daisy-chain together and connect upstream to an external S-Box (SNOW-AAE) / I-G Card for the actual video source input. Port list and diagram sourced from the official Samsung User Manual (IW008A/IW012A/IW016A, rev. Dec 2021), page 8 \"Ports\" and page 12 \"Connecting to cabinets\". The DATA in/out ports are physically HDMI-shaped in the manual's diagram but Samsung does not publish an HDMI version/spec for them (they carry a proprietary daisy-chain video protocol between cabinets, not a standard HDMI signal) — grade omitted per rule. The SERVICE port is USB-A shaped per the diagram but is reserved for Samsung service technicians; no USB spec (2.0/etc.) is published, so grade is omitted. The power inlet is a proprietary 3-pin keyed/locking connector (not a standard IEC or barrel jack) fed from an external power supply; dc-barrel was chosen as the closest listed connector type — treat this as an approximation. Two additional non-cable \"docking\" board-to-board connectors join stacked cabinet modules internally (power+data) and a recessed SWITCH button (factory mode/reset) exists; these are omitted as they are not user-facing cable ports. No RJ45/Ethernet, analog audio, or video (SDI/VGA/DP) ports are present on the cabinet itself. Not rack-mountable (wall/frame-mounted modular tile, dimensions 806.4 x 453.6 x 36.5 mm, ~11.2 kg). Confidence is medium because the primary source (official manual) confirms port existence, general shape, and function, but does not state formal interface standards/versions for DATA or SERVICE, and the power connector's exact proprietary type could not be independently confirmed beyond the diagram.",
+  "ports": [
+    {
+      "name": "SERVICE",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Service/diagnostic port dedicated to Samsung service technicians; USB-A shaped per manual diagram, no published USB spec version"
+    },
+    {
+      "name": "DATA (out)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Proprietary daisy-chain video data link to the DATA-in port on the next cabinet; HDMI-shaped connector per manual diagram but carries Samsung's proprietary cabinet interconnect protocol, not standard HDMI signaling"
+    },
+    {
+      "name": "DATA (in)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Receives video data from the previous cabinet's DATA-out port or from an interface gender/I-G Card; HDMI-shaped connector per manual diagram, proprietary protocol"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power input via proprietary 3-pin keyed/locking connector with integrated on/off rocker switch, protected by a lowering cap; dc-barrel used as closest listed connector type, actual connector is a proprietary Samsung 3-pin locking type"
+    }
+  ]
+}

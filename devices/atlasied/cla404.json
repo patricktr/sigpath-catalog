@@ -1,0 +1,78 @@
+{
+  "manufacturer": "AtlasIED",
+  "model": "CLA404",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.atlasied.com/ATS007746B-CLA404-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Rear panel (per official datasheet photo and spec tables): 4x \"LINE IN\" balanced euroblock inputs (3-position, 3.5mm pitch, with +/-/ground labeled), 4x \"AMP OUT\" speaker euroblock outputs (2-position, 5.08mm pitch, locking, \"Class 2 Wiring\"), 1x \"GPI\" port (3-position, 3.5mm euroblock; contact-closure Standby and Priority Mute functions), 1x \"REMOTE LEVEL\" port (7-position, 3.5mm euroblock; provides +10V/GND and a per-channel 0-10V return for remote level pots, one wired connector serving all 4 channels rather than 4 discrete ports), and IEC C14 AC mains inlet (unit ships with an IEC C13-to-NEMA 5-15 cord). No network port, no USB, no DSP/optional card slot (datasheet explicitly lists \"Network: No\"). Grade omitted on all ports since none are HDMI/SDI/DP/USB/Ethernet — connectors here are analog audio (euroblock) and AC power (IEC), which are outside the graded-connector list. Rack-mountable: 1RU half-rack (ships with a rack kit for single or dual half-rack mounting side by side).",
+  "ports": [
+    {
+      "name": "Line In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced line input, 3-position 3.5mm pitch euroblock, 20kΩ balanced / 10kΩ unbalanced impedance"
+    },
+    {
+      "name": "Line In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced line input, 3-position 3.5mm pitch euroblock"
+    },
+    {
+      "name": "Line In 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced line input, 3-position 3.5mm pitch euroblock"
+    },
+    {
+      "name": "Line In 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced line input, 3-position 3.5mm pitch euroblock"
+    },
+    {
+      "name": "Amp Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output, removable 2-position 5.08mm pitch locking euroblock, 15A RMS per terminal, Class 2 wiring"
+    },
+    {
+      "name": "Amp Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output, removable 2-position 5.08mm pitch locking euroblock"
+    },
+    {
+      "name": "Amp Out 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output, removable 2-position 5.08mm pitch locking euroblock"
+    },
+    {
+      "name": "Amp Out 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output, removable 2-position 5.08mm pitch locking euroblock"
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-position 3.5mm euroblock; contact-closure control for Standby (energy save) and Priority Mute"
+    },
+    {
+      "name": "Remote Level",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "7-position 3.5mm euroblock providing +10V/GND plus a per-channel 0-10V return from a 10kΩ pot or remote control system, one connector serving all 4 channels"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 mains inlet; ships with IEC C13 plug / NEMA 5-15 power cord; auto-sensing 100-132V / 208-264V 50/60Hz"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "manufacturer": "Promethean",
+  "model": "ActivPanel 9 Premium 75 (AP9-B75-NA-1)",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.connection.com/product/promethean-75-activpanel-9-premium-4k-ultra-hd-led-lcd-touchscreen-display/ap9-b75-na-1/41487797",
+  "confidence": "medium",
+  "notes": "Port list is cross-confirmed across three independent secondary sources that all appear to quote Promethean's own spec sheet table (Connection.com/GovConnection product listing, and a Medium article reproducing the datasheet), but I could not directly load the official Promethean PDF (prometheanworld.com blocked WebFetch/curl with 403) or the Promethean support KB article (returned only a loading-error shell) to confirm firsthand. Treat HDMI/DisplayPort/USB versions and counts as reliable (matched verbatim across sources) but not first-party-verified. \"AV-In (3.5mm)\" is listed in sources as a 3.5mm jack; this is likely a proprietary breakout (composite/component via minijack) rather than a true audio-only 3.5mm line and is mapped here to trs-3.5 as the closest connector id — could not confirm exact pin function. RS-232 connector is confirmed as DSUB 9-pin male from a separate Promethean support article (control codes page), mapped to rs232. Power inlet connector type (IEC vs NEMA captive cord) was not explicitly stated in any source for the NA variant; mapped to \"iec\" as the closest/most common for this panel class but this is an inference, not confirmed — flagging as a caveat. OPS slot (Open Pluggable Specification bay for a Windows compute module) is a card-edge/OPS interface, not in the provided connector enum, so it is omitted from the ports list rather than mis-mapped. NFC and Wi-Fi/Bluetooth radios are omitted (not physical wired ports). MicroSD slot omitted (not in connector enum and not a signal/power port in the AV sense). Rear USB-A 2.0 (1x) and USB-A 3.0 (2 front + 2 rear) are listed separately per source; USB-B 3.0 touch ports (1 front + 3 rear) are for touch/OPS pass-through, not general host USB - graded as usb-5g (USB 3.0/3.2 Gen1 = 5Gbps) per convention. USB-C is described as \"USB-C 3.2\" with 100W Power Delivery - graded as usb-5g (3.2 Gen1 nomenclature typically denotes 5Gbps on this class of interactive panel; could not confirm Gen2/10Gbps from sources, so conservative grade chosen). EU variant (AP9-B75-EU-1) has a different plug/voltage standard but same port architecture; NA unit specified here.",
+  "ports": [
+    {
+      "name": "HDMI 1 (Rear)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2 (Rear)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI 3 (Front)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Display Port",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "USB-C (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB-C 3.2 with 100W USB Power Delivery; supports video/touch/power over one cable"
+    },
+    {
+      "name": "USB-B Touch (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-B Touch 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-B Touch 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-B Touch 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "listed separately as USB-A 2.0 (Rear)"
+    },
+    {
+      "name": "PC Audio",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AV-In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "listed as 3.5mm AV-In; exact pin function (composite breakout vs line audio) unconfirmed"
+    },
+    {
+      "name": "Mic",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Power inlet connector type (IEC vs captive NEMA cord) not explicitly confirmed for NA SKU; 100-240V AC universal input stated in sources"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Lightware",
+  "model": "HDMI20-OPTC-TX220-Pro",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/HDMI20-OPTC-RX-TX220-Pro.pdf",
+  "confidence": "high",
+  "notes": "Authoritative Lightware manufacturer datasheet (HDMI20-OPTC-Series, TX/RX220-Pro), also linked from lightware.com/hdmi20-optc-tx220-pro. Confirms exact rear-panel connectors and labels via the port diagram: 2x HDMI 2.0 (18G) inputs (INPUT 1/2), 1x HDMI 2.0 (18G) output (OUTPUT 2, local monitor feed), 1x Neutrik opticalCON DUO fiber connector (LC duplex), 2x Neutrik etherCON Gigabit Ethernet ports, 1x RS-232 (DB9), 1x Mini USB-B (control only), and IEC C14 AC power inlet with internal AC/DC supply. Enclosure is 1RU height x 1/2 rack width (rack-shelf/standalone mountable, not a full-width 1U chassis) -- rackUnits set to 1 for height but note the half-width form factor. HDMI grade is HDMI 2.0 (18 Gbps, matches hdmi-2.0 tier) per datasheet \"HDMI 2.0 (18G)\" port labels. Ethernet grade set to eth-1g per \"2x Gigabit Ethernet\" spec. EtherCON connectors are physically a ruggedized RJ45 variant, mapped to the rj45 connector id per the provided enum (no etherCON option exists in the list). This TX220-Pro variant uses Neutrik opticalCON DUO optics; sibling SKUs (NTQ, FOX, PCN) swap only the optical/power connector types and are not covered here. Front-panel LEDs/LCD/jog-dial control are not physical I/O ports and were omitted.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUTPUT 2 (Local Monitor)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Fiber Output (A/B)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Neutrik opticalCON DUO (LC duplex); carries video, 2x Gigabit Ethernet, and RS-232 over a single multimode fiber. Also available in NTQ (OpticalCON Quad), FOX (Fiberfox), and PCN variants with different optical connectors."
+    },
+    {
+      "name": "Gigabit ET 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Physical connector is Neutrik etherCON (ruggedized RJ45 shell), mapped to rj45."
+    },
+    {
+      "name": "Gigabit ET 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Physical connector is Neutrik etherCON (ruggedized RJ45 shell), mapped to rj45."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 connector; bidirectional command injection & pass-through."
+    },
+    {
+      "name": "USB Control",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Mini USB-B port for LDC software control; not a high-speed data port so no grade set."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320-C14 inlet, 100-240VAC 50/60Hz, internal AC/DC power supply."
+    }
+  ]
+}

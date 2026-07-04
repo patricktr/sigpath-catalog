@@ -1,0 +1,76 @@
+{
+  "manufacturer": "RTS",
+  "model": "Zeus III LE",
+  "category": "control",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://products.rtsintercoms.com/binary/Zeus%20III%20LE,%20LE+%20Technical%20Data%20Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Source is the official RTS/Bosch \"Zeus III LE and LE+\" Technical Data Sheet (Form F01U281930 Rev 02, April 2013), which covers both the Zeus III LE (single power supply) and Zeus III LE+ (dual/failover power supply) as one document. This entry models the base Zeus III LE (single PSU, single AC inlet); the LE+ variant is identical except for a second IEC inlet and a second Power LED. GPI and RELAYS 1&2 connectors are drawn as DB-9/DB-25 D-sub connectors in the official line drawing, which are not in the allowed connector-id list; they were mapped to the closest available id (euroblock) as an approximation - actual hardware uses D-sub, not euroblock terminal blocks. TRUNK/TO PC is a single physical DB-9 combo connector serving both RS232 (PC/AZedit) and RS485 (trunk) functions per spec text, also approximated since DB-9 is not in the allowed list. USB port type/speed and exact connector shape (USB-A vs USB-B/Mini) are not stated in the data sheet. No HDMI/SDI/video ports exist on this device - it is a pure audio intercom matrix, so type \"Other\" and category \"control\" were chosen since no listed category/type precisely fits a digital intercom matrix (closest alternatives would be \"audio\"/\"Audio mixer\" or \"network\"/\"Network switch\", none of which are accurate). Keypanel RJ45 ports carry balanced analog audio (8dBu nominal, 20dBu max) plus RS485 data - no bandwidth grade applies since RJ45 here is not Ethernet-speed graded (only the dedicated ETHERNET port is 10/100Mbps and got eth-100m). Rack width 19in, height 1U (1.72in), depth 15in, weight 7.0lb.",
+  "ports": [
+    {
+      "name": "PORT 1-16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "16x RJ45 keypanel ports; each carries RS485 keypanel data plus balanced 4-wire audio in/out for keypanel or audio device connection. Modeled as one representative port; device has 16 of these."
+    },
+    {
+      "name": "CH. A (2W/Party Line)",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Party line channel A, configurable for RTS TW, Audiocom, or Clear-Com party-line protocols; balanced 2-wire."
+    },
+    {
+      "name": "CH. B (2W/Party Line)",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Party line channel B, configurable for RTS TW, Audiocom, or Clear-Com party-line protocols; balanced 2-wire."
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Mbps for remote AZedit configuration, GPIO-16, or trunking data."
+    },
+    {
+      "name": "TRUNK/TO PC",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "DB-9 combo connector: RS232 PC port (AZedit, supports CPL) and RS485 trunk port for RTS trunked-system communication. Closest connector-id mapping; physically a DB-9 D-sub, not a round RS232/RS422 connector."
+    },
+    {
+      "name": "GPIO-16/PAP/LCP",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Peripheral data port (DB-9) for GPIO-16 or LCP-102 peripheral devices."
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "General purpose input connector shown on rear panel as a DB-25 in the line drawing; DB-25 is not in the allowed connector list, so mapped to closest generic multi-pin I/O type (euroblock) as an approximation. Treat with caution."
+    },
+    {
+      "name": "RELAYS 1&2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Two relay contact outputs on a DB-9 connector; mapped to closest generic connector id since DB-9 is not in the allowed list."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for direct AZedit configuration. USB type/version (A vs B, speed) not specified on the data sheet; connector shape not confirmed from the front-panel line drawing beyond a generic USB port icon."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240VAC ~50-60Hz IEC power inlet. Zeus III LE (base model) has a single power supply/single inlet; the LE+ variant adds a second IEC inlet for redundant power."
+    }
+  ]
+}

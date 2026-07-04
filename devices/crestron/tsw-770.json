@@ -1,0 +1,32 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TSW-770",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://docs.crestron.com/en-us/8550/Content/Topics/Specifications/Specifications-TSW-770.htm",
+  "confidence": "high",
+  "notes": "7-inch PoE-powered wall/tabletop touch panel; no local AC power input exists — device is powered entirely via PoE/PoE+ over its single RJ-45 LAN port (100BASE-TX, so eth-100m grade, not gigabit). No external audio jacks (built-in mic and speakers only, not exposed as ports). A rack mount kit accessory exists (3RU) but the unit itself is a wall/desktop touch panel, not an inherently rack-mounted product, so rackUnits omitted. Variant models (TSW-770-GV government version, TSW-770R ruggedized) may differ slightly; specs here are for the base TSW-770 SKU per Crestron's official specifications page.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ-45, PoE+ PD (powered device) port; sole power source for the unit"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A host port for optional room scheduling accessories"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A host port for optional room scheduling accessories"
+    }
+  ]
+}

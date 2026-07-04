@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Williams AV",
+  "model": "WF T5",
+  "category": "audio",
+  "sourceUrl": "https://cdn-docs.av-iq.com/Brochure/CAT261D-Wavecast.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Williams AV's official specification sheet (MCAT 261D, \"SPECIFICATION DATA WaveCAST WF T5,\" (c) 2022 Williams AV, LLC), hosted on the AV-iQ document CDN (cdn-docs.av-iq.com/Brochure/CAT261D-Wavecast.pdf). This sheet covers both serial-number variants of the WF T5 (A/B and C-or-later); the physical I/O is identical across both — only firmware/feature notes differ. The WF T5 is a single-channel Wi-Fi audio transmitter (WaveCAST platform) for assistive-listening/audio-over-Wi-Fi applications. Category \"audio\" and type \"Other\" are approximate — it doesn't cleanly fit the given type enum (closest real-world description is a \"Wi-Fi audio transmitter/DSP processor\"); left type unset since no listed type fits well. It is fundamentally a desktop unit (1/2 rack-space wide) that can optionally share a 1U rack space two-up with an accessory rack kit (RPK 005/006), so rackUnits is omitted per instructions for desktop units. The power supply is an external desktop transformer (Williams AV TFP 062): AC mains (100-240VAC 50/60Hz, IEC line cord) on the supply's input side, feeding 24VDC/750mA/18W to the WF T5 via a 2.5mm ID center-positive barrel connector — the barrel connector is what's modeled as the unit's own power port. Ethernet is 10/100 Base-T (IEEE 802.3), graded eth-100m since 10/100 tops out at Fast Ethernet (100 Mbps). The XLR/TRS combo input carries both mic and line signals plus phantom power on the same physical jack. Note: Williams AV's current catalog has moved on to the WF T5C (\"WaveCAST C\") successor with an OLED display and optional Dante; this device record is for the original WF T5 as specified in the sourced datasheet.",
+  "ports": [
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combination 3-pin XLR / 1/4\" TRS jack; mic or line level, balanced or unbalanced, selectable phantom power (14.4VDC)"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "-10 dBV (.32 VRMS), 100 ohm output impedance"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS stereo jack, mono signal, 15.7 mW max into 33 ohms; tied to rear input for monitoring"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45, 10/100 Base-T, IEEE 802.3 compliant, supports CAT5e up to 328 ft (100m)"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.5mm ID center-positive barrel connector; 24VDC, 750mA from external desktop transformer (TFP 062, AC input 100-240VAC 50/60Hz)"
+    }
+  ]
+}

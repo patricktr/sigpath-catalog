@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Extron",
+  "model": "ShareLink Pro 500",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://media.extron.com/public/download/files/brochure/sharelink_pro_500_revA2.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: Extron's official product brochure PDF (media.extron.com), containing full manufacturer specification tables (video input/output, audio output, Ethernet control, general/power, mounting, enclosure dimensions). The main extron.com/product/sharelinkpro500 page was blocked by network filtering, but the brochure PDF is hosted on an Extron-owned domain and is the same authoritative source content. Desktop/tabletop unit (1.0 in H x 8.75 in W x 8.0 in D, half-rack width) with optional half-rack shelf kit or under-desk/wall mount available; rackUnits omitted since it is not rack-mountable by default. Audio output is a 5-pole 3.5mm-pitch captive screw terminal block (stereo L/R + poles) — mapped to 'euroblock' as the closest available connector id since no dedicated small-pitch terminal-block id exists in the allowed list. The front-panel 'CONFIG' port's exact USB sub-connector (mini-USB vs micro-USB) could not be confirmed from text; inferred as usb-micro from the panel photo silhouette (medium confidence on this one port only). Ethernet is Gigabit-capable (10/100/1000Base-T) so graded eth-1g. HDMI ports graded hdmi-2.0 per stated HDMI 2.0/HDCP 2.2 compliance; note this ShareLink Pro 500 model (distinct from the ShareLink Pro 1000) tops out at 1080p for software-shared wireless content, though the physical HDMI input/output pass-through supports up to 4096x2160@60Hz 4:4:4 8-bit. Primary deployment uses PoE+ (802.3at) via the LAN/RJ45 port instead of local DC power; the DC barrel/captive power input (12V/1.7A) is for the optional PS 1220 supply, sold separately. No AC mains port exists on this unit.",
+  "ports": [
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female HDMI Type A; DVI 1.0/HDMI 2.0/HDCP 2.2; up to 4096x2160@60Hz pass-through"
+    },
+    {
+      "name": "HDMI/CEC Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female HDMI Type A; DVI 1.0/HDMI 2.0/HDCP 2.2; supports CEC display control; up to 4K pass-through or 1080p for software-shared content"
+    },
+    {
+      "name": "Audio Output (L/R)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.5 mm pitch captive screw connector, 5-pole, balanced/unbalanced line-level stereo audio output; closest standard id is euroblock (mini terminal block), not a standard 3.5mm phone jack"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T with PoE+ (802.3at, class 4/type 2); provides both network/control data and power to the unit"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB-A host port for the optional WFA 100 Wi-Fi Miracast adapter; USB generation/speed not stated in spec sheet"
+    },
+    {
+      "name": "Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Small front-panel service/config port labeled CONFIG next to the Extron logo; exact USB sub-type (mini vs micro) not confirmed in the brochure text, inferred from panel photo"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Labeled POWER, 12 VDC 1.7A MAX, 2-pole captive screw/barrel connector for optional external PS 1220 power supply; unit can alternatively be powered via PoE+ over the LAN port and ships without a power supply by default"
+    }
+  ]
+}

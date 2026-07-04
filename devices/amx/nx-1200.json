@@ -1,0 +1,85 @@
+{
+  "manufacturer": "AMX",
+  "model": "NX-1200",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf",
+  "confidence": "high",
+  "notes": "Sourced from the manufacturer's official AMX/Harman Pro datasheet (PDF, revised 11.18.16), fetched via redirect from amx.com/en-US/product_documents/nx-1200-datasheet-pdf. All I/O on this unit are captive 3.5mm mini-Phoenix screw-terminal connectors (mapped to closest available connector id 'euroblock'/'euroblock-dc') rather than XLR/TRS/etc; pin counts vary per port (2-pin, 4-pin, 5-pin, 6-pin, 10-pin) as noted. No bandwidth grade is published for AxLink or the RS-232/422/485/IR/IO control ports, so grade is omitted there per rules. Ethernet is explicitly 10/100 (eth-100m). USB generation is not stated on the datasheet; assumed USB 2.0 (typical for this control-processor's era) - grade inferred, lowering confidence slightly on that detail only. This is a compact desktop/shelf unit (1RU height x 1/3 rack width) requiring an optional rack tray (AVB-VSTYLE-RMK) to occupy a full rack space, so rackUnits omitted. Power is supplied via an external 12VDC (9-18VDC range) adapter connecting to a captive 3.5mm Phoenix terminal (not a barrel jack or IEC inlet); no AC mains connector exists on the unit itself.",
+  "ports": [
+    {
+      "name": "TO PC (Program Port)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Standard B port for NetLinx Studio programming"
+    },
+    {
+      "name": "USB Host Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Standard A host port for firmware updates, file transfer, mass storage"
+    },
+    {
+      "name": "LAN 10/100",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet, TCP/IP, auto MDI/MDI-X"
+    },
+    {
+      "name": "AxLink",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position 3.5mm screw-terminal (mini-Phoenix) AxLink control bus port, provides data and power to external AxLink devices"
+    },
+    {
+      "name": "RS-232/422/485",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs232",
+        "rs422",
+        "rs485"
+      ],
+      "note": "10-position 3.5mm screw-terminal (mini-Phoenix); NetLinx Port 1; supports RS-232, RS-422, or RS-485 selectable"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-position 3.5mm screw-terminal (mini-Phoenix), RS-232 only; NetLinx Port 2"
+    },
+    {
+      "name": "IR/Serial 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw-terminal; 1-way IR or serial transmit port; NetLinx Port 11; carriers up to 1.142 MHz"
+    },
+    {
+      "name": "IR/Serial 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw-terminal; 1-way IR or serial transmit port; NetLinx Port 12; carriers up to 1.142 MHz"
+    },
+    {
+      "name": "I/O 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "One 6-position 3.5mm screw-terminal providing 4-channel binary I/O for contact closure with voltage sensing; NetLinx Port 22, channels 1-4"
+    },
+    {
+      "name": "IRRX",
+      "direction": "input",
+      "connector": "ir",
+      "note": "1/8 inch (3.5mm) mini-jack IR receive input port"
+    },
+    {
+      "name": "INPUT PWR",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin 3.5mm mini-Phoenix DC power input with retaining screws; 12VDC typical (9-18VDC range), 200mA draw; external power supply (e.g. PSR5.4) required, not included"
+    }
+  ]
+}

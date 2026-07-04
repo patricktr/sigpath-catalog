@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Extreme Networks",
+  "model": "X440-G2-48p-10GE4",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://documentation.extremenetworks.com/HW_QRG/120998-00_x440-g2_qrg.pdf",
+  "confidence": "medium",
+  "notes": "Part numbers 16535 / 16535A. 48x front-panel 10/100/1000BASE-T PoE+ (802.3af/at) copper ports. Rear panel: 4x unpopulated 1GbE SFP ports upgradable to 10GbE SFP+ via ExtremeXOS license (2 are combo with 2 of the RJ45 copper-combo ports, 2 are non-combo dedicated SFP+); 2x 1GbE RJ45 copper-combo ports upgradable to 10GbE (share physical port with 2 of the SFP+ cage). Two of the rear SFP+ ports can alternatively be configured as stacking ports via CLI (stacking not available on all variants). AC inlet is IEC 60320 C14 (mates with a C13 cord); Extreme ships the unit without a power cord and sells country-specific C13 cords separately, consistent with a standard IEC inlet rather than a captive cord. Redundant Power Supply (RPS) port on rear is a proprietary Extreme RPS connector (not a standard connector in the given list); mapped to dc-barrel as the closest generic id — treat with low confidence on connector id specifically. Grades: RJ45 access ports are 10/100/1000 (eth-1g best case, no 2.5G/5G/10G on the 48 access ports); rear SFP+/combo ports are 1G by default, field-upgradable to 10G (eth-10g) via ExtremeXOS Edge license — graded here as eth-1g (shipped/default state) per port with note that eth-10g is available via license upgrade using appropriate SFP+ optics. Console and USB port speeds/grades not applicable (RS232-equivalent console over RJ45, USB 2.0 not in USB grade list scope beyond usb-2.0 tag omitted since exact USB spec version on connector not confirmed as bandwidth-relevant here it is set). DC-powered variant (X440-G2-48t-10GE4-DC) exists separately and is NOT this model (this is the AC PoE+ model). No HDMI/AV connectors — this is a pure Ethernet access switch bundled into an AV rack for network infrastructure.",
+  "ports": [
+    {
+      "name": "1-48 (10/100/1000BASE-T PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x front-panel RJ45 copper access ports, IEEE 802.3af/at PoE+ capable"
+    },
+    {
+      "name": "SFP+ 49/50 (combo)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Rear panel; unpopulated, combo-shared with two of the RJ45 copper-combo ports; field-upgradable to 10GbE (eth-10g) via ExtremeXOS Edge license and SFP+ optics"
+    },
+    {
+      "name": "SFP+ 51/52",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Rear panel; unpopulated, non-combo dedicated SFP+ cages; field-upgradable to 10GbE (eth-10g) via license and SFP+ optics"
+    },
+    {
+      "name": "49/50 (1GbE copper combo)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel; combo with SFP ports 49/50; upgradable to 10GbE via license"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 serial console port, RS232 signaling, 9600 baud 8N1"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Out-of-band 10/100/1000BASE-T management Ethernet port"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB 2.0 port for software/config transfer"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear panel IEC 60320 C14 AC inlet; 100-240Vac, 9.2A max, 50/60Hz; power cord sold separately"
+    },
+    {
+      "name": "RPS (Redundant Power Supply)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary Extreme Networks redundant power supply input connector on rear panel; not a standard connector type in the given taxonomy, closest generic mapping used"
+    }
+  ]
+}

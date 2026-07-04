@@ -1,0 +1,99 @@
+{
+  "manufacturer": "RTS",
+  "model": "BTR-800",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.rentex.com/wp-content/uploads/2016/08/BTR-800_Operating_Instructions.pdf",
+  "confidence": "medium",
+  "notes": "BTR-800 is the base station of the BTR-800/TR-800/TR-825 wireless intercom system (beltpacks are separate products, not included here). Source: official RTS \"BTR-800, TR-800, TR-825 Professional Wireless Intercom System\" Operating Instructions (F.01U.187.426, Rev. 19, June 2019), rear-panel diagram (Fig. 3/28) and specifications table. Connector-list caveats: (1) Intercom A and Intercom B \"2-Wire\" interfaces are each a loop-thru pair of one male + one female 3-pin XLR wired in parallel (listed as a single bidirectional port per intercom channel); do not exceed 200mA through the 2-wire loop-thru circuits. (2) Intercom A/B \"4-Wire\" ports are physically RJ-11-style jacks (not RJ-45); mapped to the closest available connector id \"rj45\" since rj-11 is not in the allowed list — treat as a 4-wire balanced analog audio in/out pair, not Ethernet data. (3) \"Base Station Link\" is an actual RJ-45 jack but carries WTA (wireless-talk-around) analog audio between two base stations via a custom CAT-5 568-B-style pinout, not Ethernet data. (4) Stage Announce Relay is a dry-contact closure (1A/24V max) for triggering external PA equipment; mapped to euroblock as the closest terminal-style connector since no generic dry-contact/relay id exists — physically it is a small phone-jack-style terminal block on the rear panel, not a euroblock, so treat with caution. (5) Front-panel \"Local Headset Connector\" is a 4-pin XLR (mic shield/audio + headphone hi/lo) that auto-detects dynamic or electret mic capsules; mapped to xlr3 (closest id) with accepts noting the true 4-pin pinout — it is a single combo mic+headphone jack, not two separate connectors. (6) No grades apply: all analog audio (XLR, RJ-11 4-wire), RF antenna (TNC), and power (IEC) ports are ungraded per the connector-grade rules; the RJ-45 Base Station Link is also ungraded because it carries analog WTA audio, not Ethernet. (7) TNC antenna connectors are RF, not in the provided connector enum's audio/video/data categories — mapped to \"bnc\" as the closest coax RF connector type since no TNC id exists; physically these are TNC, not BNC. (8) Power spec: 100-240 VAC 50-60Hz via IEC receptacle (IEC C13/14, i.e. \"iec\" id). (9) Unit is 1U rack-mountable, 19.00in W x 1.72in H x 14.00in D, ships with rack ears.",
+  "ports": [
+    {
+      "name": "Receive Antenna",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Physically a TNC female connector (RF antenna in); TNC not in connector list, closest RF coax id used"
+    },
+    {
+      "name": "Transmit Antenna",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Physically a TNC female connector (RF antenna out); TNC not in connector list, closest RF coax id used"
+    },
+    {
+      "name": "Intercom A (2-Wire)",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Loop-thru pair: one male + one female 3-pin XLR wired in parallel; max 200mA through loop-thru circuit"
+    },
+    {
+      "name": "Intercom A (4-Wire)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically an RJ-11 style jack for balanced 4-wire matrix intercom audio, not RJ-45/Ethernet; closest allowed id used"
+    },
+    {
+      "name": "Intercom B (2-Wire)",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Loop-thru pair: one male + one female 3-pin XLR wired in parallel; max 200mA through loop-thru circuit"
+    },
+    {
+      "name": "Intercom B (4-Wire)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically an RJ-11 style jack for balanced 4-wire matrix intercom audio, not RJ-45/Ethernet; closest allowed id used"
+    },
+    {
+      "name": "Auxiliary Audio Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin female XLR, balanced auxiliary audio input, level adjustable"
+    },
+    {
+      "name": "Auxiliary Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin male XLR, balanced auxiliary audio output, level adjustable"
+    },
+    {
+      "name": "Stage Announce Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Passes audio from whichever beltpack has pressed Stage Announce (SA)"
+    },
+    {
+      "name": "Relay Contact",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dry contact closure (Normally Open, 1A/24V max) activated on Stage Announce press; physically a small screw/phone-jack style terminal, not a true euroblock - closest available id used"
+    },
+    {
+      "name": "Base Station Link",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 jack linking two base stations for wireless-talk-around (WTA) audio passthrough via CAT-5 cable, custom 568-B-style audio pinout - not Ethernet data"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC receptacle, 100-240 VAC 50-60Hz"
+    },
+    {
+      "name": "Local Headset Connector",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Front panel combo mic+headphone jack; physically 4-pin XLR (mic shield, mic audio+, headphone hi+, headphone lo-), auto-senses dynamic or electret mic. Male or female XLR depending on unit variant."
+    }
+  ]
+}

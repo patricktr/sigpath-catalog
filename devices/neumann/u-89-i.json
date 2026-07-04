@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Neumann",
+  "model": "U 89 i",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.neumann.com/en-us/products/microphones/u-89-i",
+  "confidence": "high",
+  "notes": "Studio condenser microphone (multi-pattern, switchable via 5 polar patterns), phantom-powered — there is no separate DC/power port; 48V P48 phantom power is delivered over the same 3-pin XLR audio output. Verified against manufacturer's official spec page (neumann.com). Weight 400g, diameter 46mm, length 185mm — desktop/handheld studio mic, not rack-mountable, so rackUnits omitted. No grade applies since XLR3 (balanced analog audio) is not one of the bandwidth-graded connector types.",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin male XLR balanced audio output; powered via 48V ± 4V phantom power (P48, IEC 61938) supplied over the same XLR line — no separate power connector"
+    }
+  ]
+}

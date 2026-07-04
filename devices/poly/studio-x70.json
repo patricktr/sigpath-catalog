@@ -1,0 +1,81 @@
+{
+  "manufacturer": "Poly",
+  "model": "Studio X70",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://netstorage.ringcentral.com/datasheets/rooms/poly-studio-x70.pdf",
+  "confidence": "high",
+  "notes": "Primary source is the official Poly/HP \"Data Sheet: Poly Studio X70\" (©2021 Plantronics/Poly, mirrored at netstorage.ringcentral.com and assets.ringcentral.com; original poly.com PDF URL now redirects). The X70 is an all-in-one 4K video bar (camera + speakers + mics) for large rooms, not a traditional AV source/switcher — closest available category/type in the allowed enum is \"source\"/\"Media source\"; it also natively performs video-switching (HDMI in to 2x HDMI out with touch-display pass-through) and network video-conferencing endpoint functions. Not rack-mountable (desktop/wall/VESA-mount soundbar form factor), so rackUnits omitted. Exact rear-panel port labels (e.g. \"HDMI IN\", \"HDMI OUT 1/2\") could not be confirmed since the interactive docs.poly.com/support.hp.com hardware-port diagrams are JS-rendered and not fetchable in this session; port names below use the datasheet's plain descriptions. HDMI/USB/Ethernet versions are stated explicitly in the datasheet (HDMI version itself is not stated — omitted grade rather than guess; content resolution up to 4K/UHD is supported over HDMI in per the datasheet's \"content video resolution\" list, but no HDMI spec version, e.g. 2.0, is given). USB-A ports are stated as \"3.0\" (mapped to usb-5g, the grade for USB 3.0/3.2 Gen1 5Gbps); USB-C port version is not stated by Poly (used for PC/USB passthrough) — grade omitted for USB-C. Ethernet ports are explicitly \"10/100/1G\" (eth-1g). Power: device ships with an external \"auto sensing\" power supply/brick (100-240V AC in, 12V/5A DC out per the separately-sold replacement PSU 875M7AA) connecting to the device via a DC barrel jack; exact barrel dimensions not published by Poly. The 3.5mm audio in/out, second USB-A, and second RJ45 are all confirmed via the same datasheet (\"Other Interfaces\" and \"Network\" sections).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "1x HDMI video input, supports content sharing up to UHD (3840x2160); HDMI version not stated by manufacturer"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "One of 2x HDMI video outputs; touch-display compatible"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "One of 2x HDMI video outputs; touch-display compatible"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "For connected peripherals (e.g. additional USB cameras); datasheet lists as USB 3.0"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "For connected peripherals; datasheet lists as USB 3.0"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Used for connected PC (USB device mode); version/speed not stated by manufacturer"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1G Ethernet with Auto-MDIX"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Second RJ45, designated for future use per datasheet footnote"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1x 3.5mm analog audio input"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1x 3.5mm analog audio output"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External auto-sensing power supply, 100-240V AC input, 12V/5A DC output to device (typical 37 VA @ 120V/60Hz or 230V/50-60Hz); exact barrel jack dimensions not published"
+    }
+  ]
+}

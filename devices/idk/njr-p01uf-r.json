@@ -1,0 +1,59 @@
+{
+  "manufacturer": "IDK",
+  "model": "NJR-P01UF-R",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/njr-p01uf_s_ver.1.0.0_en1.pdf",
+  "confidence": "high",
+  "notes": "Official IDK Corporation datasheet (Ver.1.0.0, 201001), distributed via AV-iQ CDN, includes the manufacturer's own front/rear panel diagrams confirming port layout for the Decoder (-R) side: front panel has USB1/USB2, IR INPUT and RS-232C (both 3-pin captive screw terminals) and a DIP-SW; rear panel has HDMI OUTPUT, LAN (RJ-45), 10GbE (2x LC for SFP+ transceiver), and DC12-48V IN with an FG ground screw. The NJR-P01UF-R decoder itself has no AC inlet — it runs on external DC (12-48V) supplied by an included dedicated AC adapter (100-240VAC in / DC 12V 3A out), so the port is modeled as dc-barrel rather than iec/nema. IR INPUT and RS-232C are captive-screw terminal blocks (3-pin), not true XLR/euroblock — \"euroblock\" was chosen as the closest listed connector id since no captive-screw-terminal option exists. USB ports are HID-class only (keyboard/mouse extension for KVM), not general USB data, but are physically USB Type-A female. The 10GbE/LC-SFP+ port is the actual AV-over-IP signal path (carries video, audio, USB-HID, RS-232 and LAN tunneled together from the paired NJR-P01UF-T encoder) — graded eth-10g since it runs over 10 Gigabit Ethernet infrastructure via SFP+; the separate RJ-45 LAN port is a conventional 10/100/1000 control/management port. Unit is a compact quarter-rack-wide desktop chassis (4.2\"W x 1.1\"H x 7.1\"D), not a full rack-mount product, so rackUnits is omitted. Note: a separate ruggedized chassis variant \"NJR-P01UFR-R\" exists with different connectors (Neutrik opticalCON/etherCON/powerCON) for staging use — this response covers the standard NJR-P01UF-R only, per the exact model queried.",
+  "ports": [
+    {
+      "name": "HDMI OUTPUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Female HDMI Type A (19-pin), HDMI/DVI 1.0 TMDS single link, HDCP 1.4/2.2, up to 4K@60 4:4:4 (18 Gbps); rated HDMI 1.4 dot-clock/TMDS range but supports 4K60 4:4:4 signals typical of HDMI 2.0-class content"
+    },
+    {
+      "name": "10GbE",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "2x LC (duplex) via SFP+ optical transceiver; carries IP-NINJAR AV-over-IP payload (video/audio/USB/RS-232/LAN) from the NJR-P01UF-T encoder over fiber"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ-45, 10Base-T/100Base-TX/1000Base-T auto-negotiation, Auto MDI/MDI-X; control/management network port, separate from the 10GbE fiber signal path"
+    },
+    {
+      "name": "USB1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin captive screw terminal (Tx, Rx, G), full duplex, up to 115.2 kbps; closest connector match to captive-screw terminal block"
+    },
+    {
+      "name": "IR INPUT",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin captive screw terminal (P, S, G); closest connector match to captive-screw terminal block, functionally an IR input"
+    },
+    {
+      "name": "DC12-48V IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External DC input, 12-48V DC, powered by supplied dedicated AC adapter (AC 100-240V input, DC 12V 3A output); unit draws about 10 Watts"
+    }
+  ]
+}

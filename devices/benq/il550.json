@@ -1,0 +1,122 @@
+{
+  "manufacturer": "BenQ",
+  "model": "IL550",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.benq.com/en-ap/business/signage/il550/specifications.html",
+  "confidence": "medium",
+  "notes": "55-inch Android-based interactive signage touch display (IPS panel, IR 10-point touch). Port list combines BenQ's own official specification page (archived 2022 snapshot, most complete/current revision) with an earlier official snapshot (2020) of the same page that explicitly itemized RS232 In/Out and IR Loop Through, which the later table omitted from its condensed layout but which remain documented in BenQ's IL550 accessory list (RS232 cable/RS232 loop cable, IR extender/loop cable included in box) and third-party retailer listings (SWS Distribution, B&H). DVI is listed by BenQ only as \"DVI Input/Output x1/x1\" without specifying I vs D; industry listings and the presence of a paired \"3.5mm audio in (VGA)\" jack indicate the DVI port is the combo DVI-I type (accepts VGA via adapter), so DVI-I was chosen with a note. HDMI input count differed across firmware/spec revisions (1x in the 2020 snapshot vs 2x HDMI 1.4 in the 2022 snapshot, no HDMI out in either); the more recent 2×HDMI 1.4 figure was used. USB-A includes one data (2.0) port and one power-only port (no data, so given as an unnamed accessory-power port rather than a full I/O entry — omitted from the port list since it carries no signal). DisplayPort and DVI outputs are loop-through daisy-chain ports for multi-display setups, not independent display outputs. LAN is 10/100 Mbps only (eth-100m grade). No dedicated power connector type is stated beyond \"AC 100-240V, 50/60Hz\" with a region-specific IEC-style cord; modeled as IEC (C13/C14) which is standard for this class of BenQ signage, though the exact inlet type (IEC vs captive cord) was not explicitly pictured in the sources reviewed.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Loop-through for daisy-chaining displays"
+    },
+    {
+      "name": "DVI In",
+      "direction": "input",
+      "connector": "dvi",
+      "accepts": [
+        "vga"
+      ],
+      "note": "Listed by BenQ as \"DVI Input/Output\"; combo DVI-I inferred from paired VGA-audio jack, accepts VGA via adapter"
+    },
+    {
+      "name": "DVI Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Loop-through for daisy-chaining displays"
+    },
+    {
+      "name": "Audio In (VGA)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog audio companion jack for the DVI/VGA input"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For media playback / content loading"
+    },
+    {
+      "name": "USB-B (Touch)",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Touch signal output to an external PC"
+    },
+    {
+      "name": "Micro SD",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro SD card reader slot; no exact connector id in list, closest physical size chosen"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS232 In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Confirmed via earlier official BenQ spec snapshot and included RS232/RS232-loop cable accessory"
+    },
+    {
+      "name": "RS232 Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Loop-through for daisy-chained serial control"
+    },
+    {
+      "name": "IR Loop In",
+      "direction": "input",
+      "connector": "ir",
+      "note": "IR loop-through; included IR extender/loop cable accessory"
+    },
+    {
+      "name": "IR Loop Out",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC 100-240V 50/60Hz; exact inlet style (IEC vs region-specific cord) not explicitly confirmed in sources"
+    }
+  ]
+}

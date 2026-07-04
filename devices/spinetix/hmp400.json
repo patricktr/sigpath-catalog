@@ -1,0 +1,47 @@
+{
+  "manufacturer": "SpinetiX",
+  "model": "HMP400",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.spinetix.com/digital-signage-products/players/hmp400",
+  "confidence": "high",
+  "notes": "Desktop/wall-mount digital signage player (fanless, sealed, VESA-mountable) - no rack units. Only one video output can be active at a time (HDMI 2.0 OR DisplayPort 1.2 via USB-C, not concurrently, per official wiki). The 3 physical USB-C ports are all electrically USB 3.0/lockable, but functionally assigned per manufacturer diagrams: (1) power input, marked with DC symbol, located next to the HDMI port - USB-C PD 2.0, 27W min 3A@9V; (2) DisplayPort 1.2 Alt-Mode video output, marked DP++; (3) general-purpose USB 3.0 host (external storage, or SpinetiX's optional USB-C-to-analog-audio breakout cable accessory). Modeled the general-purpose port as bidirectional usb-c with grade usb-5g (USB 3.0 = 5Gbps). No physical RS232, IR, or analog 3.5mm/RCA audio jack exists on the chassis itself - analog stereo audio requires an external USB-C dongle/cable accessory sold separately, so no dedicated onboard analog-audio port is listed. HMP400W variant adds Wi-Fi (802.11ac Wave 2) with no additional physical port. Ethernet is 1GbE with PoE+ (802.3at) as the primary/preferred power path; USB-C PD is the secondary power path - both are legitimate power inputs per SpinetiX, so RJ45 is marked bidirectional (also carries PoE) and the dedicated USB-C DC-in port is the explicit power connector. Sources cross-consistent: manufacturer product/spec page, SpinetiX Support Wiki (HMP400 and Get_started_with_the_HMP400 pages), and official \"How To Set Up Your HMP400\" PDF guide with port-location photos.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type-A, lockable; supports UHD 4K60; not usable concurrently with the DisplayPort output"
+    },
+    {
+      "name": "USB-C (Power)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Marked with DC symbol; USB-C Power Delivery 2.0 input, 27W (min 3A@9V); positioned next to the HDMI port"
+    },
+    {
+      "name": "USB-C (DisplayPort)",
+      "direction": "output",
+      "connector": "usb-c",
+      "accepts": [
+        "dp"
+      ],
+      "note": "DisplayPort 1.2 Alternate Mode over USB-C, marked DP++; not usable concurrently with the HDMI output"
+    },
+    {
+      "name": "USB-C (USB 3.0)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Lockable USB 3.0 host port; used for external storage or SpinetiX's optional USB-C-to-analog-audio breakout accessory"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1GbE RJ45; also functions as power input via PoE+ (IEEE 802.3at)"
+    }
+  ]
+}

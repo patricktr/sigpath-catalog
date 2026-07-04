@@ -1,0 +1,63 @@
+{
+  "manufacturer": "SpinetiX",
+  "model": "HMP350",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://support.spinetix.com/wiki/HMP350",
+  "confidence": "high",
+  "notes": "Sourced from SpinetiX's official product wiki (support.spinetix.com/wiki/HMP350), which is the manufacturer's authoritative technical reference (spinetix.com/products/players/hmp350 redirects here). Product is now out of production; recommended replacement is HMP400/W or iBX410/W, but full specs remain published. HDMI version/grade is not stated by SpinetiX (max output is 1080p, no HDCP/2.0 mention), so grade was omitted per instructions rather than inferred. The physical DC input connector type on the player itself is not explicitly named \"barrel jack\" in the wiki text, but the external supply is a standard AC-to-5V/3.6A adapter (CUI ETSA050360U), which is a DC barrel-plug adapter — connector inferred as dc-barrel with high confidence based on this being CUI's standard barrel-plug adapter series. Also has 2 diagnostic LEDs and a multi-function blue button (not physical I/O ports, so omitted). No rack mounting (compact wall/VESA-mount device, so rackUnits omitted).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Type A HDMI; max resolution 1080p (1920x1080). HDMI version not specified by manufacturer, so no grade set."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo line-out jack (digital audio also available via HDMI)."
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbit/s, 8P8C (RJ45); can be used for daisy-chaining. No PoE."
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbit/s, 8P8C (RJ45); interchangeable with Ethernet 1, can be used for daisy-chaining. No PoE."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Hi-Speed host port; for flash drive/hard disk (no 3G/4G modem support)."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Hi-Speed host port."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3.5mm TRS mini-jack RS-232 port, used for display power saving (advanced protocol)."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power supply input; adapter (CUI ETSA050360U) is 100-240V AC to 5V DC 3.6A max, terminating in a DC barrel plug to the player."
+    }
+  ]
+}

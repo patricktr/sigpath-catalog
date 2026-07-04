@@ -1,0 +1,94 @@
+{
+  "manufacturer": "Vivitek",
+  "model": "DU9800Z",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.vivitekcorp.com/product_details/813d996D7d26",
+  "confidence": "high",
+  "notes": "Authoritative source: official Vivitek DU9800Z User's Manual (UM9801017EN00, downloaded via projectorcentral.com mirror of vivitekcorp.com PDF) plus vivitekcorp.com product spec page, cross-checked against vivitekusa.com and projectorcentral.com. This is a large-venue fixed-install laser projector (18,000 ANSI lumens, WUXGA), desktop/ceiling-mount form factor — not rack-mountable, so rackUnits omitted/0. Sold body-only (\"no lens\"); five optional motorized lens types (0.84:1 to 7.0:1 throw ratio) are separate accessories not part of the fixed I/O. The \"VGA (5 BNC)\" component input and the SDI In/Out and 3D Sync In/Out are all BNC-style connectors sharing the same physical form factor; SDI is graded 3g per the spec sheet's explicit \"3G-SDI\" designation (confirmed via manual's remote-control legend \"3G-SDI\" and spec table \"3G-SDI-In/Out\"). Power inlet is confirmed as AC IEC-type inlet with a rocker power switch, rated 100-240V 50/60Hz, 1200W@110V/1800W@240V (spec table) vs 1950W±5% (vivitekcorp spec page) — manual does not explicitly print \"C19\" or \"C13\" on the connector, so the exact IEC sub-variant is inferred from the power class (up to 11.7A at 200-240V per product label shown in manual) rather than confirmed; flagged as the one area of residual uncertainty. HDMI grade is confirmed HDMI 1.4a per manual/spec table. DisplayPort version is not stated in any source (ProjectorCentral/manual just say \"DisplayPort\") so no grade was set. All other connectors (component BNC group, VGA, RS-232, 3D sync, trigger, wired remote) are not bandwidth-graded per the connector-grade rules and correctly omit \"grade\". Trigger jacks are 3.5mm mini-jack per the manual's own pinout diagram (Tip/Ring/Sleeve, VCC 12V) — mapped to trs-3.5 as the closest listed connector type since it is a control/trigger signal, not full TRS audio.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "VGA (V/H/B-Pb/G-Y/R-Pr, 5 BNC)",
+      "direction": "input",
+      "connector": "bnc",
+      "accepts": [
+        "bnc"
+      ],
+      "note": "5x BNC group for RGBHV or YPbPr component; labeled V, H, B/Pb, G/Y, R/Pr on panel"
+    },
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "SDI In/Out",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Shared IN/OUT BNC pair labeled on panel as IN-SDI-OUT; spec sheet lists as 3G-SDI In/Out"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "3D Sync In/Out",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "3D IR sync transmitter connection, separate In and Out BNC jacks"
+    },
+    {
+      "name": "Trigger 1/2 (12V)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "x2 3.5mm mini-jack screen trigger outputs, 12V DC control signal"
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack for wired remote control accessory, not a signal/AV port"
+    },
+    {
+      "name": "HDBaseT/LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single shared RJ45 for HDBaseT signal reception or network/control LAN"
+    },
+    {
+      "name": "AC Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC 100/110-240V 50/60Hz; exact IEC inlet sub-type (C19/C13) not stated in manual, inferred C19-class given up to 1950W/11.7A draw"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "manufacturer": "ARRI",
+  "model": "ALEXA 35",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.arri.com/resource/blob/282238/84d1df5e5269a799515446d37d10876a/user-manual-alexa-35-sup-1-0-data.pdf",
+  "confidence": "high",
+  "notes": "Source: ARRI ALEXA 35 User Manual, SUP 1.1, May 2, 2023 (official ARRI documentation), corroborated by arri.com product page. Connector body count reflects the standard camera body without accessory modules (PDM-1 power distribution module, AEM-1 audio extension module, or MVF-2 viewfinder attached) — those add further I/O. LEMO/Fischer proprietary connector shells do not map exactly to the fixed connector-id list, so the closest generic analog was chosen and the true LEMO/Fischer part number is noted per port. VF1/VF2 (CoaXPress viewfinder ports, ARRI custom connector) and the White Radio / WiFi RP-SMA antenna connectors were omitted as they are not standard AV signal/power I/O types covered by the connector enum (no CoaXPress or RF-antenna id exists). SDI 2 is switchable in firmware between SDI output (up to 12G) and Return-In input (accepts 1.5G/3G) — modeled here as a bidirectional 12G-capable port. ETH is a LEMO 10-pin that carries standard Ethernet (breaks out to RJ45 via ARRI's KC 153-S cable) — modeled as rj45 bidirectional per the port-list convention, actual physical shell is LEMO. PWR (LEMO 8-pin, 20.5-33.6V DC input) has no exact match in the connector enum; mapped to dc-barrel as the closest \"external DC input\" analog, actual connector is LEMO EEJ.2B.308. 12V accessory output (LEMO 2-pin) and RS (Fischer 3-pin, 24V accessory power + shutter/remote-start control) are also proprietary shells mapped to dc-barrel as nearest analog. AUDIO port is a 6-pin LEMO carrying 2-channel balanced +24dBu line-level audio (like XLR3) plus 12V power sleeve — mapped to xlr3 with a note since it is not a standard XLR. TC is 5-pin LEMO carrying LTC in/out, mapped to bnc-adjacent rs232 is wrong; kept as closest control analog \"ir\" was rejected — used rs232 was also wrong, so left unset connector closest is none-perfect; see per-port note. USB-C is on the media bay for exFAT storage/data and charging (5V/1.5A out), not a display/AV port, included as bidirectional usb-c without a grade since spec does not state a USB generation.",
+  "ports": [
+    {
+      "name": "PWR",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Main DC power input, LEMO 8-pin (EEJ.2B.308), accepts 20.5-33.6 V DC via ARRI KC50-S/KC50-SP-S cables. Proprietary LEMO shell, not a true barrel connector."
+    },
+    {
+      "name": "12V",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Regulated 12.0 V accessory power output, 2.0 A max, LEMO 2-pin (EEG.0B.302). Proprietary LEMO shell."
+    },
+    {
+      "name": "RS",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Regulated 24 V accessory power output, up to 3.0 A; also carries shutter pulse and remote start/stop signal. 3-pin Fischer connector (DBP102A052-130), proprietary shell."
+    },
+    {
+      "name": "SDI 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Configurable: 422 1.5G HD / 3G HD, 444 3G HD, 422/444 6G-12G UHD per SMPTE ST 292-1, 425-1, 2081-10, 2082-10."
+    },
+    {
+      "name": "SDI 2 / RET IN",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Switchable in-menu: functions as second 12G-SDI output (same formats as SDI 1) or as a Return-In input accepting 1.5G/3G SDI."
+    },
+    {
+      "name": "SYNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync input; accepts analog black burst and tri-level HD sync signals for genlock. No SDI bandwidth grade applies (sync reference only)."
+    },
+    {
+      "name": "TC",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "5-pin LEMO (EEG.0B.305) accepting/outputting LTC (Longitudinal Timecode). Proprietary LEMO shell, not physically a BNC; mapped as closest control/signal analog since no LEMO id exists in the connector list."
+    },
+    {
+      "name": "ETH",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10-pin LEMO (EEG.1B.310) carrying Ethernet for remote control, metadata streaming, and service; supplies regulated 24 V/0.5 A. Breaks out to standard RJ45 via ARRI Ethernet Cable KC 153-S. Proprietary LEMO shell physically, not a native RJ45 jack."
+    },
+    {
+      "name": "AUDIO",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "6-pin LEMO (EEA.0B.306.CLN), 2-channel +24 dBu balanced line-level audio input plus regulated 12 V/0.5 A power out. Proprietary LEMO shell, not a true XLR3; mapped as closest balanced-audio analog."
+    },
+    {
+      "name": "SERIAL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "4-pin LEMO (EEC.0B.304.CLN) for distance-measurement accessories (e.g. ARRI UDM-1); provides regulated 12.0 V/200 mA and serial data (RX/B, TX/A). Proprietary LEMO shell mapped as closest serial-control analog."
+    },
+    {
+      "name": "LBUS (body)",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "4-pin LEMO (EEG.0B.304), CAN-based daisy-chainable lens/accessory control bus (ECS), supplies regulated 24.0 V/4.0 A. Proprietary LEMO shell mapped as closest differential-bus analog."
+    },
+    {
+      "name": "LBUS (lens mount)",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Second LBUS connector located on the lens mount; identical spec to body LBUS. Do not daisy-chain both LBUS ports together per ARRI's manual warning."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "In media bay; used for user setups, frame grabs, log files, software/LUT/frame-line updates via exFAT USB stick, and can charge USB devices at 5.0 V/1.5 A. Spec does not state USB generation/speed, so grade omitted."
+    }
+  ]
+}

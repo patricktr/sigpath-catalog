@@ -1,0 +1,113 @@
+{
+  "manufacturer": "Optoma",
+  "model": "ZH510T-B",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.manualslib.com/manual/2702540/Optoma-Zh510t-B.html?page=11",
+  "confidence": "medium",
+  "notes": "Also sold/labeled as \"ZH510T\" in some regions (e.g. Optoma India). Full HD 1080p DLP laser-phosphor ProAV installation projector, 5400 lumens, HDBaseT-equipped. Not rack-mountable (ceiling/table-mount projector), so rackUnits omitted. Port list is drawn from the official user manual's numbered connector-panel diagram (via ManualsLib), cross-checked against ProjectorCentral, manuals.ca, Audio General, and the HDBaseT Alliance product listing. Notable findings: (1) There are three HDMI inputs total: HDMI 1 and HDMI 2/MHL on the main rear I/O panel, plus a third HDMI/MHL port (remote-labeled \"HDMI3 (Dongle)\") located inside a hidden internal compartment intended for a wireless-streaming HDMI dongle (e.g. Chromecast/Fire TV/Optoma HDCast Pro) — included here as a normal HDMI input since it is a real physical port. (2) HDBaseT and RJ45/LAN are two separate RJ45-style jacks (HDBaseT carries video/audio/control over Cat6 to a receiver; RJ45/LAN is for network control/monitoring only, no video) — both are graded eth-1g per Optoma's HDBaseT input spec and standard 100Mb/1G LAN control port; the datasheet control-port Ethernet is sometimes listed as 100Mb, so the LAN port grade is a reasonable inference rather than confirmed 1G. (3) The \"VGA In\" jack is a combo VGA/YPbPr analog component input (D-sub 15-pin) per the manual; captured as vga with accepts noted in this text since YPbPr isn't a separate connector id in the allowed list. (4) The AC inlet is only labeled \"Power Socket\" in the manual without an explicit IEC designation; given the projector's universal 90-264V/480W rating, a standard IEC C14 inlet is virtually certain for this class of Optoma ProAV projector, but this was not explicitly confirmed in text, hence overall confidence is medium rather than high. (5) USB-B mini is a service/firmware-update port, not a host USB-A; a separate \"USB Power Out\" (5V/1.5A, USB-A style) exists solely to power an HDMI streaming dongle, not for data. (6) 3D Sync Out and 12V Trigger and Wired Remote (likely a 3.5mm mini-jack, mapped to trs-3.5) are present per the manual diagram. Grades: HDMI ports are HDMI 1.4a per ProjectorCentral spec table; no DisplayPort/SDI on this model.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 2/MHL",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Supports MHL for mobile device mirroring/charging"
+    },
+    {
+      "name": "HDMI 3/MHL (Dongle Compartment)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Located in an internal compartment for a wireless HDMI streaming dongle; supports MHL"
+    },
+    {
+      "name": "VGA In/YPbPr",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Combo analog RGB/component (YPbPr) input on D-sub 15-pin"
+    },
+    {
+      "name": "VGA Out",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Manual labels it a generic mic connector; mapped to the closest 1/4-inch analog jack id"
+    },
+    {
+      "name": "RS232C",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network control/monitoring only (PJLink/Extron IP Link/AMX); no video"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Carries HD video/audio/RS232/IR over Cat5e/6 up to 100m from an HDBaseT transmitter"
+    },
+    {
+      "name": "USB-B Mini",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Service/firmware-update port"
+    },
+    {
+      "name": "USB Power Out",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "5V/1.5A power-only for an HDMI streaming dongle, no data"
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "5V mini-DIN 3D-sync output for active-shutter emitter; mapped to closest available connector id"
+    },
+    {
+      "name": "12V Trigger",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "3.5mm 12V DC trigger for screens/relays; mapped to closest available connector id"
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm wired-remote control input"
+    },
+    {
+      "name": "Power Socket (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Labeled only 'Power Socket' in the manual; inferred standard IEC inlet given 90-264V universal/480W rating"
+    }
+  ]
+}

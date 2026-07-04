@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Vizrt (NewTek)",
+  "model": "Connect Spark Plus",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://downloads.ndi.tv/Firmware/SparkPlus/NewTek_Connect_Spark_Plus_Manual.pdf",
+  "confidence": "medium",
+  "notes": "\"Connect Spark Plus\" (also marketed as \"Spark Plus IO 4K\" / model NSP4KIO) is the HDMI-to-NDI variant of Vizrt's (formerly NewTek's) Spark Plus family; sibling variants exist with 3G-SDI and 12G-SDI inputs/outputs instead of HDMI (same chassis/port layout but BNC connectors and DC-barrel/wide-range power input, per Vizrt's current tech-specs page). The product line has since been rebranded/superseded by \"Viz Connect Solo\" (e.g. FG-003292-R001 is listed by B&H as the direct replacement for Spark Plus FG-002795-R001); current official spec pages are published under that name rather than \"Connect Spark Plus.\" Port names and layout (IN / LOOP / AUDIO / NDI|ETHERNET / 5V-2A POWER, plus a recessed RESET button not modeled as a port) are taken directly from the official NewTek \"Connect Spark Plus\" Operating Instructions manual (Figure 5, connector panel photo). Audio jack size is stated inconsistently across NewTek's own materials (1/8in vs 6.35mm in different sections of the same manual; Vizrt's current Viz Connect Solo HDMI spec page states 3.5mm); modeled as trs-3.5 per the more common citation. Exact HDMI signal grade (1.4 vs 2.0) and confirmed max frame rate at 2160p (30p vs 60p - sources conflict) could not be verified from an authoritative spec table, so no \"grade\" was set on the HDMI ports. Ethernet is confirmed Gigabit (1G) per multiple retailer spec tables (Markertek, Vizrt Viz Connect Solo tech specs). No AC mains inlet on the unit itself - it uses an external DC power brick via USB-C, or PoE.",
+  "ports": [
+    {
+      "name": "IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI video/embedded-audio input; supports up to UHD 2160p (30fps per most retailer listings; one manufacturer press release claimed 60p) - exact HDMI version (1.4 vs 2.0) not published"
+    },
+    {
+      "name": "LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI loop-through output of the incoming signal, or HDMI output when unit is used as an NDI-to-HDMI decoder"
+    },
+    {
+      "name": "AUDIO",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo line-level input (manual states both 1/8in and elsewhere 6.35mm across sources; official manual text says 1/8-inch stereo line-level, nominal +4dBu); selectable in web UI as alternate audio source to embedded HDMI audio"
+    },
+    {
+      "name": "NDI | ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet carrying NDI stream, device control, and Power over Ethernet"
+    },
+    {
+      "name": "5V/2A POWER",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "USB-C power input for supplied 5V/2A external adapter; alternative to PoE"
+    }
+  ]
+}

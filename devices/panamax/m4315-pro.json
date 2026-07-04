@@ -1,0 +1,108 @@
+{
+  "manufacturer": "Panamax",
+  "model": "M4315-PRO",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://panamax.com/wp-content/uploads/10034614%20Rev-F_UG_Nice_M4315-PRO_0306-2_WEB.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: official Panamax/Nice M4315-PRO User Guide (Nice acquired Panamax; current manual is co-branded \"Nice\"). Rear panel has 8 individually-controlled NEMA 5-15R outlets grouped into 4 filter-isolated banks (Banks 1-3 = outlets 1-6, linear-filtered; Bank 4 = outlets 7-8, high-current); front panel adds 1 always-on NEMA 5-15R outlet. CATV/SAT 1 & 2 are bidirectional coax surge-protection pass-through jacks (Female F-type, 75V clamping, 0Hz-2.2GHz) - no bandwidth grade applies per the given SDI/coax scale so grade omitted. Telco IN/OUT are RJ-11 analog phone/DSL surge-protection pass-through jacks; RJ-11 is not in the provided connector enum, so \"rj45\" is used as the closest listed 8P8C-family id even though the real connector is the smaller 6P2C RJ-11 - flagged here as a caveat. LAN Cat5e port is an Ethernet surge-protection pass-through rated 10/100/1000BASE-T, graded eth-1g. DC Trigger Input is a 3.5mm mono mini-jack (5-24VDC trigger sense input); modeled as trs-3.5 as the closest connector id (physically a mono/TS 1/8\" plug). The internal TCP/IP BlueBOLT-CV3 control card's RJ-45 network port (item 8 on rear panel diagram) is listed separately from the LAN Cat5e pass-through port; its exact speed grade is not stated in the datasheet so eth-100m is used as a conservative inferred grade (BlueBOLT-CV3 is a 10/100 control card per Nice/Panamax accessory literature) - this is an inferred value, not spec-confirmed. Unit ships rack-mountable (1U, removable rack ears) but can also sit on shelf feet (rubber feet included).",
+  "ports": [
+    {
+      "name": "AC Inlet",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet (Front Panel, Always On)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 1",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 2",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 3",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 4",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 5",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 6",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 7",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "High-current bank (Bank 4)"
+    },
+    {
+      "name": "Outlet 8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "High-current bank (Bank 4)"
+    },
+    {
+      "name": "CATV/SAT 1",
+      "direction": "bidirectional",
+      "connector": "f-type",
+      "note": "Coax surge-protection pass-through, 75V clamping, 0Hz-2.2GHz"
+    },
+    {
+      "name": "CATV/SAT 2",
+      "direction": "bidirectional",
+      "connector": "f-type",
+      "note": "Coax surge-protection pass-through, 75V clamping, 0Hz-2.2GHz"
+    },
+    {
+      "name": "LAN Cat 5e",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Ethernet surge-protection pass-through, 10/100/1000BASE-T"
+    },
+    {
+      "name": "Telco OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Actual connector is RJ-11 (6P2C) analog phone/DSL surge-protection pass-through to equipment; RJ-11 not in allowed connector list, closest id used"
+    },
+    {
+      "name": "Telco IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Actual connector is RJ-11 (6P2C) analog phone/DSL surge-protection pass-through from wall; RJ-11 not in allowed connector list, closest id used"
+    },
+    {
+      "name": "DC Trigger Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mono jack, 5-24VDC trigger sense input"
+    },
+    {
+      "name": "TCP/IP Card Port (BlueBOLT-CV3)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Network control card port; speed inferred, not stated in datasheet"
+    }
+  ]
+}

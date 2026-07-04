@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Denon Professional",
+  "model": "DN-500BD MKII",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 1,
+  "sourceUrl": "https://soundapproach.com/pub/media/pdfs/Denon-Pro/denon-pro-dn-500bd-mkii-tech-specs.pdf",
+  "confidence": "high",
+  "notes": "Primary source: official Denon Professional cut sheet (soundapproach.com-hosted PDF, matches denonpro.com product page content) — \"DN-500BDMKII-Cut-Sheet.pdf\". Cross-checked against denonpro.com/products/dn-500bdmkii and Denon Pro support FAQ. All analog/digital audio outputs, XLR, RJ-45, RS-232C, and IEC power are directly and explicitly itemized in the official spec sheet's \"Outputs\" list, giving high confidence on those. Caveats: (1) The 7.1ch RCA output channel labels (Front L/R, Center, Sub, Surround L/R, Surround Back L/R) are the conventional 7.1 assignment; the spec sheet itemizes only \"(8) RCA audio outputs (7.1 surround sound)\" without printing individual per-jack labels, so exact rear-panel silkscreen text could not be confirmed. (2) HDMI version is not stated on the official cut sheet itself (\"HDMI audio/visual output\" with no version); HDMI 1.4/HDCP 1.4 is referenced in Denon's own support FAQ and third-party manual sources, so the hdmi-1.4 grade is inferred, not confirmed on the primary source — flagged accordingly. (3) The coaxial digital output uses AES/EBU signal format over what the datasheet calls a \"coaxial\" (RCA-type) connector — mapped to the rca connector id since there is no separate BNC/coax-digital id in the allowed list and RCA is the physical jack type used for coaxial digital audio in consumer/pro-lite gear. (4) USB port count/location: Denon's support FAQ confirms USB exists on both front and rear panels, but the official cut sheet's itemized \"Outputs\" list under Audio/Video does not separately list a rear USB jack (front-loading USB/SD are described as media-input slots in the overview text) — modeled as a single generic USB-A input port; exact rear-panel port count not fully verified. No separate digital audio grade scale exists for coax/AES so none was set (correctly omitted per rules, since RCA is not one of the graded connector types).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Official spec sheet lists only \"HDMI audio/visual output\" without a version number; HDMI 1.4 (3D) / HDCP 1.4 support is stated in secondary Denon support/manual sources, so version is inferred rather than confirmed on the primary spec sheet."
+    },
+    {
+      "name": "Coaxial Digital Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Digital audio output, AES/EBU signal format, 0.5V/75-ohm coaxial (RCA) connector per official spec sheet."
+    },
+    {
+      "name": "XLR Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RCA Out L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced stereo analog output."
+    },
+    {
+      "name": "RCA Out R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Front L)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "One of (8) discrete RCA outputs for 7.1-channel surround analog audio."
+    },
+    {
+      "name": "7.1ch Analog Out (Front R)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Center)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Subwoofer)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Surround L)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Surround R)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Surround Back L)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1ch Analog Out (Surround Back R)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Ethernet: 10 Mbps / Fast Ethernet 100 Mbps per official spec sheet."
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-Sub female, full duplex, 9600/38400 bps selectable."
+    },
+    {
+      "name": "USB",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "Mass-storage USB port confirmed on both front and rear panels per Denon support FAQ (rear-panel presence not itemized in the cut-sheet's Outputs list); used for playback of media files, up to 2TB drives."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power connector, 100-240 VAC 50/60 Hz."
+    }
+  ]
+}

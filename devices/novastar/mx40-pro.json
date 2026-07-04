@@ -1,0 +1,258 @@
+{
+  "manufacturer": "Novastar",
+  "model": "MX40 Pro",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 2,
+  "sourceUrl": "https://oss.novastar.tech/uploads/2023/07/MX40-Pro-LED-Display-Controller-Specifications-V1.2.2.pdf",
+  "confidence": "high",
+  "notes": "All-in-one LED display controller/video processor (COEX series). Sourced directly from NovaStar's official specification PDF (v1.2.2, 2023-07-04). The 20 Ethernet outputs use locking etherCON-style connectors (Neutrik NE8FDX shell) confirmed visually on the rear-panel photo; spec text calls them \"Gigabit Ethernet output ports,\" grade set to eth-1g. OPT 1-4 are 10G SFP optical cages (OPT1/OPT3 and OPT2/OPT4 are primary/copy channel pairs carrying Ethernet ports 1-10 and 11-20 respectively); no bandwidth-grade scale in the taxonomy applies to SFP fiber, so grade omitted. AUX port is physically an RJ45 jack but carries RS232 to a central control device per the spec text (\"An auxiliary port that connects to the central control device (RS232) (Reserved)\") - modeled with connector rj45 and noted here since RS232 isn't itself in the connector enum for this jack shape. SPDIF OUT is documented as \"a digital audio output (Reserved)\" with no connector photo detail beyond a small rectangular jack visible in the rear-panel image; modeled as toslink (optical S/PDIF) as the closest/most common physical form for a port labeled SPDIF, but this is inferred, not confirmed - could alternatively be coaxial RCA S/PDIF. GENLOCK IN/LOOP and 12G-SDI IN/LOOP are BNC connectors confirmed in the rear panel photo. Power input is a standard IEC C14 inlet (100-240V~, 50/60Hz, 1.5A) confirmed both in spec table and rear-panel photo (blue IEC receptacle). Dimensions 482.6 x 94.2 x 467.0 mm, 7.5 kg net, 2U rack chassis.",
+  "ports": [
+    {
+      "name": "HDMI 2.0-1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2.0-2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2.0-3 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DP 1.2 IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "12G-SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI 2.0-1 LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through of HDMI 2.0-1 IN; up to 8 devices can be daisy-chained in one loop"
+    },
+    {
+      "name": "HDMI 2.0-2 LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through of HDMI 2.0-2 IN"
+    },
+    {
+      "name": "HDMI 2.0-3 LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through of HDMI 2.0-3 IN"
+    },
+    {
+      "name": "12G-SDI LOOP",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Loop-through of 12G-SDI IN; up to 8 devices can be daisy-chained"
+    },
+    {
+      "name": "OUTPUT 1",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 2",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 3",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 4",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 5",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 6",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 7",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 8",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 9",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 10",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 11",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 12",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 13",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 14",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 15",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 16",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 17",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 18",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 19",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OUTPUT 20",
+      "direction": "output",
+      "connector": "ethercon",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "OPT 1",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "10G optical output; transmits data of Ethernet ports 1-10"
+    },
+    {
+      "name": "OPT 2",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "10G optical output; transmits data of Ethernet ports 11-20"
+    },
+    {
+      "name": "OPT 3",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "10G optical output; copy channel of OPT 1"
+    },
+    {
+      "name": "OPT 4",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "10G optical output; copy channel of OPT 2"
+    },
+    {
+      "name": "SPDIF OUT",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Digital audio output, documented by NovaStar as \"Reserved\"; exact physical sub-type (optical vs coaxial) not fully confirmed from photo"
+    },
+    {
+      "name": "ETHERNET 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Control port for VMP software / device cascading"
+    },
+    {
+      "name": "ETHERNET 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Control port for VMP software / device cascading"
+    },
+    {
+      "name": "GENLOCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock sync input, supports Bi-Level and Tri-Level"
+    },
+    {
+      "name": "GENLOCK LOOP",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Genlock sync loop-through output"
+    },
+    {
+      "name": "AUX",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Auxiliary control port to central control device, carries RS232 (Reserved); physical jack is RJ45-shaped though protocol is serial"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V~, 50/60Hz, 1.5A, with power switch"
+    }
+  ]
+}

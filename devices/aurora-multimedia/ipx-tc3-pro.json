@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Aurora Multimedia",
+  "model": "IPX-TC3-Pro",
+  "category": "network",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://auroramultimedia.com/products/ipx-tc3-pro",
+  "confidence": "medium",
+  "notes": "Aurora's IPX-TC3-Pro is a transceiver (can act as encoder or decoder) sold in three connectivity variants: IPX-TC3-C-Pro (10G copper RJ-45), IPX-TC3-CF-Pro (10G copper + SFP+ fiber), and IPX-TC3-DF-Pro (dual SFP+ fiber). Port list above reflects the base/copper configuration; fiber variants replace or add an SFP+ (fiber-lc/sfp) port in place of/alongside the 10G RJ-45. Product appears marked \"Discontinued\" on the manufacturer's current site (superseded by IPX-TC3A-Pro 3rd-gen series) but remains a real, documented product with archived spec data. HDMI version is not explicitly stated as \"2.0\" on the pages reviewed — it is inferred (medium confidence) from stated support for 4K60 4:4:4 lossless. RS-232 and IR are physically 3.5mm TRS mini-jacks (not DE-9/dedicated IR barrel), mapped to closest connector ids (trs-3.5, ir) per instructions. Power connector is a 2-pin Euroblock/terminal block carrying 48V DC, mapped to euroblock-dc; unit also supports PoE+ (25.4W) as an alternate power source over the LAN port (not modeled as a separate port). No fixed rack-unit size is published — it is a compact aluminum enclosure (190.2 x 150.51 x 31.12mm) with optional wall-plate/rack accessory kits, so rackUnits is omitted. Sources cross-checked: manufacturer product page (auroramultimedia.com/products/ipx-tc3-pro) and Markertek spec tables for the CF and WP3-C-Pro-B variants, which report identical port/connector specs.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "10G LAN (Copper/Fiber)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10G Copper RJ-45 (CAT6A, up to 330ft) on -C variant; SFP+ fiber on -F variant; PoE+ capable. Primary AV-over-IP transport link."
+    },
+    {
+      "name": "LAN (1G PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000M port, PoE+ PSE (powers connected LAN devices), used for pass-through/local network access."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "First of two USB 2.0 Type-A ports (for ExtremeUSB/USB-over-IP option)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Second of two USB 2.0 Type-A ports."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Micro-B port."
+    },
+    {
+      "name": "AUDIO IN/OUT",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Stereo line in/out, 3.5mm TRS (Tip=Left, Ring=Right, Sleeve=Ground)."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Up to 115k baud, 3.5mm TRS (Tip=TX, Ring=RX, Sleeve=Ground) rather than a DE-9 RS232 connector."
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Bi-directional IR on 3.5mm TRS (Tip=TX, Ring=5V, Sleeve=Ground); physically a 3.5mm TRS jack, not a dedicated IR connector."
+    },
+    {
+      "name": "PWR",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "48V DC via 2-pin Euroblock/terminal-block connector; unit can alternatively be powered via PoE+ (25.4W) over the LAN port instead of this input."
+    }
+  ]
+}

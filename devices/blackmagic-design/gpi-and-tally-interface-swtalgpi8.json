@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "GPI and Tally Interface (SWTALGPI8)",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/atemconstellation8k/techspecs/W-ATC-03",
+  "confidence": "high",
+  "notes": "Authoritative source: Blackmagic Design official tech-specs page for the 'GPI and Tally Interface' (product code W-ATC-03, sold as SWTALGPI8), cross-referenced identically on both the ATEM Constellation and ATEM Constellation 8K tech-specs pages, and corroborated by B&H Photo (product 766076-REG) search-cache data. The single physical DB-25 (25-pin D-sub) connector is not represented in the allowed connector enum (closest available options are rs232/euroblock/bnc, none of which are a true match for a multi-pin opto/relay GPI connector); rs232 was chosen only as the nearest D-sub-family placeholder — do not interpret this port as an RS-232 serial interface. No bandwidth/version grade applies to the GPI port (contact-closure/opto I/O, not a graded video/network interface). Ethernet grade is 10/100BaseT (eth-100m) per spec; no gigabit option is offered. USB grade is 2.0 High Speed per spec; USB connector gender/type (A vs B) is not explicitly stated by Blackmagic and was inferred as usb-a (host-side) for configuration/firmware use. Power supply is an external 12V wall-wart-style adapter (barrel connector) with regional plug adaptors, not an IEC/NEMA mains inlet on the unit itself. Desktop/small enclosure; rackUnits omitted as it is not a rack-mount unit (no rack ear kit specified). Device is designed to be chained: multiple units can be linked via the Ethernet loop-through port to expand total tally/GPI count beyond 8.",
+  "ports": [
+    {
+      "name": "GPI & Tally",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a 25-pin D-type (DB-25) providing 8 opto-isolated inputs (max 5V/14mA, triggered by connection to ground) and 8 mechanical relay contact-closure outputs (max 30V/1A, contact closure to ground). DB-25 is not in the allowed connector enum; rs232 chosen as the closest D-sub analog — this is NOT a serial data port."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet Loop",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Loop-through port for daisy-chaining to additional Ethernet-enabled equipment; shares the same 10/100BaseT link as the primary Ethernet port."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 High Speed interface used for configuration and firmware updates via ATEM Switcher Utility; exact receptacle type (Type A vs Type B) not explicitly specified on the tech-specs page."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12V power supply included, with international socket adaptors for all countries; connector is a low-voltage DC barrel jack typical of Blackmagic accessory power supplies."
+    }
+  ]
+}

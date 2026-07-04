@@ -1,0 +1,17 @@
+{
+  "manufacturer": "RCF",
+  "model": "PL 6X",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1123409-REG/rcf_pl6x_pl_6x_6_coaxial.html",
+  "confidence": "medium",
+  "notes": "Passive 70V/100V (also usable at direct 8 ohm) coaxial ceiling speaker; no AC power input — it is powered entirely via the constant-voltage audio line through its screw-terminal block. The terminal block is a 2-way input with a second pass-through pair for daisy-chaining to the next speaker in the zone; modeled here as a single bidirectional audio terminal since input and loop-out share the same screw-terminal connector type. \"euroblock\" is the closest connector id in the allowed list for this bare-wire screw-terminal strip (RCF and B&H both just call it \"screw terminals,\" not a named connector standard). No bandwidth grade applies (analog constant-voltage speaker line). Power taps selectable: 12W/6W/3W/1.5W at 70V or 100V, plus direct 8-ohm connection. IP44 rated, flush-mount ceiling speaker — not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Audio In / Loop Out",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Screw-terminal block for 70V/100V constant-voltage line (selectable 12W/6W/3W/1.5W taps) or direct 8-ohm connection; includes pass-through terminals for daisy-chaining additional speakers"
+    }
+  ]
+}

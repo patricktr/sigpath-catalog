@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "MobileConnect Station",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://assets.sennheiser-connect.com/stable/docs/guide/MobileConnect_Station_2_Quick_Guide.pdf",
+  "confidence": "high",
+  "notes": "Source: official Sennheiser \"MobileConnect Station Quick Guide\" (Publ. 02/21, 583971/A02), which includes a full rear-panel diagram and specification table; cross-referenced against the manufacturer product listing URL https://www.sennheiser.com/en-us/catalog/products/bi-directional-communication/mobileconnect/mobileconnect-station-508895 (confirms product identity/model number 508895). Desktop unit, approx. 212 x 168 x 43 mm, ~970 g, not natively rack-mountable; an optional \"GA 3\" rack-mount kit (not included) allows mounting two Station units side-by-side in 1U, so rackUnits is omitted per desktop-unit convention. Power: the unit has no AC inlet or DC barrel jack; it is powered exclusively via PoE (IEEE 802.3af Class 3, max 10 W) delivered over the \"PoE / Stream\" RJ-45 port, so that port is listed as bidirectional data+power rather than a separate power connector. The two Dante ports (Primary/Secondary) and the Ctrl/PoE-Stream RJ-45 ports have no stated Ethernet speed grade in the spec sheet (no 10/100/1000 callout), so \"grade\" was omitted rather than assumed. XLR analog I/O: 2x XLR-3F inputs (10 kOhm impedance, max input 18 dBu unity / 3 dBu with gain), 2x XLR-3M outputs (max output 4 dBu @ 600 Ohm or 8 dBu @ 200 kOhm), frequency response 40 Hz-20 kHz, S/N 101 dB(A), THD+N -82 dB(A). No HDMI, USB, or video I/O exists on this product; it is a Dante-networked analog audio bridge/station for the Sennheiser MobileConnect assistive-listening system, not a display or switching device.",
+  "ports": [
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog audio output (XLR-3M)"
+    },
+    {
+      "name": "Out 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog audio output (XLR-3M)"
+    },
+    {
+      "name": "In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio input (XLR-3F)"
+    },
+    {
+      "name": "In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio input (XLR-3F)"
+    },
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante digital audio interface, primary port"
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante digital audio interface, secondary/redundant port"
+    },
+    {
+      "name": "Ctrl",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 socket for connection to a separated control network"
+    },
+    {
+      "name": "PoE / Stream",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 socket for streaming network connection; also the unit's sole power input via PoE (IEEE 802.3af Class 3, max 10 W). No separate AC/DC power jack exists on this device."
+    }
+  ]
+}

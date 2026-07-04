@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Savant",
+  "model": "SVR-5300S",
+  "category": "control",
+  "rackUnits": 1,
+  "sourceUrl": "https://sav-documentation.s3.amazonaws.com/Product%20QRGs/009-2300-00%20Savant%20Pro%20Host%20Quick%20Reference%20Guide.pdf",
+  "confidence": "high",
+  "notes": "SVR-5300S is Savant's flagship \"Pro Host\" control processor/server, built on an Apple Mac mini (M2, 2023) chassis with 8GB RAM and SSD, running da Vinci/SavantOS. Physical I/O matches the base M2 Mac mini's rear panel exactly (2x Thunderbolt 4/USB-C, 1x HDMI 2.0, 2x USB-A 5Gbps, Gigabit Ethernet, 3.5mm audio out, IEC power inlet) as shown in Savant's own SVR-5300S Quick Reference Guide (doc 009-2300-00, 2023) rear-panel diagram. Savant's lettered callouts in that diagram only mark ports the Savant configuration itself uses (Power, Ethernet, Audio Out) and explicitly note \"connections not identified in the diagram above are not functional within a Savant Configuration/Installation\" -- meaning the Thunderbolt, HDMI, and USB-A ports are physically present (confirmed by the diagram artwork and by cross-referencing Apple's Mac mini M2 (2023) tech specs, since Savant does not manufacture custom chassis for this SKU) but are not used/exposed for AV signal routing in a typical Savant deployment. Included them anyway per instructions to capture full physical I/O. HDMI graded 2.0 based on Apple's published Mac mini M2 (2023) spec (base M2, non-Pro variant, matching the 8GB memory figure in the Savant QRG); Thunderbolt 4 ports graded as usb-40g (Thunderbolt 4 = 40Gbps) per Apple's published Mac mini M2 spec, though Savant's own document does not itself state versions/speeds for these ports since it treats them as non-functional pass-through ports. USB-A ports are 5Gbps (USB 3.2 Gen 1) per Apple spec. Ethernet is stated as \"10/100/1000 Base-T auto-negotiating\" directly in the Savant document. Power input is an IEC inlet (100-240V AC 50/60Hz, max 150W) per Mac mini's standard figure-8/C13-style inlet -- Savant's guide doesn't show the exact pin count in the photo but Mac mini M2 (2023) uses a standard IEC C13/C14-style 3-prong AC inlet, modeled here as \"iec\". Rack-mountable at 1U via an optional accessory shelf (RCK-3000) per the QRG, though the device itself is a compact desktop-form-factor unit, not natively rack-eared.",
+  "ports": [
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Thunderbolt (Left)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "grade": "usb-40g",
+      "note": "Apple Thunderbolt 4 port on Mac mini M2 chassis; not used/exposed in Savant configuration per Savant QRG"
+    },
+    {
+      "name": "Thunderbolt (Right)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "grade": "usb-40g",
+      "note": "Apple Thunderbolt 4 port on Mac mini M2 chassis; not used/exposed in Savant configuration per Savant QRG"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Present on Mac mini M2 chassis; not used/exposed in Savant configuration per Savant QRG"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Present on Mac mini M2 chassis; not used/exposed in Savant configuration per Savant QRG"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Present on Mac mini M2 chassis; not used/exposed in Savant configuration per Savant QRG"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm 2-channel analog audio output"
+    }
+  ]
+}

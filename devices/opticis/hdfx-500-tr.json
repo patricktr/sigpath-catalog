@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Opticis",
+  "model": "HDFX-500-TR",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.dimedtec.de/downloads/Opticis/HDFX-500/Datasheet_HDFX-500-TR_V%201.1%20210514.pdf",
+  "confidence": "high",
+  "notes": "HDFX-500-TR is a matched Tx+Rx extender kit (each unit is a compact dongle, same mechanical dimensions); modeled here with ports from both the transmitter and receiver modules. Data from Opticis official datasheet HDFX-500-TR v1.1 (May 2021), cross-checked against the current Opticis product page (opticis.com/en/product/product_view.php?prd_idx=69) and retailer listings (B&H, Markertek, Optolinks) which corroborate HDMI 2.0 support, simplex LC/OM3 fiber, and USB/DDC 5V power. Newer retailer copy (2024-2025) cites an extended 300m range and a 5-pin adapter accessory not present in the 2021 datasheet -- likely a later firmware/hardware revision; distance and accessory details noted as a caveat. HDMI grade set to hdmi-2.0 per explicit spec (18Gbps total, 6Gbps/channel, HDCP2.2, 4K60 4:4:4) -- exceeds HDMI 1.4 (10.2Gbps) but does not reach HDMI 2.1 (48Gbps), and vendor explicitly states HDMI 2.0 compliance. No AC line-power connector on the units themselves -- power comes via bundled 5V/1A wall adapters connecting through micro-USB, consistent with small dongle-style extenders. Rack units omitted (not rack-mountable; palm-sized dongle form factor).",
+  "ports": [
+    {
+      "name": "HDMI In (Tx)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "High-Retention HDMI receptacle on transmitter module; complies with HDMI 2.0, HDCP 2.2, CEC, EDID; max 18Gbps (6Gbps/ch), 4K 4096x2160@60Hz 4:4:4"
+    },
+    {
+      "name": "Optical Out (Tx)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Simplex LC multi-mode (OM3) fiber connector on transmitter, carries HDMI signal up to 200m (656ft)"
+    },
+    {
+      "name": "USB Power (Tx)",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Micro-USB power input; Tx can alternatively be powered via DDC 5V from HDMI source pin 18 (Auto Power-Switching). Ships with Micro-USB-to-USB cable and 5V/1A adapter."
+    },
+    {
+      "name": "Optical In (Rx)",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Simplex LC multi-mode (OM3) fiber connector on receiver"
+    },
+    {
+      "name": "HDMI Out (Rx)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "High-Retention HDMI receptacle on receiver module; outputs to display, HDMI 2.0/HDCP 2.2"
+    },
+    {
+      "name": "USB Power (Rx)",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Micro-USB power input on receiver; ships with Micro-USB-to-USB cable and 5V/1A adapter"
+    }
+  ]
+}

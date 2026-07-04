@@ -1,0 +1,168 @@
+{
+  "manufacturer": "Extron",
+  "model": "IN1808",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://online.videopro.com.au/content/9/6/f/f/96ffebdcf022068f82a1986e3cba2e2d6ca1403d_IN1808_5597D11.PDF.pdf",
+  "confidence": "high",
+  "notes": "Specs are for the base IN1808 model (1U, no built-in control processor/amplifier). Extron also sells IN1808 IPCP SA and IN1808 IPCP MA 70 variants (2U) that add a built-in IPCP Pro 355M control processor, a 3-port AV LAN switch (3x RJ45), and a Class D power amplifier (4-pole 5mm captive screw for SA stereo/dual-mono, or 2-pole 5mm for MA70 70V mono) - those extra ports are omitted here since this entry targets the base switcher SKU. Rear-panel port identities/labels (callouts A-R) were confirmed from the Extron IN1808 Series Setup Guide (68-3131-51 Rev A) rear-panel diagram; electrical specs from the Extron IN1808 Series Specifications sheet (5597-D11, also reissued as 5944-D12). AC inlet is Extron's standard internal-PSU chassis inlet (typical IEC C14 for this product family); exact inlet sub-type not explicitly spelled out in the spec text, only shown in the rear-panel photo - medium certainty on this one detail. HDMI ports are HDMI 1.4/2.0 (18 Gbps max data rate), graded hdmi-2.0. DisplayPort input is DisplayPort 1.2 (21.6 Gbps SST). The RJ-45 DTP2/XTP ports carry Extron's proprietary AV-over-twisted-pair extension (video/audio/control), not general-purpose networking, but use the RJ45 connector id per the schema; graded eth-1g as the closest available bandwidth-class placeholder. The LAN port is genuine 10/100/1000Base-T Ethernet. Loop Out is a non-scaled passthrough of input 6, physically a distinct HDMI connector.",
+  "ports": [
+    {
+      "name": "Input 1 (DisplayPort)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "Input 2 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 3 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 4 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 5 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 6 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Loop Out (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Non-scaled loop-out of input 6, configurable"
+    },
+    {
+      "name": "Input 7 (DTP2/XTP)",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Extron DTP2/XTP twisted-pair AV extension input, not general LAN"
+    },
+    {
+      "name": "Input 8 (DTP2/XTP)",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Extron DTP2/XTP twisted-pair AV extension input, not general LAN"
+    },
+    {
+      "name": "Output 1A (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 1B (DTP2/XTP/HDBaseT)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Extron DTP2/XTP/HDBaseT twisted-pair AV extension output, configurable"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Base-T control/network port"
+    },
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3-pole captive screw, mic or line level, switchable +48V phantom power"
+    },
+    {
+      "name": "Mic/Line 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3-pole captive screw, mic or line level, switchable +48V phantom power"
+    },
+    {
+      "name": "Line Audio Input 3",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced stereo line"
+    },
+    {
+      "name": "Line Audio Input 4",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced stereo line"
+    },
+    {
+      "name": "Aux Line Audio Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, mono or stereo analog line input"
+    },
+    {
+      "name": "Line Audio Output 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced"
+    },
+    {
+      "name": "Line Audio Output 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced"
+    },
+    {
+      "name": "Line Audio Output 3",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced"
+    },
+    {
+      "name": "Line Audio Output 4",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "5-pole captive screw, balanced/unbalanced"
+    },
+    {
+      "name": "Remote RS-232",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3-pole captive screw, rear panel bidirectional RS-232"
+    },
+    {
+      "name": "Over TP IR",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3-pole captive screw IR pass-through connector, TTL level"
+    },
+    {
+      "name": "USB Config Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Front panel mini USB-B, USB 2.0 high speed, for device configuration/control"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply, 100-240 VAC 50-60 Hz; standard chassis IEC inlet inferred from rear-panel photo, exact IEC sub-type not stated in spec text"
+    }
+  ]
+}

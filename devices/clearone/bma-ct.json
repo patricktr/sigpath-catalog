@@ -1,0 +1,29 @@
+{
+  "manufacturer": "ClearOne",
+  "model": "BMA CT",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://videolink.com/clearone-bma-ct-ceiling-tile-beamforming-mic-array/",
+  "confidence": "medium",
+  "notes": "Manufacturer product page (clearone.com/bma-ct-1) and official datasheet PDFs (clearone.com/sites/default/files/...) returned 404/blocked to automated fetch, so I relied on a reputable AV retailer's detailed spec page (VideoLink) corroborated by search-result snippets pulling from the same ClearOne datasheet data (B&H listing, AV-iQ). No AC/DC power inlet exists — the unit is PoE-only (802.3at, 36W max), so no separate power port is listed. The two RJ45 jacks (P-Link In/Out) use ClearOne's proprietary P-Link protocol for daisy-chaining and control, not standard Ethernet networking, so no eth-* grade was assigned per the grading rules (grade omitted, connector kept as rj45 since it's the closest physical-connector match). Category set to \"audio\"/type \"Microphone\" since this is fundamentally a ceiling mic array (with an integrated small amp as a convenience feature) rather than a full AV receiver or amplifier product. Not rack-mountable (ceiling-tile form factor), so rackUnits omitted. Physical/mounting variant note: available in 24-inch, 600mm, and 625mm ceiling-grid sizes plus hard-ceiling mount, all sharing the same port set.",
+  "ports": [
+    {
+      "name": "P-Link In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary P-Link network port; also carries PoE power in (IEEE 802.3at, 56V/640mA/36W) selectable via rear slide switch. Not standard Ethernet, so no eth-* grade applies."
+    },
+    {
+      "name": "P-Link Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary P-Link daisy-chain port to next array unit (up to 3 units, 200m/650ft per hop)."
+    },
+    {
+      "name": "Amplifier Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5.08mm Phoenix-type Euroblock, 2-channel, 2x10W into 8-ohm load, for driving two loudspeakers directly."
+    }
+  ]
+}

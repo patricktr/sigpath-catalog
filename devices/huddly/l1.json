@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Huddly",
+  "model": "L1",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.datavision.net/wp-content/uploads/2022/08/Spec-sheet_L1_18.11.22.pdf",
+  "confidence": "high",
+  "notes": "Official Huddly L1 spec sheet (huddly.com/L1, mirrored via datavision.net) shows the camera housing itself has exactly one physical port: RJ45, powered via PoE. The L1 ships with a required companion accessory, the \"Huddly USB to PoE Adapter\" (separate small box), which is where the USB-C (SuperSpeed USB 3) host connection, a second RJ45 (gigabit, to camera), and a DC barrel power input (for the included external 5V/4A AC/DC adapter, or 5V/3A via USB-C) physically live. Those ports belong to the adapter accessory, not the L1 camera body, per Huddly's own diagram (page 5 of the datasheet: L1 -> Ethernet cable -> USB to PoE Adapter -> USB-C to PC + AC/DC power adapter). If the adapter should be modeled as a separate device/accessory rather than folded into the L1, no changes are needed. Ethernet grade (eth-1g) is stated for the adapter's camera-facing port (\"RJ45 gigabit Ethernet port to camera\") and inferred to match the camera's own RJ45 port since they are directly wired together. No rack mounting (desktop/wall/shelf/tripod mounted camera unit, so rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ45 port on the camera; receives power and data via Power over Ethernet from the included Huddly USB to PoE Adapter. Cable: Cat 5e/6/7, up to 100 m. The camera-side port on the included adapter is explicitly documented as 'RJ45 gigabit Ethernet port to camera'; the camera's own port speed is not separately stated but matches this link."
+    }
+  ]
+}

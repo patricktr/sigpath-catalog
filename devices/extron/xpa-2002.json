@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Extron",
+  "model": "XPA 2002",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/XPA_2002_D4_121611.pdf",
+  "confidence": "high",
+  "notes": "Primary source is Extron's official specifications PDF (media.extron.com/public/download/files/specs/XPA_2002_D4_121611.pdf), extracted directly and cross-checked against the XPA 2002 user/setup manuals (manualslib.com mirrors). All audio and control I/O connectors on this unit are captive/pluggable screw-terminal blocks (modeled here as \"euroblock\" — the closest match in the allowed connector list; no XLR, RCA, or TRS jacks are present). The two audio inputs are separate 3-pole 3.5 mm terminal blocks (one per channel), not a single stereo jack. No grade applies to any port — these are all baseband analog audio, contact-closure control, and AC power, none of which are bandwidth-graded connector types. AC inlet is confirmed as IEC (C13/C14, standard \"IEC power cord\") via accessory/manual references; the spec sheet itself states only the electrical rating (100-240 VAC, 1.5 A) without naming the physical inlet type, so this connector choice is inferred from included-accessories documentation rather than stated explicitly in the spec sheet. This is the base XPA 2002 (8/4-ohm low-impedance model); do not confuse with the XPA 2002-70V / XPA 2002-100V constant-voltage variants or the newer XPA U 2002 SB (Ultra series), which have different rear-panel layouts.",
+  "ports": [
+    {
+      "name": "Audio Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw connector, 3-pole; balanced or unbalanced stereo/mono audio input"
+    },
+    {
+      "name": "Audio Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw connector, 3-pole; balanced or unbalanced stereo/mono audio input"
+    },
+    {
+      "name": "Speaker Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5 mm screw lock captive screw connector, 4-pole; 2 channels at 4 or 8 ohms, or 1 bridged mono at 8 ohms, 100-400 W rms depending on load/mode"
+    },
+    {
+      "name": "Control/Remote",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5 mm captive screw connector, 2-pole; standby power control via contact closure (pin 1 = GND, pin 2 = standby)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC, 50-60 Hz, 1.5 A; IEC power cord included"
+    }
+  ]
+}

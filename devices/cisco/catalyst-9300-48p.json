@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 9300-48P",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://media.cablesandkits.com/static/assets/C9300-48P-E-Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Fixed-configuration 1RU switch: 48x RJ45 10/100/1000 PoE+ ports (default 437W PoE budget, max 1440W with upgraded PSU), plus one modular uplink network-module bay that ships empty/blank — its port count/type/bandwidth grade depend entirely on the module purchased separately (C9300-NM-4G/4M/8X/2Q/2Y), so no uplink ports are included as fixed base ports here. Also has rear StackWise-480 stacking ports and a StackPower connector; both are proprietary Cisco interconnects with no reasonable mapping to any connector id in the allowed list, so they were omitted rather than mis-tagged. USB console port is physically a 5-pin USB mini-Type B, approximated here as 'usb-micro' since mini-Type-B isn't in the allowed connector list. AC inlet is actually IEC 320-C16 (high-temp variant paired with a C15 cord), approximated as 'iec' since C15/C16 isn't distinguished in the allowed list. Variants exist: C9300-48P-A (Network Advantage) and C9300-48P-E (Network Essentials) — differ only in software license, not physical I/O. Confidence set to medium because the primary source used (a retailer/reseller datasheet, cablesandkits.com) is reputable but secondary; official cisco.com data sheet and hardware installation guide pages returned HTTP 403 to automated fetch, so some port details (USB console, USB-A, RJ45 console/mgmt) were corroborated via a manualslib excerpt of the Cisco Hardware Installation Guide rather than the primary datasheet PDF itself.",
+  "ports": [
+    {
+      "name": "GigabitEthernet 1/0/1-48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x 10/100/1000 PoE+ downlink ports (802.3at PoE+, up to 1440W max PoE budget, 437W default with stock PSU)"
+    },
+    {
+      "name": "Uplink Network Module Slot",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Modular uplink bay ships with a blank by default; field-installable modules include C9300-NM-4G (4x1G RJ45), C9300-NM-4M (4x mGig RJ45), C9300-NM-8X (8x10G/1G SFP+), C9300-NM-2Q (2x40G QSFP+), C9300-NM-2Y (2x25G/10G/1G SFP28). Port type/grade depends on module chosen; not counted as a fixed base port."
+    },
+    {
+      "name": "Management (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated 10/100/1000 out-of-band management port"
+    },
+    {
+      "name": "Console (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 serial console, 8-pin RJ45 (requires RJ45-to-DB9 adapter); inactive when USB console is connected"
+    },
+    {
+      "name": "Console (USB Mini-Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "5-pin USB mini-Type B console port; closest available connector id used since usb-mini-b is not in the allowed list. Takes precedence over RJ45 console when connected."
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB storage port for file system access; explicitly NOT a console port"
+    },
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Default PWR-C1-715WAC-P (715W, Platinum) hot-swappable supply; actual inlet is IEC 320-C16 (paired with C15 power cord), mapped to closest available 'iec' id. Dual PSU bays supported for 1+1 redundancy; optional PWR-C1-1000WAC-P upgrade available."
+    }
+  ]
+}

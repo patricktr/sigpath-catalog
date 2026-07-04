@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Epson",
+  "model": "Pro L30000UNL",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "http://download3.ebz.epson.net/dsc/f/03/00/11/82/62/5851bd7554b96fae25246eec6c6ef427ff21da09/Specification_L30000Useries_v110_EN.pdf",
+  "confidence": "high",
+  "notes": "Official Epson engineering spec sheet (EB-L30002U/EB-L30000U, the international designation for the US Pro L30000UNL/L30002UNL). Lens-less large-venue laser projector ('UNL' = unlensed), not rack-mountable (approx. 64 kg / 141 lb chassis, 360-degree install capable). The 5-BNC input is a single physical connector block (RGBHV/component analog bank) - modeled as 5 separate BNC pins sharing the label 'BNC In (5BNC)'. SDI input and SDI output are separate BNC ports; spec table confirms 3G-SDI (YCbCr 4:2:2 10-bit) so both graded sdi-3g. HDMI input and HDBaseT port both explicitly support HDCP 2.2 per spec footnote, but the manufacturer sheet does not state an HDMI version number (2.0 vs 1.4), so no hdmi- grade was applied (would be a guess). DVI-D and VGA are also ungraded (no version scale requested for those connectors). USB Type-B is a service/firmware/OSD-copy port; USB-A (max 900mA) is for the optional wireless LAN module or a USB flash drive for logs/batch setup - both are USB 2.0 per spec. RJ45 LAN port is 100BASE-TX (eth-100m); the separate HDBaseT RJ45 port carries video/control, not general Ethernet, so it was modeled with connector 'hdbaset' rather than rj45 and left ungraded. RS-232C is Mini D-Sub 9-pin. The 'Remote' stereo-mini jack is a WIRED REMOTE CONTROL input per Epson's own connector diagram - NOT an audio port (a couple of third-party retailer listings mislabel it as 'Variable Audio Out'); modeled with connector trs-3.5 as the closest physical id, but it carries a control signal, not audio - treat with caution. This projector has no audio input/output ports at all; it is video/control only. Power is universal AC 100-120V or 200-240V, rated 2325W (~12A) at 200-240V; Epson's spec sheet does not state the physical inlet connector type. Given the high current draw, an IEC C19 high-current inlet is likely (common for projectors in this power class) but this is an inference, not a confirmed spec - lower confidence on that single port only. Monitor Out (Mini D-Sub15-pin) only passes through analog RGB signals originating from the BNC or Computer input (cannot pass digital sources) per spec footnote.",
+  "ports": [
+    {
+      "name": "BNC In (5BNC)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "BNC In (5BNC)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "BNC In (5BNC)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "BNC In (5BNC)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "BNC In (5BNC)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Computer",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Analog pass-through only, sourced from BNC or Computer input"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Wired remote-control input jack, not an audio port"
+    },
+    {
+      "name": "3G/HD/SD SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Monitor Out SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Service (USB Type-B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.2 supported; HDMI version not stated by manufacturer"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "hdbaset",
+      "note": "HDCP 2.2 supported"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Max 900mA; for optional wireless LAN unit or USB flash drive (logs/batch setup)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Universal 100-120V or 200-240V AC; rated 2325W / ~12A at 200-240V. Exact inlet connector type inferred (not stated by manufacturer)."
+    }
+  ]
+}

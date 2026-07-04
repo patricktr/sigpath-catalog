@@ -1,0 +1,56 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "KUMO 3232",
+  "category": "matrix",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.aja.com/products/kumo-3232/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Authoritative manufacturer spec sheet used (aja.com/products/kumo-3232/spec-sheet.pdf). This is the original 3G-SDI KUMO 3232 (32x32), distinct from the newer \"KUMO 3232-12G\" variant which uses 12G-SDI and different connectors — do not confuse the two. Grade sdi-3g assigned to the 32 SDI inputs/outputs since the spec sheet states 3G-SDI I/O supporting up to 3 Gbps (270Mbps/1.5Gbps/3Gbps, auto-select). The 2x BNC Reference Input (loop-through, blackburst/tri-level sync) is a sync signal, not a graded video payload port, so no grade was set. Power: the unit has no internal AC inlet; it requires an external power supply. The enclosure's own DC input connector is a 4-pin Molex (dual, redundant, 10-14VDC, 43.2W max) — not an exact match to any connector in the allowed list, so it was mapped to the closest available option, dc-barrel, as a caveat-flagged approximation. The included external AC-to-DC adapter brick (100-240VAC, 60W) is a separate accessory and was not modeled as a device port. USB port is Mini-USB (device/config port, not USB host), mapped to usb-b as the closest match since usb-micro is technically closer but AJA's own diagram just says \"Mini-USB\" — flagged in notes. No grade set on Ethernet since the spec only states 10/100/1000 support without specifying which speed is actually negotiated in typical use; grade eth-1g reflects the top supported speed per spec.",
+  "ports": [
+    {
+      "name": "Inputs 1-32",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "32x BNC 3G/HD/SD-SDI inputs, SMPTE-259/292/424, one port group of 32 identical connectors"
+    },
+    {
+      "name": "Outputs 1-32",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "32x BNC 3G/HD/SD-SDI outputs, SMPTE-259/292/424, noninverting, one port group of 32 identical connectors"
+    },
+    {
+      "name": "Ref",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference input, 2x BNC looping (nonterminating), Blackburst or tri-level sync — not a graded video payload port"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Ethernet, embedded web server, KUMO control panel support, basic Grass Valley Native Protocol"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Mini-USB port for IP configuration via AJA eMini-Setup; closest available connector id to the device's actual Mini-USB port"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "9-pin D-connector (DB-9 Female), basic Grass Valley Native Protocol support"
+    },
+    {
+      "name": "PS 1 / PS 2 (DC In)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Dual redundant DC power inputs, actual connector is 4-pin Molex, 10-14VDC regulated, 18W typical / 43.2W max each — 4-pin Molex is not in the allowed connector list, dc-barrel used as closest approximation; powered by an included external 100-240VAC universal AC adapter brick (accessory, not modeled as a device port)"
+    }
+  ]
+}

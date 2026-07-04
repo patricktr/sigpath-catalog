@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Aurora Multimedia",
+  "model": "IPX-TC3A",
+  "category": "network",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/IPX%203A%20Series%20Spec%20Sheet%20220525.pdf",
+  "confidence": "high",
+  "notes": "This is the base 'IPX-TC3A-C' box transceiver (no CF/DF/WP variant suffix), confirmed against the manufacturer's own labeled rear-panel diagram in the official IPX 3A Series spec sheet (page 3-4, doc rev 220525). No dedicated power connector exists on the box version - it is powered entirely via PoE on either the 1G or 10G LAN port (max 12.9W); a separate 48V DC input exists only on the -WP3 wall-plate variants, not the box unit, so it is omitted here. The manufacturer's own labeled rear-panel photo shows audio Line In/Line Out on a captive Euroblock terminal block, which differs from several third-party retailer pages (Markertek/HDTVSupply/ManualsLib) that describe Line In/Out, RS-232, and IR as 3.5mm TRS jacks - I followed the manufacturer's labeled diagram for audio (Euroblock) since it is the higher-confidence source; RS-232/IR were kept as 3.5mm TRS consistent with the small round jacks visible in the rear photo and secondary sources. The technical spec table also lists 2 front-panel USB 2.0 Type-A ports (visible on the front keypad panel) in addition to the 1 rear USB 2.0 Type-C host shown on the rear diagram - only the rear Type-C host is included above since it is the one explicitly labeled in the base model's rear-panel diagram; add 2x front-panel USB-A (bidirectional, usb-2.0) if front ports are also needed. Third-party retailer listings describe a USB Micro-B port instead of Type-C, likely a paraphrase error or referencing the older IPX-TC3 (non-A) series; the manufacturer's IPX 3A datasheet used here is authoritative and more recent. Model is listed as discontinued on the manufacturer's site but the spec sheet remains the definitive technical source. Desktop/under-table unit; no fixed rack-unit size applies (an optional rack mount kit is available).",
+  "ports": [
+    {
+      "name": "In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Line In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Analog stereo line input, 5-pin captive screw terminal (L, R, GND, L, R shared with Line Out block)"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Analog stereo line output, captive screw terminal"
+    },
+    {
+      "name": "1G LAN (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000M, PoE powered device (PD) input for the unit"
+    },
+    {
+      "name": "10G (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10G copper Ethernet, CAT 6A up to 330ft, carries the SDVoE AV stream; unit can alternatively be powered via PoE on this port"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS serial control port, up to 115k baud"
+    },
+    {
+      "name": "IR Out",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Bidirectional IR port, 30-60kHz, 3.5mm TRS"
+    },
+    {
+      "name": "USB 2.0 Host",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Rear-panel USB 2.0 Type-C host/device port for ExtremeUSB IP extension"
+    }
+  ]
+}

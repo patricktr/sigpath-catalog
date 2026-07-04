@@ -1,0 +1,130 @@
+{
+  "manufacturer": "Barco",
+  "model": "ImagePRO-II",
+  "category": "converter",
+  "type": "Scaler",
+  "rackUnits": 1,
+  "sourceUrl": "https://assets.barco.com/m/11587f205a816f08/original/ImagePRO-II-series-en-Spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: official Barco spec sheet (assets.barco.com), \"Last updated: 09 Jul 2024\". Product line ships in 5 variants sharing one chassis: R9004677 (standard), R9004683 (dual output), R9004666 (audio), R9004668 (dual output + audio), R9004695 (Jr). Port list above reflects the base/standard chassis I/O; the ImagePRO-II Jr variant omits the HDMI and DisplayPort ports; the dual-output variant adds a second 3G-SDI in, a second 3G-SDI out, and the S3D sync DIN in/out; the audio module (DB-25) is only present on the two audio-equipped variants. DisplayPort is spec'd as version 1.1 by Barco, which is not one of the allowed DP grades (dp-1.2/1.4/2.0) — mapped to dp-1.2 as the closest/lowest defined rung; treat as approximate. DIN connector (S3D sync) has no exact match in the allowed connector enum — mapped to midi-din as closest available id; treat as approximate, it is not literally a MIDI connector. DB-25 audio connector likewise has no exact match — mapped to euroblock as a placeholder for \"multi-pin audio breakout,\" with accepts:[trs-6.35] omitted from the real spec (real breakout is XLR3 analog + BNC AES3, not TRS); flagged so it is not taken literally. AC inlet connector type (IEC C13/C14 vs other) is inferred, not explicitly confirmed in the fetched text. Ethernet is rated 10/100 Mbps per spec sheet, i.e., eth-100m grade (100BASE only, not gigabit).",
+  "ports": [
+    {
+      "name": "DVI-I In",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Dual-link DVI-I, HDCP, up to 4K@30p; field-replaceable connector; loop-through provided"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD-15 universal analog input; loop-through provided"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "165 MHz max; HDCP; not present on ImagePRO-II Jr variant"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Spec sheet lists DisplayPort 1.1, 300 MHz max, supports 4K@30p; closest defined grade is dp-1.2 since dp-1.1 is not in the scale. Not present on ImagePRO-II Jr variant"
+    },
+    {
+      "name": "3G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD/SD-SDI input via BNC; loop-through provided; second 3G-SDI input added with dual-output board option"
+    },
+    {
+      "name": "DVI-I Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Dual-link DVI-I, HDCP, up to 4K@30p; field-replaceable connector"
+    },
+    {
+      "name": "VGA Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "HD-15 universal analog output"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "165 MHz max; HDCP; not present on ImagePRO-II Jr variant"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Spec sheet lists DisplayPort 1.1, 300 MHz max, supports 4K@30p; closest defined grade is dp-1.2. Not present on ImagePRO-II Jr variant"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Second 3G-SDI output added with dual-output board option"
+    },
+    {
+      "name": "Composite Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite NTSC/PAL via BNC"
+    },
+    {
+      "name": "Genlock Ref In/Loop",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog reference input/loop; bi-level and blackburst at SD, tri-level at HD, or locked to any input signal"
+    },
+    {
+      "name": "S3D Sync In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Stereoscopic 3D sync input, DIN connector; closest listed connector id is midi-din (generic DIN not in enum); dual-output board option only"
+    },
+    {
+      "name": "S3D Sync Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Stereoscopic 3D sync output, DIN connector; closest listed connector id is midi-din (generic DIN not in enum); dual-output board option only"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps autosense; used for web browser / tablet / smartphone control (Etherconn-style rugged RJ45 per marketing copy)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for configuration backup/restore via flash drive; speed/grade not stated in spec sheet"
+    },
+    {
+      "name": "Audio I/O (DB-25)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Optional Audio Module (R9004666 / R9004668 variants only). Physical connector on the mezzanine board is a DB-25 (not in the connector enum; mapped here to closest available id). Breaks out via Barco audio breakout cable to 2x analog stereo in + 2x analog stereo out on XLR, and 8 AES3 digital in + 8 AES3 digital out on BNC (75 ohm unbalanced)."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60Hz, 2A max. Exact IEC inlet variant (C13/C14) not explicitly stated in spec sheet; inferred from standard 1RU rack-power practice for this product class."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "manufacturer": "DirectOut",
+  "model": "EXBOX.MD",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://aspen-media.com/wp-content/uploads/2023/11/DirectOut-Technologies-EXBOX.MD-Manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from DirectOut's official EXBOX.MD User's Manual Version 1.8 (Nov 2023), mirrored from the manufacturer's own download link at directout.eu/download/manual-exbox-md/, and cross-checked against the manufacturer product page directout.eu/product/exbox-md/. Port names taken verbatim from the manual's rear-panel labeling tables (Chapter 4: Global Control / Input-Output MADI / Input-Output Network) and Chapter 7 Technical Data / Appendix A. Desktop/modular unit (140 x 42 x 146 mm, 1/3 of 19in rack width) - not assigned rackUnits since it is not a standard full-width rack chassis; DirectOut sells an optional BOXMOUNT.XL kit that fits up to three EXBOX units side-by-side into 1U. Connector mapping caveats: (1) MADI SC ports use an SC-type fiber connector (ISO/IEC 9314-3 FDDI, 1310nm, multimode 62.5/125 or 50/125); SC is not in the allowed connector enum, so it was mapped to the closest available fiber option, fiber-lc - the physical connector on the device is SC, not LC. (2) The two power inputs (PSU 1/PSU 2) are Hirose HR10 4-pin circular locking DC connectors (9-24V DC, 2.5A max, pins: 1=DC+, 2=DC+, 3=DC-, 4=DC-); mapped to xlr4-dc as the closest 4-pin locking DC connector in the allowed list, though it is a Hirose HR10, not an XLR-bodied connector. (3) Grade was intentionally omitted on the MADI BNC ports: although BNC ports normally take the sdi-* grade scale, these carry MADI (AES10) signal, not SDI, so applying an SDI grade would misrepresent the signal type; the manual's own MADI-specific specs (56/64 channel, 48k/96k frame format) don't map to any allowed grade enum. (4) Network ports are confirmed Gigabit Ethernet (1000 Mbit/s) explicitly stated in Technical Data as \"Gigabit Ethernet\", supporting Dante and AES67 audio-over-IP, not general-purpose data networking. (5) Device also supports PTP (IEEE 1588-2002) clocking over the network ports, and BNC IN can double as an AES11 word-clock input - these are protocol/clocking details, not separate physical ports. No dedicated on/off power switch exists; device powers on immediately when any valid PSU or PoE source is connected.",
+  "ports": [
+    {
+      "name": "MADI BNC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "MADI (AES10) coaxial output, 75 ohm"
+    },
+    {
+      "name": "MADI BNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "MADI (AES10) coaxial input, 75 ohm; may alternatively be used as AES11 word-clock input"
+    },
+    {
+      "name": "MADI SC OUT",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optical MADI output on SC-type multimode fiber connector (62.5/125 or 50/125, 1310nm); SC is not in the allowed connector list so fiber-lc was chosen as the closest optical-fiber match. Single-mode SC available on request per manufacturer."
+    },
+    {
+      "name": "MADI SC IN",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optical MADI input on SC-type multimode fiber connector; SC not in allowed list, mapped to fiber-lc as closest fiber connector."
+    },
+    {
+      "name": "MADI SFP I/O",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Empty SFP cage; ships without transceiver module, user must fit their own MADI SFP module"
+    },
+    {
+      "name": "01 (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet Dante/AES67 network port; also accepts PoE (Class 0, 0.4-13W, IEEE 802.3af) for device power"
+    },
+    {
+      "name": "02",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "03",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "04",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "PSU 1",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Hirose HR10 4-pin locking DC socket, 9-24V DC, external power supply; closest allowed connector to Hirose HR10 4-pin (2 pins DC+, 2 pins DC-)"
+    },
+    {
+      "name": "PSU 2",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Second redundant Hirose HR10 4-pin DC input, 9-24V DC; unit operates on a single PSU, second is for redundancy"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "manufacturer": "RME",
+  "model": "M-32 DA Pro II-D",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.rme-audio.com/shared/_attachments/M-32DAPro2D_E_online.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: official RME M-32 DA Pro II-D User's Guide (docs.rme-audio.com), Hardware chapter (sections 3.10-3.18). 32 analog outputs are on 4x DB25 (D-Sub25) connectors, Tascam pinout, 8 channels each, labeled \"LINE OUT Ch. 1-8\", \"Ch. 9-16\", \"Ch. 17-24\", \"Ch. 25-32\" — modeled here as one representative DB25 port per octal group. Optical MADI (SFP, LC, 125 MBit/s) is optional/user-installable, not populated by default; modeled as fiber-lc connector since MADI optical uses LC fiber connectors, not SFP-electrical. MADI signal itself (56/64 ch coax or optical) is not in the provided grade enum (not SDI video), so no grade was set on the MADI BNC/fiber ports — omitting per instructions since MADI has no matching graded scale. Dante RJ45 ports (NET PRI/SEC) support 1 Gb/s and 100 Mb/s auto-negotiated; grade set to eth-1g reflecting max supported speed. USB 2.0 Type B port is control/remote-only (web remote over virtual network adapter) and does NOT carry audio; grade set usb-2.0 per its stated USB spec version. MIDI I/O is exposed via an included breakout cable terminating in a single 6-pin mini-DIN \"TO DEVICE\" jack on the rear panel (carries both MIDI IN and OUT); modeled as one bidirectional midi-din port. Word Clock I/O uses two separate 75-ohm BNC connectors (IN and OUT). Power: two independent IEC C14 inlets labeled \"PSU 1\" and \"PSU 2\" (100-240V AC, 50/60Hz, 45W each, dual redundant), both required for full redundancy but unit runs on either alone. Desktop/rack unit dimensions 440 x 44 x 243 mm, 1U rack-mountable (brackets included).",
+  "ports": [
+    {
+      "name": "LINE OUT Ch. 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Actually DB25 (D-Sub25) analog output, Tascam pinout, balanced, +24/+19/+13 dBu switchable; DB25 not in provided connector enum, closest listed alternative chosen is inaccurate — see notes; treat as D-Sub25 analog audio output"
+    },
+    {
+      "name": "LINE OUT Ch. 9-16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB25 (D-Sub25) analog output, Tascam pinout, balanced"
+    },
+    {
+      "name": "LINE OUT Ch. 17-24",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB25 (D-Sub25) analog output, Tascam pinout, balanced"
+    },
+    {
+      "name": "LINE OUT Ch. 25-32",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB25 (D-Sub25) analog output, Tascam pinout, balanced"
+    },
+    {
+      "name": "MADI OUT (Coaxial)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75 ohm BNC, standard MADI (AES10-2003), up to 64 channels"
+    },
+    {
+      "name": "MADI IN (Coaxial)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75 ohm BNC, standard MADI (AES10-2003), up to 64 channels; internally terminated"
+    },
+    {
+      "name": "MADI OUT (Optical SFP)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module, LC connector, 125 MBit/s, MM or SM; not populated by default"
+    },
+    {
+      "name": "MADI IN (Optical SFP)",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optional SFP module, LC connector, 125 MBit/s, MM or SM; not populated by default"
+    },
+    {
+      "name": "WORD CLOCK OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WORD CLOCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75 ohm internally terminated; do not use T-adapter"
+    },
+    {
+      "name": "MIDI (TO DEVICE)",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "6-pin mini-DIN on rear panel, carries MIDI IN+OUT via included breakout cable to two standard 5-pin DIN MIDI connectors"
+    },
+    {
+      "name": "NET (PRI)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante primary network port, auto-negotiates 1Gb/s or 100Mb/s"
+    },
+    {
+      "name": "NET (SEC)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante secondary network port, auto-negotiates 1Gb/s or 100Mb/s; redundancy or switched mode"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type B, remote/web control only via virtual network adapter, does not carry audio"
+    },
+    {
+      "name": "PSU 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 100-240V AC, 50/60Hz, 45W; one of two independent/redundant supplies"
+    },
+    {
+      "name": "PSU 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 100-240V AC, 50/60Hz, 45W; one of two independent/redundant supplies"
+    }
+  ]
+}

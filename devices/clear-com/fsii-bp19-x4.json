@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "FSII-BP19-X4",
+  "category": "audio",
+  "sourceUrl": "https://clearcom.com/DownloadCenter/datasheets/FreeSpeakII/FSII-BP19_FreeSpeakII_19_Beltpack_Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "FreeSpeak II 1.9 GHz digital wireless intercom beltpack (battery-powered, no AC mains input). Source: Clear-Com's official FSII-BP19 datasheet (Rev Aug/2024), which diagrams the bottom-panel ports as \"Headset connector\" and \"USB and Audio Jack connectors.\" The \"-X4\" suffix denotes the 4-pin XLR male headset connector variant (confirmed by Clear-Com order codes and retailer listings at Markertek/Full Compass/BSW). No allowed connector id exists for a plain 4-pin XLR audio/intercom jack; xlr4-dc was used as the closest match even though this port carries mic/headset audio + PTT, not DC power — treat with caution. USB port purpose is charging and/or continuous bus power (used as an input here); exact USB connector sub-type (USB-C vs Micro-USB) is not stated in the datasheet or any retailer page found, so usb-micro was assumed only as a placeholder-level guess is avoided — instead grade/connector left as usb-c with low sub-confidence; verify physically before relying on this. The \"Audio Jack\" mentioned alongside USB on the bottom panel is not dimensioned in any source (likely a 3.5mm accessory/line jack) — modeled as trs-3.5, unconfirmed. No mains AC/DC-barrel port exists; the beltpack runs on BAT60 Li-Ion or 3xAA batteries, with USB and an external drop-in charger (AC60, sold separately, not part of this unit) as charging options. Regional RF variants (-US/-EU/-B/-LA/-J) do not affect physical connectors.",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "4-pin male, Clear-Com standard headset/intercom connector (mic in + audio out + PTT); the -X4 in the model name denotes this connector. No dedicated 4-pin-XLR-audio id exists in the allowed connector list, so xlr4-dc (closest pin-count match) was used — this is NOT a DC power port."
+    },
+    {
+      "name": "USB",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Used for battery charging and/or continuous powered operation. Exact USB connector sub-type not confirmed by any source found; USB-C assumed but unverified."
+    },
+    {
+      "name": "Audio Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Listed on the bottom panel next to the USB port in the datasheet legend, no further spec given. Likely a 3.5mm monitor/accessory jack; unconfirmed."
+    }
+  ]
+}

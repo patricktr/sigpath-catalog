@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EW-DX SK",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/ew-d/ew-d/specifications-ew-dx-sk.html",
+  "confidence": "high",
+  "notes": "Bodypack transmitter for the EW-DX digital wireless system, worn on-body, not rack-mountable (rackUnits omitted). Standard EW-DX SK uses a locking 3.5mm TRS audio input (mic/line/instrument via adapter cables); a separate SKU variant, \"EW-DX SK 3-PIN\", instead uses a 3-pin locking connector (LEMO-style) in place of the 3.5mm jack — only one audio input is fitted per unit, not both. Power comes from 2x user-replaceable AA batteries (1.5V) or the optional BA 70 Li-ion pack; there is no external AC/DC power-input jack. The unit also has proprietary pogo-pin charging contacts on the underside for docking in the CHG 70N charger — this is not a cabled connector and does not map to any connector id in the given list, so it is omitted as a port (noted here instead). The antenna is a fixed/integrated wire antenna, not a connector, so it is not listed as a port. No USB, network, or other digital ports are present on the transmitter itself (Bluetooth/BLE is wireless only, used for control/monitoring). Frequency-band variants (Q1-9, R1-9, S1-10, etc.) do not affect physical I/O.",
+  "ports": [
+    {
+      "name": "Audio In (locking 3.5 mm)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Locking 3.5mm TRS jack for lavalier/headset mic (electret bias 2.0-4.35V) or instrument via adapter cable; present on the standard EW-DX SK SKU. The separate EW-DX SK 3-PIN SKU has a 3-pin locking connector here instead."
+    }
+  ]
+}

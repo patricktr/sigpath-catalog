@@ -1,0 +1,65 @@
+{
+  "manufacturer": "NEC",
+  "model": "MultiSync C750Q",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://gzhls.at/blob/ldb/b/d/b/e/91fa99146044e5328eedc9457ac8b56d7f49.pdf",
+  "confidence": "high",
+  "notes": "Authoritative sources: official Sharp/NEC datasheet (mirrored PDF, dated 16.09.2022) and the official NEC C750Q/C860Q User's Manual (terminal panel diagram, page 21), both cross-checked. Rear terminal panel labels (AC IN, AUDIO OUT, REMOTE, LAN Port IN, DisplayPort IN, HDMI1(ARC)/HDMI2, USB Port, RS-232C IN) taken verbatim from the manual's \"Terminal Panel\" section. Datasheet confirms: 1x DisplayPort (HDCP), 2x HDMI (HDCP), 1x LAN 100Mbit, 1x RS232, 1x Remote (3.5mm), 1x USB 2.0, 1x 3.5mm analog audio out, integrated 10W+10W speakers, power supply 100-240V AC. HDMI/DisplayPort signal versions (e.g. HDMI 1.4/2.0, DP 1.2/1.4) are not explicitly stated in either manufacturer source despite native UHD@60Hz support being advertised, so no \"grade\" was assigned to those ports per instructions (grade omitted when version not confirmed). The unit also has an internal Open Pluggable Specification (OPS) slot for optional slot-in PCs/HDBaseT receiver cards — this is an internal expansion bay, not a standard external cable connector, so it was omitted from the ports list. AC inlet type is described only as \"AC IN Connector...supplied power cord\" fastened with a screw+clamp; mapped to the closest standard type \"iec\" (typical for NEC large-format displays of this class) though the exact IEC sub-type (C13/C14) is not explicitly stated. This is a 75\" commercial/collaboration large-format display (desktop/wall-mount), not a rack-mountable unit, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable power cord, screw+clamp retention, 100-240V AC"
+    },
+    {
+      "name": "DisplayPort IN",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "HDMI1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Supports HDMI-CEC and ARC audio return"
+    },
+    {
+      "name": "HDMI2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Media Player storage reader, firmware update, clone settings; 10W power supply"
+    },
+    {
+      "name": "LAN Port IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "For monitor management/control (100Mbit)"
+    },
+    {
+      "name": "RS-232C IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin, external control only; no RS-232C OUT/loop-through confirmed"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog audio out from DisplayPort/HDMI sources to external receiver/amp; manual explicitly notes this is not a headphone terminal"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "For optional external remote-control sensor unit only; not general purpose"
+    }
+  ]
+}

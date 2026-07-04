@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Atlona",
+  "model": "AT-OME-EX-WP-KIT",
+  "category": "converter",
+  "sourceUrl": "https://atlona.com/product/at-ome-ex-wp-kit/",
+  "confidence": "medium",
+  "notes": "Kit consists of two separate physical units: the AT-OME-EX-TX-WP transmitter (US one-gang wall plate, no rack) and the AT-OME-EX-RX receiver (small desktop chassis, no rack). Ports below are grouped and labeled by unit. Transmitter is powered remotely by the receiver over the HDBaseT link (PoE-style) and has no local AC/DC power connector. Receiver's DC 48V input connector is a 3-pin DIN barrel-style jack per Atlona's spec table; closest list id used is dc-barrel (mapped from \"3-pin DIN\" locking power connector) fed by the included external supply (100-240VAC in / 48V 0.83A DC out). Receiver's RS-232/IR port is a single 4-pin captive-screw block carrying both RS-232 and IR pass-through signals (modeled here as rs232 with note; connector is euroblock/captive-screw style, no exact IR pass-through connector id exists separately). Transmitter's RS-232 port is a 3-pin captive screw block (RS-232 only, also carries CEC pass-through logically but no extra pin). Receiver also has a separate \"LAN\" RJ45 (10/100Mbps) control-network port distinct from the \"HDBaseT IN\" RJ45 which carries the extended AV/USB/control signal from the transmitter - both are true RJ45 ports and both are listed. Receiver also includes a mini-USB \"FW\" port used for firmware updates/service, included for completeness though not part of normal AV signal routing. HDBaseT link itself is not exposed in the connector list as its own graded port beyond the two RJ45s (the RJ45 grade eth-100m applies only to the LAN control port per its stated \"10/100 Mbps\" spec; the HDBaseT OUT/IN RJ45 carries video/USB/control at a proprietary rate not on the standard Ethernet grade scale, so no grade was set for it to avoid misrepresenting it as literal Ethernet bandwidth). USB ports are USB 2.0 signal per spec table (\"Signal: 2.0\", max 120Mbps due to HDBaseT extension limits), graded usb-2.0. HDMI is HDMI 2.0 / HDCP 2.2 per spec table, graded hdmi-2.0. Data sourced from Atlona's own product page (archived Dec 2025 snapshot, since atlona.com now 301-redirects to hallresearch.com's JS-rendered SPA which did not serve static spec content to fetch tools). Category set to \"converter\" (HDBaseT extender kit); type set to \"Extender\".",
+  "ports": [
+    {
+      "name": "HDMI IN (TX)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Transmitter wall plate; Type A 19-pin female; HDCP 2.2"
+    },
+    {
+      "name": "HOST (TX, USB-B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Transmitter USB 2.0 host interface for connection to a source PC"
+    },
+    {
+      "name": "DEVICE (TX, USB-A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Transmitter USB 2.0 port for a local peripheral (e.g. mic/speakerphone)"
+    },
+    {
+      "name": "RS-232 (TX)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin captive screw block; RS-232 pass-through to sink device, 2400-115200 baud; also carries CEC pass-through logically"
+    },
+    {
+      "name": "HDBaseT OUT (TX)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Carries extended HDMI/USB/RS-232/CEC to receiver over Cat5e/6/6a/7, up to 330 ft; not a standard Ethernet data link so no eth- grade assigned"
+    },
+    {
+      "name": "HDBaseT IN (RX)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Receives extended HDMI/USB/RS-232/CEC/power-request signal from transmitter over Cat5e/6/6a/7"
+    },
+    {
+      "name": "HDMI OUT (RX)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Receiver; Type A 19-pin female; HDCP 2.2"
+    },
+    {
+      "name": "DEVICE (RX, USB-A) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver USB 2.0 port for peripheral (e.g. camera, soundbar)"
+    },
+    {
+      "name": "DEVICE (RX, USB-A) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver USB 2.0 port for peripheral (e.g. camera, soundbar)"
+    },
+    {
+      "name": "LAN (RX)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Separate 10/100 Mbps control network port on receiver, distinct from HDBaseT IN"
+    },
+    {
+      "name": "RS-232 / IR (RX)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "ir"
+      ],
+      "note": "4-pin captive screw block; RS-232 pass-through plus IR pass-through from control system to sink device"
+    },
+    {
+      "name": "FW (RX)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Mini-USB service/firmware-update port on receiver (labeled 'FW' in spec table; closest list id used is usb-micro)"
+    },
+    {
+      "name": "DC 48V (RX)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "3-pin DIN locking power connector per Atlona spec table (closest list id used); fed by included external supply, 100-240VAC in / 48V 0.83A DC out"
+    }
+  ]
+}

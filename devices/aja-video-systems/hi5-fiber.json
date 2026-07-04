@@ -1,0 +1,46 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Hi5-Fiber",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/assets/support/files/9601/en/AJA_Hi5-Fiber_Manual_v2.3r1.pdf",
+  "confidence": "high",
+  "notes": "Sourced from AJA's own spec sheet (aja.com/products/hi5-fiber/spec-sheet.pdf) and full Installation and Operation Guide v2.3r1 (aja.com/assets/support/files/9601/en/AJA_Hi5-Fiber_Manual_v2.3r1.pdf), including the panel connector diagram (Figure 2). This is a desktop Mini-Converter, not rack-mountable (rackUnits omitted/0). It has no SDI BNC connector - video input is exclusively single-mode ST-style fiber (3G/HD/SD-SDI), which distinguishes it from other AJA Hi5 variants (Hi5-12G, Hi5-Plus) that use BNC. Connector-id caveats: (1) the fiber input is an ST-type fiber connector, not LC - fiber-lc was chosen as the closest available id in the allowed connector list; (2) the USB configuration port is physically Mini-USB, not Micro-USB - usb-micro chosen as closest available id since mini-usb is not in the allowed set; no USB speed grade is stated by AJA so no grade was set. HDMI output bit-depth (12-bit/10-bit/8-bit) is specified but AJA does not publish an HDMI spec version (1.4/2.0/2.1) for this model; hdmi-1.4 is an inferred grade based on the 1080p/2K-class-only video format list (no 4K/UHD support), and should be treated as a medium-confidence inference despite the overall high confidence of the port list itself. Power input is a locking DC barrel jack; the panel text (\"5-20 VDC\") and the tech-spec text (\"+5V DC regulated, 3W\") describe the same locking connector from two different reference points (supply output range tolerance vs. regulated internal rail) - not two separate ports.",
+  "ports": [
+    {
+      "name": "Optical In",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "ST-style single-mode 1310nm fiber connector carrying 3G/HD/SD-SDI (SMPTE-259/292/424); closest list match is fiber-lc, actual connector is ST-type, not LC"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Outputs up to 10-bit YCbCr 4:2:2 / 8-bit RGB 4:4:4 with up to 8 channels embedded audio; spec sheet does not state an HDMI version number, 1.4 inferred from 10/12-bit 1080p-class support"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Physically a Mini-USB port (not listed in connector set); used only for Mini-Config control/firmware, not general data transfer. No speed/grade stated by AJA."
+    },
+    {
+      "name": "Audio R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Audio L",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Power 5-20 VDC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC barrel connector; panel silkscreen reads 5-20 VDC but AJA's included external supply (model DWP-U-R1) takes 100-240VAC and outputs regulated +5V DC, 3W to the unit"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Bolin Technology",
+  "model": "B2-220",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://bolintechnology.com/wp-content/uploads/2023/08/B2-210-220-DATASHEET-02052025.pdf",
+  "confidence": "high",
+  "notes": "Physical I/O confirmed from Bolin's own datasheet (rear-panel photo + spec tables) and the official B2-210/B2-220 User Guide (rear-panel diagram, page 11), which agree exactly. The B2-220 has NO 3.5mm audio jack on the body (that is exclusive to the B2-210) — Bolin's manual explicitly states \"The B2-220 does not have a 3.5mm audio input connection. Please use the USB port to 3.5mm audio jack [adapter, not included] to input audio,\" so no analog audio port is listed here. IR remote receiver and a bottom-panel 8-pin x2 dip-switch block also exist but are not user-facing signal/power connectors in the requested sense, so they are omitted. The rear panel shows both a USB-A port and a USB-C port; the datasheet's interface table names only \"USB Port: USB2.0, Type C\" as the functional streaming/UVC-UAC interface, so the USB-A port's exact role is inferred (likely accessory/service use) — flagged as the one medium-confidence item in an otherwise high-confidence, manufacturer-sourced spec. No rack mounting (desktop/ceiling/wall-mount PTZ camera, so rackUnits omitted). SDI grade (3G-SDI) and HDMI grade (1.4) and Ethernet grade (1000BASE-T = 1G) are explicitly stated in the datasheet. USB is explicitly \"USB2.0, Type C\" per spec table.",
+  "ports": [
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC12V (IEC60130-10 / JEITA RC-5320A Type 4) power jack; camera also accepts PoE+ via the LAN port"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "LAN/PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BASE-T Ethernet; also accepts PoE+ (IEEE 802.3at) power input"
+    },
+    {
+      "name": "3G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB-A port visible on rear panel; datasheet does not detail its specific function separately from the USB-C streaming port"
+    },
+    {
+      "name": "RS232/RS422/485",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial control port (VISCA/Pelco P/D) over RJ45; ships with RJ45-to-RS232 and RJ45-to-RS422 breakout cables"
+    },
+    {
+      "name": "USB 2.0 Type-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "UVC/UAC video/audio streaming to PC and firmware upgrade"
+    }
+  ]
+}

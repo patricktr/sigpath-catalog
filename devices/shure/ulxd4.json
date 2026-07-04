@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Shure",
+  "model": "ULXD4",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.tecsadomotica.com/images/producto/pdf/ULXD4.pdf",
+  "confidence": "high",
+  "notes": "Single-channel half-rack digital wireless receiver (part of the ULX-D family). Rear panel labels per Shure's official spec sheet diagram: \"antenna . B\", \"power\", Ethernet icon, \"mic / line\" (XLR), \"inst / aux\" (1/4\\\"), \"antenna . A\". Power input is an external 15V DC wall-wart supply (PS41US) via a coaxial/barrel DC jack (labeled \"15V 0.4A\" on the back-panel diagram) — modeled as dc-barrel. Ethernet is a single 10/100 Mbps RJ45 port used for networking/WWB6/AMX-Crestron control (not an audio-over-IP/Dante port — Dante is only present on the Dual (ULXD4D) and Quad (ULXD4Q) receivers, which also add a second RJ45 secondary port and use an internal AC power supply with IEC inlet instead). No USB port on this model. RF frequency band varies by region (G50/H50/J50/etc.) — does not affect I/O. Not rack-mountable as a full 1U (it's a half-rack unit, typically mounted in pairs with an adapter kit), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "antenna A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna input, 50 ohm, for included 1/2-wave antenna"
+    },
+    {
+      "name": "antenna B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF antenna input, 50 ohm, for included 1/2-wave antenna (diversity)"
+    },
+    {
+      "name": "mic/line",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced audio output with mic/line level switch (pin1=ground, pin2=audio+, pin3=audio-)"
+    },
+    {
+      "name": "inst/aux",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Impedance-balanced 1/4\" (6.35mm) audio output, tip=audio/ring=no audio/sleeve=ground"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Single port, 10/100 Mbps, for multi-receiver networking, WWB6, and AMX/Crestron control"
+    },
+    {
+      "name": "power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "15V DC input from external PS41US power supply (tip positive)"
+    }
+  ]
+}

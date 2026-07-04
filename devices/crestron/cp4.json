@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Crestron",
+  "model": "CP4",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.crestron.com/en-us/9214/Content/Topics/Specifications/Specifications-CP4.htm",
+  "confidence": "high",
+  "notes": "Physical serial/control connectors (Cresnet, COM1-3, IR/Serial 1-8, Relay 1-8, I/O 1-8) are all detachable 3.5mm pitch terminal blocks (3-, 4-, 5-, 8-, or 9-pin depending on function), not XLR-style euroblocks in the strict sense — mapped to 'euroblock' as the closest connector id in the allowed list since no generic screw-terminal id exists. COM1 is a combo RS-232/422/485 port (primary connector set to rs232 with rs422/rs485 in accepts); COM2 and COM3 are RS-232 only. IR/Serial Output ports (8 total, on two terminal blocks) are IR output with 1-way serial TTL/RS-232 capability, mapped to connector 'ir'. Relay outputs (8 total, on two terminal blocks) are dry-contact relays with no matching connector id in the list; mapped to 'euroblock' as closest physical match (not a signal/power jack). Versiport I/O (8 ports, one terminal block) are digital/analog GPIO, also mapped to 'euroblock' as closest physical match. Ethernet is Gigabit-capable (100/1000Base-TX auto-negotiating). USB ports are USB 2.0 (Type-A rear host for storage, Type-B front for console/computer setup). Power input is 24VDC via 2.1x5.5mm DC barrel jack, powered by an included external PW-2420RU power pack (100-240VAC input, 2.5A/24VDC output) — device itself has no AC inlet. An SD/SDHC card slot (up to 32GB) exists for storage but is omitted as it is not a signal/power I/O port. Not rack-mountable in the traditional 19\" sense without included rack ears, but is a 1RU-height chassis; rackUnits set to 1 accordingly (also usable as a desktop/shelf unit with adhesive feet). Sources: docs.crestron.com CP4/CP4N specifications page and crestron.com official product catalog page, both from Crestron; cross-checked and in full agreement on connector counts and types.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Cresnet",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; Cresnet master port, provides 15W bus power when power pack connected"
+    },
+    {
+      "name": "USB (rear, Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host port for USB storage devices"
+    },
+    {
+      "name": "USB (front, Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Device port for computer console setup"
+    },
+    {
+      "name": "COM 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422",
+        "rs485"
+      ],
+      "note": "5-pin 3.5mm terminal block; software-selectable RS-232/422/485, up to 115.2k baud"
+    },
+    {
+      "name": "COM 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin 3.5mm terminal block; up to 115.2k baud"
+    },
+    {
+      "name": "COM 3",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin 3.5mm terminal block; up to 115.2k baud"
+    },
+    {
+      "name": "IR/Serial Output 1-8",
+      "direction": "output",
+      "connector": "ir",
+      "note": "Two 8-pin 3.5mm terminal blocks; IR up to 1.2MHz or 1-way serial TTL/RS-232 (0-5V) up to 115.2k baud"
+    },
+    {
+      "name": "Relay Output 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Two 8-pin 3.5mm terminal blocks; 8 normally-open isolated relays, rated 1A, 30VAC/VDC. Closest connector id used; physically a dry-contact relay terminal block, not a signal jack"
+    },
+    {
+      "name": "I/O 1-8 (Versiport)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "One 9-pin 3.5mm terminal block; configurable digital I/O (0-24VDC in, 250mA out) or analog input (0-10VDC). Closest connector id used; physically a GPIO terminal block"
+    },
+    {
+      "name": "24V DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5mm DC jack, 24VDC; powered by included external PW-2420RU power pack (100-240VAC in, 2.5A/24VDC out)"
+    }
+  ]
+}

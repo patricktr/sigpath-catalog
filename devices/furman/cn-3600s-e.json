@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Furman",
+  "model": "CN-3600S E",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://furmanpower.com/products/cn-3600s-e",
+  "confidence": "high",
+  "notes": "This is the 230V/16A \"Contractor Series\" SmartSequencer (also written CN-3600SE / CN-3600S-E); Furman's current catalog has no separate 120V \"CN-3600S\" SKU at this 3600W tier (the 120V siblings are CN-1800S at 15A and CN-2400S at 20A), so this is treated as the product the user means. AC inlet is an IEC C19 female inlet with a captive IEC C19-to-Schuko (CEE 7/7) cord for the 230V export market; represented here as IEC-C19 connector type since that is the physical receptacle on the chassis (cord plug end varies by destination country and is not itself a chassis port). The three terminal-block ports (SmartSequencing Link, Remote, Force Off/Delay 3) are Phoenix-style pluggable screw terminals (4-pin, 4-pin, and 5-pin respectively); mapped to the closest listed connector id \"euroblock\" since no dedicated Phoenix-terminal id exists. RS-232 is a DB-9 connector used for control/integration (bidirectional per Furman's command-set documentation) and also serves as the uplink for the optional BB-RS232-to-Ethernet BlueBOLT adapter (that adapter is a separate accessory, not a built-in port, so no Ethernet/RJ45 port is listed). No bandwidth \"grade\" applies to any port here (IEC, RS-232, and euroblock control ports are not on the graded connector scales). Rack size confirmed as 1U from Furman marketing copy; exact width/depth/weight figures were not found on the primary spec page and are omitted rather than guessed.",
+  "ports": [
+    {
+      "name": "AC Out 1 (Sequenced Bank 1)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 2 (Sequenced Bank 1)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 3 (Sequenced Bank 2)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 4 (Sequenced Bank 2)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 5 (Sequenced Bank 3)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 6 (Sequenced Bank 3)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 7 (Unswitched)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Out 8 (Unswitched)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Front Panel AC Out (Unswitched)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC C19 female inlet; captive cord to Schuko (CEE 7/7) for 230V export markets"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9; system integration and control-system command set; also uplink for optional BB-RS232 BlueBOLT Ethernet adapter"
+    },
+    {
+      "name": "SmartSequencing Link",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin pluggable screw terminal; primary/secondary bidirectional current-loop link between chained units, ~1000 ft nominal"
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin pluggable screw terminal; +12V, STAT, REM, GND remote on/off and status, Class 2 wiring"
+    },
+    {
+      "name": "Force Off / Delay 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pin pluggable screw terminal for force-off contact closure and delay-bank-3 control"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "manufacturer": "Symetrix",
+  "model": "Radius NX 4x4",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.symetrix.co/wp-content/uploads/sym-documents/Data-Sheets/Symetrix_DATA-SHEET_Radius-NX-4x4_b.pdf",
+  "confidence": "high",
+  "notes": "Data taken from the official Symetrix \"Radius NX 4x4 Data Sheet\" (Copyright 2022, symetrix.co). Analog I/O uses 3.81mm captive screw terminal blocks, mapped here to euroblock (closest connector id). The two Dante ports (labeled C & D, RJ45/1000 Base-T) are only active if the optional factory-installed Dante card is present — modeled here since Dante is a headline feature of this SKU; datasheet states 128 (64x64) channel capacity, primary+secondary redundant, 1000 Base-T = eth-1g. The two Ethernet ports (A & B) are 1000 Base-T for Composer/control, also graded eth-1g. USB Host port is a standard USB-A port for flash-drive playback/record (not audio-class); USB Audio port is a separate USB-B 2.0 port for computer audio I/O — graded usb-2.0 per datasheet (\"2.0 with Audio class 1.0 legacy modes\"). ARC port is RJ45 but proprietary (distributes power + RS-485 to ARC wall panels, not general Ethernet) — included as bidirectional RJ45 with no grade since it is not an IEEE eth-speed-graded link. Logic Outputs (4) and External Control Inputs (2, usable as 2 pots or 4 switch inputs) are on a terminal block connector, mapped to euroblock; treated as control ports (no grade). Power input is an IEC C14 inlet (detachable IEC cable, 100-240VAC, 50/60Hz, 60W max) — mapped to \"iec\". The rear panel also has a 4-channel expansion card slot (accepts optional I/O cards) and a factory reset switch — these are not standard signal/power connectors from the provided list and were omitted. RS-485 can optionally be broken out of the ARC port per the datasheet but is not a separate physical connector, so not listed separately.",
+  "ports": [
+    {
+      "name": "Analog Mic/Line Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; switchable mic/line, +48V phantom, 0-51dB gain"
+    },
+    {
+      "name": "Analog Mic/Line Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; switchable mic/line, +48V phantom, 0-51dB gain"
+    },
+    {
+      "name": "Analog Mic/Line Input 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; switchable mic/line, +48V phantom, 0-51dB gain"
+    },
+    {
+      "name": "Analog Mic/Line Input 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; switchable mic/line, +48V phantom, 0-51dB gain"
+    },
+    {
+      "name": "Analog Line Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; balanced line level"
+    },
+    {
+      "name": "Analog Line Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; balanced line level"
+    },
+    {
+      "name": "Analog Line Output 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; balanced line level"
+    },
+    {
+      "name": "Analog Line Output 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3.81mm terminal block; balanced line level"
+    },
+    {
+      "name": "Ethernet A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000 Base-T, Composer host control / third-party IP control, auto-crossover"
+    },
+    {
+      "name": "Ethernet B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000 Base-T, Composer host control / third-party IP control, auto-crossover"
+    },
+    {
+      "name": "Dante C (Primary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000 Base-T; requires optional factory-installed Dante card for 128 (64x64) channel redundant Dante"
+    },
+    {
+      "name": "Dante D (Secondary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000 Base-T; requires optional factory-installed Dante card for 128 (64x64) channel redundant Dante"
+    },
+    {
+      "name": "ARC",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary port distributing 24VDC power and RS-485 data to ARC wall panels (daisy-chain up to 4); standard CAT5/6 cable"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 2.0 host port for external flash drive, up to 8-channel .wav playback/record"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "High-retention Type B; USB 2.0 Audio Class 1.0 legacy, up to 8x8 line I/O with soft codecs"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Third-party accessory serial control, 57.6 kbaud default"
+    },
+    {
+      "name": "Logic Outputs",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4 logic outputs + 4 paired common ground pins on terminal block; open-drain, active low (0V), pulled high 5V when inactive"
+    },
+    {
+      "name": "External Control Inputs",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2 analog control inputs (usable as 2 potentiometer or 4 switch inputs), +3.3VDC reference, on terminal block"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power cable (IEC C14 inlet), 100-240VAC 50/60Hz, 60W max"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Extron",
+  "model": "USB Extender Plus T",
+  "category": "converter",
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/usb_extndr_plus_tr_6475-D21.pdf",
+  "confidence": "high",
+  "notes": "This is the Transmitter (T) unit of the USB Extender Plus T/R pair. Modeled per Extron's official spec sheet (6475-D21): Tx has 1 female USB Type B host port and 1 female RJ-45 (TIA 568B) link port to the paired Receiver, plus external 12VDC power (2-pole, 3.5mm captive screw connector fed by an included \"Everlast\" 12VDC/0.5A/6W power supply brick) — mapped to euroblock-dc as the closest connector id (not a barrel jack). The companion Receiver (USB Extender Plus R, not modeled here) instead has 4 female USB 2.0 Type-A device ports (500mA each) + 1 RJ-45 + its own 12VDC/1.5A/18W external power supply on the same captive-screw connector type. RJ-45 link is proprietary Extron TP signaling for USB extension (not switched Ethernet data), so no bandwidth grade applies; USB Type B port also carries no stated USB generation-speed grade beyond \"up to 480 Mbps / USB 2.0 class\" (device supports USB 3.0 host/device electrically but only at USB 2.0 480 Mbps data rate), so grade is omitted per instructions (no official usb-2.0/usb-5g etc. version stated as a formal spec field — Extron's own spec table lists it under \"USB data rates\" as low/full/high speed rather than a USB-IF generation grade). Enclosure: 1U-height, quarter-rack-width metal chassis (1.0 x 4.3 x 6.0 in) — not a full rack unit, so rackUnits omitted. Also available in AAP and Decorator-style (wall plate) enclosures (not covered here).",
+  "ports": [
+    {
+      "name": "USB (Host)",
+      "direction": "input",
+      "connector": "usb-b"
+    },
+    {
+      "name": "Link Out",
+      "direction": "output",
+      "connector": "rj45"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "euroblock-dc"
+    }
+  ]
+}

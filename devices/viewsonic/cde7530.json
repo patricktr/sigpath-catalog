@@ -1,0 +1,80 @@
+{
+  "manufacturer": "ViewSonic",
+  "model": "CDE7530",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.viewsonic.com/media/wysiwyg/press-room/Datasheet-CDE7530.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: ViewSonic's official datasheet PDF (Datasheet-CDE7530.pdf) and product page viewsonic.com/us/cde7530.html, cross-checked against manuals.viewsonic.com/CDE7530_Specifications. This is a 75\" 4K all-in-one commercial/interactive-style presentation display (Android 11 SoC embedded media player), not a rack-mount device, so rackUnits is omitted. Two internal expansion slots exist but were omitted from the port list since they are not user-facing signal/power connectors in the given taxonomy: a WiFi/Bluetooth module slot (optional VB-WIFI-001) and an Intel OPS Slot In (80-pin) for a slot-in PC module. The USB Type-C port's DisplayPort alt-mode, 65W Power Delivery, and 100M Ethernet-over-C capabilities are documented on ViewSonic's product page but not spelled out in the formal datasheet PDF, so those capabilities are noted but no bandwidth grade was assigned to avoid an unconfirmed claim. HDMI In is confirmed as HDMI 2.1 with HDCP 2.2 (3 ports); HDMI Out is confirmed as HDMI 2.0 (1 port) and also functions as ARC per the \"Audio-out (HDMI ARC)\" datasheet line item (kept as a note on the same physical HDMI Out port rather than a separate port). Ethernet is confirmed 10/100/1000 (eth-1g). AC power connector type (IEC C14 vs other) is inferred/medium-confidence since ViewSonic's manual only says \"AC IN socket\" without naming the connector standard.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "HDCP 2.2"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "HDCP 2.2"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "HDCP 2.2"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Also carries ARC (listed separately by ViewSonic as Audio-out HDMI ARC)"
+    },
+    {
+      "name": "SPDIF Audio Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB Type C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Supports Smart USB, DP1.2 alt mode, PD 65W, USB2.0 data, and 100M Ethernet passthrough per ViewSonic product page; not itemized with a USB speed grade in the official datasheet, so no grade set"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Ethernet LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel AC IN socket, 100-240 VAC 50/60Hz; detachable power cable ships in box. Exact IEC variant (e.g. C14) not explicitly named in ViewSonic documentation but is standard for this product class/power draw (415W max) - inferred."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "manufacturer": "Epiphan Video",
+  "model": "Pearl Mini",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.epiphan.com/products/pearl-mini/tech-specs/",
+  "confidence": "high",
+  "notes": "Sourced from Epiphan's own tech-specs pages (marketing site and user guide), which agree. Video Pearl Mini is a desktop unit (no rack ears standard), hence rackUnits omitted. HDMI in/out are HDMI 1.4a rated (hdmi-1.4). SDI input is 3G-SDI (sdi-3g). Ethernet RJ-45 is 10/100/1000BASE-T (eth-1g); this single port carries network video I/O (RTSP/SRT/NDI|HX in, H.264 streaming out) in addition to control/management, so it is modeled as one bidirectional network port rather than separate video-only ports. USB-A ports are rated USB 3.0 (usb-5g): one front-panel (general host, e.g. for USB drives) and two rear-panel (UVC/UAC — accept USB webcams/mics as capture inputs, hence \"bidirectional\" direction fits their host role, though signal-flow-wise they primarily function as inputs when used with a UVC camera or UAC mic). Audio combo jacks are XLR3 with TRS-6.35 accepted (combo jack). Power is an external AC/DC adapter outputting 12VDC 5A (60W or 84W depending on adapter variant); connector on the unit is a barrel-style DC input, modeled as dc-barrel - exact barrel size not stated by Epiphan. No separate SDI audio-only ports are broken out since SDI/HDMI/USB carry embedded audio through the same physical connector already listed under video.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G-SDI input with embedded audio"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI input with embedded audio"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI input with embedded audio"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Monitors any input or the switched program; carries embedded audio"
+    },
+    {
+      "name": "USB 3.0 (rear, UVC/UAC) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear-panel host port; accepts UVC webcams / UAC mics as capture sources"
+    },
+    {
+      "name": "USB 3.0 (rear, UVC/UAC) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear-panel host port; accepts UVC webcams / UAC mics as capture sources"
+    },
+    {
+      "name": "USB 3.0 (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB host port, 0.9A"
+    },
+    {
+      "name": "LAN (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T; carries RTSP/SRT/NDI|HX/browser video inputs, H.264 streaming outputs, and device control/management"
+    },
+    {
+      "name": "Mic/Line In 1 (XLR/TRS combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Mic level or balanced/unbalanced pro line level"
+    },
+    {
+      "name": "Mic/Line In 2 (XLR/TRS combo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Mic level or balanced/unbalanced pro line level"
+    },
+    {
+      "name": "RCA Audio In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Consumer line level, -10 dBV"
+    },
+    {
+      "name": "RCA Audio In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Consumer line level, -10 dBV"
+    },
+    {
+      "name": "Mic In (3.5mm, rear)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Rear-panel stereo mini jack for electret microphones"
+    },
+    {
+      "name": "Headphone Out (3.5mm, front)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel stereo headphone jack with on-screen VU metering"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External AC/DC adapter; 12VDC output, 60W or 84W depending on adapter, 90-240VAC mains input on the brick side"
+    }
+  ]
+}

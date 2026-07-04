@@ -1,0 +1,101 @@
+{
+  "manufacturer": "Philips",
+  "model": "55BDL4550D",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.documents.philips.com/assets/20230529/9ba37d3ebc0047fca008b011009c70e0.pdf",
+  "confidence": "high",
+  "notes": "55-inch 4K UHD (3840x2160) Android-powered commercial signage display, 500 cd/m², part of Philips D-Line series (43/50/55BDL4550D share the same chassis and I/O panel). Ports and labels confirmed against both the official Philips/PPDS spec sheet (documents.philips.com, issue date 2024-03-24, EAN 87 12581 76925 3) and the full user manual (documents.philips.com, section 2.2 Input/Output Terminals) for 43BDL4550D_50BDL4550D_55BDL4550D. RS232 IN/OUT are 2.5mm sub-mini jacks (not DE-9), per the spec sheet's explicit '(in/out) 2.5mm jack' notation and manual panel diagram — no grade applies. IR IN/OUT are 3.5mm jacks used for IR pass-through/loop-through; connecting IR IN disables the built-in remote sensor. PC LINE IN is a 3.5mm analog audio input paired with the VGA/DVI-I input path; AUDIO OUT is a 3.5mm analog line output. Video input grades: HDMI1/HDMI2 confirmed HDMI 2.0 by manufacturer spec; DisplayPort IN/OUT confirmed DisplayPort 1.2. DVI-I IN has no bandwidth grade in the connector-grade scale (DVI is not gradeable per the given schema) so grade is omitted. USB 2.0 x2 ports are host/service ports for media playback (USB flash drives), not general bidirectional data ports in the AV-signal sense, but per instructions USB ports are marked bidirectional with usb-2.0 grade. A Micro SD card slot exists on the panel but has no corresponding connector id in the allowed list, so it was omitted (not a standard AV physical port type covered by the schema). Power: display uses a detachable IEC AC inlet (mains power 100-240 VAC, \"AC Power Cord\" included accessory, cord \"varies depending on destination\" per manual) — mapped to the closest listed connector, iec (C13/C14 family); exact IEC sub-type (C13 vs. a locking variant) not explicitly stated in the documentation. Desktop/wall-mount display — not rack-mountable, so rackUnits is omitted. No RS422/RS485/Ethernet-based control beyond the single RJ45 (LAN control, not bandwidth-graded — used for CMND management/network control, not AV signal, so no eth grade assigned per spec sheet which lists it only as \"RJ45\" external control with no speed given).",
+  "ports": [
+    {
+      "name": "HDMI1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI-I IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "PC LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 2.0 PORT (15)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 PORT (16)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "RJ-45",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS232 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm sub-mini jack per manufacturer spec (closest listed connector id used); RS232 loop-through/daisy-chain input, not audio"
+    },
+    {
+      "name": "RS232 OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "2.5mm sub-mini jack per manufacturer spec (closest listed connector id used); RS232 loop-through/daisy-chain output, not audio"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC mains inlet; exact C13/C14 sub-type not stated in documentation"
+    }
+  ]
+}

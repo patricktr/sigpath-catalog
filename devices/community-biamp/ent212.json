@@ -1,0 +1,22 @@
+{
+  "manufacturer": "Community (Biamp)",
+  "model": "ENT212",
+  "category": "audio",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_desono_ent212.pdf",
+  "confidence": "high",
+  "notes": "Community is now a Biamp brand; current official datasheet labels this the \"Desono ENT212\" (Desono E Series), though it is widely sold and listed by retailers as \"Community ENT212.\" Passive column line-array loudspeaker — no AC power input; powered entirely via external amplifier through the two speaker-level input connectors on the recessed input panel. The NL4-type connector is a 4-pole Neutrik Speakon (mapped to \"speakon\"). The \"8-position terminal strip\" is a barrier/terminal strip, not a true Euroblock, but \"euroblock\" is the closest available connector id in the allowed list — accepts either low-impedance (8ohm) or 70V/100V constant-voltage wiring via a jumper selection, so both signal paths share the same physical terminals. No HDMI/SDI/network/etc. ports exist on this device, and no bandwidth grade applies to any port (analog loudspeaker-level audio, ungraded). Not rack-mountable (column speaker with included pan-tilt bracket).",
+  "ports": [
+    {
+      "name": "NL4 Input",
+      "direction": "input",
+      "connector": "speakon",
+      "note": "4-pole Speakon (NL4-type) connector for low-impedance (8ohm) passive operation"
+    },
+    {
+      "name": "Terminal Strip Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8-position barrier/terminal strip; selectable for low-impedance (8ohm) or 70V/100V constant-voltage operation via internal jumper"
+    }
+  ]
+}

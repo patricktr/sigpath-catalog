@@ -1,0 +1,112 @@
+{
+  "manufacturer": "FOR-A",
+  "model": "HVS-390HS",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.for-a.com/download_file.php?id=26458&product_id=28022",
+  "confidence": "high",
+  "notes": "Specs taken from FOR-A's official datasheet (HVS-390HS_En_160906.pdf) rear-panel diagram and specification table for the HVS-390HS mainframe (3U, 430x450x132mm). This is a modular production switcher: base I/O is 16 SDI inputs and 9 outputs (8 SDI + 1 HDMI), expandable via optional cards (HVS-30HSDI/HSAI/PCIN inputs, HVS-30HSDO/HSAO/PCO outputs) up to 24 inputs / 13 outputs — those option-slot cards are omitted here since they are not part of the standard configuration. SDI grade is listed as HD-SDI 1.5Gbps or SD-SDI 270Mbps (no 3G/6G/12G support), mapped to sdi-hd. HDMI AUX output is explicitly HDCP- and audio-incompatible (video only); no HDMI version is stated so grade is omitted. The rear panel shows two separate AC100-240V 50/60Hz IN inlets (POWER1/POWER2) for the optional redundant PSU configuration (HVS-39PSM) — modeled as two \"iec\" power ports (exact IEC sub-type, e.g. C13/C14, not stated in the datasheet, but consistent with the included AC cord accessory). RS-422 (x6) is used for VTR/VDCP and router/mixer control (ESAM II); EDITOR port is a dedicated 9-pin D-sub for editor interface. ARCNET port (BNC loop-through) is for connecting external AUX control panels, not a general-purpose network connector, so it is tagged as bnc/other rather than rj45. GPI IN and GPI/TALLY OUT are multi-pin D-sub connectors carrying multiple logical GPI/tally lines (10 in / 20 out) on single physical connectors. Control surfaces (HVS-391OU, HVS-392OU, HVS-392WOU, HVS-392ROU) are separate accessory panels connected via BNC cable to a \"TO OU\" port on the mainframe and are not included in this port list, which covers only the HVS-390HS mainframe itself.",
+  "ports": [
+    {
+      "name": "SDI Input 1-16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "16x 75Ω BNC, HD-SDI 1.5Gbps or SD-SDI 270Mbps, individually switchable frame synchronizer on each input"
+    },
+    {
+      "name": "SDI Output (PGM)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "2x 75Ω BNC program outputs, part of standard 8x SDI output group"
+    },
+    {
+      "name": "SDI Output (AUX)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "6x 75Ω BNC AUX outputs, part of standard 8x SDI output group; crossfade switching available on each AUX output"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "1x HDMI AUX output; HDCP and embedded audio not supported"
+    },
+    {
+      "name": "REF IN (Genlock)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1x 75Ω BNC, loop-through; accepts Black Burst (NTSC 0.429Vp-p/PAL 0.45Vp-p) or Tri-level Sync (0.6Vp-p); terminate with 75Ω if unused"
+    },
+    {
+      "name": "REF OUT (Genlock)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "1x 75Ω BNC; outputs Black Burst or Tri-level Sync matching system format"
+    },
+    {
+      "name": "EDITOR",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub female x1 (inch screw); editor interface control port"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "9-pin D-sub female x6 (inch screw); for external device control (audio mixers, routers, VTR/VDCP units via ESAM II/VDCP protocols)"
+    },
+    {
+      "name": "GPI IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "15-pin D-sub female x1 (inch screw), carries 10 discrete GPI input lines on one connector; closest available connector id used, actual connector is a 15-pin D-sub"
+    },
+    {
+      "name": "GPI/TALLY OUT",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "25-pin D-sub female x1 (inch screw), carries 20 discrete GPI/tally output lines on one connector; closest available connector id used, actual connector is a 25-pin D-sub"
+    },
+    {
+      "name": "ARCNET",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "75Ω BNC x1, loop-through; used to connect external AUX control panels (Arcnet type); terminate with 75Ω if unused"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ-45 x1, 100BASE-TX/1000BASE-T; used for Web browser control, FTP access for stills/clips, Ethernet-type AUX panels"
+    },
+    {
+      "name": "TO OU",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Connector for control panel (HVS-391OU/392OU/392WOU/392ROU) connection via up to 100m BNC cable; shown on rear panel between LAN and SDI input block"
+    },
+    {
+      "name": "AC100-240V IN (POWER1)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Primary AC power inlet, 100-240V AC ±10% 50/60Hz; standard AC cord included; exact IEC connector sub-type not specified in datasheet"
+    },
+    {
+      "name": "AC100-240V IN (POWER2)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Secondary AC power inlet for optional redundant power supply (HVS-39PSM), hot-swappable from front of main unit; same rating as POWER1"
+    }
+  ]
+}

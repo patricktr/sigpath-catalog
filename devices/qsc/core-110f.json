@@ -224,6 +224,12 @@
       "note": "2-pin 5mm euroblock; 12VDC 10A external/auxiliary power input"
     },
     {
+      "name": "12VDC Out",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "10-position euroblock (GPIO block pins 1 & 11); 12VDC, 0.2A max for powering small peripherals; present on original Core 110f (v1) only — removed in v2 revision"
+    },
+    {
       "name": "AC In",
       "direction": "input",
       "connector": "iec",

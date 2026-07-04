@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Ubiquiti",
+  "model": "UniFi Switch USW-24-PoE",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://techspecs.ui.com/unifi/switching/usw-24-poe?subcategory=all-switching",
+  "confidence": "high",
+  "notes": "Port list is representative: the switch has 24 total RJ45 ports (16 support 802.3at PoE+, max 32W per PoE+ port, remaining ports support up to 15.4W PoE on some units; total PoE power budget 95W) plus 2x 1G SFP uplink ports, all 1G/100M/10M capable. Only one representative RJ45 port of each type (PoE-capable vs data-only) and both SFP ports are listed to avoid 26 duplicate entries; in practice all 24 RJ45 ports are physically identical in connector type (rj45, eth-1g) and only differ in PoE capability, which is a power spec rather than a signal-connector spec. No console/USB port exists on this model. Power inlet confirmed as standard IEC (C14) inlet based on official spec's AC voltage/wattage figures and third-party accessory listings (C13 power cords sold for this switch); Ubiquiti's tech spec page did not show a photo/diagram explicitly labeling the inlet as C14 vs C7, but the 120W draw rating is consistent with a full IEC C13/C14 pairing rather than a figure-8 low-power inlet. Model has had two hardware \"Gen1/Gen2\" revisions with a 1.3\" touchscreen display added in later units; port counts/connectors are unchanged across revisions.",
+  "ports": [
+    {
+      "name": "Port 1 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "One of 16 802.3at PoE+ capable RJ45 ports, 1G/100M/10M"
+    },
+    {
+      "name": "Port 17 (Data only)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "One of 8 non-PoE RJ45 ports, 1G/100M/10M"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G SFP uplink port"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G SFP uplink port"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 AC inlet, 100-240V AC 50/60Hz, internal AC/DC power supply, max 120W consumption including PoE output"
+    }
+  ]
+}

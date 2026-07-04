@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Denon Professional",
+  "model": "DN-300Z",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.denonpro.com/products/dn-300z.html",
+  "confidence": "high",
+  "notes": "Manufacturer product page (denonpro.com) confirms: \"The 300Z features both RCA audio outputs and balanced XLR outputs\" with technical specs \"Balanced XLR\" Output Level +8 dBu and \"Analog RCA terminals\" 2 Vrms at 10kΩ. Cross-verified against the official Denon Professional DN-300Z User Guide (rear panel diagram, item-by-item connector list) mirrored by authorized UK distributor Valcom (valcom.co.uk), which explicitly labels the rear panel: Tuner Outputs (unbalanced RCA) - carries only the FM/AM tuner signal; CD/USB/SD/AUX/BT Outputs (unbalanced RCA); CD/USB/SD/AUX/BT Outputs (balanced XLR) - explicitly analog, described as sending \"audio signals from a CD, USB device...SD card, device connected to the Aux In, and connected Bluetooth device\" (i.e. NOT an AES/EBU digital output). The manufacturer's own official spec-sheet PDF (denonpro.com, mirrored at cdn-docs.av-iq.com) describes an OLDER/regional variant with RCA-only output (\"Outputs consist of unbalanced RCA outputs\") and no XLR - this appears to correspond to a discontinued \"(Unbalanced)\" US SKU also sold by B&H alongside a separate balanced \"DN-300ZB\" SKU. The current global denonpro.com product page and current user guide (used for this record) show combined RCA+XLR output, matching how the unit is currently listed by most retailers (e.g. Canford: \"balanced XLR/unbal RCA out\"). No coaxial/optical/AES digital output exists on this unit - some third-party summaries incorrectly mention \"SPDIF,\" but this is not present on the manufacturer's actual page or user guide and could not be confirmed anywhere authoritative; treat as unconfirmed/likely erroneous. Omitted from port list: SD/SDHC card slot (front panel) - no connector ID in the allowed list fits a card-slot; FM antenna terminal, AM loop antenna terminals, and Bluetooth antenna terminal (rear panel) - these are simple screw/spring wire terminals for included antennas, not standard connectors in the provided list (closest analogues like bnc/f-type did not match the actual terminal style shown in the rear-panel diagram, so they were omitted rather than mis-mapped). No connector on this device carries a bandwidth grade (all audio connectors: RCA, XLR analog, TRS, USB-A for mass storage only) so no grade fields were set. Category/type set to \"source\"/\"Media player\" (closest fit to \"Media source\"/\"Media player\" naming); rackUnits=1 (1RU chassis, though it also ships with removable rack ears for tabletop use).",
+  "ports": [
+    {
+      "name": "AUX IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS aux input, front panel; input impedance >10kΩ, max input level 1 Vrms"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel; mass-storage class USB device, up to 2TB"
+    },
+    {
+      "name": "Tuner Outputs (unbalanced RCA, L/R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Dedicated stereo RCA output carrying the AM/FM tuner signal only, for multi-room/zoned distribution; 2 Vrms at 10kΩ load"
+    },
+    {
+      "name": "CD/USB/SD/AUX/BT Outputs (unbalanced RCA, L/R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo RCA output carrying CD, USB, SD, Aux-In, and Bluetooth program material; 2 Vrms at 10kΩ load"
+    },
+    {
+      "name": "CD/USB/SD/AUX/BT Outputs (balanced XLR, L/R)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Stereo balanced XLR analog output carrying CD, USB, SD, Aux-In, and Bluetooth program material; +8 dBu output level (analog audio, not AES/EBU digital)"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power inlet; AC 120V 60Hz (US/Canada), AC 230V 50/60Hz (EU/UK/APAC), AC 100V 50/60Hz (Japan); 30W consumption"
+    }
+  ]
+}

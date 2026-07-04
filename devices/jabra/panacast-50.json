@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Jabra",
+  "model": "PanaCast 50",
+  "category": "other",
+  "type": "Camera",
+  "sourceUrl": "https://www.jabra.com/-/media/Images/Products/Jabra-Panacast-50/tech-specs/tech_specs_jabra_pana_cast_50_en-us.pdf",
+  "confidence": "high",
+  "notes": "This is the standalone/BYOD \"Jabra PanaCast 50\" panoramic 4K video bar (model VSM020, SKUs 8200-232 Black / 8201-232 Grey) — distinct from the \"PanaCast 50 Video Bar System (VBS)\" and \"PanaCast 50 Room System,\" which are separate bundled products with additional HDMI in/out ports on a companion compute unit, not on the PanaCast 50 camera bar itself. Physical ports confirmed from Jabra's official User Manual port diagram (labels: AC power, AUXIN, ETHERNET, USB-C, plus non-connector Reset and Bluetooth-pair buttons) and official Tech Sheets (2021 RevB and 2024/2025 revision). USB-A appears in the tech-sheet \"Connectivity\" line only because Jabra bundles a USB-C-to-USB-A cable for host-side connection to computers without USB-C — the device itself has a single USB-C port, not a separate USB-A port, so USB-A was not added as a distinct physical port. Ethernet port speed (10/100/1000) is not explicitly stated in the standalone PanaCast 50 tech sheets (unlike the related VBS spec sheet which does state 10/100/1000), so the eth grade was omitted rather than assumed. Power is an external brick (barrel connector at the device) — exact DC voltage/current of the barrel jack is not published by Jabra; represented as dc-barrel per the port-list guidance for \"external DC adapter.\" Aux is labeled \"AUXIN\" in the device diagram but described as \"Aux-Out\" in the connectivity spec line in some tech-sheet revisions; functionally it is a 3.5mm analog jack used mainly for auxiliary audio, so direction is set to input per the physical silkscreen label (AUXIN) while noting the ambiguity.",
+  "ports": [
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Host connection to computer; supports USB 2.0 and USB 3.0 (SuperSpeed 5Gbps) per Jabra spec"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 for connection to Jabra Xpress and other management systems; link speed not stated in official PanaCast 50 spec sheets"
+    },
+    {
+      "name": "AUXIN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm auxiliary audio jack; labeled AUXIN on device diagram, referred to as \"Aux-Out\" in some tech-sheet connectivity lines"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC input from included external power supply/adapter (AC-to-DC brick); exact DC voltage/current not published"
+    }
+  ]
+}

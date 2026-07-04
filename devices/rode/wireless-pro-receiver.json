@@ -1,0 +1,22 @@
+{
+  "manufacturer": "RODE",
+  "model": "Wireless PRO Receiver",
+  "category": "audio",
+  "sourceUrl": "https://www.precision-camera.com/rode-wireless-pro-dual-channel-system/",
+  "confidence": "medium",
+  "notes": "The Wireless PRO is a 3-piece system: 2x bodypack transmitters (TX), 1x receiver (RX), and a Smart Charge Case (accessory, sold as part of the kit). This entry models the RECEIVER, the unit that interfaces with cameras/computers/phones in a signal chain. Receiver ports: 3.5mm TRRS analog output (unbalanced; per RODE's user guide it also doubles as a headphone output with its own gain control) and USB-C (functions simultaneously as digital audio interface, USB bus power, and charging input) - RODE advises against using both outputs at once (ground-loop risk) but both are physically present. USB-C grade omitted for the receiver's own port since RODE does not publish a USB speed class for it (it operates as a USB Audio Class device, not a rated high-speed data port). Each TRANSMITTER (not separately modeled here) has: 1x locking 3.5mm TRS mic/lav input and 1x USB-C charge-only port (no audio/data, so excluded from grading rules as charge-only). The SMART CHARGE CASE (not separately modeled) has its own USB-C port used for charging plus SuperSpeed data offload (RODE ships an SC34 cable rated to 5Gbps for exporting 32-bit float on-board recordings from docked units) and a USB-C power input; if modeled separately its data port would take grade usb-5g. No AC mains inlet exists anywhere in the system - all charging is via USB-C bus power/PD, so no nema-5-15/iec port applies. Desktop/handheld unit, not rack-mountable (rackUnits omitted). Confidence is medium because RODE's own consolidated datasheet page (help.rode.com) returned 403 Forbidden; specs were assembled from RODE's official product and user-guide pages plus a retailer spec table (Precision Camera) that mirrors RODE's datasheet format and is the most complete/consistent source found.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm (1/8-inch) TRRS unbalanced analog output; also usable as a headphone/monitor output with independent gain control."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Functions as digital audio interface (stereo output), USB bus power input, and charging port simultaneously. No published USB speed class for this audio-interface port."
+    }
+  ]
+}

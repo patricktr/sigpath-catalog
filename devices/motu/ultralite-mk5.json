@@ -1,0 +1,19 @@
+{
+  "manufacturer": "MOTU",
+  "model": "UltraLite-mk5",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://cdn-data.motu.com/manuals/usb-c-audio/UltraLite-mk5_User_Guide.pdf",
+  "confidence": "medium",
+  "notes": "test",
+  "ports": [
+    {
+      "name": "Mic/Line/Inst 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    }
+  ]
+}

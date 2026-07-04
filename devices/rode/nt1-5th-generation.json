@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Rode",
+  "model": "NT1 5th Generation",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://edge.rode.com/pdf/page/2125/modules/7410/NT1_5TH_GEN_ds_V08.pdf",
+  "confidence": "high",
+  "notes": "Official Rode datasheet (NT1_5TH_GEN_ds_V08.pdf) confirms: Dual Connect design with mutually exclusive XLR (analog, P48 phantom, 3-pin XLR output) and USB-C (digital, 5V bus power, 24/32-bit float, 48/96/192kHz) connections — only one can be used at a time, not both simultaneously. No headphone output on the device itself (confirmed via Rode user guide FAQ). Cardioid polar pattern, side-address, 1-inch capsule. Desktop studio microphone, not rack-mountable, so rackUnits omitted. USB-C grade set to usb-2.0 per Rode's own \"Hi-speed USB 2.0\" spec despite the high sample-rate audio capability. Both ports modeled as \"output\" direction reflecting audio signal flow from mic to downstream equipment/computer; note the USB-C port is technically a USB peripheral (device) port, not a host port, so it does not carry the bidirectional host-port convention used for computer/hub USB-A/USB-C ports.",
+  "ports": [
+    {
+      "name": "XLR Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog output, 3-pin XLR, requires P48 (48V) phantom power supplied via the XLR cable. Cannot be used simultaneously with the USB-C output."
+    },
+    {
+      "name": "USB-C",
+      "direction": "output",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Digital output carrying 24-bit/32-bit float audio at 48/96/192kHz via a built-in audio interface (Revolution Preamp + A/D conversion); bus-powered at 5V via USB. Datasheet specifies 'Hi-speed USB 2.0' connection. Cannot be used simultaneously with the XLR output."
+    }
+  ]
+}

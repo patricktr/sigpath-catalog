@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Teradek",
+  "model": "VidiU X",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://d1xl95ab8ijfds.cloudfront.net/Public/VidiuX/Docs/Teradek_VidiU_X_Reference_Guide_v1_0521.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Teradek's official Vidiu X Reference Guide (v1, 2021), a PDF hosted on Teradek's CDN and linked from the archived product page at teradek.com/pages/vidiu-x (product is now discontinued). Physical Properties diagram (p.4) and Technical Specifications tables (p.20-21) were used directly. Not modeled: SD card slot (full-size SD/SDXC, storage only — not a signal/power connector in this taxonomy) and internal Wi-Fi 6 antennas (no external RF connector). HDMI version/grade omitted because Teradek does not publish an HDMI spec revision (1.4/2.0) for the In/Out ports — supported resolutions top out at 1080p60/720p60, well within HDMI 1.4 bandwidth, but this is inferred, not stated, so grade was left unset per instructions. The Mic/Line input's physical connector is a 3.5mm stereo mini-jack based on the reference guide's icon and standard camera-encoder convention; the manual does not spell out \"3.5mm\" in text. Power is delivered exclusively via USB-C (no captive AC cord or IEC inlet), consistent with \"Powered USB-C host port\" in the manual's Power table.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "1x HDMI Type A receptacle; embedded 2-channel audio. HDMI version not stated by manufacturer (max output 1080p60), so no grade set."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "1x HDMI Type A receptacle (loop-through of input source). HDMI version not stated by manufacturer, so no grade set."
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Labeled 'Mic/Line stereo input' in manual; 2-channel analog audio input, switchable mic/line level."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T"
+    },
+    {
+      "name": "USB Modem Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Powered USB 2.0 Type-A host port for 3G/4G/5G USB cellular modems; also used for USB storage recording."
+    },
+    {
+      "name": "USB-C Power Input",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Sole power input for the device ('Powered USB-C host port'); nominal 7W, max 12W. No AC inlet or DC barrel on the unit; powered via included USB-C PD-style adapter."
+    }
+  ]
+}

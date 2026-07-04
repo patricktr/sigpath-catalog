@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Shure",
+  "model": "P300 (IntelliMix Audio Conferencing Processor)",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.shure.com/en-US/docs/guide/P300",
+  "confidence": "high",
+  "notes": "Officially named \"IntelliMix P300 Audio Conferencing Processor\" (not a \"Personal Monitor Mixer\" — that naming does not correspond to a real Shure product). Sourced directly from Shure's official P300 User Guide (v7.1, 2020-I): https://www.shure.com/en-US/docs/guide/P300 (PDF mirror used for extraction: https://www.avc-group.com/assets/products/Shure/pdfs/shure-um-intellimix_p300.pdf). Analog audio in/out are each physically presented as a single 3-pin captive block connector pair per channel (2 input channels, 2 output channels) — modeled here as 2 separate input ports and 2 separate output ports, each euroblock, balanced. Mobile 3.5mm TRRS jack is functionally bidirectional (stereo input on tip/ring1, mono send-to-phone on sleeve) but is a combo in/out signal, not a host/device link, so it is modeled with direction \"bidirectional\" and connector trs-3.5 (closest match; device is a 4-conductor TRRS, not plain TRS — \"accepts\" left empty as TRRS is not in the provided connector list). USB port is USB 2.0 Type-B, bidirectional (2 in / 2 out channels, summed mono), carrying audio only — no defined USB grade beyond 2.0 in spec sheet, so grade set to usb-2.0. Dante/RJ45 port supports 10 Dante inputs and 8 Dante outputs logically over the single physical RJ45 (48kHz/24-bit, AES67 compatible) plus PoE+ (802.3at Type 2, Class 4) — grade left as eth-1g since Dante over standard RJ45 typically runs at Gigabit and the spec doesn't state a different Ethernet PHY speed (inferred, not explicitly stated as \"1000BASE-T\" in the guide, hence overall confidence kept high but this specific grade is a reasonable inference). Chassis ground screw omitted (not a cabled port). Device is a compact desktop/under-table unit, not natively 1U rack — mounts via included single-unit under-table tray or optional CRT1 19\" rack tray (holds 2 units); rackUnits omitted accordingly. Dimensions: 4 x 21 x 22.6 cm (1.6 x 8.3 x 8.9 in), weight 1710 g.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin block connector, active balanced, analog audio input (Line +4dBu / Aux -10dBV selectable)"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin block connector, active balanced, analog audio input (Line +4dBu / Aux -10dBV selectable)"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin block connector, impedance balanced, analog audio output (Line/Aux/Mic level selectable)"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin block connector, impedance balanced, analog audio output (Line/Aux/Mic level selectable)"
+    },
+    {
+      "name": "Mobile",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "TRRS 3.5mm (1/8\") combo jack: stereo input on tip/ring1, mono send-to-phone on sleeve; closest listed connector is trs-3.5 (actual jack is 4-conductor TRRS)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type B; single port carries 2 input and 2 output audio channels (summed mono)"
+    },
+    {
+      "name": "Dante (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante digital audio network port: 10 Dante inputs / 8 Dante outputs over this single RJ45, 48kHz/24-bit; also delivers Power over Ethernet Plus (802.3at Type 2, Class 4, 17.5W max) to power the unit — no separate power inlet"
+    }
+  ]
+}

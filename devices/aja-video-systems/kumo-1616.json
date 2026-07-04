@@ -1,0 +1,63 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "KUMO 1616",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.aja.com/products/kumo-1616/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Source: official AJA spec sheet PDF (aja.com/products/kumo-1616/spec-sheet.pdf), dated 07/3/2026, fetched directly and OCR'd. All 16 SDI inputs and 16 SDI outputs are individually labeled 1-16 on the rear panel but modeled as two grouped ports for brevity; connector is BNC, grade sdi-3g since the unit is rated for 270Mbps/1.5Gbps/3Gbps SDI (SD/HD/3G) per SMPTE-259/292/424 (this is the standard KUMO 1616, distinct from the KUMO 1616-12G variant which supports higher grades). Reference input is 2x BNC, looping/non-terminating, accepts blackburst or tri-level sync — left ungraded since it's a sync reference, not a payload SDI signal. Power: the chassis itself is powered via a dual-redundant 4-pin Molex DC connector (10-14VDC regulated, 13W typical/21.6W max); an external AC-to-DC adapter (100-240VAC, 50/60Hz, universal input, 60W) is included and plugs into that Molex DC input — modeled here as a single dc-barrel-style DC power input since \"4-pin Molex DC\" is not in the allowed connector list and dc-barrel/xlr4-dc are the closest analogues; xlr4-dc was chosen as the better match for a locking multi-pin DC connector. A second, optional redundant AC adapter (KUMO-PWR) can be added to the second Molex input. USB port is physically Mini-USB (not in the connector list); mapped to usb-b as the closest available family, no grade set since it's used only for IP configuration (not a data-transfer-graded link). RS-422 uses a DB-9 (D-sub) female connector; mapped to rs422 connector id directly. Rack size 1RU, desktop/rack convertible but shipped as 1RU rackmount.",
+  "ports": [
+    {
+      "name": "SDI In 1-16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "16x BNC inputs, SMPTE-259/292/424, 270Mbps/1.5Gbps/3Gbps SDI"
+    },
+    {
+      "name": "SDI Out 1-16",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "16x BNC outputs, SMPTE-259/292/424, noninverting"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "2x BNC, looping/nonterminating, accepts blackburst or tri-level sync reference"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Ethernet, control panel connection and embedded web server"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Physically a Mini-USB port for IP configuration via AJA eMini-Setup; no data-rate grade applicable"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DB-9 female, basic Grass Valley Native Protocol support"
+    },
+    {
+      "name": "DC Power 1",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin Molex-style locking DC input, 10-14VDC regulated, part of redundant pair; fed by included AC adapter (100-240VAC 50/60Hz, 60W)"
+    },
+    {
+      "name": "DC Power 2",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Second redundant 4-pin DC input; optional AC adapter (KUMO-PWR) sold separately"
+    }
+  ]
+}

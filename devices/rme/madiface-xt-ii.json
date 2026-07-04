@@ -1,0 +1,132 @@
+{
+  "manufacturer": "RME",
+  "model": "MADIface XT II",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://rme-audio.de/downloads/madiface_xt2_e.pdf",
+  "confidence": "high",
+  "notes": "Desktop unit; no built-in rack ears (rackUnits omitted) — optional RM19X adapter mounts it in 1U of a 19\" rack. AES/EBU and MIDI I/O are delivered via a single D-Sub-9 \"MIDI-AES\" connector on the rear panel plus the included breakout cable (XLR for AES, 5-pin DIN for MIDI); listed here as their effective XLR/MIDI-DIN endpoints per RME's own spec table rather than the D-Sub itself, since D-Sub is not in the port list and the breakout provides the real end connectors. MADI optical ports use FDDI-duplex SC fiber connectors (62.5/125 and 50/125 multimode); mapped to the closest available id \"fiber-lc\" since SC is not in the connector list. MADI is a proprietary AES10 multichannel format, not SDI, so no bandwidth \"grade\" applies to the MADI BNC/optical ports (grade field correctly omitted). Power inlet is a locking-type DC barrel connector (proprietary lock collar) fed by an internal/external 100-240V AC switching supply (24W); mapped to dc-barrel, closest match, note the locking mechanism differs from a standard barrel jack. The \"REMOTE\" rear port (for the optional ARC USB remote, sold separately) is a USB-A-style host jack per product photos; mapped to usb-a bidirectional with no grade stated (ARC USB itself is USB 1.1, but the host jack spec is not stated by RME) — medium-confidence detail only, does not affect overall confidence since it is a minor/optional accessory port. Front-panel Mic/Line 1-2 are Neutrik combo jacks: primary XLR, accepts 6.3mm TRS. Headphone/Phones jack on front panel is a 6.3mm TRS jack wired unbalanced (physical connector is still TRS, so mapped to trs-6.35) and doubles as a second balanced-impedance line output per RME's manual (\"DA, Phones 3/4... As DA Line Out, but... Output: 6.3mm TRS jack, unbalanced\"). USB port is USB-B receptacle, USB 3.0 (5 Gbps) with automatic fallback to USB 2.0 (usb-2.0) — graded as usb-5g reflecting the primary/rated speed. All core specs (analog I/O, MADI, AES, word clock, MIDI, USB, power) were confirmed directly from RME's own official User's Guide PDF (Chapter 38 \"Technical Specifications\" and Chapter 5 \"Connectors\" with rear/front panel photos), the highest-authority source available.",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack, electronically balanced mic/line input with switchable phantom power"
+    },
+    {
+      "name": "Mic/Line 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack, electronically balanced mic/line input with switchable phantom power"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel stereo headphone output, unbalanced, doubles as line output"
+    },
+    {
+      "name": "Analog Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear panel balanced line output, switchable +24/+19/+13/+4 dBu"
+    },
+    {
+      "name": "Analog Out 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear panel balanced line output, switchable +24/+19/+13/+4 dBu"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Via MIDI-AES D-Sub breakout cable; transformer-balanced, galvanically isolated, AES3-1992, SPDIF compatible"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Via MIDI-AES D-Sub breakout cable; transformer-balanced, galvanically isolated, AES3-1992, SPDIF compatible"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Not terminated (4 kOhm), switchable 75 Ohm internal termination"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Max output voltage 5 Vpp, 22 Ohm output impedance"
+    },
+    {
+      "name": "MADI 3 (Coax) In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "MADI coaxial, 75 Ohm, AES10-1991; not a bandwidth-graded connector type (MADI, not SDI)"
+    },
+    {
+      "name": "MADI 3 (Coax) Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "MADI coaxial, 75 Ohm, AES10-1991; not a bandwidth-graded connector type (MADI, not SDI)"
+    },
+    {
+      "name": "MADI 1 In",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optical MADI via FDDI duplex SC connector (62.5/125 and 50/125 compatible); SC is the actual connector, mapped to closest listed id"
+    },
+    {
+      "name": "MADI 1 Out",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optical MADI via FDDI duplex SC connector (62.5/125 and 50/125 compatible); SC is the actual connector, mapped to closest listed id"
+    },
+    {
+      "name": "MADI 2 In",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Optical MADI via FDDI duplex SC connector (62.5/125 and 50/125 compatible); SC is the actual connector, mapped to closest listed id"
+    },
+    {
+      "name": "MADI 2 Out",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Optical MADI via FDDI duplex SC connector (62.5/125 and 50/125 compatible); SC is the actual connector, mapped to closest listed id"
+    },
+    {
+      "name": "MIDI I/O",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Via MIDI-AES D-Sub breakout cable, 5-pin DIN; plus 3 additional MIDI I/O channels embedded in MADI (not separate physical ports)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3.0 (5 Gbps), auto-falls back to USB 2.0 (usb-2.0) if USB 3 unavailable"
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for optional ARC USB remote control (sold separately); connector shape inferred from product photos, medium confidence"
+    },
+    {
+      "name": "12V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking-type DC power inlet; fed by included external switching power supply, 100-240V AC, 2A, 24W"
+    }
+  ]
+}

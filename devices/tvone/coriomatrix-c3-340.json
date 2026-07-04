@@ -1,0 +1,101 @@
+{
+  "manufacturer": "tvONE",
+  "model": "CORIOmatrix C3-340",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.egeratedocuments.com/markalar/tvone/Datasheet/C3-340.pdf",
+  "confidence": "medium",
+  "notes": "The C3-340 is a modular 16-slot matrix chassis (plus 3 slots reserved for future data modules) — actual populated I/O varies entirely by which cards a customer installs, so there is no single fixed port list. Ports below reflect the chassis's fixed/common connectors (control + power) plus the standard field-installable module types documented on tvONE's official Specification Sheet v6.0 (https://www.egeratedocuments.com/markalar/tvone/Datasheet/C3-340.pdf) and confirmed by the panel drawings therein: CM-DVIU-2IN (2x DVI-I in), CM-3GSDI-2IN (2x 3G/HD/SD-SDI in via BNC), CM-HDSDI-4IN (4x HD/SD-SDI in via BNC), CM-DVIU-XSC-2OUT (2x DVI-I scaling out), CM-3GSDI-XSC-2OUT (2x 3G/HD/SD-SDI scaling out via BNC), CM-HDSDI-XSC-4OUT (4x HD/SD-SDI scaling out via BNC), CM-HDBT-XSC-2OUT-1ETH (2x HDBaseT scaling out w/ Ethernet), and CM-AUD-8IN-8OUT (8x AES-3id in/out via a single HD-44 breakout connector, mapped here as one bidirectional euroblock-class port since HD-44 is not in the connector list). DVI-I is modeled as the closest listed connector 'dvi' — it is a \"Universal DVI\" jack that also carries HDMI (DVI-D pass-through) and analog RGBHV/YPbPr/composite/S-Video via passive breakout adapters; no fixed grade is stated for DVI-I so no HDMI/DP grade was assigned. SDI grade is stated generically as \"3G/HD/SD-SDI\" per BNC (SMPTE424M/292M/259M-C support), so sdi-3g (the highest supported tier) is used as the port grade. HDBaseT does not have a listed connector id in the allowed set; it is represented as rj45 (closest physical connector, carries HDMI+Ethernet) per the datasheet's \"HDBaseT ... via RJ45\" specification table. Control is RS-232 (D9 female) and IP (RJ45); the chassis also exposes a USB port (type shown on panel drawing, likely USB-B, used for local firmware/config — exact USB type not specified in datasheet text). Power: base unit is a single internal auto-sensing 110-240V supply with a standard IEC inlet; an optional second hot-swappable redundant PSU (CM-4RPS) adds a second IEC inlet, as shown in the panel drawings. Rack size confirmed as 4RU (178mm H) from official mechanical spec. Confidence set to medium because this is a modular product with no single canonical I/O configuration — the listed ports represent the documented base chassis + standard modules rather than one specific as-shipped unit.",
+  "ports": [
+    {
+      "name": "DVI-U Input",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Universal DVI-I input module (CM-DVIU-2IN, 2 per card); also carries HDMI (DVI-D) and via passive adapters: RGBHV, YPbPr, RGBS/RGsB, Y/C, composite video"
+    },
+    {
+      "name": "3G-SDI Input",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "CM-3GSDI-2IN, 2 inputs per card, supports SD/HD/3G-SDI (SMPTE259M-C/292M/424M)"
+    },
+    {
+      "name": "HD-SDI Input",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "CM-HDSDI-4IN, 4 inputs per card, HD/SD-SDI only (no 3G)"
+    },
+    {
+      "name": "DVI-U Scaled Output",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Universal DVI-I scaling output module (CM-DVIU-XSC-2OUT, 2 per card); also outputs HDMI (DVI-D) and via passive adapters analog RGBHV/RGBS/RGsB/YPbPr/Y-C/composite"
+    },
+    {
+      "name": "3G-SDI Scaled Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "CM-3GSDI-XSC-2OUT, 2 outputs per card, any source scaled/converted to SD/HD/3G-SDI"
+    },
+    {
+      "name": "HD-SDI Scaled Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "CM-HDSDI-XSC-4OUT, 4 outputs per card"
+    },
+    {
+      "name": "HDBaseT Output",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "CM-HDBT-XSC-2OUT-1ETH, 2 HDBaseT scaling outputs plus 1 pass-through Ethernet per card; carries HDMI-compatible video/audio + control over Cat cable, HDCP compliant"
+    },
+    {
+      "name": "DVI-U Monitoring Output",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "CM-DVIU-MON-2Out, dual monitoring outputs for signal verification (not a scaling output)"
+    },
+    {
+      "name": "AES Audio I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "CM-AUD-8IN-8OUT audio interface module: single HD-44 (D-sub) breakout connector carrying 8x AES-3id in + 8x AES-3id out, used with external A2-73xx breakout boxes for BNC/XLR/analog terminal-block audio. HD-44 connector type not in allowed list; euroblock chosen as nearest multi-pin breakout analog; physically it is a high-density D-sub, not euroblock."
+    },
+    {
+      "name": "RS-232/422",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D9 female control port, per controller card"
+    },
+    {
+      "name": "IP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Ethernet control/IP interface (RJ45) for WebUI/TCP-IP control; speed not stated, 100M assumed as typical for this control-plane NIC on a device of this era"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB port shown on rear panel drawing for local configuration/firmware; exact USB standard/type not specified in the datasheet text"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal auto-sensing 110-240V power supply, standard IEC C13/14 inlet with region-specific cord (US/UK/Euro/AU) included; 300W max fully populated"
+    },
+    {
+      "name": "AC In (Redundant)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second IEC inlet present only when optional CM-4RPS redundant hot-swappable power supply is installed, per panel drawings"
+    }
+  ]
+}

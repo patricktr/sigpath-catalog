@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TS-1070",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://docs.crestron.com/en-us/8555/Content/Topics/Specifications/Specifications-TS-1070.htm",
+  "confidence": "high",
+  "notes": "TS-1070 is a 10.1 in tabletop touch screen control panel powered exclusively via PoE+/802.3at Type 2 over its single RJ-45 port — there is no separate DC power jack or AC inlet. It has built-in speakers and microphone for intercom/voice, but these are not exposed as external audio connectors (no analog audio jacks on the unit). No HDMI, video, or other I/O is present. Not rack-mountable (rackUnits omitted; it's a tabletop/optionally wall- or table-swivel-mounted unit via the optional TS-770/1070-SMK bracket). Sources: Crestron official docs — Specifications-TS-1070.htm and Features-TS-1070.htm (docs.crestron.com), part of the TS-70 Series manual.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX with PoE+ power delivery (802.3at Type 2); provides both network and sole power source"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port for supported Crestron accessories"
+    }
+  ]
+}

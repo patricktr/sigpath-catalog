@@ -1,0 +1,90 @@
+{
+  "manufacturer": "BenQ",
+  "model": "ST7502S",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://media.bechtle.com/asrc/180712/1c4b3d4ee288fc9434f5175bf56070570/c3/-/b3d51750e24b4d459fd50f29aa68250c/benq-st7502s-display-data-sheet-1",
+  "confidence": "medium",
+  "notes": "75-inch 4K UHD (3840x2160) Android smart signage display; desktop/wall-mount (VESA 600x400) unit, not rack-mountable, so rackUnits omitted. Data pulled from BenQ's official datasheet PDF (dated 20.07.2022, distributed via BenQ Deutschland/Bechtle), cross-checked against BenQ AU/EU regional spec pages and an authorized reseller (Avendor) listing, all of which agree. Built-in 10W x2 loudspeakers are internal (not a physical port) and are omitted from the port list. RS232 and IR are each listed by BenQ as having both an input and a loop-through output; both directions are included as separate ports per the datasheet's \"Input Control\" and \"Output Control\" sections. Power inlet is a detachable IEC cord per BenQ's ST-series manual conventions (datasheet lists \"Power supply: Internal\" and includes a Power-Cable in the scope of supply; exact IEC sub-type (C13/C14) not stated on the datasheet itself, inferred from standard BenQ large-format display practice). No grade-eligible connector had its version omitted: HDMI ports are explicitly stated as HDMI 2.0; VGA, DVI, USB-A 2.0, RJ45 (10/100 = eth-100m), RS232, IR, and audio jacks are graded/labeled per the schema rules (Ethernet graded eth-100m since datasheet states 10/100 Mbps; USB-A graded usb-2.0 since explicitly stated as USB 2.0). DVI input's exact sub-type (DVI-D single-link vs dual-link) is not specified by BenQ; assumed DVI-D (typical for signage displays) and mapped to the closest schema id \"dvi\".",
+  "ports": [
+    {
+      "name": "HDMI 1/2/3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "3x HDMI 2.0 inputs (listed as one bank of 3 identical ports on the datasheet)"
+    },
+    {
+      "name": "DVI",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "1x DVI input; exact sub-type (single/dual-link) not specified by manufacturer"
+    },
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga",
+      "note": "1x analog VGA video input"
+    },
+    {
+      "name": "PC Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack analog audio input paired with VGA/DVI"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "2x USB-A 2.0 ports"
+    },
+    {
+      "name": "RS232 In",
+      "direction": "input",
+      "connector": "rs232"
+    },
+    {
+      "name": "RS232 Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Loop-through RS232 control output"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "IR Out",
+      "direction": "output",
+      "connector": "ir",
+      "note": "Loop-through IR output"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps Ethernet for Android SoC"
+    },
+    {
+      "name": "Micro SD",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Micro SD card reader slot; no exact schema id for SD card slots, mapped to closest small-form connector id as a placeholder — physically this is a card slot, not a USB connector"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack audio line output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply with detachable IEC power cord (100-240VAC 50/60Hz); exact IEC sub-type not stated on datasheet, inferred as C13/C14 per BenQ large-format display convention"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "manufacturer": "SMART Technologies",
+  "model": "SMART Board GX086-V3",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://downloads.smarttech.com/media/sitecore/en/support/product/sbfpd/gx/specs/specssbidgxv3.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer authoritative source: SMART Board GX (V3) series spec sheet (docs.smarttech.com/kb/171902), which covers the 65\"/75\"/86\" family; port configuration (front/rear I/O) is identical across all three sizes per the sheet's combined table. The 86\" model is sold as GX086-V3 (no embedded OS) or GX186-V3/order code (with embedded OS) - this entry covers physical I/O which is the same for both variants. RJ45 grade (eth-1g) inferred from \"1000BASE-T\" stated in the Connectivity section, not the I/O table itself. Power connector type (IEC) is inferred from \"country-specific power cable\" wording plus standard large-format-display practice; the spec sheet does not explicitly name the inlet connector. OPS PC accessory slot (rear) exists but is omitted as it is a computing module bay, not a signal/power connector in this schema. VESA mount is 800x600mm (M8); this is a desktop/wall-mount unit so rackUnits is omitted. USB Type-B ports are touch-interface pass-through links to a connected host PC (used for the interactive touch return channel), not general host ports; still connector-typed usb-b/bidirectional per schema convention.",
+  "ports": [
+    {
+      "name": "HDMI 1 (Front In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 1.4 and HDCP 2.2 support"
+    },
+    {
+      "name": "HDMI 2 (Rear In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 1.4 and HDCP 2.2 support"
+    },
+    {
+      "name": "HDMI 3 (Rear In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 1.4 and HDCP 2.2 support"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 1.4 and HDCP 2.2 support"
+    },
+    {
+      "name": "Display Port (Rear)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "VGA (Rear)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "USB Type-C (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "4K@60Hz DisplayPort Alt Mode, touch, digital audio, USB 3.2 Gen 1 (DFP) for peripherals, 15W power delivery"
+    },
+    {
+      "name": "USB Type-C (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "4K@60Hz DisplayPort Alt Mode, touch, digital audio, USB 2.0 Hi-Speed"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Type-A (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Type-A (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Type-A (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Type-A (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 Type-A (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 Type-B (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Touch pass-through connection to host PC"
+    },
+    {
+      "name": "USB 2.0 Type-B (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Touch pass-through connection to host PC"
+    },
+    {
+      "name": "Stereo 3.5mm In (Rear)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Stereo 3.5mm Out (Rear)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S/PDIF Optical Out (Fixed)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "RS-232 (DB-9)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "RJ45 LAN In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RJ45 LAN Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100V-240V AC, 50/60Hz; country-specific detachable power cable included, consistent with IEC C13/C14 inlet"
+    }
+  ]
+}

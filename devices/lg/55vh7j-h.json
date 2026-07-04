@@ -1,0 +1,89 @@
+{
+  "manufacturer": "LG",
+  "model": "55VH7J-H",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.lg.com/us/business/download/resources/CT00001837/LG_SPEC-SHEET_55VSH7J-H_082235_LR%5B20221028_092309%5D.pdf",
+  "confidence": "medium",
+  "notes": "Official LG US spec sheet (labeled '55VSH7J-H' on the PDF itself, which is the same product/SKU as '55VH7J-H' used on LG's product URLs — LG uses both forms interchangeably for this display; connectivity, dimensions, and electrical specs are identical). Connectivity 1-12 taken directly from LG's official rear-panel connectivity diagram and spec table. Not rack-mountable (wall/video-wall mounted display, VESA 600x400). No built-in speaker. RJ45 LAN speed not explicitly stated (only \"RJ45(LAN): Yes\"); eth-1g assumed as standard for this display class but not confirmed in spec. HDMI version not explicitly numbered; HDCP 2.2 support implies HDMI 2.0-class input, so hdmi-2.0 is inferred, not directly confirmed (panel is FHD only). DP version not stated numerically; dp-1.2 inferred, not confirmed. No dedicated AC-in connector is shown among the 12 numbered diagram ports — power entry is described only as \"Power Supply: 100-240 Vac, 50/60Hz, Built-In Power\" with a \"Power Cord\" listed as an included accessory, so the exact physical inlet type (captive cord vs. IEC C13/14) could not be visually confirmed; chosen \"iec\" as closest standard connector with low certainty on that one port. RS-232C IN/OUT are D-sub 9-pin connectors, mapped to \"rs232\" per allowed connector list.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "USB 2.0 IN",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "RS-232C IN",
+      "direction": "input",
+      "connector": "rs232"
+    },
+    {
+      "name": "RS-232C OUT",
+      "direction": "output",
+      "connector": "rs232"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in power supply with detachable AC cord (included accessory); exact inlet type not explicitly pictured in the spec-sheet connectivity diagram, inferred from 'Built-In Power' plus included 'Power Cord' accessory."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "manufacturer": "Luminex",
+  "model": "GigaCore 12",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/wp-content/uploads/doccenter/gigacore_specifications_rev3-1.pdf",
+  "confidence": "high",
+  "notes": "All 12 network ports are 10/100/1000Mbps shielded Neutrik EtherCon connectors (a ruggedized locking RJ45 variant used widely in touring/live-event gear); mapped to connector id \"rj45\" since EtherCon is not a distinct option in the schema. Ports 1-10 are on the front panel, ports 11-12 on the rear. PoE sourcing (up to 160W spread across the 10 front ports) is only available with an optional add-on PoE supply module (LU 01 00051-GC12); the base unit as sold has no PoE output, so no PoE was marked as standard. No SFP/fiber ports, no console/RJ45 management port, and no backup/redundant power input exist on the GigaCore 12 (those appear only on the 14R/16Xt/16RFO siblings per the same datasheet). Product was discontinued (~Jan 2024), superseded by GigaCore 16t, but specs are well documented and unambiguous. Source used: official Luminex \"GigaCore Ethernet Switches Specifications\" datasheet (PDF) covering the GigaCore 12/14R/16Xt/16RFO family; cross-checked against the official GigaCore 12 Quick Start Guide (rear/front panel diagrams) and Markertek/B&H retail listings, all consistent.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon (ruggedized locking RJ45)"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel, shielded Neutrik EtherCon"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear panel IEC inlet with fuse holder (3.15A 250V slow-blow); 100-240VAC 50-60Hz, max 30W (up to 180W with optional PoE supply module)"
+    }
+  ]
+}

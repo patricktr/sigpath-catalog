@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "AMX-8952-A",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://documentation.rossvideo.com/files/Manuals/Signal%20Processing/openGear/AMX_8952.pdf",
+  "confidence": "high",
+  "notes": "The AMX-8952 is an openGear modular card (not a standalone chassis) that occupies 2 slots in an OG3-FR/OGX-FR frame; it is desktop/rack-agnostic (rackUnits omitted since it is a frame card, not a self-contained rack unit) and draws power from the shared frame midplane/backplane, so there is no discrete AC/DC power connector on the product itself (omitted from ports). Physical connectors live on a separate rear module (sold separately, e.g. 8322AR-329/8322AR-329A for AMX-8952-A), not on the card edge. Three sibling SKUs exist with identical 3x SDI BNC (1 dedicated in, 1 dedicated out, 1 bidirectional) but different audio I/O: AMX-8952-A (documented here) = 8 unbalanced AES3 pairs on HD-BNC; AMX-8952-B = 8 balanced AES3 pairs on 3-pin WECO connectors (110 ohm); AMX-8952-C = 8 channels of balanced analog audio on 3-pin WECO connectors. All three share identical SDI and GPIO connectivity. GPIO 3-pin WECO terminal blocks do not exactly match any id in the allowed connector list; 'euroblock' was chosen as the closest pluggable-terminal-block analog. 12G-SDI (UHD 2160p) support requires the separately licensed AMX-8952-UHD-LICENSE; without it the card is HD/3G-SDI only, so sdi-12g grade reflects licensed capability of the hardware, not default-shipped behavior. Source: official Ross Video AMX-8952-A/B/C User Guide (Rev 5, May 19 2026), cross-checked against the Ross Video product page and Markertek/DigiNet retailer listings, all of which agree on the 3-SDI-BNC + 8-audio-channel + 2-GPIO architecture and HD/3G/12G-SDI support.",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on rear module; accommodates SMPTE 292M/424M/ST-2081/ST-2082 up to 11.88Gbps; 12G (UHD) requires AMX-8952-UHD-LICENSE"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on rear module; 12G (UHD) requires AMX-8952-UHD-LICENSE"
+    },
+    {
+      "name": "SDI BI-DIR",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Configurable as input or output via DashBoard; 12G (UHD) requires AMX-8952-UHD-LICENSE"
+    },
+    {
+      "name": "AES 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC; card interface is bidirectional (embed or de-embed)"
+    },
+    {
+      "name": "AES 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 5",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 6",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 7",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "AES 8",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Unbalanced 75-ohm AES3/AES-3id on HD-BNC"
+    },
+    {
+      "name": "GPIO 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO-style pluggable terminal block; user-programmable per-pin as GPI (input, contact closure) or Tally (output). Closest listed connector id to the 3-pin WECO connector actually used."
+    },
+    {
+      "name": "GPIO 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO-style pluggable terminal block; user-programmable per-pin as GPI or Tally"
+    }
+  ]
+}

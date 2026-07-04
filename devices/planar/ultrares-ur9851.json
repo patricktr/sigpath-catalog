@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Planar",
+  "model": "UltraRes UR9851",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.planar.com/media/439937/planar_ultrares_ur9851.pdf",
+  "confidence": "medium",
+  "notes": "Manufacturer spec sheet (planar.com PDF, marked \"Discontinued\", report dated 3/24/2021) lists \"External Connections\" as DisplayPort 1.2 x1, HDMI 2.0 x2 (HDCP 2.2), HDMI 1.4 x2, plus an OPS slot with OPS USB 2.0 x2 and OPS USB 3.0 x1. The OPS slot and its associated USB pass-through ports are for an internal Open Pluggable Specification PC module (not a standalone cable connector in the given taxonomy) and were omitted from the port list. The two HDMI 2.0 ports and two HDMI 1.4 ports are listed generically as \"x2\" each on the datasheet (not individually labeled 1-4) — numbering here is inferred for clarity, not confirmed against the physical rear-panel silkscreen. Audio output connector types (PC Line Out as 3.5mm TRS, S/PDIF as optical Toslink) are the conventional interpretation but not explicitly confirmed by the spec sheet — S/PDIF could be coax RCA instead of optical. Power connector type (IEC) is inferred from typical commercial-display practice; spec sheet only states Line Voltage 100-240V 50/60Hz and does not name the physical inlet connector, so this is a lower-confidence inference. Display Control also lists \"Keypad\" and \"Mobile app\" which are not physical cable ports and were omitted. LAN/RJ45 control port has no stated Ethernet speed grade, so grade omitted. No VGA, SDI, or analog audio input is present on this model. A separate touch-enabled variant (UR9851-ERO-T) exists with different specs/connections; this entry is for the base UR9851 non-touch model.",
+  "ports": [
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "PC Line Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S/PDIF",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "MKE 600",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/mke-600/mke-600/specifications.html",
+  "confidence": "high",
+  "notes": "Manufacturer's official spec page (docs.cloud.sennheiser.com, part of sennheiser.com) confirms: single integrated male XLR-3 connector serving as both balanced audio output and phantom-power input (48V ±4V, P48/IEC 61938, 4.4mA draw). No separate DC/power jack exists on the device — power arrives via the same XLR-3 pins as the signal, or via 2x AA battery (1.5V/1.2V) inside the body with no external connector needed for that mode. No grade applies (analog audio connector). The box includes a KA 600 XLR-to-3.5mm-TRS adapter cable for direct camera mounting, and a KA 600i variant; these are accessory cables, not additional physical ports on the microphone itself, so they are not listed as separate device ports. No rack units (handheld/shoe-mount shotgun mic, not rack equipment).",
+  "ports": [
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced audio output; also receives 48V ± 4V phantom power (P48, IEC 61938) on the same integrated male XLR-3 connector. Can alternatively be powered by 2x AA battery (no phantom needed) while still using this XLR-3 for signal out. Sennheiser includes a KA 600 XLR-to-3.5mm TRS adapter cable for camera use, but the mic's own fixed connector is XLR-3."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4300-52G-PoE+",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/datasheet/en/M4300.pdf",
+  "confidence": "medium",
+  "notes": "Sold in two power variants (SKUs): GSM4352PA ships with a single 550W PSU (APS550W, 480W PoE budget), GSM4352PB ships with a single 1000W PSU (APS1000W, 591W PoE budget at 110V / 860W at 220V). Both variants share identical port I/O; PSU wattage/PoE budget differs and is not represented as a port. The unit has two internal hot-swap PSU bays (second PSU sold separately) plus a unique external RPS (redundant power supply) port on the back panel for connecting an optional RPS5412 unit — this RPS interface uses a proprietary cable/receptacle, not a standard AV/IT connector from the given list, so it is omitted from the ports array (noted here instead). PSU AC inlet is IEC C14 (rated iec connector) per official PSU ordering data (APS550W/APS1000W both list \\\"C14 connector\\\"). Console ports: RJ-45 RS232 (115200,8,N,1) on the back panel, plus a Mini-USB console port on the front panel (front panel Mini-USB modeled as usb-micro, the closest connector id available, since a dedicated mini-usb id is not in the allowed list). One additional front-panel USB 2.0 Type-A port for storage/firmware. One out-of-band (OOB) 10/100/1000 RJ45 management Ethernet port on the front panel, separate from the 48 PoE+ data ports. All 4 uplink ports (2x 10GBASE-T RJ45 + 2x 10GBASE-X SFP+) are independent, 1G-backward-compatible, and usable for stacking or uplink. Rack unit size (1U) and full I/O confirmed directly from Netgear's official Hardware Installation Guide and Data Sheet PDFs (front/back panel component diagrams, PoE budget tables, PSU ordering tables).",
+  "ports": [
+    {
+      "name": "1000BASE-T PoE+ 1-48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x RJ45 10/100/1000 autosensing PoE+ ports (ports 1-48); PoE budget varies by PSU/variant (480W-1,440W depending on PSU and mode)"
+    },
+    {
+      "name": "10GBASE-T 49-50",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "2x independent 10GBASE-T RJ45 uplink/stacking ports, 1G backward compatible"
+    },
+    {
+      "name": "10GBASE-X SFP+ 51-52",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x independent 10GBASE-X SFP+ fiber uplink/stacking ports"
+    },
+    {
+      "name": "OOB Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front-panel out-of-band 10/100/1000 management port, separate from switching fabric"
+    },
+    {
+      "name": "Console (RS232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Back-panel RJ-45 RS232 console port, 115200 baud, N,8,1"
+    },
+    {
+      "name": "Console (Mini-USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel Mini-USB console port; modeled as usb-micro (closest allowed id) since mini-usb is not a listed connector id"
+    },
+    {
+      "name": "USB (storage)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB 2.0 Type-A port for firmware/config storage"
+    },
+    {
+      "name": "PSU1 AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet on primary hot-swap modular PSU bay (APS550W or APS1000W depending on SKU)"
+    },
+    {
+      "name": "PSU2 AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second modular PSU bay (optional, sold separately), IEC C14 inlet, supports RPS/EPS redundancy modes"
+    }
+  ]
+}

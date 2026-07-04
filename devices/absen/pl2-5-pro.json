@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Absen",
+  "model": "PL2.5 Pro",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://europe.4wall.com/rentals/9758863/absen-pl2-5-pro-2-5mm-1-20-scan",
+  "confidence": "medium",
+  "notes": "The PL2.5 Pro is a 2.5mm-pitch rental LED video wall tile (500x500x78-88mm cabinet, ~7.5-8.8kg depending on hardware revision V10/V2), not a device with user-facing video ports. Panel-level physical I/O is limited to daisy-chained power and data loop-through connectors: Neutrik powerCON TRUE1 (power in/out) and Neutrik etherCON/locking RJ45 (data in/out), confirmed via 4Wall Europe and PSCo UK rental spec pages, consistent with the wider Absen Polaris/PL rental-panel line. Manufacturer's own PDF cutsheets/datasheets (usabsen.com, niclen.de) confirm performance specs (1200-1500 nit brightness depending on V10 vs V2 hardware, 200x200 resolution, 3840Hz refresh, Black SMD 1515 LED, Brompton/NovaStar-compatible control system, IP40 front/IP21 rear, 100-240VAC) but do not show a labeled connector diagram; connector types were corroborated from rental-house technical listings rather than a manufacturer connector diagram, hence medium confidence. HDMI/SDI/DVI inputs mentioned on some rental listings refer to the separate Brompton/NovaStar video processor feeding the wall, not ports on the LED tile itself, and are therefore excluded from this tile's port list. No RS232/control or Ethernet management port beyond the etherCON data loop was documented at the panel level. There are two hardware generations in the market (original \"V10\", ~1200 nits/88mm deep/8.6-8.8kg; and \"V2\", ~1200 nits/78mm deep/7.5kg with UltraBlack + new frame) — connector scheme is identical across both per available sources.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1; AC 100-240V panel power input, loop-through to next panel"
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1; loop-through power output to daisy-chain next panel"
+    },
+    {
+      "name": "Data In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Neutrik etherCON (locking RJ45); carries processed pixel/video data from Brompton or NovaStar processor, loop-through to next panel. Not a general-purpose Ethernet/network port."
+    },
+    {
+      "name": "Data Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Neutrik etherCON (locking RJ45); loop-through data output to daisy-chain next panel"
+    }
+  ]
+}

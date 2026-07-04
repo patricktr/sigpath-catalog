@@ -1,0 +1,56 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "HA5-12G",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/support/item-download/9376/AJA_HA5-12G_Series-Manual_v1.9.pdf",
+  "confidence": "high",
+  "notes": "Base HA5-12G model (BNC-only), not the -T or -T-ST fiber variants which add a 12G-SDI Fiber Output (LC or ST connector) alongside the same BNC I/O. Specs drawn from AJA's official HA5-12G Mini-Converter Manual v1.9 and matching AJA spec sheet (aja.com/products/ha5-12g and /spec-sheet.pdf), cross-checked against the manufacturer product page. HDMI input grade set to hdmi-2.0 per manual (HDMI v2.0b). SDI outputs graded sdi-12g per manual (\"1x 12G-SDI BNC, SMPTE 259/292/424/2081/2082\" x2, mirrored). Audio outputs are embedded in the SDI signal (not a separate physical connector) per block diagram, so not listed as a discrete port. USB connector sub-type not explicitly named in AJA docs (only \"USB port\"); mapped to usb-micro as AJA's standard mini-converter USB connector, medium-confidence inference noted above. No USB data-speed grade given, so grade omitted per instructions. Desktop mini-converter (4.6 x 4.02 x 0.9 in / 116.8 x 102.1 x 22.9 mm) — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A connector, HDMI v2.0b, supports up to 4K/UltraHD 60p"
+    },
+    {
+      "name": "SDI Output 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G-SDI BNC, SMPTE 259/292/424/2081/2082"
+    },
+    {
+      "name": "SDI Output 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Mirrored 12G-SDI distribution amplifier output, same spec as SDI Output 1"
+    },
+    {
+      "name": "Analog Audio Input 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "2-channel analog audio, -10dBu nominal"
+    },
+    {
+      "name": "Analog Audio Input 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "2-channel analog audio, -10dBu nominal"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Used with supplied cable and AJA Mini-Config software for setup/monitoring; exact USB connector sub-type (Micro-B) not explicitly stated in AJA documentation, inferred from AJA mini-converter family convention. No data grade stated, omitted."
+    },
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5-16VDC regulated, ~11-12W; universal AC-DC power supply (DWP-U-R1) included, 100-240VAC 50/60Hz"
+    }
+  ]
+}

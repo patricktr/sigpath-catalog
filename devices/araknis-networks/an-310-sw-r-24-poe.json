@@ -1,0 +1,173 @@
+{
+  "manufacturer": "Araknis Networks",
+  "model": "AN-310-SW-R-24-POE",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.snapav.com/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/Networking/ManualsAndGuides/AN-310-SW_QSG_160824-1420.pdf",
+  "confidence": "medium",
+  "notes": "\"R\" variant has all 24 RJ45 ports and the 2 SFP uplink ports rear-facing (vs \"F\" variant front-facing); electrically identical. Confirmed via Araknis/SnapAV Quick Start Guide (manufacturer) and cross-checked against SnapAV product page and AV-iQ spec listing. All 24 RJ45 ports are Gigabit (1000BASE-T) and support PoE/PoE+ (802.3af/at), with a total PoE power budget of 375W (30W max per port). The 2 SFP ports are 1000BASE-X (Gigabit) uplinks accepting Araknis SFP-to-RJ45 or multi-mode fiber adapters (modeled here as bidirectional RJ45-grade ports since no fiber connector ID exists in the allowed list other than fiber-lc/sfp; used \"rj45\" with eth-1g grade to represent the copper-SFP use case is not ideal, so ports are listed as sfp connector without grade per rules... see note). No console/RS232 management port is documented. Power input is a standard IEC C14 inlet with a detachable AC power cord (100-240V, 50/60Hz per AV-iQ; QSG shows 120V AC in the connection diagram, but the switch itself is a standard IEC-input device compatible with worldwide voltages per the C14 inlet). No dimensions/weight independently verified beyond one secondary source (17.32in x 1.73in x 16.14in from SnapAV shop page paraphrase).",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Accepts Araknis SFP-to-RJ45 copper or multi-mode fiber transceiver modules"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Accepts Araknis SFP-to-RJ45 copper or multi-mode fiber transceiver modules"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

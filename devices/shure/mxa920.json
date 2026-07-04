@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXA920",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.avc-group.com/assets/products/Shure/pdfs/shure-ds-mxa920.pdf",
+  "confidence": "high",
+  "notes": "Ceiling array microphone (square MXA920-S or round MXA920-R variant) with automatic/steerable coverage. Single RJ45 port (Cat5e or higher, shielded recommended) carries PoE Class 0 power (10.1W max), Dante/AES67 digital audio output, and control simultaneously — there is no separate power connector and no analog audio I/O on this device. Network data-rate (100Mb vs 1Gb) is not stated in Shure's official spec sheet, so no eth-* grade was assigned to the RJ45 port per instructions (omit grade when unstated). Channel count varies by mode: 2 channels (1 output + 1 AEC reference in) with automatic coverage on, or 10 channels (8 independent transmit + 1 automix output + 1 AEC reference in) with automatic coverage off. Not rack-mountable (ceiling-mounted device), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Network/PoE (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single Cat5e+ RJ45 port carries PoE Class 0 power (10.1W max), Dante/AES67 digital audio, and control. No network speed grade stated in Shure spec sheet."
+    }
+  ]
+}

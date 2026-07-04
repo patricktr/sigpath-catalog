@@ -1,0 +1,86 @@
+{
+  "manufacturer": "QSC",
+  "model": "CX-Q 8K4",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qsys.com/resource-files/productresources/amp/cx-q/4_channel/q_rep_specs_cxq_4ch.pdf",
+  "confidence": "high",
+  "notes": "Sourced from QSC's official product page (qsys.com), the official CX-Q 4-channel datasheet PDF, and the official CX-Q/CX-Qn User Manual (TD-001586-01-B), all cross-consistent. Rear panel per official manual Figure 1: 2x RJ-45 (LAN A/B, Q-LAN Gigabit Ethernet - eth-1g grade inferred from \"standard gigabit Ethernet protocols and hardware\" spec, not explicitly labeled 1G on port), 4x 3-pin Euroblock mic/line inputs (12V phantom, balanced/unbalanced), 2x 8-pin Euroblock speaker output connectors covering channels A/B and C/D (listed here as 4 logical channel ports per common convention), 1x 16-pin Euroblock GPIO connector (8 bidirectional GPIO channels), and a locking IEC C-14 power inlet. No AES/EBU digital audio input on this model - all digital audio arrives via Q-LAN network only; analog Euroblock mic/line inputs are the only local audio ports. This is the CX-Q 8K4 (4-channel, 8000W) variant, distinct from the 8-channel CX-Q 4K8/8K8 models (which have 8 inputs/8 outputs) and from the CX-Qn variants (network-only, no analog inputs). Output connector pin/channel mapping: physically two 8-pin Euroblock headers each serve two channels (A+B on one, C+D on the other) but ports are listed per logical channel since each channel is an independently wired speaker output in Q-SYS Designer.",
+  "ports": [
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Q-SYS Q-LAN, primary network/audio transport"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Q-SYS Q-LAN, secondary/redundant network port"
+    },
+    {
+      "name": "Mic/Line Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style, mic or line level, 12V phantom power, Routable Input 1"
+    },
+    {
+      "name": "Mic/Line Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style, mic or line level, 12V phantom power, Routable Input 2"
+    },
+    {
+      "name": "Mic/Line Input 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style, mic or line level, 12V phantom power, Routable Input 3"
+    },
+    {
+      "name": "Mic/Line Input 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style, mic or line level, 12V phantom power, Routable Input 4"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Euro-style loudspeaker connector, Lo-Z/70V/100V direct drive, channel A (shared 8-pin block also carries channel B pins)"
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Euro-style loudspeaker connector, Lo-Z/70V/100V direct drive, channel B (shared 8-pin block also carries channel A pins)"
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Euro-style loudspeaker connector, Lo-Z/70V/100V direct drive, channel C (shared 8-pin block also carries channel D pins)"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8-pin Euro-style loudspeaker connector, Lo-Z/70V/100V direct drive, channel D (shared 8-pin block also carries channel C pins)"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "16-pin Euro-style connector, 8 configurable bi-directional GPIO channels for third-party control integration"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC C-14 inlet, universal 100-240VAC 50-60Hz with active PFC"
+    }
+  ]
+}

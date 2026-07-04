@@ -1,0 +1,153 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Ki Pro Ultra 12G",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.aja.com/products/ki-pro-ultra-12g",
+  "confidence": "high",
+  "notes": "Desktop/rack-mountable field unit (no rackUnits specified by AJA as a standard rack size; it's typically deployed on a mounting tray/sled rather than a fixed RU chassis, so rackUnits omitted). Two PAK SSD media bays exist but are storage slots, not physical cabling I/O, so omitted per port scope. Two power inputs are redundant (either/or, not both required): 4-pin XLR DC (12-18V) or AC adapter (100-240VAC). SDI: 1x 12G-SDI + 3x 3G-SDI on both input and output sides, plus a dedicated 3G-SDI monitor output; optional SFP fiber/HD-BNC modules can replace the BNC SDI cages (not modeled separately here since they are alternate/optional physical options on the same ports, not additional simultaneous ports). Audio I/O uses DB-25 TASCAM-pinout connectors (8-ch balanced analog in, 8-ch balanced analog out, 8-ch AES/EBU in, 8-ch AES/EBU out) — DB-25 is not in the allowed connector-id list, so these are approximated as xlr3 (analog) and aes3 (digital); this is a notable caveat since the physical connector is actually a multi-pin D-sub, not a native XLR or AES3 jack, though AJA does bundle XLR breakout cables. Reference video has 2 BNCs described as \"looping\" (in + loop-through), not independently gradeable. Cross-verified via AJA official product page (aja.com), B&H product listing, and the AJA Ki Pro Ultra 12G Installation & Operation Manual (rear panel diagram via ManualsLib) — all three sources agree on port counts and types.",
+  "ports": [
+    {
+      "name": "SDI In 1 (12G)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 1 (12G)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Analog Audio In (DB-25 TASCAM, 8-ch balanced)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Physical connector is a DB-25 (TASCAM pinout) carrying 8 channels of balanced analog audio; AJA ships XLR breakout looms. DB-25 is not in the allowed connector list, so it is represented here as XLR3 (closest real equivalent) — treat as approximate."
+    },
+    {
+      "name": "Analog Audio Out (DB-25 TASCAM, 8-ch balanced)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physical connector is a DB-25 (TASCAM pinout) carrying 8 channels of balanced analog audio; AJA ships XLR breakout looms. DB-25 is not in the allowed connector list, so it is represented here as XLR3 (closest real equivalent) — treat as approximate."
+    },
+    {
+      "name": "AES/EBU In (DB-25 TASCAM, 8-ch)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Physical connector is a DB-25 (TASCAM pinout) carrying 8 channels of AES/EBU digital audio, represented here as AES3 since DB-25 is not in the allowed connector list."
+    },
+    {
+      "name": "AES/EBU Out (DB-25 TASCAM, 8-ch)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Physical connector is a DB-25 (TASCAM pinout) carrying 8 channels of AES/EBU digital audio, represented here as AES3 since DB-25 is not in the allowed connector list."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Monitor Audio Out (RCA, 2-ch unbalanced)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Ref In (looping)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Ref Loop Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "RS-422 (9-pin)",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "LAN (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc"
+    },
+    {
+      "name": "AC Power In (adapter)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AJA specifies a detachable 100-240VAC adapter; exact adapter-side inlet connector (likely IEC C13/C14 or C7) not explicitly confirmed on manufacturer page — represented as IEC as the closest standard mains inlet."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "manufacturer": "AMX",
+  "model": "DGX800-ENC",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 4,
+  "sourceUrl": "https://adn.harmanpro.com/product_documents/documents/5313_1581538379/AMX_DGX800-ENC.DataSheet_original.pdf",
+  "confidence": "medium",
+  "notes": "DGX800-ENC is a bare 8-slot enclosure/chassis with an integrated NetLinx NX controller — it ships with NO video I/O of its own. All signal ports (HDMI, DVI, DXLink twisted-pair, DXLink fiber, up to 8x8) are on separately purchased plug-in input/output boards (e.g. DGX-I-HDMI, DGX-O-DXL-4K60, DGX-I-DXF-SMD, etc.), so they are intentionally omitted here — only the enclosure's own fixed physical ports are listed. Ports above are drawn from the official AMX/Harman datasheet (Revised 2/4/2020, FG1061-08). The AC inlet connector type (IEC C13/C14 vs C19/C20) is not explicitly stated in any AMX document found and is inferred from typical practice for an 850W hot-swap PSU module in this product class — treat as unconfirmed. The enclosure has 2 redundant, hot-swappable power supplies, each presumably with its own inlet (only one AC port entry given since exact count/labeling on the rear panel could not be visually confirmed). USB Mini-AB and USB Mini-B ports were mapped to the closest available connector id (usb-micro) since the schema has no distinct Mini-AB/Mini-B ids. Per-channel aggregate data rate is 26 Gbps for enclosures made on/after June 1 2016 (12.8 Gbps before). Confidence set to medium because the port list is authoritative for control/network/power labeling, but the exact AC inlet connector type is inferred rather than confirmed, and the device is fundamentally a headless chassis rather than a fixed-I/O product.",
+  "ports": [
+    {
+      "name": "AxLink",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position 3.5mm screw terminal; provides data and power to external AxLink control devices (e.g. keypads). Closest listed connector id used for a 3.5mm pluggable screw-terminal block."
+    },
+    {
+      "name": "LAN (NetLinx/TCP-IP Uplink)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ-45, NetLinx on-board NX-class controller / TCP-IP uplink port, 10/100/1000, auto-negotiating, auto MDI/MDI-X."
+    },
+    {
+      "name": "Program Port (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Mini-AB connector, used for NetLinx Studio control/programming. 'Mini-AB' has no exact id in the allowed list; mapped to closest (usb-micro). No USB speed/grade stated."
+    },
+    {
+      "name": "Control Port (Serial)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 connector, bidirectional RS-232, baud rates 9600 (default)/19200/38400/57600."
+    },
+    {
+      "name": "Control Port (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Mini-B connector (enclosure control). Mapped to closest available id; no USB speed stated."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Fully redundant, hot-swappable AC power supplies (2, independent power paths), 100-240VAC 50-60Hz, 977W max capacity with redundancy. AMX's own literature does not explicitly name the inlet connector type; IEC C13/C14 inferred as the standard for this class of rack AV switcher — unconfirmed from source. Each supply has its own inlet."
+    }
+  ]
+}

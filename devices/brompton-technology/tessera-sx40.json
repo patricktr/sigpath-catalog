@@ -1,0 +1,164 @@
+{
+  "manufacturer": "Brompton Technology",
+  "model": "Tessera SX40",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.bromptontech.com/wp-content/uploads/2025/07/Brompton-SX40-Data-Sheet-Feb2025-EN.pdf",
+  "confidence": "medium",
+  "notes": "LED video processor (converts SDI/HDMI source signals into LED-panel pixel data over 10G links); no category in the provided list matches precisely, so \"converter\" was used as closest fit. Rear panel has 4 identical \"Tessera 10G Output\" groups (silkscreened A-D), each comprising one etherCON/RJ45 10GBASE-T copper port and one opticalCON (LC-Duplex-compatible) 10GBASE-LR fibre port; within each group only one of the two (fibre or copper) is active at a time (auto-switching), both are listed as physical ports. DMX In/Thru are 5-pin XLR (In=male, Thru=female). Rear silkscreen shows both \"HDMI IN\" and \"HDMI THRU\" jacks; full spec text details only the single HDMI 2.0b input, so HDMI Thru is treated as a passthrough of that input (analogous to the explicitly documented \"re-clocked\" SDI Thru). Ref In/Thru are BNC bi-level/tri-level analog sync (ungraded - not an SDI data signal). The rear \"Local UI\" DisplayPort (DP++) is a local-monitor output, not part of the video processing signal path. Two USB 3.0 ports are on the rear (Local UI); two USB 2.0 Type-A ports are on the front panel.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Thru",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Re-clocked passthrough of SDI In"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Thru",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Passthrough of HDMI In for confidence monitoring"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Bi-level/Tri-level analog sync reference input"
+    },
+    {
+      "name": "Ref Thru",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passthrough of Ref In"
+    },
+    {
+      "name": "Tessera Out A (Copper)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "etherCON Cat6A/Cat5e; 10GBASE-T; auto-switches with fibre port in same group"
+    },
+    {
+      "name": "Tessera Out A (Fibre)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "opticalCON DUO, LC-Duplex compatible; 10GBASE-LR; auto-switches with copper port in same group"
+    },
+    {
+      "name": "Tessera Out B (Copper)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "etherCON Cat6A/Cat5e; 10GBASE-T"
+    },
+    {
+      "name": "Tessera Out B (Fibre)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "opticalCON DUO, LC-Duplex compatible; 10GBASE-LR"
+    },
+    {
+      "name": "Tessera Out C (Copper)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "etherCON Cat6A/Cat5e; 10GBASE-T"
+    },
+    {
+      "name": "Tessera Out C (Fibre)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "opticalCON DUO, LC-Duplex compatible; 10GBASE-LR"
+    },
+    {
+      "name": "Tessera Out D (Copper)",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "etherCON Cat6A/Cat5e; 10GBASE-T"
+    },
+    {
+      "name": "Tessera Out D (Fibre)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "opticalCON DUO, LC-Duplex compatible; 10GBASE-LR"
+    },
+    {
+      "name": "Mgmt 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit management Ethernet, daisy-chain switch port"
+    },
+    {
+      "name": "Mgmt 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit management Ethernet, daisy-chain switch port"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "DMX-512A 5-pin XLR male"
+    },
+    {
+      "name": "DMX Thru",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX-512A 5-pin XLR female passthrough"
+    },
+    {
+      "name": "Local UI (DisplayPort)",
+      "direction": "output",
+      "connector": "dp",
+      "note": "DP++ local monitor output; supports HDMI/DVI/VGA via adapter"
+    },
+    {
+      "name": "USB 3.0 (rear, Local UI)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (rear, Local UI) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Mains In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Switched auto-ranging IEC power inlet, 100-240VAC 50-60Hz 1.2-0.6A"
+    }
+  ]
+}

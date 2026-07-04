@@ -1,0 +1,117 @@
+{
+  "manufacturer": "Middle Atlantic",
+  "model": "UPS-1000R",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.fullcompass.com/common/files/36267-UPSSeriesUserManual.pdf",
+  "confidence": "high",
+  "notes": "Base model has two 4-outlet banks (Non-Critical Load / Critical Load), each bank ganged behind one resettable circuit breaker — modeled here as two representative NEMA 5-15R outlet ports per bank (8 total), matching the \"Rear Panel Description – Bank Outlets\" diagram in the official manual (I-00319 Rev J). A separate SKU variant (UPS-1000R-8) has individually-controlled/individually-breakered outlets instead of banks; connector set is otherwise identical. The RJ11/RJ45 ports and Coax/Cable/DSS (F-type) ports are surge-protection pass-throughs (one IN + one OUT each) for phone/DSL/Ethernet and cable/CATV/DSS lines, not UPS data ports, so no bandwidth grade applies and they are not networking uplinks. USB port type is not explicitly stated in any source; modeled as USB-B (standard for UPS-to-PC management ports of this class) — this is inferred, not confirmed, hence flagged. Two DB-9 serial ports: \"Serial Port Primary\" (true RS232 to PC/control system) and \"Serial Port Secondary I/O\" (analog status I/O on a DB-9, not full RS232) — modeled as rs232 for primary and rs232 (closest available id) for secondary since a generic DB-9 analog-I/O id isn't in the allowed connector list. EPO port is a small barrel-style contact-closure connector — no exact id in the allowed list; modeled as dc-barrel (closest physical match) per instructions. External Battery Pack Connector (proprietary, for UPS-EBPR chaining) also has no matching id; modeled as dc-barrel as the closest analog. Expansion port slot for optional NIC (UPS-IPCARD, used on the -IP variant) is a card slot, not a cable port, so it was omitted. Ground stud omitted (not a signal/power connector). Rack size is 2U per manufacturer spec table.",
+  "ports": [
+    {
+      "name": "Input Power Cord",
+      "direction": "input",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Non-Critical Load Outlet 1",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Non-Critical Load Outlet 2",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Non-Critical Load Outlet 3",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Non-Critical Load Outlet 4",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Critical Load Outlet 1",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Critical Load Outlet 2",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Critical Load Outlet 3",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Critical Load Outlet 4",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Device-side connector type not explicitly documented; USB-B inferred as standard for this UPS class."
+    },
+    {
+      "name": "Serial Port Primary",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9, true RS232 to PC or control system."
+    },
+    {
+      "name": "Serial Port Secondary I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 analog input/output status pinout for remote monitoring, not full RS232 handshake."
+    },
+    {
+      "name": "Communication Protection IN (RJ11/RJ45)",
+      "direction": "input",
+      "connector": "rj45",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Surge-protection pass-through for phone/DSL/Ethernet line, not a UPS data uplink."
+    },
+    {
+      "name": "Communication Protection OUT (RJ11/RJ45)",
+      "direction": "output",
+      "connector": "rj45",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Surge-protection pass-through for phone/DSL/Ethernet line, not a UPS data uplink."
+    },
+    {
+      "name": "Coax/Cable/DSS IN",
+      "direction": "input",
+      "connector": "f-type",
+      "note": "Surge-protection pass-through for cable modem/CATV/DSS."
+    },
+    {
+      "name": "Coax/Cable/DSS OUT",
+      "direction": "output",
+      "connector": "f-type",
+      "note": "Surge-protection pass-through for cable modem/CATV/DSS."
+    },
+    {
+      "name": "EPO Port",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Contact-closure port for emergency power off; no exact connector id available, closest physical match used."
+    },
+    {
+      "name": "External Battery Pack Connector",
+      "direction": "bidirectional",
+      "connector": "dc-barrel",
+      "note": "Proprietary connector for daisy-chaining up to 10 UPS-EBPR external battery packs; no exact connector id available, closest match used."
+    }
+  ]
+}

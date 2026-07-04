@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "MKH 416-P48U3",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.sennheiser.com/en-us/catalog/products/microphones/mkh-416-p48u3/mkh-416-p48u3-001511",
+  "confidence": "high",
+  "notes": "Shotgun (short interference-tube) RF condenser microphone, not rack-mountable (handheld/mounted mic body, so rackUnits omitted). Single 3-pin XLR (XLR3M on the mic body) serves as both the balanced audio output and the phantom-power input (P48, 48V ±4V, ~2mA draw) — there is no separate power connector. No grade applies since XLR3/analog audio is not in the bandwidth-graded connector families. Confirmed via Sennheiser's official product page (sennheiser.com/en-us/catalog/products/microphones/mkh-416-p48u3/mkh-416-p48u3-001511), which is the authoritative source used here. The official product-spec PDF (assets.sennheiser.com) returned HTTP 403 and could not be fetched directly, and B&H's page also returned 403, but the manufacturer's own catalog page provided complete, consistent connector/power data corroborated by multiple secondary search snippets (manual excerpts, retailer listings) all citing \"3-pin XLR\" and \"48V phantom power (P48)\".",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR balanced output; also receives P48 (48V ±4V) phantom power from the connected preamp/recorder to power the RF condenser capsule (~2 mA draw). No separate power connector on the microphone."
+    }
+  ]
+}

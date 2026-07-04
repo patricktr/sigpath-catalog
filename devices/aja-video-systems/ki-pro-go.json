@@ -1,0 +1,193 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Ki Pro GO",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.aja.com/products/ki-pro-go/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Half-rack-wide, 2RU-high chassis (typically rack-mounted in pairs or with a shelf; listed as 2RU per AJA's own dimension convention). SDI I/O is 3G-SDI per BNC per SMPTE-259/292/424 (grade set to sdi-3g). HDMI I/O is HDMI v1.4a (grade set to hdmi-1.4). Ethernet is 10/100/1000 (grade set to eth-1g). USB ports are USB 3.2 Gen 1 = 5Gbps (grade usb-5g); 4 are front-panel (USB 1-4) and 1 is rear-panel (USB Slot 5) - all function identically as removable-storage bays. The 2x REF Loop BNC connectors are reference-sync in/loop-out (analog black burst/tri-level sync or SD analog composite), not SDI video, so no sdi grade was applied. Power is dual-redundant 12-18VDC via 4-pin XLR (xlr4-dc), fed from an included AC adapter (100-240VAC to 12V/7A) - the AC adapter itself is external/off-board, so the device's own rear-panel power ports are the two 4-pin XLR DC inputs, not an IEC/AC inlet. Analog audio: 2x XLR3 inputs support Mic/Line/+48V Phantom (selectable by rear switch); 2x RCA unbalanced outputs (labeled CH1/L, CH2/R under \"Monitor Out\"); 1x 3.5mm stereo headphone jack (front panel, unbalanced) with volume control.",
+  "ports": [
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Dedicated SDI monitor output with Enhanced Super Out overlays"
+    },
+    {
+      "name": "HDMI Monitor Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Dedicated HDMI monitor output with Enhanced Super Out overlays"
+    },
+    {
+      "name": "REF LOOP 1 (Ref In)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External looping, non-terminating genlock reference input (tri-level sync / analog composite)"
+    },
+    {
+      "name": "REF LOOP 2 (Loop Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through output of the reference signal"
+    },
+    {
+      "name": "Analog Audio In CH 1/L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR analog audio input; rear switch selects Mic/Line/+48V Phantom"
+    },
+    {
+      "name": "Analog Audio In CH 2/R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR analog audio input; rear switch selects Mic/Line/+48V Phantom"
+    },
+    {
+      "name": "Monitor Out CH 1/L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced analog audio monitor output"
+    },
+    {
+      "name": "Monitor Out CH 2/R",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced analog audio monitor output"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel stereo unbalanced headphone jack with volume control"
+    },
+    {
+      "name": "10/100/1000 LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB 3.2 Gen 1 removable-storage bay"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB 3.2 Gen 1 removable-storage bay"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB 3.2 Gen 1 removable-storage bay"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB 3.2 Gen 1 removable-storage bay"
+    },
+    {
+      "name": "USB Slot 5",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear-panel USB 3.2 Gen 1 removable-storage bay"
+    },
+    {
+      "name": "12-18V (PSU A)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Redundant DC power input, 12-18VDC regulated, 4-pin XLR"
+    },
+    {
+      "name": "12-18V (PSU B)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Redundant DC power input, 12-18VDC regulated, 4-pin XLR"
+    }
+  ]
+}

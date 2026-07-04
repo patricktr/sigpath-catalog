@@ -1,0 +1,118 @@
+{
+  "manufacturer": "WyreStorm",
+  "model": "EX-100-H2",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.wyrestorm.com/product/ex-100-h2/",
+  "confidence": "high",
+  "notes": "This is a 2-piece HDBaseT extender set (Transmitter + Receiver); ports from both units are listed together and labeled TX/RX for clarity. HDMI is HDCP 2.2 capable with DVI/D support via adapter (not included); WyreStorm does not state an explicit HDMI version number, and given max pixel clock of 340MHz / 4K60 4:2:0 support, an hdmi-2.0-class grade is plausible but not confirmed in the datasheet, so grade is omitted per the no-inference rule. HDBaseT (RJ45) is proprietary Class C signaling (10.2Gbps encoding rate), not standard Ethernet, so no eth-* grade applies and none is set. USB is 1x Type B host port (Transmitter) and 4x Type A device ports (Receiver), spec'd as USB 2.0 with max throughput 190Mbps over the link. RS-232 uses 3-pin Phoenix/terminal-block connectors on both Transmitter and Receiver (mapped to euroblock, the closest listed connector). Audio in/out on both ends are 3.5mm TRS stereo. DC power input on both TX and RX is a locking barrel-style jack fed by the included 12V DC 2A external power supply (mapped to dc-barrel). Unit is documented as \"<1U\" and is a small desktop/wall-mountable enclosure, not intended for rack mounting, so rackUnits is omitted. Source: WyreStorm official specification sheet (PDF rev 210507, mirrored at cdn-docs.av-iq.com), content consistent with the manufacturer's own product page.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Transmitter; 19-pin type A; HDCP 2.2, EDID, CEC pass-through, DVI/D supported with adapter (not included)"
+    },
+    {
+      "name": "Audio In (TX)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Transmitter; 3.5mm (1/8in) TRS stereo line-level input"
+    },
+    {
+      "name": "Audio Out (TX)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Transmitter; 3.5mm (1/8in) TRS stereo line-level output"
+    },
+    {
+      "name": "RS-232 (TX)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Transmitter; 3-pin Phoenix/terminal block for serial control pass-through"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Transmitter; USB 2.0 Type B host port, connects to computer (Transmitter in 'Device' mode)"
+    },
+    {
+      "name": "HDBT Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Transmitter; 8-pin RJ-45 female, HDBaseT Class C link to Receiver carrying HDMI, USB, PoH, RS-232, CEC"
+    },
+    {
+      "name": "DC In (TX)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Transmitter; locking DC barrel jack, 12V DC 2A external power supply"
+    },
+    {
+      "name": "HDBT In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Receiver; 8-pin RJ-45 female, HDBaseT Class C link from Transmitter; 1-way PoH (TX powers RX)"
+    },
+    {
+      "name": "Audio In (RX)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Receiver; 3.5mm (1/8in) TRS stereo line-level input"
+    },
+    {
+      "name": "Audio Out (RX)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Receiver; 3.5mm (1/8in) TRS stereo line-level output"
+    },
+    {
+      "name": "RS-232 (RX)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Receiver; 3-pin Phoenix/terminal block for serial control pass-through"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Receiver; 19-pin type A; HDCP 2.2, EDID, CEC pass-through, DVI/D supported with adapter (not included)"
+    },
+    {
+      "name": "USB Device 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver; one of 4x USB 2.0 Type A device ports (Transmitter in 'Host' mode)"
+    },
+    {
+      "name": "USB Device 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver; one of 4x USB 2.0 Type A device ports"
+    },
+    {
+      "name": "USB Device 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver; one of 4x USB 2.0 Type A device ports"
+    },
+    {
+      "name": "USB Device 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver; one of 4x USB 2.0 Type A device ports"
+    },
+    {
+      "name": "DC In (RX)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Receiver; locking DC barrel jack, 12V DC 2A external power supply"
+    }
+  ]
+}

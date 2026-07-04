@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Megapixel VR",
+  "model": "HELIOS",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://megapixelvr.com/wp-content/uploads/2023/09/megapixel-helios-led-processing-platform-specifications.pdf",
+  "confidence": "high",
+  "notes": "HELIOS is an LED processing platform (video-to-LED-panel processor), sold in three packages with different I/O: HELIOS Jr (default: 1x DisplayPort 1.4, 1x HDMI 2.0, optional SFP+ input not included; outputs: 8x 1G copper SFP via RJ-45), Standard 4K (1x DisplayPort 1.4, 1x HDMI 2.0, 1x 12G-SDI input, up to 4096x2160; outputs: 2x 10Gb Fiber SFP+), and Standard/HELIOS 8K (1x DisplayPort 1.4, 1x HDMI 2.0, 4x 12G-SDI inputs via SFP+ modules, up to 8K; outputs: 8x 10Gb Fiber SFP+). Documented ports here reflect the default/Standard 8K configuration (the configuration shown in the manufacturer's primary spec sheet and rear-panel diagram), which is the most complete and commonly referenced variant. HDMI and DisplayPort input cards are modular/swappable (e.g., could be 2xHDMI or 2xDP instead); SDI inputs are via 4 SFP+ cages that accept Megapixel 12G-SDI SFP+ modules (modeled here as sfp/bnc-equivalent inputs; connector list has no distinct \\\"SFP+ cage\\\" id so these are represented using bnc for the SDI signal path per the connector list's closest match, matching the sdi grade scale). Fiber SFP+ outputs (10Gb, single-mode LC-LC) are likewise modeled via the sfp connector id (fiber-lc is the physical LC connector on the cable; the device-side cage is SFP+, so \\\"sfp\\\" was chosen from the given list). Genlock/Sync (\\\"Sync\\\" on rear panel) accepts analog Black Burst or Tri-level sync via BNC; not bandwidth-graded per grading rules (analog sync, no grade applies) so grade omitted. LAN/\\\"Control\\\" port is a single 1x Gb Ethernet (RJ45) for the web UI/control, graded eth-1g. Power: single IEC C14 inlet (rocker switch + fuse holder), feeding internally redundant power supplies (not dual cords). An optional HDMI 2.1 input card exists but is not part of the default configuration, so omitted. HELIOS 8K \"Extreme IP Broadcast\" variant additionally offers a 100G QSFP SMPTE ST 2110 input in place of/alongside SDI — omitted here since it is a non-default configuration; noted for completeness. No USB ports exist on this device. Source used for narrative confirmation and rear-panel port labels/diagram: HELIOS Processing System User Guide (https://megapixelvr.com/downloads/HELIOS%20Processing%20System-User%20Guide.pdf) and HELIOS Quickstart Guide (https://megapixelvr.com/wp-content/uploads/2024/10/HELIOS-Quickstart.pdf), both hosted on the manufacturer's own site.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 2",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 3",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 4",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 5",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 6",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 7",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Out 8",
+      "direction": "output",
+      "connector": "sfp"
+    },
+    {
+      "name": "Sync",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c5",
+      "note": "IEC C14 inlet (device-side socket); rocker switch + fuse holder integrated"
+    }
+  ]
+}

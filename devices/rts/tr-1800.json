@@ -1,0 +1,38 @@
+{
+  "manufacturer": "RTS",
+  "model": "TR-1800",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://products.rtsintercoms.com/binary/F01U343141.pdf",
+  "confidence": "high",
+  "notes": "TR-1800 is the wireless beltpack of the RTS ROAMEO DECT-based wireless intercom system (paired with an AP-1800 access point, not included here). It is a belt-worn device, not rack-mountable, so rackUnits is omitted. Physical I/O per the official Bosch/RTS User Manual (F.01U.343.141, Rev V04, 2023-12), section 2.2.1.2 Connections and section 11.1 Technical data: (1) Headset connector, 5-pin female XLR (pin1 ground, pin2 mic, pin3 headphone+, pin4/5 headphone-) supporting dynamic or electret mics; (2) 3.5mm auxiliary/headset jack — accepts mono TS or stereo TRS as an audio-input-only aux jack (fed only to local headset, e.g. MP3-type input), or TRRS for a phone-style headset (mic with +5VDC bias); modeled here as one bidirectional 3.5mm port with connector \"trs-3.5\" (closest match; device also accepts TRRS) since it can carry both mic input and headphone output depending on mode; (3) USB Type-A port labeled \"Firmware update jack\" — data only, explicitly \"No charging, just data\" per the controls diagram, so modeled as bidirectional (host/data) with no grade stated beyond USB 2.0-class pinout (4-pin: +5V/D-/D+/GND); omitted a grade since the manual does not state a USB version/speed — left blank per instructions. (4) In-beltpack charging jack — DC barrel 2.5mm x 5.5mm, center positive, accepts 12VDC @ 400mA, labeled \"Charge jack\" on the case. No mains AC inlet exists on the beltpack itself (charging is low-voltage DC only; a separate external charger supplies the DC). No grade applies to any port: XLR/3.5mm are analog audio (ungraded), USB has no stated speed, and DC barrel is power (ungraded per rules). Category set to \"audio\" and type to \"Wireless mic\" as the closest fit in the given enum for a wireless intercom beltpack transceiver; it does not perfectly describe an intercom beltpack (which has 4 duplex talk/listen channels, not a microphone), noted here as a caveat. Confidence is high because the manufacturer's own user manual provides an explicit pinout table for every physical connector.",
+  "ports": [
+    {
+      "name": "Headset Connector",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "5-pin female XLR. Pin1 ground, Pin2 mic, Pin3 headphone+, Pin4 headphone-, Pin5 headphone- (tied to pin4). Supports dynamic or electret-auto-detect mic, headphone impedance 51-2000 ohm."
+    },
+    {
+      "name": "Auxiliary/Headset Jack",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "accepts": [
+        "ts-6.35"
+      ],
+      "note": "3.5mm jack. As TS/TRS aux input: Tip and Ring1 = audio input (fed only to local headset), Ring2 = ground. As TRRS headset mode: Tip = headphone-, Ring1 = headphone+, Ring2 = ground, Sleeve = mic with +5VDC bias (electret only)."
+    },
+    {
+      "name": "Firmware Update Jack (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A, data only (no charging). Used for firmware upgrades and custom boot splash graphics. Pin1 +5V (only powered during firmware download), Pin2 Data-, Pin3 Data+, Pin4 Ground. No USB speed/version stated in the manual."
+    },
+    {
+      "name": "Charge Jack",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "In-beltpack charging jack, 2.5mm x 5.5mm plug, center positive. Accepts 12VDC @ 400mA from an external charger/power supply."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "AT4040",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://docs.audio-technica.com/us/at4040_submit.pdf",
+  "confidence": "high",
+  "notes": "Passive studio condenser microphone with a single physical connector: the 3-pin XLRM audio output, which also carries 48V phantom power (no separate power port — phantom power is delivered over the XLR output pins from the connected mixer/interface, so no dc-barrel/iec port applies). No grade applies (analog XLR audio is ungraded per the connector-grade rules). Not rack-mountable (handheld/stand-mounted studio mic, so rackUnits omitted). Confirmed consistently across the manufacturer spec sheet PDF (docs.audio-technica.com/us/at4040_submit.pdf), the official product page (audio-technica.com/en-us/at4040), and retailer/reference sources (B&H, ZenPro Audio) — all agree on 3-pin XLRM output, 100 ohm impedance, 48V DC/4.2mA phantom requirement. Do not confuse with the AT4040USB variant, which adds a USB-C port — this entry is for the standard analog AT4040 only.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Integral 3-pin XLRM-type output connector; Lo-Z balanced, Pin 2 hot, Pin 1 ground. Requires 48V DC phantom power (4.2 mA typical) supplied via this same connector from a mixer/interface/phantom supply — no separate power inlet."
+    }
+  ]
+}

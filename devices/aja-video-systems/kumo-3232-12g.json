@@ -1,0 +1,69 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "KUMO 3232-12G",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.aja.com/products/kumo-3232-12g/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: AJA's own spec sheet PDF (aja.com/products/kumo-3232-12g/spec-sheet.pdf), cross-checked against the product page. The unit is a 2RU frame with 32 physical BNC input connectors and 32 physical BNC output connectors (all identical, auto-sensing up to 12G-SDI) — represented above as one aggregated input port and one aggregated output port rather than 64 near-duplicate entries; label them 1-32 per silkscreen if expanding. The two Reference BNCs form a looping (non-terminating) pair, not separate signal paths — modeled as In/Loop. Power is DC-in only on the chassis (dual redundant 4-pin Molex, 10-14VDC, 24W typical/25.2W max each); the connector list has no exact 4-pin locking DC entry, so \"dc-barrel\" was used as the closest match for an externally-supplied DC input — the unit ships with a universal 100-240VAC external adapter (60W) that plugs into wall power, with the chassis-side connector being 4-pin Molex, not a coaxial barrel jack. The \"USB\" port is documented in AJA's own text as \"Mini-USB\" (not Micro-USB); \"usb-micro\" was used as the nearest available id since \"mini-usb\" is not in the provided connector list — this is IP-configuration only, not a data/host port, so no USB grade was set. No HDMI, analog audio, or fiber ports exist on this model (SDI-only router). RS-422 pinout (DB-9 female) is fully documented in the spec sheet if needed. All grade values map correctly to their connector types (sdi-12g on the BNC SDI I/O, eth-1g on the RJ-45 LAN); no grade was set on Ref In/Loop, USB, RS-422, or the DC power ports per instructions.",
+  "ports": [
+    {
+      "name": "SDI In 1-32",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "32x BNC inputs; 12G/6G/3G/1.5G/SD-SDI auto-select, SMPTE-259/292/424/2081/2082. Modeled as one representative port; physically 32 discrete BNC connectors labeled 1-32."
+    },
+    {
+      "name": "SDI Out 1-32",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "32x BNC outputs; 12G/6G/3G/1.5G/SD-SDI auto-select, noninverting. Modeled as one representative port; physically 32 discrete BNC connectors labeled 1-32."
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference input, looping/non-terminating, accepts blackburst (SD) or tri-level sync (HD). Two BNC connectors form a loop-through pair (Ref In / Ref Loop)."
+    },
+    {
+      "name": "Ref Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through output of the reference input pair (non-terminating passthrough), not an independent SDI signal path."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Ethernet; embedded web server, Bonjour, AJA KUMO control panel support, basic Grass Valley Native Protocol."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Labeled 'USB' on rear panel; physical connector is Mini-USB (5-pin) per spec sheet text, used only for IP address configuration via AJA eMini-Setup. Closest available connector id used since 'mini-usb' is not in the allowed list; no data-rate grade applies (config-only interface)."
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DB-9 female, RS-422 remote control, basic Grass Valley Native Protocol support."
+    },
+    {
+      "name": "PS 1",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Redundant DC power input 1. Actual connector is a 4-pin locking Molex, 10-14VDC regulated (closest allowed connector id used: dc-barrel; not a true barrel jack). Powered by included external AC-DC adapter (100-240VAC, 50/60Hz, 60W)."
+    },
+    {
+      "name": "PS 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Redundant DC power input 2 (identical to PS 1), for the optional second external AC adapter (KUMO-PWR, sold separately)."
+    }
+  ]
+}

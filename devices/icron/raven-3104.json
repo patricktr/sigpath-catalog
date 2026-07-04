@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Icron",
+  "model": "Raven 3104",
+  "category": "network",
+  "type": "Extender",
+  "sourceUrl": "https://www.syscomtec.com/_produktbereich/source/Artikel/Artikel%208190/Icron%20USB%203-2-1%20Raven%203104%20Pro%20Data%20sheet.pdf",
+  "confidence": "high",
+  "notes": "This is a 2-piece point-to-point USB extender system: a LEX (Local Extender, host side) and a REX (Remote Extender, device side), connected by a single CAT 6a/7 cable up to 100m/330ft. All ports from both units are listed here together, with unit noted in each port's name. Icron also sells an updated \"Raven 3104 Pro\" variant with identical physical port layout (USB now marketed as USB 3.2 Gen 1 instead of 3.1 Gen 1, same 5Gbps SuperSpeed signaling, same connectors/power specs) — treat this record as covering both since the I/O is unchanged. LEX power input is 24V 1A DC via locking barrel jack (bundled external AC adapter, IEC power cord region-specific); REX power input is 24V 2.71A DC via locking barrel jack (also bundled external AC adapter). Both units' \"LAN\" RJ45 ports are 10/100/1000 Ethernet pass-through (not graded here as eth-1g because Icron's own datasheet just labels the pass-through port \"100/1000\" without full triple-speed confirmation on the earlier base model, though the Pro datasheet explicitly reads \"100/1000 Ethernet channel\"); graded as eth-1g since 1000Mbps is the top rate documented. The \"LINK\" RJ45 port is a proprietary point-to-point link between LEX and REX carrying the extended USB signal over the CAT6a/7 run — not a general-purpose Ethernet port, so left ungraded. Rack units omitted; these are small desktop/surface-mount enclosures (137.3 x 232.1 x 33.0 mm), not rack-mountable (optional wall/surface mounting bracket kit available, not rack ears).",
+  "ports": [
+    {
+      "name": "LEX USB (Host)",
+      "direction": "input",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3 Type B receptacle; connects to host computer"
+    },
+    {
+      "name": "LEX LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 Ethernet 100/1000 pass-through port"
+    },
+    {
+      "name": "LEX LINK",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ45 point-to-point link port to REX over CAT 6a/7 (proprietary USB extension signal, not generic Ethernet)"
+    },
+    {
+      "name": "LEX DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24V 1A DC locking jack; powered by included international locking AC adapter"
+    },
+    {
+      "name": "REX USB 1",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3 Type A receptacle for extended USB devices; up to 1.2A/6W available"
+    },
+    {
+      "name": "REX USB 2",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3 Type A receptacle for extended USB devices; up to 1.2A/6W available"
+    },
+    {
+      "name": "REX USB 3",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3 Type A receptacle for extended USB devices; up to 1.2A/6W available"
+    },
+    {
+      "name": "REX USB 4",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3 Type A receptacle for extended USB devices; up to 1.2A/6W available"
+    },
+    {
+      "name": "REX LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 Ethernet 100/1000 pass-through port"
+    },
+    {
+      "name": "REX LINK",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ45 point-to-point link port to LEX over CAT 6a/7 (proprietary USB extension signal, not generic Ethernet)"
+    },
+    {
+      "name": "REX DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24V 2.71A DC locking jack; powered by included international locking AC adapter"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Williams AV",
+  "model": "SoundPlus T3 (IR T3-00)",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://williamsav.com/wp-content/uploads/2024/10/SoundPlus-T3-infrared-Transmitter-Spect-Sheet-SEL-IRT3-1024.pdf",
+  "confidence": "high",
+  "notes": "This is a medium-area infrared (IR) transmitter for assistive listening / language interpretation / audio description, not a mainstream video AV component - no \"type\" enum value fits well, so \"Other\" was used and category set to \"audio\" as the closest fit. Physical connectors confirmed from the official Williams AV spec sheet (SEL-IRT3-1024) and the official POE KT1/KT2 wiring guide (TCH-060A), which shows the rear-panel layout: DC barrel power input, two 3-pin Euroblock/Phoenix-style line-level audio inputs (Ch A, Ch B), and a 3-pin Euroblock RS-232 control port (TX/RX/GND) on the unit itself - a DB9 connector only appears at the far end of an optional WCA133 adapter cable, not on the device. A front-panel 3.5mm stereo mic input is also present. No physical RJ45/Ethernet jack exists on the unit - PoE (48VDC via 2 spare pairs of a passive CAT5 run, using WCA131/132/133 adapter cables) is delivered through the same Euroblock power/audio/RS-232 terminals via a breakout adapter, not through a network jack, so no rj45 port was added. No grades apply since this device has no HDMI/SDI/DisplayPort/USB/Ethernet-graded ports. IR emitter output is a proprietary optical infrared radiator, not a listed connector-list type, so it was omitted from ports (it is not a wired connector). Dimensions are desktop-style (9.0 x 3.8 x 1.4 in), not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "CH A Line Level Audio In",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH B Line Level Audio In",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control RS-232 (TX/RX/GND)",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

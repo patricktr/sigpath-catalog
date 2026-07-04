@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Teranex Mini HDMI to SDI 12G",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.fullcompass.com/common/files/34903-TeranexMiniHDMItoSDI12GProductSpecifications.pdf",
+  "confidence": "high",
+  "notes": "Teranex Mini is a family of a dozen small-format converters sharing a common chassis; this entry covers the \"HDMI to SDI 12G\" variant (model code W-TERAMIN-02), the most representative model, per Blackmagic's own tech-specs and product PDF. Rear panel has 2 x 12G-SDI BNC outputs (reclocked, auto-switching SD/HD/2K/4K, both carrying identical signal), 1 x HDMI 2.0 Type A input, Ethernet RJ45 (also PoE+ powered, 10/100/1000 - exact speed not stated so grade omitted), IEC C14 power inlet (90-240V AC), and 2 x XLR3 combo jacks labeled \"L - Analog/AES-EBU\" and \"R - Analog/AES-EBU - T/C\" — each physical XLR is switchable between balanced analog stereo audio (2ch total), AES/EBU digital audio (4ch total across the pair), and the right jack alone can be set to accept LTC timecode input instead. Front panel adds a USB port (type/speed not specified by Blackmagic; modeled as usb-a since exact connector shape isn't detailed) used for firmware updates/config alongside 8 mini DIP switches. An optional detachable Smart Panel (LCD + rotary knob) is a front accessory, not a fixed port. No genlock/reference BNC on this model. Desktop unit, not natively rack-mountable (optional Blackmagic Universal Rack Shelf holds several side by side), so rackUnits omitted. HDMI grade set to hdmi-2.0 per spec (\"1 x HDMI 2.0 type A\"). SDI grade set to sdi-12g since outputs are explicitly \"2 x 12G-SDI\" (auto-switching down to SD/HD/3G/6G but rated at 12G). Ethernet grade omitted — spec text just says \"Ethernet\" with no speed stated on this specific model's page (other Teranex family members mention 10G explicitly, this one does not).",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Loop/duplicate of SDI OUT 1"
+    },
+    {
+      "name": "L - Analog/AES-EBU",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Switchable balanced analog line audio or AES/EBU digital audio input"
+    },
+    {
+      "name": "R - Analog/AES-EBU - T/C",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Switchable balanced analog line audio, AES/EBU digital audio, or LTC timecode input"
+    },
+    {
+      "name": "Ethernet PoE+",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Used for remote control/config and firmware updates; also accepts 48V PoE+ to power the unit"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel port for firmware updates and configuration; exact USB connector shape/speed not specified by Blackmagic"
+    },
+    {
+      "name": "Power Connector",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 90-240V AC universal power supply"
+    }
+  ]
+}

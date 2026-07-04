@@ -1,0 +1,82 @@
+{
+  "manufacturer": "Symetrix",
+  "model": "Radius NX 12x8",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.sisme.com/media/4542/symetrix_radiusnx_12x8_s.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: Symetrix official Radius NX 12x8 Data Sheet (hosted copy via sisme.com, matches manufacturer symetrix.co content). Rear-panel layout per datasheet: IEC power inlet; ARC port (RJ45, power+RS-485 to ARC wall panels); A/B Ethernet ports (1000Base-T RJ45, Composer/control/third-party IP control, auto-crossover); C/D Dante ports (1000Base-T RJ45, redundant primary/secondary, 64x64/128ch Dante audio); USB Host (unused/reserved per rear panel silkscreen, not detailed in text - omitted); USB Audio (Type B, USB 2.0, class 1.0 legacy); RS-232 (3-pin serial, Tx/Rx/GND, wired straight-through - connector form not explicitly stated as DB9 or terminal block in datasheet text, rear-panel diagram shows it in the small connector cluster with USB; modeled as rs232 connector id, physical form likely a captive/mini connector - treat as medium-confidence on exact physical connector shape though electrical spec is confirmed); Factory Reset switch (not a signal port, omitted); Logic Outputs (8, terminal block, common-ground pins, 5V pulled-high/0V active, drives LEDs directly, not a standard signal connector in the provided enum so modeled as euroblock); External Control Inputs (4, terminal block, 0-3.3VDC, used as 4 potentiometer or 8 switch inputs, modeled as euroblock); Analog Line Outputs (8, balanced, 3.81mm terminal block/euroblock, +4dBu nominal, +24dBu max); Expansion Card Slot (accepts optional I/O cards - VoIP, analog telephone, digital I/O, mic/line, AEC, analog output, or 8x8 USB card - not a fixed physical connector itself, omitted as port); Analog Mic/Line Inputs (12, balanced, 3.81mm terminal block/euroblock, switchable mic/line, +48VDC phantom power per input). Unit is 1U rack-mountable, 100-240VAC universal power via detachable IEC cord. No SDI/HDMI/video I/O - this is an audio DSP only. Logic I/O and control-input ports have no listed connector-family match beyond euroblock in the allowed enum; used euroblock as closest fit since these are captive screw/pluggable terminal blocks matching the analog audio I/O style shown in the rear panel photo.",
+  "ports": [
+    {
+      "name": "Power (IEC)",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "ARC",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "A Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "B Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "C Dante",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "D Dante",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin (Tx/Rx/GND) serial for third-party accessory control, 57.6 kbaud default; exact physical connector shell not explicitly specified in data sheet"
+    },
+    {
+      "name": "Logic Outputs",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 logic outputs + 4 paired common-ground pins, 0V active / 5V inactive, drives LEDs directly"
+    },
+    {
+      "name": "External Control Inputs",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "4 analog control inputs (0-3.3VDC), usable as 4 potentiometer or 8 switch inputs"
+    },
+    {
+      "name": "Analog Line Outputs",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 balanced line-level outputs, 3.81mm terminal blocks"
+    },
+    {
+      "name": "Analog Mic/Line Inputs",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12 balanced switchable mic/line inputs, 3.81mm terminal blocks, +48VDC phantom power per input"
+    }
+  ]
+}

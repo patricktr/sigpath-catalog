@@ -1,0 +1,127 @@
+{
+  "manufacturer": "Black Box",
+  "model": "ACU5052A (ServSwitch Wizard SRX, Dual VGA)",
+  "category": "converter",
+  "type": "Extender",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.42u.com/pdf/Black%20Box/ACU5052A/ACU5052A-Manual.pdf",
+  "confidence": "medium",
+  "notes": "This is a two-piece KVM extender kit (Local unit + Remote unit), not a single chassis; ports below are split accordingly. Local unit (at the PC): 2x HD15 VGA (1x primary video-in from PC, 1x primary video-out feedthrough to local monitor), plus for the Dual-VGA ACU5052A variant 2 more HD15 (secondary video-in + secondary video-out feedthrough) = 4 VGA total; 1x USB Type-B (upstream to PC); 2x 3.5mm audio jacks (line-in from PC audio-out, and local speaker-out feedthrough); 1x DB9 female RS232 (from PC serial port); 2x RJ45 (LINK1/LINK2 CATx runs to remote unit, since dual-VGA variant uses two link cables); 1x DC barrel power input (5VDC/2.5A external supply, optional if USB bus power is insufficient), with that external supply itself fed by an IEC C13/C14 power cord. Remote unit (at the user): 2x HD15 VGA female (primary + secondary monitor outputs); 4x USB Type-A female (downstream to keyboard/mouse/USB devices); 1x 3.5mm audio jack (speaker output); 1x DB9 male RS232 (to serial device); 2x RJ45 (LINK1/LINK2 to local unit); 1x DC barrel power input (5VDC/2.5A external supply -> IEC cord). Power specs (autosensing 100-240VAC in, 5VDC/2.5A out, PS649-R3 supply) are sourced from a Markertek/kvm-switches-online spec table (secondary source) since Black Box's own product page returned HTTP 403 to automated fetch; DB9/HD15/RJ45 counts and layout were confirmed directly from Black Box's official ACU5052A/ACU5051A User Guide (primary source, hosted copy). Rack unit is nominal desktop-size units that can be rack-mounted 8-wide in 2U via an optional chassis (ACU5000A) — not natively 1U rack gear; treat rackUnits as approximate/optional. No connector on this device is bandwidth-graded per the given scale (VGA/RS232/audio/USB1.1-2.0/RJ45-as-proprietary-CATx-link are all omitted from grade), so no grade fields are set except USB where 2.0 is confirmed by the manual — the RJ45 ports here carry a proprietary CATx signal-extension protocol, not standard Ethernet, so an eth-* grade would be misleading and was intentionally omitted.",
+  "ports": [
+    {
+      "name": "Video In 1 (Primary)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Video Out 1 (Primary, local feedthrough)",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Video In 2 (Secondary)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Video Out 2 (Secondary, local feedthrough)",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "USB (to PC)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio In (from PC)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (local speaker feedthrough)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS232 (to PC serial port)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Link 1 (To Remote)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Link 2 (To Remote)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Power (Local)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "Video Out 1 (Primary monitor)",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Video Out 2 (Secondary monitor)",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio Out (speakers)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS232 (to serial device)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Link 1 (To Local)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Link 2 (To Local)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Power (Remote)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

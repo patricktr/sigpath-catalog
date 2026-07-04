@@ -1,0 +1,99 @@
+{
+  "manufacturer": "Sony",
+  "model": "BRC-AM7",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.avc-group.com/assets/products/Sony/BRC-series/sony-ds-brc_am7.pdf",
+  "confidence": "high",
+  "notes": "Desktop/ceiling/pole-mount PTZ camera, not rack-mountable (omit rackUnits in catalog). Primary source: Sony's own spec-sheet PDF (avc-group.com-hosted, but content/format is Sony's official pro.sony data sheet, copyright Sony Corporation) plus cross-checked against Sony's official online Help Guide specifications page (helpguide.sony.net/rc/brc-am7) which matches exactly. Direct fetch of pro.sony/ue_US/products/ptz-network-cameras/brc-am7 returned HTTP 403 so the PDF data sheet and Help Guide were used instead. HDMI version (2.0) is inferred, not explicitly stated by Sony -- spec only lists max resolution/frame rate (3840x2160p59.94), which requires HDMI 2.0 bandwidth; marked medium-confidence in that one field even though overall confidence is high. The two RJ-45 VISCA remote-control ports are physically RJ-45 jacks carrying RS-422 serial protocol (not Ethernet data), so no eth-* grade was applied; connector kept as rj45 per the physical jack rather than rs422. The RJ-45 OPTION tally port is GPIO tally I/O, not IP networking, so it is marked bidirectional with no Ethernet grade. Audio has 2x XLR3 (line/mic/mic+48V) plus a 3.5mm stereo mini-jack mic input. Power: XLR4-DC (11-17V) or PoE++ (IEEE802.3bt Type 4 Class 8, 41.1-57.0V) -- only the physical DC connector is listed as a port per instructions (PoE is delivered via the LAN RJ-45, already listed).",
+  "ports": [
+    {
+      "name": "12G-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Also supports 6G-SDI/3G-SDI (Level A/B)/HD-SDI"
+    },
+    {
+      "name": "3G-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Also supports HD-SDI"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type-A connector; outputs up to 3840x2160p59.94. Sony spec sheet does not state HDMI version explicitly; inferred from 4K60 output capability"
+    },
+    {
+      "name": "Optical Output (SFP+)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "SFP+ compliant optical output carrying the same signal as the 12G-SDI output; output only"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Line/Mic/Mic+48V selectable"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Line/Mic/Mic+48V selectable"
+    },
+    {
+      "name": "Audio In (Mic)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, plug-in power compatible"
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1.0 Vp-p, 75 ohm reference sync input; not a data-graded connection"
+    },
+    {
+      "name": "TC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Timecode input only (labeled TC Input/TC Output but input-only per spec)"
+    },
+    {
+      "name": "Network (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BASE-T; also accepts PoE++ (IEEE802.3bt Type 4 Class 8) for power"
+    },
+    {
+      "name": "Network (OPTION)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Red Tally I/O over RJ-45; GPIO tally signaling, not an IP data port"
+    },
+    {
+      "name": "Remote Control IO / Green Tally IO (VISCA IN)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RS-422 VISCA control input over RJ-45"
+    },
+    {
+      "name": "Remote Control IO / Green Tally IO (VISCA OUT)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RS-422 VISCA control output over RJ-45"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "XLR-type 4-pin male, 11-17V DC, 12A max"
+    }
+  ]
+}

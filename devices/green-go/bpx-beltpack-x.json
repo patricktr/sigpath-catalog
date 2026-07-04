@@ -1,0 +1,27 @@
+{
+  "manufacturer": "Green-GO",
+  "model": "BPX (Beltpack X)",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://manual.greengoconnect.com/en/devices/bpx/",
+  "confidence": "high",
+  "notes": "No rack mounting (portable beltpack, worn on belt clip; 46 x 95 x 119 mm, 261 g). Device has exactly two physical connectors: 1x Neutrik EtherCON (RJ45-compatible) for combined data+PoE power, and 1x Neutrik XLR4-M for headset (mic in + audio out combined). Network grade confirmed as 10/100 Mbps (Fast Ethernet, eth-100m) explicitly per manufacturer manual - this is NOT gigabit. No separate AC/DC power inlet exists; power arrives exclusively via PoE on the EtherCON port. The XLR4 headset jack is technically a signal connector (mic+audio), but the provided connector enum's only 4-pin-XLR option is \"xlr4-dc\" (DC-power-flavored) - selected as closest id per instructions, flagged here since it is not actually a DC power port. Cross-checked against manufacturer product page (greengocom.com/products/bpx) and UK retailer Canford listing (\"ethercon RJ45\"), both consistent.",
+  "ports": [
+    {
+      "name": "Network/PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "ethercon"
+      ],
+      "grade": "eth-100m",
+      "note": "Neutrik EtherCON (RJ45-based); serves as both data network connection and sole power input via PoE (IEEE 802.3af, 48-56 Vdc)"
+    },
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "Neutrik XLR4-Male headset connector combining mic input (pins 1&2, unbalanced, up to 2.5V bias, +30 to +60 dB gain) and headset audio output (pins 3&4, 0 dBu nominal / +20 dBu max, 120 ohm output driving 32-600 ohm headsets). The permitted connector list has no generic signal XLR4 id; xlr4-dc (normally DC-power-coded) is the closest available match for a 4-pin XLR - it is NOT used for DC power on this device."
+    }
+  ]
+}

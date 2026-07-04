@@ -1,0 +1,130 @@
+{
+  "manufacturer": "Linea Research",
+  "model": "48M20",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://linea-research.co.uk/wp-content/uploads/LR%20Download%20Assets/Datasheets%20and%20Brochures/48M%20Brochure.pdf",
+  "confidence": "high",
+  "notes": "Primary source: Linea Research official 48M series datasheet/brochure PDF (E&OE AUGUST2019 V1.7), cross-checked against linea-research.co.uk product page and multiple AV retailers (Full Compass, Audio Life, GoKnight). The 48M20 is the flagship 8-channel model in the 48M family (48M03/48M06/48M10/48M20), sharing one chassis and rear-panel layout across the range - only output power differs. Speaker outputs: 8 amplifier channels are delivered via 4 physical Speakon NL4 connectors (2 channels per connector, standard NL4 pinout 1+/1- and 2+/2-); each can also be configured for bridged mono operation per pair. \"Aux Port\" is visible on the rear-panel diagram (small connector near Dante/Ethernet block, labeled \"AUX PORT\") but its exact connector type/pinout is not detailed in the datasheet text - mapped to euroblock as the closest fit; treat with lower confidence than the rest of the port list. Dante ports are a factory-fitted option, not present on every unit as shipped (non-Dante base units lack the two RJ45 Dante ports but retain the separate Ethernet control port). No AES3/Dante/Ethernet ports carry a stated line-rate spec beyond \"network\" in the datasheet, so eth-1g grade on RJ45 ports is inferred (standard for Dante-capable devices of this era, not explicitly confirmed in the source). Mains connector confirmed via Neutrik as powerCON (32A), single-phase, non-IEC locking connector - closest available id in the enum is \"powercon\". Enclosure: 19\" 2U (88mm) rack, 357mm deep, 12.5kg net weight.",
+  "ports": [
+    {
+      "name": "Analogue In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Link 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "male XLR link/thru of analogue input 1"
+    },
+    {
+      "name": "Analogue Link 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "male XLR link/thru of analogue input 2"
+    },
+    {
+      "name": "Analogue Link 3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "male XLR link/thru of analogue input 3"
+    },
+    {
+      "name": "Analogue Link 4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "male XLR link/thru of analogue input 4"
+    },
+    {
+      "name": "AES3 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "dual-channel AES3, transformer isolated, 24kHz-192kHz auto-locking"
+    },
+    {
+      "name": "AES3 Link",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "male XLR link with active AES3 regeneration; auto bypass when amp is powered down"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "factory-fitted option; Dante/AES67 digital audio"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "factory-fitted option; Dante/AES67 redundant network"
+    },
+    {
+      "name": "Ethnet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "control network port for system operation/monitoring, separate from Dante ports"
+    },
+    {
+      "name": "Aux Port",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "rear-panel auxiliary control connector; exact pin/connector type inferred from small multi-pin socket on rear panel diagram"
+    },
+    {
+      "name": "Relay",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Phoenix pluggable terminal block; volt-free changeover relay and contact closure inputs for system status alarms"
+    },
+    {
+      "name": "Output 1&2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4; carries channels 1 (1+/1-) and 2 (2+/2-), or bridged"
+    },
+    {
+      "name": "Output 3&4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4; carries channels 3 and 4, or bridged"
+    },
+    {
+      "name": "Output 5&6",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4; carries channels 5 and 6, or bridged"
+    },
+    {
+      "name": "Output 7&8",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik Speakon NL4; carries channels 7 and 8, or bridged"
+    },
+    {
+      "name": "Mains In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON 32A locking AC inlet; 85-240V auto-ranging, 47-63Hz, up to 20kW max at 100-230V"
+    }
+  ]
+}

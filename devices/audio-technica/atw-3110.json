@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "ATW-3110",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://docs.audio-technica.com/us/3000ser_om.pdf",
+  "confidence": "medium",
+  "notes": "The ATW-3110 is a 2nd-generation 3000 Series UHF UniPak wireless system comprising the ATW-R310 true-diversity receiver and the ATW-T310 bodypack transmitter (paired with a lavalier/headworn mic, sold as e.g. ATW-3110b, depending on suffix/region). Ports listed are the receiver's rear panel and the transmitter's single I/O jack. Receiver: balanced XLRM output and unbalanced 1/4\" (6.35mm) TS phone output are simultaneous, not switchable. Two BNC antenna inputs support true-diversity reception and can pass 12VDC bias for an optional active antenna/booster (e.g. ATW-B80) - modeled here as antenna signal inputs, not graded (no SDI/video bandwidth applies). DC power input is an external AC-to-12VDC adapter (barrel-style DC jack); exact barrel diameter not published. Transmitter input is a proprietary locking 4-pin connector (pin1 GND, pin2 INST, pin3 MIC, pin4 +5V DC bias) - not a standard XLR3/TRS; mapped to xlr4-dc as the closest listed 4-pin locking+DC-bias connector type, but the physical shell is a smaller locking connector (not full-size XLR), so treat with caution. No rack-mount ears are permanently attached; a rack-mount kit for pairing two half-rack units into 1U is an included/optional accessory, so rackUnits is omitted since the receiver ships as a half-rack desktop-style unit. Frequency band/channel specifics vary by region suffix and were not needed for I/O. Grades omitted throughout since none of the ports (XLR, TS, BNC antenna, DC power, locking 4-pin) fall on a gradeable connector scale.",
+  "ports": [
+    {
+      "name": "Audio Out (Balanced)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out (Unbalanced)",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "Input (Mic/Instrument)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Proprietary locking 4-pin transmitter input jack (pin1 GND, pin2 INST, pin3 MIC, pin4 +5V DC bias); closest standard connector mapping, not a full-size XLR shell."
+    }
+  ]
+}

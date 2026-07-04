@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Extreme Networks",
+  "model": "X440-G2-24t-10GE4",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://products.b-cdn.net/Brochures/Extreme_X440-G2_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: Extreme Networks official \"ExtremeSwitching X440-G2\" datasheet PDF (products.b-cdn.net/Brochures/Extreme_X440-G2_Datasheet.pdf), cross-checked against documentation.extremenetworks.com port/slot page. The 4 front-panel 1GBASE-X SFP ports are combo ports paired with RJ45 ports 21-24 (only one of each pair active at a time) — modeled here as the RJ45 ports' \"accepts\" plus a separate SFP entry is avoided by noting the combo relationship in this note rather than duplicating ports. The 4 rear-panel 1GBASE-X SFP ports are unpopulated and upgradeable to 10GbE SFP+ via software license (datasheet: \"Maximum 10Gb SFP+ Ports: 4 via license\") — graded here as sfp (bidirectional, no fixed grade since base is 1G and licensable to 10G; left ungraded per instructions since spec doesn't state a single fixed version, it's dual-capable 1G/10G depending on license and installed optic). RPS port is a coaxial barrel connector for an external Redundant Power Supply (RPS2000/RPS150), separate from primary AC input; modeled as dc-barrel, bidirectional-input for backup power. Primary power is a fixed internal supply with IEC 320 C14 inlet accepting an IEC 320 C13 cord (100-240 VAC, 50-60Hz). Console port is RJ45 (RS-232 serial over RJ45 with RTS/CTS), modeled as rj45 connector carrying RS-232 signaling (accepts rs232 noted). No USB port is listed for this specific 24t-10GE4 model in the datasheet's port table (USB 2.0 front-panel port is mentioned in general X440-G2 documentation for other/newer variants but not listed under this model's external ports/slots table, so omitted for accuracy).",
+  "ports": [
+    {
+      "name": "1-16 (10/100/1000BASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "17-20 (10/100/1000BASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "21-24 (10/100/1000BASE-T, Combo)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Combo pair with front-panel SFP ports 1-4; only one media active per pair"
+    },
+    {
+      "name": "Combo SFP 1-4 (Front Panel)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GBASE-X SFP, unpopulated; combo-shared with RJ45 ports 21-24"
+    },
+    {
+      "name": "Uplink SFP+ 1-4 (Rear Panel)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1GBASE-X SFP, unpopulated; upgradeable to 10GbE SFP+ via software license (dual-rated 1G/10G depending on license and optic, so no single fixed grade assigned)"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "Serial console port (RJ-45) with RTS/CTS modem control"
+    },
+    {
+      "name": "Management (10/100/1000BASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Out-of-band management port"
+    },
+    {
+      "name": "RPS",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Coaxial barrel connector for external Redundant Power Supply (RPS150/RPS2000), backup to internal PSU"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Fixed internal power supply; IEC 320 C14 inlet, IEC 320 C13 cord, 100-240 VAC 50/60Hz"
+    }
+  ]
+}

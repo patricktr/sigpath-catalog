@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXW6",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://pubs.shure.com/view/guide/MXW/en-US.pdf",
+  "confidence": "high",
+  "notes": "MXW6 is a battery-powered Microflex Wireless boundary microphone transmitter (available as MXW6/O omnidirectional, MXW6/C cardioid, and white variants MXW6W/O, MXW6W/C). It has only two physical connectors: a 1/8\" (3.5mm) earphone jack (dual-mono output, for monitoring a return/translation channel routed from the Audio Network Interface) and a USB 3.0 Type A \"charge connector\" used exclusively to dock with the Networked Charging Station (MXWNCS2/4/8) or SBC10-USB wall charger for charging the internal Li-ion battery — it is not a general-purpose USB data/host port, so no USB data grade is set. The internal microphone capsule is fixed/non-removable and is not a physical port. There is no separate DC barrel or mains power inlet; the unit is battery-only. Specs confirmed via the official Shure \"MXW User Guide\" (pubs.shure.com/view/guide/MXW/en-US.pdf), which contains the MXW6-specific spec block (dimensions 23 x 44 x 114 mm, weight 108 g, battery life up to 7-8 hours) plus the shared Transmitters spec block listing \"Headphone/Earphone Output: 3.5 mm (1/8\"), dual mono\" and \"Charge Connector: USB 3.0 Type A\". Desktop/tabletop unit, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Earphone Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) dual-mono output for monitoring a return channel (e.g., translated audio); will drive stereo phones"
+    },
+    {
+      "name": "Charge Connector",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "USB 3.0 Type A physical connector used solely for docking/charging via Networked Charging Station or SBC10-USB wall charger; not a data/host USB port"
+    }
+  ]
+}

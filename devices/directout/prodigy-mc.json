@@ -1,0 +1,63 @@
+{
+  "manufacturer": "DirectOut",
+  "model": "PRODIGY.MC",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.directout.eu/wp-content/uploads/2021/09/manual_prodigy_mc_e.pdf",
+  "confidence": "high",
+  "notes": "PRODIGY.MC is a fully modular mainframe: essentially all signal I/O (mic/line, AES3, MADI, Dante/RAVENNA/SoundGrid audio network, USB-network) is provided by field-installable cards, not the base chassis, so there is no single fixed \"as shipped\" signal port list — configurations vary per order. The ports listed above are the FIXED chassis connectors present on every unit regardless of card configuration (power, management network, legacy-control USB, headphone monitors, word clock). Card-slot connector types (not itemized as individual ports here because channel count/connector depends entirely on which module is ordered): 1x \"A\" slot for audio-network/MADI/USB modules (1x SFP cage + 2x RJ45, up to 128 ch, Dante/RAVENNA/SoundGrid); 2x \"B\" slots for single-port MADI modules (selectable SFP cage, SC multi/single-mode optical, or 75 ohm coaxial BNC, up to 64 ch each); 8x \"C\" slots for mic/line, AD/DA, or AES3 converter modules, each terminating in a DSUB-25 (AES59/\"Tascam\" pinout) socket carrying 8 balanced analog or 4-port AES3 channels. Total capacity with full population is 320 inputs / 324 outputs. GPIO is a single DSUB-9 female socket (2x GPI, 2x GPO) — mapped to the closest allowed connector id (rs232) since DSUB-9 isn't in the provided connector list; it is a control I/O, not a serial data port, so no grade applies. Word clock BNCs and headphone jacks are correctly gradeless (analog/clock signals, not bandwidth-graded connector types). Power: two independent, phase-redundant PSUs, each with its own IEC C13 inlet, 84-264V AC 47-63Hz, individually switched, each fused 250V/4A slow-blow x2. Rack size 2U (89mm H x 483mm W x 254mm D), approx. 10 kg. Sourced directly from DirectOut's official PRODIGY.MC User's Manual v2.5 (authoritative primary source); cross-checked against directout.eu/product/prodigy-mc/ and retailer listings (Sweetwater, Synthax UK, Dale Pro Audio) which corroborate slot/channel counts.",
+  "ports": [
+    {
+      "name": "PSU 1",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "PSU 2",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a DSUB-9 socket (female) carrying 2x GPI + 2x GPO MOSFET-switch lines, not an RS-232 serial port; rs232 chosen as closest available D-sub connector id since DSUB-9 is not in the allowed connector list."
+    },
+    {
+      "name": "PHONES 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Front-panel headphone monitor output, 6.3 mm jack, max +18 dBu."
+    },
+    {
+      "name": "PHONES 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel headphone monitor output, 3.5 mm jack, max +12 dBu."
+    },
+    {
+      "name": "WCK OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75 ohm coaxial, termination switchable; also accepts AES11/AES3 DARS reference."
+    }
+  ]
+}

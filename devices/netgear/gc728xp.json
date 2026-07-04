@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Netgear",
+  "model": "GC728XP",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.netgear.com/images/Products/Switches/InsightManagedSmartCloudSwitches/Gigabit10GSFP/GC728X-GC728XP-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Specs sourced from Netgear's official combined GC728X/GC728XP datasheet (DS-GC728X/GC728XP-0, 2018), which lists ports for both models in one table. Only GC728XP-specific data used (PoE+ 24 ports/390W budget, 2 fans). Dimensions 440x224x44mm (17.3x8.8x1.7in) confirm 1U rackmount form factor (desktop-capable via included feet). The two \"Gigabit SFP\" ports and two \"10G SFP+\" ports are each dedicated (not combo/shared with copper ports) per the datasheet's \"Dedicated\" notation. USB port speed/version and exact AC inlet connector variant (C13 vs C14) are not explicitly stated in the datasheet — connector type inferred as standard USB-A and IEC power inlet based on standard practice for this switch class; confidence remains high overall since all port counts/types and grades are explicitly confirmed in the manufacturer datasheet.",
+  "ports": [
+    {
+      "name": "1-24 (RJ-45 PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x 10/100/1000BASE-T copper ports; all support PoE+ (IEEE 802.3af/at), 390W total PoE budget"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 1000BASE-X Gigabit SFP fiber uplink port"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 1000BASE-X Gigabit SFP fiber uplink port"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 10GBASE-X SFP+ fiber port, supports 10G/1G speeds"
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 10GBASE-X SFP+ fiber port, supports 10G/1G speeds"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB port for firmware updates, config upload/backup, and system log downloads; speed not stated by manufacturer"
+    },
+    {
+      "name": "Micro-USB (Debug)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro-USB debug port, for use only when directed by customer support"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal fixed AC power supply, 100-240VAC 50-60Hz 10A max; AC power cord (localized to country of sale) included. Rear IEC inlet inferred from internal-PSU design and included country-specific detachable cord; exact IEC variant (C13/C14) not explicitly stated in datasheet."
+    }
+  ]
+}

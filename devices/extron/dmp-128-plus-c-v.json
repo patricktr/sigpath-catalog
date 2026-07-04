@@ -1,0 +1,195 @@
+{
+  "manufacturer": "Extron",
+  "model": "DMP 128 Plus C V",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.dekom.com/fileadmin/user_upload/manufacturers/extron/extron_dmp_plus/extron_dmp_128_plus_datasheet_en.pdf",
+  "confidence": "medium",
+  "notes": "No Extron SKU named \"DMP 128 Plus C V2\" exists in the current catalog — Extron's actual model-suffix system is C (adds 12-channel AEC + noise cancellation), V (adds VoIP/SIP with a second LAN port), and AT (adds 4-port Dante/AES-67 switch), combinable as C, C AT, C V, C V AT. This device is built as the \"DMP 128 Plus C V\" (AEC + VoIP, no Dante), the closest real match to \"C V2\"; the \"2\" most likely colloquially refers to its two LAN/VoIP RJ-45 ports (LAN1 default 192.168.254.254, LAN2/VoIP default 192.168.1.254) rather than a distinct hardware revision. If a genuine \"V2\" hardware-revision or Dante (\"AT\") variant was intended, port counts for AT models differ (adds 4x RJ-45 Dante ports; AT models also list 48ch Rx/24ch Tx digital audio). Sources: official Extron spec sheet (mirrored via dekom.com, matches extron.com/download/files/specs/DMP_128_PLUS_5809-D8.pdf which was blocked by direct fetch) and the official Extron Setup Guide PDF (media.extron.com/public/download/files/userman/68-2826-50_C.pdf) which diagrams the fully-featured C V AT rear panel and calls out per-model differences explicitly (LAN port count, AEC on C models only, AT ports on AT models only). Mic inputs 9-12 use two 6-pole 3.5mm connectors (2 channels/connector); line outputs 1-8 use four 6-pole 3.5mm connectors (2 channels/connector) — modeled here as one representative port entry per connector pair per the spec's connector count, with names reflecting the input/output numbers each physical jack serves. Front-panel USB mini-B is a configuration-only port (no host audio) separate from the rear-panel USB Audio port. Digital I/O pins are software-programmable input/output logic (not audio) at 0-12V logic levels, closest connector modeled as euroblock (4-pole 3.5mm captive screw, not audio signal). RS-232 and ACP ports are also 3.5mm captive screw euroblock-style connectors, not literal DB9/panel connectors. All connector types are 3.5mm captive-screw euroblock terminal blocks (Extron's standard for this product line), not molded audio jacks.",
+  "ports": [
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, mic/line, phantom power +48VDC switchable, AEC (C models)"
+    },
+    {
+      "name": "Inputs 9-10",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mic-line channels or 1 stereo source, no phantom power"
+    },
+    {
+      "name": "Inputs 11-12",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mic-line channels or 1 stereo source, no phantom power"
+    },
+    {
+      "name": "Outputs 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mono line outputs or 1 stereo output"
+    },
+    {
+      "name": "Outputs 3-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mono line outputs or 1 stereo output"
+    },
+    {
+      "name": "Outputs 5-6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mono line outputs or 1 stereo output"
+    },
+    {
+      "name": "Outputs 7-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "6-pole 3.5mm captive screw, 2 balanced/unbalanced mono line outputs or 1 stereo output"
+    },
+    {
+      "name": "Digital I/O 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 5",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 6",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 7",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "Digital I/O 8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, software-programmable logic In/Out1/Out2/Gnd, 0-12V in, 0/5V out, mic mute/tally"
+    },
+    {
+      "name": "DMP EXP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Extron expansion bus, 16ch Rx/16ch Tx uncompressed 24-bit/48kHz audio, shielded CAT6"
+    },
+    {
+      "name": "ACP",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole 3.5mm captive screw, +12V/+S/-S/G, powers up to 8 ACP control panels, 6W max"
+    },
+    {
+      "name": "RS-232 REMOTE",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole 3.5mm captive screw, Tx/Rx/G, 38400 baud default"
+    },
+    {
+      "name": "LAN/VoIP 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T, control traffic (all models) and VoIP traffic by default on V models"
+    },
+    {
+      "name": "LAN/VoIP 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "V models only, 10/100/1000 Base-T, secondary LAN/VoIP port"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Rear panel USB mini-B, 4x4 USB audio device interface, USB 2.0 high speed"
+    },
+    {
+      "name": "USB Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Front panel USB mini-B, configuration and firmware update port, USB 2.0 high speed"
+    }
+  ]
+}

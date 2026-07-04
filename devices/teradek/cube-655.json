@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Teradek",
+  "model": "Cube 655",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://teradek.com/products/cube-655",
+  "confidence": "medium",
+  "notes": "Cube 655 is an H.264 encoder (SDI/HDMI in; it streams out over Ethernet/WiFi/USB — there is no video output port on the unit). Port labels taken from Teradek's official \"600 series\" quick-start guide (physical connections diagram, hosted by Markertek at markertek.com/Attachments/Manuals/Teradek/10-0605-Manual.pdf), corroborated by the manufacturer product page (teradek.com/products/cube-655) and retailer listings (B&H, Full Compass, Filmtools). SDI input is confirmed as SD/HD/3G-SDI (BNC), graded sdi-3g (its max supported level). HDMI input is full-size Type A; no HDMI version (1.4/2.0/2.1) is stated anywhere, so grade omitted. Ethernet port is 10/100/1000 (gigabit-capable), graded eth-1g. Power input is a locking 2-pin connector (widely described as \"2-pin Lemo-type\" DC, reported 6-28V DC in third-party sources), shipped with a 2-pin-to-18W AC adapter; mapped to dc-barrel as the closest listed id since no dedicated locking-DC/Lemo id exists in the schema — the actual connector is a small locking circular 2-pin DC connector, not a coaxial barrel jack. USB port is a single USB-A host port (for USB cellular modems or storage); no speed stated so grade omitted. Mic/Line input and headphone output are 3.5mm (1/8\") TRS jacks. SD/MMC card slot omitted (storage, not a signal/power port). This is a discontinued product (Teradek now directs customers to the Prism encoder line) and the manufacturer's expandable \"Technical Specs\" table could not be rendered via fetch, and B&H's spec table returned 403 — confidence set to medium because SDI/Ethernet grades are corroborated across multiple sources but exact power voltage/current and full connector-count details rely on secondary/community sources rather than a directly-loaded authoritative spec table.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Labeled 'SD/HD/3G-SDI' input on rear panel"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Full-size HDMI Type A input"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for USB cellular modems or USB storage/recording"
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mic/line input"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8 inch headphone output"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 2-pin DC connector (commonly described as 2-pin Lemo-type); closest available id, not a true coaxial barrel jack"
+    }
+  ]
+}

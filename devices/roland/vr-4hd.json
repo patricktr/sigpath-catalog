@@ -1,0 +1,184 @@
+{
+  "manufacturer": "Roland",
+  "model": "VR-4HD",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://proav.roland.com/global/products/vr-4hd/",
+  "confidence": "high",
+  "notes": "Official Roland Pro A/V spec page confirms all connectors. HDMI ports are unversioned in Roland's spec sheet (rated up to 1080p/HDCP support only), so no HDMI grade is stated by the manufacturer — omitted rather than inferred. Power: unit ships with an external AC adaptor (Roland PSB-7U, 3A/36W draw) connecting via a DC input on the rear panel; modeled as dc-barrel (closest match in the allowed connector list — Roland does not publish the exact barrel pin diameter). INPUT 4 is a shared/selectable analog bank (RGB/component via mini D-sub 15-pin, or composite via RCA) in addition to its HDMI input. MAIN OUT similarly provides simultaneous HDMI and RGB/Component (mini D-sub 15-pin) output. No SDI, no rack ears (this is a desktop/tabletop unit), hence rackUnits omitted.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported"
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported"
+    },
+    {
+      "name": "INPUT 4 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP supported; INPUT 4 is a selectable bank shared with RGB/Component and Composite below"
+    },
+    {
+      "name": "INPUT 4 (RGB/Component)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-sub 15-pin type, selectable alternate for INPUT 4"
+    },
+    {
+      "name": "INPUT 4 (Composite)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono type, selectable alternate for INPUT 4"
+    },
+    {
+      "name": "MAIN OUT (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDCP supported"
+    },
+    {
+      "name": "MAIN OUT (RGB/Component)",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-sub 15-pin type, simultaneous with HDMI Main Out"
+    },
+    {
+      "name": "PREVIEW OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDCP supported"
+    },
+    {
+      "name": "AUDIO IN 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, phantom power available"
+    },
+    {
+      "name": "AUDIO IN 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, phantom power available"
+    },
+    {
+      "name": "AUDIO IN 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, phantom power available"
+    },
+    {
+      "name": "AUDIO IN 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, phantom power available"
+    },
+    {
+      "name": "AUDIO IN 5",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO IN 6",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO IN 7",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo miniature type"
+    },
+    {
+      "name": "AUDIO IN 8",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo miniature type"
+    },
+    {
+      "name": "AUDIO OUT L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO OUT R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO OUT L (RCA)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO OUT R (RCA)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AUX OUT L",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AUX OUT R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo miniature type headphone jack"
+    },
+    {
+      "name": "USB 3.0/2.0",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB-B device port; USB3.0 SuperSpeed video streaming (up to 1080/30p uncompressed) plus USB-Audio 2in/2out and PC remote control"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-sub 9-pin type"
+    },
+    {
+      "name": "Tally/GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Spec sheet lists this as Mini D-sub 15-pin type; closest list match chosen is euroblock only as a fallback label — actual connector is a mini D-sub 15-pin, not in the allowed list, so 'vga' shape is the closest physical connector"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External AC adaptor (Roland PSB-7U), rated 3A / 36W draw"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "ZyPerUHD-E",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.zeevee.com/wp-content/uploads/2024/08/ZyPerUHD-E-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer datasheet (ZeeVee) confirms all ports via labeled rear-panel diagram plus a connector table. Power connector is described as a \"locking connector\" and depicted as a coaxial-style locking DC jack (12VDC, 1A) — mapped to dc-barrel as the closest listed id (note: it is a locking variant, not a plain barrel jack). RS-232 is on a 3-pin phoenix/euroblock terminal block (TX/RX/G), mapped to euroblock connector type (no dedicated rs232-over-euroblock id exists in the list). Analog audio in/out are also phoenix/euroblock terminal blocks (balanced stereo in/out, or unbalanced stereo), mapped to euroblock. IR In/Out are 3.5mm mini-jacks, mapped to trs-3.5 (closest connector id; true IR mini-jacks are not standard audio TRS but this is the nearest match). HDMI IN supports HDMI 2.0a with HDCP 2.2 pass-through, up to 4K60 4:2:0 — graded hdmi-2.0. HDMI OUT is a video loopout/passthrough of the same HDMI input signal (same HDMI 2.0 grade). Ethernet port carries encoded AVoIP media/audio/control traffic over 1Gb with PoE (device is a PoE powered-device on that port in some deployments, but the datasheet also lists a separate dedicated 12VDC power input as included/standard powering method) — graded eth-1g. This is an encoder-only unit (transmitter); a companion ZyPerUHD-D decoder and management platform are required for a full system but are separate products not covered here. A Dante-enabled variant (ZyPerUHD-EA) and wallplate variant exist with different connectors (3.5mm audio jacks, HDMI+VGA wallplate input) — not reflected here since this entry is for the standard rack/wall-mount ZyPerUHD-E. Desktop/wall-mount unit, not rack-mountable (ships with wall-mount brackets), so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0a with HDCP 2.2 pass-through, up to 4K60 4:2:0 with embedded audio"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Local HDMI video loopout/passthrough of the HDMI IN signal"
+    },
+    {
+      "name": "1Gb Ethernet (POE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Media Transport port; carries video/audio/control over IP; PoE capable"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced or unbalanced stereo analog audio input, phoenix/euroblock terminal block"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced or unbalanced stereo analog audio output, phoenix/euroblock terminal block"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin (TX/RX/G) phoenix/euroblock terminal block, full duplex up to 115.2 kbps"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Single USB 2.0 Type B port"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack IR input"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack IR output"
+    },
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC power connector, 12VDC 1A external power supply (included)"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "manufacturer": "Bogen",
+  "model": "C100",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.bogen.com/sites/default/files/2021-01/classic_c100-c60-c35_specsheet.pdf",
+  "confidence": "medium",
+  "notes": "Source: Bogen Communications manufacturer spec sheet for the Classic Series C35/C60/C100 PA mixer amplifiers (product page: https://www.bogen.com/product/mixer-amplifiers/public-address-mixer-amplifiers-c10c20c35c60c100), which includes a rear-panel connector diagram specific to the C100 model. No bandwidth-graded connectors are present on this device (it is an analog PA amplifier), so no 'grade' fields apply. Rear panel per the manufacturer diagram, left to right: (1) speaker/output barrier strip with GND/COM/LINK/4Ω/25V/16Ω/70V/GND terminals, (2) TAPE/BOOSTER and WMT1A RCA-style output jacks plus AUX2 MUTE screw terminal, (3) AC power section (120VAC 60Hz 2A, 220W) with a resettable 2.5A circuit breaker, (4) MIC1/MIC2 screw-terminal barrier inputs with GND, AUX1/AUX2 RCA input jacks, and TEL/VOX jacks with a TEL GND terminal. The exact connector style of the MIC1/MIC2 and TEL terminals (barrier screw terminal vs. captive-wire) is inferred as euroblock/screw-terminal (closest available id) since true barrier strips are not in the provided connector list. The AC inlet type could not be fully confirmed as detachable IEC vs. captive cord from the spec sheet graphic alone; flagged medium confidence. Dimensions: 14-1/2\\\" W x 3-3/4\\\" H x 11\\\" D (desktop/shelf unit, optional RPK50 kit for 19\\\" rack mounting - assumed 2U based on the ~3.75in height). Power rating 100W RMS; inputs: 1 Lo-Z MIC, 1 Hi-Z AUX, 1 TEL, plus 1 switch-selectable MIC/AUX (4 total mixer inputs).",
+  "ports": [
+    {
+      "name": "MIC 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw terminal barrier strip, low-impedance balanced mic input (600μV sensitivity); labeled MIC1 with adjacent GND terminal"
+    },
+    {
+      "name": "MIC 2 / AUX",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw terminal barrier strip; switch-selectable as second low-Z mic input or Hi-Z aux input; labeled MIC2 with adjacent GND terminal"
+    },
+    {
+      "name": "AUX 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Hi-Z auxiliary input jack, 85mV sensitivity"
+    },
+    {
+      "name": "AUX 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Hi-Z auxiliary input jack with external contact-closure mute (precedence/push-to-talk) capability"
+    },
+    {
+      "name": "AUX2 MUTE",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-pin screw terminal for external contact closure to mute AUX2 (push-to-talk control input)"
+    },
+    {
+      "name": "TEL",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "rca"
+      ],
+      "note": "Telephone paging line input; rear panel shows a TEL GND screw terminal plus a jack; 75mV sensitivity, VOX-activated"
+    },
+    {
+      "name": "VOX",
+      "direction": "input",
+      "connector": "rca",
+      "note": "VOX threshold/sense jack for TEL-triggered AUX muting"
+    },
+    {
+      "name": "TAPE/BOOSTER OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "High-impedance output pair to feed a tape recorder or booster amplifier"
+    },
+    {
+      "name": "WMT1A OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Output jack for optional WMT1A 600-ohm matching transformer accessory, used to feed a telephone line"
+    },
+    {
+      "name": "Speaker Output (GND/COM/LINK/4Ω/25V/16Ω/70V/GND)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier screw-terminal strip; 4-ohm direct unbalanced, 16-ohm/25V/70V transformer-isolated balanced or unbalanced outputs, plus LINK and GND terminals"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "120VAC 60Hz, 2A, 220W; internal resettable 2.5A circuit breaker. Manufacturer diagram does not clearly depict a detachable IEC inlet; likely a captive line cord typical of this product class — inferred, not fully confirmed."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst C9300L-24P-4X",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/hardware/install/b_c9300_hig/technical-specs.html",
+  "confidence": "high",
+  "notes": "Fixed-configuration Layer 3 access switch in the Catalyst 9300L family. 24x downlink ports are 10/100/1000BASE-T with PoE+ (30W/port, up to 505W PoE budget); 4x fixed uplinks are 10G/1G SFP+ (dual-rate, listed as 1G capable so grade set to eth-1g per port with note that ports also support 10G via SFP+). Ships with one hot-swappable AC power supply (PWR-C1-715WAC-P by default for the -A/-E variants); a second PSU bay is field-installable for 1+1 redundancy — only one PSU bay is listed here since it's the populated/default configuration, but the chassis has two bays total. PSU options also include 350W and 1100W AC modules (same IEC inlet) plus a 715W DC variant (euroblock-dc terminal, not included here as this is the AC SKU). StackWise-320 stacking is via an optional external stack adapter kit (C9300L-STAK-KIT) with a stacking cable — physically it's a proprietary Cisco stacking connector, not a standard connector in the given list, so omitted from ports; noted here instead. Console: standard Cisco RJ-45 rollover console port plus a USB Mini-Type-B console port (input arbitration favors USB when both connected). Management port is a dedicated out-of-band 10/100/1000 RJ-45 (Ethernet management, not a data-forwarding switchport). Variants exist as C9300L-24P-4X-A (Network Advantage) and C9300L-24P-4X-E (Network Essentials) — identical hardware/ports, differing only in software license; Meraki-managed C9300L-24P-4X-M variant also exists (same physical I/O). Power cord region varies (NEMA 5-15P for North America per Cisco's CAB-TA-NA cordset); other locales get different plugs on the same IEC inlet. Rack unit: 1U, 17.5 x 19.2 x 1.73 in, 14.99 lb.",
+  "ports": [
+    {
+      "name": "GigabitEthernet 1/0/1-24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x 10/100/1000BASE-T downlink ports, all PoE+ capable (30W/port max, up to 505W total PoE budget)"
+    },
+    {
+      "name": "TenGigabitEthernet 1/1/1-4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x fixed SFP+ uplink cages, dual-rate 1G/10G depending on installed SFP/SFP+ module; grade reflects baseline 1G, capable of 10G with SFP+ optic"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 serial console port (rollover cable, RS-232 signaling)"
+    },
+    {
+      "name": "Console (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Mini-Type-B console port; closest list match is usb-micro (actual connector is USB Mini-B, not in provided list). Takes precedence over RJ-45 console when connected."
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated 10/100/1000 out-of-band Ethernet management port"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet on the PWR-C1-715WAC-P (default) hot-swappable AC power supply module; region-specific IEC-to-wall cordset (e.g. NEMA 5-15P in North America). 350W and 1100W AC PSU options also available with same inlet type. A second PSU bay is field-installable for redundancy."
+    }
+  ]
+}

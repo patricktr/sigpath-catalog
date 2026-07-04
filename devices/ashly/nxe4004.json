@@ -1,0 +1,115 @@
+{
+  "manufacturer": "Ashly",
+  "model": "nXe4004",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://ashly.com/wp-content/uploads/2016/07/nXe-multimode-amplifiers-2U.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Ashly's official nXe Multi-Mode Amplifiers 2U spec sheet (DS-0716, ashly.com), which covers the nXe4004 alongside sibling models. No USB port exists on this model. Optional factory-installed digital-audio interface cards (Dante/OPDante, CobraNet/CNM-2 - both dual RJ45 - or AES3 XLR input cards) are separate purchased options, not included on the base nXe4004, so they are omitted from the port list; note them if the specific unit has one installed. The four per-channel Remote DC Level Control Euroblocks and the Stby/Preset/Fault control Euroblocks are grouped on the rear panel in shared multi-pin terminal blocks per the rear-panel diagram, but each is a distinct logical control signal. Ethernet grade listed as eth-100m per \"Compatible w/ standard 100MB Ethernet\" spec wording. Rack height is 2U per the 3.5in (89mm) panel height and product literature title (\"nXe Multi-Mode Amplifiers 2U\").",
+  "ports": [
+    {
+      "name": "Ch 1 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ],
+      "note": "Neutrik Combo XLR/TRS jack paired with a 3.5mm Euroblock terminal on the same channel input"
+    },
+    {
+      "name": "Ch 2 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ],
+      "note": "Neutrik Combo XLR/TRS jack paired with a 3.5mm Euroblock terminal on the same channel input"
+    },
+    {
+      "name": "Ch 3 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ],
+      "note": "Neutrik Combo XLR/TRS jack paired with a 3.5mm Euroblock terminal on the same channel input"
+    },
+    {
+      "name": "Ch 4 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ],
+      "note": "Neutrik Combo XLR/TRS jack paired with a 3.5mm Euroblock terminal on the same channel input"
+    },
+    {
+      "name": "Speaker Output Ch 1",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Speaker Output Ch 2",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Speaker Output Ch 3",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Speaker Output Ch 4",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Aux Outputs",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced Euroblock 3.5mm aux preamp line outputs for driving other amplifiers, +21dBu max level"
+    },
+    {
+      "name": "10/100 Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Control network port for Protea NE software control/monitoring; compatible with standard 100MB Ethernet"
+    },
+    {
+      "name": "Data",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Serial data port (Gnd, +18V, In, Out) for Ashly WR-5/RD-8C programmable remotes; optional INA-1 converter for third-party RS-232 control"
+    },
+    {
+      "name": "Stby/Fault (Low)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Remote standby contact closure (close to GND for standby) combined with fault condition logic output on same rear-panel Euroblock group"
+    },
+    {
+      "name": "Preset",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Preset recall contact closure, close to GND for preset 1-4 recall"
+    },
+    {
+      "name": "Ch Remote DC Level",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Per-channel remote DC level control terminal (Gnd, CV, V+); present per channel (x4 total, one shown per channel pair on rear panel)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON detachable AC mains connector, 20A rating (32A powerCON only on the 3.04 model); auto-sensing 110-120VAC or 220-240VAC SMPS"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "manufacturer": "Extron",
+  "model": "IN1608",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/IN1608_Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Base \"IN1608\" model (1U, 5.0 lbs, no amplifier, no IPCP control processor) — distinct from IN1608 SA (amp), IN1608 MA (70V amp), IN1608 IPCP SA/MA (built-in control processor), and the newer IN1608 xi series. Spec figures here are taken from Extron's official IN1608 Series datasheet (doc 8.0-031114-D5). AC power connector type is not explicitly named in the datasheet text (only \"100-240 VAC, 50-60 Hz, internal supply\"); modeled as a standard IEC C14 inlet, which is Extron's standard implementation for this switcher class/form factor — treat as medium-confidence for that one port. Two of the six 3.5mm 5-pole audio-in connectors are shared with the \"Over DTP\" RS-232/IR pass-through pins (they are the same physical DTP Tx pass-through jacks per the spec sheet), and the DTP output jack similarly carries embedded audio/RS-232/IR alongside video — represented here as separate logical ports since they are functionally distinct signal paths documented separately in the spec. Ethernet control RJ-45 is present on IN1608 (base), IN1608 MA, and IN1608 SA; the IPCP variants instead expose a 3-port network switch. Serial control pin-out: 1=Tx, 2=Rx, 3=Gnd. USB control port is front-panel mini-USB-B (modeled as usb-b, closest available id). Relay and Digital I/O control ports listed in the general spec table apply only to IPCP variants, not the base IN1608, and were excluded.",
+  "ports": [
+    {
+      "name": "Input 1 (Universal)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin HD, analog RGB/RGBcvS/component (YUV)/S-video/composite, auto-sensing"
+    },
+    {
+      "name": "Input 2 (Universal)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin HD, analog RGB/RGBcvS/component (YUV)/S-video/composite, auto-sensing"
+    },
+    {
+      "name": "Input 3 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant"
+    },
+    {
+      "name": "Input 4 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant"
+    },
+    {
+      "name": "Input 5 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant"
+    },
+    {
+      "name": "Input 6 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant"
+    },
+    {
+      "name": "Input 7 (DTP)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Extron DTP 230 twisted-pair extension input; carries video, embedded/analog audio, and RS-232/IR pass-through; up to 230 ft (70 m)"
+    },
+    {
+      "name": "Input 8 (DTP)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Extron DTP 230 twisted-pair extension input; carries video, embedded/analog audio, and RS-232/IR pass-through; up to 230 ft (70 m)"
+    },
+    {
+      "name": "Output 1 (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant; scaled up to 1920x1200/2K"
+    },
+    {
+      "name": "Output 2 (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP compliant; scaled up to 1920x1200/2K"
+    },
+    {
+      "name": "DTP Output",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extron DTP 230 twisted-pair output; carries video, embedded/analog audio, and RS-232/IR pass-through; up to 230 ft (70 m)"
+    },
+    {
+      "name": "Audio In 1 (Line)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, stereo balanced/unbalanced line input"
+    },
+    {
+      "name": "Audio In 2 (Line)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, stereo balanced/unbalanced line input"
+    },
+    {
+      "name": "Audio In 3 (Line)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, stereo balanced/unbalanced line input"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 3-pole, mono mic/line with switchable +48V phantom power; shared jack with Over-DTP RS-232/IR pass-through"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 3-pole, mono mic/line with switchable +48V phantom power; shared jack with Over-DTP RS-232/IR pass-through"
+    },
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, balanced/unbalanced stereo variable output"
+    },
+    {
+      "name": "Amp/Aux Audio Output 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, balanced/unbalanced; configurable as stereo or two independent mono channels"
+    },
+    {
+      "name": "RS-232 (Remote)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 3-pole, rear panel bidirectional RS-232 for switcher control; 1=Tx, 2=Rx, 3=Gnd"
+    },
+    {
+      "name": "USB (Control)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Front panel mini USB-B control port"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T Ethernet control port"
+    },
+    {
+      "name": "Over DTP RS-232/IR (Input 7)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, RS-232/IR pass-through paired with DTP input 7; shared with Mic/Line In 1 jack"
+    },
+    {
+      "name": "Over DTP RS-232/IR (Input 8)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, RS-232/IR pass-through paired with DTP input 8; shared with Mic/Line In 2 jack"
+    },
+    {
+      "name": "Over DTP RS-232/IR (Output)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm captive screw, 5-pole, RS-232/IR pass-through paired with DTP output"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal supply, 100-240 VAC 50/60 Hz, ~1.0 A max; connector type inferred as IEC C14 (not explicitly stated as a connector name in the datasheet)"
+    }
+  ]
+}

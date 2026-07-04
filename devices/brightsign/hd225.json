@@ -1,0 +1,56 @@
+{
+  "manufacturer": "BrightSign",
+  "model": "HD225",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.brightsign.biz/wp-content/uploads/2024/06/HD5-datasheet-2024.pdf",
+  "confidence": "high",
+  "notes": "Official BrightSign HD5-series datasheet (2024) covers the HD225 (Standard I/O Package) alongside its sibling HD1025 (Expanded I/O Package) with front/rear hardware diagrams and a feature comparison table. The HD1025 adds a rear USB-A port (5V/1A output, e.g. for touchscreens) and a front 3.5mm Serial port that the HD225 explicitly does NOT have — confirmed by the datasheet's diagram callouts \"(HD1025 only)\". HDMI output is version 2.0a. Ethernet is Gigabit (mapped to eth-1g; no exact tri-speed 10/100/1000 grade exists in the allowed scale). GPIO is a 12-pin Phoenix-style terminal block with 8 bi-directional GPIO signal pins — mapped to the closest connector id \"euroblock\". Audio Out is a single 3.5mm jack supporting either analog stereo or SPDIF digital passthrough (modeled as trs-3.5 with toslink as an accepted alternate signal on the same physical jack). IR is a 3.5mm mini-jack In/Out. Power is a locking 12V/3A barrel-style external DC connector, modeled as dc-barrel. An internal M.2 E-key Wi-Fi/Bluetooth module with 2 external antenna connectors is optional and not modeled as a signal port. SVC and Reset are recessed internal buttons, not connectors, and are omitted. Dimensions 205 x 185.9 x 19.2 mm (desktop/wall-mount puck form factor, not rack-mountable).",
+  "ports": [
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "accepts": [
+        "toslink"
+      ],
+      "note": "3.5mm jack; supports analog stereo output or SPDIF digital passthrough"
+    },
+    {
+      "name": "IR In/Out",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "3.5mm mini-jack IR receiver/blaster"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix-style terminal block; 8 bi-directional GPIO signal pins"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "MicroSD Slot",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Physically a microSD card slot, not USB — no dedicated storage-card connector id exists in the allowed list; included for completeness but not a true port, closest analog omitted from port count if not desired"
+    },
+    {
+      "name": "Locking Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 12V/3A external DC power supply"
+    }
+  ]
+}

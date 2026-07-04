@@ -1,0 +1,69 @@
+{
+  "manufacturer": "PTZOptics",
+  "model": "Move 4K",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://ptzoptics.com/move-4k/",
+  "confidence": "high",
+  "notes": "Manufacturer spec page (ptzoptics.com/move-4k/) is the authoritative source and was used for all port data; corroborated by web search results referencing AV retailer listings (B&H, Sweetwater, Full Compass) for the same SDI/HDMI/USB/IP port set, though those retailer pages returned HTTP 403 on direct fetch. Camera family ships in multiple zoom variants (12x/20x/30x) and colors (white/gray) with identical I/O. HDMI and SDI outputs are mutually exclusive (cannot drive both simultaneously) - noted on the HDMI port. The RS-232 ports use an 8-pin mini-DIN connector, which has no exact match in the allowed connector list; mapped to \"midi-din\" as the closest analog (also used for MIDI's 5-pin DIN) - flagged as an inferred/approximate connector type. The RS-485 port uses a 2-pin Phoenix/captive screw terminal block, mapped to \"euroblock\" as the closest listed connector. Power can be supplied either via the 12V DC barrel jack or via PoE+ over Ethernet; both are valid power inputs but only the DC barrel jack is listed as a discrete port since PoE shares the RJ45 port already listed. No rack-mount form factor (desktop/ceiling/tripod PTZ camera), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 4K@60fps; HDMI and SDI cannot output simultaneously"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G-SDI, SMPTE 424M, 800mVp-p, 75 ohm; limited to 1080p60 output"
+    },
+    {
+      "name": "USB",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A video output, up to 4K@30fps (UVC)"
+    },
+    {
+      "name": "IP / Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000M adaptive; carries NDI|HX, SRT, RTSP, RTMP streaming and PoE+ power"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm line-level audio input, embeddable into SDI/HDMI/USB/NDI"
+    },
+    {
+      "name": "RS-232 In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "8-pin mini-DIN; VISCA/Pelco-D/Pelco-P camera control, closest listed connector to the 8-pin mini-DIN used"
+    },
+    {
+      "name": "RS-232 Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "8-pin mini-DIN; VISCA/Pelco-D/Pelco-P camera control pass-through, closest listed connector to the 8-pin mini-DIN used"
+    },
+    {
+      "name": "RS-485",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix/terminal block; VISCA/Pelco-D/Pelco-P daisy-chain control, max 1200m"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "JEITA-type DC barrel jack, 12V, max 18W draw; alternatively powered via PoE+ (802.3at) over the RJ45 port"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Bose Professional",
+  "model": "DesignMax DM6C",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://assets.boseprofessional.com/m/45b11f1f533e6087/original/tds_DesignMax_DM6C_LTR_enUS.pdf",
+  "confidence": "high",
+  "notes": "Passive in-ceiling coaxial 2-way loudspeaker; no AC power input — powered entirely via the speaker-level signal line from an amplifier (70V/100V constant-voltage via internal transformer taps: 70V 2.5/5/10/20/40/80W, 100V 5/10/20/40/80W, or bypass to 8ohm direct, selectable via rear tap switch). The single physical input is a Euroblock 6-pin connector with loop-through (front-baffle mounted, accepts 18-14 AWG wire) — modeled here as one bidirectional euroblock port representing the signal in/loop-through terminal block; Bose does not publish the individual 6-pin pinout. No grade applies (euroblock/analog speaker-level connector is not in the graded connector list). Sold/shipped as a pair (product codes are per-pair) but spec sheet performance figures are per single loudspeaker, so this device entry represents one loudspeaker unit. Desktop/ceiling-mount device, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Input (Euroblock)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-pin Euroblock connector with loop-through, front-baffle mounted; accepts 18 AWG (0.8 mm2) to 14 AWG (2.5 mm2) wire. Carries 70V/100V constant-voltage or 8-ohm direct (transformer bypass) speaker-level signal. Rear tap switch selects transformer tap / bypass."
+    }
+  ]
+}

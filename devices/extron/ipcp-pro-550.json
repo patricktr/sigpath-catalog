@@ -1,0 +1,157 @@
+{
+  "manufacturer": "Extron",
+  "model": "IPCP Pro 550",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.extron.com/download/files/specs/IPCP_Pro_550_5654-D13.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Extron's own datasheet (doc 5654-D13, \"Extron IPCP Pro 550 IP Link Pro Control Processor - Specifications\"), fetched via an authorized-reseller mirror (extron.com itself blocks automated fetches with bot defense) and cross-checked against Extron search-result excerpts and reseller listings. This is the base/retired IPCP Pro 550 (not the newer \"550 xi\" variant, which has more memory/CPU but the same physical I/O). All serial, Flex I/O, IR/serial, relay, eBUS, and switched-DC ports use 3.5mm captive screw (Euroblock-style) terminal blocks per Extron's spec sheet; grouped multi-port connectors (e.g. 2 IR/serial ports per 4-pole connector, 2 relays per 4-pole connector) were split into logical port pairs since the physical connector serves 2 logical signals each. No grade applies to any Euroblock-terminated port (serial/control/power), consistent with the grading rules. Ethernet is confirmed 10/100/1000Base-T (eth-1g). No USB port exists on this model per the spec sheet (absent from Extron's own port list). The AC inlet connector type (IEC vs. captcaptive cord) was not itemized as a discrete port in the official spec sheet's connector tables; IEC C14 is inferred with medium confidence based on Extron's standard \"Everlast\" internal-supply enclosure used across the IPCP Pro 350/250/550 family, which use IEC inlets — flagged here as the one inferred/unconfirmed data point. Enclosure: 1U high, half-rack-wide (8.7\"W), metal, optional 1U rack shelf accessory for full-rack mounting.",
+  "ports": [
+    {
+      "name": "LAN (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1 female RJ-45, 10/100/1000Base-T, half/full duplex autodetect"
+    },
+    {
+      "name": "Serial 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 5",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 6",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "RS-232 only, 3.5mm captive screw, 3-pole"
+    },
+    {
+      "name": "Serial 7",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Selectable RS-232/RS-422/RS-485, 3.5mm captive screw, 5-pole"
+    },
+    {
+      "name": "Serial 8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Selectable RS-232/RS-422/RS-485, 3.5mm captive screw, 5-pole"
+    },
+    {
+      "name": "Flex I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4 configurable analog-input or digital I/O channels on one 3.5mm captive screw connector, 5-pole"
+    },
+    {
+      "name": "IR/Serial 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 programmable unidirectional RS-232/IR ports; 3.5mm captive screw, 4-pole (one of four such connectors)"
+    },
+    {
+      "name": "IR/Serial 3-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 programmable unidirectional RS-232/IR ports; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "IR/Serial 5-6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 programmable unidirectional RS-232/IR ports; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "IR/Serial 7-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 programmable unidirectional RS-232/IR ports; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "Relay 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 normally-open relays, 24VDC/1A rating; 3.5mm captive screw, 4-pole (one of four such connectors)"
+    },
+    {
+      "name": "Relay 3-4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 normally-open relays; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "Relay 5-6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 normally-open relays; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "Relay 7-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2 of 8 normally-open relays; 3.5mm captive screw, 4-pole"
+    },
+    {
+      "name": "eBUS",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5mm captive screw, 5-pole (uses 4), for eBUS button panels/devices, 12W output"
+    },
+    {
+      "name": "12V DC Out 1",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "Switched 12VDC output, 3.5mm captive screw, 2-pole (one of four; 40W combined max)"
+    },
+    {
+      "name": "12V DC Out 2",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "Switched 12VDC output, 3.5mm captive screw, 2-pole"
+    },
+    {
+      "name": "12V DC Out 3",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "Switched 12VDC output, 3.5mm captive screw, 2-pole"
+    },
+    {
+      "name": "12V DC Out 4",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "Switched 12VDC output, 3.5mm captive screw, 2-pole"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal universal power supply, 100-240 VAC 50/60 Hz; IEC C14 inlet (inlet type inferred from typical Extron 1U half-rack enclosure design; not explicitly itemized as a connector in the spec sheet's port tables)"
+    }
+  ]
+}

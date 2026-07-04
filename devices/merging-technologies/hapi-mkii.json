@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Merging Technologies",
+  "model": "Hapi MkII",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bhphotovideo.com/lit_files/1102190.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Merging Technologies \"Hapi MKII User Manual\" (Rev 0.4, Dec 2023, hosted by B&H Photo at bhphotovideo.com/lit_files/1102190.pdf) — the manufacturer's own documentation, considered authoritative. Base-unit standard I/O only: 8-ch AES/EBU on one DB-25 (AES59/Tascam pinout) + 8-ch ADAT or 2-ch S/PDIF on TOSLINK + dual RJ45 RAVENNA/AES67 (primary/secondary, redundant) + SYNC breakout (LTC in/out on balanced XLR3, Video Reference in on BNC, Word Clock in/out on BNC, all via one DB-15 \"Sync\" jack and included breakout cable) + dual headphone jacks (6.35mm TRS and 3.5mm TRS) + AC power (IEC C14). The listed connector enum has no DB-25/D-sub option, so the AES/EBU port's connector is mapped to \"aes3\" (closest match - it carries 8 channels of AES3 signal on a single DB-25, not a single XLR jack); this is a caveat, not a literal port count. The DB-15 Sync jack is likewise not a discrete enum option, so its three constituent signals (LTC, Video Ref, Word Clock) are listed as the individual connector types they break out to per the manual's own spec table. Word Clock deviation spec (+/-1000ppm) is not a bandwidth grade and was omitted per instructions. Two universal expansion slots (Slot 1/Slot 2) accept optional cards not counted as base-unit physical ports: analog mic/line I/O (AKDG8D/AKDG8DP, AD8D/AD8P, ADA8S/ADA8P) on DB-25 (AES59/Tascam analog pinout), MADI (BNC coax + SC optical, IOM-HAPI-MADM/MADS), or Pro Tools HD/HDX connectivity (IOM-H-PT64, two Digilink Mini connectors per card). These are omitted from the port list since they are not present on the base unit as sold; flagged here per instructions. An optional factory-order \"Redundant\" DC power variant exists (B&H SKU 700337) adding a 4-pin locking Hirose HR10A-7R-4S DC connector (10-14V, 2.5A) to the left of the AC inlet; not included as a device port since it is not standard equipment on the base Hapi MkII. RJ45 ports carry RAVENNA/AES67 over Gigabit Ethernet per the manual's hardware block diagram (\"Gigabit Ethernet switch\") - graded eth-1g.",
+  "ports": [
+    {
+      "name": "AES/EBU I/O",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "8 channels in + 8 channels out on a single DB-25 (AES59/Tascam Digital pinout); not a literal XLR jack - closest enum match to the DB-25 AES3 connector, which is not in the connector list"
+    },
+    {
+      "name": "ADAT/SPDIF In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT/SPDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "RAVENNA/AES67 Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RAVENNA/AES67 Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant network port; also supports switch mode for daisy-chaining an extra network device"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Via the SYNC breakout cable from the rear DB-15 Sync jack (balanced XLR)"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Via the SYNC breakout cable from the rear DB-15 Sync jack (balanced XLR)"
+    },
+    {
+      "name": "Video Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via the SYNC breakout cable from the rear DB-15 Sync jack"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Switchable 75-ohm termination, 0.5Vp-p min; not a bandwidth-graded connector"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Zout=35 ohms, 5Vp-p; not a bandwidth-graded connector"
+    },
+    {
+      "name": "Headphone 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "trs-3.5"
+      ],
+      "note": "6.35mm TRS Female Stereo per manual spec table; mapped to ts-6.35 as closest 6.35mm enum id"
+    },
+    {
+      "name": "Headphone 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS Female Stereo"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 90-260VAC 47-63Hz, max <30W"
+    }
+  ]
+}

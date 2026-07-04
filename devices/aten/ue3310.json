@@ -1,0 +1,31 @@
+{
+  "manufacturer": "Aten",
+  "model": "UE3310",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.aten.com/global/en/products/usb-solutions/extenders/ue3310/",
+  "confidence": "medium",
+  "notes": "The UE3310 is a single active USB extension cable (10 m / 32.8 ft), not a boxed rack/desktop unit — it has an integrated USB 3.2 Gen1 Type-A male connector on one end (upstream, to host) and a USB 3.2 Gen1 Type-A female connector on the other end (downstream, to device), plus a separate 16 cm USB extension pigtail included in the box. It ships with an external AC power adapter that plugs into the cable via a DC barrel connector; exact barrel voltage/amperage is not published on the manufacturer page or retailer spec tables (Markertek, B&H listing), so the dc-barrel port grade/spec is inferred from ATEN's standard UE-series design rather than confirmed. Daisy-chainable up to ~50 m total. No rack unit size applies (not rack-mountable).",
+  "ports": [
+    {
+      "name": "USB (Host/Upstream)",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.2 Gen1 Type-A male plug, connects to host computer; backward compatible with USB 2.0/1.1"
+    },
+    {
+      "name": "USB (Device/Downstream)",
+      "direction": "output",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.2 Gen1 Type-A female receptacle, connects to USB device; backward compatible with USB 2.0/1.1"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input from included external AC power adapter; exact barrel voltage/amperage not published"
+    }
+  ]
+}

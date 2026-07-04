@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Marshall Electronics",
+  "model": "CV730-NDI",
+  "category": "other",
+  "type": "Camera",
+  "sourceUrl": "https://marshall-usa.com/pdf/CV730-NDI-manual.pdf",
+  "confidence": "high",
+  "notes": "Rack units omitted — this is a desktop/ceiling-mount PTZ camera, not rack-mountable. Physical I/O and labels taken from Marshall's official CV730-NDI User Manual (rear panel diagram, section 3.1.2, page 8), cross-checked with the official Marshall cutsheet/datasheet (CV730-NDIW). Power connector on manual/cutsheet is specified as \"EIAJ-04\" DC barrel type, 12V DC — mapped to the closest available enum value dc-barrel. RS-422 physically ships as a pluggable screw-terminal block (per package contents, \"RS-422 Connector\") — mapped to euroblock with accepts:[rs422] since rs422 is a signal standard, not itself a connector shape in this list. USB 3.0 port is present on the chassis but manual states it is a reserved/non-functional hole pending future firmware; type is Type-B per corroborating third-party sources (not 100% explicit in the primary manual, hence medium-confidence sub-detail) — grade usb-5g reflects USB 3.0/3.1 Gen1 nominal spec. Ethernet (RJ45) port grade/speed (e.g., 1G) is not explicitly stated in the manual or cutsheet, so grade was omitted rather than assumed. Model is also sold as CV730-NDIW (white color variant) and CV730-BHN/WHN (rebrand); I/O is identical across color variants. A newer CV730-ND3/ND3W sibling (NDI|HX3) supersedes this model with similar but not identical I/O — do not conflate.",
+  "ports": [
+    {
+      "name": "12G-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Multi-rate 12G/6G/3G-SDI output; audio embedded/supported"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0 output; audio output supported"
+    },
+    {
+      "name": "RS-232 Output",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Serial daisy-chain, up to 7 cameras"
+    },
+    {
+      "name": "RS-232 Input",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Serial daisy-chain, up to 7 cameras"
+    },
+    {
+      "name": "RS-422 Port",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "8-pin pluggable terminal block (included accessory) carrying RS-422; daisy-chain up to 7 cameras"
+    },
+    {
+      "name": "Audio Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo, switchable Line In/Mic In"
+    },
+    {
+      "name": "Network Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet for NDI|HX2/IP control; supports PoE++ (IEEE 802.3bt) power input"
+    },
+    {
+      "name": "USB 3.0 Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "Physically present but reserved/non-functional in current firmware per manual"
+    },
+    {
+      "name": "DC 12V Power Connector",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "EIAJ-04 DC barrel connector, 12V (10.8-13.0V DC), used with included AC power adapter/cord; camera can alternatively be powered via PoE++ on the network port"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "manufacturer": "Sony",
+  "model": "VPL-FHZ90L",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.projectorcentral.com/pdf/projector_manual_10427.pdf",
+  "confidence": "high",
+  "notes": "Official Sony operating-instructions manual (projectorcentral-hosted copy of Sony doc, matches Sony's official datasheet table) confirms all terminals. No analog/HDMI audio connectors exist on this model (spec table has no audio row) — video and control only; audio must be handled externally. 3G-SDI input is available only via the optional BKM-PJ20 adaptor card, and that adaptor itself is listed as \"Available for VPL-FHZ120L only\" — so no SDI port on the FHZ90L. INPUT E (HDBaseT) and the separate LAN terminal are both RJ45 but serve different functions (HDBaseT carries video/RS-232/Ethernet over one cable; LAN terminal is a standard 10/100/1000BASE-T network port for control/HTML viewer). AC inlet is a standard rectangular IEC inlet for the detachable supplied power cord (IEC C13/C14 pattern based on current draw of 3.4-8.4A and the connector diagram); Sony's spec sheet does not name the IEC sub-type explicitly. No RS-232C/HDMI/DVI grade or version beyond HDCP support is specified (no HDMI 1.4/2.0 version stated); grade omitted per instructions since not explicitly stated as a version number. Desktop/tabletop or ceiling-mount unit, not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "INPUT A (RGB/YPbPr)",
+      "direction": "input",
+      "connector": "bnc",
+      "accepts": [
+        "rca"
+      ],
+      "note": "5x BNC female (R/Pr, G/Y, B/Pb, H, V) — RGB HD VD / YPbPr component or RGB computer signal"
+    },
+    {
+      "name": "INPUT B (RGB)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-sub 15-pin female, RGB computer signal"
+    },
+    {
+      "name": "INPUT C (DVI-D)",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D 24-pin single link, DVI 1.0 compliant, HDCP support"
+    },
+    {
+      "name": "INPUT D (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 19-pin, digital RGB/YPbPr, HDCP support; version not stated"
+    },
+    {
+      "name": "INPUT E (HDBaseT)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT terminal; transmits HDMI video, RS-232C, and 100BASE-TX Ethernet over one CAT5e+ cable, max 100m"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10BASE-T/100BASE-TX/1000BASE-T control/network port"
+    },
+    {
+      "name": "OUTPUT (Monitor, RGB/YPbPr)",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-sub 15-pin female; loops through the signal from INPUT A or INPUT B"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A; used for HTML viewer content and firmware updates only (no USB hub support)"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin male, RS-232C compatible control terminal"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rectangular IEC power inlet for detachable supplied AC power cord; AC 100-240V, 3.4-8.4A, 50/60Hz"
+    }
+  ]
+}

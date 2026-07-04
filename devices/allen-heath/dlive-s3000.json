@@ -1,0 +1,212 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "dLive S3000",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.allen-heath.com/content/uploads/2023/07/S3000-Datasheet-2.pdf",
+  "confidence": "high",
+  "notes": "Device is the dLive S3000 control SURFACE (not the MixRack engine, which is a separate rack unit connected via gigaACE). Desktop/console form factor — not rack-mountable (rackUnits omitted/0 is not applicable; it sits on a table/riser, dimensions 870x728x413mm, 28kg). Data pulled directly from Allen & Heath's official \"S3000 Technical Datasheet\" (PDF) and cross-verified against the official \"dLive Surface Getting Started Guide\" (AP9899 Issue 2, numbered rear/front panel diagrams), both hosted on allen-heath.com. Two \"I/O Port\" expansion bays (128x128ch each) are option-card slots (DB25-shaped blanking plates, no I/O fitted by default — accepts Dante/MADI/EtherSound/Waves SoundGrid/ACE cards) and were omitted from the port list since they carry no fixed connector out of the box. AES3 digital I/O is physically XLR3 hardware but is tagged as connector \"aes3\" to reflect its digital-audio designation on the panel (labeled \"Digital In\"/\"Digital Out\", AES 9/10, 11/12, 13/14). gigaACE and DX links use etherCON housings over RJ45 pinout; gigaACE runs Gigabit Ethernet (eth-1g) while DX links run Fast Ethernet (eth-100m) per the manual text. USB and VGA ports have no stated version/resolution grade in the source material, so grade was omitted per instructions. No grade applies to BNC Word Clock (not SDI) or XLR analog/AES3 (not in the graded connector families). This is the control surface only; a full \"dLive S3000\" system also requires a MixRack (e.g. DM48, DM64, CDM32, CDM48, etc.) sold separately, which has its own distinct I/O not included here.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Digital In AES 9/10",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3, XLR, 32-96kHz, SRC bypassable"
+    },
+    {
+      "name": "Digital In AES 11/12",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3, XLR, 32-96kHz, SRC bypassable"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Digital Out AES 9/10",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3, XLR, 48/96kHz switchable"
+    },
+    {
+      "name": "Digital Out AES 11/12",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3, XLR, 48/96kHz switchable"
+    },
+    {
+      "name": "Digital Out AES 13/14",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3, XLR, 48/96kHz switchable"
+    },
+    {
+      "name": "gigaACE A",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Redundant Gigabit Ethernet link to MixRack (300x300ch @96kHz + control)"
+    },
+    {
+      "name": "gigaACE B",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Redundant Gigabit Ethernet link to MixRack (300x300ch @96kHz + control)"
+    },
+    {
+      "name": "DX 5",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Redundant DX expander link, Fast Ethernet, 32x32ch @96kHz"
+    },
+    {
+      "name": "DX 6",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Redundant DX expander link, Fast Ethernet, 32x32ch @96kHz"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "x2 RJ45 Gigabit Ethernet ports for laptop/router (dLive Editor, iOS apps)"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "USB (front, Record/Playback)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Dedicated stereo WAV record/playback USB drive port"
+    },
+    {
+      "name": "USB (front, Data)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Show files, libraries, event logs, firmware updates"
+    },
+    {
+      "name": "USB (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "File transfer, archive, firmware update"
+    },
+    {
+      "name": "Screen Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "External monitor mirror of touchscreen; external touchscreens not supported"
+    },
+    {
+      "name": "Phones 1/4\"",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Phones 1/8\"",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Power 1 (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14, 100-240V AC 50/60Hz, 300W max (MPS16 PSU), rocker switch"
+    },
+    {
+      "name": "Power 2 (AC In, optional redundant PSU)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Optional hot-swappable second MPS16 PSU bay; ships with only Power 1 fitted"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "manufacturer": "Wisycom",
+  "model": "MTK952",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://wisycom.com/app/uploads/2018/02/MTK952_en-u08-A5.pdf",
+  "confidence": "medium",
+  "notes": "MTK952 is a 1U rack dual-channel wireless IEM/wideband transmitter, not a typical video/AV switching device — categorized here as \"audio\"/\"Wireless mic\" since no better-fitting category exists in the schema. Rear-panel data extracted directly from the manufacturer's official MTK952 User Manual (rev.09, dated 22 Oct 2018), page 5 \"Rear Panel\" diagram, which numbers and labels every connector explicitly. No bandwidth \"grade\" was set on any port: RJ45 (Ethernet, used only for configuration via Wisycom Manager software) has no stated link speed in the manual; AES3/XLR3 digital audio and BNC RF/antenna/master-slave ports are outside the gradeable connector categories per the schema's grading rules (SDI/HDMI/DP/USB/RJ45 speed only) so grade was correctly omitted even though AES3 and RF are technically \\\"digital\\\"/bandwidth-relevant. The optional DC power connector is a 4-pin circular connector (pinout diagram shows 1/3=GND, 2/4=+Vdc) — mapped to xlr4-dc as the closest listed connector type; Wisycom's own accessories (e.g. battery eliminators for companion receivers) commonly use 4-pin XLR for DC, supporting this mapping, but the manual itself does not explicitly say \\\"XLR\\\" for this specific plug. Two hardware variants exist: MTK952 (BNC antenna connectors) and MTK952N (N-type antenna connectors) — I used the base MTK952 (BNC) as the primary model per the requested name; note this if the N-variant is intended. Power options also vary (0W2/50mW, 2W0/2W max output) but these don't affect the I/O list. Manufacturer's own product page (wisycom.com/product/mtk952) and PDF spec sheet returned HTTP 403 to automated fetch, so the manual PDF (hosted on wisycom.com/app/uploads) was used as the primary source instead, cross-verified against a WebSearch-summarized secondary manual mirror (usermanual.wiki) which matched exactly.",
+  "ports": [
+    {
+      "name": "AC Power (IEC)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC mains input, IEC connector, 90-264 Vac, redundant with DC option"
+    },
+    {
+      "name": "DC Power (optional)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Optional DC power plug, 4-pin circular connector (pinout 1/3=GND, 2/4=+Vdc), originally 10-16Vdc/7A max, increased to 10-28Vdc since May 2015; closest listed connector to the panel's 4-pin circular DC connector"
+    },
+    {
+      "name": "Ethernet (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "For connection to network/computer running the Wisycom Manager configuration software; link speed not specified in manual"
+    },
+    {
+      "name": "AES/EBU Digital Input TX1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "AES3 digital audio input for Transmitter 1"
+    },
+    {
+      "name": "AES/EBU Digital Input TX2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "AES3 digital audio input for Transmitter 2"
+    },
+    {
+      "name": "Audio Input Left TX1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Balanced analog audio input; combo 1/4\" (6.3mm) jack / XLR-3 socket"
+    },
+    {
+      "name": "Audio Input Right TX1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Balanced analog audio input; combo 1/4\" (6.3mm) jack / XLR-3 socket"
+    },
+    {
+      "name": "Audio Input Left TX2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Balanced analog audio input; combo 1/4\" (6.3mm) jack / XLR-3 socket"
+    },
+    {
+      "name": "Audio Input Right TX2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "Balanced analog audio input; combo 1/4\" (6.3mm) jack / XLR-3 socket"
+    },
+    {
+      "name": "Antenna Output TX1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna output for Transmitter 1; BNC on base MTK952, N-type socket on MTK952N variant"
+    },
+    {
+      "name": "Antenna Output TX2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna output for Transmitter 2; BNC on base MTK952, N-type socket on MTK952N variant"
+    },
+    {
+      "name": "M-S I/O TX1 (optional)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Master-Slave reference in/out for iso-frequency transmission, requires optional MS board"
+    },
+    {
+      "name": "M-S I/O TX2 (optional)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Master-Slave reference in/out for iso-frequency transmission, requires optional MS board"
+    },
+    {
+      "name": "Monitor Output TX1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone monitor jack, balanced, 6.35mm (1/4\")"
+    },
+    {
+      "name": "Monitor Output TX2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone monitor jack, balanced, 6.35mm (1/4\")"
+    }
+  ]
+}

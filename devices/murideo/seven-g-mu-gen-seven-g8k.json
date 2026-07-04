@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Murideo",
+  "model": "SEVEN-G (MU-GEN-SEVEN-G8K)",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://www.avproglobal.com/products/mu-gen-seven-g8k",
+  "confidence": "medium",
+  "notes": "Two closely related SKUs exist: the original \"SEVEN Generator\" (MU-GEN-SEVEN, HDMI 2.1 feature-set on older hardware, reported 12V/3A locking barrel supply) and the current \"8K SEVEN\" / SEVEN-G8K (MU-GEN-SEVEN-G8K, full 8K/40Gbps HDMI 2.1, reported 12V/5A locking barrel supply). Spec text is drawn primarily from the current 8K SEVEN-G8K model, which \"SEVEN-G\" commonly refers to in current AVPro Global/Murideo materials — confirm exact SKU/revision before quoting exact wattage. Port list cross-confirmed between the manufacturer page (avproglobal.com, formerly murideo.com/seven-g.html, 301-redirected) and Markertek's spec table, which agree closely. Two items required judgment calls: (1) the DB25 \"Expansion Decoder\" port has no matching connector id in the allowed list — mapped to dc-barrel only as a placeholder; it is actually a DB25 D-sub connector and should be treated as unconfirmed/needs a better-fitting id if one becomes available; (2) the microphone input is physically a mini-XLR (3-pin) connector, mapped to the standard xlr3 id since no \"mini-XLR\" variant exists in the allowed list. HDMI grade (2.1) and USB grade (usb-5g, i.e. \"USB 3.0\" branding) are taken from marketing copy (\"HDMI 2.1 compliant, 40Gbps FRL\", \"USB 3.0\") rather than a formal certified compliance statement, so these are inferred/medium-confidence. No rack-mount option exists; this is a handheld/desktop field test instrument (~20x16x10 in per one retailer, unverified), so rackUnits omitted. Ethernet port speed (100M/1G) is not stated in any source and is left ungraded.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Primary source output, Type A, up to 40Gbps FRL bandwidth (8K/HDR/Dolby Vision test patterns)"
+    },
+    {
+      "name": "HDMI In (ARC/eARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Sink input used for ARC/eARC receive testing"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Web UI / remote control; speed grade not published"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Labeled USB 3.0 on spec sheets; used for PC connection and loading/storing patterns and video"
+    },
+    {
+      "name": "RS232 (DB9)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control, DB9 connector variant"
+    },
+    {
+      "name": "RS232 (Terminal Block)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin terminal block variant of the serial control port"
+    },
+    {
+      "name": "Expansion Decoder",
+      "direction": "bidirectional",
+      "connector": "dc-barrel",
+      "note": "DB25 expansion port; DB25 is not in the allowed connector list, closest available id chosen (dc-barrel) does not truly match — treat as an unmapped DB25 control/expansion port"
+    },
+    {
+      "name": "Audio Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "External stereo audio input, 3.5mm jack"
+    },
+    {
+      "name": "Audio Out (Toslink)",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Extracted digital audio output"
+    },
+    {
+      "name": "Audio Out (Coax)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Extracted coaxial digital audio output"
+    },
+    {
+      "name": "Microphone In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Mini XLR microphone input for A/V sync and latency testing; labeled connector is a mini-XLR, mapped to nearest listed id xlr3"
+    },
+    {
+      "name": "Photodiode In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for external light-sensor probe used in latency/lag testing"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External locking-barrel DC input from included AC/DC power supply (AC 100-240V ~50/60Hz to DC 12V/5A)"
+    }
+  ]
+}

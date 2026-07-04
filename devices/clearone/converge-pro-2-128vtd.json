@@ -1,0 +1,114 @@
+{
+  "manufacturer": "ClearOne",
+  "model": "Converge Pro 2 128VTD",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.clearone.com/sites/default/files/2020-07/CONVERGE%20Pro%202%20128VTD%2020191111.pdf",
+  "confidence": "high",
+  "notes": "Source: official ClearOne datasheet DST-0000-000 Rev2.1 (20191111), part number 910-3200-009-D, fetched from https://www.clearone.com/sites/default/files/2020-07/CONVERGE%20Pro%202%20128VTD%2020191111.pdf. Mic/Line I/O uses 3.81mm Phoenix/Euroblock terminal blocks (12 inputs on one 4-position/orange connector set, 8 outputs on one 3-position/black connector set) — modeled here as two aggregate euroblock ports (In/Out) per datasheet's connector packaging rather than 20 discrete jacks, matching how ClearOne ships them (qty 12 input terminal blocks + qty 8 output terminal blocks in the box, each accepting multiple channels per block). GPIO is a single 6-position Euroblock (Control/Status/Variable-Voltage, not audio) — connector mapped to euroblock with no grade. USB Audio (rear, USB-B) and USB Control (front panel, USB-B) are both listed as \"USB 2.0, USB 3.0 compatible\" without specifying a 3.0 generation (5G/10G); graded conservatively as usb-2.0 since the higher-speed generation isn't stated and these are low-bandwidth control/audio-class links, not data-transfer ports. Ethernet and VoIP ports are 10/100Mbps (eth-100m); Dante Primary/Secondary are Gigabit (eth-1g). C-Link and P-Link are proprietary RJ-45 expansion/peripheral buses (not standard IP Ethernet) — connector set to rj45 but grade omitted since ClearOne does not state an Ethernet PHY speed for them. P-Link In port also carries PoE 802.3af Mode B power input (48-56V) to power peripherals, in addition to signal — noted but not modeled as a separate power port since it is peripheral-bus power output, not the unit's own power input. AC inlet is listed only as \"AC Inlet, 100-240V AC\" in the datasheet; retailer spec sheets (e.g. B&H-style listings) commonly describe it as an IEC connector, consistent with the included 6' grounded IEC-style power cord — mapped to \"iec\" (standard IEC C13/C14) though the exact C13 vs C14 gender on the chassis wasn't explicitly spelled out. Telephone port (RJ11, POTS) has no connector id in the allowed list matching a phone jack exactly; mapped to rj45 as the closest available 8P8C-family id is not ideal either — RJ11 is a distinct 6P/4P connector from RJ45, so this is a best-effort mapping given the constrained connector enum (no rj11 option exists in the provided list).",
+  "ports": [
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12 balanced mic/line inputs on 3.81mm Phoenix/Euroblock terminal blocks (4-position, orange), qty 12 connectors supplied"
+    },
+    {
+      "name": "Mic/Line Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 balanced mic/line outputs on 3.81mm Phoenix/Euroblock terminal blocks (3-position, black), qty 8 connectors supplied"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rear panel; 2x2 bidirectional digital audio, 24-bit/48kHz; listed as USB 2.0/3.0 compatible, generation of 3.0 not specified"
+    },
+    {
+      "name": "USB Control",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Front panel; listed as USB 2.0/3.0 compatible, generation of 3.0 not specified"
+    },
+    {
+      "name": "Telephone (POTS)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual connector is RJ11 (analog telco/POTS line); no RJ11 id exists in the allowed connector list, mapped to rj45 as closest available modular-jack id"
+    },
+    {
+      "name": "VoIP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Mbps Ethernet, auto-negotiation, supports up to 5 SIP lines"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "LAN/control port, 10/100Mbps auto-negotiation"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet, 16x16 bidirectional Dante audio channels, 24-bit/48-96kHz"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet, redundant Dante port"
+    },
+    {
+      "name": "C-Link In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary DSP expansion bus (RJ-45, Cat5e/6 cable), 64 expansion channels; not standard IP Ethernet, grade omitted"
+    },
+    {
+      "name": "C-Link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary DSP expansion bus (RJ-45, Cat5e/6 cable); not standard IP Ethernet, grade omitted"
+    },
+    {
+      "name": "P-Link In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary peripheral bus (RJ-45, Cat5e/6 cable); also supplies PoE 802.3af Mode B power (48-56V) to daisy-chained peripherals"
+    },
+    {
+      "name": "P-Link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary peripheral bus (RJ-45, Cat5e/6 cable)"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 female, serial commands, up to 115200 baud"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-position 5.08mm Phoenix/Euroblock (green); control, status, and variable-voltage I/O, not audio signal"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC Inlet, 100-240V AC 50/60Hz auto-sensing; datasheet states \"AC Inlet\" without specifying IEC C13/C14 explicitly, inferred from included grounded IEC-style power cord"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Ubiquiti",
+  "model": "USW-Pro-24-PoE",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://dl.ui.com/ds/usw-pro-24-poe_ds.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: official Ubiquiti datasheet (dl.ui.com/ds/usw-pro-24-poe_ds.pdf), cross-checked against techspecs.ui.com and the official Quick Start Guide (dl.ubnt.com/qsg/USW-Pro-24-POE). All 24 RJ45 ports are Gigabit (1G/100M/10M) copper ports carrying PoE output (not just data) — 16 support PoE/PoE+ (max 32W/port), 8 support PoE/PoE+/PoE++ (max 60-64W/port); total PoE budget 400W. Two SFP+ cages support 1G or 10G SFP/SFP+ modules (grade set to eth-10g as the ports' maximum capability; they auto-negotiate down to 1G). There is no separate dedicated out-of-band management RJ45 port — management is in-band Ethernet over the same 24 ports (per datasheet: \"Management interface: Ethernet In-band\"). No USB ports, no RS232/console port. Physical controls that are not signal/power ports: a 1.3\" touchscreen LCM status display and a recessed factory-reset button. AC power inlet connector type (IEC C14) is a strong inference from product class/photos rather than an explicit datasheet callout — the datasheet only states \"Universal input, 100-240V AC\" with an internal 450W AC/DC supply. The RPS (redundant power) input is a proprietary Ubiquiti \"USP Connect\" DC connector (52V DC 7.69A / 11.5V DC 2.61A) for pairing with a separate USP-RPS unit; no connector in the fixed taxonomy matches it exactly, so dc-barrel was chosen as the closest analog — this is a notable caveat, actual connector is a proprietary multi-pin plug, not a coaxial DC barrel jack. Rack width/depth: 442.4 x 285.4 x 43.7 mm, 1U. Do not confuse with the newer Gen2/HD/Max variants (USW-Pro-24-PoE Gen2, USW-Pro-HD-24-PoE, USW-Pro-Max-24-PoE) which have different port/power specs.",
+  "ports": [
+    {
+      "name": "Port 1-16 (PoE/PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "16x RJ45, 802.3af/at PoE/PoE+ input to connected devices, up to 32W per port"
+    },
+    {
+      "name": "Port 17-24 (PoE++)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8x RJ45, 802.3af/at/bt PoE/PoE+/PoE++ input to connected devices, up to 64W per port"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1/10G SFP+ uplink slot"
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1/10G SFP+ uplink slot"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal AC input 100-240V AC 50/60Hz to internal 450W AC/DC supply; standard IEC C14 inlet with C13 cord (connector style inferred from product photos/class; not explicitly named in datasheet)"
+    },
+    {
+      "name": "RPS",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "accepts": [
+        "euroblock-dc"
+      ],
+      "note": "Proprietary USP RPS DC input (52V DC 7.69A / 11.5V DC 2.61A) for connecting a Ubiquiti UniFi SmartPower USP-RPS redundant power unit via a special USP cable (sold separately); connector is a proprietary multi-pin Ubiquiti connector, not a generic barrel jack — closest available taxonomy match chosen, treat with low confidence"
+    }
+  ]
+}

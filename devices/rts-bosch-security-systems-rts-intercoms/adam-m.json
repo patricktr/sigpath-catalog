@@ -1,0 +1,42 @@
+{
+  "manufacturer": "RTS (Bosch Security Systems / RTS Intercoms)",
+  "model": "ADAM-M",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://products.rtsintercoms.com/binary/F01U216986.PDF",
+  "confidence": "high",
+  "notes": "RTS ADAM-M is a modular digital matrix intercom mainframe (3RU, 128+ ports expandable to 880 in a single frame / 256 per frame in multi-frame Tribus systems), not a fixed-I/O AV box - nearly all signal I/O is via hot-swappable front interface cards (AIO-16 analog audio, RVON-16 VoIP, MADI-16 Plus, OMI for OMNEO/Dante-compatible IP audio, Tri-Bus expander) paired with back cards, so the \"ports\" vary by configuration and are not fixed connectors on the chassis. The two connectors captured here as rackable/fixed are the redundant AC power inlets, the DB-9 status/alarm relay, and the RJ45 Ethernet jacks on the two redundant MCII-e Master Controller back cards (used for AZedit control-PC connection and OMNEO/RVON network traffic; speed not stated beyond standard 10/100 Ethernet, no grade given in source). Each MCII-e back card also carries two large 68-pin SCSI-style (MDR) connectors (J1/J2) that carry the proprietary RS-422/RS-485/RS-232 intercom bus signals to breakout panels (XCP-ADAM-MC) for AZedit, trunking, UIO/PAP/LCP, GPIO, and bus expansion - these are not standard AV connectors and have no reasonable match in the given connector enum, so they are omitted from the structured port list rather than mis-mapped. Source is the official RTS/Bosch ADAM-M System Installation Guide (F.01U.216.986, Rev. 11, Feb 2016), the authoritative manufacturer document, cross-checked against the current product page at https://products.rtsintercoms.com/na/en/adam-m. No bandwidth \"grade\" applies to any captured port (Ethernet speed unstated; DB-9 relay is a dry contact, not RS-232 data). Category/type chosen as closest fit (audio/DSP) since no \"Intercom matrix\" category exists in the given enum.",
+  "ports": [
+    {
+      "name": "PS1 (100-240VAC 50/60Hz)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with rocker switch and internal fuse (1.6A/240V or 3.0A/120V); one of two redundant hot-swappable power supply inputs"
+    },
+    {
+      "name": "PS2 (100-240VAC 50/60Hz)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet with rocker switch and internal fuse; second of two redundant hot-swappable power supply inputs"
+    },
+    {
+      "name": "Status Relay",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "DB-9 aux alarm relay connector (dry contact closure: pins 1=NO, 2=NC, 6=Common) for remote fault/alarm indication; not a serial data port but uses a DB-9/D-sub shell, closest listed connector id"
+    },
+    {
+      "name": "Ethernet (J1) - Primary MCII-e",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100 Ethernet on the primary Master Controller (MCII-e) back card, used for AZedit configuration/control and OMNEO/RVON traffic; supports up to 32 concurrent AZedit sessions"
+    },
+    {
+      "name": "Ethernet (J1) - Standby MCII-e",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10/100 Ethernet on the redundant standby Master Controller (MCII-e) back card"
+    }
+  ]
+}

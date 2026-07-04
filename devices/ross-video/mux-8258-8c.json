@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "MUX-8258-8C",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.rossvideo.com/infrastructure/opengear-modular/audio-embedding/mux-8258-4c-8c/",
+  "confidence": "medium",
+  "notes": "The MUX-8258-8C is an openGear card that draws power directly from the openGear frame backplane (e.g. DFR-8310, DFR-8320, OG3-FR, OGX-FR) — it has no dedicated AC/DC power connector, so no power port is listed. It is a slot-in card, not an independently rack-mountable unit, so rackUnits is omitted. Physical I/O is presented on a separate rear I/O module (Ross '-R2C', occupying 1-2 frame slots depending on frame series) rather than on the card itself; specs reflect the combined card+rear-module I/O documented for the -8C variant: 1x SDI In and 1x SDI Out (both BNC, 75-ohm, supporting SMPTE 424M/3G-SDI, backward-compatible with 292M HD-SDI and 259M SD-SDI — highest grade sdi-3g applied) plus 8x balanced analog audio inputs, each on its own 3-pin removable terminal block (closest listed connector id: euroblock). Power consumption is rated at 11W. Confidence is medium because the manufacturer's own cut-sheet PDF (documentation.rossvideo.com/files/Cut Sheets/Infrastructure/MUX-8258-8C.pdf) and the full official user-manual PDF both returned HTTP 404 on direct fetch; connector counts/types were instead cross-confirmed via the Ross Video product page, an AV-iQ spec listing, Markertek/Neobits rear-module listings, and a ManualsLib-hosted mirror of the official MUX-8258 Series User Guide, all of which agreed (1 SDI in / 1 SDI out / 8 analog inputs on 3-pin balanced terminal blocks). No source gave an explicit terminal-block part number beyond generic \"balanced analog input\" terminology.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Analog Audio In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 7",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    },
+    {
+      "name": "Analog Audio In 8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input on a 3-pin removable terminal block (+/-/GND)"
+    }
+  ]
+}

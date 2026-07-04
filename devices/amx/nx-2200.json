@@ -1,0 +1,123 @@
+{
+  "manufacturer": "AMX",
+  "model": "NX-2200",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://adn.harmanpro.com/product_documents/documents/5458_1509381423/NX-2200.DataSheet_original.pdf",
+  "confidence": "high",
+  "notes": "Sourced from AMX's official NX-2200 datasheet (Rev 11.18.16, copyright 2016 Harman) - the manufacturer's PDF, fetched via the amx.com product_documents redirect to adn.harmanpro.com. All Ethernet ports (LAN, ICSLAN) are 10/100 only (eth-100m); no Gigabit support. All control I/O (AxLink, RS-232/422/485, RS-232 x3, I/O, Relay) use 3.5mm mini-Phoenix pluggable screw terminals of varying pin counts - mapped to the closest available connector id 'euroblock' since a dedicated screw-terminal id isn't in the allowed list; actual pin counts (2/4/6/8/10-position) are noted per port. The 4 IR/Serial ports are 1-way IR transmit or serial output only (not full duplex serial) and use 2-position screw terminals, not mini-jack IR connectors - mapped to 'ir' as the closest semantic match, exact physical connector noted. The unit has no internal AC inlet; it is powered by an external DC power supply (PSN6.5 or PSR5.4, sold separately/optional) via a 2-pin 3.5mm Phoenix DC terminal block, mapped to 'euroblock-dc'. No grade applies to any of the screw-terminal/serial/relay/IR/AxLink ports per the grading rules (analog/control connectors are excluded from grading). USB Program and Host ports are treated as USB 2.0 speed (medium confidence on that specific grade - the datasheet doesn't explicitly state 'USB 2.0' but Standard-A/B connectors on this device generation are USB 2.0). Physical dimensions: 1RU, 17in x 9.125in x 1.75in, 6.08 lb.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 RJ-45, connects master to external/primary network (Dual NIC design)"
+    },
+    {
+      "name": "ICSLAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 RJ-45, isolated secondary network for AMX/third-party A/V device control"
+    },
+    {
+      "name": "AxLink",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position 3.5mm screw terminal (mini-Phoenix); provides data and power to external AxLink control devices"
+    },
+    {
+      "name": "RS-232/422/485 (Port 1)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs422",
+        "rs485"
+      ],
+      "note": "10-position 3.5mm screw terminal (mini-Phoenix); NetLinx Port 1; selectable RS-232/422/485, 300-115200 baud"
+    },
+    {
+      "name": "RS-232 (Port 2)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal (mini-Phoenix); NetLinx Port 2; RS-232 only, 300-115200 baud"
+    },
+    {
+      "name": "RS-232 (Port 3)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal (mini-Phoenix); NetLinx Port 3; RS-232 only, 300-115200 baud"
+    },
+    {
+      "name": "RS-232 (Port 4)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-position 3.5mm screw terminal (mini-Phoenix); NetLinx Port 4; RS-232 only, 300-115200 baud"
+    },
+    {
+      "name": "IR/Serial (Port 11)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-position 3.5mm screw terminal; 1-way IR/Serial transmit, NetLinx Port 11, carriers up to 1.142 MHz. Closest connector id chosen; actual physical connector is a 3.5mm screw terminal, not a mini-jack IR emitter connector"
+    },
+    {
+      "name": "IR/Serial (Port 12)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-position 3.5mm screw terminal; 1-way IR/Serial transmit, NetLinx Port 12, carriers up to 1.142 MHz"
+    },
+    {
+      "name": "IR/Serial (Port 13)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-position 3.5mm screw terminal; 1-way IR/Serial transmit, NetLinx Port 13, carriers up to 1.142 MHz"
+    },
+    {
+      "name": "IR/Serial (Port 14)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-position 3.5mm screw terminal; 1-way IR/Serial transmit, NetLinx Port 14, carriers up to 1.142 MHz"
+    },
+    {
+      "name": "I/O (Port 22, Channels 1-4)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Single 6-position 3.5mm screw terminal providing 4-channel binary I/O for contact closure with voltage sensing, NetLinx Port 22"
+    },
+    {
+      "name": "Relay (Port 21, Channels 1-4)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Single 8-position 3.5mm screw terminal, 4 SPST relays, each switches up to 24 VDC or 28 VAC @ 1A, NetLinx Port 21"
+    },
+    {
+      "name": "Program",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Standard B programming port"
+    },
+    {
+      "name": "USB Host (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Standard A host port on front panel; supports flash/SSD for firmware, code files, config backup"
+    },
+    {
+      "name": "USB Host (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Standard A host port on rear panel; supports flash/SSD for firmware, code files, config backup"
+    },
+    {
+      "name": "PWR",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin 3.5mm mini-Phoenix DC power terminal block; 9-18 VDC range, 12 VDC typical, 250 mA @ 12 VDC; used with external PSN6.5/PSR5.4 power supply (no internal AC/IEC inlet)"
+    }
+  ]
+}

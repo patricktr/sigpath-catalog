@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Just Add Power",
+  "model": "UL-707POE (VBS-HDIP-707POE) — 3G 4K Transmitter",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.justaddpower.com/wp-content/uploads/2023/03/jp-707poe-spec.pdf",
+  "confidence": "high",
+  "notes": "The exact SKU \"3G-4K-TX\" is not a literal Just Add Power model number; the closest and best-matching real product is the ULTRA Series UL-707POE (manufacturer part VBS-HDIP-707POE), marketed by JAP and resellers (e.g. BTX) as the \"3G [POE] Transmitter 4K\" / \"3G Standard/High-Fidelity 4K Transmitter\" — a 3G Ultra HD-over-IP HDMI encoder. Desktop/wall-mount enclosure (121 x 30 x 125 mm) — not rack-mountable, so rackUnits omitted. RS232 port is physically a 3.5mm TRS mini-jack (2-way/full-duplex serial), mapped to trs-3.5 as the closest connector id in the allowed list — it is a control/data serial port, not analog audio, so no grade was set (RS232 has no entry in the given bandwidth scales). No physical IR port exists on the unit itself; IR control is delivered via IR-over-IP and requires an external IRD2 dongle, so it was not listed as a port. No USB port is present. PoE (IEEE 802.3af, 15.4W drawn, up to 10W consumed) is available on the RJ-45 network port as an alternative to the local DC power jack; both are listed since the unit ships with a DC power supply and rear DC barrel jack in addition to PoE capability. Network grade set to eth-1g per the \"1 Gb Network\" rear panel label. HDMI grade set to hdmi-2.0 per documented \"HDMI Standard: HDMI 2.0a\" and HDCP 2.2 compliance.",
+  "ports": [
+    {
+      "name": "1 Gb Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE IEEE 802.3af (powered device, draws up to 15.4W at PSE / 10W max device consumption)"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0a, HDCP 2.2, up to 4096x2160"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm 2-way RS232 serial control port (closest listed connector to the actual 3.5mm mini-jack serial port)"
+    },
+    {
+      "name": "DC 5V~18V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5.5mm/2.1mm barrel, positive tip; 5-18V, 10W max (alternative to PoE)"
+    }
+  ]
+}

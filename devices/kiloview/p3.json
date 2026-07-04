@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Kiloview",
+  "model": "P3",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.kiloview.com/en/products/encoders/p3/",
+  "confidence": "medium",
+  "notes": "Manufacturer spec table lists \"Video Port: 1× 3G-SDI, 1× HDMI 1.4b, 1×USB-A\" with resolution specs described as \"Input/Loop out\" for both HDMI and SDI, indicating each is a single bidirectional physical connector (input with loop-through output) rather than separate in/out jacks. USB-A is input-only (webcam/UVC source or USB storage/headset — treated here as the video/audio input use case; USB is also used for storage and PTZ-control-via-USB-to-serial per the manual, so real-world use is closer to bidirectional, but the datasheet lists it under \"Video Port...Input\"). No external antenna connectors — P3 uses an internal antenna design (4x 5G/4G cellular modules + Wi-Fi 5, explicitly non-external-antenna). SIM card slots and SD card slot are not physical signal/power connectors and are omitted. Ethernet grade set to eth-1g per \"1 × 1000Mbps Ethernet Port\". No rack mounting — this is a portable backpack/handheld unit (211×143×68mm, ~2000g main unit) so rackUnits omitted. Power: \"DC 12V/3A\" via external power adapter, modeled as dc-barrel (exact barrel size not specified by manufacturer). Confidence is high because the source is the manufacturer's own current product/spec page with a complete, detailed specification table.",
+  "ports": [
+    {
+      "name": "SDI",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G-SDI input with loop-out on same connector"
+    },
+    {
+      "name": "HDMI",
+      "direction": "bidirectional",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b input with loop-out on same connector; 4Kp30 input only"
+    },
+    {
+      "name": "USB-A",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "USB video/audio input (UVC webcam) or USB storage/headset connection"
+    },
+    {
+      "name": "Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm 2-channel line-level audio input"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Mbps Ethernet port"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 12V/3A external power input"
+    }
+  ]
+}

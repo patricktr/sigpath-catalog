@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "HelixNet HMS-4X",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 1,
+  "sourceUrl": "https://clearcom.com/DownloadCenter/datasheets/HelixNet/HMS-4X_MainStation_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Clear-Com's official HMS-4X Main Station datasheet (PDF), which includes an annotated front/back panel legend and full technical spec table. HMS-4X is marked by Clear-Com as a legacy product as of 2022 (not recommended for new designs, but still supported). Port notes: (1) The two \"XLR Powerline\" ports (Line 1, Line 2) are Clear-Com's proprietary Frequency-Modulated-Ethernet-over-XLR digital partyline links carrying audio, data, and ±29.5V DC to beltpacks/stations over standard 3-pin XLR cabling; each Powerline has one 3-pin XLR male and one 3-pin XLR female jack on the rear panel (represented here as a single bidirectional xlr3 port per line since they function as one logical send/return powerline pair). No \"grade\" applies since sdi/hdmi/dp/usb/eth scales don't describe this proprietary link. (2) The rear \"Control I/O\" port is physically a 25-pin D-sub (DB25) female connector carrying 4 optically-isolated GPIs and 4 relay GPOs (5V logic). None of the allowed connector ids is a DB25/D-sub type, so this was mapped to \"rs232\" as the closest available D-sub-style control connector in the allowed list — this is an approximation and should be corrected if a dedicated DB25/D-sub id becomes available; treat with lower confidence than the rest of the ports. (3) Front-panel USB Type-A and Micro-USB ports are explicitly labeled by Clear-Com as \"factory service use\" only, not general connectivity, but are included since they are physical I/O; graded usb-2.0 per the datasheet's \"USB 2.0\" / \"Micro USB 2.0\" front-panel legend labels. (4) The 3 rear \"Option Module\" slots accept optional HLI interface modules (2-wire, 4-wire, Ethernet HLI-ET2, Fiber HLI-FBS) sold separately — these are not populated by default and are therefore not listed as fixed physical ports; the base unit ships with these bays empty/blanked. (5) Headset and Gooseneck Mic connectors are on the front panel, not rear. (6) Power connector is IEC-C14 (fused), rated 100-240VAC 50-60Hz, 250W max — mapped to the \"iec\" id (C13/14 family).",
+  "ports": [
+    {
+      "name": "XLR Powerline 1",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Digital partyline (Frequency-Modulated Ethernet over XLR) carrying audio, control data, and ±29.5V DC to up to 10 user stations/beltpacks. Rear panel presents one 3-pin XLR-M and one 3-pin XLR-F jack for this line."
+    },
+    {
+      "name": "XLR Powerline 2",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Second independent digital partyline, same characteristics as Powerline 1."
+    },
+    {
+      "name": "Program In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR-F. Program audio line input, 0dBu nominal, +18dBu max before clipping."
+    },
+    {
+      "name": "SA Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR-M. Stage Announce line output, 0dBu nominal, +18dBu max before clipping."
+    },
+    {
+      "name": "Hot Mic Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" (6.35mm) TRS jack carrying hot mic audio plus IFB mute signal."
+    },
+    {
+      "name": "Control I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physically a 25-pin D-type (DB25) female connector with 4 optically-isolated GPIs and 4 relay GPOs (5V logic). No DB25/D-sub id exists in the allowed connector list; rs232 chosen as closest approximation for this D-sub control port. Treat this port's connector mapping as low-confidence."
+    },
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "Front panel 4-pin XLR connector for combined dynamic/electret headset mic input and headphone output. Mapped to xlr4-dc as the closest 4-pin XLR id in the allowed list (not DC power related in this application)."
+    },
+    {
+      "name": "Microphone (Gooseneck)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Front panel 3-pin Tuchel connector for gooseneck microphone; mapped to xlr3 as closest equivalent."
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel USB Type-A port, factory service use per datasheet."
+    },
+    {
+      "name": "Micro USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Front panel Micro-USB port, factory service use per datasheet."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal power socket (fused), IEC-C14 inlet, 100-240VAC 50-60Hz, 250W max."
+    }
+  ]
+}

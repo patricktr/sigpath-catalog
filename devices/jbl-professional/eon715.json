@@ -1,0 +1,41 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "EON715",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw99912afa/pdfs/JBL_EON715_Spec_Sheet.pdf",
+  "confidence": "high",
+  "notes": "Official JBL Professional spec sheet (issued 10/2021) confirms rear-panel layout via photo: two XLR/TRS combo input jacks labeled \"CH1\" and \"CH2\" (female, balanced/unbalanced, input impedance 50k/100k, gain -inf to +36dB), plus one male XLR \"PASS THRU\" output for daisy-chaining. AC power inlet connector type is not explicitly named in the spec sheet (only \"AC Power Input: 100V-120V or 220V-240V\" is given); corroborated as an IEC C13/C14 inlet via third-party replacement power cord listings for this model (widely sold as standard IEC/C13 3-prong cords). No USB port exists on this unit. Bluetooth 5.0 is present for audio streaming/app control but is wireless, not a physical port, so it is omitted from the physical I/O list per task scope. No grade applies to any port (XLR analog audio and IEC power are not bandwidth-graded connector types). Desktop/portable powered loudspeaker — not rack-mountable, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "CH1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack mic/line input; input impedance 50k/100k unbalanced/balanced, gain -inf to +36dB"
+    },
+    {
+      "name": "CH2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack mic/line input; input impedance 50k/100k unbalanced/balanced, gain -inf to +36dB"
+    },
+    {
+      "name": "PASS THRU",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR passthrough output, mirrors summed input signal to daisy-chain additional speakers"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/C14 power inlet; auto-switching 100V-120V or 220V-240V AC"
+    }
+  ]
+}

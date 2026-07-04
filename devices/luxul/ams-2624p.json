@@ -1,0 +1,45 @@
+{
+  "manufacturer": "Luxul",
+  "model": "AMS-2624P",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.markertek.com/product/luxu-ams-2624p/luxul-ams-2624p-av-series-26-port-24-poe-gigabit-managed-switch-with-us-power-cord",
+  "confidence": "medium",
+  "notes": "Manufacturer's own spec-sheet URL (luxul.com/.../lux-spec-xms-2624p.ashx) now 301-redirects to the generic legrandav.com/luxul landing page (Luxul was absorbed into Legrand AV), so it could not be fetched directly. Used Markertek's detailed retailer spec table as primary source, cross-checked against the Luxul AMS-2624P Quick Install Manual (via ManualsLib) and AV-iQ/Full Compass datasheet listings, which agree on port counts, PoE budget, and power input. All 26 RJ45/SFP ports plus the console port are on the rear panel (front panel carries only LEDs and a mode button). RJ45/SFP combo ports 25-26 are shared pairs (using the SFP disables the paired RJ45, or vice versa) - modeled here as two separate bidirectional RJ45 uplink ports; the shared SFP cage alternative is not separately listed. Console port is an RJ45-style serial console (Cisco-style pinout, needs RJ45-to-DB9 adapter cable per Luxul documentation) - modeled as rs232 over an rj45 connector shape is not available in the enum, so it is omitted from the port list as a physical DE-9/RS232 equivalent isn't directly confirmed and would misrepresent the connector. Power inlet is an internal switching supply, 100-240VAC 50/60Hz, with a detachable \"Power Cord\" (US cord ships in the box) - consistent with a standard IEC C14 inlet, though the datasheet does not explicitly name \"IEC C14\"; modeled as connector \"iec\" (C13/C14 family) with medium confidence. No grade fields set for RJ45 data ports since the datasheets state \"Gigabit\"/1000Mbps but do not use an explicit \"1G\" spec-sheet callout beyond implied eth-1g, which is included since 1000BASE-T/Gigabit is unambiguous. SFP cage speed not separately confirmed (likely 1G SFP, not confirmed as 2.5G/10G) so no grade set for the SFP alternative use.",
+  "ports": [
+    {
+      "name": "Port 1-24 (PoE+ Gigabit RJ45, x24)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x 10/100/1000 Mbps RJ45 ports, each supporting 802.3af/at PoE+ (250W total PoE power budget across all 24 ports); modeled as one representative port for the 24-port bank"
+    },
+    {
+      "name": "Port 25 (Gigabit RJ45 Uplink / SFP Combo)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g",
+      "note": "Shared combo port - RJ45 or SFP cage, only one active per pair"
+    },
+    {
+      "name": "Port 26 (Gigabit RJ45 Uplink / SFP Combo)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g",
+      "note": "Shared combo port - RJ45 or SFP cage, only one active per pair"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal switching power supply, 100-240VAC 50/60Hz; detachable IEC-style power cord (US cord included); max device power draw 337W"
+    }
+  ]
+}

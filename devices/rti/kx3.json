@@ -1,0 +1,60 @@
+{
+  "manufacturer": "RTI",
+  "model": "KX3",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://web.archive.org/web/20250406213824/https://www.rticontrol.com/kx3-in-wall-controller.html",
+  "confidence": "high",
+  "notes": "In-wall 3.5\" touchpanel keypad with built-in control processor (discontinued by RTI, now part of AVPro Global after brand consolidation; rticontrol.com now redirects to avproglobal.com). Desktop/in-wall device, not rack-mountable, so rackUnits omitted. Power, the 4 relays, and 6 sense inputs share a single Phoenix-style (euroblock) terminal block per the official wiring diagram (\"Power/Relay/Sense\" connector) — modeled here as separate logical ports since each carries a distinct signal class. IR output is a 2-wire control port (200mA, drives up to 1000ft) also off this control-port wiring; modeled as its own port using the closest available connector id (ir). USB programming port is specified as \"USB A to Mini B\" in RTI's Quick Reference Guide; Mini-B is not in the allowed connector enum so it is recorded as usb-b (closest available) — actual connector is USB Mini-B, no data-rate grade stated. The 2 RS-232 ports use RJ-45 jacks (unit ships with 2x RJ45-to-DB9 adapters); no baud/grade concept applies to RS-232 so no grade set. Ethernet port is 10/100 Base-T with 802.3af PoE (Class 3) — graded eth-100m since no gigabit is stated. Built-in camera, microphone, and speaker are internal components (not external I/O ports) and are omitted. Integrated 802.11b/g/n WiFi and 802.15.4 Zigbee 2.4GHz RF are wireless, not physical ports, and are omitted. Power spec varies slightly across RTI documentation: official spec table states \"+12VDC to +16VDC, 1A max\" while the Quick Reference Guide states \".5A\" — used the spec-table figure as primary source.",
+  "ports": [
+    {
+      "name": "Power (+12-16VDC)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Phoenix-style terminal block, shared with Relay and Sense Input terminals; +12VDC to +16VDC, 1A max. Can alternatively be powered via PoE on the Ethernet port."
+    },
+    {
+      "name": "Relays",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Four (4) dry-contact relay outputs, 3A @ 30VDC, on the same terminal block as Power/Sense"
+    },
+    {
+      "name": "Sense Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Six (6) voltage/contact-closure sense inputs, 3-24VDC, on the same terminal block as Power/Relays"
+    },
+    {
+      "name": "IR Output",
+      "direction": "output",
+      "connector": "ir",
+      "note": "One (1) 2-wire IR control port, 200mA output, drives up to 1000ft (300m) of wire"
+    },
+    {
+      "name": "Serial Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232, 3-wire, with status feedback polling; ships with RJ45-to-DB9 adapter"
+    },
+    {
+      "name": "Serial Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232, 3-wire, with status feedback polling; ships with RJ45-to-DB9 adapter"
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Base-T with 802.3af Power-over-Ethernet (Class 3)"
+    },
+    {
+      "name": "USB Programming Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Actual connector is USB-A to Mini-B per RTI documentation; Mini-B not in allowed connector list, recorded as closest available (usb-b)"
+    }
+  ]
+}

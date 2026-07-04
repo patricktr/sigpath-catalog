@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AW-UE50",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro-av.panasonic.net/en/products/aw-ue50-40/spec.html",
+  "confidence": "high",
+  "notes": "Sold in W (white) and K (black) color variants (AW-UE50W/AW-UE50K); I/O is identical across colors. This is a PTZ camera (desktop or ceiling-suspended), not rack-mountable, so rackUnits is omitted. HDMI is version 1.4 (4:2:2/10-bit, HDCP not supported). SDI output is 3G-SDI (SMPTE292M/424M, BNC, Level-A/B selectable). LAN (RJ-45) is 100BASE-TX/1000BASE-T and also carries PoE+ (IEEE802.3at) for camera power - modeled as a single bidirectional RJ45 network port; PoE+ power delivery over this same port is noted here rather than as a separate power port since it is an alternative to the DC IN jack, not a mandatory second supply. A separate CONTROL IN port uses RS-422A over an RJ-45-style connector for serial camera control (distinct physical connector from the LAN port) - modeled with connector rs422 per the port list's control-protocol categorization; note it is physically an RJ-45 shell. DC 12V IN accepts 10.8-13.2V DC from the supplied AC adapter; exact barrel diameter not published by Panasonic, so classified as the closest match (dc-barrel). USB2.0 Type-C port is UVC-only (webcam-style video class) and does not supply bus power; grade omitted because Panasonic does not state a USB speed class beyond \"USB2.0\" generically tied to the UVC function rather than a data-transfer spec, but usb-2.0 is the correct grade per the stated USB2.0 spec. No genlock, tally, GPIO, or SD card slot are listed in the manufacturer specifications.",
+  "ports": [
+    {
+      "name": "3G-SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE292M/424M, 75 ohm, Level-A/Level-B selectable"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "4:2:2/10-bit; HDCP and VIERA Link not supported"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T; IP control and video streaming; supports PoE+ (IEEE802.3at, DC42-57V) for camera power"
+    },
+    {
+      "name": "CONTROL IN",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "RS-422A serial control, physically an RJ-45 connector shell"
+    },
+    {
+      "name": "USB2.0 DEVICE",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "UVC (USB Video Class) webcam mode only; not bus-powered"
+    },
+    {
+      "name": "MIC/LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack; switchable MIC (-40 dBV) / LINE (-10 dBV)"
+    },
+    {
+      "name": "DC 12V IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 10.8-13.2V, via supplied AC adapter; exact barrel diameter not published"
+    }
+  ]
+}

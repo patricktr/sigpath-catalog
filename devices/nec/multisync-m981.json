@@ -1,0 +1,104 @@
+{
+  "manufacturer": "NEC",
+  "model": "MultiSync M981",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.sharpdisplays.eu/p/datasheet/en/datasheet/rp/m981.xhtml",
+  "confidence": "high",
+  "notes": "98-inch 4K UHD large-format commercial/digital-signage LCD display (IPS, direct-LED, 500 cd/m2). Desktop/wall-mount unit (VESA 600x400 FDMI, 4-hole) - not rack-mountable, so rackUnits omitted. Port list cross-verified across the manufacturer's Sharp/NEC EU datasheet, Sharp/NEC US business site data, and multiple AV dealer spec pages (Code3AV, Midtown Video) which mirror the official spec sheet: HDMI 2.0 In x2 (HDMI IN 1 supports ARC), DisplayPort 1.4 In x2, HDMI 2.0 Out x1 (loop-through, also outputs Option/OPS source), DisplayPort 1.4 Out x1 (loop-through), USB 2.0 x2 (one downstream/general-purpose, one service/powered 5V-2A), USB Type-B x1 (upstream/service), RS-232C In (D-Sub 9-pin), LAN x2 (100 Mbit RJ45), Audio Out 3.5mm, IR remote-control wired 3.5mm jack. Power is an internal universal 100-240VAC/50-60Hz supply with a detachable IEC power cord (3.0 m cord in box); exact IEC inlet variant (C13/C14) not explicitly named in any source but is standard for this display class - flagged as inferred. One earlier-generation EU datasheet PDF (docs.aws.sharp.eu) listed 4 HDMI In / 3 DisplayPort In with no separate LAN count, which appears to be either a data error or a count that (incorrectly) folds in the optional OPS/SDM slot-in PC card's own ports; the base M981's own connectivity block (repeated consistently on the Sharp/NEC datasheet page, US business site, and independent AV dealer catalogs) clearly states 2 HDMI In / 2 DisplayPort In and is treated here as authoritative. An optional slot-in OPS/Raspberry-Pi Compute Module bay exists but its I/O is not part of the display's own fixed panel and is excluded. Built-in 10W+10W speakers exist but are not a discrete port. Variants exist (M981-AVT3 with ATSC/NTSC tuner adds an RF/ANT input; M981 USB-C variant adds a USB-C input) - this entry covers the base M981 only.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports HDMI ARC"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort IN 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort IN 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through of HDMI 1/2/Option source"
+    },
+    {
+      "name": "DisplayPort OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "Loop-through of DP 1/2/Option source"
+    },
+    {
+      "name": "USB (Downstream)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB (Service, 5V/2A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Powered service port for firmware updates/media players"
+    },
+    {
+      "name": "USB (Upstream/Service)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "RS-232C IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin control input"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "REMOTE CONTROL (IR)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Wired IR remote-control input jack"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal universal 100-240VAC/50-60Hz supply; detachable IEC power cord (exact C13/C14 inlet variant inferred, not explicitly stated by source)"
+    }
+  ]
+}

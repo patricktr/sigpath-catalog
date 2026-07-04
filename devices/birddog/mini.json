@@ -1,0 +1,42 @@
+{
+  "manufacturer": "BirdDog",
+  "model": "Mini",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://birddog.tv/mini-overview/mini-techspecs/",
+  "confidence": "high",
+  "notes": "Manufacturer tech-specs page (https://birddog.tv/mini-overview/mini-techspecs/) confirms: 1x HDMI Standard Type-A input and 1x HDMI Standard Type-A output, both HDMI v1.4a (RGB or YCbCr), supporting up to 1080p60 in encode mode — not 4K, so grade is hdmi-1.4 not a higher tier. Network is 10/100/1000 RJ-45 with PoE 802.3af/at (graded eth-1g as the port's max supported speed; PoE also serves as an alternate power source, noted on the Network port rather than duplicated as a separate power port). Audio is 3.5mm \"Microphone headset input/output\" — described by BirdDog as a single jack serving both mic-in and headset-out (per BirdDog Comms intercom use), so modeled as one bidirectional TRS-3.5 combo port; no grade applies since it's analog audio. Power: BirdDog lists \"100-240V, 50/60Hz Universal Input, +5-18V DC, 7W Max\" — this describes an external AC-to-DC power adapter; the physical inlet on the Mini itself is the DC barrel input, modeled as dc-barrel (exact barrel pin diameter, e.g. 5.5x2.1mm, not stated by BirdDog and could not be confirmed from secondary sources). No USB port is documented on the unit. A conflicting secondary source (manua.ls scrape of the user manual) mentioned \"SDI inputs and outputs,\" but this appears to be a scraping error confusing the Mini with BirdDog's separate 4K SDI product line — the official spec page and B&H listing both confirm HDMI-only I/O, so SDI was omitted.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Ethernet with PoE (802.3af/at) — can power the unit"
+    },
+    {
+      "name": "Mic/Headset",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Combo 3.5mm microphone/headset jack for BirdDog Comms intercom, not a bandwidth-graded signal port"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "+5-18V DC from external universal 100-240V AC power adapter; unit can alternatively be powered via PoE"
+    }
+  ]
+}

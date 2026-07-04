@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Bosch",
+  "model": "PLE-1ME60-US (PLE-1ME060-US)",
+  "category": "audio",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.markertek.com/product/bsh-ple-1me60/bosch-ple-1me60-us-60-watt-economy-mixer-amplifier (manufacturer datasheet PDF: PLE-1MExx0-xx, and Bosch Installation and Operation Manual PLE-1MExx0-xx V1.0 2011.04, via https://www.aquasom.com/en/brochures/BOSCH_PLE-1MExx0-xx.pdf)",
+  "confidence": "high",
+  "notes": "Plena \"Economy\" mixer amplifier, part of the Bosch Plena Easy Line. Official Bosch order code is PLE-1ME060-US (60 W); \"PLE-1ME60-US\" is the commonly used short form. Same chassis/family also ships as 120W (PLE-1ME120-US) and 240W (PLE-1ME240-US) with identical I/O layout - only power differs. Bosch Security's PA/communications business has since been spun off into Keenfinity Group, which still lists this SKU (order code F.01U.213.775) at commerce.keenfinity.tech, but that portal requires login; specs here are from the official Bosch manufacturer datasheet and Installation/Operation manual (freely hosted copies), which is authoritative. Rear panel per the manual: (1) Mic/Line 1 - 5-pin Euro-style (Euroblock) screw terminal with PTT trigger contact, phantom-powerable, has priority; (2) Mic/Line 2 - 3-pin Euroblock screw terminal, phantom-powerable; (3&4) Mic/Line 3 and 4 - 6.3mm (1/4\") TRS jacks, balanced; Music input - 2x RCA/cinch (stereo, internally summed to mono); Outputs - \"Call only\" 70V-line screw terminal (US version is 70V, EU is 100V) and main output screw terminal carrying both 70V constant-voltage and 4-ohm low-impedance taps on the same terminal block; Mains - 3-pole IEC-style detachable mains connector (120VAC for US), power cord included (modeled as connector \"iec\", the closest standard id - the manual's diagram shows a shrouded 3-pin panel-mount inlet consistent with IEC C13/C14 style, not a captive cord or NEMA plug). Loudspeaker output and Call-only output terminal blocks are each modeled as one bidirectional-looking screw-terminal \"euroblock\" port per function (each terminal block actually exposes multiple taps/terminals for 70V and 4-ohm, and +/- for call-only, but is a single physical connector group). Front-panel headphone/monitor jack is present (confirmed in manual, section 3.4.1 item 6) but its exact plug size (3.5mm vs 6.3mm) is not stated in the datasheet/manual text; based on the compact single round jack shown in the front-panel diagrams it is modeled here as a 3.5mm TRS mini-jack with medium confidence for that specific field - treat as inferred, not manufacturer-confirmed. No grades apply to any port: this device has no SDI/HDMI/DisplayPort/USB/Ethernet ports, only analog audio, screw-terminal PA outputs, and AC mains, all of which are outside the gradable connector scale per the schema rules, so all grade fields are correctly omitted. 60W (US) model has no cooling fan (fan is present only on 120W/240W siblings), consistent with no fan noise spec listed for the 60W variant.",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pin Euro-style screw terminal; balanced mic/line input, switchable phantom power, has PTT trigger contact and priority over all other inputs"
+    },
+    {
+      "name": "Mic/Line 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euro-style screw terminal; balanced mic/line input, switchable phantom power"
+    },
+    {
+      "name": "Mic/Line 3",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4\") TRS jack, balanced mic/line input"
+    },
+    {
+      "name": "Mic/Line 4",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4\") TRS jack, balanced mic/line input"
+    },
+    {
+      "name": "Music (BGM) In - L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo RCA/cinch pair, internally summed to mono; left channel"
+    },
+    {
+      "name": "Music (BGM) In - R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo RCA/cinch pair, internally summed to mono; right channel"
+    },
+    {
+      "name": "Output (100V/70V, 4 Ohm)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Main loudspeaker output screw terminal block, floating; provides 70V constant-voltage tap (US version; 100V on EU version) and a separate 4-ohm low-impedance tap on the same terminal block"
+    },
+    {
+      "name": "Call Only",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "70V (US version) screw terminal output for priority-only zones; also usable for 3-wire remote volume-control override"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel monitor/headphone jack carrying master output signal; exact jack size not stated in datasheet, inferred as 3.5mm from panel photos - lower confidence on this specific field"
+    },
+    {
+      "name": "Mains",
+      "direction": "input",
+      "connector": "iec",
+      "note": "3-pole shrouded panel-mount mains inlet (120 VAC for US version); detachable IEC-style power cord included in box"
+    }
+  ]
+}

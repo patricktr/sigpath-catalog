@@ -1,0 +1,108 @@
+{
+  "manufacturer": "Epson",
+  "model": "Pro L1755UNL",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.epson.com/For-Work/Projectors/Large-Venue/Pro-L1755UNL-WUXGA-3LCD-Laser-Projector-with-4K-Enhancement-Without-Lens/p/V11H892820",
+  "confidence": "high",
+  "notes": "Primary source: Epson official Specification Sheet (CPD-54435, epson.com/largevenue) and Epson product page, cross-checked against Epson's internal EB-L1755U/EB-L1750U service spec PDF (same optical/electronic engine, US-market Pro L1755UNL is the no-lens SKU of the EB-L1755U) and ProjectorReviews.com hardware teardown photos. The '5-BNC' interface is listed by Epson simply as '5-BNC' with no RGBHV grade given, and BNC/SDI ports carry no HDMI/DP-style version numbers so no grade was set beyond the 3G-SDI input (explicitly named in spec, so sdi-3g). HDMI grade of 2.0 is inferred (medium-confidence detail) from HDCP 2.2 support and documented 4K/UHD signal acceptance via the HDMI/HDBaseT input combined with a 60Hz vertical scan ceiling — Epson's spec sheet does not explicitly print an 'HDMI 2.0' version string, so treat this single grade as inferred rather than confirmed. The dedicated LAN RJ45 network port (100BASE-TX/10BASE-T, distinct from the HDBaseT RJ45) is documented in Epson's EB-L1755U series internal spec sheet and confirmed visually in third-party teardown photos, but is omitted from the consumer-facing spec sheet's 'Interfaces' list — treat as medium confidence. Unit is a desktop/mount-style large-venue installation projector, not rack-mountable, so rackUnits is omitted. This is the 'without lens' (NL) SKU — nine optional lenses sold separately; connector list is identical to the lensed EB-L1755U model.",
+  "ports": [
+    {
+      "name": "3G-SDI",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Combined video/audio/control over CAT cable via HDBaseT; also used for Art-Net control per manufacturer footnote."
+    },
+    {
+      "name": "5-BNC (RGBHV)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog component/RGB video input, five BNC connectors ganged as one interface."
+    },
+    {
+      "name": "Computer (VGA)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-sub 15-pin analog monitor loop-through output."
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 3",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (Variable)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-B (Service)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Service/firmware use only, not a general host port."
+    },
+    {
+      "name": "USB-A (Wireless LAN)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For optional ELPAP10 wireless LAN module only."
+    },
+    {
+      "name": "LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX/10BASE-T network port per Epson's EB-L1755U service spec sheet (same engine as Pro L1755UNL)."
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9/D-sub 9-pin serial control port."
+    },
+    {
+      "name": "Remote (Wired)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack port for hardwired remote control accessory."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC universal power inlet; detachable IEC power cable included in box."
+    }
+  ]
+}

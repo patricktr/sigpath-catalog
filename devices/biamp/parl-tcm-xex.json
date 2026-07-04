@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Biamp",
+  "model": "Parlé TCM-XEX",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_parle_tcm-xex_nov25.pdf?sfvrsn=3f34daff_41",
+  "confidence": "high",
+  "notes": "This is a low-profile ceiling microphone with exactly one physical connector: an RJ-45 jack terminating a captive 6.6 ft (2 m) cable, used exclusively for Biamp's custom/proprietary digital protocol (audio + power) -- it is not standard Ethernet/PoE, so no bandwidth grade is applicable or stated. In Tesira systems the TCM-XEX is an expansion mic that must be paired with a TCM-X or TCM-XA (it cannot run standalone); in Devio systems it operates standalone. Max cable distance to the DSP host device is 33 ft (10 m). No rack mounting (ceiling-mounted device; rackUnits omitted). Optional accessories (plenum box, flush mount kit, pole mount, pre-terminated Cat5e cables) are separate purchasable items, not part of the unit's own I/O.",
+  "ports": [
+    {
+      "name": "RJ-45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single custom/proprietary digital connection (attached 6.6ft/2m cable) to the DSP host device (Tesira TCM-X/TCM-XA network box, or Devio unit); carries both audio and power over a proprietary protocol, not standard Ethernet, so no eth-* grade applies."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Atomos",
+  "model": "Ninja V",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.videoexpert.eu/f/docs/83745/Atomos-Ninja-V-Technical-Specifications.pdf",
+  "confidence": "high",
+  "notes": "Original Ninja V (2018), distinct from Ninja V+ and Ninja Ultra which add USB-C PD and SDI. Sourced from Atomos's official technical specifications sheet (archived PDF hosted by distributor videoexpert.eu, content identical to atomos.com's tech-specs page) plus Atomos support articles (NINJA V Part Names, Choosing your power source) for physical labeling/connector detail. Port notes: (1) HDMI In and HDMI Out/loop-out are both full-size HDMI 2.0(a), 4Kp60 10-bit capable — grade set to hdmi-2.0 per spec. (2) Audio in is a single 3.5mm stereo jack switchable between Mic-level and Line-level (labeled \"Mic/Line In\" on the body, located under the power button); no bias/phantom power provided. (3) Headphone out is a separate 3.5mm jack. (4) The Ninja V has no built-in DC barrel jack — native power is via an NP-F/L-series battery bay; the spec sheet's \"DC In / continuous power\" is achieved only through the optional AtomX Battery Eliminator accessory dummy-battery inserted into that same battery bay, so no standalone dc-barrel port is listed here (battery bay is a mount, not a connector in the taxonomy). (5) The \"Remote\" port is a 2.5mm LANC-style jack (used for camera remote start/stop and for the optional Calibrite/i1Display calibration puck via a USB-C-to-2.5mm cable) — modeled as trs-3.5 accepting ts-6.35-style control signal is not accurate either; closest taxonomy id is ir/rs232/midi-din, none of which fit a 2.5mm TRS control jack well, so it is represented as trs-3.5 (2.5mm mini-jack is the closest physical analog in-list; true diameter is 2.5mm not 3.5mm) — treat with caution. (6) The proprietary AtomXpansion dock port (bidirectional video/audio/power, used by AtomX Cast, AtomX SDI modules, battery eliminator) has no equivalent in the connector list and is NOT included as a port; it is a multi-pin proprietary docking interface, not a standard jack. (7) No SDI on this base model (SDI shown as \"-\" throughout official spec sheet) — SDI was added later on Ninja V+/Ultra. (8) Not rack-mountable; it is a handheld/on-camera 5\" monitor-recorder (151 x 91.5 x 31 mm, ~320g).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Full-size HDMI 2.0; accepts up to 4Kp60 10-bit 4:2:2 (camera dependent); also loops out incoming signal to HDMI Out"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Full-size HDMI 2.0; loop-out of input signal or playback output, up to 2160p60"
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo 3.5mm jack, switchable Mic level (-40dBu) or Line level (-10dBu); no bias/phantom power"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm headphone jack, stereo 2ch monitoring"
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "2.5mm LANC-style remote/calibration jack (physically 2.5mm, not 3.5mm — no exact match in connector list); used for camera remote start/stop trigger and optional display calibration puck"
+    }
+  ]
+}

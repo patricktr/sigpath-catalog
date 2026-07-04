@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "DXR15mkII",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/speakers/dxr/specs.html",
+  "confidence": "high",
+  "notes": "Active 2-way 15\" powered PA loudspeaker (bi-amped, FIR-X tuning, D-CONTOUR DSP). Not rack-mountable (pole-mount/floor/flying use); rackUnits omitted. INPUT1 is a single XLR3 female jack with a MIC/LINE switch (balanced); INPUT2 is two unbalanced 1/4\" phone (TRS) jacks (L/MONO, R); INPUT3 is two unbalanced RCA jacks (L, R) — INPUT1-3 are internally mixed. THRU is an XLR3 male jack wired in parallel with INPUT1 (passes the INPUT1 signal through unaffected, e.g. to another mixer channel or amp). LINK OUT is an XLR3 male jack carrying the internally mixed, line-level signal to feed INPUT1 of a second, linked DXR15mkII (for stereo/dual-mono SR pairing via the LINK MODE switch). AC IN is a rear-panel IEC inlet (universal 100-240V 50/60Hz, 110W consumption) accepting the supplied IEC power cord; exact IEC sub-type (C13/C14) not explicitly named in the manual text but the rear-panel diagram matches the standard IEC C13/C14 3-prong shape, consistent with third-party retailer listings. No RJ45, USB, or D-Sub control ports on this model. No grade applies to any port (all analog audio/AC power, no digital/bandwidth-graded connectors).",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced mic/line input; MIC/LINE switch and LEVEL control; mixed internally with INPUT 2/3"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Unbalanced phone (1/4\") input, L/MONO and R, -10dBu nominal"
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced RCA pin input, L and R, -10dBu nominal"
+    },
+    {
+      "name": "THRU",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR output, parallel-connected with INPUT 1 (passthrough of INPUT1 signal only)"
+    },
+    {
+      "name": "LINK OUT",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Line-level XLR output of the internally mixed signal; feeds INPUT 1 of a second linked DXR15mkII for stereo/dual-mono pairing"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal 100-240V 50/60Hz AC inlet, 110W consumption; supplied IEC power cord"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "SMT1500RM2U",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.se.com/us/en/product/SMT1500RM2U/apc-smartups-line-interactive-1500va-rackmount-2u-120v-6x-nema-515r-outlets-smartslot-avr-lcd/",
+  "confidence": "high",
+  "notes": "Primary spec data pulled from the official Schneider Electric product data sheet (PDF, dated Feb 29 2024) fetched from apc.com/se.com, which lists: Input Connection Type = NEMA 5-15P, Nb Of Power Socket Outlets = 6 NEMA 5-15R, Number Of Rack Unit = 2U, USB Compatible = Yes, USB cable included, and 1 free SmartSlot bay. Port physical types (DB9 serial + USB Type-B) and rear-panel layout were confirmed via the APC Smart-UPS 750/1000/1500VA 2U Rack-Mount User Manual (990-1194D), whose rear-panel diagram and \"Basic Connectors\" section for 100/120V models explicitly show a Serial Port (DB9, requires APC-supplied cable - incompatible with standard serial interface cables) and a USB Port, noting both are provided but cannot be used simultaneously. The one-page datasheet fetched was for a \"Not for sale in the US\" regional SKU variant sharing the same electrical/port spec (120V, NEMA 5-15P/5-15R, 2U) as the standard US SMT1500RM2U; port configuration is identical across 120V regional variants. The SmartSlot itself is an accessory card bay (for optional Network Management Card, etc.) rather than a fixed physical signal port, so it was omitted from the port list; no card is populated on the base SMT1500RM2U (the \"C\" variant SMT1500RM2UC additionally has a SmartConnect Ethernet port, not present on this base model). No grade fields apply since none of the listed ports (power outlets, RS232 serial, USB) have a version/speed stated by the source (USB spec version not confirmed, so omitted rather than inferred).",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Output Outlets 1-6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "6x NEMA 5-15R switched/programmable output outlets"
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 connector, proprietary APC pinout - requires APC-supplied cable, not standard RS232 wiring"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B device port for PowerChute monitoring software; cannot be used simultaneously with the Serial Port"
+    }
+  ]
+}

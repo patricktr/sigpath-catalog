@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Crestron",
+  "model": "DM-MD16X16",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 7,
+  "sourceUrl": "https://www.crestron.com/getmedia/9ef27068-b6a3-4cf8-9122-27c1325a04bc/ss_dm-md16x16_1",
+  "confidence": "high",
+  "notes": "The DM-MD16X16 is a modular, field-configurable 16x16 DigitalMedia matrix chassis with 16 input card slots and 8 dual-output card slots. As shipped (bare chassis), it has NO fixed AV signal connectors (no HDMI/SDI/HDBaseT/etc.) — all actual video/audio/HDBaseT/fiber I/O is provided entirely by separately-purchased, field-installable DMC-series input and output cards (e.g. DMC-4K-HD, DMC-4K-C-DSP, DMC-STR, DMC-VID-RCA-A), each with its own spec sheet and connectors (HDMI, DVI, 3G-SDI, RGB/VGA, component/composite, DM 8G+/HDBaseT RJ45, fiber LC/SC, USB HID, analog audio RCA, etc.). Fixed chassis connectors are: (1) RJ45 LAN (Gigabit), (16) DMNet/EIG terminal-block port-pairs for powering DM CAT devices, (1) IEC C14 power inlet, (1) chassis ground lug screw, and (1) front-panel USB-B console port. Backplane data rate is 12.5 Gbps (not a per-port signal grade, so omitted). Rack size is 7 RU; freestanding mounting is also supported. Data drawn from Crestron's official spec sheet (ss_dm-md16x16_1, revised 03/04/16), cross-checked against crestron.com product page. If modeling this device with populated cards for a signal-flow diagram, the actual AV I/O will depend entirely on which DMC input/output cards are installed and should be sourced from each card's individual spec sheet.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8-pin RJ45, 10/100/1000Base-T Ethernet, auto-negotiating"
+    },
+    {
+      "name": "COMPUTER",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front panel USB Type B console port for setup via Crestron Toolbox; 6 ft cable included"
+    },
+    {
+      "name": "24ABG / EIG 1-16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "16 sets of detachable 4-pin and 3-pin 3.5mm terminal blocks (DMNet power/comm ports with EIG power-select jumper); provides power and communications to DM CAT devices on corresponding output cards; not a standard AV signal connector, closest match is euroblock/terminal-block; max 40W (1.66A @ 24VDC) per port"
+    },
+    {
+      "name": "100-250V~7.0A 50/60Hz",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 main power inlet, mates with included removable power cord"
+    }
+  ]
+}

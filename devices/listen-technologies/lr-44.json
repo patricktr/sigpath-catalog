@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Listen Technologies",
+  "model": "LR-44",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.listentech.com/wp-content/uploads/2021/10/listen_technologies_lr-44_ir_lanyard_receiver_quick_reference_card.pdf",
+  "confidence": "high",
+  "notes": "The LR-44 is a battery-powered, personal (lanyard-worn) 4-channel infrared assistive-listening receiver, not a rack/AC-powered device. It has no external DC power/charging jack on the unit itself: it runs on 2x AAA alkaline batteries or an optional rechargeable NiMH pack (LA-364) that is charged in a separate external charging base/cradle (LA-350), so no power port is listed. Its only physical I/O is the single 3.5 mm headset jack, confirmed on the manufacturer's official LR-42/44 Quick Reference Card (listentech.com). Physical controls (power button, select button, volume dial, IR receiver lens, channel-indicator LEDs) are not connectors and are omitted. Cross-checked against Markertek's product spec table (https://www.markertek.com/product/lstn-lr-44/listen-technologies-lr-44-ir-lanyard-4-channel-receiver), which agrees: 3.5 mm unbalanced audio output, 2x AAA or NiMH battery pack, no external power connector. Sibling model LR-42 (stethoscope-style) omits the headset jack entirely, confirming the jack is LR-44-specific. rackUnits omitted (handheld/wearable device, not rack-mountable).",
+  "ports": [
+    {
+      "name": "Headset Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Accepts any earpiece/headphone with a 3.5 mm connector, mono or stereo output"
+    }
+  ]
+}

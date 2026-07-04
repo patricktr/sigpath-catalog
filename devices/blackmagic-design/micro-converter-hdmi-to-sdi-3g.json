@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Micro Converter HDMI to SDI 3G",
+  "category": "converter",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/microconverters/techspecs/W-CONU-11",
+  "confidence": "high",
+  "notes": "Official Blackmagic techspecs page (W-CONU-11) lists only USB Type-C for power/configuration — there is no separate DC barrel or AC inlet on the unit itself. The \"with Power Supply\" retail bundle (sold by B&H, Sweetwater, etc.) includes an external 100-240VAC to 5V/2A USB-C power supply with international plug adapters, but it connects to the converter via the same USB-C port (not a distinct port), so it is not modeled as a separate physical port. Max supported resolution is 1080p60 (progressive/interlace formats up to 1080i60), which corresponds to 3G-SDI-class bandwidth; grade set to sdi-3g per the product's \"3G\" designation and auto-detect SD/HD/3G-SDI support. HDMI input is HDMI Type A, unspecified version number on the spec page — grade omitted since no explicit HDMI version (1.4/2.0/2.1) is stated (max resolution 1080p60 is well within HDMI 1.4 capability, but Blackmagic does not state a version, so grade is left unset per instructions to omit when spec doesn't state a version).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Auto-detects and outputs SD, HD, or 3G-SDI; user-selectable Level A/B for 3G-SDI"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Auto-detects and outputs SD, HD, or 3G-SDI; user-selectable Level A/B for 3G-SDI"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Power input (bus-powered, 4.4-5.25V DC, 2W) and configuration via Blackmagic utility; also carries HDMI timecode/config data. Not a data/video signal port."
+    }
+  ]
+}

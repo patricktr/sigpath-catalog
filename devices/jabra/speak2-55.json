@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Jabra",
+  "model": "Speak2 55",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.jabra.com/_/media/Jabra_VXi_Product-Documentation/Jabra-Speak2-55/Technical-specifications/RevC/Jabra-Speak2-55-Tech-Sheet-170523-WEB.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer tech sheet (Jabra Speak2 55 Tech Sheet, 17052023, RevC) confirms the device's only physical wired I/O is a single non-removable ~80cm cable ending in a USB-C plug with an attached USB-A adapter on the same cable (\"USB C or USB A\" connectivity) — used interchangeably for host connectivity and charging; there is no separate charging port, no analog audio jack (3.5mm/RCA), and no other physical connector. Bluetooth 5.1 (A2DP, AVRCP, BLE for Google Fast Pair, HFP) is wireless-only, used for smartphone/tablet pairing (not a physical port so not listed). No USB signaling speed/version is published, so grade is omitted per rules. Product \"type\" enum has no exact \"Speakerphone\" category; \"Speaker\" was chosen as the closest fit for this audio-conferencing device (portable puck-style desktop speakerphone with 4-mic beamforming array + 50mm speaker). Not rack-mountable (120mm dia x 33mm H desktop puck, 280g), so rackUnits omitted. Two SKU variants exist (2755-109 MS Teams, 2755-209 UC) — both dark grey, identical physical I/O.",
+  "ports": [
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "usb-a"
+      ],
+      "note": "Permanently integrated ~80cm cable terminating in a USB-C plug with an attached USB-A adapter (both connectors on one cable, not a combo jack on the device body). Used for both host connection (audio/call control) and charging; no USB version/speed is published by Jabra so no grade is set."
+    }
+  ]
+}

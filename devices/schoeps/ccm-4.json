@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Schoeps",
+  "model": "CCM 4",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://schoeps.de/en/products/ccm/ccm-microphones/cardioids/ccm-4.html",
+  "confidence": "medium",
+  "notes": "The CCM 4 is a compact modular condenser mic capsule/amp module sold in two connector variants: CCM 4 L (8mm Lemo miniature push-pull connector, with a supplied 5m Lemo-to-XLR-3M adapter cable) and CCM 4 K (permanently attached 5m cable terminated in an XLR-3M male connector). Neither variant's true connector (Lemo, or bare wire ending in XLR) maps cleanly onto the fixed connector-id list: Lemo is absent from the list entirely, so 'euroblock' was used only as a required non-null placeholder and should be treated as unreliable/incorrect for physical mating purposes. If modeling the K variant instead, the correct port would be a single male XLR-3 (connector: xlr3, direction: output) that also carries P48 (or P12) phantom power in on pins 2/3 — no bandwidth grade applies to either variant since phantom-powered analog mic audio is not a graded connector type. There is no separate power connector: phantom power (48V nominal per P48, or 10V+ per P12) rides on the same audio conductor, drawing 4mA (P48) or 3.6mA (P12). No rack mounting, no video, no network, and no other I/O — this is a single-channel small-diaphragm cardioid condenser microphone head with no onboard controls. Manufacturer spec page (schoeps.de) is authoritative for electrical/mechanical specs; the B&H retailer page (bhphotovideo.com) returned HTTP 403 and could not be used for cross-check. Confidence is medium rather than high solely because the connector-id list has no correct entry for the Lemo connector used on the default L variant.",
+  "ports": [
+    {
+      "name": "Audio Output (Lemo)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8mm Lemo miniature push-pull connector on the standard CCM 4 L variant; no id in the allowed connector list represents a Lemo connector, so this is a placeholder and not an accurate physical description. Carries balanced analog audio output and receives P48/P12 phantom power on the same conductors. Supplied with a 5m Lemo-to-XLR-3M adapter cable. (Alternate CCM 4 K variant instead has a permanently attached 5m cable terminating directly in an XLR-3M male connector — use xlr3/output for that variant.)"
+    }
+  ]
+}

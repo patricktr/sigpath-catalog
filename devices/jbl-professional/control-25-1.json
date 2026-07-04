@@ -1,0 +1,16 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "Control 25-1",
+  "category": "audio",
+  "sourceUrl": "https://jblpro.com/en-US/products/control-25-1",
+  "confidence": "high",
+  "notes": "Passive 2-way indoor/outdoor loudspeaker (5.25\" woofer + 3/4\" tweeter), 8 ohm direct or 70V/100V multi-tap transformer (30W/15W/7.5W/3.7W taps). No powered electronics, so there is a single signal input and no AC/DC power port. Input is a screw-down terminal strip (barrier-style block accepting bare wire up to 12 AWG or open spade lugs #6/#8/#10) — mapped to the closest available connector id \"euroblock\" since a bare barrier-strip/terminal-block id is not in the provided list. Sold/shipped in pairs; each unit has one input terminal block (not a loop-through pair of jacks). Optional weatherproof cover kits (MTC-PC2/PC3) are accessories, not part of base I/O.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-down terminal strip; accepts bare wire up to 12 AWG or open spade lugs (#6, #8, #10). Feeds 8-ohm direct or 70V/100V transformer taps."
+    }
+  ]
+}

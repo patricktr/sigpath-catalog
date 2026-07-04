@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Lumens",
+  "model": "VC-A71P",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.mylumens.com/Download/VC-A71P-datasheet-English-2024-0320.pdf",
+  "confidence": "high",
+  "notes": "Rack units omitted — this is a desktop/ceiling-mount PTZ camera, not rack equipment. Sibling model VC-A71PN lacks the 12G-SDI and USB 3.0 outputs (per manual remark); this entry is for the base VC-A71P which includes both. RS-232 In/Out ports use 8-pin mini-DIN connectors (standard VISCA-style connector for daisy-chaining up to 7 cameras); the closest id in the provided connector list is \"midi-din\" (5-pin MIDI DIN), noted as an approximation since 8-pin mini-DIN is not a distinct option. RS-422 port is a 5-pin pluggable screw-terminal block (euroblock/phoenix style, included as an accessory connector in the box) used for daisy-chained serial control, not power — grade omitted. USB 3.0 port is Type B (device/streaming uplink to a host computer), supports UVC 1.1/UAC video+audio class streaming and camera control; grade set to usb-5g per USB 3.0 (SuperSpeed 5Gbps) naming, though the datasheet does not explicitly restate \"5Gbps.\" DC power input is a barrel-type jack (12V DC, powered by included external power adapter) — mapped to dc-barrel. Audio input is a single 3.5mm TRS jack switchable between Line In and Mic In. Ethernet port supports PoE++ (IEEE 802.3bt) for both data and power; grade left at eth-1g as Gigabit Ethernet is standard for this class of camera and no higher speed is stated in the datasheet (not explicitly confirmed as 1G in the spec sheet, so treat as inferred). IR receiver window and top-mounted tally light are not physical I/O connectors and were omitted. Kensington lock slot and the Output/resolution DIP switch are mechanical/control features, not signal or power ports, and were omitted.",
+  "ports": [
+    {
+      "name": "12G-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI 2.0 Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports PoE++ (IEEE 802.3bt) for data + power; IP streaming (RTSP/RTMP/RTMPS/MPEG-TS/SRT) and camera control (VISCA-IP/ONVIF)"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "UVC 1.1/UAC video+audio streaming to host PC and direct camera control"
+    },
+    {
+      "name": "RS-232 Output",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "8-pin mini-DIN VISCA-style connector; daisy-chain up to 7 cameras. Closest available connector id — actual connector is 8-pin mini-DIN, not 5-pin MIDI DIN"
+    },
+    {
+      "name": "RS-232 Input",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "8-pin mini-DIN VISCA-style connector. Closest available connector id — actual connector is 8-pin mini-DIN, not 5-pin MIDI DIN"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin pluggable screw-terminal block (included accessory); daisy-chain up to 7 cameras"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm phone jack, switchable Line In / Mic In"
+    },
+    {
+      "name": "DC 12V Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC ±20% via included external power adapter; 27W consumption"
+    }
+  ]
+}

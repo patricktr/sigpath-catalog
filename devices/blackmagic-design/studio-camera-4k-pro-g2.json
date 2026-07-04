@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Studio Camera 4K Pro G2",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/blackmagicstudiocamera/techspecs/W-CST-12",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet used as source. SDI in/out ports support 1.5G/3G/6G/12G-SDI (auto-switching); graded sdi-12g to reflect max supported rate. HDMI output is HDMI 2.0 (Type A). Ethernet is 10Gb/s RJ45 and also accepts Type 4 PoE for camera power (same physical RJ45 port, not a separate connector). USB-C x2 are 3.1 Gen 1 (5Gb/s) expansion ports for external SSD recording and network/USB tethering; marked bidirectional per host-port convention. The 3.5mm stereo jack doubles as a timecode input. Talkback output uses a 5-pin XLR headset connector (mapped to xlr5, closest match). Power input includes both a 12V DC locking 5.5mm barrel and a 4-pin XLR DC input for external battery/power supply (mapped to xlr4-dc). No AC/mains inlet on the camera body itself (DC/PoE powered only). The active Micro Four Thirds lens mount provides proprietary electronic lens control contacts, not a connector in the allowed list, so it is omitted from ports.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Stereo/Timecode In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo jack, switchable to timecode input"
+    },
+    {
+      "name": "Talkback",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR for talkback headset"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS jack for headphones with mic"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gb/s RJ45; also accepts Type 4 PoE for power"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "3.1 Gen 1 expansion port for external recording/control"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "3.1 Gen 1 expansion port for external recording/control"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC locking 5.5mm barrel connector"
+    },
+    {
+      "name": "XLR Power In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "12V DC 4-pin XLR input for external power supply or battery"
+    }
+  ]
+}

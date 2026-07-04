@@ -1,0 +1,51 @@
+{
+  "manufacturer": "BrightSign",
+  "model": "LS425",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://docs.brightsign.biz/hardware/ls425-ls445",
+  "confidence": "high",
+  "notes": "Desktop/puck-style unit; not rack-mountable (rackUnits omitted). LS425 and LS445 share identical physical I/O; they differ only in video decode capability (LS425 = Full HD 1080p60; LS445 = 4K). HDMI is HDMI 2.0a per BrightSign's official spec sheets (multiple corroborating retailer sources) — mapped to grade hdmi-2.0 since 2.0a is an HDR/metadata revision, not a bandwidth change. USB-C port supports host mode plus adapter cables for GPIO/serial/IR (bidirectional, USB spec version not stated by BrightSign — omitted grade rather than guess). Ethernet is 10/100 (Fast Ethernet), graded eth-100m. Optional Wi-Fi/Bluetooth module (WD-105) connects via internal M.2 E-key slot, not an external port, so it is not listed as physical I/O; the two external antenna connectors for that optional module were also omitted since they are RF antenna jacks, not in the provided connector list. Power is a locking DC barrel-style connector rated 12V/1.5A (BrightSign-proprietary locking variant of dc-barrel).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0a per BrightSign spec; outputs up to 1920x1080 at 60p on LS425"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Host-mode capable; supports adapter cables for GPIO, RS-232 serial, and IR"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "accepts": [
+        "toslink"
+      ],
+      "note": "3.5mm analog audio out; same jack also carries S/PDIF digital audio"
+    },
+    {
+      "name": "microSD",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "microSD card slot for primary storage; no exact connector id available in the allowed list, closest analog omitted from confidence-critical mapping — physical slot is a microSD card reader, not a cable connector"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary locking DC connector, 12V @ 1.5A"
+    }
+  ]
+}

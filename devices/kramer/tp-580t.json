@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Kramer",
+  "model": "TP-580T",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://k.kramerav.com/downloads/pdf/product/3/TP-580T.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Kramer's official technical specification PDF (k.kramerav.com), the authoritative manufacturer document, cross-checked against Kramer's current product page (www1.kramerav.com/product/tp-580t). This is an HDBaseT transmitter (paired with a TP-580R receiver) extending one HDMI input plus bidirectional RS-232 and IR over a single RJ-45/CAT cable, up to 70m/230ft. It is a compact desktop enclosure (12.0 x 7.2 x 2.4 cm, 0.6kg) — not inherently rack-mountable, so rackUnits is omitted; Kramer's optional RK-3T adapter lets three units share 1U space. HDMI grade (2.0) is inferred: the spec PDF states 10.2Gbps max data rate (3.4Gbps per graphic channel) and \"Supports HDMI and HDCP,\" while the current manufacturer product page title/description states \"4K60 4:2:0 HDMI HDCP 2.2\" support, both consistent with HDMI 2.0 rather than 1.4 or 2.1. No RS-232/IR grade applies (control/analog signals, not bandwidth-graded). Category set to \"converter\" and type \"Extender\" since this is a point-to-point HDBaseT signal extender, not a matrix/switcher.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports HDCP 2.2 and 4K@60Hz (4:2:0); max data rate 10.2Gbps (3.4Gbps per graphic channel) per manufacturer spec, consistent with HDMI 2.0 signal compliance stated on the current product page."
+    },
+    {
+      "name": "HDBT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT twisted-pair output carrying HDMI, RS-232 and IR to a paired TP-580R receiver over CAT cable (up to 70m/230ft); not a standard Ethernet data port so no eth-* grade assigned."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub, bidirectional pass-through for serial control/data extension and firmware upgrade; baud rate 115200."
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini jack for IR link extension, pass-through to/from the paired TP-580R."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power supply (included accessory); power consumption 12V DC, 275mA."
+    }
+  ]
+}

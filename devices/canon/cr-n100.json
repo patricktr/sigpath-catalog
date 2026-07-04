@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Canon",
+  "model": "CR-N100",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.usa.canon.com/shop/p/cr-n100",
+  "confidence": "medium",
+  "notes": "Manufacturer's official spec/shop pages (usa.canon.com and Canon regional sites, e.g. canon-europe.com, en.canon-cna.com) consistently list the CR-N100's physical terminals as: HDMI OUT (output only, x1), LAN (RJ45, 1000Base-T, also used for PoE+ IEEE802.3at power delivery), RS-422 (RJ45 connector, serial control), MIC/audio (3.5mm stereo mini jack, unbalanced, plug-in power), USB Type-C (USB 3.0), and DC IN (24V DC via included compact power adaptor; PoE+ and DC-IN are mutually exclusive, not simultaneous). No SDI output exists on the CR-N100 itself — an early search hit referencing \"SDI OUT/HDMI OUT terminal\" firmware language appears to be generic wording shared across Canon's CR-N series PTZ lineup (larger models like CR-N500/CR-N300 do have SDI) and was not corroborated for the CR-N100 by any Canon regional spec page, B&H, or the settings manual; this device is HDMI-only for baseband video output. HDMI version (1.4 vs 2.0) is not stated by Canon in any source found; omitted grade rather than guess, since Canon publishes 4K UHD 30p / 1080 59.94p as the output capability without naming an HDMI spec revision. DC IN connector physical style (round barrel vs. proprietary) is not explicitly described by Canon; \"dc-barrel\" chosen as closest catalog id — treat as a caveat. RS-422 uses an RJ45 shell but is not Ethernet; grade intentionally omitted since it's control wiring, not a bandwidth-graded network link. Direct fetch of Canon's own canon-europe.com and canon-me.com specification pages returned HTTP 403 to the fetch tool, so this was cross-verified via consistent AI-summarized excerpts of usa.canon.com/shop/p/cr-n100 (used as sourceUrl) plus corroborating snippets from canon-europe.com, en.canon-cna.com, en.canon-me.com, and the CR-N100 settings manual (manualslib.com), all agreeing on the same terminal list. Confidence set to medium because HDMI grade could not be confirmed and the DC connector's exact physical style is inferred rather than stated.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T; also carries PoE+ (IEEE802.3at) for power and IP/NDI video streaming"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 connector wired for RS-422 serial control, not Ethernet"
+    },
+    {
+      "name": "MIC IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, unbalanced, plug-in power supported"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB Type-C, USB 3.0 (5 Gbps); used for USB video/UVC webcam-style output up to Full HD"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24V DC input via included compact AC/DC adaptor; exact connector style (barrel vs. proprietary locking) not specified by Canon, closest catalog match used"
+    }
+  ]
+}

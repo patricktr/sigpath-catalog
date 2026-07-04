@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Ferrofish",
+  "model": "Verto MX",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.ferrofish.com/public/downloads/products/verto/Verto_Series_Manual_PRINT_V2.0i.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer manual (Owners' Manual FERROFISH VERTO32, VERTO64 & VERTOMX, v2.0i, 2022) covers all three Verto models; Verto MX section confirmed rear-panel layout and tech specs. MADI is carried over BNC (coaxial) and LC fiber (SFP module, multimode default, singlemode optional) — this is AES10 MADI, a different protocol/scale from SDI, so no \"grade\" was set on the BNC/fiber-lc MADI ports even though the manual states channel-count-vs-samplerate tiers (64x64 ch @44.1-48kHz, 32x32 @88.2-96kHz, 16x16 @176.4-192kHz) — these describe MADI framing, not an SDI bandwidth grade, so applying an sdi-* grade would be a category error per the connector's actual protocol. Dante ports are 1Gbit per Brooklyn board spec, graded eth-1g. Power: unit take a locking 12V DC barrel-type connector from an external \"Power Supply 12V\" brick; exact barrel pin size not published, closest available enum is dc-barrel. Unit is a compact desktop/half-rack (22 x 9 x 4.5 cm without rack-mounts, ~half-19in width x 1U height); optional rack-mount ears sold separately (single or dual unit kits) — no rackUnits set since it ships as a standalone desktop unit and rack mounting is an accessory. No front-panel signal/power ports (front has only LEDs and power button).",
+  "ports": [
+    {
+      "name": "Power supply",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC barrel connector, external 12V PSU (14.4VA, 1.2A at 12V DC); PSU itself is mains 100-240V~ 50/60Hz"
+    },
+    {
+      "name": "MADI Out (coax)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "MADI In (coax)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "MADI I/O (optical)",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "SFP slot, multimode module installed by default; LC connector (SC-LC adaptor included). AES10 MADI over fiber, not SDI — no SDI grade applies."
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Wordclock Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Wordclock In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Dante PRI",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Dante SEC",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    }
+  ]
+}

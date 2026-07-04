@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Black Box",
+  "model": "MCXG2-ENC (MCXG2EC01 Copper / MCXG2EF01 Fiber)",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://cdn-docs.av-iq.com/DataSheet/mcx-g2_ds_rev1_28004.pdf",
+  "confidence": "high",
+  "notes": "Black Box's product family page (URL slug \"MCXG2-ENC\") covers two physical SKUs: MCXG2EC01 (copper, 10GbE via RJ-45) and MCXG2EF01 / MCXG2EF01-T-R2 (fiber, 10GbE via SFP+ cage instead of the second RJ-45). Ports above are otherwise identical between the two; only the primary AVoIP network port's connector differs (rj45/eth-10g for copper vs sfp/eth-10g for fiber — I listed the copper RJ-45 form as primary and noted the fiber variant's SFP+ substitution). HDMI grade of hdmi-2.0 is confirmed via the datasheet's stated 18 Gbps HDMI bandwidth and \"HDMI 2.0 and DVI 1.0 compatible\" feature bullet. The 10GbE LAN grade (eth-10g) is confirmed via the \"10GbE Bandwidth: 10 Gbps\" spec row. The secondary \"LAN (RJ-45)\" pass-through port's speed is not stated in the datasheet itself (only the brochure mentions \"a separate 1-GbE connection\" for audio/control routing across the system, not necessarily this exact port), so no grade was assigned to avoid guessing. Desktop/1U-slim form factor (215mm x 25mm x 108-117mm) — not intended for rack mounting, so rackUnits omitted. Device also ships with (3) USB 2.0 Type-A pass-through ports but those are physically on the DECODER (MCXG2DC01/DF01), not the encoder — omitted here since this device record is for the ENC (encoder) SKU only. Source: Black Box \"MCX G2 Encoders and Decoders\" datasheet (MCX-G2_DS_REV1.PDF, copyright 2021), hosted at cdn-docs.av-iq.com, which reproduces Black Box's own official spec sheet content verbatim including the \"BLACKBOX.COM\" support line — this is the same document distributed by Black Box's channel partners as the authoritative datasheet. The manufacturer's own blackbox.com product page returned HTTP 403 to automated fetch, so this mirrored copy of Black Box's official PDF datasheet was used instead.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "18 Gbps HDMI 2.0 input, HDCP 2.2/1.x compliant"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Local loop-out of the encoded HDMI input"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB Type-C, part of the extended USB 2.0 hub"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo unbalanced audio input, 1Vrms, 10kOhm impedance"
+    },
+    {
+      "name": "LAN (10GbE, copper variant)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "MCXG2EC01 copper variant uses RJ-45 for the 10GbE AVoIP uplink; the MCXG2EF01 fiber variant uses an SFP+ cage instead (sfp, eth-10g) for this same link"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Secondary pass-through Ethernet/control LAN port; speed not stated in datasheet (brochure references a separate 1-GbE control connection)"
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "3.5mm IR pass-through jack, 38kHz, ships with IR emitter"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block RS-232 pass-through, 57600 baud default, up to 115200 bps"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/3A DC external power adapter (US/EU standards, CE/FCC/UL certified)"
+    }
+  ]
+}

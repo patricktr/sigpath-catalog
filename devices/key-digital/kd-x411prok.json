@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Key Digital",
+  "model": "KD-X411ProK",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://web.archive.org/web/20180528115240/http://www.keydigital.com/items.asp?ItemCode=KDX411ProK&Company=KEY",
+  "confidence": "high",
+  "notes": "This is a Tx+Rx extender SET (two physically separate boxes, each a compact desktop enclosure, 5\\\" x 4.06\\\" x 1.06\\\", not rack-mountable). Ports listed cover both units: Transmitter (HDMI in, IR in, CAT5e/6 out, IR-out/RS-232 out, analog audio out, digital audio out) and Receiver (CAT5e/6 in, IR in, HDMI out, IR-out/RS-232 out). Manufacturer's current site (keydigital.org) no longer renders the specs tab client-side; specs were sourced from an archived (2018-05-28) snapshot of the original manufacturer product page (keydigital.com), which is the same content originally published for this still-listed product family. RS-232 and IR ports use Key Digital's standard 3.5mm mini-jack connectors (mapped to trs-3.5; RS-232 typically uses ring/tip pinout, not full RS232 voltage levels, but manufacturer explicitly labels it \"RS-232\"). Analog audio de-embed output is labeled \"Analog Audio\" without connector size confirmed in source text — assumed 3.5mm stereo per Key Digital's typical de-embedder convention (used on sibling KD-X6xx/X4xx models); flagged as medium-certainty for that one port. Digital audio de-embed output is coax (PCM) per feature text (\"Coax digital (PCM)\"), mapped to rca. Power supplies are (2x) external 5V/2A adapters (KD-PS5V2ASC) with interchangeable/screw-in head — mapped to dc-barrel. HDMI supports HDCP 2.2 and HDMI 2.0 4:2:0/8-bit 4K60 profile, graded hdmi-2.0. HDBaseT/CAT5e-6 link ports are proprietary HDBaseT (not standard Ethernet data) carried on RJ45 connector — mapped to rj45 but left ungraded (not a standard eth-x.x data rate; HDBaseT signaling). No USB ports present. No separate AC mains inlet on the units themselves (external DC bricks plug into IEC mains separately, not part of the device's own port set).",
+  "ports": [
+    {
+      "name": "HDMI In (Tx)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IR In (Tx)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm IR input, sensor-powered"
+    },
+    {
+      "name": "CAT5e/6 Out (Tx)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary HDBaseT single-cable link to Rx; not standard Ethernet data rate"
+    },
+    {
+      "name": "IR Out / RS-232 (Tx)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Bi-directional IR out and RS-232 control on 3.5mm connector"
+    },
+    {
+      "name": "Analog Audio Out (Tx)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "De-embedded analog L/R audio from HDMI input; connector size inferred from Key Digital convention, not explicitly confirmed in source text"
+    },
+    {
+      "name": "Digital Audio Out (Tx)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "De-embedded digital coax (PCM) audio from HDMI input"
+    },
+    {
+      "name": "CAT5e/6 In (Rx)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary HDBaseT single-cable link from Tx; not standard Ethernet data rate"
+    },
+    {
+      "name": "IR In (Rx)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm IR input, sensor-powered, +5V"
+    },
+    {
+      "name": "HDMI Out (Rx)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IR Out / RS-232 (Rx)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Bi-directional IR out and RS-232 control on 3.5mm connector"
+    },
+    {
+      "name": "DC Power In (Tx)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 5V/2A power supply (KD-PS5V2ASC), interchangeable screw-in head"
+    },
+    {
+      "name": "DC Power In (Rx)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 5V/2A power supply (KD-PS5V2ASC), interchangeable screw-in head"
+    }
+  ]
+}

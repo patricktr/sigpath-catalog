@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VIA Campus²",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://cdn.assetserver.net/_assets/kramer/pdf/viacampus2plus-manual.pdf",
+  "confidence": "high",
+  "notes": "Base VIA Campus² model (not the VIA Campus² PLUS variant, which adds an HDMI input). Specs taken from Kramer's official combined VIA Campus²/VIA Campus² PLUS user manual (Technical Specifications, p.137), cross-checked against Markertek's and conferencetableboxes.com's spec tables which mirror Kramer's own datasheet wording. Power is supplied via an external 120W (19V, 6.32A) power adapter/brick connecting to the unit via a DC barrel-style jack; the unit also has a separate physical \"Power Toggle\" on a 2-pin terminal block (an on/off switch, not modeled as a separate port). No grade set on HDMI/DisplayPort outputs even though max resolutions are documented (4K@30 RGB for HDMI out, 4K@60 for DisplayPort out) because the manual does not state an HDMI/DP version number (e.g., 2.0 vs 1.4) — stating a grade without a confirmed spec version would risk misclassification. Desktop unit; no standard rack mounting confirmed for this generation (an optional rack adapter existed for the original, non-\"2\" VIA Campus, not confirmed for Campus²), so rackUnits is omitted. Wi-Fi antenna connectors (2x, on threaded RF connectors) are omitted from ports as they are proprietary antenna connectors, not in the accepted connector list.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Unbalanced Stereo Audio Line Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (blue)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (blue)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (black)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (black)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (black)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Power (19V DC adapter)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 120W power adapter, 19V/6.32A"
+    }
+  ]
+}

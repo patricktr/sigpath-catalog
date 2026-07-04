@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Lutron",
+  "model": "HomeWorks QSX Processor (HQP7-2)",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://assets.lutron.com/a/documents/3691127_eng.pdf",
+  "confidence": "high",
+  "notes": "Source is the official Lutron \"product specifications\" sheet, doc 3691127f (08.06.25), for model family HQP7-1/HQP7-2/HQP7-MDU-1/HQP7-MDU-2. This is a DIN-rail/panel-mounted low-voltage lighting control processor, not a rack-mount device (mounts inside an HQ-LV21, L-LV21, L-LV14, or PDx control panel), so rackUnits is omitted. Modeled the 2-link HQP7-2 variant (most complete I/O); the 1-link HQP7-1/HQP7-MDU-1 variants are identical but have only one Link terminal block instead of two, and MDU variants have reduced device/switch-leg capacity but the same physical connectors. All terminal-block connectors (power input and the L1/L2 links) are 4-pin removable/pluggable blocks - none are true bandwidth-graded connectors, so no grade field applies to them. Ethernet ports are plain RJ45; the spec states only \"Ethernet\" communications and Cat5e minimum cabling without an explicit 10/100/1000 Mbps rating, so grade was omitted per instructions rather than guessed. No USB, HDMI, video, or audio I/O exists on this device - it is a lighting/shading control processor, not an AV signal device, though it is commonly integrated into AV control racks.",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "One of two RJ45 standard Ethernet connections with built-in switch for daisy-chaining processors; Cat5e minimum, 100 m max run. Spec does not state link speed, so no grade is set."
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ45 Ethernet connection (see Ethernet 1 note)."
+    },
+    {
+      "name": "Power Input (V+ / COM)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "4-pin removable terminal block, Processor power 24-36 V DC 250 mA (SELV/NEC Class 2), fed from the separate QSPS-DH-1-75-H DIN-rail power supply. Terminals accept up to two 18 AWG wires each. Modeled as euroblock-dc since it is a pluggable screw/spring terminal block carrying low-voltage DC, not a barrel or IEC connector."
+    },
+    {
+      "name": "Link 1 (L1)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin removable terminal block (V+, COM, MUX, MUX) individually configurable as a HomeWorks QS wired device link or HomeWorks Clear Connect - Type A link; 24-36 V DC, 1 A. Carries both link power and RS-485-style MUX data, so it is not a pure power or pure data connector in the allowed list - closest match is a generic removable terminal block (euroblock). Present on HQP7-2/HQP7-MDU-2; HQP7-1/HQP7-MDU-1 have only Link 1."
+    },
+    {
+      "name": "Link 2 (L2)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Second 4-pin removable terminal block link, identical function/rating to Link 1. Only present on the 2-link models (HQP7-2, HQP7-MDU-2); the 1-link models (HQP7-1, HQP7-MDU-1) omit this port."
+    }
+  ]
+}

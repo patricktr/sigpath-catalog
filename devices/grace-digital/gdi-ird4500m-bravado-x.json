@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Grace Digital",
+  "model": "GDI-IRD4500M (Bravado-X)",
+  "category": "audio",
+  "type": "Media player",
+  "sourceUrl": "https://www.manualslib.com/manual/438273/Grace-Digital-Gdi-Ird4500m.html",
+  "confidence": "medium",
+  "notes": "Discontinued consumer WiFi internet radio (Bravado-X); no live manufacturer spec page exists on gracedigital.com (checked product-manuals page, not listed). Used the official Grace Digital user manual hosted on ManualsLib (rear-panel diagram page 7, specifications page 40) as the most authoritative available source. Power spec from manual: Mains AC 100-240V 50/60Hz on external adapter, 12V 1.5A DC into unit, 18W consumption. Speaker Out is bare-wire terminal block (6-8ohm), not a true banana-plug jack - \"banana\" chosen as closest connector id in the allowed list. No native RJ45 Ethernet port; wired LAN only via an optional USB-Ethernet dongle through the USB-A port, so no standalone rj45 port was listed. Could not confirm a dedicated FM antenna jack on this exact rear panel (device is primarily WiFi-based; earlier confusable sibling model GDI-IRD4400M has similar naming). No bandwidth grades apply - all ports are analog audio, DC power, or USB (no USB speed stated in manual, so grade omitted).",
+  "ports": [
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External AC/DC adapter input, 12V 1.5A (mains 100-240V 50/60Hz on adapter side)"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Line Out (L/R)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Aux In (L/R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Speaker Out (L/R)",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Bare-wire/binding-post speaker terminals for external 6-8ohm speakers; closest listed connector id, not an actual banana plug jack"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Supports USB flash drives for playback or an optional USB-to-Ethernet adapter for wired LAN"
+    }
+  ]
+}

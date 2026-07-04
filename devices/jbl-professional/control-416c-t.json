@@ -1,0 +1,23 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "Control 416C/T",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4765d523/pdfs/JBL_Control_416CT_Spec_Sheet.pdf",
+  "confidence": "high",
+  "notes": "Passive 70V/100V-distributed / 8-ohm-direct ceiling loudspeaker (2-way coaxial, 6.5in woofer + 0.75in tweeter); no AC/DC power input port exists since it draws all power from the speaker signal line itself. Official JBL spec sheet (issued 07/30/2025) states: \"Two removable locking euro-block 2-pin connectors with screw-down terminals for bare wire. Connectors paralleled for input and loop-thru.\" Both terminal blocks are electrically identical/paralleled (either can serve as the amp-facing input while the other loops to the next speaker); modeled here as one Input and one Loop-Thru port for clarity. No grade applies (analog audio euroblock, not on any graded connector scale). Desktop/ceiling-mount unit, not rack-mountable, so rackUnits omitted. Transformer taps: 70V at 30/15/7.5/3.8W, 100V at 30/15/7.5W, or 8-ohm direct (50W/200W-peak continuous, 75W/300W-peak 2hr rating). A related life-safety variant (Control 416C/T-VA, EN54-24) exists but this entry covers the standard Control 416C/T.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-pin locking euroblock, screw-down terminals for bare wire (20 AWG min / 12 AWG max). Accepts 70V/100V transformer-tap or 8-ohm direct low-impedance signal from amplifier."
+    },
+    {
+      "name": "Loop-Thru",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin locking euroblock, electrically paralleled with the Input terminal block, for daisy-chaining signal to the next ceiling speaker in the run."
+    }
+  ]
+}

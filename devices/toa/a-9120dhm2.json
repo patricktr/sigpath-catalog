@@ -1,0 +1,78 @@
+{
+  "manufacturer": "TOA",
+  "model": "A-9120DHM2",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.toaelectronics.com/en-us/products/detail/a9120dhm2cu",
+  "confidence": "high",
+  "notes": "Base unit ships with 8 empty modular slots (mic/line, digital, output, control-expansion, paging, etc. modules sold separately - e.g. D-001T/D-001R dual mic-line input, T-001T dual output, C-001T control I/O - each 2-channel, removable terminal-block/euroblock connectors). Those slot-based ports are optional accessories, not fixed physical I/O of this SKU, so they are omitted from the port list above; only the amplifier's built-in fixed connectors are listed. No Ethernet/RJ45 network port is documented on this model. Control I/O, control inputs, and remote-volume connections share a single 14-pin removable terminal block per TOA's spec sheet but are logically distinct circuits, so they are listed as separate logical ports. Speaker outputs modeled as euroblock (closest listed id) since the connector is TOA's proprietary 4-pin removable terminal block, not a raw bare-wire euroblock -- closest available option per the port model constraints. AC input is 120V/60Hz (US A-9120DHM2CU variant); other regional SKUs (e.g. 230V EU/UK) may use a different mains voltage but the same IEC inlet. No bandwidth-graded connectors present (no HDMI/SDI/DP/USB/Ethernet), so no grade fields are set. Cross-checked against TOA Canada mirror site and multiple retailer listings (B&H, Markertek, Dale Pro Audio, Adorama) which corroborate the modular architecture, dimensions (2U, 420 x 107.6 x 395 mm), and connector types.",
+  "ports": [
+    {
+      "name": "Power Amp Input 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "0 dB, 10 kOhm, unbalanced; feeds built-in 120W amp channel 1"
+    },
+    {
+      "name": "Power Amp Input 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "0 dB, 10 kOhm, unbalanced; feeds built-in 120W amp channel 2"
+    },
+    {
+      "name": "Preamp Output 1",
+      "direction": "output",
+      "connector": "rca",
+      "note": "0 dB, 300 Ohm, unbalanced"
+    },
+    {
+      "name": "Preamp Output 2",
+      "direction": "output",
+      "connector": "rca",
+      "note": "0 dB, 300 Ohm, unbalanced"
+    },
+    {
+      "name": "Speaker Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "120W, 41 Ohm x2, BTL, removable terminal block (4-pin)"
+    },
+    {
+      "name": "Speaker Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "120W, 41 Ohm x2, BTL, removable terminal block (4-pin)"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female, for third-party control systems"
+    },
+    {
+      "name": "Control Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "4 channels, no-voltage make-contact input, removable terminal block (14-pin, shared with control out and remote volume)"
+    },
+    {
+      "name": "Control Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4 channels, open-collector output, removable terminal block (14-pin, shared)"
+    },
+    {
+      "name": "Remote Volume",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2 channels, accepts 10 kOhm potentiometer or 0-10V DC, removable terminal block (shared 14-pin block)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "120V AC 60Hz (US/CU variant), IEC standard grounded AC receptacle, 2m cord included"
+    }
+  ]
+}

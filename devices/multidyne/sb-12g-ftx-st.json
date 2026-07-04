@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Multidyne",
+  "model": "SB-12G-FTX-ST",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.markertek.com/product/sb-12g-ftx-st/multidyne-sb-12g-ftx-st-silverbullet-12-gbps-multi-rate-serial-digital-video-transmitter-1310nm-3dbm-st-connector",
+  "confidence": "high",
+  "notes": "This is a single-channel SDI-to-fiber transmitter (TX only, 'FTX' = fiber TX), one of a matched TX/RX pair (receiver is the separate SB-12G-FRX-ST). BNC video connector supports multi-rate SDI from 5Mbps to 12Gbps (SMPTE 424M/292M/297M/2081-1/2082-1); graded sdi-12g as the top-rated bandwidth for this port per the connector's max supported standard. Fiber connector is physically an ST-type optical connector (metallic bayonet), not present in the allowed connector enum list -- mapped to 'fiber-lc' as the closest fiber category; no bandwidth grade applies to fiber ports per the grading rules given. Power input is a locking 4-pin mini-XLR (confirmed via Multidyne's own SilverBullet family literature and cross-referenced B&H/Markertek listings); mapped to 'xlr4-dc' as the closest connector id. Not rack-mountable (handheld/inline unit, ~3.2 x 0.65 x 0.75 in, ~4 oz including cable pigtail). Cross-verified across Markertek spec table, B&H Photo listing, and Multidyne's own SilverBullet-family datasheet/manual (note: Multidyne's current site now markets a newer 'SilverBullet 2' successor line, SB2-12G-TX-ST, with the same architecture -- BNC in / ST optical out / mini-XLR4 power -- used here only to corroborate connector types, not as the primary spec source for this exact SKU).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Optical Out (ST)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Physical connector is a metallic ST-type optical connector (singlemode fiber, 1310nm, -3dBm TX launch power). 'ST' is not in the allowed connector enum; fiber-lc chosen as closest fiber-optic analog."
+    },
+    {
+      "name": "Power 5-16VDC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Locking 4-pin mini-XLR DC power input, 5-16VDC, ~1-1.5W. Powered via included AC adapter or optional D-Tap/USB-A/USB-C accessory cables."
+    }
+  ]
+}

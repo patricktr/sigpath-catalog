@@ -1,0 +1,25 @@
+{
+  "manufacturer": "AMX",
+  "model": "MXT-701",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.cinos.net/wp-content/uploads/resources/amx/touch-panels/cinos-amx-modero-mxt-701-datasheet.pdf",
+  "confidence": "high",
+  "notes": "Official AMX data sheet (c.2014 AMX, archived via Cinos.net; content matches AMX's own MXT-701 product/spec page at amx.com). This is a 7-inch tabletop touch panel (5\\\" x 7-5/16\\\" x 4-1/8\\\", 1.9 lbs) - a desktop unit, not rack-mountable, so rackUnits is omitted. Power is supplied entirely via Power over Ethernet (802.3af, Class 3) through the single RJ-45 Ethernet port; there is no separate AC/DC power connector on the chassis, so no additional power port was added. USB grade set to usb-2.0 per spec (\\\"USB host 2.0, Type A ports\\\"). Ethernet grade set to eth-100m since the spec states \\\"10/100 port\\\" (100 Mbps max), not Gigabit. The panel also supports NFC and optional Bluetooth via an external USB dongle (MXA-BT accessory), but these are not physical I/O ports on the chassis itself and were not included as ports.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 RJ-45; also carries PoE (802.3af Class 3) power to the panel - there is no separate power connector on the device"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Two USB host 2.0 Type-A ports; one has limited physical access requiring a right-angle connector"
+    }
+  ]
+}

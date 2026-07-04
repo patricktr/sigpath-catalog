@@ -1,0 +1,46 @@
+{
+  "manufacturer": "Extron",
+  "model": "XTP II CrossPoint 3200",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 10,
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/XTP_II_CP_3200_combo_5632-D3.pdf",
+  "confidence": "medium",
+  "notes": "The XTP II CrossPoint 3200 is a modular, empty matrix-switcher ENCLOSURE (frame), not a fixed-I/O device: it has 8 input card slots and 8 output card slots that accept separately-purchased XTP II input/output boards (HDMI, DVI, 3G-SDI, 12G-SDI, RGBHV/analog, XTP twisted-pair, XTP fiber, etc.). The ports listed above are only the connectors fixed to the enclosure itself (control, network, power) per the authoritative Extron spec sheet (doc 5632-D3, \"XTP II CrossPoint 3200 Enclosure\"). Actual video/audio I/O (type, count, and bandwidth grade such as HDMI 2.0 or 12G-SDI) depends entirely on which input/output cards are installed and cannot be assigned to the base model. Two power-inlet variants exist depending on SKU: 60-1546-01 (IEC C14 inlet, 100-240VAC) and 60-1981-01 (IEC C20 inlet, region-dependent higher-current input). Both are sold with a standard \"Everlast\" redundant power supply; the spec sheet text confirms redundancy but the fetched text did not explicitly show a rear-panel diagram enumerating two separate inlet receptacles, so the second AC-in port is a reasonable inference from \"redundant power supply is standard,\" not a directly confirmed rear-panel photo/diagram — flagged as medium confidence. The USB control port is physically a mini USB-B connector; \"usb-micro\" was chosen as the closest available id in the allowed connector list since \"usb mini-b\" is not an option (also note mini-B is a low-speed USB 2.0 port, not a high-speed data link, so no grade was set). No HDMI/SDI/DVI ports appear on the base enclosure - do not conflate this model with the older non-\"II\" XTP CrossPoint 3200 or its enclosure/board combo spec PDF, which share very similar model numbers and documentation URLs.",
+  "ports": [
+    {
+      "name": "Remote (RS-232/RS-422)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Rear panel female 9-pin D connector; bidirectional RS-232 or RS-422 selectable, 9600-115200 baud"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front panel female mini USB-B control port, USB 2.0 low speed. Closest listed connector id used; actual connector is mini USB-B, not micro."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Female RJ-45, 10/100Base-T half/full duplex with autodetect"
+    },
+    {
+      "name": "AC In (Power Supply 1)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Model 60-1546-01: IEC 60320 C14 inlet, 100-240 VAC 50-60 Hz. Model 60-1981-01 variant uses a C20 inlet instead (see notes)."
+    },
+    {
+      "name": "AC In (Power Supply 2)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant Everlast power supply is standard on this chassis; spec sheet confirms dual/redundant PSU but does not explicitly enumerate a second rear-panel inlet diagram, so this second inlet is inferred from 'redundant power supply is standard' language."
+    }
+  ]
+}

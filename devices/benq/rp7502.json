@@ -1,0 +1,131 @@
+{
+  "manufacturer": "BenQ",
+  "model": "RP7502",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.benq.com/en-ap/business/ifp/rp7502-corporate/specifications.html",
+  "confidence": "medium",
+  "notes": "Confirmed via BenQ's official Asia-Pacific spec page (fetched twice, consistent results) and corroborated by independent search snippets listing the same port counts. Port breakdown per BenQ specs: HDMI 3x in / 1x out (all HDMI 2.0); VGA 1x in; USB-A 3x USB2.0 + 2x USB3.0; USB-B (touch) 3x USB2.0; USB-C 1x USB3.0 (front, supports video/audio/touch/charging); Audio: 2x 3.5mm line-in (1 mic, 1 PC audio), 1x 3.5mm line-out, 1x S/PDIF optical out; RJ45 10/100/1000 (1000 via internal OPS slot, 10/100 for onboard Android SoC — modeled as a single eth-1g port since it is one physical jack); RS-232 1x. One HDMI input and 2 USB-A (2.0) ports are front-mounted per BenQ marketing copy (\"two built-in USB 2.0 ports and an HDMI port in front\"); the remaining ports are rear-mounted. Exact front/rear split for the 2x USB3.0 ports could not be confirmed and is assumed rear. The unit also has an internal OPS slot (slot-in PC bay) — this is a proprietary card-slot, not a standard external connector, so it was omitted from the port list. AC power inlet connector type (IEC C13/C14) was not explicitly published by BenQ in the sources checked; it is inferred from the standard practice for BenQ interactive flat panels in this power class (121.5W typical, 100-240V 50/60Hz) — flagged as an inference, hence \"medium\" confidence overall. No rack-mount units apply; this is a 75\" wall/stand-mounted interactive flat panel, not rack-mountable.",
+  "ports": [
+    {
+      "name": "HDMI 1 (Front)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "USB-A (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 3.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-B (Touch)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-B (Touch)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-B (Touch)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-C (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Supports video-in, audio, touch passthrough, and charging"
+    },
+    {
+      "name": "Audio In 1 (Mic)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 2 (PC Audio)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (Earphone)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS-232",
+      "direction": "input",
+      "connector": "rs232"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

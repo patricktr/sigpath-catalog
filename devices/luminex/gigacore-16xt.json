@@ -1,0 +1,151 @@
+{
+  "manufacturer": "Luminex",
+  "model": "GigaCore 16Xt",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/wp-content/uploads/doccenter/gigacore_specifications_rev3-1.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet (Luminex \"GigaCore Ethernet Switches Specifications\" PDF) covers the 16Xt directly alongside the 12, 14R, and 16RFO variants — used as the primary authoritative source. Network ports are 10/100/1000 Mbps Neutrik EtherCON connectors (a ruggedized shielded RJ45 variant); mapped to connector id \"rj45\" since EtherCON is not in the allowed connector list. The 1x RJ45 expansion port is used for switch-to-switch stacking/expansion and is graded eth-1g like the other network ports. The 1x RJ45 serial console port is a management/control interface (not switched Ethernet) so no bandwidth grade was set. Backup power input (15VDC/2A) and backup PoE input (48VDC/2.1A) are physically Molex Micro-Fit 6-pin connectors — the closest allowed connector id is \"dc-barrel,\" but the actual connector is a 6-pin Molex Micro-Fit, not a coaxial DC barrel jack; noted here as a caveat. PoE supply to the front EtherCON ports requires an optional external PoE power-supply module (LU 01 00051-GC14/16), delivering up to 160W total across the 10 front ports — this is supplied through the same network ports (not a separate physical port) so it is not listed as a separate port. Main AC power input is a standard IEC inlet with fuse holder, rated 100-240VAC 50-60Hz. Unit is 1U rack-mountable: 482 x 204.3 x 44 mm (19\" x 8.04\" x 1.73\"). Product has since been discontinued (per third-party retailer note) and replaced by the GigaCore 20t, but this does not affect the historical spec accuracy for the 16Xt itself.",
+  "ports": [
+    {
+      "name": "Ethercon 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "Ethercon 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel, shielded Neutrik EtherCON (ruggedized RJ45)"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10/100/1000Mbps Mini-GBIC transceiver cage; multimode/single-mode fiber, up to 10km"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10/100/1000Mbps Mini-GBIC transceiver cage; multimode/single-mode fiber, up to 10km"
+    },
+    {
+      "name": "SFP 3",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10/100/1000Mbps Mini-GBIC transceiver cage; multimode/single-mode fiber, up to 10km"
+    },
+    {
+      "name": "SFP 4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10/100/1000Mbps Mini-GBIC transceiver cage; multimode/single-mode fiber, up to 10km"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial RJ45 console/management port; not a switched network port so no Ethernet speed grade applies"
+    },
+    {
+      "name": "Expansion",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 expansion port for switch-to-switch stacking"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with fuse holder, 100-240VAC 50-60Hz, 3.15A 250V slow-blow fuse"
+    },
+    {
+      "name": "Redundant Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Backup power input, 15VDC/2A, on a Molex Micro-Fit 6-pin connector (closest allowed id is dc-barrel; actual connector is a 6-pin Molex Micro-Fit, not a coaxial barrel jack)"
+    },
+    {
+      "name": "Redundant PoE In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Backup PoE input, 48VDC/2.1A, on a Molex Micro-Fit 6-pin connector (closest allowed id is dc-barrel; actual connector is a 6-pin Molex Micro-Fit, not a coaxial barrel jack); powers the optional PoE supply to front EtherCON ports"
+    }
+  ]
+}

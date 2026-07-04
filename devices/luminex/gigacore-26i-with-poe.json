@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Luminex",
+  "model": "GigaCore 26i (with PoE)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/wp-content/uploads/doccenter/User-Manual_GigaCore-26i_rev-2.8.8.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Luminex's official User Manual (GigaCore 26i, rev 2.8.8, section 7 \"Technical Specifications\"), which documents two variants: \"GigaCore 26i Without PoE\" and \"GigaCore 26i With PoE\". This entry models the PoE variant (sold as GigaCore 26i PoE / LU-01-00052-POE), which is a superset. Differences vs. the non-PoE variant (LU-01-00048 / LU-01-00052): non-PoE lacks the -54VDC/6.5A backup PoE input on the redundant power connector, has power consumption of 30W (vs 430W max with PoE), weighs 3.5kg (vs 4.0kg), and its 24 RJ45 ports are not PoE-capable. Both variants share identical connectivity: 24x RJ45 (10/100/1000Base-T, including 4 dual-media ports 21-24 shared with SFP), 6x SFP cages (10/100/1000Mbps Mini-GBIC, including the same 4 dual-media 21-24), 1x RJ45 serial console (RS232), 1x IEC mains inlet, and 1x Molex 14-pin connector for redundant/backup power. PoE is 802.3af/at, budget up to 370W (330W on Rev A hardware), only on ports 1-24. All RJ45/SFP network ports are Gigabit-only (10/100/1000Mbps) so graded eth-1g. The 4 \"dual-media\" ports (21-24/SFP5-6 equivalents) are modeled as separate RJ45 and SFP port entries per Luminex's own listing convention, since only one media type is active per port. Rack unit: 1U, 482 x 270.3 x 44mm.",
+  "ports": [
+    {
+      "name": "1-20 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "20x fixed copper-only Gigabit ports, PoE+ capable (802.3af/at) on this model"
+    },
+    {
+      "name": "21-24 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "4x dual-media ports; copper side, shares a logical port with SFP 21-24, PoE+ capable"
+    },
+    {
+      "name": "21-24 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x dual-media ports; fiber side, shares a logical port with RJ45 21-24"
+    },
+    {
+      "name": "25-26 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x SFP-only cages, Mini-GBIC transceiver, up to 10km with fiber"
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS232 console port on RJ45 connector, for local configuration/reset"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains IEC inlet, 100-240VAC 50-60Hz, 0.5-0.29A"
+    },
+    {
+      "name": "Redundant Power",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "accepts": [
+        "dc-barrel"
+      ],
+      "note": "Molex Mini-Fit Jr 14-pin connector for backup power: +12VDC/2.5A and -54VDC/6.5A (PoE backup); closest listed connector type used as approximation since Molex Micro-Fit/Mini-Fit 14-pin is not in the provided connector list"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "manufacturer": "Belkin",
+  "model": "F1DN104KVM-UN-4",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://s3.belkin.com/resources/pdf/KVM/Product_User_Manuals/BELKIN%20USER%20MANUAL_F1DN102KVM-UN-4_F1DN104KVM-UN-4_F1DN202KVM-UN-4_F1DN204KVM-UN-4_LNKPG-00674_RevB00.pdf",
+  "confidence": "high",
+  "notes": "Also sold without CAC reader as F1DN104KVM-UNN4 (identical port set; CAC port present but non-functional/covered on the -UNN4 variant). This is the \"2nd Gen\" (PP 4.0 certified) successor to the F1DN104KVM-UN-3. Desktop enclosure; rack-mount brackets (F1D006) are an optional accessory, not integrated rack ears, so rackUnits is omitted. The 4 computer-side DP/HDMI combo ports and the 1 console-side DP/HDMI combo port are physically HDMI-type female connectors that also accept a DisplayPort cable per the manual (\"video connectors can accept a DisplayPort or HDMI cable\") - modeled as connector \"hdmi\" with accepts:[\"dp\"]. Grade set to hdmi-2.0 per spec table (\"HDMI 2.0 and DisplayPort 1.2 ports support UHD 4K resolutions of up to 3840x2160 @60Hz\"); DP side of the combo is capped at DP 1.2. USB-B \"computer\" ports are upstream links to the connected PC (functionally KM/CAC uplinks, not host ports), so direction is set to bidirectional as instructed for USB host-type ports; console-side USB-A keyboard/mouse/CAC ports are inputs (peripherals plug in). The \"RC port\" (remote desktop controller accessory jack) is a small modular jack; prior-gen (-UN-3) datasheet documents the equivalent port as \"RJ25\" which is not in the allowed connector list, so it is mapped to the closest available id, rj45, as a control port - treat this mapping as a caveat. Power: external 12V/2.5A DC brick with worldwide interchangeable AC mains adapters; the unit-side inlet is a DC barrel (center-pin-positive).",
+  "ports": [
+    {
+      "name": "Console DP/HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "accepts": [
+        "dp"
+      ],
+      "grade": "hdmi-2.0",
+      "note": "Combo connector to console monitor; accepts DisplayPort 1.2 or HDMI 2.0 passive cable, UHD 4K@60Hz"
+    },
+    {
+      "name": "Console Audio",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) female, to console speakers/headset"
+    },
+    {
+      "name": "Console Keyboard",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Console USB Keyboard Port (switchable with mouse port)"
+    },
+    {
+      "name": "Console Mouse",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Console USB Mouse Port (switchable with keyboard port)"
+    },
+    {
+      "name": "Console CAC",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Console USB CAC Reader Port and LED (present on -UN-4; covered/inactive on -UNN4)"
+    },
+    {
+      "name": "RC",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Remote desktop controller accessory port; documented as RJ25 modular jack on prior-gen datasheet, not in allowed connector list so mapped to nearest id (rj45)"
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 2.5A max, center-pin-positive; powered by external worldwide AC/DC adapter (100-240VAC input)"
+    },
+    {
+      "name": "Computer 1 DP/HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dp"
+      ],
+      "grade": "hdmi-2.0",
+      "note": "Combo connector from PC 1 video output"
+    },
+    {
+      "name": "Computer 1 Audio",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) female, from PC 1 audio output"
+    },
+    {
+      "name": "Computer 1 KM",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream link to PC 1 for keyboard/mouse emulation"
+    },
+    {
+      "name": "Computer 1 CAC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream CAC link to PC 1"
+    },
+    {
+      "name": "Computer 2 DP/HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dp"
+      ],
+      "grade": "hdmi-2.0",
+      "note": "Combo connector from PC 2 video output"
+    },
+    {
+      "name": "Computer 2 Audio",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) female, from PC 2 audio output"
+    },
+    {
+      "name": "Computer 2 KM",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream link to PC 2 for keyboard/mouse emulation"
+    },
+    {
+      "name": "Computer 2 CAC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream CAC link to PC 2"
+    },
+    {
+      "name": "Computer 3 DP/HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dp"
+      ],
+      "grade": "hdmi-2.0",
+      "note": "Combo connector from PC 3 video output"
+    },
+    {
+      "name": "Computer 3 Audio",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) female, from PC 3 audio output"
+    },
+    {
+      "name": "Computer 3 KM",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream link to PC 3 for keyboard/mouse emulation"
+    },
+    {
+      "name": "Computer 3 CAC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream CAC link to PC 3"
+    },
+    {
+      "name": "Computer 4 DP/HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dp"
+      ],
+      "grade": "hdmi-2.0",
+      "note": "Combo connector from PC 4 video output"
+    },
+    {
+      "name": "Computer 4 Audio",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) female, from PC 4 audio output"
+    },
+    {
+      "name": "Computer 4 KM",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream link to PC 4 for keyboard/mouse emulation"
+    },
+    {
+      "name": "Computer 4 CAC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B upstream CAC link to PC 4"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "manufacturer": "BirdDog",
+  "model": "A200",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://birddog.tv/a200-overview/a200-techspecs/",
+  "confidence": "high",
+  "notes": "BirdDog A200 (also marketed as \"Eyes A200\", currently shipping as \"A200 Gen 2\") is an outdoor IP67 PTZ camera with 30x optical zoom, simultaneous SDI + full NDI output. Physical I/O is a 12-lead tail-cable bundle (not a rear jack panel) documented in the official user guide's \"Camera Diagrams\" page, cross-checked against the current manufacturer tech-spec page (birddog.tv/a200-overview/a200-techspecs). Primary power input is 24VAC via a Phoenix/terminal-block connector (captive tail cable); PoE (BirdDog's 97W PoE injector, optional accessory) is an alternate power path carried over the RJ45 Ethernet lead. SDI output is confirmed 3G-SDI by both the manual and spec sheet. The second BNC (analog/composite output), AUX DC12V output, RS422/RS485 control leads, alarm I/O, and USB upgrade interface all appear in the user-guide connector diagram but are condensed/omitted on the marketing tech-spec page, so their exact wording is guide-sourced. The \"Upgrade Interface\" connector's precise physical shell (USB-A vs micro-USB) could not be confirmed from the schematic icon alone, so usb-2.0/usb-a is an inference and flagged low-certainty. The RS422 and RS485/RS422 leads (items 3 and 11) are explicitly documented as a matched pair meant to be combined into one control interface; they are represented here as a single bidirectional port with connector rs422 and accepts rs485. Ethernet is confirmed Gigabit (10/100/1000 Mbps) per the manual's cable-requirements section. No rack unit applies (dome PTZ camera, pole/wall/ceiling-mounted, not a rack device).",
+  "ports": [
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo 3.5mm audio input (per official tech-spec sheet: '3.5mm Audio In (Stereo)')"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo 3.5mm audio output (per official tech-spec sheet: '3.5mm Audio Out (Stereo)')"
+    },
+    {
+      "name": "3G-SDI Video Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Analog Video Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite/analog output on tail-cable BNC; used for setup/monitoring, not bandwidth-graded"
+    },
+    {
+      "name": "RJ45 Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps (Gig) port; carries NDI video, control, and PoE (BirdDog 97W PoE injector)"
+    },
+    {
+      "name": "RS422/RS485 Connector",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "accepts": [
+        "rs485"
+      ],
+      "note": "Two tail-cable pigtails (labeled RS422 and RS485/RS422, meant to be combined) providing VISCA (RS422) / Pelco-D (RS485) serial PTZ control"
+    },
+    {
+      "name": "Upgrade Interface",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Firmware upgrade port; manufacturer spec lists 'Firmware upgrade via USB2.0 or IP' but the pigtail connector's exact physical form (USB-A vs micro/mini) is not confirmed from available imagery"
+    },
+    {
+      "name": "Alarm Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Dry-contact alarm input on bare/terminal pigtail leads; closest catalog connector to the flying-lead terminal shown"
+    },
+    {
+      "name": "Alarm Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dry-contact alarm output on bare/terminal pigtail leads"
+    },
+    {
+      "name": "AUX DC12V Output",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Auxiliary 12VDC output for powering accessories, on tail-cable"
+    },
+    {
+      "name": "AC Power Connector",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "24VAC power input terminated via Phoenix-style terminal block connector (per user guide: 'Power Connector: Phoenix Connector Description'); PoE (97W injector, optional) is an alternative power path via the RJ45 port"
+    }
+  ]
+}

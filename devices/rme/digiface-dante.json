@@ -1,0 +1,82 @@
+{
+  "manufacturer": "RME",
+  "model": "Digiface Dante",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://rme-audio.de/downloads/dface_dante_e.pdf",
+  "confidence": "high",
+  "notes": "Data drawn directly from RME's official Digiface Dante User's Guide (rme-audio.de/downloads/dface_dante_e.pdf), sections 5.1 \"Connectors – LEDs\" and 24 \"Technical Specifications\", cross-checked against rme-audio.de/digiface-dante.html and the Sound on Sound review. Desktop unit, not rack-mountable (no rackUnits set). The two BNC sockets are physically shared/switchable between MADI I/O and Word Clock I/O per RME's own wording (\"2 BNC sockets for word or MADI I/O\") — modeled here as 4 logical ports (MADI In/Out, Word Clock In/Out) since the manual's Technical Specifications section documents distinct electrical specs for each function; in practice only one function (MADI or Word Clock) is active on the BNC pair at a time, firmware-switchable. USB port confirmed as Type-B (not Type-C) via Sound on Sound review and RME forum discussion of USB-B-to-C cables; grade usb-5g corresponds to USB 3.0 SuperSpeed (5 Gbit/s). Ethernet grade eth-1g per RME spec \"100 Mbit/s, 1 Gbit/s\" (1G is the higher/rated speed). Power adapter voltage cited as \"DC 12 V 24W\" in the manual's Package Contents section and \"9-15 Volts DC\" in Sound on Sound's independent teardown — noted as a minor discrepancy between RME's own manual and third-party review, likely reflecting the PSU's actual acceptance range vs. its nominal rating; used dc-barrel as the closest connector id for RME's proprietary locking coaxial DC connector. No rack ears; desktop/portable form factor (170 x 26 x 84 mm).",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Dante network port; supports 100 Mbit/s and 1 Gbit/s, Auto MDI-X; also used for TotalMix Remote"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary Dante network port (switched or redundancy mode)"
+    },
+    {
+      "name": "Ethernet 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Additional Gigabit Ethernet port (switched/redundancy mode)"
+    },
+    {
+      "name": "Ethernet 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Additional Gigabit Ethernet port (switched/redundancy mode)"
+    },
+    {
+      "name": "MADI In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Coaxial MADI input, 75 Ohm, AES10-1991; up to 64ch/48kHz, S/MUX up to 16ch/192kHz; BNC socket shared/switchable with Word Clock function"
+    },
+    {
+      "name": "MADI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Coaxial MADI output, 75 Ohm, AES10-1991, 400mVpp; BNC socket shared/switchable with Word Clock function"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Not terminated (10 kOhm), switchable internal 75 Ohm termination; shares physical BNC with MADI, switchable"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Max 5 Vss; shares physical BNC with MADI, switchable"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Low-impedance analog stereo output, unbalanced, usable as line output with TRS-to-RCA/TS adapter"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3.0 SuperSpeed Type-B port to host computer; also carries USB bus power; falls back to USB 2.0 (64ch Dante only) if connected to a USB2 port"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External locking DC power supply input (12V, included switched PSU rated 24W); device can alternatively run on USB bus power"
+    }
+  ]
+}

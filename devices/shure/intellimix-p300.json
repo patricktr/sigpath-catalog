@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Shure",
+  "model": "IntelliMix P300",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://pubs.shure.com/view/guide/P300/en-US.pdf",
+  "confidence": "high",
+  "notes": "Shure IntelliMix P300 (product line \"P300-IMX\"). Authoritative source: Shure P300 User Guide (pubs.shure.com/view/guide/P300/en-US.pdf) and Shure P300 Specifications sheet (content-files.shure.com/Pubs/mxa310-p300/p300-imx-spec-sheet-en.pdf), cross-checked against product page shure.com/en-US/products/mixers/p300. Rear-panel parts list (labeled ①–⑧ in the guide): Mobile Input (TRRS 3.5mm, bidirectional — carries stereo-summed-to-mono input plus a return signal to phone on the sleeve); Audio Inputs (2, 3-pin block/Euroblock connectors, \"Active Balanced\", switchable Line +4dBu or Aux -10dBV sensitivity) — mapped here to connector \"euroblock\" as the closest listed id for a 3-pin balanced audio block/screw terminal (not literally a \"block connector\" option in the allowed list); Audio Outputs (2, 3-pin block/Euroblock, \"Impedance Balanced\", switchable Line/Aux/Mic output level); USB Port (1, USB 2.0 Type-B, single port carries 2 in/2 out channels summed to mono — device explicitly supports USB-B-to-USB-C adapters for host connection); Dante Network Port (1, RJ45, 10 Dante inputs / 8 Dante outputs, also delivers power via 802.3at Type 2 PoE+ Class 4, no separate power inlet exists on this device). Dante/Ethernet grade: guide specifies \"Cat5e or higher\" cabling and Dante audio at 48kHz/24-bit; Shure does not explicitly state 100M vs 1G link speed in the docs reviewed, so eth-1g is inferred (standard for modern Dante-enabled PoE+ devices requiring Cat5e) rather than confirmed — treat as medium-confidence on that one grade value only. No HDMI/video, no standalone AC or DC power port (device is PoE-powered only). Desktop/tabletop unit (4 x 21 x 22.6 cm / 1.6 x 8.3 x 8.9 in, 1.71 kg) — not natively a rack unit, so rackUnits omitted; optional CRT1 19\" tray can hold two P300/ANI units together as a half-rack-width pair but the device itself has no fixed rack-unit height.",
+  "ports": [
+    {
+      "name": "Mobile Input",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Input 1",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Audio Input 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Audio Output 1",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Audio Output 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Dante Network Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Also carries PoE+ power (802.3at Type 2, Class 4) and Designer control data"
+    }
+  ]
+}

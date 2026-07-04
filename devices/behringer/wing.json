@@ -1,0 +1,303 @@
+{
+  "manufacturer": "Behringer",
+  "model": "WING",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://warehousesound.com/r/behringerWINGmanual.pdf",
+  "confidence": "high",
+  "notes": "Source is Behringer's official WING Quick Start Guide (Music Tribe), Specifications section pp.61-62, cross-checked against the rear-panel diagram on p.12 and behringer.com product page. Desktop/tabletop control surface (not rack-mountable), so rackUnits omitted. AES50 ports use etherCON (RJ45-compatible locking connector) at 100 Mbit/s per port - Klark Teknik SuperMAC protocol; grade omitted because AES50/SuperMAC bandwidth is not on the RJ45 Ethernet grade scale (eth-100m/1g/etc. refer to standard Ethernet networking, not the proprietary 48-channel audio protocol carried over AES50). The 2 rear LAN/control Ethernet ports are 1 Gbit/s per spec (eth-1g). USB-B device port carries 48x48 channel audio at 24-bit (no defined USB speed grade given beyond USB 2.0, so usb-2.0 used per spec sheet's explicit \"USB 2.0 type B/A\" wording). GPIO is 2x2 on 1/4\" TRS jacks (logic I/O, not audio - no connector-appropriate grade). MIDI is standard 5-pin DIN. StageCONNECT master I/O is a single bidirectional XLR3 carrying up to 32 channels + 12V/18W phantom-style power to a connected stagebox; modeled as bidirectional XLR3. Digital AES/EBU stereo I/O uses XLR connectors (1 in, 1 out). Aux I/O spec states \"8 in / 6 out + 2 monitor/phones outs\" on 1/4\" TRS balanced mono jacks - modeled as 8 discrete AUX IN, 6 discrete AUX OUT, plus 2 dedicated Monitor Out jacks (also TRS). Separate stereo Phones outputs (2x 1/4\" TRS) also present. Expansion card slot (rear cage accepting WING-LIVE SD recorder card, or optional Dante/AES67/SoundGrid/MADI cards) is a physical card-edge interface, not a standard connector type in the given list, so it was omitted from ports since it has no fixed connector id; the pre-installed WING-LIVE card's dual SD slots are also non-standard connectors and omitted. Power: IEC mains inlet with switch, 100-240VAC auto-ranging.",
+  "ports": [
+    {
+      "name": "Mic In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 5",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 6",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 7",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Out 8",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main XLR balanced output"
+    },
+    {
+      "name": "Aux In 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 3",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 4",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 5",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 6",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 7",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux In 8",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux input"
+    },
+    {
+      "name": "Aux Out 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Aux Out 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Aux Out 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Aux Out 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Aux Out 5",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Aux Out 6",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced mono aux output"
+    },
+    {
+      "name": "Monitor Out 7",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Dedicated monitor/phones aux output (defaults to Aux 7)"
+    },
+    {
+      "name": "Monitor Out 8",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Dedicated monitor/phones aux output (defaults to Aux 8)"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES50 A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Klark Teknik SuperMAC, etherCON/CAT5e, 48 in/out channels, 100 Mbit/s"
+    },
+    {
+      "name": "AES50 B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Klark Teknik SuperMAC, etherCON/CAT5e, 48 in/out channels, 100 Mbit/s"
+    },
+    {
+      "name": "AES50 C",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Klark Teknik SuperMAC, etherCON/CAT5e, 48 in/out channels, 100 Mbit/s"
+    },
+    {
+      "name": "StageCONNECT",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Proprietary 32-channel digital audio + 12V/18W power over single XLR/DMX cable"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "GPIO 1",
+      "direction": "bidirectional",
+      "connector": "trs-6.35",
+      "note": "Configurable general-purpose I/O"
+    },
+    {
+      "name": "GPIO 2",
+      "direction": "bidirectional",
+      "connector": "trs-6.35",
+      "note": "Configurable general-purpose I/O"
+    },
+    {
+      "name": "USB Audio/Data (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "48x48 channel, 24-bit audio + MIDI I/O to computer"
+    },
+    {
+      "name": "USB Host (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Audio/data flash drive, recorder, firmware updates"
+    },
+    {
+      "name": "Control/Audio Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Ethernet LAN for console remote control apps"
+    },
+    {
+      "name": "Control/Audio Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Ethernet LAN for console remote control apps"
+    },
+    {
+      "name": "Lamp",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "12V gooseneck lamp socket (XLR4-style lamp connector on rear panel)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC mains inlet with power switch, 100-240VAC 50/60Hz auto-ranging, 130W"
+    }
+  ]
+}

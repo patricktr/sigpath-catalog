@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXWAPT8 (Microflex Wireless Access Point Transceiver, part of the MXW system)",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/microflex_wireless/mxwapt8-access-point-transceivers",
+  "confidence": "medium",
+  "notes": "\"Shure MXW\" is a wireless conferencing microphone system/series, not a single product, so this entry represents its core networked hardware component, the MXWAPT8 8-channel Access Point Transceiver (part numbers MXWAPT2/4/8 for 2/4/8-channel variants share the same physical I/O). It is a small wall/ceiling-mounted puck-style device, not rack-mountable (rackUnits set to 0/omit relevance) — dimensions approx. 170 x 170 x 24 mm, 856 g. It has exactly one physical port: an RJ45 jack that simultaneously provides PoE power (IEEE 802.3af-class, ~6.5W draw), Gigabit Ethernet connectivity, and Dante networked digital audio in/out — Shure's own materials describe it as Gigabit Ethernet (RJ-45) for Dante, and the companion Audio Network Interface (MXWANI4/8) uses a built-in 4-port Gigabit switch, confirming the eth-1g grade. There is no separate DC barrel or AC inlet (no local power supply option — PoE only), and antennas are internal/integrated (no external antenna connectors). Other MXW system pieces exist (MXWNCS4/8 networked charging stations, which also use a single RJ45 PoE+Dante port plus battery-charging bays with no external audio connectors; and the MXWANI4/8 Audio Network Interface, which adds analog XLR/TRS balanced audio I/O plus a 4-port Gigabit Ethernet switch) but were not modeled here since the request targets a single representative device. Confidence is medium: PoE power draw, Gigabit Ethernet, and RJ45-only physical I/O are corroborated across the manufacturer product page, Shure user guide search excerpts, and third-party retailer (Full Compass) spec data, but I could not load the full official spec-sheet PDF or user guide tables directly (fetches were blocked/redirected), so exact PoE class designation and confirmation of \"no other physical ports\" rest on secondary/aggregated sources rather than a single authoritative spec table.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ45 Gigabit Ethernet port carries PoE power in, Dante digital audio, and control/frequency-coordination data simultaneously — no separate power or audio jacks on the unit."
+    }
+  ]
+}

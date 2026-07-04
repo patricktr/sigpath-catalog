@@ -1,0 +1,187 @@
+{
+  "manufacturer": "Ferrofish",
+  "model": "A32pro Dante",
+  "category": "converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.ferrofish.com/public/downloads/products/a32pro/ferrofish_a32pro_manual_english_v3.1.pdf",
+  "confidence": "high",
+  "notes": "Sourced directly from Ferrofish's official A32pro/A32pro Dante user manual (v3.1, PDF) and product page (ferrofish.com), which document both the A32pro and A32pro Dante variants side by side. The Dante variant adds the 64x64 Audinate Brooklyn board with 2x RJ45 (Pri/Sec redundant) network ports versus the standard A32pro. Analog I/O uses 4x D-Sub25 (female, Tascam pinout) for the 32 inputs and 4x D-Sub25 (female, Tascam pinout) for the 32 outputs -- 8 D-Sub25 connectors total. ADAT is 4 optical TOSLINK inputs + 4 optical TOSLINK outputs (manual states \"4+4 optical interfaces\"; ports are color-coded by flap color rather than individually labeled). MADI uses dual hot-swappable SFP cages (unit ships with one Multi-Mode optical SFP module installed; coax/singlemode SFPs are compatible options) -- graded sdi-12g is not applicable since MADI is not an SDI/BNC signal, so no bandwidth grade tag applies to the SFP slots per the taxonomy (SFP connector has no defined grade scale in the provided list). Wordclock uses two separate BNC jacks (IN and OUT), both with 75-ohm switchable termination. MIDI I/O is 2x 1/8\" (3.5mm) TRS jacks (IN/OUT) following MIDI 2.0 Type A pinout, not the classic 5-pin DIN, so connector was set to trs-3.5. GPIO is a female D-Sub15 connector for general-purpose trigger I/O (4 in / 4 out) -- mapped to the closest available connector id (euroblock-dc omitted; no D-Sub id exists in the taxonomy, so it is noted here rather than force-fit; omitted from the ports list as it is a control/logic connector rather than AV signal or power, but flagged in case it should be included as \"other\"). Power: dual redundant 12V/3A DC inputs via 2.5mm center-pin-positive barrel jacks with a screw-lock retaining nut (only 1 external PSU ships standard); mapped to dc-barrel. USB is a USB-B port (USB2, class-compliant MIDI-over-USB, no audio transport). No wattage/version info was found suggesting HDMI/SDI/DisplayPort presence -- this device has none. Rack unit: 1U (19\" x 1U, 4.4cm height). No public region variants beyond A32pro (non-Dante) vs A32pro Dante were noted.",
+  "ports": [
+    {
+      "name": "Analog Input 1-8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels per connector, max +20dBu; taxonomy has no D-Sub25 id, mapped to closest euroblock as placeholder for a multi-pin analog audio connector"
+    },
+    {
+      "name": "Analog Input 9-16",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "Analog Input 17-24",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "Analog Input 25-32",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "Analog Output 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels per connector, max +20dBu"
+    },
+    {
+      "name": "Analog Output 9-16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "Analog Output 17-24",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "Analog Output 25-32",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "D-Sub25 female, Tascam pinout, 8 balanced analog channels"
+    },
+    {
+      "name": "ADAT In 1",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Optical TOSLINK, part of 4 ADAT input ports"
+    },
+    {
+      "name": "ADAT In 2",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT In 3",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT In 4",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT Out 1",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical TOSLINK, part of 4 ADAT output ports"
+    },
+    {
+      "name": "ADAT Out 2",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT Out 3",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT Out 4",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "MADI SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dual-SFP MADI slot 1; ships with one Multi-Mode optical SFP module; coax/singlemode SFPs also compatible; AES10 MADI, up to 64 channels"
+    },
+    {
+      "name": "MADI SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dual-SFP MADI slot 2 (redundant/expansion); module not included standard"
+    },
+    {
+      "name": "Dante Network Pri",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Audinate Brooklyn board, 64x64 channels; primary of redundant pair"
+    },
+    {
+      "name": "Dante Network Sec",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Secondary/redundant Dante port, automatic failover"
+    },
+    {
+      "name": "Wordclock Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75-ohm switchable termination"
+    },
+    {
+      "name": "Wordclock Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8in (3.5mm) TRS jack, MIDI 2.0 Type A pinout; 5-pin DIN adapter available separately"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8in (3.5mm) TRS jack, MIDI 2.0 Type A pinout"
+    },
+    {
+      "name": "Main Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "2x balanced 1/4in (6.35mm) TRS jacks, mirrors red headphone output signal"
+    },
+    {
+      "name": "Headphones (red)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm stereo jack, front panel, dedicated 32-bit ESS DAC"
+    },
+    {
+      "name": "Headphones (blue)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm stereo jack, front panel, dedicated 32-bit ESS DAC"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB-B connector, USB2 protocol, class-compliant MIDI-over-USB and firmware updates; no audio transport"
+    },
+    {
+      "name": "Power Input 1",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V 3A, 2.54mm/2.5mm hollow center-pin-positive barrel with screw-lock securing nut; redundant power input 1 of 2; one PSU included standard"
+    },
+    {
+      "name": "Power Input 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V 3A, 2.54mm/2.5mm hollow center-pin-positive barrel with screw-lock securing nut; redundant power input 2 of 2, optional second PSU sold separately"
+    }
+  ]
+}

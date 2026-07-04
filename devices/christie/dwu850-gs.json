@@ -1,0 +1,94 @@
+{
+  "manufacturer": "Christie",
+  "model": "DWU850-GS",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.christiedigital.com/globalassets/resources/public/christie-850-gs-specsheet.pdf",
+  "confidence": "medium",
+  "notes": "Source: official Christie GS Series DWU850-GS/DHD850-GS spec sheet PDF (CD3854, Sept 2023), the authoritative manufacturer datasheet. RS232 port connector type (DB9) is not explicitly pictured/labeled in the datasheet text (only \"RS232 in\") — DB9 is the near-universal connector for this port type on Christie/pro-AV projectors, so it is included as rs232 with medium confidence on the physical connector shell (function/direction is confirmed). \"Control via HDBaseT\" is listed alongside RS-232/Ethernet under Control and networking, but the datasheet does not specify a separate physical HDBaseT RJ45 jack distinct from the standard Ethernet RJ45 port, so no separate HDBaseT port was added to avoid guessing an unconfirmed connector. The wired remote control jack (3.5mm stereo, with loop-out for daisy-chaining) is included as an input control port (ir/remote), mapped to the closest available connector id (trs-3.5) since it is a 3.5mm stereo jack rather than a true IR receiver window. Power input is listed only as \"AC line cord for projector head\" with 100-240VAC/15A fuse rating and no explicit inlet photo/label in the datasheet — mapped to the standard IEC inlet (iec) used on this class/wattage (900W) of Christie projector; could not visually confirm C13/C14 vs C19 pin arrangement from available sources. Two HDMI inputs are physically located in different places (one side panel, one bottom panel) per the datasheet — both are HDCP 1.3, version not stated by Christie so no HDMI grade was set. 3G-SDI ports (input via monitor loop capability is not distinct; one 3G-SDI input and one 3G-SDI monitor-out are separately listed) graded sdi-3g since Christie explicitly states \"3GSDI\". Ethernet is 10/100 per datasheet, graded eth-100m accordingly. USB Type-A and Mini-USB (Type B) ports are listed under \"Inputs standard\" without stated USB spec version, so no USB grade was set. 3D Sync in/out BNC ports are dedicated genlock/sync ports (not video SDI signal), included without an sdi grade since they are not carrying an SDI video signal per se — Christie describes them purely as sync/genlock BNCs.",
+  "ports": [
+    {
+      "name": "HDMI 1 (side panel)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2 (bottom)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "3G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DVI In",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "USB (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "Mini USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Labeled by Christie as \"Mini USB x1 (Type B)\"; closest available connector id used since mini-USB-B is not a distinct option in the connector list."
+    },
+    {
+      "name": "RS232 In",
+      "direction": "input",
+      "connector": "rs232"
+    },
+    {
+      "name": "Ethernet (10/100)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Wired Remote (3.5mm stereo, loop out)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Wired remote control jack with loop-out for daisy-chaining multiple projectors; mapped to nearest connector id (3.5mm stereo jack) as this is not a standard IR receiver window."
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Dedicated BNC for genlocking projectors; not a video/SDI signal so no SDI grade applied."
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Dedicated BNC for genlocking projectors or controlling emitter/polarizer; not a video/SDI signal so no SDI grade applied."
+    },
+    {
+      "name": "Monitor Out (3G-SDI)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Datasheet lists \"AC line cord for projector head\" as standard accessory, 100-240VAC 50/60Hz with 15A fuse, 900W normal-mode consumption; exact IEC inlet variant (C13/C14) not explicitly pictured in the source, inferred from typical Christie projector power inlets at this wattage."
+    }
+  ]
+}

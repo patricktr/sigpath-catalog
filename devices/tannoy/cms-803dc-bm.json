@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Tannoy",
+  "model": "CMS 803DC BM",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.proacousticsusa.com/media/wysiwyg/CMS-803DC-BM-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer technical data sheet (tannoypro.com V1.10, hosted copy retrieved via proacousticsusa.com; official tannoy.com product page returned 404 at time of research). This is a passive 8-inch Dual Concentric ceiling loudspeaker with 70V/100V/16-ohm transformer taps switchable via front rotary switch — it has no separate active power input; the single 2-wire screw-terminal connector carries the speaker-level signal from an amplifier/70V-100V line and doubles as the sole I/O, with loop-through to daisy-chain additional speakers. Mapped \"removable locking connector with screw terminals\" to the closest taxonomy id, euroblock (pluggable terminal block), though physically it is a 2-pole speaker/power terminal rather than a line-level audio euroblock connector. No bandwidth grade applies since this connector type is not in the graded list. rackUnits omitted (ceiling-mount device, not rack-mountable).",
+  "ports": [
+    {
+      "name": "Input (Loop-Through)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Removable locking connector with screw terminals; 2-pole speaker-level input accepting 70V/100V transformer taps (60/30/15/7.5W) or 16 ohm direct; loop-through facility allows daisy-chaining to next speaker on the same terminal block. No grade applies (analog speaker-level line, not a data/video interface)."
+    }
+  ]
+}

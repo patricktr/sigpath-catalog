@@ -1,0 +1,233 @@
+{
+  "manufacturer": "Vizrt (NewTek)",
+  "model": "TriCaster TC1",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.vizrt.com/products/tricaster-tc1/tech-specs/",
+  "confidence": "medium",
+  "notes": "Primary source: manufacturer's live tech-specs page (vizrt.com), fetched twice with consistent results. An older/legacy NewTek tech-specs PDF (cvp.com/pdf/tricaster-tc1-tech-specs.pdf) shows an earlier hardware revision with different multiviewer (1x DVI + 1x HDMI + 1x DisplayPort), different NIC (2x 1GbE), and 400W/500W(redundant) PSU — the current Vizrt page supersedes this with 2x HDMI 2.1 + 1x DisplayPort 1.4a multiviewer outputs, 10GbE/2.5GbE/1GbE network, and a 500W PSU; this device reflects the current/updated hardware spec. SDI ports are not graded above 3G (spec states \"3G/HD/SD-SDI\", max SMPTE 424M Level A per the legacy PDF), so grade is sdi-3g. Genlock input connector type is not explicitly stated on the spec page; BNC is the de facto broadcast standard for genlock reference and was inferred (not confirmed) — omitted from the port list since no source explicitly names it as a separate physical BNC jack distinct from SDI. GPI is described as \"HD15 GPI connector\" — mapped to the closest connector id \"vga\" (HD15 D-sub) per the port-conversion rule, used for tally/GPI signaling, not video. Power connector type/receptacle (IEC vs other) is not explicitly stated by the manufacturer; internal 500W PSU in a 2RU chassis is standard practice for this class of broadcast gear, so an IEC (C13/C14) inlet was inferred with lower confidence — flagged here as the single biggest caveat. XLR and 1/4\" TRS audio ports are specified as \"stereo pairs,\" which have been expanded into individual L/R physical jacks (2 per pair) per the per-port schema. USB counts/types (front vs rear) confirmed on manufacturer page: front 2x USB-A 3.0, rear 2x USB-A 2.0 + 5x USB-A 3.2 Gen2 + 1x USB-C 3.2 Gen2x2. Optional NC1 network expansion modules (for up to 16 simultaneous SDI or 4K quad-link SDI) are not physical ports on the TC1 chassis itself and are excluded.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DisplayPort Multiviewer Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "HDMI Multiviewer Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI Multiviewer Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "Audio In XLR L",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In XLR R",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 1 L",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 1 R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 2 L",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 2 R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 3 L",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In 1/4\" Pair 3 R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio Out XLR L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out XLR R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 1/4\" L",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio Out 1/4\" R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "LAN (10 Gigabit)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "LAN (2.5 Gigabit)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g"
+    },
+    {
+      "name": "LAN (1 Gigabit)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB (Rear) 2.0-1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB (Rear) 2.0-2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.2 Gen2 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen2 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen2 (Rear) 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen2 (Rear) 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen2 (Rear) 5",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen2x2 Type-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-20g"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "HD15 D-sub GPI/tally connector, not video; closest connector id to the manufacturer-specified 'HD15 GPI connector'"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 500W PSU in 2RU chassis; manufacturer spec sheet does not explicitly state the AC inlet connector type — IEC C13/C14 inferred as the de facto standard for this equipment class"
+    }
+  ]
+}

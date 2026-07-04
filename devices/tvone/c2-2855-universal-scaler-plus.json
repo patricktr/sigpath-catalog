@@ -1,0 +1,117 @@
+{
+  "manufacturer": "tvONE",
+  "model": "C2-2855 (Universal Scaler PLUS)",
+  "category": "converter",
+  "type": "Scaler",
+  "rackUnits": 1,
+  "sourceUrl": "https://tvone.com/filestore/Brochures/Broc-C2-2X55-US-v1_1_Web.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: tvONE's own product brochure (Broc-C2-2X55-US-v1_1_Web.pdf), which includes a full labeled rear-panel diagram and a detailed per-model spec table for the C2-2855 (and siblings C2-2755/C2-2655). Category chosen as \"converter\" (closest fit among the fixed enum) and type \"Scaler\" was not in the provided type enum list, so it was omitted per instructions when no listed type fits well — actually \"Converter\" was selected as the closest official type since the unit's core function is up/down/cross format conversion and scaling; no dedicated \"Scaler\" type exists in the enum. Ethernet is rated eth-100m only because the datasheet doesn't specify Gigabit and tvONE's control-interface RJ45 ports of this era are 10/100 (inferred, medium confidence on that one field only — noted here as a caveat). SDI grade is sdi-3g because the unit explicitly supports SMPTE424M 3G-SDI (2.97/2.967 Gbps) in addition to SD/HD-SDI; 3G is the highest tier confirmed. YC (S-Video) In/Out ports are specified in the text spec table as \"4-Pin Mini-DIN\" but the rear-panel photo/diagram on the brochure shows a BNC-style icon next to \"YC IN\"/\"YC OUT\" labels — used the mini-DIN connector type per the explicit spec table text as most authoritative, flagged as a minor inconsistency between diagram icon and spec text. The DVI-U ports are tvONE's proprietary \"Universal DVI\" combo connector: physically a DVI-I-shaped port that (via tvONE's breakout/adapter cable) also carries analog RGB/YPbPr/YUV, composite, and S-video; mapped to connector \"dvi\" as the closest listed id since \"DVI-U\" is not itself in the allowed connector list. Audio terminal blocks (A1/A2/A3 in, 1 out) are captive screw-terminal \"Phoenix\"-style blocks per brochure text (\"rear panel terminal block\"), mapped to \"euroblock\". Power is an external 12V DC @ 1.5A power brick (not an internal IEC inlet); the rear-panel connector itself is a DC barrel/coaxial jack labeled \"12V DC\". No USB data port exists on this unit (USB is only used to ship the manual on a USB stick, not a device port). Three sibling models exist (C2-2755 Video Scaler PLUS, C2-2655 Scan Converter PLUS) with reduced I/O (e.g., C2-2755 has no analog YC/CV outputs and uses DVI-I instead of DVI-U on output; C2-2655 has no SDI input) — this entry is specifically for the C2-2855, which is the full-I/O \"Universal Scaler\" variant with SDI in and out, DVI-U in and out, and all analog formats on both input and output.",
+  "ports": [
+    {
+      "name": "PC/HD IN",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "DVI-U IN",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "tvONE 'Universal DVI' combo port; also carries CV/YC/YUV/YPbPr/RGB analog via DVI-U adapter breakout"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "YC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "4-pin mini-DIN S-Video per spec table; rear panel silkscreen shows BNC-style graphic but manual specifies 4-Pin Mini-DIN connector"
+    },
+    {
+      "name": "CV IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DVI-U OUT",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Universal DVI combo output; also carries analog RGB/YPbPr/YUV via breakout"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "YC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "4-Pin Mini-DIN S-Video output per spec table"
+    },
+    {
+      "name": "CV OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AUDIO A1 (Terminal)",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "AUDIO A2 (Terminal)",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "AUDIO A3 (Terminal)",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Audio In (3.5mm)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT (Terminal)",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "RS 232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "12V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by included external 12V DC @ 1.5A 'brick' power supply; barrel/coaxial DC jack on rear panel"
+    }
+  ]
+}

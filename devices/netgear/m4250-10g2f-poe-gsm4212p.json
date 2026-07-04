@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4250-10G2F-PoE+ (GSM4212P)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Model name \"10G2F\" denotes port count (10x RJ45 + 2x Fiber/SFP), not 10-Gigabit speed — all RJ45 and SFP ports on this specific model are Gigabit (1G), confirmed by the manufacturer datasheet's \"10/100/1000 BASE-T RJ45 ports\" and \"1000BASE-X SFP ports\" columns (distinct from the 10G-capable M4250-10G2XF-PoE+ sibling model). Ports 1-8 (RJ45) are PoE+ (802.3at, 30W/port, 125W total budget); ports 9-10 (RJ45) are data-only; ports 11-12 are 1G SFP slots (transceivers sold separately, not counted as physical device ports here). Console access is dual: RJ45 RS232 (DB9 adapter cable included) and USB-C; a USB-A port is provided for local storage/logs (not a host data port, included for completeness as bidirectional per USB convention). Power is a single fixed IEC C14 inlet with integrated on/off rocker switch (region-specific power cord included, no external power brick). Rack unit height is 1U (43.2mm) per Netgear's official Hardware-at-a-Glance table.",
+  "ports": [
+    {
+      "name": "1-8 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8x RJ45 10/100/1000 ports, PoE+ (802.3at, 30W/port), 125W total PoE budget"
+    },
+    {
+      "name": "9-10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "2x RJ45 10/100/1000 ports, data only (no PoE)"
+    },
+    {
+      "name": "11-12 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x 1000BASE-X SFP slots for fiber transceivers"
+    },
+    {
+      "name": "Console (RS232)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 straight-through serial console port; RJ45-to-DB9 cable included"
+    },
+    {
+      "name": "Console (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C local management console port"
+    },
+    {
+      "name": "USB Storage",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A port for local storage, logs, configuration or image files"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec-c5",
+      "note": "Fixed IEC power inlet with on/off switch; datasheet lists as 'Fixed (C14)' — physically this is the 3-pin IEC C14 male inlet (mates with a C13 cord). No connector id for IEC C13/14 exists separate from 'iec' in the given list, so 'iec' (C13/14 family) was used as closest match rather than iec-c5/c7."
+    }
+  ]
+}

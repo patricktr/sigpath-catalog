@@ -1,0 +1,133 @@
+{
+  "manufacturer": "Extron",
+  "model": "DXP 84 HD 4K PLUS",
+  "category": "switcher",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.extron.com/download/files/specs/DXP_HD_4K_PLUS_Series_5640-D11.pdf",
+  "confidence": "high",
+  "notes": "8x4 HDMI matrix switcher with audio de-embedding, part of the DXP HD 4K PLUS series (42/44/84/88). Primary source is Extron's official specification sheet (DXP_HD_4K_PLUS_Series_5640-D11.pdf, doc 4798-D5, retrieved via ezpro.com mirror since extron.com blocks automated fetches) plus the official Setup Guide (68-2939-50_A.pdf) for rear-panel connector labeling. Video: HDMI 2.0, HDCP 1.4/2.2, max 18 Gbps (6 Gbps/color), 4K(4096x2160)/UHD(3840x2160) @60Hz 4:4:4 -> graded hdmi-2.0. Ethernet is 10/100Base-T -> graded eth-100m. RS-232 and analog audio outputs use 3.5mm captive-screw (3-pole and 5-pole respectively); mapped to the closest available connector id 'euroblock' (no ungraded connector omitted). S/PDIF digital audio outputs are on female RCA jacks (75 ohm) — present only on DXP 44/84/88 variants (confirmed included on the 84). Front-panel USB port is a USB 2.0 Mini-B \"Config\" port used for control/firmware, not a host/peripheral data port; mapped to 'usb-micro' as the closest listed connector id since 'usb-mini-b' is not in the allowed list — treated as bidirectional control since it functions as a PC-to-device control link (same protocol as RS-232/Ethernet). AC power: internal supply, standard IEC power cord (provided) into rear IEC inlet — mapped to 'iec' (C13/C14 style). Unit is 1U rack-mountable, full rack width, with included rack ears (per the 44/84/88 series spec; the smaller DXP 42 is half-rack/external PSU and not applicable here). No dedicated IR port exists on this model.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Analog Audio Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole 3.5 mm captive screw, stereo balanced/unbalanced, de-embedded from HDMI"
+    },
+    {
+      "name": "Analog Audio Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pole 3.5 mm captive screw, stereo balanced/unbalanced, de-embedded from HDMI"
+    },
+    {
+      "name": "S/PDIF Output 1",
+      "direction": "output",
+      "connector": "rca",
+      "note": "75 ohm digital audio, de-embedded from HDMI"
+    },
+    {
+      "name": "S/PDIF Output 2",
+      "direction": "output",
+      "connector": "rca",
+      "note": "75 ohm digital audio, de-embedded from HDMI"
+    },
+    {
+      "name": "Remote RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive screw serial control port (rear panel)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Front panel USB Mini-B control/config port; closest listed connector id to Mini-B"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply, standard IEC power cord provided, 100-240 VAC 50-60 Hz"
+    }
+  ]
+}

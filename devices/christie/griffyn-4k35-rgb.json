@@ -1,0 +1,126 @@
+{
+  "manufacturer": "Christie",
+  "model": "Griffyn 4K35-RGB",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.christiedigital.com/globalassets/resources/public/griffyn-4k35-rgb-data_sheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: official Christie datasheet (CD83501-Griffyn-4K35-RGB-datasheet, dated Mar-26-EN, fetched from christiedigital.com), cross-checked against the Christie Griffyn Series Installation and Setup Guide (P/N 020-103314-10, covers 4K32/4K35/4K50-RGB) for physical connector types, and ProjectorCentral's spec table. Desktop/floor-standing unit (no rackUnits set; dimensions ~36x25x15in, 179 lbs, not rack-mounted). Notes/caveats: (1) The current datasheet lists 1x HDMI 2.1 + 2x HDMI 2.0, and 2x DisplayPort 1.4 + 2x DisplayPort 1.2 (4 DP total) as standard inputs; the older 2022 installation manual and some third-party listings (ProjectorCentral) show only 2x HDMI 2.0 and DisplayPort x4 without version split, suggesting Christie expanded/refreshed the standard I/O (added HDMI 2.1 and DP1.4 pairs) at some point after initial launch — the datasheet fetched live from christiedigital.com is treated as current/authoritative. (2) SDI ports are BNC and datasheet states '12G-SDI' for all 4 as standard, though the install manual indicates the panel also accepts lower SDI grades (6G/3G/HD) on the same physical ports (backward compatible) - graded as sdi-12g (max supported). (3) Christie Link ports are 2x QSFP+ fiber (1 in/1 out); mapped to 'sfp' as the closest listed connector id (QSFP+ is not in the enum; sfp is the nearest fiber-transceiver-cage id). (4) GPIO is a 9-pin D-Sub connector distinct from the RS232 DB9 port; mapped to 'rs232' only because it is the closest DB9-shaped id in the allowed list - it is NOT an RS232 serial port, it's a discrete-I/O connector (7 GPIO pins + ground + 12V), so this mapping is an approximation. (5) A 'Wired keypad' port (locking round multi-pin connector for a wired IR remote) and an 'Audio Out' (AES3/optical, reserved/future use per the install manual) exist on the panel but were omitted as neither maps cleanly to signal/power port categories requested and their exact current-datasheet connector form was not separately confirmed. (6) SDVoE and HDBaseT are mentioned as supported input paths in the datasheet but appear to share the same physical Ethernet/RJ45-family ports per the install manual rather than being distinct additional physical jacks, so they were not listed as separate ports to avoid double-counting.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Christie Link In",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "QSFP+ optical fiber input (40 GB), part of Christie Link 1-in/1-out pair"
+    },
+    {
+      "name": "Christie Link Out",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "QSFP+ optical fiber output (40 GB), part of Christie Link 1-in/1-out pair"
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Micro 75-ohm BNC connector for 3D sync input (Mirage-licensed 3D)"
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Micro 75-ohm BNC connector for 3D sync output to another projector or emitter"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T ruggedized connector; control and Web UI"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Standard RS232 serial (DB9) for Christie serial commands"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-Sub connector, 7 configurable GPIO pins + ground + 12V; closest listed connector id to the physical DB9 shell (not an RS232 signal port)"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC60320 C20 inlet (mates with C19 cord), single-phase 200-240 VAC, 14A; closest listed id to C20 high-current IEC inlet"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Audinate",
+  "model": "ADP-AES3-AU-2X2",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://www.markertek.com/product/adn-adpaes3au2x2/audinate-adp-aes3-au-2x2-dante-avio-aes3-in-out-2x2-adapter-with-rj45-and-xlr-male-and-female",
+  "confidence": "medium",
+  "notes": "Retailer spec table (Markertek), cross-confirmed by consistent specs on B&H, Full Compass, Amazon and Markertek's manufacturer-sourced PDF spec sheet listing; direct fetch of audinate.com and B&H product pages was blocked (403), so this is a secondary rather than primary manufacturer source, hence medium confidence. Connector layout (1x RJ45, 1x XLR-M for AES3 out, 1x XLR-F for AES3 in) is consistent across all sources. RJ45 grade set to eth-100m as a conservative floor since Dante AVIO adapters use 100Mbps Fast Ethernet (no gigabit spec published for this small-form-factor AVIO line); this is an inference, not an explicit manufacturer statement. Unit is a desktop/pigtail-style adapter, not rack-mountable, so rackUnits omitted. No separate power connector exists — device is powered exclusively via PoE on the RJ45 port (802.3af Class 1).",
+  "ports": [
+    {
+      "name": "AES3 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR female; stereo AES3/EBU digital audio input pair, 110 ohm balanced, up to 96kHz/24-bit"
+    },
+    {
+      "name": "AES3 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR male; stereo AES3/EBU digital audio output pair, 110 ohm balanced, up to 96kHz/24-bit"
+    },
+    {
+      "name": "Dante/Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dante audio-over-IP network connection; also supplies Class 1 802.3af PoE power to the unit (no separate power connector)"
+    }
+  ]
+}

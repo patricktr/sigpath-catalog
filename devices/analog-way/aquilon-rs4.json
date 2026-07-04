@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Analog Way",
+  "model": "Aquilon RS4",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 5,
+  "sourceUrl": "https://evolvetechnology.live/wp-content/uploads/aquilon-rs4-datasheet-en.pdf",
+  "confidence": "high",
+  "notes": "Modular/field-swappable I/O platform (LivePremier series, ref. AQL-RS4). Specs reflect the standard factory configuration: 12x HDMI 2.0 + 8x DisplayPort 1.2 + 4x 12G-SDI inputs (24 total), 16x HDMI 2.0 outputs, 2x dedicated HDMI 2.0 multiviewer outputs. Input/output cards are field-swappable for alternate arrangements (e.g. 4x DP 1.4, 8x HDMI 1.4, 8x 3G-SDI, NDI+12G-SDI, SFP+, Optical, SDVoE, ST 2110) — not modeled here since those are optional alternates, not the base config. Genlock BNC has a physical loop-out (2 BNC connectors: reference in + loop out) for Framelock/Blackburst/Tri-level sync — grade omitted since this is analog sync reference, not SDI video. Dual-redundancy Ethernet ports serve Dante/AES67 audio networking (64x64 @48kHz); a separate Ethernet connection is used for Web RCS/REST API/TCP control — datasheet doesn't give a distinct rear-panel count for control vs. Dante RJ45s beyond the two Dante ports, so only the two Dante-labeled RJ45s are included here (control likely shares one of these or a dedicated mgmt port not itemized in the datasheet). Tally/GPI-O is present but the datasheet gives no connector type/pin-count (commonly a euroblock or DB-style connector on this product line) — omitted rather than guessed. Power: \"Swappable redundant power supplies (2+1)\" at 100-240VAC 12-7A, 3x power cords supplied — modeled as 3x IEC C14 inlets (standard AV/broadcast rack convention for this class of device); exact inlet type (C13/C14 vs C19) not explicitly shown in the datasheet text, so treat as inferred. No USB or RS232 ports are listed in the datasheet. Rack size 5RU confirmed.",
+  "ports": [
+    {
+      "name": "Input 1-12 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "12x HDMI 2.0 inputs, up to 4K60p 8-bit 4:4:4 / 4K60p 12-bit 4:2:2 / 4K30p 12-bit 4:4:4"
+    },
+    {
+      "name": "Input 13-20 (DisplayPort)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "8x DisplayPort 1.2 inputs, up to 4K60p 10-bit 4:4:4 / 4K60p 12-bit 4:2:2 (field-swappable for 4x DP 1.4)"
+    },
+    {
+      "name": "Input 21-24 (12G-SDI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "4x 12G-SDI inputs, up to 4K60p 10-bit 4:2:2; backward compatible with 3G-SDI/6G-SDI"
+    },
+    {
+      "name": "Output 1-16 (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "16x HDMI 2.0 active outputs, up to 4K60p 8-bit 4:4:4 / 4K60p 12-bit 4:2:2 / 4K30p 12-bit 4:4:4"
+    },
+    {
+      "name": "Multiviewer Out 1-2 (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "2x dedicated HDMI 2.0 multiviewer outputs, configurable as 2x 4K30p or 1x4K60p+1 duplicated or 2x 2560x1440@60p"
+    },
+    {
+      "name": "Ref In (Genlock)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Dedicated BNC for Framelock, Blackburst or Tri-level sync reference"
+    },
+    {
+      "name": "Ref Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through output for the genlock/reference BNC input"
+    },
+    {
+      "name": "Dante 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dual-redundancy Dante audio networking port (64x64 @48kHz or 32x32 @96kHz), AES67 support; also used for Web RCS/REST/TCP control"
+    },
+    {
+      "name": "Dante 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Second Dante redundant Ethernet port, AES67 support"
+    },
+    {
+      "name": "AC Power 1",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "One of the swappable redundant (2+1) power supply modules; 100-240VAC 12-7A, 50/60Hz. Inlet type inferred (3x IEC-style power cords supplied); exact C-series variant not stated in datasheet"
+    },
+    {
+      "name": "AC Power 2",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "Second swappable redundant power supply module"
+    },
+    {
+      "name": "AC Power 3",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "Third swappable redundant power supply module (2+1 redundancy)"
+    }
+  ]
+}

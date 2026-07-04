@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Canon",
+  "model": "EOS C400",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://d347awuzx0kdse.cloudfront.net/protel/product-download/152223.pdf",
+  "confidence": "high",
+  "notes": "Source: Canon's official \"EOS C400 Technical Specifications\" PDF (regional Canon Australia/NZ reseller-hosted copy of the manufacturer datasheet), page 7 \"Input/Output Terminals\" table — this is the authoritative Canon spec sheet, cross-checked against Canon Europe/Canon CNA regional spec pages and B&H listing via search snippets. SDI OUT is rated 12G/6G/3G/HD-SDI (graded as sdi-12g, its max); MON. is rated 3G/HD-SDI (graded sdi-3g). Ethernet is stated elsewhere as 1000BASE-T compatible (eth-1g); the Canon spec PDF itself only says \"Yes\" without stating speed. TC, G-LOCK, SYNC, and RET terminals are physically small DIN 1.0/2.3 coaxial connectors (not full-size BNC or standard multi-pin DIN) — mapped to \"bnc\" as the closest connector id in the allowed list since none of hdmi/sdi/bnc/etc. options include a miniature coax DIN connector; treat these four as approximate. REMOTE A is a 2.5mm sub-mini stereo jack, mapped to trs-3.5 (closest available connector; actual size is 2.5mm not 3.5mm). LENS terminal (RF mount + 12-pin lens contacts) and the Multi-function accessory shoe (21-pin, with power contacts) are proprietary lens/accessory mount interfaces, not general AV signal/power ports, and were omitted. Battery power (BP-A30N/BP-A60N, mounted battery plate) is separate from the DC-IN 12V 4-pin XLR barrel-style external DC input, which is the port listed. No rack-mount form factor — this is a handheld/shoulder cinema camera body (approx. 142 x 135 x 135 mm), so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "MON.",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Mini-XLR, MIC/LINE switchable, +48V phantom power selectable; AES/EBU not supported"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Mini-XLR, MIC/LINE switchable, +48V phantom power selectable; AES/EBU not supported"
+    },
+    {
+      "name": "MIC",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack microphone input"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C, for smartphone connection"
+    },
+    {
+      "name": "VIDEO",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C, dedicated connection for the detachable LCD monitor"
+    },
+    {
+      "name": "GRIP",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB Type-C, dedicated connection for the detachable hand grip"
+    },
+    {
+      "name": "REMOTE A",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm sub-mini stereo jack; closest listed connector is 3.5mm TRS, actual size is 2.5mm"
+    },
+    {
+      "name": "TC (TIME CODE)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Physical connector is a small DIN 1.0/2.3 coaxial jack (timecode in/out), not full-size BNC; BNC chosen as closest listed connector"
+    },
+    {
+      "name": "G-LOCK",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock input; physical connector is DIN 1.0/2.3 coaxial, not full-size BNC; BNC chosen as closest listed connector"
+    },
+    {
+      "name": "SYNC",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Sync output; physical connector is DIN 1.0/2.3 coaxial, not full-size BNC; BNC chosen as closest listed connector"
+    },
+    {
+      "name": "RET",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Video return input; physical connector is DIN 1.0/2.3 coaxial, not full-size BNC; BNC chosen as closest listed connector"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR, 12V DC input"
+    }
+  ]
+}

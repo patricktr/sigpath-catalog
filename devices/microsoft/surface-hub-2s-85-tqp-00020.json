@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Microsoft",
+  "model": "Surface Hub 2S 85\" (TQP-00020)",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://learn.microsoft.com/en-us/surface-hub/surface-hub-2s-85",
+  "confidence": "medium",
+  "notes": "Primary source is Microsoft's official 85\" model tech-spec page (learn.microsoft.com/en-us/surface-hub/surface-hub-2s-85), cross-checked against the general Surface Hub 2S tech-specs page. Port list per Microsoft: USB-A, Mini-DisplayPort 1.2 video output, RJ45 gigabit Ethernet, HDMI video input (HDMI 2.0, HDCP 2.2/1.4), USB-C with DisplayPort input, and (3) additional USB-C ports on the display bezel/top (one of which is used for the included Surface Hub 2S Camera, 4K, USB-C connection). Total USB-C count = 4, matching third-party retailer summaries. USB-A port count/direction not specified by Microsoft (listed simply as \"USB-A\", singular, direction assumed host/output per typical peripheral-connection use, though these can also serve as bidirectional host ports for storage). Power inlet: Microsoft does not explicitly name the IEC connector type; the unit ships with a detachable 4m AC power cable (per quick-start guide) and draws 665W operating / 745W surge / 7.8A at 90-265V — parameters consistent with a standard IEC C13/C14 inlet (rated to 10A/250V, common on large commercial displays in this power class), so iec was used as the best-fit id; this is an inference, not manufacturer-confirmed, hence medium confidence overall. No SDI, XLR, or analog audio ports are present on this model (audio is fixed-mount speaker/mic arrays, not exposed as external jacks). Not rack-mountable (wall/cart-mounted flat panel; rackUnits omitted). HDMI grade taken directly from spec (\"HDMI 2.0, HDCP 2.2/1.4\"). Mini-DisplayPort output version explicitly stated as 1.2 by Microsoft. USB-C ports' USB speed generation is not stated by Microsoft, so grade was omitted for those to avoid guessing; the \"USB-C with DisplayPort Input\" port also carries DP video alt-mode functionality but grade reflects USB-C's data role only omitted per source silence — video routing capability noted in port name instead.",
+  "ports": [
+    {
+      "name": "HDMI Video In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0, HDCP 2.2/1.4 compliant"
+    },
+    {
+      "name": "Mini DisplayPort Video Out",
+      "direction": "output",
+      "connector": "mini-dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "USB-C with DisplayPort Input",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Accepts DisplayPort video via USB-C alt mode; USB data generation not specified by manufacturer"
+    },
+    {
+      "name": "USB-C (on display)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "One of three; used for accessories such as the included Surface Hub 2S Camera. USB generation not specified by manufacturer."
+    },
+    {
+      "name": "USB-C (on display)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB generation not specified by manufacturer."
+    },
+    {
+      "name": "USB-C (on display)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB generation not specified by manufacturer."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB generation not specified by manufacturer."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 gigabit Ethernet, auto-negotiates 1000/100/10 BaseT"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Manufacturer does not name the specific IEC inlet variant; ships with detachable 4m AC power cable, 665W operating/745W surge at 90-265V, 7.8A -- inferred as standard IEC (C13/C14-class) inlet, not confirmed by source"
+    }
+  ]
+}

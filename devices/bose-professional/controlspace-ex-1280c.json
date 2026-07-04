@@ -1,0 +1,228 @@
+{
+  "manufacturer": "Bose Professional",
+  "model": "ControlSpace EX-1280C",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://dextra.com.mx/img/files/PRODUCTOS/BOSE/ControlSpace-EX-440C/ig_controlspace_ex1280_ex440c_ex1280c_ex12aec.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Bose Professional's own \"ControlSpace EX-1280/EX-440C/EX-1280C/EX-12AEC Installation & Operation Guide\" (rear-panel diagram p.13 and Technical Specifications table p.32-33), which is the manufacturer's authoritative documentation. The 12 mic/line inputs and 8 line outputs are physically presented as multiple 6-pin Euroblock terminal blocks (2 balanced channels per 6-pin block), consistent with Bose's published TDS/spec-sheet figures corroborated via B&H's listing. The 2 RJ-45 Dante ports are primary/secondary Dante (64x64) and the same ports serve general Ethernet/network control (1 Gbps) per the \"Network Control\" spec row - no separate third network jack appears on the rear panel diagram. AmpLink RJ-45 output is a proprietary Bose digital audio link (no standard grade scale applies; requires shielded Cat5 cable) so no eth- grade was assigned. VoIP RJ-45 (2 SIP lines) and PSTN RJ-11 are telephony/analog phone lines, not graded. USB Host Type-A port is present on hardware but explicitly documented as \"for future use / not currently supported\" - included for completeness. Serial (RS-232 DTE) and CC-16 (RS-485) each use a 3-pin 3.81mm Euroblock, mapped to rs232/rs485 connector ids (closest match; actual connector is a detachable terminal block, not a DB9/DE9).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 9",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 10",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 11",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line In 12",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12 balanced mic/line inputs total, presented on six 6-pin 3.81mm Euroblock terminal blocks (2 channels per block); +48V phantom power selectable per input"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 balanced line outputs total, presented on four 6-pin 3.81mm Euroblock terminal blocks (2 channels per block)"
+    },
+    {
+      "name": "Control Input 1",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Input 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Input 3",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Input 4",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Input 5",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5 general-purpose analog/digital control inputs on a 6-pin 3.81mm Euroblock (GPIO)"
+    },
+    {
+      "name": "Control Output 1",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Output 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Output 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Output 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Control Output 5",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5 general-purpose digital control outputs on a 6-pin 3.81mm Euroblock (GPIO)"
+    },
+    {
+      "name": "Dante 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante primary port; 64x64 channels, also carries general network/control traffic (1 Gbps)"
+    },
+    {
+      "name": "Dante 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante secondary port for redundancy"
+    },
+    {
+      "name": "AmpLink Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary Bose digital audio output for AmpLink-equipped amplifiers; 8 channels, <21us latency, 48kHz, requires shielded Cat5 cable. Not a standard Ethernet link so no eth- grade applies."
+    },
+    {
+      "name": "VoIP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 VoIP port, SIP 2.0-compliant, 2 lines/2 instances per line. Telephony signaling, not a graded Ethernet data link."
+    },
+    {
+      "name": "Telephone Line (PSTN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Closest available id; actual connector is RJ-11, 1 analog phone line, Tx/Rx. RJ-11 is not in the allowed connector list so RJ-45 chosen as nearest telecom-jack match."
+    },
+    {
+      "name": "USB Device",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro-B USB device port for soft-codec stereo audio in/out plus HID support"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Type-A USB host port; present on hardware but documented by Bose as reserved for future use / not currently supported"
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-wire RS-232C (DTE) on a 3-pin 3.81mm Euroblock terminal block, not a DB9"
+    },
+    {
+      "name": "CC-16",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "3-wire RS-485 (master) on a 3-pin 3.81mm Euroblock terminal block for Bose CC-16 zone controller or third-party control interfaces"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320-C14 inlet, 100-240 VAC 50/60Hz, 60W max"
+    }
+  ]
+}

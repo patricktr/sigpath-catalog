@@ -1,0 +1,229 @@
+{
+  "manufacturer": "Lightware",
+  "model": "MX2-16x16-HDMI20",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.lightware.com/en/products/Matrix-Switchers/mx2-16x16-hdmi20",
+  "confidence": "high",
+  "notes": "Base (non-suffixed) MX2-16x16-HDMI20: single internal PSU with standard IEC AC inlet, 3-pole Phoenix (Euroblock) RS-232, and RJ45 Ethernet — confirmed directly from Lightware's own MX2-HDMI20 series Quick Start Guide (covers this exact model) and User's Manual appendix (specifications, control-port, and rear-panel-drawing pages). This base model has no analog audio ports — those (5-pole Phoenix in/out) are exclusive to the \"-Audio\" suffixed variant, and dual redundant PowerCON power / D-SUB RS-232 / etherCON Ethernet are exclusive to the \"-R\" suffixed variant; do not conflate specs across variants. All 16 HDMI inputs and 16 HDMI outputs are 19-pole HDMI Type A, HDMI 2.0 (18 Gbps, up to 4096x2160@60Hz RGB 4:4:4, HDCP 2.2/1.4, DVI 1.0/HDMI 1.4 backward compatible). Rack height is 3U (measured enclosure height 132.6mm rack-ear-to-ear consistent with 3U); width 441mm (483mm with rack ears), depth 280.2mm. Weight not listed for the exact base non-R model in the manual (only -Audio, -R and -Audio-R weights given: 8540g listed for -R); base model weight likely similar but not separately confirmed. LAN speed grade (1G) is an inference — manufacturer specs did not state Ethernet port speed, only \"RJ45 connector for LAN/Ethernet control\"; USB port speed is unspecified and left ungraded. Front-panel USB connector type (USB-A vs USB-B/Micro) inferred as USB-A based on typical Lightware \"USB Control\" ports and diagram icon; not explicitly labeled with connector sub-type in text. Sources used: Lightware official product page (lightware.com), Lightware MX2-HDMI20 series User's Manual PDF (specifications/appendix and rear-panel drawings), and Lightware's own MX2-HDMI20 Quick Start Guide PDF (explicit rear-panel connector callouts distinguishing base vs -R vs -Audio variants).",
+  "ports": [
+    {
+      "name": "IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 9",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 10",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 11",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 12",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 13",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 14",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 15",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 16",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 5",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 6",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 9",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 10",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 11",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 12",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 13",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 14",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 15",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 16",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole Phoenix/Euroblock connector (non-redundant base model); the -R variant uses a 9-pole D-SUB instead"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 for Ethernet/LAN control; the -R variant uses a Neutrik etherCON connector instead. Speed grade (1G) inferred, not explicitly stated by manufacturer"
+    },
+    {
+      "name": "USB CTRL",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for local control via Lightware Device Controller software; USB speed not specified by manufacturer, no grade set"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Standard IEC connector (single PSU), 100-240V AC 50/60Hz. The -R variant instead uses dual Neutrik powerCON inlets"
+    }
+  ]
+}

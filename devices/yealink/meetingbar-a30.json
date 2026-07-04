@@ -1,0 +1,63 @@
+{
+  "manufacturer": "Yealink",
+  "model": "MeetingBar A30",
+  "category": "other",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.yealink.com/upfiles/products/datasheet/Yealink-MeetingBar-A30-Teams&Zoom-Collaboration-Bar-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Source: official Yealink MeetingBar A30 datasheet PDF (manufacturer, yealink.com). The datasheet also lists an \"HDMI input\" but it is only available via the optional external VCH51 Sharing Kit dongle, not a native physical port on the base A30 unit, so it was omitted. \"Motion sensor\", \"Security lock slot\", and \"Reset slot\" are listed in the datasheet but are not signal/power connectors, so omitted. The \"Yealink extension port (RJ-45)\" is a proprietary port for connecting accessories (e.g. CTP18 touch panel) — RJ45 connector but not confirmed standard graded Ethernet, so no eth-grade set. Power connector is a proprietary barrel-style DC jack (closest standard id: dc-barrel); external adapter: AC 100-240V input, DC 48V/0.7A output. This is an all-in-one Android video collaboration bar (integrated camera/mic/speaker/compute) for Microsoft Teams/Zoom — no exact category/type match exists in the given enums (no \"video conferencing bar\" option), so category was set to \"other\" and type to \"Video switcher\" as the closest available fit; treat both as best-effort. Desktop/wall/TV-mount unit, not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "CEC supported"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "CEC supported"
+    },
+    {
+      "name": "Line-in",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Line-out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Extension Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Yealink proprietary extension port for accessories (e.g. CTP18 touch panel); not a standard Ethernet data port, so no speed grade assigned"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary Yealink power port; external power adapter converts AC 100-240V input to DC 48V/0.7A output"
+    }
+  ]
+}

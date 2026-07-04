@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Nureva",
+  "model": "HDL310",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.nureva.com/hubfs/product-resource/audio-conferencing/nureva-hdl310-data-sheet.pdf",
+  "confidence": "medium",
+  "notes": "Source: official Nureva HDL310 data sheet (nureva.com/hubfs/product-resource/audio-conferencing/nureva-hdl310-data-sheet.pdf), cross-referenced against product page nureva.com/products/hdl-series/hdl310. The HDL310 is a two-piece system: an integrated microphone/speaker bar (60\" wide, wall-mounted, no user-facing ports of its own) plus a separate \"connect module\" that hosts all physical I/O — ports listed above are all on the connect module. Two of the RJ45 ports link the connect module to the mic/speaker bar over a proprietary Ethernet-cable connection (not a generic network switch port), so no eth- grade was assigned to those two; the third RJ45 (\"Console Direct\") is the actual network/internet uplink, so eth-1g grade was inferred (typical for this device class) since the datasheet does not state an explicit link speed — flagged as an inference. The power input is described only as \"Input jack for power supply\" with power rating \"universal switching 100-240V AC, 50-60Hz\" and an included country-specific AC power cable; this implies an external power brick with a DC barrel output into the connect module (modeled as dc-barrel), but the exact barrel connector was not explicitly pictured/confirmed in the sheet. No HDMI/video ports exist on the HDL310 itself — the datasheet's mention of \"HDMI and USB cameras\" for camera-zone switching refers to third-party cameras integrated elsewhere in the room system, not physical ports on this device. Not rack-mountable (wall-mounted desktop/room device), so rackUnits omitted. Category set to \"audio\" (audio conferencing/DSP device) and type to \"Audio mixer\" as the closest fit since \"DSP\" is also plausible but this is marketed as an audio conferencing system with integrated mic/speaker bar rather than a rack DSP.",
+  "ports": [
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type B interface to computer or collaboration hub, on the connect module"
+    },
+    {
+      "name": "Aux Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5 mm single-ended stereo jack, on the connect module"
+    },
+    {
+      "name": "Aux In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm single-ended stereo jack, on the connect module"
+    },
+    {
+      "name": "Mic/Speaker Bar 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "One of two RJ45 connections from the connect module to the integrated microphone and speaker bar; proprietary Ethernet-cable link, not a graded network port so no eth- grade assigned"
+    },
+    {
+      "name": "Mic/Speaker Bar 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second of two RJ45 connections from the connect module to the integrated microphone and speaker bar"
+    },
+    {
+      "name": "Console Direct",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 for connecting the connect module to the network for Console Direct cloud management; datasheet does not explicitly state link speed, inferred as Gigabit Ethernet based on typical AV endpoint hardware"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Input jack for external power supply on the connect module; datasheet lists universal switching 100-240V AC, 50-60Hz, <30W consumption via an external adapter with a country-specific AC cord, consistent with a DC barrel input on the unit itself"
+    }
+  ]
+}

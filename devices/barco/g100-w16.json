@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Barco",
+  "model": "G100-W16",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.barco.com/en/product/g100-w16",
+  "confidence": "medium",
+  "notes": "Barco G100-W16: 17,200 ISO lumen, WUXGA (1920x1200), single-chip DLP laser-phosphor projector, part of the G100 series (shared chassis/electronics with G100-W22 and G100-W25, which only differ in brightness/light-source tuning). Desktop/ceiling/rigging-mount unit (no rackUnits -- not a rack-mount device). Connector panel confirmed identical across the G100 family via Barco's official G100-W22 spec sheet (https://assets.barco.com .../G100-W22-en-Spec-sheet.pdf, \"Last updated: 19 May 2025\") which explicitly lists: Inputs \"2x HDMI(TM) 2.0b / DisplayPort 1.2a / DVI-D / HDBaseT / 3G-SDI / VGA (D-Sub 15 pin)\"; Control \"IR, RS232, RJ45, USB type A\"; Network connection \"10/100 Ethernet, RJ45\"; Power requirements \"100-240V / 50-60Hz\". The G100-W16-specific numbers (17,200 lumen brightness, model name) were corroborated via Barco's product page (barco.com/en/product/g100-w16), a WebFetch of Barco copy mirrored on distributor audiogeneral.com/store/products/view/0601-1450, and ProjectorCentral's Barco-G100-W16.htm spec page, all of which list the same connector set for the W16. HDMI is graded 2.0b -> mapped to hdmi-2.0 (closest defined grade tier). DisplayPort 1.2a -> dp-1.2. SDI is specified as \"3G-SDI\" -> sdi-3g grade on the bnc connector. Network Ethernet is \"10/100\" -> eth-100m grade. HDBaseT input and the dedicated network/control RJ45 are two separate RJ45 jacks per the spec sheet's explicit listing (HDBaseT under Inputs, RJ45 under both Control and Network connection) -- exact physical port count/labeling on the rear panel silkscreen was not independently verified via a panel photo/diagram, so treat naming as inferred from the datasheet's textual listing rather than an observed label. Power connector type is the weakest-confidence item: no source states the specific IEC inlet class (C13/C14 vs C19/C20); \"iec\" was chosen as the closest listed option since Barco simply says \"power cord\" is a standard accessory with 100-240V/50-60Hz rated input and no captive cord or NEMA plug is depicted in any product imagery. Could not access barco.com product/spec pages directly (403 Forbidden) or the exact G100-W16 spec-sheet PDF (attempted URL guess returned a stale cached G100-W22 sheet with a blank spec table) -- all data is triangulated from secondary renderings of Barco's own copy (search snippets, distributor mirror, ProjectorCentral) rather than a single directly-fetched authoritative page, hence medium rather than high confidence.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT input for extended video/control over Cat cable"
+    },
+    {
+      "name": "SDI",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga",
+      "note": "D-Sub 15-pin analog video input"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 pin serial control"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet control/network port, separate from HDBaseT RJ45"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A service/control port"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "ir",
+      "note": "IR remote control receiver"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC power inlet, 100-240V 50/60Hz; standard power cord included. Exact IEC inlet sub-type (C13/C14 vs higher-current C19/C20) not confirmed by any source found -- rated max draw (~1380W @220V, higher current at 100V) suggests it may exceed standard C13/C14 10A rating on 100-120V circuits, but manufacturer does not publish the specific connector class."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "MX395",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://content-files.shure.com/publications/specSheet/en/microflex-wired-spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "MX395 is a low-profile boundary/button condenser microphone (Microflex series). It has a single physical connector - a 3-pin XLR - that both outputs balanced analog audio and receives phantom power (11-52 Vdc, 2.0 mA) from the connected mixer/preamp, so there is no separate mains/DC power port to model. Standard (non-LED) models - MX395B/C, MX395B/O, MX395B/BI, MX395AL/C, MX395AL/O, MX395AL/BI, MX395W/O - all use 3-pin XLR; polar pattern (cardioid/omni/bidirectional) is set by model suffix and does not change the connector. A distinct -LED family (MX395B/C-LED, MX395B/O-LED, MX395B/BI-LED) instead ships with a 5-pin XLR carrying audio plus a logic-controlled bi-color LED ring and needs 48-52 Vdc phantom at 8.0 mA - treated as a variant, not included as a port here. No bandwidth \"grade\" applies since XLR analog audio is not a graded connector class. Category/type were mapped to the closest available enum values (audio / Microphone) as no dedicated \"boundary/condenser mic\" type exists. Not rack-mountable (small tabletop/ceiling boundary mic), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR active-balanced audio output; also carries 11-52 Vdc phantom power in (2.0 mA draw), pin 2 hot. The separate -LED product variants (MX395B/C-LED, MX395B/O-LED, MX395B/BI-LED) instead use a 5-pin XLR that carries audio plus LED logic control and require 48-52 Vdc phantom at 8.0 mA - not modeled here since this entry covers the base 3-pin-XLR MX395 line."
+    }
+  ]
+}

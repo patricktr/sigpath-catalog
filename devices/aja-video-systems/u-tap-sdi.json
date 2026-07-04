@@ -1,0 +1,29 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "U-TAP SDI",
+  "category": "converter",
+  "sourceUrl": "https://www.aja.com/products/u-tap-sdi/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Desktop bus-powered USB capture device; no rack mounting and no separate power inlet — power (5V, 4W max) is delivered entirely over the USB-B connector, so that single port carries both data and power. USB connector confirmed as USB 3.0 (USB 3.2 Gen 1) Type-B from AJA's U-TAP manual; grade set to usb-5g per that generation's SuperSpeed 5Gbps spec (device is also compatible with USB 2.0/3.1/3.2 host interfaces per spec sheet, but the native device interface is USB 3.0 Gen 1). SDI In and SDI Loop Out are both 3G-SDI (SMPTE-259/292/424) per the spec sheet, so both are graded sdi-3g. No HDMI on this SKU (that is the separate U-TAP HDMI model).",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI LOOP OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3.0 (USB 3.2 Gen 1) Type-B; also delivers bus power to the device (5V, 4W max) — no separate power connector exists"
+    }
+  ]
+}

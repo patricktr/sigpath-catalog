@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Tannoy",
+  "model": "CVS 6",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.fullcompass.com/common/files/10627-TannoyCVS6.pdf",
+  "confidence": "high",
+  "notes": "This is a passive 2-way coaxial in-ceiling loudspeaker (6-inch woofer + 0.75-inch coaxial soft-dome tweeter) — it has no active electronics, mains power input, or digital connectors. Its only physical I/O is a single removable locking connector block with screw terminals on the back-can termination box, wired to an internal 60W autoformer with selectable 70V/100V taps (60/30/15/7.5W on 70V; 60/30/15W on 100V) or 6-ohm low-impedance operation, chosen via a front-baffle rotary tapping switch. A \"loop-through\" facility lets the same terminal block feed additional speakers in a daisy chain, but this is the same input pair, not a distinct output port. The connector list provided has no dedicated \"screw-terminal/barrier-strip speaker connector\" id, so `euroblock` was used as the closest match to a removable screw-terminal block; no `grade` applies since analog speaker-level/70V distribution connectors are not part of the graded connector scales. Source: Tannoy's own Technical Data Sheet (tannoy.com/pro, v1.00, 18/09/13), hosted via Full Compass — content matches manufacturer branding/copyright and is corroborated by B&H, Full Compass, and other pro-audio retailer listings for power/impedance figures. No rack unit size applies (ceiling-mount speaker, not rack equipment).",
+  "ports": [
+    {
+      "name": "Signal Input (loop-through)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Removable locking connector block with screw terminals; supports loop-through daisy-chain to additional speakers. Feeds the 60W line transformer (70V/100V taps: 60/30/15/7.5W, or 100V: 60/30/15W) or 6-ohm low-impedance direct connection, selectable via front rotary tapping switch. No separate power input — this passive speaker is powered entirely via the audio signal line."
+    }
+  ]
+}

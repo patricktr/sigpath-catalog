@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Shure",
+  "model": "SM7dB",
+  "category": "audio",
+  "sourceUrl": "https://www.fullcompass.com/common/files/87258-SM7DBSpecSheet.pdf",
+  "confidence": "high",
+  "notes": "Single physical connector: a 3-pin XLR that carries both the balanced mic-level/line-level audio output and +48V phantom power (required to run the internal preamp; a bypass switch reverts to passive SM7B-style operation without phantom power). No USB or headphone jack is built into the microphone itself — USB connectivity is only available via the separate Shure MVX2U XLR-to-USB adapter accessory, which is not part of the SM7dB unit and thus not included here. No grade applies to XLR (not a bandwidth-graded connector type in the given scale). Output impedance: 150 ohm (bypass mode) / 27 ohm (preamp mode, +18/+28dB switchable). Desktop/mic-stand mounted device, not rack-mountable.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "3-pin XLR balanced audio output; also receives +48V phantom power from the connected interface/mixer to power the internal preamp (bypass switch allows passive operation without phantom power)"
+    }
+  ]
+}

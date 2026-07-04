@@ -1,0 +1,139 @@
+{
+  "manufacturer": "NovaStar",
+  "model": "VX600",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://oss.novastar.tech/uploads/2024/07/VX600-All-in-One-Controller-Specifications-V1.7.0.pdf",
+  "confidence": "high",
+  "notes": "Source is the official NovaStar manufacturer specification PDF (V1.7.0, 2024-07-08) hosted at oss.novastar.tech — the authoritative spec sheet. Caveats: (1) HDMI ports are labeled \"HDMI 1.3\" (HDMI version 1.3) on the device silkscreen; the allowed grade enum only offers hdmi-1.4/2.0/2.1, so hdmi-1.4 was chosen as the closest available id — this is NOT a confirmed HDMI 2.0-class port, it is actually HDMI 1.3. (2) The 3G-SDI and GENLOCK IN-LOOP ports' exact connector type (BNC) is inferred from the rear-panel photo showing round threaded connectors, which is standard for SDI/genlock, though the spec text itself does not spell out \"BNC\". (3) OPT1/OPT2 are SFP-style hot-swappable optical modules (LC fiber, single-mode OS1/OS2 or multi-mode OM3/OM4, 9.95-11.3 Gbit/s) — graded as eth-10g as the closest bandwidth-scale match since there is no dedicated \"10G fiber\" grade; actual optical transceiver could also be modeled as connector \"sfp\" but LC was chosen since the spec explicitly states \"Connector type: LC\". (4) LIGHT SENSOR is a NovaStar-proprietary connector not well represented by any id in the allowed list; euroblock was used as a rough placeholder — treat with low confidence. (5) There is also a separate \"VX600 Pro\" variant with its own spec sheet; this entry is for the base VX600 model only. (6) Product also ships as a \"flight case\" or \"carton\" package variant — does not affect port list. (7) Rack height 50.1mm corresponds to 1U.",
+  "ports": [
+    {
+      "name": "3G-SDI IN & LOOP",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Supports ST-424 (3G), ST-292 (HD), ST-259 (SD); loop-through output supported; max input 1920x1080@60Hz"
+    },
+    {
+      "name": "HDMI 1.3-1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Rear panel labels port as HDMI 1.3 (HDMI version 1.3 compliant); HDCP 1.4 compliant; loop-through output supported on this port; closest available grade id is hdmi-1.4 since hdmi-1.3 is not in the allowed scale"
+    },
+    {
+      "name": "HDMI 1.3-2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Second HDMI 1.3 input; HDCP 1.4 compliant; closest available grade id is hdmi-1.4"
+    },
+    {
+      "name": "DVI IN & LOOP",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Single-link DVI, max input 1920x1200@60Hz, HDCP 1.4 compliant, loop-through output supported"
+    },
+    {
+      "name": "OPT 1",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Self-adaptive 10G optical fiber port: input when paired with a Pixelhue video processor, output when paired with a fiber converter; carries up to 1x 4Kx1K@60Hz or 2x 2Kx1K@60Hz; transmission rate 9.95-11.3 Gbit/s; LC connector, single-mode OS1/OS2 or multi-mode OM3/OM4 module (hot-swappable)"
+    },
+    {
+      "name": "OPT 2",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Output-only fiber port; copies or backs up the signal carried on the 6 Ethernet output ports; same optical module specs as OPT1 (9.95-11.3 Gbit/s, LC connector)"
+    },
+    {
+      "name": "ETHERNET 1",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output; supports audio output (must connect to port 1 or 2 for multifunction-card audio parsing); max loading 3.9 million pixels across all 6 ports combined"
+    },
+    {
+      "name": "ETHERNET 2",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output; supports audio output"
+    },
+    {
+      "name": "ETHERNET 3",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output"
+    },
+    {
+      "name": "ETHERNET 4",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output"
+    },
+    {
+      "name": "ETHERNET 5",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output"
+    },
+    {
+      "name": "ETHERNET 6",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LED sending/Gigabit Ethernet output"
+    },
+    {
+      "name": "HDMI 1.3 (Output)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Rear-panel output HDMI labeled HDMI 1.3, for monitoring or video output; resolution adjustable; closest available grade id is hdmi-1.4"
+    },
+    {
+      "name": "ETHERNET (control)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Control port; connects to control PC or router for NovaLCT/V-Can control (not a video/LED output port)"
+    },
+    {
+      "name": "USB (Type-B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-B; connects to control PC and serves as input connector for device cascading"
+    },
+    {
+      "name": "USB (Type-A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A; output connector for device cascading"
+    },
+    {
+      "name": "GENLOCK IN-LOOP",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Genlock sync input with loop-through; connects to external sync (tri-level/black burst) source; connector inferred as BNC from rear-panel photo of round threaded connector, typical for genlock on this product class"
+    },
+    {
+      "name": "LIGHT SENSOR",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Proprietary light-sensor connector for ambient brightness auto-adjustment; not in the provided connector list as a distinct type — approximated as euroblock (small screw/pin connector); actual connector is a NovaStar-proprietary round sensor jack, closest visual match in the enum is a small pin-style connector"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V~, 1.5A, 50/60Hz, rated 35W; rear panel shows a standard IEC inlet with rocker power switch (IEC C13/14 style)"
+    }
+  ]
+}

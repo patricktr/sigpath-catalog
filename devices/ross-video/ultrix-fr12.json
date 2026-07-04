@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "Ultrix FR12",
+  "category": "matrix",
+  "rackUnits": 12,
+  "sourceUrl": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Installation%20Guides/ULTRIX-FR12%20Installation%20Guide%20(2101DR-603).pdf",
+  "confidence": "high",
+  "notes": "FR12 is a modular 12RU hyperconverged SDI/IP routing frame with 16 blade slots and NO fixed video I/O of its own — all signal I/O is provided by field-installable blades (ULTRIX-HDX-IO, -IP-IO, -IPX-IO, -MODX-IO, -SFP-IO), so actual port count/type varies per configuration. Ports listed here are: (1) the base-chassis fixed connectors (ENET x2, USB-A front, USB-B rear, ALARM, REF A/B) that exist on every FR12 regardless of blade fit, and (2) one representative ULTRIX-HDX-IO blade (16x16 HD-BNC SDI, the flagship/most common blade, populating slot 1) shown as representative signal I/O — a fully populated frame can have up to 16 such blades (288x288 max). SDI grade is sdi-12g since inputs/outputs support 270Mb/s through 12Gb/s (UHD) per blade, gated by an UltriSpeed license for 12G. AUX ports on each blade are unpopulated from the factory and accept SFP+ modules (3G/12G SDI coax or optical, MADI, or HDMI/DVI SFPs) — modeled here as \"sfp\" connector, grade omitted since the grade depends on which SFP module is installed. Power: the FR12 itself has no AC inlet — it has 4 rear \"PSU\" power-input modules (Molex mini-fit-style multi-pin DC connectors, closest listed enum is dc-barrel) that each mate to one channel of an external Ross Ultripower 1RU supply (15VDC, up to 300W per connector); a minimum of two Ultripower units is required, and the Ultripower units themselves take standard IEC C14 AC mains (90-240VAC) — that AC inlet lives on the separate Ultripower accessory, not on the FR12 chassis, so it is omitted here. USB Type-A (front) is reserved for future use; USB Type-B (rear) is for recovery/service only via USB-serial adapter, not a general host/device data port. ALARM is a 3-pin terminal block relay output (closest enum match is euroblock) not a locking multi-pin connector. LTC and R-OUT ports on the Frame Control Module are physically present but explicitly \"not implemented\" per the installation guide, so they were omitted. Frame height measured at 21.0in = 12U, consistent with \"FR12\" naming.",
+  "ports": [
+    {
+      "name": "ENET 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary GbE control/monitoring port on Frame Control Module"
+    },
+    {
+      "name": "ENET 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant GbE control/monitoring port"
+    },
+    {
+      "name": "USB (front panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.0 Type-A, reserved for future use"
+    },
+    {
+      "name": "USB (rear, Frame Control Module)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB 3.0 Type-B, for USB-serial recovery/service only"
+    },
+    {
+      "name": "ALARM",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, normally-closed relay alarm output; closest available connector id to the actual 3-pin screw terminal"
+    },
+    {
+      "name": "REF A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "HD-BNC reference input (analog black, tri-level sync, or AES/DARS); loop-through or terminating via DIP switch"
+    },
+    {
+      "name": "REF B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "HD-BNC reference input; secondary/redundant reference"
+    },
+    {
+      "name": "PSU 1",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input module mating to Ultripower external supply, 15VDC; closest listed connector id to the actual multi-pin Molex-style DC connector. Frame has 4 of these modules; minimum 2 required."
+    },
+    {
+      "name": "PSU 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Second power input module; see PSU 1 note"
+    },
+    {
+      "name": "PSU 3",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Third power input module; see PSU 1 note"
+    },
+    {
+      "name": "PSU 4",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Fourth power input module; see PSU 1 note"
+    },
+    {
+      "name": "Slot 1 IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Representative ULTRIX-HDX-IO blade SDI input, HD-BNC, one of 16 inputs on this blade type"
+    },
+    {
+      "name": "Slot 1 OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Representative ULTRIX-HDX-IO blade SDI output, HD-BNC, one of 16 outputs on this blade type"
+    },
+    {
+      "name": "Slot 1 AUX A",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Unpopulated SFP+ AUX port on ULTRIX-HDX-IO blade; accepts 3G/12G SDI coax or optical, MADI, or HDMI/DVI SFP modules"
+    },
+    {
+      "name": "Slot 1 AUX B",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Unpopulated SFP+ AUX port on ULTRIX-HDX-IO blade; accepts 3G/12G SDI coax or optical, MADI, or HDMI/DVI SFP modules"
+    }
+  ]
+}

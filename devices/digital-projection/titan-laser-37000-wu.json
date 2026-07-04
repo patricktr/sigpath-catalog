@@ -1,0 +1,121 @@
+{
+  "manufacturer": "Digital Projection",
+  "model": "Titan Laser 37000 WU",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.projectorcentral.com/pdf/projector_manual_10978.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: Digital Projection's official \"Titan Laser WUXGA\" Installation & Operating Guide (Rev A, Jan 2019), which covers the 29000 WU / 33000 WU / 37000 WU family sharing one connections panel, cross-checked against ProjectorCentral's spec page and Digital Projection's product/spec-sheet pages (springtree.net, avfranklin.com mirrors of DP's official PDF). Confirmed from the manual: 4x HDMI (1/2 = HDMI 2.0 HDCP2.2, 3/4 = HDMI 1.4b HDCP1.4 for 3D), DisplayPort 1.2, HDBaseT/LAN (RJ45), dual 3G-SDI (75-ohm BNC, in+loop-through out), Ethernet/Art-Net (RJ45), RS-232 (DB9), Wired Remote (3.5mm TRS), 3D Sync In/Out, 3D Sync IR, and two 12V Trigger outputs. Power: ProjectorCentral and independent listings state 200-240VAC 50/60Hz, ~17A, 3400W; the manual describes a locking mains connector (push in, rotate 90 degrees to lock, different cable variants for USA vs Rest-of-World) but does not name the exact IEC pin configuration, so iec-c19 was chosen as the closest listed high-current locking-IEC match — treat this port's connector id as an approximation. Sync In/Out and Trigger 1/2 physical connector types (BNC vs mini-jack) are inferred from typical Digital Projection Titan-series hardware and industry convention; the extracted manual text does not explicitly state their connector type (only pin diagrams for HDMI, RS232, and IR/wired-remote were given), so these are flagged as inferred. No lens is included (sold separately); the unit is a large floor/rigged installation projector, not rack-mountable, hence rackUnits omitted. Weight ~209 lb (95 kg), dimensions ~38.2 x 25.6 x 15.6 in per ProjectorCentral/manufacturer. IP60-rated sealed optical engine, liquid-cooled/filterless.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0 input, HDCP 2.2"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0 input, HDCP 2.2"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b input, HDCP 1.4; supports Frame Sequential / Dual-Pipe 3D"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b input, HDCP 1.4; supports Frame Sequential / Dual-Pipe 3D"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "DisplayPort 1.2 input, supports up to 4K-UHD 60Hz"
+    },
+    {
+      "name": "HDBaseT / LAN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT input for uncompressed HD video up to 100m; shares socket with LAN control"
+    },
+    {
+      "name": "3G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "75-ohm BNC"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Loop-through output, 75-ohm BNC"
+    },
+    {
+      "name": "Sync Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "3D sync output for linking multiple projectors; connector type inferred as BNC, not explicitly confirmed in source"
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "3D sync input from graphics card/server; connector type inferred as BNC, not explicitly confirmed in source"
+    },
+    {
+      "name": "3D Sync IR",
+      "direction": "output",
+      "connector": "ir",
+      "note": "IR/RF emitter or ZScreen sync output for active 3D glasses"
+    },
+    {
+      "name": "Ethernet / Art-Net",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dedicated LAN/Art-Net DMX control port, used when HDBaseT/LAN port is occupied by video"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-way D-type (DB9) serial control"
+    },
+    {
+      "name": "Trigger 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "12V screen/aspect-ratio/RS232 trigger output; not available with HDMI 3/4 inputs active. Connector type inferred, not explicitly confirmed in source"
+    },
+    {
+      "name": "Trigger 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "12V screen/aspect-ratio/RS232 trigger output; not available with HDMI 3/4 inputs active. Connector type inferred, not explicitly confirmed in source"
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack (TRS) wired remote control input"
+    },
+    {
+      "name": "Mains",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "200-240VAC 50/60Hz, 17A, locking captive-style mains inlet (push in, rotate 90 degrees to lock per official manual); exact IEC variant not explicitly stated by manufacturer, iec-c19 chosen as closest high-current locking IEC connector match"
+    }
+  ]
+}

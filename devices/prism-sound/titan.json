@@ -1,0 +1,188 @@
+{
+  "manufacturer": "Prism Sound",
+  "model": "Titan",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.soundonsound.com/reviews/prism-sound-titan",
+  "confidence": "high",
+  "notes": "Sources cross-checked: Sound on Sound review (detailed rear/front panel walkthrough), Sweetwater and B&H spec listings, and manufacturer site content surfaced via search (prismsound.io/products/titan and tech-specs page returned HTTP 403 to direct fetch, so manufacturer figures were corroborated via search snippets and the SoS review rather than a direct page render). Key points: 4 combo XLR/TRS inputs (ch1-4) support mic or line level with software-controlled gain and individually switchable phantom power; front-panel TS instrument jacks on ch1-2 auto-sense and override to instrument level (ch1-2 also support RIAA EQ for turntable input); ch5-8 are TRS line-only inputs. All 8 outputs are TRS line level. Digital I/O: RCA pair doing S/PDIF or AES3 (AES3 via included XLR-to-RCA adapter cable, not a native XLR jack, so modeled as RCA), plus TOSLINK pair switchable between S/PDIF and 8-channel ADAT. Two BNC wordclock (in/out), no grade applicable. USB is USB2 Type-B (device/host-facing, bidirectional). A 10Mbps Ethernet RJ45 port is present but currently inert, reserved for a future AVB firmware feature - 10Mbps has no corresponding entry in the eth-* grade scale (which starts at eth-100m), so grade was omitted rather than misapplied. The MDIO expansion slot is a Prism-proprietary card slot (not a standard external connector) for optional modules (e.g., 8-channel AES3 card, Pro Tools HDX card); no exact ID exists in the allowed connector list; \"euroblock\" used only as an inert placeholder and this should be treated with low confidence / likely omitted or replaced by the app maintainer. No MIDI ports (removed vs. predecessor Orpheus; MIDI exists on the larger Atlas model, not Titan). Power figures (90-250VAC, 35W, 6A fuse) and rack dimensions (1U, 483x290x44.5mm rack-mount) are consistent across B&H, Sweetwater, and manufacturer-derived snippets.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Instrument In 1",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Front-panel; auto-switches analog input 1 to instrument level"
+    },
+    {
+      "name": "Instrument In 2",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Front-panel; auto-switches analog input 2 to instrument level"
+    },
+    {
+      "name": "Line In 5",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line In 6",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line In 7",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line In 8",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel; shares source with Headphones 2"
+    },
+    {
+      "name": "Headphones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel; shares source with Headphones 1"
+    },
+    {
+      "name": "Digital In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "S/PDIF; also carries AES3 via supplied XLR-RCA adapter, up to 192kHz"
+    },
+    {
+      "name": "Digital Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "S/PDIF; also carries AES3 via supplied XLR-RCA adapter, up to 192kHz"
+    },
+    {
+      "name": "Optical In",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Switchable S/PDIF or 8-ch ADAT (SMUX/2 at 88.2/96kHz)"
+    },
+    {
+      "name": "Optical Out",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Switchable S/PDIF or 8-ch ADAT (SMUX/2 at 88.2/96kHz)"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75-ohm"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75-ohm"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10Mbps port reserved for future AVB capability; below the lowest defined grade (eth-100m) so no grade set"
+    },
+    {
+      "name": "MDIO Expansion Slot",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Proprietary miniature digital I/O expansion slot (blank panel by default; accepts optional AES3 or Pro Tools HDX modules) - not a standard connector type, closest listed placeholder used"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 90-250VAC 50/60Hz, 35W, fused at 6A"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Epson",
+  "model": "PowerLite L730U",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://mediaserver.goepson.com/ImConvServlet/imconv/97a8cba2436adf0fe2e09a003f1a8ec62e6f35d5/original?assetDescr=PowerLite_L730U_Projector_Specification_Sheet_CPD-60899R1.pdf",
+  "confidence": "high",
+  "notes": "Sold in Europe/Asia as \"EB-L730U\". Grades: HDMI inputs/output support HDCP 2.3 and accept a 4K signal (downscaled to native WUXGA 1920x1200), but the spec sheet does not state an HDMI version number, so HDMI grade is omitted per instructions (spec doesn't state version). RJ-45 speed is not explicitly stated on this 2-page sheet, so grade omitted rather than guessed. VGA (Mini D-Sub 15-pin) x2 are inputs (labeled Computer1/Computer2); a separate Mini D-Sub 15-pin \"Monitor Out\" is a VGA pass-through output. Audio In Mini Stereo x2 (Audio1/Audio2, 3.5mm TRS) pair with the video inputs; Variable Audio Out Mini Stereo x1 (3.5mm) feeds an external amp/speaker. USB-A is for media-player/USB-drive playback and wireless LAN module; USB-B is for USB display/mouse control from a computer (both treated as bidirectional per USB-host convention; USB spec version not stated, listed as usb-2.0 as the typical baseline for this port class, low-confidence inference). RS-232C is a standard D-Sub 9-pin serial control port. Power inlet is a detachable IEC C13/C14 cord as shown on the rear-panel diagram in the official spec sheet and confirmed by \"power cable\" being a boxed accessory; rated 100-240V 50/60Hz, 358W (Normal Mode). Built-in Wireless LAN (802.11b/g/n) is omitted as a physical port since it has no external connector on this model. Desktop/tabletop unit, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "HDMI1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.3; accepts 4K signal (scaled to native WUXGA)"
+    },
+    {
+      "name": "HDMI2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.3; accepts 4K signal (scaled to native WUXGA)"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Computer1 (VGA)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Computer2 (VGA)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin VGA pass-through output"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "hdbaset"
+    },
+    {
+      "name": "Audio1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini stereo audio input paired with Computer1/HDMI"
+    },
+    {
+      "name": "Audio2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini stereo audio input paired with Computer2"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Variable mini stereo audio output"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A, for media player/USB drive and wireless LAN module"
+    },
+    {
+      "name": "USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B, for USB Display / mouse control from a computer"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin serial control port"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Wired LAN RJ-45; speed not stated on spec sheet, grade omitted"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power cord; 100-240V, 50/60Hz, 358W (Normal Mode)"
+    }
+  ]
+}

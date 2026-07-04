@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Netgear",
+  "model": "GS110TP",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/datasheet/en/GS110TP.pdf",
+  "confidence": "high",
+  "notes": "Desktop/wall-mount fanless unit (236 x 101.6 x 27mm); not rack-mountable, so rackUnits omitted. All 8 RJ45 ports are 10/100/1000Mbps autosensing and PoE (802.3af, up to 15.4W/port, 46W total power budget) - grade eth-1g reflects the 1000BASE-T ceiling of the autosensing port. The 2 SFP uplink ports are Gigabit Fiber (1000BASE-X per IEEE 802.3z), graded eth-1g; actual reach/fiber type depends on the SFP module inserted (not fixed by the switch itself). Power input is an external 48V/1.25A AC-to-DC adapter (\"power brick\"), not an internal PSU - modeled as a dc-barrel input port on the chassis; the wall-side plug on the adapter's cord is a standard regional AC plug and not part of the switch itself. Physical silkscreen just numbers ports 1-8 and SFP 1-2 (no unique per-port names); named generically here consistent with NETGEAR's own port diagram. Sourced from NETGEAR's official datasheet (DS-GS110TP-25Jan21, downloads.netgear.com).",
+  "ports": [
+    {
+      "name": "Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

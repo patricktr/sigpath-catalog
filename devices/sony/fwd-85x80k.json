@@ -1,0 +1,81 @@
+{
+  "manufacturer": "Sony",
+  "model": "FWD-85X80K",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/FWD85X80K.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Sony's official spec sheet (Sony-authored datasheet, © Sony Corporation, hosted/mirrored at cdn-docs.av-iq.com; content matches Sony's pro.sony product family datasheet). Part of the X80K/X81K/X85K BRAVIA Professional Display family. HDMI: 4 inputs total, all HDCP2.3, supporting up to 3840x2160p/120Hz and 4096x2160p/60Hz (HDMI 2.1-class signal support); eARC/ARC is supported on the HDMI input designated for ARC (Sony convention: HDMI 3) — not itemized per-port in the datasheet, so all 4 HDMI ports are listed generically as bidirectional-capable via ARC only on one; here only one HDMI is marked with ARC capability implied by spec table (\"HDMI Audio Return Channel (ARC): Yes (eARC/ARC)\") but exact numbered port for ARC is not stated in this datasheet — commonly HDMI 3 on Sony BRAVIA. RS-232C: the datasheet lists a separate \"RS232: 1 (Side)\" quantity; Sony BRAVIA sets in this generation use a combined 3.5mm-style \"REMOTE\" mini-jack carrying both RS-232C serial control and IR-in (confirmed via Sony's consumer help-guide documentation pattern for same-generation BRAVIA sets); connector type mapped to trs-3.5 as the closest match since a true DE-9 is not used. IR-in is bundled on the same physical jack and not broken out as a separate port entry. Composite video input is a 3.5mm mini-jack (mapped to trs-3.5) rather than RCA. RF/antenna input is a standard F-type coax connector for terrestrial/cable ATSC3.0 tuner. Power input is a rear IEC C8 inlet (2-prong, non-grounded, mates with a C7/figure-8 cord) — mapped to connector \"iec-c7\" per the closest id in the allowed list (C8 inlet accepts a C7 cord). Desktop/wall-mount unit (85in professional display on stand or VESA 400x400 mount) — no rack units apply. Power: AC 120V (UL/cUL) or AC 110-240V (other regions), rated 378W.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI 3 (ARC)",
+      "direction": "bidirectional",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Supports eARC/ARC per datasheet; Sony convention places ARC on HDMI 3"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "VIDEO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Composite video input, side, 3.5mm mini-jack per datasheet"
+    },
+    {
+      "name": "ANTENNA/CABLE (RF)",
+      "direction": "input",
+      "connector": "f-type",
+      "note": "Terrestrial/cable RF tuner input (ATSC/ATSC3.0, Clear QAM)"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT (OPTICAL)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "LAN (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "REMOTE (RS-232C / IR IN)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Combined serial-control + IR-in mini-jack, per Sony BRAVIA same-generation convention; not a DE-9 D-sub"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "Rear IEC C8 inlet (2-prong figure-8 style); mapped to closest allowed id iec-c7"
+    }
+  ]
+}

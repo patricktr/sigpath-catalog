@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Marshall Electronics",
+  "model": "CV630-IP",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://marshall-usa.com/pdf/CV630-IP-cutsheet.pdf",
+  "confidence": "high",
+  "notes": "Primary sources: Marshall's own cutsheet (https://marshall-usa.com/pdf/CV630-IP-cutsheet.pdf) and full user manual (https://marshall-usa.com/pdf/CV630-IP_Manual.pdf), Chapter 3.1 \"I/O Functions Introduction\" rear-panel table, cross-checked against the product page (https://marshall-usa.com/cameras/CV630-IP/). Desktop/tabletop PTZ camera (ceiling-mountable via optional bracket) — rackUnits omitted, not rack-mountable. Model sold in black (CV630-IP) and white (CV630-IPW) variants with identical I/O; this entry covers the shared connector layout. RS-232 IN/OUT physically use 8-pin mini-DIN connectors (not DE-9); \"rs232\" was the closest available connector id since mini-DIN is not in the enum. RS-422 uses a 9-pin captive terminal-block connector, supplied as a separate plug-in accessory in the box; \"rs422\" chosen as connector id though physically it is a euroblock-style pluggable terminal, not a D-sub. Ethernet grade (eth-1g) is inferred/not explicitly confirmed by the manufacturer — spec sheet states \"Ethernet\" with PoE+ (802.3at) but does not print a link-speed number, so treat this grade as medium confidence. HDMI version/number is not stated by Marshall for this model, so no HDMI grade was set. IR receiver and IR Select switch exist on the unit but are not modeled as a physical AV signal/power port. Front tally light and power/standby LEDs are indicators, not connectors, and were omitted.",
+  "ports": [
+    {
+      "name": "3G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI output, embedded audio supported"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Full-size HDMI output, embedded audio supported; HDMI version not stated by manufacturer"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (IEEE 802.3at); carries IP video (HEVC/H.264), VISCA-IP/ONVIF control, and power. Manufacturer does not explicitly state Gigabit; 1G inferred as standard for PoE+ IP camera of this class carrying 4K streams"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo, switchable mic or line level"
+    },
+    {
+      "name": "RS-232 IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "8-pin mini-DIN connector (closest listed connector id used; physical connector is mini-DIN, not DE-9). Up to 7 cameras daisy-chainable"
+    },
+    {
+      "name": "RS-232 OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "8-pin mini-DIN connector (closest listed connector id used; physical connector is mini-DIN, not DE-9). Loops to next camera's RS-232 IN in daisy chain"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "9-pin captive screw/terminal-block (Phoenix/euroblock style) connector, included as a detachable accessory. Up to 7 cameras daisy-chainable; mutually exclusive with RS-232 use"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "EIAJ-04 DC barrel connector, 12V (10.8-13.0V DC), used with included external power adapter/cord. Camera can alternatively be powered via PoE+ over the Ethernet port"
+    }
+  ]
+}

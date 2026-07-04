@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Shure",
+  "model": "BLX288/SM58",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/blx_wireless/blx88",
+  "confidence": "medium",
+  "notes": "BLX288/SM58 is a dual-channel handheld wireless vocal system comprising two BLX2/SM58 handheld transmitters and one BLX88 dual-channel receiver. The BLX2/SM58 transmitter is battery-powered (2x AA, up to 14 hrs) and has no physical audio/data ports to model (mic capsule and battery door only) — all listed ports below belong to the BLX88 receiver, which is the only unit with physical I/O. The receiver's antennas are fixed/internal (non-detachable, no BNC antenna connector) so no antenna port is included. Power is supplied via an external PS24-type 12V DC wall/inline power supply terminating in a coaxial barrel plug (tip positive); some sources list receiver DC input tolerance as 12-15V DC @ ~320mA. No grade applies to any port (analog audio and DC power only). Frequency band variant (H9, H10, H11, J11, etc.) affects RF tuning only, not physical I/O. Desktop/tabletop unit — rack-mountable only with optional URT2 rack tray accessory, so rackUnits omitted per instructions (not inherently rack-mountable).",
+  "ports": [
+    {
+      "name": "Channel 1 XLR Output",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Channel 1 1/4\" Output",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Channel 2 XLR Output",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Channel 2 1/4\" Output",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC (some specs list 12-15V DC, ~320-400mA) via external PS24-type power supply, tip positive"
+    }
+  ]
+}

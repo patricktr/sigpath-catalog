@@ -1,0 +1,120 @@
+{
+  "manufacturer": "Black Box",
+  "model": "KVXLCHDP-200",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://bbpimassetsp-aza7efghcfa8c2dh.a03.azurefd.net/resources/kvxlch-100_kvxlchdp-200_qig-user_rev8_28422.pdf",
+  "confidence": "medium",
+  "notes": "Data taken directly from Black Box's official Quick Install Guide and User Manual for the KVX Series (covers KVXLCH-100, KVXLCHF-100, KVXLCH-200, KVXLCHF-200, KVXLCHDP-200, KVXLCHDPF-200). The KVXLCHDP-200 is the dual-head HDMI/DisplayPort model with CATx (RJ-45) link — distinct from KVXLCHDPF-200 which uses fiber/SFP instead of RJ-45. This is a 2-piece TX+RX extender kit (both units' ports combined into this one device record). Each unit is a small desktop enclosure (1.71 x 7.09 x 3.27 in), not rack-mountable, so rackUnits omitted. Both TX and RX also have a chassis ground screw, not modeled as a signal/power port. HDMI/DP grades (1.4 / 1.2) are inferred from the stated max resolution/refresh (4K@30Hz, 3840x2160@30Hz) since the manual does not explicitly state HDMI/DisplayPort version numbers. The CATx RJ-45 link port is a proprietary KVM-extension link (not switched Ethernet) so no eth-x.x grade was applied; manufacturer states only max cable distance (100m/330ft), not a link speed class. Manufacturer's own product page (blackbox.com) returned HTTP 403 to automated fetch, so the official QIG/user manual PDF hosted on Black Box's own asset CDN was used instead; its spec tables match the B&H, Newegg, and ProVantage retailer listings found via search (confirms 4K@30Hz max resolution, 2x HDMI-out + DP/HDMI-in on TX, 2x HDMI-out + 4x USB-A on RX, RS-232, analog audio, CATx 100m).",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Transmitter host video input; max 4K @ 30Hz (3840x2160@30Hz), consistent with HDMI 1.4 bandwidth. Version not explicitly stated by manufacturer, inferred from resolution/refresh spec."
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Transmitter host video input (DisplayPort); max 4K @ 30Hz. DP version not explicitly stated, inferred from resolution/refresh spec."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Transmitter local video loopback output; max 4K @ 30Hz."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Transmitter host-side USB connection (USB Type B female) for transparent USB 2.0/1.1 extension to source computer."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 female serial extension port on transmitter, fixed at 115,200 baud."
+    },
+    {
+      "name": "CATx",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Link port to receiver over CAT5e/CATx cable, max 100m (330 ft). Proprietary KVM extension link, not switched Ethernet; no bandwidth grade specified by manufacturer."
+    },
+    {
+      "name": "Mic (audio jack)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Transmitter analog audio Line In / microphone input jack (2-way analog audio extension)."
+    },
+    {
+      "name": "Speaker (audio jack)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Transmitter analog audio Line Out / headphone-speaker output jack."
+    },
+    {
+      "name": "DC 5V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Transmitter power input; external 5VDC, 2A power supply."
+    },
+    {
+      "name": "HDMI-OUT (1)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Receiver console video output 1 of 2 (dual-head); max 4K @ 30Hz. RX only has HDMI outputs even though TX accepts HDMI+DP inputs."
+    },
+    {
+      "name": "HDMI-OUT (2)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Receiver console video output 2 of 2 (dual-head); max 4K @ 30Hz."
+    },
+    {
+      "name": "USB 2.0 (x4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Receiver has four USB 2.0 Type A female device ports for keyboard/mouse/other USB peripherals."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 male serial extension port on receiver, fixed at 115,200 baud."
+    },
+    {
+      "name": "CATx",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Link port to transmitter over CAT5e/CATx cable, max 100m (330 ft)."
+    },
+    {
+      "name": "Mic (audio jack)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Receiver analog audio Mic In jack."
+    },
+    {
+      "name": "Speaker (audio jack)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Receiver analog audio Speaker Out jack."
+    },
+    {
+      "name": "DC 5V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Receiver power input; external 5VDC, 2A power supply."
+    }
+  ]
+}

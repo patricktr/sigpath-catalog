@@ -1,0 +1,130 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM SDI Extreme ISO",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/atemsdi/techspecs",
+  "confidence": "high",
+  "notes": "All I/O counts and grades taken verbatim from Blackmagic's own tech-specs page (ATEM SDI Extreme ISO column): 8x 3G-SDI inputs (BNC), 4x independently-assignable 3G-SDI \"Total Aux Outputs\" (BNC, labeled AUX in retailer/press descriptions - device supports up to 16-way multiview routable to any of these), 2x 3.5mm stereo mini-jack audio inputs, 1x 3.5mm stereo mini-jack audio output, 2x USB-C 3.1 Gen 1, 1x RJ45 (10/100/1000 BaseT), and 1x external 12V DC power supply (36W). No genlock/reference or timecode connector (\"Timecode Connection: None\" per spec). Desktop chassis (~370 x 151 x 40 mm per BMD specs) - no rack ears/rack ISO documented, so rackUnits omitted. Power input is modeled as dc-barrel because the unit ships with an external 12V \"power brick\" (confirmed by B&H/Amazon listings of the matching Blackmagic 12V/60W locking external supply used across the ATEM Extreme line) rather than an internal AC inlet; exact barrel pin/locking detail not confirmed on the specs page itself. Exact rear-panel silkscreen labels (e.g. whether inputs read \"SDI 1-8\" and outputs read \"AUX 1-4\" or \"SDI OUT 1-4\") were corroborated by secondary retailer/press descriptions but not directly viewed on a rear-panel photo, so port \"name\" values are a reasonable reconstruction rather than a verified silkscreen transcription.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "1 of 8x 3G-SDI inputs, 10-bit HD switchable, 2-channel embedded audio, re-sync + frame rate/format conversion on every input"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AUX 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "1 of 4x independently assignable 3G-SDI outputs (Program, Preview, Multiview, Clean Feed, SuperSource, etc.)"
+    },
+    {
+      "name": "AUX 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AUX 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AUX 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, unbalanced, mic plug-in power available"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, unbalanced, mic plug-in power available"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB Type-C 3.1 Gen 1; external drive recording, webcam out, software control/updates, panel connection, or RTMP streaming tether"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB Type-C 3.1 Gen 1; second port, same functions as USB-C 1"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BaseT; live streaming (RTMP), software control/updates, direct or networked control-panel connection"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by included 1x external 12V DC power supply (36W); device-side connector modeled as DC barrel since the PSU is an external brick, not an internal IEC inlet"
+    }
+  ]
+}

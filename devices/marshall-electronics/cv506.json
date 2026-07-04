@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Marshall Electronics",
+  "model": "CV506",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://marshall-usa.com/specsheets/CV506v2.pdf",
+  "confidence": "high",
+  "notes": "Camera-side connectors for control, audio, and power are physically combined into a single locking Hirose 12-pin \"I/O\" port on the camera body, which breaks out via an included breakaway cable into separate RS-485, stereo audio (TRS), and 12VDC power (DC barrel) leads; these are listed as separate logical ports above per the port-extraction convention, using the breakout cable's connector types since that is what a user actually plugs into. Exact TRS audio jack size and HDMI version number are not stated by Marshall and are not confirmed elsewhere; HDMI grade omitted rather than guessed. Product is discontinued per marshall-usa.com but the official spec sheet remains the authoritative source used. No rack mounting - miniature point-of-view camera body (approx 44 x 47 x 40mm) with universal 1/4-20\" mount and interchangeable M12 lens mount.",
+  "ports": [
+    {
+      "name": "3G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Full-size BNC, 3G/HDSDI output; stereo audio embedded on this output"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Full-size HDMI output, simultaneous with SDI; HDMI version not stated by manufacturer"
+    },
+    {
+      "name": "I/O (RS-485 Remote Control)",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Broken out from the locking Hirose I/O breakaway cable; used for VISCA/RS-485 remote camera control"
+    },
+    {
+      "name": "I/O (Stereo Audio Input)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Broken out from the locking Hirose I/O breakaway cable; mic/line stereo audio input, embedded onto the 3G-SDI output. Exact jack size (3.5mm vs 6.35mm) inferred, not explicitly stated on the spec sheet."
+    },
+    {
+      "name": "SERVICE",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Field-serviceable firmware update port, micro-USB style connector shown on rear panel"
+    },
+    {
+      "name": "12VDC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Broken out from the locking Hirose I/O breakaway cable; 12VDC +/-10%, ~6W draw, center-positive 2.1mm barrel plug on included power supply"
+    }
+  ]
+}

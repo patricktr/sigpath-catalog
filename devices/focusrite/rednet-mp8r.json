@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "RedNet MP8R",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/rednet-mp8r1.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Focusrite's official RedNet MP8R datasheet (MP8R-DS v1.0, fael-downloads-prod.focusrite.com), which is the authoritative manufacturer spec sheet. Rear panel: 8x XLR3F mic/line inputs, 2x locking etherCON Dante network ports (Primary/Secondary, also accept standard RJ45 plugs), 2x IEC AC inlets with retaining clips (100-240Vac 50/60Hz, dual redundant PSU A/B). No word clock, GPIO, or other digital I/O ports are present on this unit - all audio I/O is via the Dante network. The datasheet does not state an Ethernet link-speed rating for the Dante ports, so no bandwidth grade was assigned (Dante devices of this era commonly run 100Mbps-capable links, but this is not confirmed in the source). The unit outputs audio only via the Dante network (no analogue outputs) - it appears on the network as a 16-channel Dante transmitter (8 direct preamp feeds + 8 gain-compensated feeds), not as a physical port.",
+  "ports": [
+    {
+      "name": "Inputs 1-8",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "8x female XLR3 electronically balanced mic/line inputs, Zin switchable 2.4/10kOhm, +48V phantom, 20dB pad, HPF, polarity invert per channel"
+    },
+    {
+      "name": "Network Primary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Locking etherCON Dante network port, also accepts standard RJ45 plugs"
+    },
+    {
+      "name": "Network Secondary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Locking etherCON Dante network port, also accepts standard RJ45 plugs; supports daisy-chain or redundant network modes"
+    },
+    {
+      "name": "PSU A",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power inlet with cord retaining clip, 100-240Vac 50/60Hz; redundant dual-PSU design"
+    },
+    {
+      "name": "PSU B",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power inlet with cord retaining clip, 100-240Vac 50/60Hz; redundant dual-PSU design"
+    }
+  ]
+}

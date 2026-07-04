@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EW-DX EM 2",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/ew-d/ew-d/specifications-ew-dx-em2.html",
+  "confidence": "medium",
+  "notes": "EW-DX is a modular wireless-mic product family (bodypack/handheld transmitters plus 2-ch half-rack 'EM 2' and 4-ch full-rack 'EM 4' receivers, with plain and Dante variants). This entry represents the EW-DX EM 2 two-channel half-rack (9.5\") receiver, the family's most I/O-complete unit, per Sennheiser's own hosted spec page (docs.cloud.sennheiser.com) plus the official EM2 PDF datasheet and corroborating B&H Photo specs. Audio outputs: each of the 2 channels has a balanced XLR-3M (max +18 dBu) and an unbalanced 1/4\" TS (max +12 dBu) output. Power: 12V DC via external power-supply brick (barrel connector) OR Power-over-Ethernet (802.3af Class 0, <=1A) via the RJ-45 port — the RJ-45 is also used for network control/monitoring (Sennheiser Control Cockpit / Wireless Systems Manager), hence marked bidirectional; Ethernet speed grade (100Base-TX) reflects the spec's explicit IEEE802.3/100Base-TX callout. Rack size given as 1U for a half-rack (9.5\") chassis; two units mount side-by-side in a full 19\" 1U space. The half-rack unit ships with rack-mount ears/kit and a universal external power supply (EU/US/UK adapters). Dante variant (EW-DX EM 2 DANTE) adds a second RJ-45 for Dante audio networking and is a separate SKU not covered here. Headphone jack physical size (3.5mm vs 6.3mm) could not be explicitly confirmed from the fetched text excerpts; marked as an inferred/lower-confidence detail. This is a rackmount receiver, not the whole EW-DX line (which also includes bodypack transmitter SK, handheld transmitters, and lavalier/handheld mic capsules) — treat this record as representative of the receiver hardware only.",
+  "ports": [
+    {
+      "name": "RF In A",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "RF In B",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Audio Out 1 (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 1 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Audio Out 2 (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 2 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel headphone output with volume control, 2x 70 mW @ 32 ohm; exact jack size not explicitly confirmed in available spec excerpts (assumed 3.5 mm TRS, common for this receiver class)"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "IEEE 802.3, 100Base-TX/10Base-T; also carries PoE (IEEE 802.3af Class 0) to power the unit"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 V DC (11-13 V) from external Sennheiser power supply; unit can alternatively be powered via PoE on the Network/RJ-45 port"
+    }
+  ]
+}

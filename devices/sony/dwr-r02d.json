@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Sony",
+  "model": "DWR-R02D",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/976195/Sony-Dwr-R02d.html",
+  "confidence": "medium",
+  "notes": "2-channel digital wireless microphone receiver (DWX series), 1U rackmount. Ports confirmed via Sony's official Operating Instructions manual (Parts Identification, rear panel, page 14; Specifications table, page 42), accessed via ManualsLib mirror since pro.sony and sony-asia.com product/spec pages returned HTTP 403 to automated fetch. Two analog balanced XLR outputs (CH1/CH2) and two analog unbalanced 1/4\" TS outputs (CH1/CH2) are combined per-channel in this listing since the manual treats \"ANALOG BALANCED OUT 1/2\" and \"ANALOG UNBALANCED OUT 1/2\" as connector pairs (×2 each) - modeled here as two ports per type (CH1, CH2). Digital AES/EBU output is provided in parallel on both one XLR-3 connector and one BNC connector (mono/combined, not per-channel per manual wording). ANTENNA a/b IN accept BNC, 50 ohm, with switchable antenna booster supply voltage (0V/9V/12V) - not modeled as a separate port. ANTENNA a/b OUT (BNC) allow daisy-chaining the antenna feed to additional DWR-R02D units and are included as bidirectional-adjacent RF passthrough outputs. REM ANT is a small connector for the optional ST (Synchronized Transmission) remote-antenna accessory; included as a low-confidence antenna-related port using BNC as closest connector id (exact connector type not confirmed in available manual excerpts). DC IN is rated 12V/1.6A but the exact physical connector style (barrel jack vs 4-pin XLR-DC) could not be definitively confirmed from available manual excerpts - one automated OCR summary described it as \"(XLR)\" but a later, more careful pass could not verify this; modeled as dc-barrel pending confirmation, flag for double-check against physical unit or full PDF pinout diagram if precision matters. No USB, Ethernet/LAN, or word-clock ports were confirmed in the verified spec table pass (an earlier OCR summarization pass hallucinated a LAN RJ-45 and WORD SYNC connector, likely bleeding in from a different Sony product's manual section during OCR/AI summarization; these are NOT included here since they could not be corroborated in the specifications table or in Sony's product marketing copy, which describes only XLR/BNC AES digital out, TS unbalanced out, and AC/DC power). No grades apply: BNC antenna/AES ports carry no stated bandwidth class, and analog XLR/TS outputs are not bandwidth-graded connector types per the taxonomy. Rack unit: 1U per Sony marketing copy (\"two-channel rack-mountable (1U-size) receiver\"). Region variants (e.g. DWR-R02D/42 for UC band, DWR-R02DN) may differ in RF band only, not physical I/O.",
+  "ports": [
+    {
+      "name": "ANTENNA a IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "50 ohm RF antenna input, channel A; switchable booster supply 0V/9V/12V"
+    },
+    {
+      "name": "ANTENNA b IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "50 ohm RF antenna input, channel B; switchable booster supply 0V/9V/12V"
+    },
+    {
+      "name": "ANTENNA a OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF passthrough to cascade additional DWR-R02D receivers"
+    },
+    {
+      "name": "ANTENNA b OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF passthrough to cascade additional DWR-R02D receivers"
+    },
+    {
+      "name": "REM ANT",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Connector for optional ST remote-system whip antenna; exact connector style not fully confirmed"
+    },
+    {
+      "name": "ANALOG BALANCED OUT 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-3-32 male, 47 ohm or less, channel 1"
+    },
+    {
+      "name": "ANALOG BALANCED OUT 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-3-32 male, 47 ohm or less, channel 2"
+    },
+    {
+      "name": "ANALOG UNBALANCED OUT 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "6.3mm (1/4in) stereo/TS phone jack, 220 ohm or less, channel 1; supports guitar/bass amp with ATT control"
+    },
+    {
+      "name": "ANALOG UNBALANCED OUT 2",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "6.3mm (1/4in) stereo/TS phone jack, 220 ohm or less, channel 2; supports guitar/bass amp with ATT control"
+    },
+    {
+      "name": "DIGITAL OUT (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "AES/EBU digital output, XLR-3-32 male, 110 ohm"
+    },
+    {
+      "name": "DIGITAL OUT (BNC)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "AES/EBU digital output, BNC-R, 75 ohm"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC, 0.4A or less; connector style per manual described generically as AC power cord inlet"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 1.6A or less external power input; exact physical connector style not fully confirmed from available manual excerpts"
+    }
+  ]
+}

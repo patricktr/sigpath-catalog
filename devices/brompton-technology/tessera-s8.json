@@ -1,0 +1,157 @@
+{
+  "manufacturer": "Brompton Technology",
+  "model": "Tessera S8",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.bromptontech.com/wp-content/uploads/2025/07/Brompton-S8-Data-Sheet-Mar2025-EN.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Brompton Technology's official Tessera S8 datasheet (March 2025 revision, PDF fetched directly from bromptontech.com/wp-content/uploads/2025/07/Brompton-S8-Data-Sheet-Mar2025-EN.pdf). Rear-panel port layout and labels (DMX In & Thru, Tessera 1G Outputs 1-8, Management Ethernet x2, Local UI with USB 3.0 x2 + DisplayPort, 12G-SDI In & Thru, HDMI 2.0b In, Bi/Tri-Level Sync In & Thru, Switched Auto Ranging Mains Input) taken from the labeled rear-panel diagram in the datasheet; the full spec table on page 4 confirms bandwidths/versions. Front panel adds 2x USB 2.0 Type-A. DisplayPort version is not stated in the datasheet (only \"DisplayPort (DP++)\"), so grade was omitted per the omission rule. Genlock/sync and DMX ports intentionally left ungraded since they fall outside the graded connector categories. AC inlet is a standard IEC-style socket per the rear diagram; the datasheet does not name the exact IEC sub-type (C13/C14), so it is mapped to the generic \"iec\". Device classified as category \"converter\" / type \"Encoder/Decoder\" since it is an LED video/pixel-data processor rather than a display, switcher, or matrix router -- no better-fitting category exists in the provided enum. Rack size is 2U based on the 88.9mm (3.5\") unboxed height.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0b input, full 18Gbps bandwidth, up to 4096x2160, compatible with DVI-D and DisplayPort sources via adapters"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G-SDI input supporting HD-SDI/3G-SDI/6G-SDI/12G-SDI (ST-292/424/2081/2082 2SI), up to 4096x2160, 10-bit YCbCr 4:2:2"
+    },
+    {
+      "name": "SDI Thru",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Re-clocked loop-through of the 12G-SDI input signal"
+    },
+    {
+      "name": "Tessera Output 1",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1 Gigabit Ethernet Tessera output, nominal 525K pixels @ 8-bit, 60Hz; supports closed loop redundancy"
+    },
+    {
+      "name": "Tessera Output 2",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 3",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 4",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 5",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 6",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 7",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tessera Output 8",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Management Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet management network port for Tessera Remote software"
+    },
+    {
+      "name": "Management Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "DMX-512A on 5-pin XLR, also carries Art-Net/sACN eDMX control"
+    },
+    {
+      "name": "DMX Thru",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX-512A loop-through, 5-pin XLR"
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Bi-level / Tri-level genlock sync input; no bandwidth grade applies to sync/reference signals"
+    },
+    {
+      "name": "Sync Thru",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Genlock sync loop-through"
+    },
+    {
+      "name": "Local UI DisplayPort",
+      "direction": "output",
+      "connector": "dp",
+      "note": "DisplayPort++ local monitor output for on-box UI; supports HDMI, DVI and VGA via adapter, up to 3840x2160. Version not stated in datasheet."
+    },
+    {
+      "name": "Local UI USB 3.0 (rear, 1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear USB 3.0 Type-A for local keyboard/mouse"
+    },
+    {
+      "name": "Local UI USB 3.0 (rear, 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (front, 1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB 2.0 Type-A"
+    },
+    {
+      "name": "USB 2.0 (front, 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Switched auto-ranging IEC power inlet, 100-240V AC, 50-60Hz, 1.2-0.6A"
+    }
+  ]
+}

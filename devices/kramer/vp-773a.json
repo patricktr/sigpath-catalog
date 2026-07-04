@@ -1,0 +1,150 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VP-773A",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://k.kramerav.com/downloads/manuals/vp-773a.pdf",
+  "confidence": "medium",
+  "notes": "Primary manufacturer pages (www1.kramerav.com/Product/VP-773A and the official PDF spec sheet/manual at k.kramerav.com) returned HTTP 403 to automated fetch, so specs were extracted from a full-text mirror of the same official user manual (P/N 2900-300491 Rev 5, via usermanual.wiki) and cross-verified against the retailer ConferenceRoomAV.com spec table and Kramer search-result snippets; all sources agreed. No HDMI/Ethernet bandwidth version is stated in any source, so grade is omitted on HDMI and RJ-45 ports per instructions. HDMI 1-4 also carry embedded audio and two of them (HDMI/DP) have dedicated 3.5mm \"audio takeover\" jacks plus two PC (VGA) inputs each pair with a 3.5mm unbalanced audio jack; these mini-jack audio-takeover inputs are included individually as labeled in the manual. Mic jacks are Kramer-labeled \"6mm\" (i.e. 6.35mm/quarter-inch) TS mono jacks with switchable 48V phantom power, not XLR. Power inlet is a standard IEC AC connector with integrated fuse per the manual; exact IEC sub-type (C13/C14) not explicitly stated but is standard IEC C14 for this class of device. S/PDIF output connector type (RCA vs Toslink) is stated as RCA-style coax in the manual text but could not be double-confirmed with full certainty against the blocked primary PDF. Product is now discontinued by Kramer; suggested replacement per one retailer is the Kramer TP-580R.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "PC 1",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "PC 2",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "CV IN",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Composite video input"
+    },
+    {
+      "name": "CV AUDIO IN (L/R)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo audio accompanying composite video input"
+    },
+    {
+      "name": "PC1 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo audio for PC 1"
+    },
+    {
+      "name": "PC2 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo audio for PC 2"
+    },
+    {
+      "name": "HDMI AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog audio takeover for HDMI inputs"
+    },
+    {
+      "name": "DP AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog audio takeover for DisplayPort input"
+    },
+    {
+      "name": "MIC 1",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Mono mic input, switchable 48V phantom power"
+    },
+    {
+      "name": "MIC 2",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Mono mic input, switchable 48V phantom power"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDBT OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT output to a compatible receiver, not standard Ethernet data"
+    },
+    {
+      "name": "AUDIO OUT (balanced stereo)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin terminal block, balanced stereo line out"
+    },
+    {
+      "name": "S/PDIF OUT",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "SPEAKER OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin terminal block, 2x10W integrated amplifier output"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "External IR receiver connection"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal 100-240VAC switching supply with integrated fuse"
+    }
+  ]
+}

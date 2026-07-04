@@ -1,0 +1,51 @@
+{
+  "manufacturer": "Arista",
+  "model": "CCS-720XP-48Y6",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.arista.com/assets/data/pdf/Datasheets/CCS-720XP-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Arista's official CCS-720XP Campus Switches datasheet (PDF). The 720XP-48Y6 provides 48x 10M-1GbE RJ45 PoE (802.3af/at, up to 30W/port) plus 6x 25G SFP28 uplinks (multi-rate 1G/10G/25G), 1 USB port, 1 console port, and 1x 100M/1G dedicated management RJ45 port; 1RU, 700Gbps switching bandwidth, 198Gbps (396Gbps FDX) throughput. Default power supply is PWR-1021-AC (1050W); also supports PWR-621-AC (650W), PWR-2021-AC (2000W), and DC options PWR-521-DC (500W)/PWR-721-DC (700W, screw-terminal DC input, not a standard connector in the list). AC PSU input connector is IEC-320-C16 (mapped to 'iec' as the closest allowed id — note C16 is a higher-temperature-rated variant of the C13/C14 family, same physical shape). Console port connector type (RJ45 vs DB9) could not be confirmed from available sources but is mapped to rs232 by function; USB-A generation/speed not stated in datasheet. Second PSU bay is field-optional, not populated by default. Model number suffixes (e.g., -F, -2F, -SSD variants) affect included optics/software but not physical port layout.",
+  "ports": [
+    {
+      "name": "Ethernet 1-48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x 10M/100M/1GbE RJ45 access ports, 802.3af/at PoE up to 30W per port"
+    },
+    {
+      "name": "Ethernet 49-54 (SFP28 uplinks)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "6x SFP28 uplink ports, multi-rate 1G/10G/25G"
+    },
+    {
+      "name": "Management 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated out-of-band management port, 100M/1G"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial console port for CLI/EOS management; physical connector on Arista 720XP rear panel not independently confirmed as RJ45 vs DB9 in sourced material, treated as RS232-class serial"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "1x USB port for restore/configure and file transfer; speed grade inferred (not explicitly stated), typical for this platform class"
+    },
+    {
+      "name": "PSU 1 (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Default 1x PWR-1021-AC 1050W supply (options: 650W/1050W/2000W AC, or 500W/700W DC); input connector is IEC-320-C16 (closest listed option is IEC C13/C14 family). Second PSU bay is optional/field-installable for N+1 redundancy."
+    }
+  ]
+}

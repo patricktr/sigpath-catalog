@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Epiphan",
+  "model": "Pearl Nano",
+  "category": "recorder",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.epiphan.com/products/pearl-nano/tech-specs/",
+  "confidence": "medium",
+  "notes": "Manufacturer tech-specs page (epiphan.com/products/pearl-nano/tech-specs/) is authoritative and confirms: 1x BNC 12G-SDI in; 1x HDMI Type A in (4K/60 capable, version not explicitly stated on this input, listed simply as \"4K HDMI\"); 2x HDMI out (port 1 = HDMI 2.0, port 2 = HDMI 2.0a pass-through — I used hdmi-2.0 for both since 2.0a is a sub-revision of 2.0, not a distinct grade tier); 2x XLR pro line-level audio in (+4.0 dBu); 2x RCA consumer line-level audio in; 3.5mm stereo headphone out; 1x RJ-45 10/100/1000 (also carries PoE+ as an alternate power source, not modeled as separate port); 1x USB 3.0 port (UAC-class, doubles as external storage connection). Also has an SD card slot (up to 512GB) and internal M.2 2280 SATA SSD bay — these are storage media slots, not cabled I/O connectors, so omitted from the port list per connector-focused scope. Power: external AC/DC adapter rated 12VDC/2.5A output (model SYS1588-3012), 90-240VAC input; the physical DC connector style (barrel jack) was not explicitly spelled out in either the manufacturer tech-specs page or product page text, so it is inferred from the product's compact/consumer-adapter power design (consistent with other Epiphan Pearl-family compact units) rather than directly confirmed — flagged as medium confidence for this reason. No RS-232/serial physical port confirmed (some third-party listings mention RS-232 via USB-to-serial adapter, which is not a native physical port and was excluded). Desktop/compact unit — no rack mount, so rackUnits omitted. Did not find a distinct HDMI version spec for the HDMI input; assumed HDMI 2.0 (same tier as outputs) given shared \"4K\" input claim, so that grade is inferred rather than explicitly stated for the input port specifically.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 2 (Pass-through)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Mic/Line In 1 (XLR)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2 (XLR)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RCA Audio In 1",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 2",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T; supports PoE+ (802.3at) as power input"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0; used for UAC audio capture and external storage"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External AC/DC adapter, output 12 VDC 2.5A (adapter input 90-240 VAC); connector style inferred as standard barrel jack, not explicitly confirmed by spec sheet text"
+    }
+  ]
+}

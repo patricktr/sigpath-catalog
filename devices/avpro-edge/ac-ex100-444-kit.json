@@ -1,0 +1,170 @@
+{
+  "manufacturer": "AVPro Edge",
+  "model": "AC-EX100-444-KIT",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://adeogroup.it/sites/default/files/prodotti_allegati_pubblici/avpro_AC-EX100-444-KIT%20User%20Manual.pdf",
+  "confidence": "high",
+  "notes": "Kit consists of two separate desktop (non-rackmount) units: Transmitter AC-EX100-444-T3 and Receiver AC-EX100-444-R3, linked over a single Cat6A cable via HDBaseT (RJ45, PoH). Only one 48V/0.5A power supply is included; PoH powers the other unit, so only one of the two 48V terminal-block inputs is normally used at a time (both are listed as physical ports below). HDMI ports are HDMI 2.0/HDCP 2.3 (18Gbps max, 10.2Gbps in ICT compression mode) - graded hdmi-2.0. Ethernet passthrough ports are 10/100 (eth-100m) per the official manual's technical specification table, despite marketing copy elsewhere describing \"up to 1Gbps\" Ethernet extension - the panel-diagram/spec-table numbers were treated as authoritative. HDBaseT RJ45 link ports are proprietary long-range extension links (not standard Ethernet data ports) so no eth-* grade was applied. USB ports are all USB 2.0 (390Mbps enhanced spec per marketing, 350Mbps per manual) - graded usb-2.0; USB1/USB2 Type-A ports and the Type-B \"USB HOST DEVICE (PC)\" port are role-selectable (host/device) per unit, so all are marked bidirectional. The USB-C \"USB ISP\" port is a proprietary firmware/service port for AVPro Edge technical support, not a standard host/data port, so left ungraded. IR EYE and I-PASS are both 3.5mm stereo (TRS) IR receiver inputs; IR OUT is 3.5mm mono (TS) IR transmitter output (all mapped to trs-3.5, closest allowed connector). The 48V power input is a 2-pin terminal block (not a barrel jack); mapped to euroblock-dc as the closest connector in the allowed list. RS-232 is a 3-pin terminal block, mapped to euroblock. TOSLINK ports carry extracted stereo/multichannel PCM/Dolby audio only.",
+  "ports": [
+    {
+      "name": "HDMI IN (ARC/eARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Tx source input; supports ARC/eARC"
+    },
+    {
+      "name": "LOOP OUT HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Tx local HDMI loop-out"
+    },
+    {
+      "name": "HDBT OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Tx HDBaseT link to Rx over Cat6A, carries PoH"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Tx 10/100 Ethernet passthrough; supports PoH input"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Tx 3-pin terminal block serial control port"
+    },
+    {
+      "name": "DIGITAL OUT TOSLINK",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Tx extracted 2-ch/multichannel audio optical output"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Tx 3.5mm mono (TS) IR transmitter"
+    },
+    {
+      "name": "IR EYE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Tx 3.5mm stereo (TRS) IR receiver input"
+    },
+    {
+      "name": "I-PASS",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Tx 3.5mm stereo (TRS) IR pass-through input from control system"
+    },
+    {
+      "name": "USB1/USB2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Tx (2x) USB 2.0 Type-A, host or device role selectable"
+    },
+    {
+      "name": "USB HOST DEVICE (PC)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Tx USB 2.0 Type-B, connects to PC for KVM routing"
+    },
+    {
+      "name": "USB ISP",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Tx proprietary USB-C service/firmware port for AVPro Edge support"
+    },
+    {
+      "name": "48V POWER",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Tx 2-pin terminal block, 48V 0.5A DC; only one unit typically powered locally (PoH powers the other)"
+    },
+    {
+      "name": "HDBT IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Rx HDBaseT link from Tx over Cat6A, can receive PoH"
+    },
+    {
+      "name": "HDMI Out (ARC/eARC)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Rx HDMI output to display; supports ARC/eARC"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Rx 10/100 Ethernet passthrough; supports PoH input"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Rx 3-pin terminal block serial control port"
+    },
+    {
+      "name": "DIGITAL In TOSLINK",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Rx optical digital audio input"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Rx 3.5mm mono (TS) IR transmitter"
+    },
+    {
+      "name": "IR EYE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Rx 3.5mm stereo (TRS) IR receiver input"
+    },
+    {
+      "name": "I-PASS",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Rx 3.5mm stereo (TRS) IR pass-through input"
+    },
+    {
+      "name": "USB1 and USB2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rx (2x) USB 2.0 Type-A, host or device role selectable"
+    },
+    {
+      "name": "USB HOST DEVICE (PC)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rx USB 2.0 Type-B, connects to PC/peripheral for KVM routing"
+    },
+    {
+      "name": "USB ISP",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Rx proprietary USB-C service/firmware port for AVPro Edge support"
+    },
+    {
+      "name": "48V POWER",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Rx 2-pin terminal block, 48V 0.5A DC; only one unit typically powered locally (PoH powers the other)"
+    }
+  ]
+}

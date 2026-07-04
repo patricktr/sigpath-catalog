@@ -1,0 +1,155 @@
+{
+  "manufacturer": "PHABRIX",
+  "model": "QxL",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.leader.co.jp/uploads/2023/02/qxl_e_4_8.pdf",
+  "confidence": "high",
+  "notes": "QxL is a rasterizer/waveform-monitor test instrument (IP/SDI signal generator, analyzer & monitor), not a typical AV signal-chain device — no category/type in the given enums fits well, so \"other\"/\"Other\" was used. Base standard unit ships with NO SDI BNC I/O: only 2x SFP28 (25GE/10GE, standard) + optional 2x QSFP28 cages for ST 2110/2022-6 IP video. A factory-fitted \"SDI option\" adds 4x SDI BNC inputs (SDI In A-D) and 4x SDI BNC outputs (SDI Out A-D), each HD/3G/6G/12G-SDI capable, plus 2x SFP+ cages for 12G SDI over fiber/copper (SFP+A/B). This device entry models the SDI-option-fitted configuration since it is the more common/complete deployment; the standard (non-SDI) unit omits ports 1-4 in the list below. QSFP28 has no exact match in the connector enum; mapped to \"sfp\" as closest available id — actual physical form factor is QSFP28 (100GbE-class), speed/grade not confirmed in manual text (image-only table), so no grade set. SFP28 ports (E/F) are used for ST 2110/2022-6 IP video over 10GbE/25GbE — mapped to \"sfp\" with eth-10g grade noted as the confirmed baseline (25G capability also supported but exact negotiated grade depends on SFP module; conservatively using eth-10g). Unit is a desktop instrument; rack-mounting is via optional accessory trays (PHQXK1/2/3), not an intrinsic fixed rack-unit height, so rackUnits omitted per instructions. Power is 4-pin XLR DC input (10-18V, 12V nominal) fed from an external AC/DC power brick supplied with the unit — modeled as xlr4-dc per the connector list. Micro USB rear port is a factory-service-only port (not for general user I/O) but included for completeness as bidirectional.",
+  "ports": [
+    {
+      "name": "SDI In A",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Analyzer SDI input; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI. Also usable for Eye/Jitter physical-layer analysis (fitted with black nut)."
+    },
+    {
+      "name": "SDI In B",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Analyzer SDI input; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI In C",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Analyzer SDI input; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI In D",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Analyzer SDI input; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI Out A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Generator / duplicate SDI / input-SDI loop output; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI Out B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Generator / duplicate SDI / input-SDI loop output; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI Out C",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Generator / duplicate SDI / input-SDI loop output; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SDI Out D",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Generator / duplicate SDI / input-SDI loop output; 75R BNC; factory-fitted SDI option. Supports HD/3G/6G/12G-SDI."
+    },
+    {
+      "name": "SFP+ A",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "MSA/Non-MSA 12GbE copper or fiber SFP+ cage carrying 12G-SDI over fiber/coax; factory-fitted SDI option."
+    },
+    {
+      "name": "SFP+ B",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "MSA/Non-MSA 12GbE copper or fiber SFP+ cage carrying 12G-SDI over fiber/coax; factory-fitted SDI option."
+    },
+    {
+      "name": "SFP28 E",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Standard-fit 25GE/10GE SFP28 cage for ST 2110 / ST 2022-6 IP video (decapsulation/receive in 2022-6 mode). Module-dependent; also supports 25G."
+    },
+    {
+      "name": "SFP28 F",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Standard-fit 25GE/10GE SFP28 cage for ST 2110 / ST 2022-6 IP video (encapsulation/transmit in 2022-6 mode). Module-dependent; also supports 25G."
+    },
+    {
+      "name": "QSFP28 C",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Optional QSFP28 cage for high-density IP video (2110/2022-6). No exact QSFP28 id in connector list; mapped to sfp as closest match. Speed/grade not confirmed in available manual text."
+    },
+    {
+      "name": "QSFP28 D",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Optional QSFP28 cage for high-density IP video (2110/2022-6). No exact QSFP28 id in connector list; mapped to sfp as closest match. Speed/grade not confirmed in available manual text."
+    },
+    {
+      "name": "Reference IO (REF)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75-ohm Mini-BNC external locking reference input; tri-level or bi-level (black burst) sync, 50/59.94/60 Hz. Physically a mini-BNC; mapped to bnc as closest available connector id."
+    },
+    {
+      "name": "SDI Copy Instrument Output (SDI OUT)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "75-ohm Mini-BNC instrument monitor output, 3G-SDI, 1080p50/59.94/60. Physically mini-BNC; mapped to bnc as closest available connector id."
+    },
+    {
+      "name": "HDMI Instrument Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Type A, HDMI v1.4, outputs up to 1920x1080p50/59.94/60 RGB 4:4:4, 4x PCM stereo audio at 48kHz; monitor output for instrument panels."
+    },
+    {
+      "name": "I/O Expansion (D26)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "26-way high-density D-type connector carrying 4x bidirectional AES I/O (75-ohm unbalanced), 8x GPI I/O, LTC input (RS-422 compatible), and stereo analog audio output. No D-sub/D-type id exists in the connector enum; euroblock used as a rough placeholder for a multi-signal breakout connector — actual connector is a 26-pin high-density D-sub, not a real euroblock."
+    },
+    {
+      "name": "Control Network / Management Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000 Base-T (IEEE 802.3), RJ-45, for remote access/control and NTP."
+    },
+    {
+      "name": "USB (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type A, rear-mounted (1 of 3 total USB ports; other 2 are front-mounted). For keyboard/mouse control and software installation."
+    },
+    {
+      "name": "Micro USB (Factory Service)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Rear-panel Micro USB port reserved for factory service use."
+    },
+    {
+      "name": "AC Power Socket",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin male XLR DC power input, 10-18V (12V DC nominal), 50W nominal / 70W max. Powered via an external AC/DC power adapter supplied with the unit (unit itself takes DC, not mains AC, despite panel label 'AC Power Socket')."
+    }
+  ]
+}

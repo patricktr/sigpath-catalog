@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Savant",
+  "model": "SVR-5200S",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://digis.ru/upload/iblock/31a/65751_SAVANT_SVR_5200S_00_Pro_Host_Quick_Reference_Guide.pdf",
+  "confidence": "high",
+  "notes": "The SVR-5200S is Savant's \"Pro Host\" whole-home automation/control server (built on Mac mini-class hardware), not an AV receiver despite the model naming convention. Authoritative source: Savant's own Pro Host Quick Reference Guide (doc 009-2007-01, rev 210310), which shows a labeled rear-panel diagram with lettered callouts A-F. Only 5 items are officially documented/lettered: Power LED (front panel), Power Button, Power Input (100-240V AC 50/60Hz, figure-8/IEC-C7-8-style inlet), Ethernet (10/100/1000 Base-T), Cooling Vent, and Audio Out (3.5mm analog 2-channel). The rear-panel diagram also depicts an HDMI port, two USB-C ports bearing a Thunderbolt (lightning-bolt) icon, and two USB-A ports, but Savant's own note states: \"Connections not identified in the diagram above are not functional within a Savant Configuration/Installation\" — i.e. these physical ports exist on the shared hardware platform but are not supported/enabled for use in a Savant install. No version/speed is stated for USB or Thunderbolt so no grade was set; HDMI version is also unstated. Rack space is listed as 1U in the spec sheet though the unit is typically deployed on a shelf/rack tray (RCK-3000) rather than a standard rack-ear chassis. Power connector was mapped to iec-c7 (closest match to the depicted figure-8/two-hole inlet icon); exact IEC sub-type (C7 vs C8) could not be confirmed from the icon alone.",
+  "ports": [
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "100-240V AC 50/60Hz, figure-8 style inlet"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T auto-negotiating"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog, 2-channel audio output"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Present on rear panel but not called out/documented as functional in Savant's official port diagram; per Savant note, undocumented connections are not functional within a Savant configuration"
+    },
+    {
+      "name": "Thunderbolt 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "note": "USB-C/Thunderbolt icon port on rear panel, not documented/called out as functional by Savant"
+    },
+    {
+      "name": "Thunderbolt 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "note": "USB-C/Thunderbolt icon port on rear panel, not documented/called out as functional by Savant"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Present on rear panel but not called out/documented as functional by Savant"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Present on rear panel but not called out/documented as functional by Savant"
+    }
+  ]
+}

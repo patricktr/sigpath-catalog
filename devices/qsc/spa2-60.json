@@ -1,0 +1,36 @@
+{
+  "manufacturer": "QSC",
+  "model": "SPA2-60",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/amp/spa/q_amp_spa_specs_final.pdf",
+  "confidence": "high",
+  "notes": "Official QSC spec sheet (\"SPA Series Spec Sheet 09/17/2020\", covers SPA2-60/SPA4-60/SPA2-200/SPA4-100) confirms: 2-channel Class-D amp, 60W/ch into 4 or 8 ohm, bridgeable to 200W (250W peak) into 70V/100V. No network (Ethernet/RJ45) or RS-232 port on this model — this is the standalone (non-networked) SPA series, distinct from QSC's networked SPA-Q series (SPAQ-100-2F/SPAQ-200-4F) which does have Q-SYS network connectivity. Input/output connectors are shared multi-position Euroblock terminal blocks (5-position input, 4-position output) rather than per-channel discrete jacks, so both audio channels physically land on the same strip; could not confirm from the spec sheet whether QSC's silkscreen splits these into separately labeled \"1\"/\"2\" sub-sections. AC inlet type is inferred as IEC (C13/C14) from \"IEC Cable\" being listed in carton contents; the spec sheet does not show a rear-panel photo or explicit IEC sub-type. No grade-eligible connectors are present (no HDMI/SDI/DisplayPort/USB/Ethernet), so no grade fields were set. Cross-checked against QSC's Q-SYS product listing (qsys.com) for the same model, which corroborates no Ethernet/RS-232 port and lists the same electrical specs.",
+  "ports": [
+    {
+      "name": "Input 1/2 (Audio In)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm Euroblock terminal block, 5-position (green); balanced/unbalanced line input for both channels, shared terminal block"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3.5 mm Euroblock, 5-position (black); general-purpose inputs for remote volume and remote standby (10k potentiometer not included)"
+    },
+    {
+      "name": "Output 1/2 (Speaker Out)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5 mm Euroblock terminal block, 4-position (green); speaker-level output for both channels, Low-Z (4/8 ohm) or 70V/100V, shared terminal block"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal Power Supply 100-240 VAC 50-60 Hz; carton includes IEC power cable, consistent with an IEC C13/C14-style inlet; exact IEC sub-type not explicitly stated on spec sheet"
+    }
+  ]
+}

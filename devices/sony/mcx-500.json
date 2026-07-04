@@ -1,0 +1,158 @@
+{
+  "manufacturer": "Sony",
+  "model": "MCX-500",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1275941-REG/sony_mcx_500_4_input_streaming_switcher.html",
+  "confidence": "medium",
+  "notes": "Sony's own pro.sony product/spec pages and B&H returned HTTP 403 to direct fetch, so specs were corroborated across three independent secondary sources: B&H (bhphotovideo.com) and Markertek retailer spec tables, plus excerpts of Sony's own MCX-500 Operating Instructions Manual (via manualslib.com). All three agree on connector counts/types. SDI is specified only as \"3G/HD/SD-SDI, 75-ohm, SMPTE 292M/259M/424M/425M\" without Sony stating a single definitive top grade per port on all four sources; graded as sdi-3g (the switcher's stated maximum) per B&H/Markertek \"4x 3G-SDI inputs\" language — note the single SDI/BNC program output is described in the manual/Markertek as \"HD SDI, 1.5Gbps, SMPTE 292M\" (HD-SDI only, not 3G), so it is graded sdi-hd rather than sdi-3g. HDMI inputs/outputs are specified only by supported resolutions (up to 1920x1080i/p) with no HDMI version number stated by any source, so grade is omitted (not inferable to a specific hdmi-1.x/2.x tier). Ethernet ports are listed as \"100BASE-TX/1000BASE-T\" (Markertek) so graded eth-1g; the manual names them STREAMING (network/live streaming uplink) and PC UI (remote control from PC/tablet) — both are RJ-45, direction set bidirectional per instructions. USB is a Mini-B port used for firmware update via a supplied USB cable (rear MAIN port; a second SUB port exists on the side panel per manual excerpts but could not be independently confirmed on B&H/Markertek, so it is omitted here to avoid an unconfirmed port). Power is DC IN 12V via an external supplied AC adapter (barrel connector) — no NEMA/IEC mains inlet on the chassis itself. RS-232C OPTION connector is for a wired Remote Commander accessory. Tally is a female 9-pin D-sub (non-listed connector family; omitted from ports list since no close connector id exists in the allowed set and it is a low-signal control interface, not core AV signal path). RGB Title/DSK input and RGB output use 15-pin D-Sub (Shrink) connectors — mapped to \"vga\" as the closest connector id in the allowed list, though Sony documentation calls it \"RGB,\" not \"VGA.\" Region variants (e.g. MCX-500 vs regional SKUs) were not checked; NTSC/PAL and 50/60Hz global switch capability suggests no region-locked hardware variant.",
+  "ports": [
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VIDEO IN 1 (Composite)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "VIDEO IN 2 (Composite)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "TITLE (RGB/DSK) IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin D-Sub Shrink RGB input for external computer title/DSK overlay, up to 1600x1200; closest allowed connector id to Sony's proprietary RGB D-Sub Shrink 15-pin."
+    },
+    {
+      "name": "SDI OUT (PGM)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HDMI OUT (PGM)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT (Multi Viewer)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VIDEO OUT (Composite)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "RGB OUT",
+      "direction": "output",
+      "connector": "vga",
+      "note": "15-pin D-Sub Shrink RGB output, up to 1600x1200; closest allowed connector id."
+    },
+    {
+      "name": "AUDIO IN CH-1 (Combo XLR/TRS)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "AUDIO IN CH-2 (Combo XLR/TRS)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "AUDIO OUT CH-1 (Phono)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AUDIO OUT CH-2 (Phono)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "STREAMING",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network connector for live streaming/Ethernet uplink."
+    },
+    {
+      "name": "PC UI",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network connector for remote control from PC/Mac/tablet UI."
+    },
+    {
+      "name": "USB (MAIN)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Mini-B USB port used with supplied USB cable, primarily for firmware update; closest allowed connector id to USB Mini-B."
+    },
+    {
+      "name": "OPTION (RS-232C)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "For wired Remote Commander accessory."
+    },
+    {
+      "name": "Memory Card Slot (SD/SDHC/SDXC)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Not an actual USB port — SD/SDHC/SDXC card slot for onboard recording; no matching connector id exists in the allowed list, included as closest fallback. Treat as non-cable storage media slot rather than a cable I/O port."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC IN 12V connector, powered via supplied external AC adaptor (no internal mains IEC/NEMA inlet)."
+    }
+  ]
+}

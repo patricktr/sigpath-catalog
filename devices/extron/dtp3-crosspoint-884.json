@@ -1,0 +1,260 @@
+{
+  "manufacturer": "Extron",
+  "model": "DTP3 CrossPoint 884",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 3,
+  "sourceUrl": "https://media.extron.com/public/download/files/userman/dtp3_cp_series_68-3058-50_E.pdf",
+  "confidence": "high",
+  "notes": "Based on the official Extron DTP3 CrossPoint Series Setup Guide (68-3058-50 Rev. E) rear-panel diagram, which documents all models. Ports listed reflect the standard (non-IPCP, non-amplified) \"884\" model, which the guide describes as having unamplified audio outputs and a plain LAN port in place of the IPCP control-processor card. The IPCP A variant adds: an internal IPCP Pro 360MQ xi control processor (3x COM ports, IR/Serial ports, relay ports, digital I/O port, 3x AV LAN/PoE+ ports, 1x LAN port) and a Class-D power amplifier with a 4-pole 5 mm captive-screw AMP OUTPUT (2x100W @ 8/4 ohm, or bridged 200W @ 8 ohm/70V/100V) — omitted here since this record targets the base model. Inputs 5 and 6 are selectable HDMI-or-TP (RJ45) combo positions; modeled here as HDMI with TP noted as an alternate via the DTP3 I/O-style RJ45 (accepts DTP/XTP). Outputs 1-6 mirror the same signal simultaneously to both a TP/DTP3/HDBaseT RJ45 output and a duplicate HDMI output. The 4 \"DTP3 I/O\" RJ45 ports (9-12) are field-reversible input or output, extending video/audio/power/RS-232 up to 100 m over shielded CAT 6A. HDMI version confirmed as 2.0b (18 Gbps, 4K/60 4:4:4) via manufacturer/retailer product pages. Grade omitted on RJ45 TP/DTP3/DMP/Dante ports because Extron's proprietary DTP/XTP/HDBaseT signaling and DMP expansion protocol do not map to a standard Ethernet speed grade (they carry scaled AV signal, not IP traffic) and no eth-x grade is stated; the Dante and LAN/AV-LAN ports are standard Gigabit Ethernet but exact speed not explicitly restated as \"1G\" in the fetched pages, so grade also omitted there out of caution (widely documented elsewhere as Gigabit). Captive-screw audio terminals mapped to \"euroblock\" (closest listed connector) since 3.5 mm captive-screw pluggable terminal blocks are not a distinct id in the allowed list. Power rating: 100-240 VAC, 50/60 Hz, up to 5.0 A (IPCP A model rating shown in guide; base model rating not separately printed but is a lower-power unamplified version of the same IEC inlet). Sources consulted: official Extron Setup Guide PDF (primary, used for exact port layout), Extron product page (blocked by bot-defense from automated fetch, cross-checked via search snippet quoting it verbatim), and ivojo.co.uk retailer spec table (used to corroborate Dante/AV LAN/USB-C/RS-232 counts).",
+  "ports": [
+    {
+      "name": "HDMI Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Input 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Input 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 5 (Selectable HDMI/TP)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Combo position; alternate is a DTP/XTP RJ-45 TP input selectable in place of HDMI"
+    },
+    {
+      "name": "Input 6 (Selectable HDMI/TP)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Combo position; alternate is a DTP/XTP RJ-45 TP input selectable in place of HDMI"
+    },
+    {
+      "name": "HDMI Input 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Input 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DTP3 I/O 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Field-reversible DTP3/DTP/XTP input or output; not a standard Ethernet link, so no eth grade applies"
+    },
+    {
+      "name": "DTP3 I/O 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Field-reversible DTP3/DTP/XTP input or output; not a standard Ethernet link, so no eth grade applies"
+    },
+    {
+      "name": "DTP3 I/O 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Field-reversible DTP3/DTP/XTP input or output; not a standard Ethernet link, so no eth grade applies"
+    },
+    {
+      "name": "DTP3 I/O 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Field-reversible DTP3/DTP/XTP input or output; not a standard Ethernet link, so no eth grade applies"
+    },
+    {
+      "name": "TP Output 1A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 1B"
+    },
+    {
+      "name": "HDMI Output 1B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "TP Output 2A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 2B"
+    },
+    {
+      "name": "HDMI Output 2B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "TP Output 3A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 3B"
+    },
+    {
+      "name": "HDMI Output 3B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "TP Output 4A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 4B"
+    },
+    {
+      "name": "HDMI Output 4B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "TP Output 5A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 5B"
+    },
+    {
+      "name": "HDMI Output 5B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "TP Output 6A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extended TP/DTP3/XTP/HDBaseT output; signal mirrored to HDMI Output 6B"
+    },
+    {
+      "name": "HDMI Output 6B",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Output 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Output 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Dante AT 1 (PRI/PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante audio networking port; PoE powered-device capable"
+    },
+    {
+      "name": "Dante AT 2 (SEC)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante audio networking secondary/redundant port"
+    },
+    {
+      "name": "DMP EXP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Extron proprietary digital audio expansion port to DMP-series devices"
+    },
+    {
+      "name": "USB Audio",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Delivers a 4x4 channel USB audio interface to a host PC"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal; +48V phantom power switchable"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal; +48V phantom power switchable"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal; +48V phantom power switchable"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal; +48V phantom power switchable"
+    },
+    {
+      "name": "Line In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pole 3.5 mm captive-screw terminal, balanced/unbalanced stereo"
+    },
+    {
+      "name": "Line In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pole 3.5 mm captive-screw terminal, balanced/unbalanced stereo"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal"
+    },
+    {
+      "name": "Remote RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole 3.5 mm captive-screw terminal (Tx/Rx/Gnd) for RS-232 remote control of the switcher"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Base (non-IPCP) model Ethernet control port; default IP 192.168.254.254"
+    },
+    {
+      "name": "Power Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Standard IEC power inlet, 100-240 VAC 50/60 Hz"
+    }
+  ]
+}

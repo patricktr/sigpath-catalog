@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Crown Audio",
+  "model": "DCi 4|1250N",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.crownaudio.com/en-US/products/dci-4-1250n",
+  "confidence": "high",
+  "notes": "Primary source: Crown Audio official product page (crownaudio.com/en-US/products/dci-4-1250n) for headline specs (AC 100-240V, 20A IEC inlet, 2RU/3.5in height, 30lb/13.6kg, output power at 2/4/8/16 ohm and 70V/100V). Detailed rear-panel connector layout (Euroblock input/output pin counts, BLU link In/Out ports, Ethernet vs BLU link distinction, GPIO as 6-position RJ-11, AUX 3-pin connector) confirmed from Crown/HARMAN's official \"DCi Series - Network Input Models Operation Manual\" (PDF, hosted at avc-group.com/fullcompass.com), which explicitly lists back-panel features for the group \"2|300N, 2|600N, 2|1250N, 4|300N, 4|600N, 4|1250N, 8|300N, 8|600N\" and separately confirms the 4|1250N (along with 8|600N) uses the 20A IEC inlet variant (vs standard IEC on lower-power siblings) and a resettable breaker instead of a fuse.\n\nCaveats: (1) GPIO port is physically a 6-position RJ-11 connector; \"rj45\" was used as the closest available connector id since rj11 is not in the allowed list — treat as a modular jack, not true RJ45 Ethernet. (2) Ethernet port speed (10/100 vs other) is not stated in any source found, so no grade was set. (3) BLU link ports use RJ45-style Cat5e jacks but carry a proprietary digital-audio-only protocol (not IP Ethernet) — modeled as bidirectional RJ45 with a note; no bandwidth grade applied since BLU link is not in the RJ45 eth-* grading scale's intended sense and the manual does not express it as 100M/1G/etc. (4) AC inlet is described in the manual/spec sheet only as \"20A IEC\" without an explicit C19/C20 callout; iec-c19 was chosen as the closest listed id for a 20A-rated IEC inlet (standard IEC C13/C14 is rated ≤15A). (5) Input/output Euroblock connector exact pin spacing (3.81mm, 6-pin) confirmed via a Crown parts reference in secondary sources (AVS Forum/Crown parts number 5024623) rather than the primary manual text itself. (6) The manual's back-panel diagram groups DCi 4|1250N with several other wattage variants (2|300N through 8|600N) sharing identical rear-panel connector layout differing only in the AC inlet current rating: 4|1250N and 8|600N get the 20A IEC inlet; the rest use a standard-rated IEC inlet.",
+  "ports": [
+    {
+      "name": "Input 1/2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, balanced high-impedance analog input serving channel pair 1/2 (odd channel wired for bridge mode)"
+    },
+    {
+      "name": "Input 3/4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, balanced high-impedance analog input serving channel pair 3/4"
+    },
+    {
+      "name": "Output 1/2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Four-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks, speaker output for channel pair 1/2 (2/4/8/16 ohm or 70V/100V selectable)"
+    },
+    {
+      "name": "Output 3/4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Four-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks, speaker output for channel pair 3/4"
+    },
+    {
+      "name": "BLU link In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Cat5e digital audio transport port (HARMAN BLU link ring), up to 256ch @48kHz/128ch @96kHz, 24-bit; dedicated audio bus, not general Ethernet"
+    },
+    {
+      "name": "BLU link Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Cat5e digital audio transport port (HARMAN BLU link ring); pairs with BLU link In to complete the ring"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Cat5e control/monitoring port using HiQnet protocol over TCP/IP with Audio Architect software; link speed not stated in manufacturer documentation, grade omitted"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically a 6-position RJ-11 connector (not RJ-45; closest allowed id used). 2 analog/binary inputs + 2 binary outputs, 0-3.3V logic, for preset recall, gain/mute control, fault reporting"
+    },
+    {
+      "name": "AUX",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin plug-in terminal connector for remote SLEEP control and AMP STATUS monitoring; shares ground with GPIO pin 6"
+    },
+    {
+      "name": "AC Power Inlet",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "20A IEC power inlet (device-side C20 receptacle mating a C19 plug), 100-240V~ 50/60Hz, resettable circuit breaker (this DCi4|1250N and DCi8|600N use the 20A variant vs. standard 15A IEC on other DCi-N models)"
+    }
+  ]
+}

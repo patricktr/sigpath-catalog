@@ -1,0 +1,119 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AV-HSW10",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.ggvideo.com/pan/avhsw10_manual.pdf",
+  "confidence": "high",
+  "notes": "Ports and specs sourced primarily from the official Panasonic operating instructions manual (DVQP3077ZA, hosted at ggvideo.com, matches the manual also distributed via blk.gr), cross-checked against the manufacturer's own spec page (https://pro-av.panasonic.net/en/products/av-hsw10/spec.html) and NA product page (https://connect.na.panasonic.com/av/video/switchers-controllers/av-hsw10-compact). Grades: SDI I/O is 3G-SDI per the manual's Specifications chapter (SMPTE424M Level-A/B compatible); HDMI I/O is HDMI 1.4b compatible (mapped to hdmi-1.4); LAN is 1000Base-T (eth-1g); USB Type-C stream-out port is USB 3.2 Gen1 (mapped to usb-5g); USB Type-A port is USB2.0. TALLY/GPI is physically a female D-Sub 15-pin connector, which is not in the provided connector id list — I used \"rj45\" only as a structurally-required placeholder id; treat the true connector as D-Sub 15-pin (control signal, not RJ45) when rendering. AUDIO IN is two RCA/pin-jack connectors (L/1, R/2), mic/line level. The only labeled \"AUDIO OUT\" in the manual is actually the front-panel headphone/monitor jack (3.5mm TRS) - there is no separate balanced/line-level program audio output. REF has two BNC connectors: one reference input, one loop-through output (no distinct output signal, just pass-through of the reference). SDI IN 1 and HDMI IN 1 are mutually exclusive (shared input slot), as are the total available inputs depending on baseband vs NDI-HB firmware mode. Power: dedicated 16V DC external AC adaptor via a barrel-style DC IN connector (not IEC/nema — closest match in the allowed list is dc-barrel). No RS-232/RS-422 discrete serial port exists on this model (remote camera / PTZ Link and TSL protocol control run over the LAN/RJ45 port, not a dedicated serial connector).",
+  "ports": [
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Mutually exclusive with HDMI IN 1"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Mutually exclusive with SDI IN 1"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Has scaler function"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T, AUTO-MDIX; carries IP control plus SRT/NDI|HX/NDI HB/RTMP video I/O (IN6-9, OUT4-5)"
+    },
+    {
+      "name": "TALLY/GPI",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "D-sub 15-pin female; 5 general-purpose photocoupler inputs, 8 tally/general-purpose outputs, 1 alarm open-collector output. D-sub 15-pin is not in the allowed connector list; closest available id (rj45) chosen only as a placeholder — actual connector is D-Sub 15-pin (female, inch screw)."
+    },
+    {
+      "name": "AUDIO IN (L/1, R/2)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "2-channel (stereo) mic/line input, pin jacks"
+    },
+    {
+      "name": "AUDIO OUT (headphone monitor)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Headphone/monitor jack with volume adjustment; not a line-level program audio output"
+    },
+    {
+      "name": "REF",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock reference input (BB/Tri-level/internal sync); second BNC is loop-through output, needs 75-ohm termination if unused"
+    },
+    {
+      "name": "USB STREAM OUT",
+      "direction": "output",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.2 Gen1 Type-C, UVC/UAC video+audio output to a computer, no USB bus power"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB2.0 Type-A with bus power, for USB memory (project/still files, firmware, logs)"
+    },
+    {
+      "name": "DC IN 16V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "16V DC, 3.0A; powered by dedicated external AC adaptor (100-240V AC input, 16V/4.06A DC output)"
+    }
+  ]
+}

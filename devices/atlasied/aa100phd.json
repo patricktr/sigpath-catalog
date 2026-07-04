@@ -1,0 +1,92 @@
+{
+  "manufacturer": "AtlasIED",
+  "model": "AA100PHD",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.atlasied.com/d/3793/ATS004880E-AA100PHD-Owners-Manual.pdf",
+  "confidence": "high",
+  "notes": "Also sold/labeled as \"Atlas Sound AA100PHD.\" Desktop chassis (8.27\\\" x 3.66\\\" x 10.87\\\"), not typically rack-mounted, so rackUnits omitted. All connector grades omitted per instructions since none of the ports are on a bandwidth-graded scale (analog audio/power/control only). Input 1 and Input 2 are 3-position balanced Mic/Line/Tel terminal blocks (closest catalog id: euroblock; XLR3-equivalent balanced pinout per manual's wiring diagram, but physical connector is a 3-pin Phoenix/terminal block, not an XLR). Input 2 additionally has a summed 3.5mm stereo (TRS) jack sharing the same logical input. Inputs 3 and 4 are stereo RCA pairs each modeled as one RCA input port carrying a stereo signal (manual describes them as \"RCA stereo summing inputs\" - single physical RCA pair per input, so listed as one port each per the manual's numbering; if strict per-jack granularity is desired, each would be 2 RCA jacks (L/R)). Remote Level, Remote Input Select (RIS), and Remote Mute are low-voltage control/accessory ports for optional wall plates (WPD-RISRL, WPD-VC10K) - all terminal-block (Phoenix) style, modeled as euroblock control ports, bidirectional since they carry both control signal and DC supply/return. Zone 2 Output is a 600 ohm unbalanced audio output (MOH feed), 2-position Phoenix - modeled as euroblock. Main speaker output is a 4-position Phoenix/barrier terminal (COM, 4-ohm, 25V, 70V taps) rated for up to 12AWG/12A - modeled as euroblock. AC power: manual specifies \"2M, 18 gauge, NEMA 5-20P\" captive cord in the Specifications table but also states \"Connect this grounded power cord to 120VAC circuits only\" and the block diagram shows a standard 3-prong AC plug; NEMA 5-20P is not in the provided connector list, so nema-5-15 was used as the closest match (T-slot 5-20 blade is physically backward-compatible with a 5-15 receptacle). Source: AtlasIED AA100PHD Owner's Manual (ATS004880 Rev E, 4/16), official manufacturer PDF at atlasied.com.",
+  "ports": [
+    {
+      "name": "Channel 1 - Input (Mic/Line/Tel)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-position Phoenix terminal block (+, -, G), balanced Mic/Line/Tel, phantom power selectable via rear DIP switch"
+    },
+    {
+      "name": "Channel 2 - Input (Mic/Line)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-position Phoenix terminal block (+, -, G), balanced Mic/Line, phantom power selectable via rear DIP switch"
+    },
+    {
+      "name": "Input 2 (3.5mm Summed)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo 3.5mm jack summed into Channel 2, shares input with the Channel 2 terminal block (only one signal type active at a time)"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "rca",
+      "accepts": [
+        "rca"
+      ],
+      "note": "Stereo RCA summing input pair (L/R)"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo RCA summing input pair (L/R)"
+    },
+    {
+      "name": "Amp In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced RCA, 600 ohm; converts unit to slave/power amp, breaks preamp-to-power-amp link"
+    },
+    {
+      "name": "Pre Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced RCA, 150 ohm; post-mix, pre-master-level output for effects loop or driving a second amplifier"
+    },
+    {
+      "name": "Zone 2 - Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position Phoenix 3.5mm pitch, 600 ohm unbalanced (10k ohm via internal shunt option), typically feeds a PBX music-on-hold port"
+    },
+    {
+      "name": "Remote Mute",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-position Phoenix 3.5mm pitch contact-closure mute terminals (G, M)"
+    },
+    {
+      "name": "Remote Level (Return/RTN)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position Phoenix 3.5mm pitch (Return, G, 10V) 10VDC-return VCA-type remote level control port for Input 1 and Inputs 2/3/4, for use with WPD-VC10K/WPD-RISRL wall plates"
+    },
+    {
+      "name": "Remote Input Select (RIS)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position Phoenix 3.5mm pitch (4, 3, 2, GND) ground-activated remote input select for Inputs 2, 3, 4, for use with WPD-RISRL wall plate"
+    },
+    {
+      "name": "Amplifier Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Removable 4-position Phoenix barrier terminal, 5.08mm pitch, accepts up to 12 AWG/12A; taps: COM, 4 ohm, 25V, 70V transformer-coupled/direct-coupled speaker output, Class 2 rated"
+    },
+    {
+      "name": "AC Power Cord",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 2m 18-gauge cord; manual specifies NEMA 5-20P plug (120VAC 60Hz); closest catalog id used since 5-20P is not in the provided list"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AW-UE100",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro-av.panasonic.net/en/products/aw-ue100/spec.html",
+  "confidence": "high",
+  "notes": "Camera-side ports only (this is a PTZ camera, not a display/rack device — rackUnits omitted, it's a ceiling/desktop-mount unit). Two independent SDI BNC outputs exist: \"3G SDI OUT\" (outputs 3G-SDI or 1.5G-SDI depending on format) and \"12G SDI OUT\" (outputs 12G-SDI, 6G-SDI, 3G-SDI or 1.5G-SDI depending on format) — graded at each port's maximum stated capability. HDMI is HDMI 2.0 (4:2:2/10-bit) per manufacturer spec page. RS-422 uses an RJ-45 connector shell but is NOT Ethernet — it carries RS-422A serial protocol for legacy PTZ controllers (e.g. AW-RP150); modeled as connector \"rj45\" since RS422/RS485 in the connector enum did not match the physical shell, and grade was intentionally omitted (RJ45 grade scale is for Ethernet speed, not applicable to serial-over-RJ45). LAN port supports 100BASE-TX/1000BASE-T (graded eth-1g) plus PoE++ (IEEE802.3bt) for power. DC IN connector polarity marking (⊖⊙⊕) in the Panasonic manual is the standard notation for a coaxial/barrel DC power jack, used with the supplied AC adaptor (12V DC, 10.8-13.2V, 3.0A) — modeled as dc-barrel; an earlier ambiguous web search result mentioning a \"4-pin XLR power cable\" was found to reference a different Panasonic PTZ model family (AW-UE150/HE145/HR140), not the UE100, and was discarded after the official manual confirmed the barrel-jack marking. No USB port exists on this model (confirmed absent in manual's parts diagram and index). A chassis ground screw terminal exists but was omitted as it is not a signal/power port in the requested taxonomy. Sources cross-checked: Panasonic Global spec page (pro-av.panasonic.net/en/products/aw-ue100/spec.html) and the official Operating/Installation Instructions PDF (pro-av.panasonic.net/manual/pdf/AW-UE100P.PJ_simple(DVQX2119ZA)_E.pdf), which provided the exact rear-panel connector labels and diagrams (pages 35-37).",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "12G SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "3G SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "G/L IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "LAN (LINK/ACT)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "IP control + video transmission (NDI/NDI|HX/SRT), PoE++ (IEEE802.3bt) powered"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 physical connector carrying RS-422A serial control signal, not Ethernet"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack, switchable mic/line"
+    },
+    {
+      "name": "DC IN (12V)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Center-positive coaxial DC jack (⊖⊙⊕ marking) for supplied 12V DC AC adaptor; unit is also powered via PoE++ over the LAN port (42-57V DC), not a separate physical port"
+    }
+  ]
+}

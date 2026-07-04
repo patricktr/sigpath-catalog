@@ -1,0 +1,328 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VS-88UT",
+  "category": "switcher",
+  "type": "Matrix router",
+  "rackUnits": 2,
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/VS-88UT_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: official Kramer datasheet (cdn-docs.av-iq.com/dataSheet/VS-88UT_Datasheet.pdf) cross-verified against the official Kramer User Manual (P/N 2900-300582 Rev 3, cdn-docs.av-iq.com/other/VS-88UT_UserManual.pdf), both hosted mirrors of manufacturer content and internally consistent. This is an 8x8 all-in-one presentation matrix switcher with integrated HDBaseT 2.0 extension, master room controller, PoE, and a built-in power amplifier — it does not map to a single category cleanly; \"switcher\"/\"Matrix router\" was chosen since matrix switching is the core function, but it also serves as a control processor and amplifier. HDMI inputs 5-8 and outputs are physically shared/selectable with HDBaseT (RJ-45) pairs (HDMI IN 5/6/7/8 share connectors with HDBaseT IN 5/6/7/8 — only one type active at a time per pair, set in software); modeled here as separate logical ports per the datasheet's port table. HDMI is rated HDMI 2.0/HDCP 1.4 (grade hdmi-2.0) per \"Standards Compliance\" spec; HDBaseT ports carry the same 4K60 4:2:0 video plus USB/Ethernet/RS-232/IR tunneling (HDBaseT has no entry in the required SDI/HDMI/DP/USB/RJ45 grade scales, so left ungraded). The 1G Ethernet and Control Ethernet ports are 100BaseT/10/100 per manual wording (\"100BaseT Ethernet\") though marketing copy calls one \"1G Ethernet\" (likely referring to Gigabit-capable HDBaseT tunneling channel, not the RJ-45 NIC speed itself) — graded eth-100m conservatively per the explicit \"100BaseT\" spec label; not confirmed as true Gigabit Ethernet. USB Host/Device ports are HDBaseT-tunneled USB 1.1/2.0 at up to 127Mbps (well below usb-5g) so graded usb-2.0. Power input is a rear IEC power connector (with integrated switch and fuse) confirmed via rear-panel photo/diagram in the manual; input rated 100-240V AC 50/60Hz, 250VA. Two K-NET-related jacks exist: a 4-pin terminal block \"K-NET\" connector (power+RS-485 control bus, front controller side) and a \"K-NET 5mm Mini-jack\" learning port for IR — the mini-jack is IR-learning only and mapped to ir connector; the 4-pin K-NET terminal block carries 12V power + RS-485 and has no exact match in the connector list, so mapped to euroblock-dc (closest: DC-power-carrying terminal block) with a note. REMOTE MUTE and PROGRAM GPIO terminal blocks are internal/auxiliary contact-closure connectors for mute/future-use, not part of the core signal chain, and were omitted as they are not standard AV signal or power I/O in the requested sense — flagged in case they should be included. Combo/selectable audio input 5-pin terminal block accepts either balanced stereo line or balanced mic (modeled as accepts: euroblock since no dedicated \"mic-euroblock\" id exists).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 5 / HDBT IN 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Shared/selectable port: HDMI female connector paired with an RJ-45 HDBaseT input; only one is active at a time (software-selectable, HDBaseT active by default)."
+    },
+    {
+      "name": "HDMI IN 6 / HDBT IN 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Shared/selectable port: HDMI female connector paired with an RJ-45 HDBaseT input; only one is active at a time (software-selectable, HDBaseT active by default)."
+    },
+    {
+      "name": "HDMI IN 7 / HDBT IN 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Shared/selectable port: HDMI female connector paired with an RJ-45 HDBaseT input; only one is active at a time (software-selectable, HDBaseT active by default)."
+    },
+    {
+      "name": "HDMI IN 8 / HDBT IN 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Shared/selectable port: HDMI female connector paired with an RJ-45 HDBaseT input; only one is active at a time (software-selectable, HDBaseT active by default)."
+    },
+    {
+      "name": "HDBT IN 5",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0, shares selectable pairing with HDMI IN 5. 4K@60Hz(4:2:0) up to 100m; also tunnels USB, IR, RS-232, PoE."
+    },
+    {
+      "name": "HDBT IN 6",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0, shares selectable pairing with HDMI IN 6. 4K@60Hz(4:2:0) up to 100m; also tunnels USB, IR, RS-232, PoE."
+    },
+    {
+      "name": "HDBT IN 7",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0, shares selectable pairing with HDMI IN 7. 4K@60Hz(4:2:0) up to 100m; also tunnels USB, IR, RS-232, PoE."
+    },
+    {
+      "name": "HDBT IN 8",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0, shares selectable pairing with HDMI IN 8. 4K@60Hz(4:2:0) up to 100m; also tunnels USB, IR, RS-232, PoE."
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "OUT 5 (HDBT)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0 output with PoE, up to 100m at 4K60(4:2:0); tunnels USB, IR, RS-232."
+    },
+    {
+      "name": "OUT 6 (HDBT)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT 2.0 output with PoE, up to 100m at 4K60(4:2:0); tunnels USB, IR, RS-232."
+    },
+    {
+      "name": "AUDIO INPUT (MIC/line) 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "5-pin terminal block, selectable per-input as balanced stereo line or 2x balanced mic."
+    },
+    {
+      "name": "AUDIO INPUT (MIC/line) 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "5-pin terminal block, selectable per-input as balanced stereo line or 2x balanced mic."
+    },
+    {
+      "name": "AUDIO INPUT (MIC/line) 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "5-pin terminal block, selectable per-input as balanced stereo line or 2x balanced mic."
+    },
+    {
+      "name": "AUDIO INPUT (MIC/line) 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "xlr3"
+      ],
+      "note": "5-pin terminal block, selectable per-input as balanced stereo line or 2x balanced mic."
+    },
+    {
+      "name": "AUDIO INPUT 5",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 3.5mm mini jack."
+    },
+    {
+      "name": "AUDIO INPUT 6",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 3.5mm mini jack."
+    },
+    {
+      "name": "AUDIO INPUT 7",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 3.5mm mini jack."
+    },
+    {
+      "name": "AUDIO INPUT 8",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo, 3.5mm mini jack."
+    },
+    {
+      "name": "LINE OUT 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced stereo audio output, 5-pin terminal block."
+    },
+    {
+      "name": "LINE OUT 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced stereo audio output, 5-pin terminal block."
+    },
+    {
+      "name": "POWER AMP OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Stereo speaker output, 4-pin terminal block, 2x50W into 4 ohms (or 2x30W into 4 ohms)."
+    },
+    {
+      "name": "IR IN 1/2",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm mini jack, connects external IR receiver(s) for room-controller IR learning/input."
+    },
+    {
+      "name": "IR OUT (room controller) 1-4",
+      "direction": "output",
+      "connector": "ir",
+      "note": "IR emitter terminal block connectors (4x), for controlling IR devices."
+    },
+    {
+      "name": "HDBT IR 5/6 IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm mini jack pair for IR tunneling via HDBaseT inputs 5 and 6."
+    },
+    {
+      "name": "HDBT IR 5/6 OUT",
+      "direction": "output",
+      "connector": "ir",
+      "note": "3.5mm mini jack pair for IR tunneling via HDBaseT outputs 5 and 6."
+    },
+    {
+      "name": "RS-232 HDBT DATA",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block (G, Rx, Tx); passes serial data to/from HDBaseT ports (tunneling)."
+    },
+    {
+      "name": "RS-232 CONTROL",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block (G, Rx, Tx); controls the VS-88UT itself via Protocol 3000."
+    },
+    {
+      "name": "RS-232 (room controller) 1-4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4x 3-pin terminal blocks for controlling third-party RS-232 devices from the master room controller."
+    },
+    {
+      "name": "RS-485 (room controller)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block; bidirectional RS-485 control bus, with a rear TERM switch for 120-ohm line termination."
+    },
+    {
+      "name": "GPI/O 1-4 (room controller)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4x 2-pin terminal blocks, individually configurable as digital input, digital output, or analog input."
+    },
+    {
+      "name": "RELAYS 1-8 (room controller)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8x 2-pin terminal blocks, dry contact closure (36V AC/DC, 2A, 60VAC max on non-inductive load)."
+    },
+    {
+      "name": "K-NET",
+      "direction": "bidirectional",
+      "connector": "euroblock-dc",
+      "note": "4-pin terminal block carrying RS-485 control plus +12V power for auxiliary room controllers/keypads. No exact connector-list match; mapped to nearest DC-power-carrying terminal block type."
+    },
+    {
+      "name": "HDBT USB Device 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Female USB-A, tunnels USB client data via HDBaseT (up to 127Mbps effective, USB1.1/2.0)."
+    },
+    {
+      "name": "HDBT USB Device 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Female USB-A, tunnels USB client data via HDBaseT (up to 127Mbps effective, USB1.1/2.0)."
+    },
+    {
+      "name": "HDBT USB Host 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Female USB-B host port, tunnels USB host data via HDBaseT."
+    },
+    {
+      "name": "HDBT USB Host 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Female USB-B host port, tunnels USB host data via HDBaseT."
+    },
+    {
+      "name": "ETH CONTROL",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45, 100BaseT, PC/network control of the unit."
+    },
+    {
+      "name": "ETH DATA 1G",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45; datasheet markets it as \"1G Ethernet\" for tunneling data via HDBT ports, but the manual's own technical-spec table lists this Ethernet interface family as 100BaseT — graded conservatively as eth-100m since true Gigabit is not explicitly confirmed."
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear IEC power inlet with integrated power switch and fuse; 100-240V AC 50/60Hz, 250VA."
+    }
+  ]
+}

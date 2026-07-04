@@ -1,0 +1,190 @@
+{
+  "manufacturer": "Analog Way",
+  "model": "Pulse 4K",
+  "category": "switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_20240705.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Analog Way's official technical datasheet (PLS4K_EN, rev. 05/07/2024, and 09/01/2022) plus the analogway.com product page. Ports 5-6 are user-selectable per input: each of the two channels physically exposes one HDMI 1.4 jack AND one 3G-SDI BNC jack, but only one is active at a time (selectable in menu) - modeled here as two separate physical connectors per manufacturer's rear-panel diagram. The Genlock connector is described by Analog Way as \"1 dedicated BNC with loop\" for Genlock/Blackburst/tri-level sync - modeled as one BNC input plus one BNC loop-through output (2 physical BNC jacks visible on rear panel). The Multiviewer output is a dedicated 3rd output (HDMI 1.4 + mirrored 3G-SDI), separate from the 2 PGM/AUX outputs. Ethernet is a single Gigabit RJ45 (Neutrik) for control/API, distinct from the optional Dante card's dual RJ45s. The optional Analog+Dante audio card (not standard/base) adds 2x 3.5mm TRS stereo line-in, 2x 3.5mm TRS stereo line-out, and 2x RJ45 (Dante primary/secondary, AES67) - included here as it is a documented factory option with fixed rear-panel cutout; omit if strictly base-unit-only is desired. Power inlet connector type is not explicitly named as \"IEC C14\" in the datasheet text, but the rear-panel photo shows a standard IEC AC inlet with an integrated fuse-drawer module (rated 100-240VAC 3A 50/60Hz, F4A 250VAC fuse, 95W max consumption per the 2024 datasheet, revised up from 80W in the 2022 datasheet) - inferred as iec (C13/C14 family) with high confidence given standard AV rack-gear convention. No grade is stated for RJ45 beyond \"Gigabit Ethernet,\" so eth-1g is used. HDMI 1.4/2.0 and SDI grades are explicitly stated per port in the datasheet. DisplayPort grade (1.2) is explicit. No USB speed is stated for the USB-A host port (used for firmware/config import-export only), so grade is omitted.",
+  "ports": [
+    {
+      "name": "IN 1 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 2 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 3 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 4 (HDMI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IN 5 (DisplayPort)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "IN 6 (DisplayPort)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "IN 7 (SDI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "IN 8 (SDI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "IN 9 (HDMI, user-selectable)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "User-selectable per channel with the SDI BNC on the same input (IN 9); only one active at a time"
+    },
+    {
+      "name": "IN 9 (SDI, user-selectable)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "User-selectable per channel with the HDMI jack on the same input (IN 9); only one active at a time"
+    },
+    {
+      "name": "IN 10 (HDMI, user-selectable)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "User-selectable per channel with the SDI BNC on the same input (IN 10); only one active at a time"
+    },
+    {
+      "name": "IN 10 (SDI, user-selectable)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "User-selectable per channel with the HDMI jack on the same input (IN 10); only one active at a time"
+    },
+    {
+      "name": "PGM 1 / OUT 1 (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "PGM 1 / OUT 1 (SDI, mirrored)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "PGM 2 / AUX (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "PGM 2 / AUX (SDI, mirrored)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Multiviewer Out (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "Multiviewer Out (SDI, mirrored)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Dedicated BNC for Genlock/Blackburst/tri-level sync; not a video-bandwidth-graded port"
+    },
+    {
+      "name": "Genlock Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of the Genlock input; not a video-bandwidth-graded port"
+    },
+    {
+      "name": "Ethernet (Control)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik RJ45, Gigabit Ethernet for Web RCS/REST API/JSON TCP control"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB host Type-A for firmware update and configuration import/export; speed not specified by manufacturer"
+    },
+    {
+      "name": "Audio Line In 1 (optional Dante/Analog card)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Optional Analog + Dante audio networking card; stereo analog line input"
+    },
+    {
+      "name": "Audio Line In 2 (optional Dante/Analog card)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Optional Analog + Dante audio networking card; stereo analog line input"
+    },
+    {
+      "name": "Audio Line Out 1 (optional Dante/Analog card)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Optional Analog + Dante audio networking card; stereo analog line output"
+    },
+    {
+      "name": "Audio Line Out 2 (optional Dante/Analog card)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Optional Analog + Dante audio networking card; stereo analog line output"
+    },
+    {
+      "name": "Dante Primary (optional card)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional Dante audio networking card; 32x32 channels @48kHz, AES67 support; grade not stated by manufacturer"
+    },
+    {
+      "name": "Dante Secondary (optional card)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional Dante audio networking card; redundant Ethernet port; grade not stated by manufacturer"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC, 3A, 50/60Hz; fuse cartridge F4A 250VAC 5x20mm; max consumption 95W. Exact IEC variant (C13/C14) not explicitly labeled in datasheet text but matches standard IEC inlet shown in rear-panel photo."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "manufacturer": "Lutron",
+  "model": "Palladiom Keypad (QS Wired)",
+  "category": "control",
+  "sourceUrl": "https://assets.lutron.com/a/documents/369857_eng.pdf",
+  "confidence": "high",
+  "notes": "Wired, low-voltage architectural lighting keypad (wallplate device, 1-4 gang/column) — not rack-mountable, so rackUnits omitted. Physical I/O is a single 4-position screw-terminal \"keypad control link connector\" on the back of the base unit: terminals 1-2 carry SELV/PELV/NEC Class 2 DC power (24-36 V DC, 30 mA; terminal 1 = Common/Black, terminal 2 = V+/Red), and terminals 3-4 carry the QS Link data/MUX signal (one shielded twisted pair, 18-22 AWG; terminal 3 = MUX/Purple, terminal 4 = MUX/White, plus a drain/shield that must NOT be grounded). There is no modular jack (no RJ45/RS-485/RS-232 connector) — it is a captive screw-terminal block, so \"euroblock\" and \"euroblock-dc\" are used as the closest matches in the given taxonomy; no bandwidth grade applies since Lutron QS Link is a proprietary low-speed multi-drop control bus, not a graded interconnect (grade omitted for both ports, correctly, since euroblock/euroblock-dc are not in the graded connector list). The identical wiring scheme is also documented on the closely related \"HomeWorks Wired Palladiom Keypad\" (Lutron spec 369881), which is the same physical keypad wired to a HomeWorks QS processor instead of a Quantum/myRoom processor — confirms these specs are consistent across both product lines. A separate wireless/RF Palladiom keypad variant exists for HomeWorks QSX systems (Clear Connect Type A wireless) with no physical link wiring; this record covers only the wired QS Link version since that is the variant with documented physical I/O. Each terminal accepts up to two 18 AWG (1.0 mm2) wires.",
+  "ports": [
+    {
+      "name": "QS Link (Terminals 3-4, Data)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Shielded twisted-pair QS Link data/MUX signal (terminal 3 = MUX Purple, terminal 4 = MUX White), 18-22 AWG; shares the device's single 4-position screw-terminal block with the power terminals"
+    },
+    {
+      "name": "Power In (Terminals 1-2)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "SELV/PELV/NEC Class 2 DC power input, 24-36 V DC at 30 mA (terminal 1 = Common/Black, terminal 2 = V+/Red); shares the device's single 4-position screw-terminal block with the data terminals"
+    }
+  ]
+}

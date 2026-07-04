@@ -1,0 +1,207 @@
+{
+  "manufacturer": "ELAN",
+  "model": "gSC10",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "http://elanportal.com/supportdocs/catalog/gSC10_Quick_Install_Guide.pdf",
+  "confidence": "high",
+  "notes": "Verified against two official ELAN/Nortek documents: the gSC10 Quick Install Guide (elanportal.com, rear-panel diagram) and the gSC10 spec sheet (ELAN/Nortek Security & Control, Rev-A 02/2018, mirrored by alltrade.co.uk). This is a home-automation control processor with NO video ports (no HDMI) despite some third-party summaries incorrectly attributing an HDMI OSD port to it (that belongs to the related ELAN g1 controller, not the gSC10). Wi-Fi 802.11 b/g/n with a detachable R-SMA external antenna is present but omitted from the port list since it is wireless, not a physical cabled signal port. The Sense inputs are 3.5mm stereo mini-plug jacks and the IR outputs are 3.5mm mono jacks; \"trs-3.5\" was used for both as the closest match in the allowed connector list (no mono-only 3.5mm id exists). The 10 relay connections use removable 2-position screw terminal blocks, mapped to \"euroblock\" as the closest listed connector type. RS-232 and RS-485 ports are physically RJ-45 jacks carrying serial signal (adaptors to DB9 are included in the box), consistent with the manufacturer's own \"RJ-45 Port\" labeling in the CONNECTIONS table. No grade applies to relay, sense, IR, DC power, or euroblock connectors per the grading rules. Ethernet grade set to eth-100m per the spec sheet's explicit \"10/100 Mbps\" rating even though the RJ-45 also carries PoE. Rack mountable at 1U (17\"W x 2.25\"H x 14\"D), ships with rack ears.",
+  "ports": [
+    {
+      "name": "RS-232 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 port carrying RS-232 signal (hardware handshaking); ships with RJ-45-to-DB9 adaptors"
+    },
+    {
+      "name": "RS-232 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 3",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 4",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 5",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 6",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 7",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232 8",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-485 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 port carrying RS-485 signal, supports full/half duplex devices"
+    },
+    {
+      "name": "RS-485 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Sense Input 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-plug ELAN sensor input"
+    },
+    {
+      "name": "Sense Input 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Sense Input 3",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Sense Input 4",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mono IR emitter output, 12V DC; closest available connector id for a mono 3.5mm jack"
+    },
+    {
+      "name": "IR Output 2",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 3",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 4",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 5",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 6",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 7",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 8",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 9",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "IR Output 10",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Relay 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position screw terminal, normally-open dry contact relay, 24V AC/DC 1A max"
+    },
+    {
+      "name": "Relay 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 9",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Relay 10",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "USB Modem",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0, 5V 1A, for compatible modem/accessory devices"
+    },
+    {
+      "name": "Ethernet/PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps; supports PoE IEEE 802.3at Type 2, 48VDC 600mA"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Coaxial Type A, 2.5mm inside diameter; included 12VDC power supply"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "manufacturer": "Lab.gruppen",
+  "model": "PLM 20K44",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://prodgsystems.com/public/pdf/121_Data%20Sheet.pdf",
+  "confidence": "high",
+  "notes": "This is the base PLM 20K44 with the 'embedded patch panel' Neutrik speakON output configuration (2x NLT4 + 1x NLT8), as distinct from the fixed-connector PLM 20K44 SP (speakON-only) and PLM 20K44 BP (4x binding-post pairs) SKUs sold by some retailers. Data taken from Lab.gruppen's own official spec sheet (item no. TDS-PLM+_V2, dated 28.01.2015), mirrored via a distributor (prodgsystems.com) after the manufacturer's own labgruppen.com product page returned HTTP 404 during retrieval. Content matches Lab.gruppen's branding/format exactly and is corroborated by independent retailer/distributor listings (B&H, Kling & Freitag) describing the same connector set (4x XLR analog in, 2x XLR AES in x2ch each, 2x RJ45 etherCON, 32A powerCON). etherCON grade inferred as eth-1g from 'Auto 100/1000' spec (Gigabit-capable); these Ethernet ports also carry Lake Controller monitoring/control (DLM protocol) in addition to Dante audio. Rack depth is 424mm rail-to-rear-panel (498mm overall including handles); weight 17kg. If the BP or SP variant is what's actually being modeled, swap the 3 speakON outputs for either 4x binding-post pairs (BP variant) or drop the binding posts entirely (SP variant, speakON-only, same as documented here).",
+  "ports": [
+    {
+      "name": "Analog In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 In A",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Carries 2 AES3 audio channels (4 total across both AES XLR inputs)"
+    },
+    {
+      "name": "AES3 In B",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Carries 2 AES3 audio channels (4 total across both AES XLR inputs)"
+    },
+    {
+      "name": "Speaker Out 1/2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NLT4 connector carrying channels 1 and 2"
+    },
+    {
+      "name": "Speaker Out 3/4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NLT4 connector carrying channels 3 and 4"
+    },
+    {
+      "name": "Speaker Out 1-4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NLT8 connector carrying all 4 channels simultaneously"
+    },
+    {
+      "name": "etherCON A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON RJ45, Auto 100/1000 Mbps, Auto Uplink; Dante + Lake Controller/DLM control, primary/redundant network"
+    },
+    {
+      "name": "etherCON B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON RJ45, Auto 100/1000 Mbps, Auto Uplink; Dante + Lake Controller/DLM control, primary/redundant network"
+    },
+    {
+      "name": "Mains In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON 32A, detachable mains cord terminated in NEMA L5-30 twist-lock (125V/30A, US) or CEE 7/7 Schuko (230V/16A, EU) depending on region"
+    }
+  ]
+}

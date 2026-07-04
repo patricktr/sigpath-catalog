@@ -1,0 +1,65 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "ZyPerUHD-D",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.zeevee.com/wp-content/uploads/2021/09/ZV_ZyPerUHD_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from ZeeVee's official ZyPerUHD Encoder/Decoder datasheet (rev 2021-09-02), which lists the ZyPerUHD-D decoder's exact port table and rear-panel diagram. Desktop unit, 200 x 120 x 25 mm (L x W x H) — not rack-mountable, so rackUnits omitted. USB is listed as \"Dual USB 2.0, 2x USB Type A\" on the decoder (host ports for connected USB peripherals/KVM-style control, common on AVoIP decoders) — modeled as bidirectional per the port-labeling convention for USB host ports. RS-232 and analog audio both use Phoenix (captive screw) terminal blocks, mapped to the \"euroblock\" connector id since Phoenix/detachable screw terminals aren't separately listed. Ethernet grade is 1Gb (eth-1g) per datasheet (\"1 Gb RJ45 port\"); HDMI grade is HDMI 2.0 (device spec states \"HDMI 2.0a\"). No SDI/DisplayPort ports exist on this model. The companion encoder (ZyPerUHD-E) has a different port set (HDMI in + loop-out, USB-B, balanced+unbalanced audio in/out) and is a separate SKU, not covered here since the request was specifically for the -D decoder.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0a with HDCP 2.2 pass-through; also carries multi-channel digital audio (LPCM up to 8ch, Dolby Digital, AC3)"
+    },
+    {
+      "name": "Media Transport (1Gb Ethernet, PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Carries compressed video/audio/control over IP; device can be powered via PoE on this port"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced stereo analog audio output via Phoenix/captive-screw terminal block (L+/L-/GR+/GR-)"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "Full duplex serial up to 115.2 kbps via Phoenix terminal block (TX/RX/G) for display/source control"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Dual USB 2.0 Type A host ports (device has 2x USB-A per datasheet)"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm mini-jack IR input"
+    },
+    {
+      "name": "IR Out",
+      "direction": "output",
+      "connector": "ir",
+      "note": "3.5mm mini-jack IR output"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 VDC 1A via locking barrel connector; external power supply included (can alternatively be powered via PoE on Ethernet port)"
+    }
+  ]
+}

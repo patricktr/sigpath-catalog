@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Bluesound Professional",
+  "model": "B100S",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.bluesoundprofessional.com/wp-content/uploads/2019/06/Bluesound-Professional-B100S-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer datasheet (Bluesound-Professional-B100S-Data-Sheet.pdf) confirms all physical connectors and shows the rear-panel diagram. No bandwidth-graded connectors are present (RJ45 is Gigabit Ethernet per connectivity table -> eth-1g grade applied; USB ports are legacy USB 2.0-class ports used for mass storage/servicing, not graded since no explicit spec version is stated by the datasheet, so grade omitted per rules requiring an explicit stated version — though the \"USB memory sticks / Type-A\" wording combined with a 2019-era ARM Cortex-A9 platform strongly implies USB 2.0; left ungraded to avoid unconfirmed grade). AC power input is described as \"Universal bi-pin AC Cord input (100-240AC)\" and the rear-panel diagram shows a round 2-pin recessed inlet — this is a figure-8/bi-pin style connector, mapped to iec-c7 (closest catalog match) rather than standard IEC C13/C14. IR IN and 12V TRIG IN are low-voltage control terminals on a pluggable barrier/phoenix-style strip, mapped to euroblock (closest connector in the allowed list; IR uses \"ir\" id, trigger uses euroblock terminal). Unit is a 1/3-rack-width desktop/shelf device (three units share 1U via optional RM100 rack shelf) — not itself a full rack-mountable RU device, so rackUnits omitted per instructions (only optional accessory converts it to rack use).",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet for network control/streaming"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Type-A port for USB memory sticks (FAT32/NTFS) and supported peripherals"
+    },
+    {
+      "name": "SERVICE",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Type-B mini port for product servicing"
+    },
+    {
+      "name": "LINE/MIC IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced stereo (L/R + GND) pluggable barrier-strip/Phoenix terminal; phantom power switchable for mic input"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced analog stereo (L/R + GND) pluggable barrier-strip/Phoenix terminal output"
+    },
+    {
+      "name": "SUBW OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dedicated balanced line-level subwoofer output on pluggable barrier-strip/Phoenix terminal"
+    },
+    {
+      "name": "COAX OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial digital audio output"
+    },
+    {
+      "name": "OPTICAL OUT",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "TOSLINK digital optical audio output"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "IR control input terminal"
+    },
+    {
+      "name": "TRIG IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "12V trigger input terminal (labeled +12V TRIG IN on rear panel)"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "Universal bi-pin (figure-8 style) AC cord input, 100-240V 50/60Hz; closest catalog match to the round 2-pin captive/bi-pin inlet shown on rear panel"
+    }
+  ]
+}

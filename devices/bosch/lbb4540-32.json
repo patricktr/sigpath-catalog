@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Bosch",
+  "model": "LBB4540/32",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://resources.keenfinity.tech/public/documents/Data_sheet_enUS_1847504779.pdf",
+  "confidence": "high",
+  "notes": "The LBB4540/32 is a handheld, battery-powered Integrus infrared pocket receiver for 32-channel simultaneous interpretation/language distribution (not a rack/mains AV device). Source: official Bosch Security Systems datasheet \"LBB 4540 Integrus Pocket Receivers\" (doc 1846631435, en, V2, 23 Nov 2012), hosted on Bosch's successor brand Keenfinity's resource CDN, explicitly listing LBB4540/32 as the 32-channel order variant alongside /04 and /08. Category/type in this schema (audio/Wireless mic) is an approximation — no better fit exists for an IR conference-language pocket receiver; it is a receiver, not a transmitter/mic. Only one standard physical connector exists: a 3.5 mm stereo headphone output jack. Other interconnections are non-standard and omitted from the ports list per the connector enum: (1) battery contacts for 2x AA alkaline cells (internal battery compartment, not an external I/O port), (2) a proprietary connector for the LBB4550/00 NiMH battery pack accessory, and (3) proprietary charging contacts on the left side of the unit for docking with LBB4560 charging cases/cabinets (these are pogo-pin style contacts, not a listed connector type like dc-barrel/pogo — the unit has no direct AC/DC power-input jack of its own since charging is accomplished only via the separate charging dock accessory). No rack units (it is a handheld device, ~155x45x30 mm, 75-125 g). No bandwidth grade applies (IR/analog audio device, not a graded digital connector).",
+  "ports": [
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5 mm (0.14 in) stereo jack output socket for headphones"
+    }
+  ]
+}

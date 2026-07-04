@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Crown Audio",
+  "model": "CDi 1000",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.markertek.com/Attachments/Specifications/Crown/CDI1000-Specifications.pdf",
+  "confidence": "high",
+  "notes": "Confirmed against two authoritative Crown/HARMAN sources: the CDi 1000 Architectural & Engineering Specifications sheet (Crown International, 2007, doc 139681-1D) and the CDi Series Operation Manual (Harman International, 2012, doc 5021543, covering CDi1000/2000/4000/6000). Input Connector: two 3-pin removable Phoenix-type (euroblock) connectors, one per channel (CH1, CH2), each taking a balanced line-level signal (mapped here as two ports \"Input 1\" and \"Input 2\" since each terminal block is a separate physical connector). Output Connectors: a single 4-position barrier strip (mapped as one bidirectional-use pair covering both dual-channel and bridge-mono wiring; modeled here as two output positions CH1/CH2 per the barrier strip layout, consistent with barrier-strip/euroblock representation used elsewhere in this catalog for Crown amps) usable as 2 discrete 2-8ohm/70V loudspeaker outputs or bridged to one 4-8ohm/140V mono output — connector is a fixed screw/barrier terminal strip, closest listed id is \"euroblock\" (not a true pluggable Euroblock; it's a fixed barrier strip, same convention used for other Crown amps in this catalog). AC Line Connector is NEMA 5-15P (15A) — note some third-party marketing copy for this exact SKU aggregates the CDi series and can misstate this as IEC; the primary A&E spec sheet and Operation Manual both explicitly specify NEMA 5-15P for the CDi 1000/2000/4000 chassis (the larger CDi 6000 uses NEMA 6-20P instead). HiQnet USB port (Type B) is a PC configuration/control link, not general USB host storage — mapped as usb-b bidirectional; no bandwidth grade stated in spec (USB revision unspecified), so grade omitted. No Ethernet/network port exists on this model (HiQnet control here is USB-only, unlike the newer DCi series which adds BLU Link/Ethernet). Rack height 3.5 in = 2 rack units.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin removable Phoenix-type (euroblock) connector, balanced line-level input, Channel 1."
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin removable Phoenix-type (euroblock) connector, balanced line-level input, Channel 2."
+    },
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-position fixed barrier strip (CH1+/CH1-/CH2+/CH2-). Dual mode: two independent loudspeaker outputs, 2-8 ohm or 70V/140V constant-voltage. Bridge-mono mode: bridged across the two channel-1 positions for a single 4-8 ohm or 140V output. Not a pluggable Euroblock — fixed barrier terminal strip; euroblock is the closest listed connector id."
+    },
+    {
+      "name": "USB (HiQnet)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Type B USB port for HiQnet PC control/configuration software (System Architect). USB revision not stated in spec; no bandwidth grade given."
+    },
+    {
+      "name": "AC Line",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "NEMA 5-15P (15A) captive/detachable AC line cordset inlet. Universal switch-mode supply accepts 100V/120V/220-240V, 50/60Hz."
+    }
+  ]
+}

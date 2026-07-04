@@ -1,0 +1,17 @@
+{
+  "manufacturer": "DPA Microphones",
+  "model": "4060",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://output.nl/u/images/dpa-document-portal-4060.pdf (DPA Microphones official Document Portal spec sheet for the 4060 Miniature Omnidirectional Microphone)",
+  "confidence": "medium",
+  "notes": "The DPA 4060 is a lavalier/miniature omnidirectional microphone body with a fixed 1.8 m cable terminating in a connector — there is no separate power-input jack on the mic itself (it is powered remotely through whatever adapter/wireless-bodypack it plugs into). Its native, standard-fit connector is DPA's proprietary \"MicroDot\" (a small screw-locking subminiature connector), which is not present in the given connector enum; I mapped it to trs-3.5 (mini-jack) as the closest listed analog-audio-output connector type, since DPA itself also offers a factory \"Mini-Jack\" termination option as one of several interchangeable connector choices (others: TA4F Mini-XLR, 3-pin LEMO). No bandwidth \"grade\" applies since this is a plain analog audio connector, so grade was correctly omitted. Power spec (min 5V-max 10V via DPA adapter, or 12-48V/P48 phantom via optional DAD6001-BC XLR adapter) is supplied externally by the wireless transmitter/adapter, not the mic, so no separate power port was added. rackUnits omitted (not a rack-mount device). Confidence is \"medium\" because the exact connector taxonomy match (MicroDot -> trs-3.5) is an approximation forced by the fixed enum, though all other specs (impedance, sensitivity, power range, cable length) are drawn directly from DPA's own official document-portal spec sheet.",
+  "ports": [
+    {
+      "name": "Audio Output (MicroDot)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Native connector is DPA's proprietary MicroDot subminiature connector (not in the provided connector list; TRS-3.5 chosen as closest analog-audio-output equivalent). Factory-terminated alternatives are also offered: TA4F Mini-XLR, 3-pin LEMO, or Mini-Jack, selected at time of purchase/configuration. Carries balanced-capable analog mic-level signal (20 mV/Pa nominal sensitivity, 30-40 ohm output impedance) intended to run into a bodypack wireless transmitter or (via optional DAD6001-BC adapter, sold separately) into a standard XLR3 phantom-powered input."
+    }
+  ]
+}

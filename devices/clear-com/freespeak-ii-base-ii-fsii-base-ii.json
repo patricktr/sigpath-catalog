@@ -1,0 +1,160 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "FreeSpeak II Base II (FSII-BASE-II)",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.clearcom.com/DownloadCenter/manuals/FreeSpeakII_Online_Manual/UserGuide/Content/Base/Topics/Specifications_base_station.htm",
+  "confidence": "high",
+  "notes": "Modular wireless intercom base station; supports 5 or 25 beltpacks depending on license/variant (FSII-BASE-II vs FSII-BASE-II-5), with 1.9GHz and 2.4GHz active transceivers. Headset jack ships as either 4-pin XLR-M (X4 variant, e.g. FSII-BASE-II) or 5-pin XLR-F (X5 variant, e.g. FSII-BASE-II-5-X5) - modeled here as XLR3 4-pin/5-pin family; represented with xlr3 as closest listed id since xlr4/xlr5 output-only options aren't distinguished for headset use (note: schema does include xlr5 - used for the 5-pin variant port, kept 4-pin variant as its own port for completeness, both present as alternates). GPIO port is a DB15 connector (2 GPI / 4 GPO relay-style) - no exact DB15 id exists in the allowed connector list; approximated as rs232 (closest D-sub serial-family connector) per instructions. Transceiver/splitter ports (2x RJ45 + 2x SFP, only 2 active at a time) and DECT/RF sync ports (RJ45) are proprietary Clear-Com transceiver links, not standard Ethernet data ports, but use RJ45/SFP hardware so are graded to eth-1g as a reasonable floor per Clear-Com network cabling guidance (Cat5e/6 shielded); actual internal link speed is not published. DC power input is a locking 4-pin connector (KPJX-4S-S, 12V/60W/5A) supplied via external \"wall-wart\" style PSU - approximated as dc-barrel per instructions since no locking-DC id exists. Dimensions confirmed as 1RU, 44 x 483 x 312mm from manufacturer manual.",
+  "ports": [
+    {
+      "name": "Headset (Front Panel, X4)",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "4-pin XLR-M headset jack, Arcadia-X4 variant; mic auto-detect"
+    },
+    {
+      "name": "Headset (Front Panel, X5)",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "5-pin XLR-F headset jack, Arcadia-X5 variant; mic auto-detect"
+    },
+    {
+      "name": "USB (Front Panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Firmware update / local configuration"
+    },
+    {
+      "name": "2-Wire A",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog partyline channel A"
+    },
+    {
+      "name": "2-Wire B",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog partyline channel B"
+    },
+    {
+      "name": "2-Wire C",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog partyline channel C"
+    },
+    {
+      "name": "2-Wire D",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog partyline channel D"
+    },
+    {
+      "name": "4-Wire 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Balanced 4-wire audio interconnect to matrix/other intercom"
+    },
+    {
+      "name": "4-Wire 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Balanced 4-wire audio interconnect to matrix/other intercom"
+    },
+    {
+      "name": "4-Wire 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Balanced 4-wire audio interconnect to matrix/other intercom"
+    },
+    {
+      "name": "4-Wire 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Balanced 4-wire audio interconnect to matrix/other intercom"
+    },
+    {
+      "name": "Program Audio Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Transformer-isolated line-level input from mixer/player"
+    },
+    {
+      "name": "Stage Announce Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Transformer-isolated line-level output"
+    },
+    {
+      "name": "FSII Transceiver/SPL 1 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Active transceiver/splitter link; only 2 of the 4 transceiver ports active at once"
+    },
+    {
+      "name": "FSII Transceiver/SPL 2 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Active transceiver/splitter link; only 2 of the 4 transceiver ports active at once"
+    },
+    {
+      "name": "FSII Transceiver/SPL 1 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Fiber option for transceiver/splitter link (selectable with RJ45 port)"
+    },
+    {
+      "name": "FSII Transceiver/SPL 2 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Fiber option for transceiver/splitter link (selectable with RJ45 port)"
+    },
+    {
+      "name": "DECT Sync In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Synchronization input from another base station"
+    },
+    {
+      "name": "DECT Sync Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Synchronization output to another base station"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network/configuration port (Core Configuration Manager)"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network/configuration port, daisy-chain capable"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB15F connector, 2 GPI + 4 GPO relay contacts; approximated as rs232 (no DB15 id in schema)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14, 100-240V AC, 1.4A max, internal supply"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 4-pin DC connector (KPJX-4S-S) for external 12V/60W/5A wall-wart PSU (Part 453G032); approximated as dc-barrel"
+    }
+  ]
+}

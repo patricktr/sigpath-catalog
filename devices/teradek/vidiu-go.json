@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Teradek",
+  "model": "VidiU Go",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "http://cdn.teradek.com/Public/VidiUGo/Docs/Teradek_VidiU_Go_Reference_Guide_v1.0_0619.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Teradek's official VidiU Go Reference Guide (v1.0/v1.2, cdn.teradek.com), which includes a full \"Technical Specifications\" table and a labeled physical I/O diagram — more authoritative than the live teradek.com/products/vidiu-go marketing page, which lacks a full spec table. Product is discontinued (superseded by Teradek's Prism line) but specs are historically accurate. Two RP-SMA WiFi antenna connectors and a micro SD card slot exist on the device but are omitted since they are not physical AV/power signal ports in the given connector taxonomy (RF antenna and storage slot). No separate DC barrel/battery jack exists — the single USB-C port on the rear panel serves as the sole external power input (5V/up to 3A USB or USB Power Delivery), charging the internal 3.7V/5000mAh Li-polymer battery; nominal consumption 6.5W (up to 10W while charging). HDMI version is not explicitly stated by Teradek (only \"HDMI Type A receptacle, non-HDCP\") — hdmi-1.4 grade is inferred from supported resolutions/bitrates (max 1080p60, 12 Mbps), not confirmed, treat with medium confidence on that specific value. SDI grade (3G-SDI) and Ethernet grade (10/100 BASE-T, i.e. eth-100m, not gigabit) are both explicitly confirmed in the spec table.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A receptacle, non-HDCP sources only. Supports up to 1080p60; spec sheet does not state HDMI version number, hdmi-1.4 inferred from supported resolutions/bitrates."
+    },
+    {
+      "name": "3G-SDI",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "75-ohm BNC, explicitly rated 3G-SDI per official spec sheet."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ45, 10/100 BASE-T per official spec sheet."
+    },
+    {
+      "name": "USB modem port (left)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Powered USB 2.0 host port for VidiU Node or compatible 3G/4G/LTE USB modem."
+    },
+    {
+      "name": "USB modem port (right)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Second powered USB 2.0 host port for VidiU Node or compatible 3G/4G/LTE USB modem."
+    },
+    {
+      "name": "Type-C",
+      "direction": "input",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Powered USB-C host port used as the device's DC power input (5V USB charging or USB-PD); also charges internal 3.7V/5000mAh Li-polymer battery."
+    },
+    {
+      "name": "Mic/Line",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS analog line-in or mic-in, unbalanced."
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS headphone output with mic-in and adjustable volume; closest listed connector id is trs-3.5."
+    }
+  ]
+}

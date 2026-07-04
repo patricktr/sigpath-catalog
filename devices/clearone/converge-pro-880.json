@@ -1,0 +1,180 @@
+{
+  "manufacturer": "ClearOne",
+  "model": "Converge Pro 880",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 1,
+  "sourceUrl": "https://web.archive.org/web/2023/https://www.clearone.com/sites/default/files/2019-05/CONVERGE%20Pro%20880%20Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "No ClearOne product named exactly \"Converge Pro 2 88\" exists — the current Converge Pro 2 line runs 012, 48V/48VT, 128V/128VT/128VTD/128SR, with no \"88\" SKU. The closest real, authoritative-spec-documented product matching \"88\" is the legacy ClearOne CONVERGE Pro 880 (8 mic/line inputs + 4 line inputs + 12 outputs, part number 910-151-880), which this record documents. If a genuinely different product was intended, please confirm the exact model name. Grades: analog audio I/O (mic/line, line in, line out) carry no bandwidth grade by design. RJ-45 Ethernet Network and PC ports are rated 10/100 Mbps -> graded eth-100m (the ceiling stated in the spec; note this is a 10/100 port, not gigabit). The RJ-45 Expansion Bus ports are a proprietary 1.9 Mbps inter-unit link, not standard Ethernet, so no eth-* grade was applied (omitted per instructions since it's not a standard Ethernet PHY grade). USB port is USB 2.0 Type-B -> graded usb-2.0. Control/Status ports are DB-25 female GPIO connectors (25-pin D-sub); mapped to the closest available connector id \"rs232\" is inaccurate, so these were omitted from the port list since \"db25\" is not in the allowed connector enum and no reasonable close match exists (rs232/rs422/rs485 are serial protocols, not this parallel GPIO pinout) — flagged here as an unconfirmed/omitted port. Power inlet is a standard IEC C13/14 inlet (100-240 VAC 50/60Hz auto-switching) as shown in the official rear-panel photo. Source: official ClearOne datasheet (part 802-151-880, Rev 1.8, July 2013), retrieved via Wayback Machine archive since the live clearone.com PDF links now 404; page independently corroborated by ManualsLib back-panel diagram summary.",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Push-on mini-terminal block, balanced, bridging; mic or line level, 24V selectable phantom power"
+    },
+    {
+      "name": "Mic/Line 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 3",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 4",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 5",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 6",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 7",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Mic/Line 8",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line In 9",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Push-on mini-terminal block, balanced, bridging, line level only"
+    },
+    {
+      "name": "Line In 10",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line In 11",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Line In 12",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Push-on mini-terminal block, balanced"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 9",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 10",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 11",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 12",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Link In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Expansion Bus network, 1.9 Mbps, RJ-45 connector, not standard Ethernet"
+    },
+    {
+      "name": "Link Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Expansion Bus network, 1.9 Mbps, RJ-45 connector, not standard Ethernet"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps Ethernet network port"
+    },
+    {
+      "name": "PC",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps Ethernet PC pass-through port"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 female, serial command protocol only"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-B connector"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet, 100-240 VAC 50/60Hz auto-switching, 30W typical consumption"
+    }
+  ]
+}

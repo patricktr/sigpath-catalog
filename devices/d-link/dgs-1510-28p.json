@@ -1,0 +1,43 @@
+{
+  "manufacturer": "D-Link",
+  "model": "DGS-1510-28P",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://support.dlink.com/resource/products/DGS-1510-SERIES/DGS-1510-SERIES_HW_INSTALLATION_GUIDE_v1.40_WW_EN.pdf",
+  "confidence": "high",
+  "notes": "Data drawn from D-Link's official DGS-1510 Series Hardware Installation Guide (Release 1.40, Aug 2017) plus the current D-Link product page. The 2 SFP+ ports are \"dual speed\" (1000BASE/10GBASE, auto-negotiating) and double as physical stacking ports when not used as uplinks; graded eth-10g reflecting their max capability. The 2 SFP-only ports are 1000BASE (eth-1g). Console port is RJ-45 (not USB or DB9). Rear-panel AC receptacle is a standard IEC C14 inlet (internal power supply rated 100-240VAC 50/60Hz, 253W max, 2A max per rear silkscreen). No USB port exists on this model. 1U rack-mountable (440 x 210 x 44 mm), mounting brackets included in box.",
+  "ports": [
+    {
+      "name": "1-24 (10/100/1000BASE-T PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x RJ45 copper ports, 802.3af/at PoE+, up to 30W/port, 193W total PoE budget"
+    },
+    {
+      "name": "25-26 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x Gigabit SFP slots (1000BASE)"
+    },
+    {
+      "name": "27-28 (SFP+)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x dual-speed SFP+ slots (1000BASE/10GBASE); also usable as dedicated physical stacking ports"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 serial console/management port (not a data-carrying network port, so no eth grade set)"
+    },
+    {
+      "name": "AC Line",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC C14 AC inlet; internal supply rated 100-240VAC 50/60Hz, 253W max, 2A max"
+    }
+  ]
+}

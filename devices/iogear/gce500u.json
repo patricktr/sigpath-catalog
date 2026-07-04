@@ -1,0 +1,48 @@
+{
+  "manufacturer": "IOGEAR",
+  "model": "GCE500U",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://support.iogear.com/product/GCE500U",
+  "confidence": "high",
+  "notes": "Product is a two-piece USB VGA KVM console extender: one Local unit (at the console/user side) and one Remote unit (at the computer side); each physical unit is identical in port layout and is listed once here (duplicate the port set per unit if modeling both halves separately). The \"CPU Port\" is a proprietary SPHD-17 combo connector carrying VGA + 2x USB-A signaling to the host PC via IOGEAR's included custom KVM cable — modeled here as connector \"vga\" with accepts:[\"usb-a\"] since SPHD-17 is not in the allowed connector list and VGA is the closest physical/signal match. No bandwidth grade applies to any port (VGA and USB here are legacy/unspecified-version and RJ45 carries only KVM extension traffic, not a graded Ethernet data rate, per manufacturer docs). Power: external adapter, DC 5.3V/0.94A, barrel/DC-jack connector, one per unit (two adapters included in box). Not rack-mountable as a standard 19in rack unit height (each unit is ~1in x 5in x 3.375in desktop/mountable-bracket form factor); omitted rackUnits. Sources cross-checked: IOGEAR official support/spec page (support.iogear.com/product/GCE500U) and manufacturer installation manual (front/rear panel descriptions) at manualslib.com, plus manufacturer datasheet PDF hosted on Farnell confirming DC 5.3V power spec.",
+  "ports": [
+    {
+      "name": "CPU Port",
+      "direction": "output",
+      "connector": "vga",
+      "accepts": [
+        "usb-a"
+      ],
+      "note": "Proprietary SPHD-17 combo connector; connects via included USB KVM cable to the host computer's VGA + 2x USB-A ports"
+    },
+    {
+      "name": "Keyboard",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Console-side USB keyboard input"
+    },
+    {
+      "name": "Mouse",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Console-side USB mouse input"
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Extension (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "CAT5e/6 link between Local and Remote units, up to 500 ft"
+    },
+    {
+      "name": "Power Jack",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

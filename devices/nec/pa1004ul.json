@@ -1,0 +1,94 @@
+{
+  "manufacturer": "NEC",
+  "model": "PA1004UL",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.sharp-nec-displays.com/support/webdl/dl_service/data/projector/manual/PA1004UL_manual_ENG_USA.pdf",
+  "confidence": "high",
+  "notes": "Confirmed from official NEC/Sharp NEC User's Manual (PA1004UL-W/PA1004UL-B, PA804UL-W/PA804UL-B), Ver.1 6/20, plus ProjectorCentral spec table for HDMI version confirmation. Terminal panel and connector list apply identically to the -W (white) and -B (black) color variants and to the lower-lumen PA804UL sibling. HDMI confirmed as HDMI 2.0 w/ HDCP 2.2 per ProjectorCentral (manual states 4K/HDR/3D support + HDCP 2.2 but does not print \"2.0\" literally). DisplayPort data rate of 5.4/2.7/1.62 Gbps corresponds to DisplayPort 1.2 (HBR2); manual does not print the DP version number explicitly, so this is a close inference, not a direct quote. HDBaseT (RJ-45 IN and OUT) ports are not bandwidth-graded in the connector taxonomy provided (no HDBaseT grade scale exists), so grade is omitted for them; they support up to 4K/HDR/3D at up to 300 MHz pixel clock over 100BASE-TX. Ethernet/LAN RJ-45 port supports 10BASE-T/100BASE-TX (eth-100m). No dedicated composite/component RCA jacks - the 15-pin mini D-Sub also accepts component (YPbPr) via adapter, so it is not a separate port. USB-A port is service/firmware-update only (not a full USB host for playback) but is wired as a generic USB-A port; direction set to bidirectional per instruction (USB host ports = bidirectional). PC Control uses a D-Sub 9-pin (RS-232) connector. 3D Sync uses a Mini DIN 3-pin connector, mapped to the closest available connector id (midi-din) since no dedicated mini-DIN-3 id exists - noted as an approximation. AC power inlet type is not explicitly pictured/labeled with a connector standard in the manual (it just shows \"supplied power cord's three-pin plug\"); given the 100-240V/750-845W rating and typical NEC installation-projector design, this is a standard IEC C13/C14 inlet - set as iec with medium confidence for that one port. Rack units omitted: this is a desktop/ceiling-mount projector, not rack-mountable. Lens is sold separately (bayonet-mount, multiple options) and is not counted as a port.",
+  "ports": [
+    {
+      "name": "HDMI 1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "COMPUTER IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin; also accepts analog RGB or component (YPbPr) video"
+    },
+    {
+      "name": "COMPUTER AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "HDBaseT IN/Ethernet",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT video/audio input over RJ-45, 100BASE-TX; supports 4K/HDR/3D, up to 300 MHz pixel clock; no HDBaseT grade tier applies"
+    },
+    {
+      "name": "HDBaseT OUT/Ethernet",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "HDBaseT video/audio loop-through output for daisy-chaining projectors, 100BASE-TX"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dedicated network control port, 10BASE-T/100BASE-TX"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Service/maintenance port"
+    },
+    {
+      "name": "PC CONTROL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin serial control port"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack for wired remote control"
+    },
+    {
+      "name": "3D SYNC",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Mini DIN 3-pin, 5V/10mA sync output for 3D emitter; closest available connector id, not an exact match"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC 50/60Hz; three-pin power cord inlet, exact IEC connector class (C13/C14 vs C19) not explicitly pictured in manual"
+    }
+  ]
+}

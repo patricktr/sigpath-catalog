@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Haivision",
+  "model": "Makito X4 Decoder Appliance",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.rikei.co.jp/wp/wp-content/uploads/download/DS_Haivision-Makito-X4-Decoder.pdf",
+  "confidence": "high",
+  "notes": "Single-blade standalone appliance form factor (models S-MX4D-SDI4 / S-MX4D-SDI4-UHD), per official Haivision datasheet HVS-DS-MX4D-200601 (rear-panel photo + full techspecs table). Video outputs are 4x BNC labeled SDI 1-4, individually supporting SD-SDI through 12G-SDI (12G-SDI used for single UHD/4K output; 4x 3G-SDI used for up to four independent HD outputs) - grade set to sdi-12g as the connector's maximum supported grade. Audio is embedded within the SDI signal (SMPTE 272M/299M), not a discrete connector, so no separate audio port exists. No HDMI, USB, or serial/RS-232 control ports are present on this appliance - management is IP-only (HTTPS, SSH/Telnet, SNMP v3) via the RJ45 network port. The SFP+ cage is present on the rear panel but datasheet marks it \"future use\" as of this firmware revision - included here as it is a physical port. Power is an external DC power adapter (not shown as IEC/mains on the unit itself) - datasheet specifies 12VDC/18W for the single-blade appliance; the physical connector is a locking round DC connector (commonly cited as a Conxall-style 3-pin locking DC jack per Haivision accessory/parts references), which does not have an exact match in the given connector list - mapped to the closest available option, dc-barrel. Note: a separate \"Rugged\" Makito X4 variant uses a different Hirose 4-pin +28V connector - that does not apply to this standard single-blade appliance. Category was set to \"converter\" (encoder/decoder appliance) since \"Encoder/Decoder\" type is not in the category enum list; type is set to \"Encoder/Decoder\" which is the correct type match. Rack units omitted per instructions since this is a compact desktop/tabletop appliance (21mm H x 129mm W x 196mm D) rather than a rack-mount unit by itself (it can optionally slot into a 1RU 6-blade or 4RU 21-blade chassis sold separately).",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP+",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G SFP+ cage present on rear panel; datasheet marks it for future use as of this firmware revision"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12VDC/18W power adapter via locking round DC connector; closest catalog match to the actual locking DC jack (commonly a Conxall-style 3-pin connector per Haivision parts references)"
+    }
+  ]
+}

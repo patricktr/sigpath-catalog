@@ -1,0 +1,47 @@
+{
+  "manufacturer": "ViewSonic",
+  "model": "LS740HD",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.viewsonic.com/media/wysiwyg/press-room/connect-collaborate-learn-mexico-24/Datasheet-LS740HD.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer datasheet and product page confirm 2x HDMI 1.4 (HDCP 1.4), 1x USB 2.0 Type-A (also functions as 5V/1.5A power-out for wireless HDMI dongles), 1x 3.5mm audio out, 1x RS-232 (DB-9, per ProjectorCentral) for control, and no VGA, Ethernet/LAN, or SDI ports (absence confirmed identically across ViewSonic's own product page and datasheet PDF, and ProjectorCentral). AC power inlet connector type (IEC C13/C14) is inferred from typical construction for a 210W desktop/ceiling-mount projector of this class — not explicitly labeled as IEC vs. captive cord in any source consulted, so marked with medium confidence internally though overall device confidence remains high given the completeness of the I/O list. Desktop/ceiling-mount unit — not rack-mountable, so rackUnits omitted. No audio input jack is listed (audio-out and internal 15W speaker only).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Also provides 5V/1.5A power output for wireless HDMI/streaming dongles"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 control port"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V 50/60Hz AC, 210W typical consumption; connector type inferred as standard IEC inlet, not explicitly confirmed in sources"
+    }
+  ]
+}

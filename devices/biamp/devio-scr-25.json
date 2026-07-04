@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Biamp",
+  "model": "Devio SCR-25",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_devio_scr-25_may21.pdf?sfvrsn=66b9199b_16",
+  "confidence": "high",
+  "notes": "No product called \"SCX-25\" exists in Biamp's lineup; the request has been fulfilled against the actual Biamp product \"Devio SCR-25\" (a desktop conferencing hub), which is the closest real match — Biamp's SCX series (SCX-400/SCX-800) are rack-style conference room hubs with a completely different, network/AVB-based I/O set, so SCX-25 is not simply a naming variant of either family. All ports below are sourced from Biamp's official SCR-25 data sheet (back-panel diagram, front-panel diagram, and Architects & Engineers spec section), DEVDS-506-2105-EN-R1. HDMI Input is HDCP 1.4, supports up to 3840x2160@30Hz (2160p only on Output Port 1); no HDMI version (1.4/2.0/2.1) is explicitly stated in the datasheet, so grade is omitted for HDMI ports rather than guessed. USB ports are stated as USB 3.0 Type-A (front x2, rear x1) and USB Type-B (front, host-facing upstream port, functions as USB Class 1 Audio device) — USB version for the Type-B port is not explicitly stated, so no grade was assigned to it; the Type-A ports are graded usb-5g (USB 3.0/3.1 Gen1 = 5Gbps) per the datasheet's explicit \"USB 3.0\" callout. RJ-45 network port has no stated Ethernet speed in the datasheet (only \"RJ-45 with Ethernet cable, Cat 5e and above\"), so grade is omitted rather than assumed. The second RJ-45 port is a proprietary Beamtracking microphone input (RJ-45 connector per A&E spec) — not a network/data Ethernet port — so it is modeled as input-only with no eth grade. Power input is a 4-pin locking DC connector (24V DC, 2.5A/60W external supply); no connector ID in the allowed list exactly matches Biamp's proprietary 4-pin locking barrel-style DC connector, so xlr4-dc was chosen as the closest analog (4-pin DC power connector) — actual physical connector is a proprietary locking DC barrel plug, not true XLR. Headset jack is a 4P4C (RJ9-style) telephony connector; no exact match exists in the allowed connector list, so it was omitted from ports rather than mis-tagged (closest would be rj45 but that is inaccurate enough to mislead on cabling — noting here per instructions). Speaker terminal block output (+/-) for the built-in 20W amplifier is modeled as euroblock (closest match to a captive screw-terminal block).",
+  "ports": [
+    {
+      "name": "USB Type B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front panel; host connection to Windows/Mac computer; USB Class 1 Audio device"
+    },
+    {
+      "name": "USB (front, left)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel USB 3.0 Type-A"
+    },
+    {
+      "name": "USB (front, right)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel USB 3.0 Type-A"
+    },
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Front panel; HDCP 1.4; up to 3840x2160@30Hz"
+    },
+    {
+      "name": "24V DC",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "External 24V DC 2.5A (60W) power supply via 4-pin locking connector; closest available connector id to Biamp's proprietary 4-pin locking DC barrel plug"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45, Cat5e or above; software configuration/control; no stated Ethernet speed grade in datasheet"
+    },
+    {
+      "name": "Speaker",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Terminal block output from built-in 20W amplifier (+/-); closest match to Biamp's captive screw terminal"
+    },
+    {
+      "name": "Line Out L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Analog audio output, left channel"
+    },
+    {
+      "name": "Line Out R",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Analog audio output, right channel"
+    },
+    {
+      "name": "Mic",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ-45 connector for Beamtracking microphone input (proprietary, not network data)"
+    },
+    {
+      "name": "HDMI Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Rear panel; supports pass-through display connection; HDCP 1.4"
+    },
+    {
+      "name": "HDMI Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Rear panel; second display output (DisplayLink USB video used for dual-monitor mode instead of this port in some configs); HDCP 1.4"
+    },
+    {
+      "name": "USB (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear panel USB 3.0 Type-A"
+    }
+  ]
+}

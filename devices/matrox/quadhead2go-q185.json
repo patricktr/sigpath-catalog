@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Matrox",
+  "model": "QuadHead2Go Q185",
+  "category": "converter",
+  "sourceUrl": "https://avlgear.com/products/matrox-q2g-dp4k-quadhead2go-q185-multi-monitor-controller-appliance",
+  "confidence": "medium",
+  "notes": "This is the Q185 \"Appliance\" (standalone, system-independent) variant, model Q2G-DP4K. Matrox also sells a \"Card\" variant (PCIe card, Mini DisplayPort input, no independent power/Ethernet) — not covered here since the request implies a standalone physical device. Matrox's own site (video.matrox.com) blocked automated fetching (403), so specs are sourced from a reputable AV retailer (AVLGEAR) whose spec table mirrors Matrox's published data, cross-checked against additional web sources. Power connector is a locking 4-pin DIN (\"DIN4\") on an external 12VDC/42W power brick — mapped to the closest available connector id, dc-barrel, since a true DIN4 option isn't in the allowed list; note this in case a more precise id is later supported. Ethernet port is 10/100/1000 Base-T (gigabit-capable), graded eth-1g. DisplayPort input is full-size (not mini) on the appliance and is DisplayPort 1.2, accepting up to 4K60 or wide inputs like 7680x1080; graded dp-1.2. HDMI outputs are not explicitly version-labeled by the retailer source (max output 1920x1080/1920x1200 @60Hz per port), so no HDMI grade was assigned — omitting grade per instructions when version is unstated. No USB or RS232/control ports are present on this device per all sources checked.",
+  "ports": [
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12VDC, 3.5A, 42W power adapter via locking 4-pin DIN connector (DIN4); not a standard barrel jack, closest available connector id used"
+    }
+  ]
+}

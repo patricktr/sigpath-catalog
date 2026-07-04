@@ -1,0 +1,111 @@
+{
+  "manufacturer": "ATEN",
+  "model": "CE820",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://assets.aten.com/product/spec_sheet/ce820_extender_ds_en.pdf",
+  "confidence": "high",
+  "notes": "CE820 is a two-piece HDBaseT 2.0 KVM extender kit: CE820L (local/transmitter, connects to PC) and CE820R (remote/receiver, connects to monitor/peripherals), linked by a single Cat5e/6/6a or ATEN 2L-2910 cable via the HDBaseT RJ-45 ports on each unit (up to 100m at 4K, 150m at 1080p in Long-Reach mode). Ports from both units are listed together, labeled \"(Local)\"/\"(Remote)\". The RJ-45 Ethernet passthrough ports are only functional on the CE820-AT variant (not CE820-ATA); no line-rate is stated by ATEN so grade is omitted for the Ethernet and HDBaseT RJ-45 ports. USB ports are rated \"USB 2.0 full speed\" per datasheet, so usb-2.0 grade applied to the USB-B and USB-A ports. HDMI supports up to 4096x2160/3840x2160@60Hz(4:2:0) or @30Hz(4:4:4) with HDCP 2.2, but ATEN does not state an explicit HDMI spec version (1.4/2.0), so HDMI grade is omitted per instructions rather than guessed. RS-232 is DB-9 (mapped to rs232 connector, closest match for a 9-pin D-sub serial port). Desktop/tabletop units - no rack unit size specified (not natively rack-mountable without an optional bracket kit), so rackUnits omitted. Each unit uses an external DC power adapter via a locking DC barrel jack (CE820L: 5V/2.87W; CE820R: 5V/5.37W).",
+  "ports": [
+    {
+      "name": "HDMI In (Local)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB (Local)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio In (Local, Green)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Mic In (Local, Pink)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet (Local)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Functional on CE820-AT variant only; passthrough to CE820R Ethernet port"
+    },
+    {
+      "name": "RS-232 (Local)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "HDBaseT Out (Local)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Unit-to-unit HDBaseT 2.0 link to CE820R over Cat5e/6/6a or 2L-2910"
+    },
+    {
+      "name": "Power (Local)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC jack, external 5V adapter"
+    },
+    {
+      "name": "HDMI Out (Remote)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB 1 (Remote)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2 (Remote)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3 (Remote)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio Out (Remote, Green)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (Remote, Pink)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet (Remote)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Functional on CE820-AT variant only"
+    },
+    {
+      "name": "RS-232 (Remote)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "HDBaseT In (Remote)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Unit-to-unit HDBaseT 2.0 link from CE820L"
+    },
+    {
+      "name": "Power (Remote)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC jack, external 5V adapter"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Sharp/NEC",
+  "model": "NP-PA1705UL",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://sharp-displays.jp.sharp/support/webdl/dl_service/data/projector/manual/PA1705UL_manual_EN_v3.pdf",
+  "confidence": "medium",
+  "notes": "Model covers both NP-PA1705UL-B (black) and NP-PA1705UL-W (white) color variants; specs are identical between colors. This is a lens-interchangeable installation projector sold body-only (projection lens is a separate accessory, e.g. NP51ZL-NP56ZL), and is not rack-mountable (no rackUnits set; it is a table/ceiling-mount unit, 599 x 230/238 x 490 mm, 28.7 kg). Primary source used: Sharp NEC Display Solutions' official English User's Manual (PA1705UL_manual_EN_v3.pdf), \"Terminal Panel Features\" section (part names) and \"3-1. Specifications\" table (input/output connectors, power). Cross-checked against ProjectorCentral's NEC PA1705UL-B spec page and Sharp NEC's own sharpnecdisplays.us/business.sharpusa.com product-highlights copy (via search snippets; the live product pages redirected/404'd during fetch, so those URLs could not be used directly as sourceUrl). HDMI version is not printed literally as \"2.0\" in the manual text — it lists \"Type A x2, Deep Color, LipSync, HDCP, 4K\" — the hdmi-2.0 grade is inferred from the documented 4K/HDCP2.2 feature set and matches third-party spec aggregators (ProjectorCentral, search snippets) that explicitly list \"HDMI 2.0\". HDBaseT ports are graded eth-100m because the manual specifies control operates over 100BASE-TX; actual HDBaseT video throughput exceeds typical RJ45 grades and doesn't map cleanly onto the Ethernet grade scale, so treat this grade as a rough proxy rather than a literal link-speed rating. The AC IN connector's exact IEC sub-type (most likely C19/C20 given current draw) is not explicitly named in either the user manual or the installation manual text extracted; this is the largest confidence gap. USB port is control-only (mouse input, and provides 5V/1.4A power out) rather than a general host/data port, but is coded bidirectional per the connector-type convention for USB-A.",
+  "ports": [
+    {
+      "name": "HDMI 1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A, Deep Color, HDCP 2.2/1.4, supports 4K signal"
+    },
+    {
+      "name": "HDMI 2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A, Deep Color, HDCP 2.2/1.4, supports 4K signal"
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD/SD-SDI, BNC x1, 2ch embedded audio"
+    },
+    {
+      "name": "HDBaseT IN",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Video/audio/control input, 100BASE-TX, Deep Color, HDCP 2.2/1.4, 4K; also used for daisy-chaining"
+    },
+    {
+      "name": "HDBaseT OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Outputs incoming HDMI1/HDMI2/HDBaseT IN signal for daisy-chain to another HDBaseT receiver/projector"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack, common to all input signals"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Type A, for USB mouse menu navigation; 5.0V/1.4A power supply. Not a general data-transfer host port"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX, Art-Net, PJLink class2 network/control port"
+    },
+    {
+      "name": "PC CONTROL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin, RS232C serial control"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack, wired remote control input"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Detachable 3-pin power cord terminal with cable clamp/stopper. Manual does not print the exact IEC sub-type; C19/C20-class inferred because rated input current (12.8A @ 100-130V) exceeds the 10A limit of C13/C14, and the printed power-cord spec requires '15A or higher'."
+    }
+  ]
+}

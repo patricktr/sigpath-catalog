@@ -1,0 +1,25 @@
+{
+  "manufacturer": "QSC",
+  "model": "TSC-101-G3",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/dn/touchscreen_controller_peripherals/q_dn_qsys_tsc-g3_specs.pdf",
+  "confidence": "high",
+  "notes": "Desktop/wall-mount touch panel, not rack-mountable (rackUnits omitted). Manufacturer spec sheet (QSC TSC-G3 Series datasheet, comparing TSC-50-G3/TSC-70-G3/TSC-101-G3) lists only two physical I/O connectors for TSC-101-G3: 1x RJ45 (1 Gbps LAN, PoE+ Class 4 for power) and 1x USB Type-C (USB 3.1, spec sheet marks it \\\"for future use\\\"). Q-SYS Help hardware page (help.qsys.com) corroborates: RJ45 with PoE/PoE+ in, and USB Type-C supporting audio/video bridging to/from Q-LAN (USB 3.0 supported; USB 2.0 not supported by default for video bridging). No dedicated power jack — power is delivered exclusively via PoE+ over the RJ45 port. No analog audio or other connectors are present on this touch-panel device. USB 3.1 Gen 1 is electrically equivalent to USB 3.0 (5 Gbps), mapped to usb-5g grade.",
+  "ports": [
+    {
+      "name": "LAN (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Also the power input: Power over Ethernet, PoE+ Class 4"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Type-C; listed by QSC as \"for future use\" (USB video/audio bridging to/from Q-LAN per Q-SYS Help documentation)"
+    }
+  ]
+}

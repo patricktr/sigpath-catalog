@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Meyer Sound",
+  "model": "UP-4XP",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/Meyer%20Sound%20UP-4XP%20Data%20Sheet.pdf",
+  "confidence": "high",
+  "notes": "Source is the official Meyer Sound factory datasheet (doc# UP-4XP — 04.201.004.02 A2, Copyright Meyer Sound Laboratories Inc.), mirrored on av-iq.com's CDN; content matches Meyer Sound's own docs.meyersound.com documentation ecosystem. The UP-4XP is a legacy/older UltraSeries product (now largely superseded by the UP-4slim) but remains a real, documented, still-listed product (meyersound.com/product/up-4xp/, meyersound.com/download/up-4xp-resources/).\n\nPhysical I/O: the UP-4XP has exactly ONE physical connector on the enclosure — a single 5-pin male connector, available in either Phoenix or sealed SwitchCraft EN3 style, per the datasheet: \"Phoenix 5-pin male or EN3 5-pin male (3 pins for balanced audio, 2 pins for DC power).\" Pinout: Pin1 = 48VDC-, Pin2 = 48VDC+, Pin3 = chassis/earth (ground-lift network), Pin4 = Signal-, Pin5 = Signal+. There is no separate AC mains inlet (unit is self-powered/active but draws DC, not AC, requiring an external Meyer Sound MPS-488/MPS-482HP rack power supply) and no loop-through/link output connector — daisy-chaining is done externally at the power-supply/distribution end, not via a port on the speaker itself.\n\nConnector-id caveat: none of the listed enum values exactly represents a locking 5-pin Phoenix/EN3 combo audio+DC connector. I used \"euroblock-dc\" as the closest match (Phoenix connectors are a euroblock-style captive/screw connector family) rather than \"xlr4-dc\" since the real connector is 5-pin Phoenix/EN3, not XLR. Retailer variants exist as separate SKUs distinguished only by which of the two connector styles is fitted (e.g. UP-4XP-5 = 5-pin Phoenix/locking type per Full Compass, UP-4XP-3 = EN3 3-pin... naming conventions vary by reseller and were not needed since the base UP-4XP model spec covers both options). No grade applies to this connector per the rules (not in the SDI/HDMI/DP/USB/RJ45 graded families). Category/type: closest fit is \"audio\"/\"Speaker\" (a self-powered loudspeaker); rackUnits omitted as this is a surface-mount/pole-mount loudspeaker enclosure, not rack gear.",
+  "ports": [
+    {
+      "name": "Audio/Power In",
+      "direction": "bidirectional",
+      "connector": "euroblock-dc",
+      "note": "Single locking 5-pin Phoenix (or sealed SwitchCraft EN3) male connector carrying 3 pins of balanced analog audio input plus 2 pins of 48V DC power input in one combo connector. Not a true screw-terminal Euroblock or XLR; 'euroblock-dc' is the closest available id for a locking multi-pin audio+DC combo connector. Direction set to bidirectional only to reflect the mixed audio-in/power-in nature of the single physical connector; functionally the audio pins are input-only and the DC pins are power input-only."
+    }
+  ]
+}

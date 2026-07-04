@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Bosch",
+  "model": "DCNM-MMD2",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/DCNM-MMD2_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Primary source: Bosch official datasheet (cdn-docs.av-iq.com/dataSheet/DCNM-MMD2_Datasheet.pdf, Bosch doc 19435453835 V3, Nov 2016), cross-checked against Bosch's DICENTIS Hardware Installation Manual (cdn-docs.av-iq.com/other/DCNM-D_Installation_Manual.pdf, V1.4 Sep 2016) - both are Bosch's own PDFs mirrored on av-iq.com's document CDN. Datasheet 'Interconnections' section lists: socket for pluggable microphone, 2x RJ45 (system comms + PoE power, 48 Vdc IEEE 802.3at Type 2), and a 3.5 mm stereo jack for headphones/external mic/headset mic. The installation manual's bottom-view diagram additionally confirms a USB connector 'for future use' present on DCNM-MMD/DCNM-MMD2 only (not on the non-multimedia DCNM-D variants). No dedicated AC/DC power-in port exists - power is delivered entirely via PoE on the RJ45 ports. Device is a tabletop conference-seat unit (75 x 312 x 175 mm), not rack-mountable, so rackUnits is omitted. The microphone socket connector type is not in the allowed connector list (it is Bosch's proprietary DICENTIS mic connector); euroblock was chosen as the closest generic pluggable-socket analog - low-confidence mapping caveat. USB port physical sub-type and speed grade are undocumented in either source, so usb-a is a best guess and no grade is set. Category/type mapped to 'control'/'Control processor' as the closest fit for a conference-seat endpoint device in this taxonomy (not primarily a display, switcher, or audio-DSP device, though it has audio I/O and a touchscreen).",
+  "ports": [
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "System communication + PoE power (IEEE 802.3at Type 2, 48 Vdc). Two RJ45 ports allow daisy-chain or star (PoE switch) topology; DICENTIS system network runs at 100 Mbps."
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Second RJ45 for daisy-chain loop-through; same system communication + PoE power as Network 1."
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Proprietary pluggable-microphone socket for DICENTIS gooseneck microphones (DCNM-HDMIC/MICS/MICL); not a standard connector type in the allowed list, mapped to closest analog (locking multi-pin socket, mic+cable sold separately)."
+    },
+    {
+      "name": "Headphone/Mic",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm stereo jack for headphones, external microphone, or headset microphone with integrated mic (headphone output + mic input combined on one jack)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled simply 'USB connector, for future use' in Bosch's Hardware Installation Manual; exact USB revision/speed and physical sub-type are not stated, so grade is omitted and connector type is a best guess based on typical full-size USB-A port on this device's bottom panel."
+    }
+  ]
+}

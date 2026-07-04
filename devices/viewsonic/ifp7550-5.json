@@ -1,0 +1,103 @@
+{
+  "manufacturer": "ViewSonic",
+  "model": "IFP7550-5",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.viewsonic.com/global/products/sheet/IFP7550-5",
+  "confidence": "high",
+  "notes": "75-inch 4K interactive flat panel (Gen 5 ViewBoard). Ports and specs sourced from ViewSonic's own global datasheet and the manuals.viewsonic.com Full Guide/Connecting Devices pages. HDMI 1/2/3 are inputs (HDMI1 supports CEC/ARC); HDMI OUT is a separate mirror/loop-through output. USB Type A total is 6 (2x USB2.0 + 4x USB3.0); ports are unlabeled individually by number in the datasheet so a single representative USB-A entry is used with a note on the total count. TOUCH 1 and TOUCH 2 are USB Type-B \"touch-back\" ports that send touch data to an externally connected PC via HDMI1/2 and HDMI3 respectively - functionally bidirectional data ports, connector is USB-B. USB Type-C supports DP1.2 alt-mode video, USB2.0 data, 65W Power Delivery, and 100M Ethernet passthrough - graded here as usb-2.0 per its stated USB data spec (DP video alt-mode has no separate grade field available for combo ports). RJ45 LAN is 10/100/1000M (dual RJ45 ports). AC IN connector type (IEC C13/C14 vs other) is not explicitly stated on the pages retrieved; assumed standard IEC (C13/C14) inlet given the panel ships with a 3m detachable power cord - this is inferred, not directly confirmed, hence flagged. Internal OPS (Open Pluggable Specification) slot for an optional embedded PC module exists but is an internal card-bay, not an external cable port, so it is omitted from the port list. Also present but omitted as non-cabling controls: IR remote receiver, power switch, physical menu buttons, built-in WiFi module slot.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports CEC/ARC; 4K@60Hz, HDCP2.2"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "4K@60Hz, HDCP2.2"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "4K@60Hz, HDCP2.2"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through/mirror output, 4K@60Hz"
+    },
+    {
+      "name": "USB Type C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "DP1.2 video alt-mode, USB2.0 data, 65W Power Delivery, 100M Ethernet passthrough"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Datasheet lists 4x USB 3.0 (5Gbps) Type-A ports; represented once here"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Datasheet lists 2x USB 2.0 Type-A ports; represented once here"
+    },
+    {
+      "name": "TOUCH 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Touch-signal return to external PC; pairs with HDMI 1 and HDMI 2 video inputs"
+    },
+    {
+      "name": "TOUCH 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Touch-signal return to external PC; pairs with HDMI 3 video input"
+    },
+    {
+      "name": "SPDIF",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical digital audio output"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Earphone/line audio output to external speaker"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000M RJ45; two LAN ports present on datasheet (RJ45 x2)"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control interface; RS232 adapter included in box"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Main AC power input; ships with 3m detachable power cord. Exact IEC inlet variant (C13/C14) not explicitly confirmed on retrieved pages - inferred from cord-based power delivery."
+    }
+  ]
+}

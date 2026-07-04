@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "PT-RQ35K",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/rq35k_spec_en_2.pdf",
+  "confidence": "high",
+  "notes": "PT-RQ35K is a 35,000 lm 3-chip DLP laser projector (no lens included; sold body-only). Only base-unit built-in terminals are listed above. It also has two \"SLOT\" expansion bays (SLOT NX spec) accepting optional Interface Boards not present by default: ET-MDNHM10 (2x extra HDMI, HDCP2.2), ET-MDNDV10 (2x DVI-D), ET-MDNDP10 (2x DisplayPort), ET-MDN12G10 (12G-SDI, 2x in + 2x in/out, SMPTE ST2082), and ET-MDNFB10 (12G-SDI optical). These are not included in the port list since they are optional add-in cards, not standard physical I/O. HDMI IN and DIGITAL LINK grades were left unset/limited because the datasheet specifies dot-clock/resolution/HDCP version but never an explicit HDMI revision number; DIGITAL LINK and LAN grade set to eth-100m per their stated 100Base-TX/10Base-T ceiling (no Gigabit). Weight approx. 69.8 kg (154 lbs), dimensions 598x353x780mm; power: single-phase AC100-120V or AC200-240V, 50/60Hz, max 2550W, standby 14W. Not rack-mountable (ceiling/floor/rear/360-degree installation projector) so rackUnits omitted. Confidence is high: source is Panasonic's own official EU spec-sheet PDF (dated Feb 2025, doc RQ35KG_STW_07_10/02/2025), terminals section fully itemized with exact on-device labels.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.2, Deep Color compatible; dot clock up to 594 MHz (4096x2160/60p); spec sheet does not state an HDMI version number so no grade set"
+    },
+    {
+      "name": "DIGITAL LINK",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "HDBaseT-compliant long-reach video/control/network input, 100Base-TX; carries HDMI-equivalent signal (HDCP2.2, Deep Color) over Cat cable"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Network control port, PJLink class 2, 10Base-T/100Base-TX, Art-Net compatible"
+    },
+    {
+      "name": "MULTI PROJECTOR SYNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "TTL high impedance, for synchronizing multiple projectors"
+    },
+    {
+      "name": "MULTI PROJECTOR SYNC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "TTL output, max 10 mA"
+    },
+    {
+      "name": "SERIAL IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (female), RS-232C compliant, external control"
+    },
+    {
+      "name": "SERIAL OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (male), RS-232C compliant, external control loop-through"
+    },
+    {
+      "name": "REMOTE 1 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini jack, for wired remote control / projector connection control"
+    },
+    {
+      "name": "REMOTE 1 OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini jack, for wired remote control / projector connection control"
+    },
+    {
+      "name": "REMOTE 2 IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (female), for contact control (dry-contact, not RS-232 data, but D-sub 9 pin female is closest listed connector id)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A, for optional AJ-WM50 wireless module or USB memory stick"
+    },
+    {
+      "name": "DC OUT 1",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "USB Type-A, power-only output (DC 5V, 2A total shared across DC OUT 1/2), no data"
+    },
+    {
+      "name": "DC OUT 2",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "USB Type-A, power-only output (DC 5V, 2A total shared across DC OUT 1/2), no data"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive/hardwired 3.0m power cord (not a detachable IEC inlet). Region/voltage dependent plug: NEMA L6-30 (200-240V/30A) or standard NEMA 15A/125V plug (100-120V); nema-5-15 chosen as closest listed id for a captive-cord AC inlet"
+    }
+  ]
+}

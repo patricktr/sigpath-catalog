@@ -1,0 +1,85 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "XMV4140",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://saleswl.com/wp-content/uploads/2020/01/Yamaha_XMV4140-4-Channel-Amplifier_Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Official Yamaha Technical Data Sheet (Dec 2017). This is the YDIF-model variant (plain \"XMV4140\"); a Dante variant \"XMV4140-D\" exists with Dante primary/secondary etherCON-style RJ45 ports in place of/in addition to YDIF and is a separate SKU, not modeled here. Line Input is 2x 6-pin Euroblock connectors, each carrying 2 balanced channels (3 pins per channel: +, -, GND) — modeled here as 4 individual balanced line inputs to match per-channel port granularity. Speaker Output is 4 pairs of screw/barrier-strip terminals (channels A-D), modeled as euroblock (closest listed connector to a barrier/terminal strip; datasheet literally calls it \"Barrier strip x 4 pairs,\" which is not in the allowed connector list). REMOTE and FAULT OUTPUT are two separate 3-pin Euroblock connectors per the Architectural & Engineering spec text (datasheet's compact table lists them together as \"Euroblock (3P) x1\" but the prose spec clarifies there are two). Network port confirmed as 100BASE-TX (fast ethernet) in the A&E spec text, hence eth-100m grade. YDIF RJ45 ports carry proprietary digital audio (16ch + word clock) over Cat5 — no standard Ethernet speed grade applies, so grade omitted (not an eth-XXX graded link). AC power inlet type (IEC C14) was not explicitly stated as \"IEC\" in the datasheet text (it only states universal 100-240V, 50/60Hz) but is inferred from the standard rear-panel photo/dimension drawing showing a standard IEC inlet, consistent with this Yamaha amplifier class; treat as medium-confidence for the connector subtype only.",
+  "ports": [
+    {
+      "name": "INPUT 1/2 (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin Euroblock, balanced, covers channel 1 and 2 inputs (+/-/GND per channel)"
+    },
+    {
+      "name": "INPUT 3/4 (Euroblock)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin Euroblock, balanced, covers channel 3 and 4 inputs (+/-/GND per channel)"
+    },
+    {
+      "name": "YDIF IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary YDIF digital audio format, up to 16ch audio + word clock over Cat5; not standard Ethernet"
+    },
+    {
+      "name": "YDIF OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Proprietary YDIF digital audio format, up to 16ch audio + word clock over Cat5; not standard Ethernet"
+    },
+    {
+      "name": "SPEAKERS A",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier/screw terminal strip pair, channel A speaker output"
+    },
+    {
+      "name": "SPEAKERS B",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier/screw terminal strip pair, channel B speaker output"
+    },
+    {
+      "name": "SPEAKERS C",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier/screw terminal strip pair, channel C speaker output"
+    },
+    {
+      "name": "SPEAKERS D",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier/screw terminal strip pair, channel D speaker output"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock, remote control input"
+    },
+    {
+      "name": "FAULT OUTPUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin Euroblock, fault status output"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX Ethernet, for PC/MTX-MRX Editor/Amp Editor control connection"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal AC power inlet, 100V/120V/230-240V, 50/60Hz; connector subtype (IEC C14) inferred from product class, not explicitly named in datasheet text"
+    }
+  ]
+}

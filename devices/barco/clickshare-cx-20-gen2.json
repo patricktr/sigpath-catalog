@@ -1,0 +1,45 @@
+{
+  "manufacturer": "Barco",
+  "model": "ClickShare CX-20 (Gen2)",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://assets.barco.com/asset/52aba0a0-3178-4d29-8110-c76769b72b09/ClickShare-CX-20-en-Spec-sheet.pdf",
+  "confidence": "medium",
+  "notes": "Official Barco spec sheet (PDF, last updated 19 Jun 2026) confirms: Video output 4K UHD (3840x2160)@30Hz via HDMI 1.4b or USB-C DisplayPort 1.2 (Gen2 only); Connections: 1x Ethernet LAN 1Gbit, 1x USB-C 2.0 + 1x USB-A 2.0 (front, Gen1) — Gen2 only: 1x USB-C 3.0 + 1x USB-A 3.0 (front); Power supply: standard 110/220V AC plug or USB-C (Gen2 only); Power consumption 5-10W operational, 24W max; Kensington lock present (not modeled as a signal/power port). This device is a small desktop conferencing puck (34x135x135mm, 900g) — no rackUnits (desktop, omitted). The spec sheet does not explicitly name the DC input connector type; barrel-connector inference is corroborated by Barco's spare-parts listing of a 12VDC/2A external power adapter (B563182K) shared across the C-5/C-10/CX-20/CX-30 family, but the primary source does not show a rear-panel diagram confirming barrel vs other DC connector shape, hence medium confidence. HDMI is output-only from the base unit (there is no HDMI input on this model — video comes wirelessly/via USB-C from a laptop, not via HDMI in). Ports reflect the current Gen2 hardware (shipping variant as of search date); Gen1 units instead have USB-C 2.0 + USB-A 2.0 and no USB-C DisplayPort/power option. Barco's own product/support pages (barco.com/en/product/clickshare-cx-20 and the installation manual) returned HTTP 403 to automated fetch and could not be used directly to cross-check the rear-panel silkscreen labels.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Video output to room display, 4K UHD @30Hz; HDMI 1.4b per spec sheet"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Gen2: USB-C 3.0 (front); also supports DisplayPort 1.2 alt-mode video output and can accept USB-C power input (Gen2 only)"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Gen2: USB-A 3.0 (front); Gen1 units have USB-A/USB-C 2.0 instead"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1x Ethernet LAN 1Gbit"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter (12VDC per Barco spare-parts listing B563182K); spec sheet lists supply as \"Standard 110/220V AC plug or USB-C (only Gen2)\" — the AC plug feeds an external brick that outputs DC via barrel connector into the base unit; USB-C port can alternatively power the unit on Gen2."
+    }
+  ]
+}

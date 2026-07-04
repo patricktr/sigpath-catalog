@@ -1,0 +1,75 @@
+{
+  "manufacturer": "JVC",
+  "model": "KY-PZ400",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://manuals.jvckenwood.com/download/files/B5A-4107-00.pdf",
+  "confidence": "high",
+  "notes": "Source: official JVC instruction manual B5A-4107-00 (covers KY-PZ400NWU/NWE/NBU/NBE and KY-PZ200 series), Names of Parts (p.16) and Specifications/Terminal Section (p.46), cross-checked against jvc.com US/UK/EU/India product pages (all consistent). This manual is shared across the PZ400 and PZ200 series; features/ports tagged \"200N/200\" in the manual are PZ200-only and were excluded — notably the USB 3.0 (USB-B) terminal is PZ200-series only, so KY-PZ400 has USB 2.0 (USB-A) only. RS-232 IN/OUT and the video/tally rear jacks use 8-pin mini-DIN connectors; the connector enum has no mini-DIN option, so \"midi-din\" (5-pin MIDI DIN) was chosen as the closest available id — physically it is an 8-pin mini-DIN, not a MIDI/audio connector. RS-485 is a 2-pin Phoenix captive-screw terminal block; mapped to \"euroblock\" as the closest available id. LAN port PoE input is rated \"DC 37 to 57V\" per the spec table; JVC's Main Features page separately states the camera supports \"dual power supply (PoE and DC IN 12V)\" and marketing pages describe it as PoE+ (802.3at, 42-57V) while the base standard PoE range (37-48V, 802.3af) is also covered — treated here simply as PoE over the RJ45 Ethernet port. HDMI is stated to output up to \"2160/30p,25p\" with no explicit HDMI version number in the manual; grade hdmi-2.0 is inferred from JVC's own product marketing pages (jvc.com/usa and uk.jvc.com) which explicitly list \"HDMI 2.0\". No genlock, tally-GPIO, or additional audio ports exist on this model. Camera ships with an external AC/DC adapter and a fixed captive DC 12V barrel-type power terminal on the unit (not a detachable IEC cord on the camera body itself).",
+  "ports": [
+    {
+      "name": "3G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "BNC type; supports 720p/1080i/1080p with embedded audio; 3G-SDI per SMPTE ST424, HD-SDI per SMPTE ST292"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A output; up to 2160/30p,25p (4K)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ-45; 10BASE-T/100BASE-TX/1000BASE-T; also supplies PoE power in (DC 37-57V)"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB-A type terminal, present on KY-PZ400 (USB 3.0/USB-B is a KY-PZ200-series-only feature, not on PZ400)"
+    },
+    {
+      "name": "RS232 IN",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "8-pin mini DIN; closest listed connector id is midi-din (physically an 8-pin mini DIN serial port, not MIDI). Supports Standard/Pelco-D/Pelco-P protocols"
+    },
+    {
+      "name": "RS232 OUT",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "8-pin mini DIN; closest listed connector id is midi-din. For daisy-chaining; Standard protocol network only"
+    },
+    {
+      "name": "RS485",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix (captive screw) terminal block; closest listed id is euroblock. Supports Standard/Pelco-D/Pelco-P protocols, half duplex"
+    },
+    {
+      "name": "LINE IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Φ3.5mm line audio input"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Φ3.5mm line audio output"
+    },
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "For use with supplied AC/DC adapter; JVC coaxial DC power jack. Camera also supports dual power via PoE on the LAN port"
+    }
+  ]
+}

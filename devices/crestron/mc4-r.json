@@ -1,0 +1,62 @@
+{
+  "manufacturer": "Crestron",
+  "model": "MC4-R",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.crestron.com/Products/Catalog/Control-and-Management/Control-System/Residential/MC4-R",
+  "confidence": "high",
+  "notes": "Authoritative source: Crestron's official product page and the 4-Series Control Systems technical reference manual (docs.crestron.com), both consistent. The MC4-R is PoE-powered (IEEE 802.3at Type 1 / 802.3af-compatible PD) via its RJ45 LAN port — there is no separate AC/DC power input connector on the unit. Several ports use 3.5mm detachable terminal blocks (Cresnet, RS-232 COM, Versiport, Relay, IR outputs); mapped to the closest available connector ids (euroblock for generic terminal blocks; ir for the dedicated IR-output terminal blocks; rs232 semantically describes the COM port's signal though its physical connector is also a 3-pin terminal block). Two ports could not be mapped to any id in the allowed connector list and are omitted from the ports array: (1) a microSD card slot (accepts up to 32GB, 4GB card included, for log storage) and (2) the infiNET EX RF antenna connector (2.4GHz ISM, IEEE 802.15.4). Ethernet is 100BASE-T/1000BASE-TX (graded eth-1g, the higher of the two supported speeds). USB is explicitly USB 2.0. This is a desktop/rack-convertible unit — it ships with rack ears and is 1RU rack-mountable but can also be freestanding or surface-mounted; rackUnits set to 1 since rack mounting is a supported explicit spec. A related model, MC4-R-I, exists with similar but not identical I/O — not covered here.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-T/1000BASE-TX Ethernet; also serves as PoE (IEEE 802.3at Type 1 / 802.3af-compatible, Class 0, 12.95W) powered-device input — no separate power connector on this unit"
+    },
+    {
+      "name": "CRESNET",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; Cresnet server port, provides up to 2.5W to Cresnet devices"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin 3.5mm detachable terminal block; bidirectional RS-232, up to 115.2k baud"
+    },
+    {
+      "name": "VERSIPORT",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin 3.5mm detachable terminal block; 2 digital I/O or analog input ports (0-24VDC digital / 0-10VDC analog)"
+    },
+    {
+      "name": "RELAY",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block; 2 normally-open isolated relays, 1A 30VAC/VDC"
+    },
+    {
+      "name": "IR 1-4",
+      "direction": "output",
+      "connector": "ir",
+      "note": "Two 4-pin 3.5mm detachable terminal blocks comprising 4 IR output ports, up to 1.2MHz; 4 IRP2 emitters included"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS mini-phone jack for connecting a CNXRMIRD IR receiver (RC-5 commands)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A host port for external storage (up to 1TB)"
+    }
+  ]
+}

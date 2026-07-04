@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Antelope Audio",
+  "model": "Zen Go Synergy Core",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1612757-REG/antelope_zen_go_synergy_core.html",
+  "confidence": "medium",
+  "notes": "Desktop bus-powered USB-C audio interface (4x8), not rack-mountable. Two combo inputs are labeled as Mic/Line/Hi-Z with switchable modes (XLR primary, accepts 1/4\" TRS). Monitor outputs are a mirrored pair: one balanced 1/4\" TRS stereo pair and one unbalanced RCA stereo pair carrying the same signal. Two stereo headphone outputs on 1/4\" TRS jacks (HP1 mirrors main monitor mix; HP2 is independently addressable for a separate cue mix). S/PDIF digital I/O is coaxial (RJ - mapped to RCA connector, the closest list match for coax S/PDIF). Two USB-C ports: one primary data+power port to host computer, one secondary port used only for supplemental bus power (e.g., from a USB charger, power bank, or mobile device) - modeled here as bidirectional USB-C ports since exact USB spec revision (USB 2.0 Hi-Speo vs higher) is not explicitly stated by the manufacturer; industry reviews describe it as a USB 2.0-class class-compliant interface, so grade omitted/estimated conservatively is not set to avoid an unconfirmed claim. No IEC/external PSU - unit is bus-powered only, no separate mains power connector exists. There is also a Thunderbolt variant (Zen Go TB Synergy Core) with identical analog I/O but a Thunderbolt connector instead of/alongside USB-C; this record covers the USB-C model. Could not access the manufacturer's own current product page directly (it appears to serve Zen Quadro content via that URL at time of research); relied on B&H's spec table, Sound on Sound's review, and ZenProAudio's listing, which are mutually consistent.",
+  "ports": [
+    {
+      "name": "Mic/Line/Hi-Z 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line/Hi-Z 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Monitor Out (Balanced)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Monitor Out (RCA)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "USB-C (Data/Power)",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    },
+    {
+      "name": "USB-C (Power)",
+      "direction": "input",
+      "connector": "usb-c"
+    }
+  ]
+}

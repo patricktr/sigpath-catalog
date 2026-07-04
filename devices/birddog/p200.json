@@ -1,0 +1,71 @@
+{
+  "manufacturer": "BirdDog",
+  "model": "P200",
+  "category": "source",
+  "sourceUrl": "https://birddog.tv/wp-content/uploads/2022/01/BirdDog_P200_User-Guide_NDI-5.pdf",
+  "confidence": "high",
+  "notes": "Also marketed as \"BirdDog Eyes P200\" (SKU BDP200B black / BDP200W white). Rear-panel port list and labels taken verbatim from BirdDog's official P200 User Guide (NDI 5, 2022), \"Camera Connections\" diagram, page 11, cross-checked against the manufacturer techspecs page (birddog.tv/p200-overview/p200-techspecs/) and B&H/retailer listings. The RS232 and RS-422 ports are both physically RJ45 jacks (adaptor cables to RS232 DB9 / RS422 terminal are included in box); the manual states the RS-422 port also carries RS485 (Pelco P/D) on the same RJ45, so it is modeled as one bidirectional control port. The network RJ45 carries NDI video/audio/control plus VISCA-over-IP and PoE+ (IEEE 802.3at) power-in; graded eth-1g since NDI over PTZ cameras of this era is specified for Gigabit Ethernet (manual: \"existing Gigabit Ethernet network\"). CVBS and 3G-SDI outputs are shown in the manual's rear-panel diagram as identical circular BNC-style jacks; CVBS connector type is inferred from the diagram (not an explicit text label) so treated as medium-confidence for that one port. HDMI explicitly specified as HDMI 1.4 in the manual. USB 2.0 port is firmware-upgrade only; manual diagram shows a small rectangular port consistent with USB Micro-B but exact sub-type is not labeled in text (low certainty on connector sub-type only, modeled as usb-micro / usb-2.0). This is a desktop/ceiling/wall-mount PTZ camera, not rack-mountable, so rackUnits is omitted. \"Camera\" is not in the provided type enum, so type is omitted; category set to \"source\" (media/video source device) as the closest fit.",
+  "ports": [
+    {
+      "name": "12VDC Power Port",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "USB 2.0 Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Firmware upgrade only"
+    },
+    {
+      "name": "RS232 Control Port (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45-to-RS232 adaptor cable included"
+    },
+    {
+      "name": "RS-422 Control Port (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45-to-RS422 adaptor cable included; manual also documents RS485/Pelco P-D control via this same port"
+    },
+    {
+      "name": "RJ45 Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "NDI video/audio/control, VISCA-over-IP, and PoE+ (IEEE 802.3at) power input"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo, unbalanced line level"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog stereo, unbalanced line level; mirrors Audio In"
+    },
+    {
+      "name": "HDMI Port",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "CVBS Video Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite video; connector type inferred from rear-panel diagram (drawn as a BNC-style jack identical in shape to the SDI output), not explicitly labeled as BNC in the text"
+    },
+    {
+      "name": "3G-SDI Video Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    }
+  ]
+}

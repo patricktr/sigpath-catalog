@@ -1,0 +1,221 @@
+{
+  "manufacturer": "Datavideo",
+  "model": "SE-3200",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://broadcaststoreeurope.com/upload_dir/shop/Datavideo-DSheet-SE-3200.pdf",
+  "confidence": "high",
+  "notes": "Extracted from Datavideo's official SE-3200 datasheet PDF (rear-panel I/O diagram + spec table), cross-checked against Markertek and B&H spec listings. Video I/O: 8x SDI in + 4x HDMI in (12 total inputs), 6x SDI out + 3x HDMI out (9 total outputs); one of the 6 SDI outputs is a fixed down-converted SD output, the rest are assignable (Multiview/PGM/PVW/inputs/stills/Flex). SDI is native 1080p60 (3G-SDI) per the datasheet overview (\"real Full native 1080p/60 (3G)\"); HDMI version/grade is not stated on any source I could find, so HDMI grade is omitted rather than guessed. Audio: 4x XLR balanced analog in (can alternatively carry 2x AES/EBU pairs per Markertek) and 2x XLR balanced analog out, plus embedded digital audio (2ch in/4ch out) - embedded audio is not a separate physical port. Control: single DB9 \"RS-232/422 REMOTE\" port is software-selectable between RS-232 and RS-422 (modeled as rs232 with rs422 in accepts); a separate front-panel DB9 \"CONSOLE\" port links the main unit to its detachable control-panel keyboard (not a general-purpose remote port). Tally output is a D-sub 25-pin connector; DB25 isn't in the provided connector enum, so it was mapped to \"rs232\" as the closest D-sub serial id - this is an approximation, not a literal serial port. GPI input is mentioned on some third-party listings but could not be confirmed on the official datasheet/rear-panel diagram, so it was omitted. Power: external DC power supply, 12V/69W, via a locking DC barrel connector (Datavideo's standard 5.5mm/2.5mm locking barrel per their power-adapter FAQ and store listing) - two power bricks (\"2x AD Switch DC 12V\") are included, likely one for the main unit and one for the control panel, but the datasheet only diagrams a single DC IN 12V jack on the main unit rear panel. Ethernet is used for DVIP control and MJPEG/H.264 streaming; no link-speed spec was published, so eth-100m is a reasonable but unconfirmed assumption for a switcher of this vintage (2022 datasheet revision). Dimensions: 433 x 312 x 76mm (control surface), 432 x 252 x 88mm (2RU main unit), 4kg total.",
+  "ports": [
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI IN 9",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 10",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 11",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 12",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 6 (Down-converted)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "One of the 6 SDI outputs is a fixed down-converted (SD) output; the remaining 5 are assignable HD-3G outputs."
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock/reference input (analog tri-level or black burst), loop-through"
+    },
+    {
+      "name": "REF OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Genlock reference loop-through output"
+    },
+    {
+      "name": "AUDIO IN 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog audio input; 4 total, can also carry 2x AES/EBU pairs"
+    },
+    {
+      "name": "AUDIO IN 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO IN 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO IN 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AUDIO OUT 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog de-embedded audio output; 2 total"
+    },
+    {
+      "name": "AUDIO OUT 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RS-232/422 REMOTE",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Software-selectable RS-232 or RS-422 on a single DB9 port; DB9-to-DB9 cable included"
+    },
+    {
+      "name": "CONSOLE",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Front-panel DB9 port connecting the main unit to the separate control-surface keyboard panel"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Used for DVIP remote control, MJPEG/H.264 streaming, and firmware updates; link speed not explicitly stated, assumed 100M-class control/streaming NIC"
+    },
+    {
+      "name": "USB FW UPGRADE",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB port for firmware upgrade only; USB version not specified"
+    },
+    {
+      "name": "GPI OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm GPI output jack"
+    },
+    {
+      "name": "TALLY OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "D-sub 25-pin dual-color tally output; DB25 not in the connector list, mapped to closest serial D-sub connector id"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input via external locking power adapter (2x 'AD Switch DC 12V' supplied, 69W); connector is a locking barrel/coaxial DC jack, not a standard AC inlet"
+    }
+  ]
+}

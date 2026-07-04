@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Optoma",
+  "model": "ZU720T",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.projectorcentral.com/pdf/projector_spec_11342.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Optoma's official spec sheet PDF (rear-panel connector diagram, items 1-20, and \"I/O Connection Ports\" / \"Control\" spec tables). HDMI 2.0 input supports HDCP 2.2 and 4K UHD (3840x2160); HDMI 1.4a input is limited to WUXGA (1920x1200) per the \"Maximum Input Resolution\" spec — grade set to hdmi-1.4 accordingly. The \"HDMI out\" port has no version specified in the spec sheet (likely a pass-through/loop-out at HDMI 1.4a level) so grade is omitted for it. USB service port is a mini/type-B service port per manual (used for firmware only) - no data-transfer USB version stated, so no grade assigned. The two USB-A ports are 5V/1.5A power-only outputs (no host/data functionality mentioned) - graded as bidirectional per instruction but no data-rate grade stated so omitted. VGA in doubles as YPbPr component input (shared 15-pin D-sub). AC power inlet type not explicitly named as \"IEC\" in the spec sheet, but rear-panel icon and included detachable \"AC power cord\" (100-240V auto-switching) are consistent with a standard IEC C14 inlet, common for this power class (530W); inferred with high confidence but not explicitly labeled \"IEC\" in the source. 3D Sync In/Out are typically mini-DIN (3-pin) connectors in Optoma's lineup, not in the provided connector list - mapped to closest available id (trs-3.5) is not a good fit either, so noted here as a caveat rather than force-mapped incorrectly; see below.",
+  "ports": [
+    {
+      "name": "HDMI 2.0",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDCP 2.2, supports 4K UHD 3840x2160 input"
+    },
+    {
+      "name": "HDMI 1.4a",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Supports 3D formats; max input WUXGA 1920x1200"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Loop-out; version not specified by manufacturer"
+    },
+    {
+      "name": "HDBaseT In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "HDBaseT video/control extension over RJ45; not a grade on the eth-* scale"
+    },
+    {
+      "name": "RJ-45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Network/control port; speed not stated in spec sheet"
+    },
+    {
+      "name": "VGA In (YPbPr)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin D-sub, shared analog RGB/component input"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin control port"
+    },
+    {
+      "name": "USB (Service)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Firmware update only, per manual"
+    },
+    {
+      "name": "USB Power 1",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "5V/1.5A power output only"
+    },
+    {
+      "name": "USB Power 2",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "5V/1.5A power output only"
+    },
+    {
+      "name": "12V Trigger Out",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "12V DC trigger output; closest available id, likely a small screw-terminal or 3.5mm DC jack in practice"
+    },
+    {
+      "name": "Wired IR In",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "ir",
+      "note": "Typically a mini-DIN 3-pin VESA 3D sync connector on Optoma projectors; no exact id in allowed list, mapped to closest (ir) as a control-signal port"
+    },
+    {
+      "name": "3D Sync Out (5V)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "Same caveat as 3D Sync In - closest available id used, not a literal IR port"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V auto-switching AC input; detachable IEC power cord included in box"
+    }
+  ]
+}

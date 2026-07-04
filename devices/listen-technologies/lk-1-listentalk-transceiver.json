@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Listen Technologies",
+  "model": "LK-1 ListenTALK Transceiver",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.proacousticsusa.com/media/wysiwyg/LK-1_Data_Sheet.pdf",
+  "confidence": "high",
+  "notes": "The LK-1 is a small handheld two-way wireless intercom/assistive-listening transceiver (ListenTALK series), not a rack-mountable device, so rackUnits is omitted. It has only two physical ports on the unit itself: a 3.5mm TRRS (CTIA) headset jack (mic input + speaker output combo, hence bidirectional) and a Micro USB port used for both charging and control/programming. Power comes from a removable, non-proprietary 1200mAh Li-ion battery (LA-365) or an optional 3xAAA compartment — there is no separate AC power port on the device itself; it is charged via the Micro USB port or via a docking station (the docking station itself has a proprietary \"4 Contact, Control and Charging\" cradle interface per the spec, but this is a device-to-dock pogo-pin contact, not a user-facing standard connector, so it was not added as a separate port). No connector on this device is a bandwidth-graded type (TRRS is analog audio; Micro USB speed/version is not stated in the spec), so no \"grade\" field was set on any port, per instructions. Category was set to \"audio\" and type to \"Wireless mic\" as the closest fit for a wireless two-way audio transceiver/intercom device — no better-fitting category/type exists in the given enums for a two-way assistive-listening/intercom transceiver. Model number variants exist by region: LK-1-A0 (North America), LK-1-E0 (Europe EU28), LK-1-Z0 (Australia) — connectors are identical across variants; only radio frequency/power differ (North America 1920-1930 MHz/4mW vs Europe 1880-1900 MHz/10mW). Source is the manufacturer-authored spec sheet (created by Listen Technologies, dated March 21, 2017, hosted/mirrored by reseller Pro Acoustics USA) — confirmed identical connector details also appear on the manufacturer's own product page (listentech.com/shop/product/listentalk-transceiver/) and matching reseller listings (B&H, Sweetwater, Markertek, SoundPro).",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRRS, CTIA compliant; combined mic input + headphone output for external headset/earbuds"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro USB port on unit; used for charging and for control/programming via software"
+    }
+  ]
+}

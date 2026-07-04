@@ -1,0 +1,67 @@
+{
+  "manufacturer": "Shure",
+  "model": "ULXD4Q",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
+  "confidence": "high",
+  "notes": "Quad-channel digital wireless receiver, part of the ULX-D Dual/Quad family. Data taken from Shure's official \"ULX-D Dual and Quad Wireless Microphone System\" user guide (pubs.shure.com/view/guide/ULXD-DQ, version 8.3, 2025-J), which includes a labeled rear-panel diagram and full specifications tables. Rear panel (left to right): IEC power inlet with voltage-range switch and integrated power rocker switch; 2x RF cascade BNC ports (labeled B) for daisy-chaining RF to one additional receiver in the same band; 4x balanced XLR-3M audio outputs (one per channel, individually switchable Mic/Line, -18 to +42 dB gain, summing capable); 2x RJ45 Ethernet ports (labeled \"Secondary\"/\"Primary\") supporting 10/100 Mbps or 1 Gbps plus Dante digital audio; 2x antenna BNC inputs (labeled A) with switchable 12-13V DC bias for in-line antenna amplifiers — the Quad receiver internally shares 2 antenna inputs across its 4 receiver modules (unlike the Dual, which also uses 2 antennas for 2 channels). Ethernet grade left unset because the port supports multiple speeds (10/100 Mbps and 1 Gbps) without a single definitive rated maximum stated as the port's standard operating grade in the same way a dedicated switch port would be graded; if a single grade must be chosen, eth-1g is the top supported speed. Power spec: 100-240V AC, 50-60Hz, 0.32A max — modeled as an IEC (C13/14-style) inlet per the physical connector shown (closest match in the allowed connector list; exact IEC sub-type, e.g. C14, not stated in text but consistent with the rear-panel photo).",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "RF Cascade A",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "RF Cascade B",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc"
+    }
+  ]
+}

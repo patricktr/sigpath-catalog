@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Extron",
+  "model": "DTP2 T 212",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://media.extron.com/public/download/files/userman/dtp2_t_212_68-2915-50_A.pdf",
+  "confidence": "medium",
+  "notes": "Primary source used: Extron's own DTP2 T 212 Setup Guide PDF (media.extron.com), fetched and parsed directly since extron.com's product page and formal spec-sheet PDF (extron.com/download/files/specs/dtp2_t_212_5975-D11.pdf) both blocked automated fetches (Bot Defense rejection). Setup Guide confirms: 2x HDMI in, 1x HDMI out, 1x RJ-45 DTP2/HDBaseT output (mode-switchable, carries video/audio/RS-232/IR/remote power), 3.5mm stereo audio in, 3.5mm 5-pole captive-screw RS-232+IR pass-through, 3.5mm 3-pole captive-screw Remote RS-232, front-panel USB mini-B config port, and a 2-pole captive-screw 12VDC power inlet (12V/2.0A max) fed by an external supply -- not a barrel jack. HDCP version stated as 2.2 in this Setup Guide (some third-party listings say 2.3; could not confirm via the blocked official spec sheet). Contact/Tally control ports (3.5mm 3-pole and 4-pole, logic-level closure/indicator, not core AV signal or power) were omitted per scope. Device mounts on a rack shelf or furniture rather than having integral rack ears, so rackUnits omitted/0 (desktop-style chassis, ~1U shelf height per third-party dimension listing: 25.4mm H x 222mm W x 152mm D). USB mini-B is not in the allowed connector list; mapped to closest id \"usb-b\" per instructions and noted. No bandwidth grade set on RJ-45 DTP2/HDBT output since it isn't a standard Ethernet data-rate link (proprietary DTP2/HDBaseT signaling, not eth-1g/2.5g/etc.) and Extron does not publish it in eth-x.x terms. HDMI grade inferred as hdmi-2.0 from stated 18 Gbps max data rate and 4K/60 4:4:4 support (matches HDMI 2.0 bandwidth ceiling, not stated explicitly as a version number in the source).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DTP2/HDBT Output",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Extends HDMI, analog audio, bidirectional RS-232/IR, and remote 12V power over shielded CATx up to 330 ft (100 m); switchable DTP2 or HDBaseT mode via rear toggle"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio input, embeds into HDMI or transmits separately"
+    },
+    {
+      "name": "Over TP RS-232/IR",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5 mm, 5-pole captive screw port carrying RS-232 and/or modulated IR pass-through over the DTP2/HDBT link"
+    },
+    {
+      "name": "Remote RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5 mm, 3-pole captive screw port; 9600 baud, 8 data bits, no parity, 1 stop bit"
+    },
+    {
+      "name": "USB Config",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel female USB mini-B port for SIS/PCS configuration and firmware updates (mini-B connector, closest listed id is usb-b)"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pole captive screw connector, 12 VDC, 2.0 A max, from included external power supply"
+    }
+  ]
+}

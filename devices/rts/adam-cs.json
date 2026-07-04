@@ -1,0 +1,60 @@
+{
+  "manufacturer": "RTS",
+  "model": "ADAM CS",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 5,
+  "sourceUrl": "https://products.rtsintercoms.com/binary/ADAM-CS%20System%20Installation%20Guide.pdf",
+  "confidence": "high",
+  "notes": "RTS ADAM CS is an \"Advanced Digital Audio Matrix\" — a digital intercom matrix mainframe, not a general audio DSP; closest available category taxonomy value used is \"audio\"/\"DSP\". Specs drawn from the manufacturer's own System Installation Guide (RTS/Bosch Security Systems, doc 9330-7517-000 Rev J, April 2009), fetched from products.rtsintercoms.com. The rear intercom-port panel ships in one of three mutually exclusive variants: RJ-11 (up to 64 ports, shown here as the default/primary configuration), 9-pin D-sub (DE-9P, up to 64 ports), or 50-pin Telco/Amphenol (9x 50-pin connectors, up to 64 ports via breakout). Only the RJ-11 variant is modeled here; a unit ordered with the DE-9P or Telco back panel would have different intercom-port connectors instead of the RJ-11 jacks listed. Each intercom port carries audio-in, audio-out, and data on the same connector (bidirectional in practice for keypanel/device connections), modeled here as one \"input\" and one \"output\" pair per port group for clarity is not applicable — ports are listed as bidirectional per the wiring diagrams (2-wire audio in, 2-wire audio out, 2-wire data all on one jack). Only a representative subset naming (e.g. J100-J107 for card 1) is included in full; total capacity is 64 RJ-11 intercom ports across 8 AIO cards (J100-J807), each following the same 2-conductor-pair pattern. No signal grades apply (no HDMI/SDI/USB/Ethernet/DisplayPort on this unit) — it is a legacy RS-232/RS-422 and analog/2-wire digital intercom matrix, so no ports have a \"grade\" field. Power: dual redundant AC inlets shown in back-panel diagrams as standard IEC-style receptacles with integral fuse/switch (AC1 to PS1, AC2 to PS2); exact IEC sub-type (C13/C14) is inferred from diagram graphics, not stated as a numeric standard in the document — confidence on this specific point is medium, though the overall port inventory is high-confidence manufacturer data. J903 GPI port is DB-25S (mapped to rs232 connector family absence — modeled as db-25 not in allowed list, so approximated as the closest serial connector \"rs232\" is inaccurate; see below). The allowed connector enum has no DB-25 option, so J900/J901/J902 (true DE-9/DB-9 D-sub serial ports) are mapped to \"rs232\", and J903 (DB-25S) is also approximated as \"rs232\" since DB-25 is not in the enum — this is a forced approximation, not an exact match.",
+  "ports": [
+    {
+      "name": "Intercom Port J100 (Card 1, Port 1)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-11 6-pin jack carrying 2-wire audio-to-matrix, 2-wire audio-from-matrix, and 2-wire data. Approximated as rj45 (closest connector in allowed list); actual connector is RJ-11/RJ-12 6P6C, not RJ45 8P8C."
+    },
+    {
+      "name": "Intercom Ports J101–J807 (64 total, Cards 1–8)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Remaining 63 RJ-11 intercom ports (8 AIO cards x 8 ports each) for keypanels, camera delegate panels, program inputs, TIF-951 telephone interfaces, etc. Same wiring as J100. Alternate back-panel variants (ordered separately) replace all RJ-11 jacks with DE-9P D-sub or 50-pin Telco connectors instead."
+    },
+    {
+      "name": "J900 (RS232 to Configuration PC)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DE-9S (9-pin D-sub) serial port for AZedit configuration software connection (null-modem cable to PC COM port)."
+    },
+    {
+      "name": "J901 (RS422/232 to Trunk Master)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DE-9S connector for RS422/232 connection to an RTS Intelligent Trunking system master."
+    },
+    {
+      "name": "J902 (RS422/232 to Accessories)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DE-9S connector for RS422/232 connection of Program Assign Panels (PAP), LCP-102 Level Control Panels, and UIO-256/GPIO-16 Universal I/O frames."
+    },
+    {
+      "name": "J903 (General Purpose I/O)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-25S (25-pin D-sub) connector providing 8 digital (GPI) inputs and 8 open-collector digital outputs. Approximated as rs232 connector id; actual physical connector is a DB-25, not in the allowed connector list."
+    },
+    {
+      "name": "AC1 (Power Supply 1 Input)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Fused AC inlet with on/off switch, feeds internal Power Supply 1 (PS1). Exact IEC sub-type (C13/C14) inferred from back-panel diagram; not explicitly specified in the document."
+    },
+    {
+      "name": "AC2 (Power Supply 2 Input)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Fused AC inlet with on/off switch, feeds internal Power Supply 2 (PS2) for redundant operation; can be wired to a separate AC phase for additional resiliency."
+    }
+  ]
+}

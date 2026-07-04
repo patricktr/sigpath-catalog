@@ -1,0 +1,127 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "FS-HDR",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.aja.com/products/fs-hdr/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Spec sheet and rear-panel photo (AJA official product page PDF) were used together. The SDI I/O is split into 4 fixed BNC 3G-SDI ports and 4 SFP-cage ports that can be populated with either a 12G/6G-SDI BNC (HD-BNC) coax module or a 12G/6G/3G-SDI fiber module (dual/single LC, or single SC for 3G) — modeled as bnc with accepts:[fiber-lc] and grade sdi-12g since that is the SFP module's top-rated mode; actual grade depends on which SFP module is installed. AES audio I/O and GPI both use 25-pin D-sub connectors, which are not in the provided connector list; euroblock/rs232 were chosen only as nearest available ids and are not physically accurate (documented in each port's note). MADI in/out are combined BNC+ST-fiber pairs (physical fiber connector is ST, not LC; fiber-lc used as nearest allowed id). Two IEC power inlets are redundant (device runs on either, not simultaneously required). Full spec sheet also confirms genlock, ancillary data, and HDR/WCG processing features not relevant to physical I/O.",
+  "ports": [
+    {
+      "name": "SDI In 1-4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "4x fixed 3G-SDI BNC inputs"
+    },
+    {
+      "name": "SDI In 5-8 (SFP)",
+      "direction": "input",
+      "connector": "bnc",
+      "accepts": [
+        "fiber-lc"
+      ],
+      "grade": "sdi-12g",
+      "note": "4x optional SFP cage inputs: 12G/6G-SDI BNC (HD-BNC) coax module or 12G/6G/3G-SDI fiber module (dual/single LC or SC)"
+    },
+    {
+      "name": "SDI Out 1-4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "4x fixed 3G-SDI BNC outputs"
+    },
+    {
+      "name": "SDI Out 5-8 (SFP)",
+      "direction": "output",
+      "connector": "bnc",
+      "accepts": [
+        "fiber-lc"
+      ],
+      "grade": "sdi-12g",
+      "note": "4x optional SFP cage outputs: 12G/6G-SDI BNC (HD-BNC) coax module or 12G/6G/3G-SDI fiber module (dual/single LC or SC)"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Copy of main output, 3G-SDI/HD/SD"
+    },
+    {
+      "name": "HDMI Monitor Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "2K/HD/SD, HDMI v1.4a"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference, looping/non-terminating, blackburst or tri-level sync"
+    },
+    {
+      "name": "Ref Loop Through",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Reference video loop-through of Ref In"
+    },
+    {
+      "name": "AES Audio In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "DB-25 connector, 8x balanced AES inputs (16 channels), AES-3. DB-25 not in allowed list; closest analog multi-pin audio connector chosen — physically a 25-pin D-sub, not euroblock."
+    },
+    {
+      "name": "AES Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB-25 connector, 8x balanced AES outputs (16 channels), AES-3. DB-25 not in allowed list; closest analog multi-pin audio connector chosen — physically a 25-pin D-sub, not euroblock."
+    },
+    {
+      "name": "MADI In",
+      "direction": "input",
+      "connector": "bnc",
+      "accepts": [
+        "fiber-lc"
+      ],
+      "note": "MADI input pair: 1x BNC (coax) + 1x ST fiber; AES-10, 128 channels"
+    },
+    {
+      "name": "MADI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "accepts": [
+        "fiber-lc"
+      ],
+      "note": "MADI output pair: 1x BNC (coax) + 1x ST fiber; AES-10, 128 channels"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Ethernet, embedded web server, REST, SNMP"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "1x 25-pin D-connector; 4 optically isolated GPI inputs + 4 optically isolated GPO outputs. 25-pin D-sub not in allowed list; closest control-connector id chosen."
+    },
+    {
+      "name": "PWR 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant power supply 1, 100-240 VAC 50/60Hz"
+    },
+    {
+      "name": "PWR 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant power supply 2, 100-240 VAC 50/60Hz"
+    }
+  ]
+}

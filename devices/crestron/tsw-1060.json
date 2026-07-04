@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TSW-1060",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.crestron.com/getmedia/b7534d9b-aa21-4cea-b10a-8d8898f41ee3/ss_tsw-1060",
+  "confidence": "high",
+  "notes": "Sourced from Crestron's official spec sheet (ss_tsw-1060, Rev 06/05/20), which includes a full \"Connectors\" section confirming exactly two physical connectors: (1) 8-pin RJ45 LAN PoE and (1) USB Type-A host. The unit is powered entirely via PoE/PoE+ through the RJ45 jack -- there is no separate AC/DC power inlet, so no additional power connector entry was needed. Audio (microphone, speakers) and camera are fully built-in with no external analog audio or video jacks exposed. This spec covers the standard TSW-1060-B-S/W-S models; the TSW-1060-NC variant is identical in physical I/O but omits the physical camera/mic/Bluetooth radio (no connector differences). Desktop/wall-mount touch panel -- rackUnits omitted since rack mounting requires a separately sold TSW-1060-RMK-2 accessory kit (4 RU), not part of the base unit.",
+  "ports": [
+    {
+      "name": "LAN PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ45, female; 100Base-TX Ethernet; also serves as PoE+ (802.3at Type 2) powered-device input carrying data, control, video, intercom, and power over a single wire"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type A, female, USB 2.0 host port; used only for optional TSW-1060-LB light bar or hallway sign accessory; requires 802.3at Type 2 PoE+ to enable"
+    }
+  ]
+}

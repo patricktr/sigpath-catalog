@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Neat",
+  "model": "Bar Gen 2",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://cdn-stories.neat.no/1/2024/05/EN-Neat-Bar-Gen-2-and-Neat-Pad-User-Manual-rev03.pdf",
+  "confidence": "medium",
+  "notes": "Authoritative sources: Neat's official User Manual rear-panel diagram (cdn-stories.neat.no, rev03, 2024) and official Device Sheet (cdn-stories.neat.no, 2025), plus neat.no/bar-2 and us.neat.no/bar-2 product pages. Neat does not publish exact version/speed numbers for HDMI, USB-C, or Ethernet anywhere in its official materials (manual, device sheet, or product pages) — so no bandwidth \"grade\" could be confirmed for any port and none was set, per the instruction to omit grade when the spec doesn't state a version. Camera output caps at 1080p/30 for people video and 1080p/30 (or 720p/60) for content sharing, and the unit drives \"up to two 4K screens,\" but this does not reliably indicate the HDMI output's cable-spec version (1.4 vs 2.0), so it was left unset rather than guessed. The AC power connection is a captive/internal-power-supply cord (100-240V~ 50/60Hz 0.5A) built into the unit — there is no exposed IEC/NEMA inlet; \"dc-barrel\" was chosen as the closest available connector id for this captive low-voltage supply cable, though physically it is a fixed cord rather than a barrel jack (caveat noted). A \"USB-C Debug\" port also appears on the rear-panel diagram (service use, not general AV I/O) and is included for completeness. Model is the standalone Neat Bar Gen 2 bar (SKU NEATBAR2-SE per us.neat.no schema metadata); it is typically paired with a separate Neat Pad touch controller (not included as physical ports here since Neat Pad is a distinct device with its own PoE/Ethernet I/O). No rack-mount option exists (desktop/wall/screen-mount device), so rackUnits is omitted. Confidence set to medium because manufacturer sources are authoritative and complete for port presence/names, but bandwidth grades could not be confirmed for any graded-connector-type port (HDMI, USB-C, Ethernet).",
+  "ports": [
+    {
+      "name": "HDMI-out for external screen",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Ships with 6.5ft (2m) HDMI cable; drives one of up to two 4K external displays"
+    },
+    {
+      "name": "HDMI-out for external screen 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Second HDMI output; Neat Bar 2 drives up to two 4K screens total"
+    },
+    {
+      "name": "HDMI-in for screen sharing",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Content video resolution 720p/60 or 1080p/30 per official device sheet"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "BYOD/USB passthrough mode; supports DisplayPort Alt Mode or touch input from a connected touchscreen"
+    },
+    {
+      "name": "USB-C Debug",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Service/debug port shown on rear-panel diagram; not a user AV connection"
+    },
+    {
+      "name": "Ethernet port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ships with 9.8ft (3m) Ethernet cable; speed grade (e.g. Gigabit) not stated in manufacturer documentation"
+    },
+    {
+      "name": "AC power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Captive 9.8ft (3m) power cord to internal power supply, 100-240V~ 50/60Hz 0.5A; not a detachable IEC/NEMA connector, closest listed connector chosen as a proxy for a low-voltage DC input from the external brick-in-cable"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "manufacturer": "Pakedge",
+  "model": "SX-8P",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://docs.control4.com/docs/product/pakedge-sx-8p/all-dealer-pakedge-user-manual/english/latest/pakedge-sx-8p-pakedge-user-manual-rev-c.pdf",
+  "confidence": "high",
+  "notes": "Rear-panel layout (DC 12V/1A barrel jack, Ports 1-8 RJ45, SFP, CONSOLE, RESET) confirmed from the official Pakedge/Control4 SX-8P User Guide (rev C), which includes a rear-panel photo and port table. Full switching capacity/PoE specs from Appendix B of the same manual: 8x RJ45 10/100/1000 auto-sensing PoE/PoE+ ports (IEEE 802.3af 15.4W and 802.3at 30W compliant), 125W total PoE power budget, 1x 1000 Mbps SFP port, 1x RJ45 console port, 18 Gbps switching capacity, 13.3 Mpps forwarding. The specs table lists switch input voltage as 100-240VAC 50/60Hz 6A (the external power-brick's AC-side rating), while the physical connector on the switch chassis itself, per the rear-panel diagram, is a DC barrel jack (12V/1A). RESET button and status LEDs omitted as they are not signal/power connectors. Compact desktop chassis (228 x 128 x 31 mm, 5 lbs) is far narrower than a 19-inch rack — a rack-mount bracket kit is included as an accessory but this is not a standard 1U rack-width unit — so rackUnits omitted. The Console RJ45 port is a management/serial interface, not a switched Ethernet data port, so no eth grade was set on it. No AV-source-type ports (HDMI/SDI/etc.) exist on this device — it is a pure PoE network switch.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE/PoE+ output (802.3af/at)"
+    },
+    {
+      "name": "SFP",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1000 Mbps SFP fiber uplink port (9th switching port)"
+    },
+    {
+      "name": "CONSOLE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 serial console/management port, not a switched data port"
+    },
+    {
+      "name": "DC 12V/1A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter input; adapter itself is rated 100-240VAC 50/60Hz, device-side connector on the chassis is a DC barrel jack"
+    }
+  ]
+}

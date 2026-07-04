@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Biamp",
+  "model": "AMP-450BP",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_tesira_amp-450bp.pdf",
+  "confidence": "medium",
+  "notes": "Manufacturer data sheet (TESDS-381-2103-EN-R2) with a labeled back-panel photo used as the authoritative source. The AMP-450BP is a 4-channel PoE+ conferencing amplifier acting as a Tesira AVB endpoint; it has no rack ears (compact desktop/ceiling-mount enclosure, ~30x195x120mm) so rackUnits is omitted. Only one physical RJ-45 (AVB/Control) exists for network+control, and power arrives over that same jack via PoE+ (IEEE 802.3at Class 4, 30W) rather than through a discrete power connector — modeled as a bidirectional network port rather than a separate power port. The four \"Amp Out\" RJ-45 jacks carry proprietary speaker-level analog output (a termination-free alternative to euroblock — an optional CCA euroblock-to-category adapter accessory converts them back to euroblock) — they are NOT Ethernet-graded, so no eth-* grade was applied to them, only to the AVB/Control port which the spec confirms is Gigabit Ethernet. Optional accessories (CCA euroblock adapter, Seismic Cable Adapter, TB-1 tile bridge, plenum boxes) exist but were not modeled as native ports since they are add-ons.",
+  "ports": [
+    {
+      "name": "AVB / Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet (Cat 5e and above); carries Tesira AVB digital audio + control data. Also serves as the power input: labeled 'PoE+ Class 4' on the back panel — the device is powered entirely via PoE+ (IEEE 802.3at Class 4, 30W) through this single port; there is no separate AC/DC power inlet."
+    },
+    {
+      "name": "Amp Out 1",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Speaker-level analog output (not Ethernet-graded); termination-free RJ-45 connection to compatible speakers such as the Desono C-IC6. 3W continuous per channel (all 4 channels driven), up to 50W burst into a 4-ohm load."
+    },
+    {
+      "name": "Amp Out 2",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Speaker-level analog output (not Ethernet-graded); termination-free RJ-45 connection to compatible speakers."
+    },
+    {
+      "name": "Amp Out 3",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Speaker-level analog output (not Ethernet-graded); termination-free RJ-45 connection to compatible speakers."
+    },
+    {
+      "name": "Amp Out 4",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Speaker-level analog output (not Ethernet-graded); termination-free RJ-45 connection to compatible speakers."
+    }
+  ]
+}

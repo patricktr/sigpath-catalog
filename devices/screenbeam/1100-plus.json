@@ -1,0 +1,55 @@
+{
+  "manufacturer": "ScreenBeam",
+  "model": "1100 Plus",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.screenbeam.com/wp-content/uploads/2026/01/ScreenBeam-Datasheet-1100Plus-EN-25.pdf",
+  "confidence": "high",
+  "notes": "Catalog number SBWD1100P (SBWD1100PCA for Canada). Official manufacturer datasheet lists Interfaces as: 1x HDMI Input, 1x HDMI Output, 1x Analog 3.5mm audio Output, 2x USB 2.0 Host Type-A, 1x USB 3.0 Host Type-A, 1x DC Power Jack, plus Ethernet 10/100/1000-BASE-T RJ-45 LAN (listed separately under Wireless/Ethernet spec row, not the Interfaces row). HDMI version (1.4/2.0/2.1) is not stated in the datasheet — only max resolution (4K@30Hz), H.264 compression, and HDCP 2.x are specified, so HDMI grade is omitted rather than inferred. USB 3.0 Host Type-A graded usb-5g (USB 3.0 = 5Gbps); USB 2.0 ports graded usb-2.0. Ethernet graded eth-1g per explicit \"1000-BASE-T\" spec. Power input is a barrel-style DC jack rated 12VDC/3A (consumption 8.4W typical, 36W peak), modeled as dc-barrel. Desktop puck-style unit (8.66 x 5.66 x 1.47 in) - not rack-mountable, so rackUnits omitted. Device combines wireless-display receiver + HDMI switching/pass-through + UC/conferencing bridge; classified here as Converter/Encoder-Decoder category since core function is wireless-to-HDMI signal conversion, though it also functions as a network-connected collaboration endpoint.",
+  "ports": [
+    {
+      "name": "HDMI Input",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Analog Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 3.0 Host Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 Host Type-A (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 Host Type-A (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DC Power Jack",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

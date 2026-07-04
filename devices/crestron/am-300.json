@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Crestron",
+  "model": "AM-300",
+  "category": "control",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.crestron.com/getmedia/425d5c0b-4e95-46ca-9b77-77c84b0e6682/ss_am-300",
+  "confidence": "high",
+  "notes": "Discontinued product; spec sheet retrieved directly from crestron.com (official PDF, Rev 12/22/20). \"DM IN\" is an 8-pin RJ-45 connector but carries Crestron's proprietary DigitalMedia 8G+ signal (video/audio/HDCP/EDID + PoDM sourcing, plus passthrough Ethernet), not a standard Ethernet data link — no eth-* grade applies, so grade is omitted for that port; max DM input resolution is 4096x2160 (DCI 4K)/3840x2160 (4K UHD). HDMI INPUT is limited to 1920x1080@60Hz (no 4K in), consistent with HDCP 1.4/HDMI 1.4-class bandwidth, so graded hdmi-1.4; HDMI OUTPUT reaches 3840x2160@30Hz (4K UHD) which also falls within HDMI 1.4 bandwidth (no 4K60/HDR/2.0 features stated), so also graded hdmi-1.4 rather than 2.0. IR and COM ports are 3.5 mm pluggable/detachable terminal blocks (4-pin and 5-pin respectively) — mapped to the closest listed connector id \"euroblock\"; IR port is actually a 1-way IR/serial (TTL 0-5V RS-232) output, COM is bidirectional RS-232. LAN port is 100Base-TX (100 Mbps) = eth-100m. Included power pack is PW-2420RU (100-240VAC in, 24VDC 2.5A out via 2.1x5.5mm barrel connector), modeled as the device's DC power input port. A chassis ground lug (6-32 screw) exists but is not modeled as a signal/data port. Category chosen as \"control\" since the device's core function is a room presentation/control endpoint (AirMedia + switching + display control) rather than pure AV switching; type set to \"Encoder/Decoder\" as the closest fit for a wired/wireless presentation gateway — no better match exists in the provided type enum.",
+  "ports": [
+    {
+      "name": "HDMI INPUT",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, female. HDCP 1.4, EDID management. DVI & Dual-Mode DisplayPort compatible via adapter. Max 1920x1080@60Hz."
+    },
+    {
+      "name": "HDMI OUTPUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A, female. HDCP 1.4/2.2, EDID, CEC. Max output 3840x2160@30Hz (4K UHD); DVI compatible via adapter."
+    },
+    {
+      "name": "DM IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "8-pin RJ-45, female, shielded. Proprietary Crestron DigitalMedia 8G+ input carrying video/audio/HDCP/EDID plus PoDM sourcing (not a standard Ethernet data link, so no eth- grade applies); supports up to 4096x2160 DCI 4K / 3840x2160 4K UHD. Also passes external LAN Ethernet through to a connected DM 8G+ transmitter."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ-45, female. 100Base-TX Ethernet port."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type A, female. USB 2.0 host port for AV Bridge or AirMedia Wi-Fi USB adapter accessories."
+    },
+    {
+      "name": "CONSOLE",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Micro-USB Type B, female. USB 2.0 device port for installer setup/firmware via computer console."
+    },
+    {
+      "name": "IR",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin 3.5 mm detachable terminal block. 1-way IR output (up to 1.1 MHz) or serial TTL/RS-232 (0-5V) up to 19.2k baud, for display device control. Closest listed connector id to this pluggable terminal block; IR port #2 pins present but unused."
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5 mm detachable terminal block. Bidirectional RS-232 for display device control, up to 115.2k baud with hardware/software handshaking."
+    },
+    {
+      "name": "24VDC 2.5A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm DC power connector. 24VDC power input from included PW-2420RU power pack (100-240VAC in, 2.5A @ 24VDC out)."
+    }
+  ]
+}

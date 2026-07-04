@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AW-UE160",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2025-01/aw-ue160_leaflet_en.pdf",
+  "confidence": "high",
+  "notes": "Primary source: Panasonic official leaflet/spec sheet SP-C-UE160ENU1 (Oct 2024), cross-checked against pro-av.panasonic.net/en/products/aw-ue160/spec.html and the AW-UE160WP operating manual's rear-panel diagram (via ManualsLib). Covers both AW-UE160W (Pearl White) and AW-UE160K (Black) color variants, which are electrically/connector-identical. RS-422 and LAN both use RJ-45 physical connectors but serve different protocols (control vs IP/PoE); RS-422 connector closest match is rj45 with accepts:[rs422] noting the actual signal protocol. DC IN is described in the manual as a 'jack type' power connector; exact barrel dimensions not published, so mapped to the closest listed connector id (dc-barrel). SFP+ port is bidirectional: it carries ST 2110 uncompressed/JPEG XS video+audio output (multiple virtual outputs) plus one RETURN video input, and requires the separately-sold AW-SFU60/AW-SFU60G software key for full ST2110/JPEG XS/NDI High Bandwidth activation. Camera also has front and rear tally lamps (not a physical connector/port, so omitted) and a SERVICE LINK port mentioned in the manual's rear-panel legend for factory/service use only (not a user-facing signal or power port, omitted from the port list). Not rack-mountable (desktop/ceiling-mount PTZ camera), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "G/L IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock reference input; BBS (Black Burst Sync) and tri-level sync compatible"
+    },
+    {
+      "name": "AUDIO INPUT 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, balanced, switchable Mic/Line input"
+    },
+    {
+      "name": "AUDIO INPUT 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, balanced, switchable Mic/Line input"
+    },
+    {
+      "name": "12G SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "SMPTE2082-1 / SMPTE424M / SMPTE292M, 75-ohm"
+    },
+    {
+      "name": "3G SDI OUT1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE424M / SMPTE292M, 75-ohm"
+    },
+    {
+      "name": "3G SDI OUT2/PM",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SMPTE424M / SMPTE292M, 75-ohm; PM = program monitor output"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0 connector, 4:2:2/10-bit; HDCP and VIERA Link not supported"
+    },
+    {
+      "name": "SFP+",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP+ compliant, single fiber; carries SMPTE ST 2110 video/audio (requires optional AW-SFU60G key); return video input also carried here"
+    },
+    {
+      "name": "USB3.0 HOST",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port for 5G mobile router with USB tethering support"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "LAN connector for IP control/video; 100BASE-TX/1000BASE-T; also accepts PoE++ (IEEE802.3bt, DC42-57V) for camera power"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "CONTROL IN RS-422A over RJ-45 connector, for device/pan-tilt control"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC +/-10% (10.8V-13.2V) jack-type power input; alternative to PoE++ power via LAN port"
+    }
+  ]
+}

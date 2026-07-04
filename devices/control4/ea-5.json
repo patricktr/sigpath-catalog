@@ -1,0 +1,163 @@
+{
+  "manufacturer": "Control4",
+  "model": "EA-5",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://docs.control4.com/docs/product/ea-5/dealer-installation-guide/english/latest/ea-5-installation-guide-rev-a.pdf",
+  "confidence": "high",
+  "notes": "Source: official Control4/Snap One EA-5 Dealer Installation Guide (Rev C, 2021-08-27), docs.control4.com. Covers both C4-EA5 (V1) and C4-EA5-V2 hardware revisions; port set is identical except V1 has 2 internal WiFi antenna connectors (WIFI 1/WIFI 2, reverse-SMA) and V2 instead supports an optional external USB WiFi adapter via the USB port — these WiFi/ZigBee RF antenna connectors (reverse-SMA) are omitted from the port list since they are not AV signal/power I/O and reverse-SMA is not in the allowed connector set. The eSATA port (1x, for external storage) is also omitted — no eSATA connector id exists in the allowed enum and it has no close analog (not SATA data, not USB, not fiber). SERIAL 1/SERIAL 2 are documented as \"DB9 ports\" functionally (RS-232, 1200-115200 baud) but the physical chassis jacks are 3.5mm mini-jacks requiring the optional Control4 3.5mm-to-DB9 cable (C4-CBL3.5-DB9B); modeled here with connector=rs232 to reflect the electrical signal, note added. IR/SERIAL ports 1-2 are dual-function 3.5mm jacks shared with Serial 3/4 (RS-232, no hardware flow control) — modeled as IR ports with a note; ports 3-8 are IR-only. Digital audio in/out are coaxial (RCA-style coax), analog audio in/out are stereo RCA pairs (modeled as one port per in/out pair, i.e., 2 in + 2 out physical RCA jack-pairs each). No HDMI version number stated beyond \"HDMI 1.4 output; 1080p 50-60Hz\" so grade set to hdmi-1.4. Ethernet grade is 10/100/1000 = eth-1g for both the WAN-in port and the 4 built-in switch ports. AC inlet is a standard IEC C14 chassis connector (mates with the included IEC C13 power cord, 100-240VAC 60/50Hz 0.5A); modeled with the generic \"iec\" connector id (C13/C14 pair) since it is neither the C7 figure-8 nor the C19 high-current variant. Rack ears are pre-installed (V2) / included (V1) but Control4 does not state a rack-unit (U) height in the spec sheet — only chassis dimensions (17.5 x 10.125 x 1.875in) — so rackUnits is omitted. Contact/relay terminal block modeled as a single euroblock port representing the 4-contact + 4-relay pluggable terminal block assembly shown in the installation guide.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DIGITAL AUDIO IN 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial digital audio input"
+    },
+    {
+      "name": "DIGITAL AUDIO IN 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial digital audio input"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT 1",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial digital audio output"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT 2",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial digital audio output"
+    },
+    {
+      "name": "ANALOG AUDIO IN 1 (L/R)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo analog audio input pair"
+    },
+    {
+      "name": "ANALOG AUDIO IN 2 (L/R)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo analog audio input pair"
+    },
+    {
+      "name": "ANALOG AUDIO OUT 1 (L/R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog audio output pair"
+    },
+    {
+      "name": "ANALOG AUDIO OUT 2 (L/R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog audio output pair"
+    },
+    {
+      "name": "ETHERNET IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "GIGABIT SWITCH 1-4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "4-port built-in gigabit Ethernet switch for connecting local devices"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0, 500mA; for external storage or optional Dual-Band WiFi USB Adapter (V2)"
+    },
+    {
+      "name": "SERIAL 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Chassis jack is 3.5mm mini-jack; requires optional Control4 3.5mm-to-DB9 cable (C4-CBL3.5-DB9B) for standard DB9 RS-232 connection"
+    },
+    {
+      "name": "SERIAL 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Chassis jack is 3.5mm mini-jack; requires optional Control4 3.5mm-to-DB9 cable (C4-CBL3.5-DB9B) for standard DB9 RS-232 connection"
+    },
+    {
+      "name": "IR/SERIAL 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "3.5mm jack (mini-TRS); dual-function IR output or RS-232 serial (shared with Serial 3)"
+    },
+    {
+      "name": "IR/SERIAL 2",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "3.5mm jack (mini-TRS); dual-function IR output or RS-232 serial (shared with Serial 4)"
+    },
+    {
+      "name": "IR 3",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "IR 4",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "IR 5",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "IR 6",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "IR 7",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "IR 8",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "3.5mm IR emitter output, 5V 27mA max"
+    },
+    {
+      "name": "Contact/Relay",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Pluggable terminal block: 4 contact sensor inputs (2-30VDC, 12VDC 0.5A max output) + 4 relay outputs (AC 36V/2A, DC 24V/2A max)"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 chassis inlet, mates with included IEC C13 power cord; 100-240VAC 60/50Hz, 0.5A"
+    }
+  ]
+}

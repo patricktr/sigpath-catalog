@@ -1,0 +1,96 @@
+{
+  "manufacturer": "Eaton",
+  "model": "9PX1500RT",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 2,
+  "sourceUrl": "https://assets.tripplite.com/product-pdfs/en/9px1500rt.pdf",
+  "confidence": "high",
+  "notes": "Base unit ships with 8x NEMA 5-15R output receptacles split into 2 switchable/sheddable load banks of 4, one NEMA 5-15P input cord (8 ft), USB-B and RS-232 (DB9) ports with cables included, a programmable dry-contact relay interface, and an RPO/ROO (Remote Power Off/On) port. None of these control-signal ports (relay, RPO/ROO) have a dedicated connector id in the allowed list; they are almost certainly DB9-style connectors on the physical unit, so \"rs232\" was used as the closest match rather than a true grade-relevant RS-232 data link — treat these three as approximate/placeholder mappings. USB and RS-232 ports carry no bandwidth grade (correct per rules: analog/control ports are ungraded). The unit has an internal \"mini-slot\" communication bay (not a fixed port) that accepts optional cards: Network-M3 (Gigabit Ethernet/RJ45), INDGW-M2 (industrial gateway), or RELAY-MS (relay/serial). This slot is empty by default — no card ships with the base 9PX1500RT — so the RJ45 Ethernet port listed only exists if the optional Network-M3 card is purchased and installed; it is not a native port of the base SKU. Also not modeled: an EBM (external battery module) DC connector — this SKU accepts up to 4 daisy-chained 9PXEBM48RT battery packs via a dedicated battery-bus connector, but Eaton's spec sheet does not give an exact connector type/pinout for it, and it isn't a signal or standard power connector in the allowed list, so it was omitted. Power input plug is NEMA 5-15P (US, 120V, captive 8 ft cord) — no IEC inlet on this model. Source: official Eaton/Tripp Lite datasheet PDF (https://assets.tripplite.com/product-pdfs/en/9px1500rt.pdf) plus Eaton product page (https://www.eaton.com/us/en-us/skuPage.9PX1500RT.html), which corroborates output/input specs. Category/type mapped to \"power\"/\"Power conditioner\" as the closest fit for a UPS — no dedicated \"UPS\" type exists in the allowed list.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "5-15P plug, 8 ft captive cord, 100/110/120V, 12.5A max"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank A"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank A"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank A"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank A"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank B (switchable/sheddable)"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank B (switchable/sheddable)"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank B (switchable/sheddable)"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Load bank B (switchable/sheddable)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB communication port for host management software; cable included. USB-B is the closest match; datasheet lists only \"USB\" generically."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 serial communication port; cable included"
+    },
+    {
+      "name": "Relay / Dry Contact",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Programmable dry-contact relay interface (DB9-style connector) for automation/industrial signaling; closest available connector id used since a dedicated dry-contact ID is not in the list"
+    },
+    {
+      "name": "RPO/ROO",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Remote Power Off / Remote On-Off port for emergency shutdown or remote restart; exact connector pinout not detailed in source, mapped to closest control-connector id"
+    },
+    {
+      "name": "Mini-Slot (Network/Relay Card)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Internal mini-slot bay accepts optional Network-M3 (Gigabit Ethernet), INDGW-M2, or RELAY-MS cards; port shown reflects the optional Network-M3 card's RJ45 Ethernet port, not present on base unit without card installed"
+    }
+  ]
+}

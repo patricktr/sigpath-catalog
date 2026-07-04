@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Logitech",
+  "model": "Rally Bar Mini",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://www.logitech.com/content/dam/logitech/en_us/video-collaboration/pdf/rallybarmini.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: official Logitech datasheet PDF (rallybarmini.pdf, published Jan 2024), cross-checked against the Logitech Hub spec page (hub.sync.logitech.com/rallybarmini). Datasheet groups all USB ports under a single 'USB 3.0: 3x Type A, 1x Type C' line, but the Hub spec page and third-party listings specify the 3x Type-A ports as USB 2.0 speed with only the Type-C port at USB 3.0 (5Gbps) — I used the more granular Hub figures for per-port grades since the datasheet's grouping is likely a marketing simplification; flagged as medium confidence because of this discrepancy. HDMI: 1x HDMI In + 2x HDMI Out, all HDMI 1.4, output capped at 1080p (no 4K passthrough per Logitech Hub FAQ). Ethernet is 10/100/1G (auto-negotiating up to 1 Gbps) — graded eth-1g as the top speed. The external mic input is a proprietary Rally Mic Pod connector (small circular jack on the front of the bar) — it is not a standard TRS/RCA connector; trs-3.5 was chosen only as the closest physical analog since no proprietary connector id exists in the allowed list. Power: external brick (19V 4.74A, 100-240V auto-sensing) with a DC-out cable to the bar (dc-barrel assumed — exact barrel/pin spec not published by Logitech) and a separate IEC/AC cord from brick to mains (the mains-side connector on the brick itself was not modeled here since the bar's own physical input is the DC barrel jack). A Kensington security slot exists but is not a signal/power port and was omitted. Available in Graphite (960-001336), White (960-001348), and TAA-compliant (960-001563) variants — I/O is identical across variants.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Mic Pod Expansion",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Proprietary circular expansion jack for Rally Mic Pod / Mic Pod Hub / extension cable; not a standard TRS analog audio jack, but visually and physically the closest listed connector type. Not for generic audio use."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 19V/4.74A power brick (100-240V AC auto-sensing) connects via a DC cable (1.5m) to the bar; separate AC cord (1m) runs mains to the brick. Exact DC connector pin/barrel size not published."
+    }
+  ]
+}

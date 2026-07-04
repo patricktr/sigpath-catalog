@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Lab.gruppen",
+  "model": "C 16:4",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://prodgsystems.com/public/pdf/108_data%20sheet.pdf",
+  "confidence": "medium",
+  "notes": "No genuine Lab.gruppen product named \"C 20:4\" could be found. Extensive research (official labgruppen.com product/series pages, B&H, Sweetwater-adjacent retailers, prodgsystems.com, Full Compass, av-iq.com, and the C Series Operation Manual rev.1.1.5/2.0.0) confirms Lab.gruppen's actual C Series 4-channel installation amplifiers are C 5:4X, C 10:4X, C 16:4, C 28:4, C 48:4, C 68:4, and C 88:4 — there is no \"C 20:4\" gap-filling SKU; the \"20\" power tier in that family only exists as the 8-channel C 20:8X. A separate E Series has an \"E 20:4\" (2000W, 4-channel), which is a different product line/architecture (IDEEA Class D, screw-terminal I/O) and not part of the C Series. Given the requested name most closely matches the C Series 4-channel naming pattern (C xx:4), I have returned the nearest authentic real product, Lab.gruppen C 16:4 (4-channel, 1600 W total, Class TD, 2U), sourced from its official datasheet (Item no. TDS-C164_V8, hosted via authorized distributor prodgsystems.com, mirroring the manufacturer's own datasheet content) and cross-checked against the official C Series Operation Manual (covers C 20:8X/C 10:8X/C 10:4X/C 5:4X sibling models with identical connector conventions). Ports/labels (Input/Output A-D, CH A-D) confirmed from the C Series Operation Manual rear-panel diagrams. AC mains connector is described in the datasheet only as \"230V CE: 16A, CEE7; 115V ETL: 20A\" (CEE7 = Schuko/IEC-family inlet in EU units; US ETL units use a different captive inlet) — mapped to the closest taxonomy id \"iec\" since exact IEC C13/C14 vs captive-cord type is not explicitly stated. RJ45 NomadLink ports are unspeced for Ethernet grade in the datasheet (no 100M/1G statement); \"eth-100m\" is an inferred low-confidence placeholder for a legacy (2014-era, Item no. TDS-C164_V8) control/monitoring network, not confirmed. If the user actually meant the E Series E 20:4 (2000W/4-channel, real, current, IDEEA Class D, Energy Star, screw-terminal in/out, no confirmed network port) or the C 20:8X (2000W/8-channel, real, current, Phoenix in/barrier-strip out, 2x RJ45 NomadLink), those should be sourced separately as they are distinct real SKUs with different I/O counts.",
+  "ports": [
+    {
+      "name": "Input A",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix-type, electronically balanced"
+    },
+    {
+      "name": "Input B",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix-type, electronically balanced"
+    },
+    {
+      "name": "Input C",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix-type, electronically balanced"
+    },
+    {
+      "name": "Input D",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix-type, electronically balanced"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip 2-pole screw terminal, bridgeable A+B"
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip 2-pole screw terminal, bridgeable A+B"
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip 2-pole screw terminal, bridgeable C+D"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Barrier strip 2-pole screw terminal, bridgeable C+D"
+    },
+    {
+      "name": "NomadLink Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "NomadLink network port; requires separate NLB 60E bridge/controller for functionality"
+    },
+    {
+      "name": "NomadLink Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "NomadLink network port (daisy-chain); requires separate NLB 60E bridge/controller for functionality"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains inlet; 230V CE version uses 16A CEE7 inlet, 115V ETL version uses 20A inlet (captive-cord/IEC-style, region-dependent)"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Crestron",
+  "model": "UC-M70-U (Flex Tabletop Large Room Video Conference System — CCS-UC-1-AV console)",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.crestron.com/getmedia/67b41586-b6dd-4936-982d-5a248c13f97b/ss_ccs-uc-1_series",
+  "confidence": "medium",
+  "notes": "UC-M70-U is a complete Crestron Flex system kit, not a single device: it bundles the CCS-UC-1-AV tabletop UC conferencing console, the UC-CAM-L1 AI collaboration camera, a CCS-UCA-MIC microphone pod, cables, and a PW-2420RU power pack. All physical I/O documented here is the connector panel of the CCS-UC-1-AV console (the system's central hub), per Crestron's official CCS-UC-1 Series specification sheet (2018, still the current authoritative connector reference for this console/kit family, confirmed current via docs.crestron.com/en-us/9132 which states the UC-M70-U kit's console is the CCS-UC-1-AV). The UC-CAM-L1 camera and CCS-UCA-MIC pod are accessories that plug into the console's USB/CAM and MIC POD ports respectively and have no separately user-relevant I/O of their own (camera connects via USB-to-PoE style adapter cable; mic pod uses RJ9/A2B bus, daisy-chainable). MIC POD 1-2 ports use RJ9 4P4C female connectors — not in the provided connector enum; mapped to the closest listed connector (rj45, modular jack family) since RJ9 is a smaller modular jack (4P4C) vs RJ45 (8P8C), so treat this mapping as an approximation. Ethernet ports (LAN, AUX) are 10/100 Mbps only (graded eth-100m) — this is an older/lower-bandwidth spec than most modern conferencing hubs, confirmed explicitly in the datasheet's Communications section. USB B (device port, Micro-USB) and USB/ACC + USB/CAM (host ports, USB-A) are all USB 2.0 per spec (graded usb-2.0). IR port (3.5mm) and COM/RS-232 port (3.5mm TRS) are unidirectional/bidirectional display-control ports respectively, ungraded (not applicable connector types for the grade scale). Power: console can be powered via PoE+ (802.3at Type 2, through the LAN RJ45 port — not modeled as a separate port) OR via the included PW-2420RU external 24VDC/2.5A power pack through a 2.1x5.5mm DC barrel jack; note if any mic pods are connected, PoE+ cannot be used and the DC power pack is mandatory. Desktop unit — no rack units. Source: Crestron CCS-UC-1 Series specification sheet (official PDF, crestron.com/getmedia/67b41586-b6dd-4936-982d-5a248c13f97b/ss_ccs-uc-1_series), cross-confirmed against docs.crestron.com UC-M70-U features page for kit composition.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Primary Ethernet port, RJ45 female, 10Base-T/100Base-TX, IEEE 802.3at Type 2 PoE+ powered-device capable"
+    },
+    {
+      "name": "AUX",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Secondary Ethernet port, RJ45 female, 10Base-T/100Base-TX, for isolating SIP/AirMedia traffic on a separate network"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A female, digital video/audio output to room display; HDCP 1.4, up to 1080p60"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI Type A female, presentation content input; DisplayPort/USB-C compatible via optional Multihead cable; up to 1080p60"
+    },
+    {
+      "name": "USB B",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Micro-USB Type B female device port; USB Audio Class speakerphone interface to a host laptop"
+    },
+    {
+      "name": "USB/ACC",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type A female host port; powers optional CBL-MULTI-HD-6 Multihead cable for DisplayPort/USB-C input"
+    },
+    {
+      "name": "USB/CAM",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type A female host port for the UC-CAM-L1 camera video input"
+    },
+    {
+      "name": "MIC POD 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ9 4P4C female connector (closest listed connector is RJ45; RJ9 is a smaller 4P4C modular jack, not in the provided enum) for CCS-UCA-MIC extension mic pod via A2B bus"
+    },
+    {
+      "name": "MIC POD 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ9 4P4C female connector (closest listed connector is RJ45; RJ9 is a smaller 4P4C modular jack, not in the provided enum) for a second CCS-UCA-MIC extension mic pod, daisy-chainable"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS mini-phone jack; bidirectional RS-232 for display device control up to 115.2k baud"
+    },
+    {
+      "name": "IR",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-phone jack; one-way IR output (or serial TTL) for display device control"
+    },
+    {
+      "name": "24V DC 2.5A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5mm DC barrel power input for the included PW-2420RU universal power pack (100-240VAC in, 24VDC/2.5A out); required instead of PoE+ whenever any mic pod is connected"
+    }
+  ]
+}

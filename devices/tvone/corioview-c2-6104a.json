@@ -1,0 +1,71 @@
+{
+  "manufacturer": "tvONE",
+  "model": "CORIOview C2-6104A",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://help.tvone.com/products/C2-series/C2-6104A/Resources/Multimedia/MNL-C2-6104A-US.pdf",
+  "confidence": "high",
+  "notes": "Ports labeled DVI-U1–DVI-U4 on the front panel and rear silkscreen are true DVI-I connectors (per the manual's DVI-I pinout diagram) wired for \"DVI-U\" (Universal) operation: DVI-D digital, DVI-A analog RGBHV/RGBS/RGsB/YPbPr, or Composite/S-Video via a DVI-to-BNC/HD15 adapter (adapter required; not a native BNC/RCA/S-Video jack on the unit itself). A 5th identical DVI-I input serves as the background/lock/cascade source (labeled \"DVI-I BACK\" in the rear-panel block diagram). The single DVI-I output likewise carries DVI-D or analog RGBHV/RGBS/RGsB/YPbPr and can alternatively be run to HD-15 or 5xBNC via adapter per the spec sheet (\"Connectors: HD-15 and/or 5 x BNC\"). No numeric DVI/HDMI bandwidth grade is defined in the requested grade scale, so grade was omitted for all DVI ports (max is 162MHz/1920x1200@60Hz per spec). Serial control port is a single DE-9 (D9) female socket switchable between RS-232, RS-422 (full duplex) and RS-485 (half duplex) in the System menu — modeled here as one bidirectional rs232 port with rs422/rs485 noted as alternate protocols on the same physical DE-9 (closest available connector ids used; rs422/rs485 are not separate physical jacks on this unit). Power: manual specifies \"Mains supply: 100-240V AC (50-60Hz)\" and lists \"Safety (AC inlet units): IEC 60065\" compliance, indicating a rear IEC AC inlet (not an external DC brick); exact IEC sub-type (C13/C14) not explicitly stated in the manual but is standard for this class/rack-mount tvONE unit, so modeled as \"iec\". An optional factory-fitted Tally/UMD module (C2M-TALLY, adds an RJ45 supporting RS-422/RS-485 tally/UMD) exists but is a paid accessory not present on standard units, so it was NOT included in the port list. Confirmed via manufacturer product page, official user manual (MNL-C2-6104A-V2.22, tvone.com), and Markertek retailer spec table.",
+  "ports": [
+    {
+      "name": "DVI-U1",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I socket; accepts DVI-D digital, DVI-A analog RGBHV/RGBS/RGsB/YPbPr, or Composite/S-Video via adapter"
+    },
+    {
+      "name": "DVI-U2",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I socket; accepts DVI-D digital, DVI-A analog RGBHV/RGBS/RGsB/YPbPr, or Composite/S-Video via adapter"
+    },
+    {
+      "name": "DVI-U3",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I socket; accepts DVI-D digital, DVI-A analog RGBHV/RGBS/RGsB/YPbPr, or Composite/S-Video via adapter"
+    },
+    {
+      "name": "DVI-U4",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I socket; accepts DVI-D digital, DVI-A analog RGBHV/RGBS/RGsB/YPbPr, or Composite/S-Video via adapter"
+    },
+    {
+      "name": "DVI-I Back (Background/Lock input)",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "5th DVI-I input used for background layer or cascading multiple units"
+    },
+    {
+      "name": "DVI-I Output",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "DVI-D digital or analog RGBHV/RGBS/RGsB/YPbPr output; alternatively routed via adapter to HD-15 or 5xBNC"
+    },
+    {
+      "name": "RS-232/422/485",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422",
+        "rs485"
+      ],
+      "note": "DE-9 (D9) female socket, protocol selectable in System menu between RS-232, RS-422 full-duplex, and RS-485 half-duplex"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "TCP/IP control port"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC 50/60Hz mains inlet; ~20W consumption"
+    }
+  ]
+}

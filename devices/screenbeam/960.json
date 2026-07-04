@@ -1,0 +1,53 @@
+{
+  "manufacturer": "ScreenBeam",
+  "model": "960",
+  "category": "network",
+  "type": "Media player",
+  "sourceUrl": "https://www.screenbeam.com/wp-content/uploads/2025/04/sb960-datasheet.pdf",
+  "confidence": "high",
+  "notes": "Model number on device/box is SBWD960A (base) with an SBWD960B variant noted in the datasheet as adding \"Gigabit Ethernet to support wider range of modern networking switches\" — however the base spec table already lists Ethernet as 10/100/1000-BASE-T RJ-45 LAN, so grade eth-1g applies to the documented interface; the 960B enhancement likely refers to guaranteed full Gigabit switch compatibility rather than a different port. No HDMI or DisplayPort version is stated in the datasheet, so no HDMI grade was set (base spec supports up to 1080p30 via H.264, consistent with HDMI 1.4-class bandwidth, but this is not explicitly confirmed). USB port is explicitly \"USB 2.0 Host Type-A\" so grade usb-2.0 is confirmed. VGA input is a pass-through (loops to nothing else documented as a separate VGA output pass path) - treated as a standard bidirectional-capable analog video input per datasheet wording \"VGA Input (Pass-through)\". Power adapter is external (5VDC, 2A barrel jack), device itself uses a DC barrel jack input, not an integrated AC inlet. Desktop puck-shaped unit (6.61 x 6.61 x 1.36 in) - not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VGA Output",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "VGA Input",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Labeled \"VGA Input (Pass-through)\" in datasheet"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Labeled \"Analog 3.5mm audio output\" in datasheet"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Labeled \"USB 2.0 Host Type-A\" in datasheet"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Labeled \"10/100/1000-BASE-T RJ-45 LAN\""
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Labeled \"DC Power Jack\" in datasheet; external power input 5VDC, 2A"
+    }
+  ]
+}

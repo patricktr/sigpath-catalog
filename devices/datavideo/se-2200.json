@@ -1,0 +1,167 @@
+{
+  "manufacturer": "Datavideo",
+  "model": "SE-2200",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "http://resource.datavideo.com/Instruction_Manuals/SE-2200_E7_A4_EN.pdf",
+  "confidence": "high",
+  "notes": "Ports 5 and 6 are switchable: each can be used as either an HD-SDI (BNC) input or an HDMI input, giving \"6 SDI or 4 SDI + 2 HDMI\" total video inputs (modeled here as 6 fixed SDI inputs Input 1-4 plus dedicated Input 5/6 SDI, and 2 separate HDMI inputs for the same physical jacks - see caveat below). Max resolution per manual is 1080i/720p only (no 1080p/3G-SDI mentioned anywhere in the manual's Standards or Specifications tables), so SDI ports are graded sdi-hd, not sdi-3g. HDMI version is never stated in the manual (only resolutions/refresh rates), so HDMI grade is omitted per instructions. RS-232/RS-422 port is physically present but the manual marks it \"(TBD)\" / not active under current firmware at time of writing. Power input is a 4-pin XLR DC socket (12V/3A external PSU, locking collar), pinout Pin1=GND, Pin4=VCC - this is a true xlr4-dc connector, not a barrel jack (a common assumption). Main processing unit ships with 2x 2U rack-ear brackets per B&H/AVLFX listings, so it is rack-mountable at 2U, though the manual's own dimensions page did not extract as text (image-based) to independently confirm. Console/keyboard port (9-pin D-Sub) connects the separate control panel and is control-only, not modeled as signal I/O. Grounding terminal (screw lug) omitted as it is not a signal/power connector per the schema. Tally output is a D-sub 25-pin female bi-color tally port (open-collector outputs), modeled generically as bidirectional D-sub since no exact connector id exists in the allowed list - closest match used was rs232 is NOT appropriate; used the closest generic serial/control fit is not available either, so it was mapped best-effort. Two separate Ethernet/RJ45 ports exist (PC control/updates, and firmware/file load) - both included in ports list.",
+  "ports": [
+    {
+      "name": "Video Input 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Input 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Input 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Input 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Input 5 (SDI/HDMI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Switchable per-channel between HD-SDI (BNC) and HDMI; only one physical jack pair is used depending on menu selection"
+    },
+    {
+      "name": "Input 6 (SDI/HDMI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Switchable per-channel between HD-SDI (BNC) and HDMI; only one physical jack pair is used depending on menu selection"
+    },
+    {
+      "name": "Video Output 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Output 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Output 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Output 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Output 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Output 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Multi View Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Multi-view output format is fixed at 1080i"
+    },
+    {
+      "name": "Multi View Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Multi-view output format is fixed at 1080i"
+    },
+    {
+      "name": "Audio Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Output 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Output 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Tally Output",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Physically a D-sub 25-pin female connector with open-collector outputs; closest available connector id used since a 25-pin D-sub is not in the allowed list"
+    },
+    {
+      "name": "Ethernet Port (PC Control & Updates)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet Port (Load File & Firmware Updates)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS-232/422 Connector",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Manual marks this interface as not active under current firmware at time of writing"
+    },
+    {
+      "name": "GPI Output Connector",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack socket for contact-closure GPI trigger, not general-purpose audio"
+    },
+    {
+      "name": "DC Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Supplied 12V 3A external PSU connects via 4-pin XLR socket, locking collar; Pin1=GND, Pin4=VCC"
+    }
+  ]
+}

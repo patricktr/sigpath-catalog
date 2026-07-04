@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Key Digital",
+  "model": "KD-X444S",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://www.keydigital.org/web/content/5974/KD-X444S_CatalogPage.pdf",
+  "confidence": "high",
+  "notes": "This is a Tx+Rx extender kit (two separate low-profile enclosures, not rack-mountable: 4.1\\\" x 2.8\\\" x 0.875\\\" each). Ports below are grouped by unit (Tx.../Rx...) per the manufacturer's own panel diagrams. HDMI is rated for 18Gbps/4K60 4:4:4 8-bit signals; graded as hdmi-2.0 since 18Gbps is the HDMI 2.0 spec ceiling (manufacturer does not claim HDMI 2.1 features like eARC/VRR). HDBaseT ports carry the extended HDMI signal over CAT5e/6 plus embedded IR/RS-232/PoH control data; represented with connector \\\"rj45\\\" (closest available id — true connector is a shielded RJ45/HDBaseT jack) with no eth-* grade set since HDBaseT bandwidth (18Gbps over Cat5e/6, using HDBaseT's own compression/encoding) does not correspond to a standard Ethernet PHY speed. RS-232 and IR are physically 3-pin and 4-pin captive-screw Phoenix/terminal-block connectors (not DE-9 or 3.5mm), so connector is set to \\\"euroblock\\\" (closest match in the allowed list) rather than \\\"rs232\\\" or \\\"ir\\\", since the id \\\"rs232\\\" implies a D-sub connector shape not present on this device. DC power input is a 12V/1.66A (20W) barrel-type jack with a screw-in retention collar, powered by an included external desktop PSU (100-240VAC); modeled as dc-barrel. Power over HDBaseT (PoH) allows a single power connection at either Tx or Rx to power both ends, but each unit has its own physical DC jack as shown in the manufacturer diagrams, so both are listed. IR In/Out and RS-232 are bidirectional pass-through paths (control signal can travel either direction between Tx and Rx) but each physical port is documented by Key Digital with a fixed in/out role per unit; modeled per that documented role.",
+  "ports": [
+    {
+      "name": "Tx HDMI Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Tx IR In/Out",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin Phoenix/captive-screw terminal block carrying IR in and out signals"
+    },
+    {
+      "name": "Tx RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix/captive-screw terminal block, bi-directional RS-232 control pass-through"
+    },
+    {
+      "name": "Tx HDBaseT Output",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Shielded RJ45 HDBaseT link carrying HDMI 18Gbps video/audio plus IR, RS-232, and PoH; no standard Ethernet PHY grade applies"
+    },
+    {
+      "name": "Tx 12V DC Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/1.66A (20W) barrel jack with screw-in retention; Power over HDBaseT allows either Tx or Rx to be powered and feed the other"
+    },
+    {
+      "name": "Rx HDBaseT Input",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Shielded RJ45 HDBaseT link; no standard Ethernet PHY grade applies"
+    },
+    {
+      "name": "Rx HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Rx IR In/Out",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin Phoenix/captive-screw terminal block carrying IR in and out signals"
+    },
+    {
+      "name": "Rx RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix/captive-screw terminal block, bi-directional RS-232 control pass-through"
+    },
+    {
+      "name": "Rx 12V DC Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/1.66A (20W) barrel jack with screw-in retention; Power over HDBaseT allows either Tx or Rx to be powered and feed the other"
+    }
+  ]
+}

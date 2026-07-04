@@ -1,0 +1,41 @@
+{
+  "manufacturer": "BirdDog",
+  "model": "X1 Ultra",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://birddog.tv/wp-content/uploads/2024/04/BirdDog-X1-X1-Ultra_manual_02-05-2025.pdf",
+  "confidence": "high",
+  "notes": "Compact PTZ camera (desktop/tabletop or wall-mount, not rack-mountable). Sourced from BirdDog's official X1/X1 Ultra User Manual (rear-panel diagram + Technical Specifications table) and the official Tech Specs page. Rear panel (per manual diagram) has exactly 5 wired physical ports plus a Wi-Fi antenna: DC 12V (barrel), RS232 (implemented over an RJ45 jack, VISCA control, pinout: pin3=GND, pin7=TX, pin8=RX per T-568B), USB 3.0 (USB-C connector, UVC 1.1), HDMI, and PoE/LAN (RJ45). The spec table also lists \"RS485\" and \"10M/100M Ethernet\" under Control Interface, but the physical rear-panel diagram shows only one RJ45 RS232/control port and one RJ45 PoE/LAN port — no separate RS485 physical connector is depicted, so RS485 was not added as a distinct port (likely logically available but not separately wired, or a documentation carryover from a shared control-board design). Ethernet is capped at 100M (Fast Ethernet, not Gigabit) per \"100M adaptive Ethernet port\" spec — graded eth-100m accordingly. HDMI grade omitted: manual/spec sheet state HDMI output and max video format 2160p@30fps but do not state an explicit HDMI version (1.4/2.0/2.1), so no grade was assigned per instructions (4K30 is achievable over HDMI 1.4 but this is an inference, not a stated spec). USB 3.0 port is physically USB-C; graded usb-5g (USB 3.0/3.1 Gen1 baseline = 5Gbps) since manual explicitly labels it \"USB 3.0\". Power: DC 12V barrel input (2.0A max, 13W max) plus PoE IEEE802.3af via the same RJ45 LAN port (not counted as a second power port, since it shares the LAN connector). No dedicated audio in/out ports exist on this camera. Manufacturer power adapter is external DC 12V (BD-P12-1), consistent with dc-barrel selection.",
+  "ports": [
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "VISCA control port implemented on an RJ45 jack (CAT5/6 cable, T-568B pinout: pin3=GND, pin7=TX, pin8=RX); used for joystick/PTZ controller daisy-chain, not for Ethernet data"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "UVC 1.1 webcam-style output to host PC"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "PoE/LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100M adaptive Ethernet; also carries PoE IEEE802.3af power to the camera"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Planar",
+  "model": "URL136-MFT (UltraRes L Series)",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.planar.com/media/rlspmta0/planar-ultrares-l-series-url-136-user-manual.pdf",
+  "confidence": "high",
+  "notes": "All-in-one 136\" direct-view micro-LED display (1920x1080, 16:9) with integrated 10-point multi-touch (MFT = multi-touch). Not rack-mountable — wall-mounted (included mount) or optional rolling floor stand. Port list and labels taken verbatim from the official Planar UltraRes L 136 Series User Manual (Part No. 020-1427-00C, \"Planar UltraRes L Series – Standard Inputs\" diagram, p.20) and the Specifications table (p.138-140). HDMI 1/HDMI 2 are HDMI 2.0 with HDCP 2.2; HDMI 3/HDMI 4 are HDMI 1.4 with HDCP 1.4 (only one HDCP 2.2 source can display at a time). DP OUT only mirrors DP IN content, cannot pass through any HDMI input. AC IN is labeled \"IEC C20\" on the unit's connector panel (the C20 is the male-pin panel inlet that mates with a C19 cord connector); modeled here as iec-c19 per the closest available connector id since a dedicated \"iec-c20\" id is not in the allowed list. RS232 is DB9 female for external/serial control. IR input is a 3.5mm TRS female jack for an external IR receiver eye (included accessory), not a full IR transceiver. USB-B is used for touch data and serial commands to a host PC; USB-A is listed as \"Service\" only (not a general-purpose host/media port) per the manual, but categorized bidirectional per USB-host convention. No separate power switch port modeled (AC ON/OFF is a physical rocker switch, not a connector). Audio: PC Line In is not a separate physical jack — HDMI/DP embed audio; the manual's Standard Inputs diagram does not show a dedicated analog line-in jack, only Line Audio Out (3.5mm TRS) and SPDIF Audio Out (Toslink). Grades: HDMI and DisplayPort versions confirmed directly from manual; RJ45/LAN speed not stated in manual (omitted grade, no eth speed specified — treated as unconfirmed rather than assumed 1G).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DP OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB-B (Touch)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Touch data + serial command interface to host PC"
+    },
+    {
+      "name": "USB-A (Service)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Service port"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS female for external IR receiver eye accessory"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 female, external control"
+    },
+    {
+      "name": "SPDIF Audio Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "Line Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Panel inlet labeled 'IEC C20' on the device; mates with IEC C19 cord connector"
+    }
+  ]
+}

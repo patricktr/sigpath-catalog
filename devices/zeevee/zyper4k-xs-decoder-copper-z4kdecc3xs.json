@@ -1,0 +1,50 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "ZyPer4K-XS Decoder (Copper) — Z4KDECC3XS",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.zeevee.com/wp-content/uploads/2024/10/ZyPer4K-XS-Z4KDECC3XS-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "ZyPer4K-XS is a product family sold as separate encoder and decoder units, each in copper (RJ45) or fiber variants: Z4KENCC3XS (copper encoder), Z4KENCF3XS (fiber encoder), Z4KDECC3XS (copper decoder, modeled here), Z4KDECF3XS (fiber decoder). This entry models the copper Decoder. Encoder differs only in I/O direction: HDMI 2.0 IN (Media Input) instead of OUT, analog audio port is input-or-output (3.5mm mic/line style unbalanced stereo jack) instead of output-only, and USB connector is Mini-B (device) instead of USB-A (host) on the decoder — USB is used for HID pass-through between paired XS/XR units, not general host/peripheral use. Fiber variants replace the \"Media Transport\" copper RJ45 (10Gb PoE, Cat6a 100m) with an SFP+ fiber port (multimode 300m / single-mode 10km); exact SFP connector (LC) inferred from standard ZeeVee fiber module practice, not explicitly itemized in the datasheet. The \"Utility\" RJ45 is a 10/100/1Gb management port for ZMP control, separate from the 10Gb media-transport Ethernet port. Power input is a 12V DC locking barrel connector fed by an included external AC power supply (brick), so the device-side connector is a DC barrel jack, not the AC mains inlet itself. Ethernet media-transport port is rated 10Gb — no exact grade tier (e.g. 10g vs multi-gig) beyond \"10Gb\" is stated, so eth-10g was used. HDMI ports are HDMI 2.0 per datasheet. Decoder power draw ~8W; encoder ~15W (per family datasheet), same chassis/connector layout.",
+  "ports": [
+    {
+      "name": "Media Output (HDMI 2.0 OUT)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Media Transport (10Gb Ethernet, PoE Enabled)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gb AVoIP media/audio/control transport link to switch; PoE-powered variant possible"
+    },
+    {
+      "name": "Utility (10/100/1Gb)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Management/control Ethernet port for ZyPer Management Platform"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A host port; USB HID pass-through paired with an XS/XR encoder"
+    },
+    {
+      "name": "AUD-OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio output; digital audio (encoded formats + LPCM up to 8ch) embedded via HDMI"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC locking barrel connector; external AC power supply included"
+    }
+  ]
+}

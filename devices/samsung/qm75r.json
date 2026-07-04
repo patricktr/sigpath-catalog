@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Samsung",
+  "model": "QM75R",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://image-us.samsung.com/SamsungUS/samsungbusiness/pdfs/DIGSIG-QMRSERIESDSHT-MAY19T-Final-5-29-19.pdf",
+  "confidence": "high",
+  "notes": "Source: official Samsung QMR Series UHD Commercial Displays spec sheet (DIGSIG-QMRSERIESDSHT-MAY19T, samsung.com/b2bdigitalsignage), which includes a rear-panel connectivity diagram common to the QM43R/49R/55R/65R/75R models. Port list and numbering (1-13) taken directly from that diagram. HDMI In 1 supports ARC; HDMI In 2 and DP In are labeled \"Daisy Chain In\" and HDMI Out is \"Daisy Chain Out\" for video-wall daisy-chaining (HDCP 2.2: 4 displays, HDCP 1.4: 7 displays). DVI/MagicInfo In (port 4) is a DVI-D input also usable for MagicInfo; port 10 is a stereo mini-jack analog audio input shared for DVI/HDMI audio; port 11 is a stereo mini-jack audio output. RS232C In/Out are stereo (TRS 3.5mm) jacks per the spec table (\"RS232C (In/Out) thru Stereo Jack\"), not DE-9 — modeled as trs-3.5 connector accepting rs232 signal since trs-3.5 is the physical jack. IR In (port 13) is a physical mini-jack IR sensor input. AC power inlet type is not explicitly stated as IEC in the spec sheet (listed only as \"Power Type: Internal\", AC 100-240V, with a \"Power Cord\" included accessory) — inferred as IEC C13/C14 based on standard practice for commercial displays in this power class (231W max); could not directly confirm the exact power inlet connector, so treat that one port with medium confidence. Also applies to the QM75R-A refresh (bhphotovideo.com listing) which appears to share the same I/O layout; minor variant differences across regions (e.g. -B suffix) not confirmed.",
+  "ports": [
+    {
+      "name": "HDMI In 1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In 2 (Daisy Chain In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DP In (Daisy Chain In)",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI / MagicInfo In",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "HDMI Out (Daisy Chain Out)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DVI / HDMI Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 2.0 (1.0A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (0.5A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps; used for MDC control and network/internet connection"
+    },
+    {
+      "name": "RS232C In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "RS232C control signal carried over a stereo mini-jack, not a DE-9 connector"
+    },
+    {
+      "name": "RS232C Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "RS232C control signal carried over a stereo mini-jack, not a DE-9 connector"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable AC power cord included; inlet type inferred as IEC C13/C14 (not explicitly stated in spec sheet), AC 100-240V 50/60Hz, internal power supply"
+    }
+  ]
+}

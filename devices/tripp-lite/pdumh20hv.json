@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Tripp Lite",
+  "model": "PDUMH20HV",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://tripplite.eaton.com/metered-pdu-16a-20a-200v-240v-1u-c19-c13-outlets-c20-input-nema-l6-20p-adapter-single-phase~PDUMH20HV",
+  "confidence": "medium",
+  "notes": "No product named \"PDUMH20HVT\" exists from Tripp Lite/Eaton. The closest real, verified model is the PDUMH20HV (3.2-3.8kW single-phase metered PDU, 200-240V, C20 inlet w/ L6-20P adapter, 8x C13 + 2x C19 outlets, 1U, 6.5in/16.5cm depth, ~6.8 lbs, LCD ammeter). A related ATS variant, PDUMH20HVAT, exists with dual C20 inputs and an internal transfer switch — flagging in case \"HVT\" was intended to reference that model instead. Manufacturer PDF datasheets (assets.tripplite.com) are image-based and could not be OCR'd directly; specs were corroborated across Eaton/Tripp Lite product pages, a ServeTheHome hands-on teardown review, and distributor listings (Anixter, ProVantage, DigiKey). No network/USB/dry-contact ports are present on this base metered (non-networked) model. Grade omitted on all ports per rules since none are SDI/HDMI/DP/USB-data/Ethernet.",
+  "ports": [
+    {
+      "name": "AC Input (C20)",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Female IEC-320 C20 inlet on PDU (mates with C19 plug on the supplied 12ft cord); PDU ships with an L6-20P-to-C19 adapter cord for direct L6-20P wall receptacle connection"
+    },
+    {
+      "name": "Output 1 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 2 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 3 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 4 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 5 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 6 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 7 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 8 (C13)",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Output 9 (C19)",
+      "direction": "output",
+      "connector": "iec-c19"
+    },
+    {
+      "name": "Output 10 (C19)",
+      "direction": "output",
+      "connector": "iec-c19"
+    }
+  ]
+}

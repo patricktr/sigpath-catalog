@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Samsung",
+  "model": "QM55C",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://d347awuzx0kdse.cloudfront.net/wbtd/content-file/QMC%20Spec%20Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Model code LH55QMCEBGCXXY (region suffix varies, e.g. -XXY/-XGO/-XUE). Part of the QMC series (43\"-85\") sharing one connectivity spec: DP 1.2 x1, HDMI 2.0 x3 (HDMI 3 is ARC-capable per the user manual's rear-panel legend \"HDMI 3 (ARC)\"), USB 2.0 x2 (host ports, 1.0A/0.5A, for media playback not general host use, but modeled as bidirectional USB per USB-A convention), stereo mini-jack audio output, RS232C in/out for MDC daisy-chain control, RJ45 (10/100 Mbps, in) for LAN/MDC, and IR in for an external IR receiver cable. Internal power supply (AC 100-240V 50/60Hz) with an included detachable power cord; official docs do not show a rear-panel photo of the AC inlet for this larger QM-series chassis, so the connector is inferred to be a standard IEC inlet (consistent with Samsung's commercial QM/QB/QH display line and included \"Power Cord\" accessory) rather than confirmed via photo — flagged as the one inferred item. Grades: HDMI ports graded hdmi-2.0 and DP graded dp-1.2 per official Samsung spec sheet; RJ45 grade set to eth-100m reflecting the manual's explicit \"(10/100 Mbps)\" rating. USB ports left ungraded-version \"usb-2.0\" per official spec (\"USB 2.0 (2)\"). No SDI/BNC ports on this model.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "ARC-capable HDMI input"
+    },
+    {
+      "name": "DP",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "USB 1 (0.5A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Media/service USB port, 0.5A max"
+    },
+    {
+      "name": "USB 2 (1.0A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Media/service USB port, 1.0A max"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack audio output"
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "LAN/MDC control, 10/100 Mbps"
+    },
+    {
+      "name": "RS232C IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "MDC serial control via RS232C adapter (D-SUB 9-pin)"
+    },
+    {
+      "name": "RS232C OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "MDC daisy-chain out via RS232C adapter"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "External IR receiver cable input"
+    },
+    {
+      "name": "AC In (Power)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal PSU, AC 100-240V 50/60Hz; included detachable power cord. Exact IEC inlet size (C13/C14) not confirmed by photo — inferred from Samsung commercial display convention."
+    }
+  ]
+}

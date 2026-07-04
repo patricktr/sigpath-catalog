@@ -1,0 +1,52 @@
+{
+  "manufacturer": "Sony",
+  "model": "SRG-A40",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.proav.com/img/products/SRG-A40%20Data%20Sheet.pdf",
+  "confidence": "high",
+  "notes": "Official Sony datasheet (also mirrored by proAV/av-iq) lists 4K Video Output as HDMI x1 + IP(streaming) x1, and HD Video Output as 3G-SDI x1 + HDMI x1 + IP(streaming) x1 — these are the same physical HDMI and SDI jacks, just enumerated per resolution mode, so they are represented once each here. HDMI version/generation is not stated in the datasheet, so no grade is set on the HDMI port (color space support up to RGB 4:4:4 8-bit at up to 2160/29.97p is confirmed, consistent with at least HDMI 1.4, but the exact revision is not published). 3G-SDI grade is explicit. Camera Control Interface is listed as \"VISCA RS-422 RJ45(In/Out)\"; a corroborating spec sheet (av-iq/Sony A&E spec) confirms this is 2 physical RJ45 jacks (In and Out, for daisy-chaining up to 7 cameras), modeled here as two separate RS-422 RJ45 ports. The LAN/network RJ45 (IP streaming, VISCA-over-IP, and PoE++ power) is a separate third RJ45, confirmed 10BASE-T/100BASE-TX/1000BASE-T auto-negotiating by the same corroborating source, so grade eth-1g is used. Power: \"Power Connector Type: IEC60130-10 (JEITA standard RC-5320A) Type 5\" is Sony's small locking DC coaxial jack (paired with a supplied external AC power adaptor, DC 19.5V) — mapped to the closest available connector id, dc-barrel; the unit also accepts PoE++ (IEEE802.3bt type4 class8) over the LAN RJ45, so no separate PoE port is added. Omitted from the port list: IR remote receiver window (wireless, not a cable connector) and the front tally lamp (status indicator, not a connector). Body color choice is White or Black; ceiling-mountable, desktop/mantel PTZ camera (no rack unit applicable).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Labeled 3G-SDI in spec; BNC connector"
+    },
+    {
+      "name": "VISCA RS-422 In",
+      "direction": "input",
+      "connector": "rj45"
+    },
+    {
+      "name": "VISCA RS-422 Out",
+      "direction": "output",
+      "connector": "rj45"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "IP video streaming, VISCA over IP, and PoE++ power (IEEE802.3bt type4 class8)"
+    },
+    {
+      "name": "Mic/Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini-phone, mic/line selectable"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "IEC60130-10 (JEITA RC-5320A) Type 5 locking DC jack, DC 19.5V via supplied AC adaptor"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Thor Broadcast",
+  "model": "F-M1SDI-3G-TX",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://thorbroadcast.com/upload/files/260/f-m1sdi-3g-txrx-user-manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Thor Fiber (Thor Broadcast) F-M1SDI-3G-TxRx User Manual (2017), which documents the transmitter (F-M1SDI-T) and receiver (F-M1SDI-R) as a kit; specs here are for the TX unit only, as requested. Rear panel (F-M1SDI-T): POWER (12V DC), RS485 (A/B terminal block), HD-SDI IN (BNC). Front panel: OPT (bi-directional ST/PC fiber connector) plus NOP/LOCK status LEDs (not physical ports). Two connector substitutions were needed because the exact real-world connectors are not in the provided enum: (1) the optical port is ST/PC, mapped to fiber-lc as the closest fiber type; (2) the RS-485 connector is a Phoenix-style 2-pin pluggable terminal block, mapped to euroblock as the closest match. SDI grade set to sdi-3g since the interface is specified as auto-adaptive up to 2.97Gb/s (SMPTE 424M 3G-SDI), which is the highest rate it supports (also handles HD-SDI/SD-SDI at lower rates). This is a compact \"throw-down\" desktop unit (93.2 x 46.2 x 29.6 mm) — not rack-mountable, so rackUnits is omitted. Some retailer listings (B&H, HDTV Supply) describe an AC-powered variant with a \"latch-locking power connector\" and 130-260VAC input, and a separate F-M1SDI-3G-ET-TX/RX variant adds a Gigabit Ethernet RJ45 port — these differ from the base manufacturer manual (12V DC, no Ethernet) used here and may reflect a different SKU/revision or an included external AC-to-DC power adapter; treat power-connector wording with some caution if the exact revision matters.",
+  "ports": [
+    {
+      "name": "HD-SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Auto-adaptive: 2.97Gb/s (3G-SDI), 1.485Gb/s (HD-SDI), 270Mb/s (SD-SDI)"
+    },
+    {
+      "name": "OPT",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Manufacturer specifies an ST/PC optical connector (not in the provided connector list); fiber-lc chosen as closest fiber-connector match. Bi-directional optical port carrying SDI plus reverse RS-485 data over a single fiber."
+    },
+    {
+      "name": "RS485",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Labeled 'RS485' with A/B terminals on a Phoenix-style pluggable terminal block; euroblock chosen as closest connector match. Half-duplex, up to 115.2Kb/s."
+    },
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input, operating range 8V-14V, 1.5W consumption. Panel diagram shows a circular DC jack; exact barrel size not specified in the manual."
+    }
+  ]
+}

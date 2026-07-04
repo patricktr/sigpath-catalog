@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Matrox",
+  "model": "Monarch HDX",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://video.matrox.com/en/products/encoders-decoders/monarch-series/monarch-hdx-tech-specs",
+  "confidence": "high",
+  "notes": "Desktop appliance (not natively rack-mountable; optional MRCH/RACK/KIT fits up to two units in 1RU). SDI input/output are 3G-SDI capable BNCs, compliant with SMPTE 259M/292M/424M(Level A)/425M — graded sdi-3g. HDMI in/out max 1920x1080, no version stated by Matrox; graded hdmi-1.4 (medium confidence, inferred from 1080p60 max and product era). HDMI Out is a preview/monitoring output of the selected input signal, not an independent output. SDI Out is a 0-frame-latency passthrough of the SDI input with a hardware bypass relay (closes on power failure). Audio in/out are unbalanced stereo 3.5mm line-level jacks (audio in is separate from embedded HDMI/SDI audio, which is processed internally, not a physical port). 2x USB 2.0 (Type-A) are storage ports for recording, not general host/data ports, but tagged usb-a/bidirectional per the port-direction convention; graded usb-2.0 per spec. SD/SDHC/SDXC card slot has no listed connector id in the allowed list and is omitted from ports. Power: device takes 9-24VDC via a locking DIN4 connector from an included external AC/DC power supply; the supply itself has an IEC320-C8 (figure-8) inlet for a country-specific AC cord (US/GB/EU cords included). Represented the DC input to the device as xlr4-dc is not applicable (it's a DIN4, not XLR) — closest listed id is dc-barrel (external DC adapter), noted as a locking DIN4 barrel-style connector, not a standard coaxial barrel. Product is EOL (Matrox announced EOL April 2025); Matrox recommends Maevex 7100 Series or Monarch LCS as replacements. Front-panel push buttons for Start/Stop are physical controls, not signal ports, and are omitted.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Max 1920x1080p60 / 1080i; no HDMI version stated by manufacturer, grade inferred from max resolution/frame rate"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Preview/monitoring output of the selected input signal (SDI or HDMI), not an independent program output"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Compliant with SMPTE 259M/292M/424M (Level A)/425M"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "0-frame-latency passthrough of SDI input; hardware bypass relay closes on power failure"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced analog stereo line-level input, 1/8\" (3.5mm) jack"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced analog stereo line-level output (passthrough of input), 1/8\" (3.5mm) jack"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For local recording storage (thumb drive/powered USB drive)"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For local recording storage (thumb drive/powered USB drive)"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DIN4 connector, 9-24VDC from included external AC/DC power supply (supply's AC inlet is IEC320-C8/figure-8, region-specific cord included)"
+    }
+  ]
+}

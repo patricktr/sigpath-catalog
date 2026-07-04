@@ -1,0 +1,75 @@
+{
+  "manufacturer": "Leader",
+  "model": "LV5350",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.leader.co.jp/uploads/2018/11/lv5300_lv5350_lv7300_e_1_20.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Leader Electronics' official LV5300/LV5350/LV7300 Instruction Manual (PDF, Oct 2018, firmware v2.0), the authoritative manufacturer document covering all three models in this product line. The LV5350 is a 3U half-rack (215x132x85mm) waveform monitor/rasterizer with a built-in 7\" touchscreen.\n\nPort notes:\n- SDI INPUT 1/2 and SDI OUTPUT 1/2: base LV5350 ships with the SDI INPUT/EYE hardware option as \"Standard support\" (manual Table 2-1), which is functionally equivalent to SER01/SER02, so both 2x SDI inputs and 2x SDI outputs (reclocked/TSG/monitor-out signal) are present on the shipping unit. Manual states support up to \"12G-SDI single link\" (Table 1-2, \"12G-SDI TYPE 1\"), so grade sdi-12g is used for all four SDI BNCs; SD/HD/3G-A/3G-B-DL are also supported (lower grades subsumed).\n- EXT REF: BNC, 1 pair, passive loop-through, accepts tri-level sync or NTSC/PAL black burst — not a bandwidth-graded connector type per rules, so no grade set.\n- PHONES: one 3.5mm stereo mini jack (LV5300/LV5350 spec; LV7300 differs with a full-size stereo jack).\n- USB: 2x USB Type-A, USB 2.0, host ports for USB memory/mouse/touch-panel monitor.\n- Ethernet: RJ-45, IEEE802.3, 10/100/1000Base-T (grade eth-1g used, representing max supported speed).\n- REMOTE: 15-pin D-sub (female), inch locking screws. This is a GPI/contact-closure and alarm/tally control port (LV-TTL level, 0-5VDC), not a true RS-232 serial data port — no exact match exists in the given connector list for a female 15-pin D-sub control terminal, so \"rs232\" was chosen as the closest available id purely for its D-sub-family connector shape; treat this as a control/GPI port, not literal RS-232 serial. No grade applies.\n- DC IN / power: manual's General Specifications state \"Power Requirements: Voltage DC 10 to 18V\" and power consumption of 28W max for LV5350; an AC adaptor is sold separately (accessory) rather than built in, confirming the unit itself takes external DC, not mains AC directly. The manual does not print the physical DC connector's pin type. Medium-confidence inference: Leader's related field/broadcast monitor LV5333 (same product family, per Leader's own site) is documented as using a 4-pin XLR DC input connector, and the LV5350 supports the same V-mount/QR-Gold external battery adapter options (SER11/SER12) that this connector style is designed for. connector \"xlr4-dc\" reflects that inference rather than a directly confirmed label from the LV5350 manual/datasheet — flag as the one lower-confidence item in an otherwise high-confidence, manufacturer-sourced spec set.\n\nNo physical RS-422/485 connector, AES/analog audio connector, or HDMI output exists on the LV5350 itself: TMDS/HDMI output and the touch-panel-monitor video interface are LV7300-only features (external-monitor rasterizer variant); audio in this line is embedded-SDI only (SER20 AUDIO option adds level/Lissajous/status display of embedded PCM audio, not new physical audio jacks). A third-party retailer snippet mentioned \"RS-422/485 terminals,\" but the official manual's Control Connectors section (3.3.8) lists only USB, Ethernet, and the 15-pin D-sub REMOTE connector — no separate RS-422/485 D-sub/euroblock terminal is documented, so it was omitted.\n\nNo product \"category\" or \"type\" in the given enumerations fits a waveform monitor/rasterizer test-and-measurement instrument, so category=\"other\" and type=\"Other\" (omit-if-none-fits) were used per instructions.",
+  "ports": [
+    {
+      "name": "SDI INPUT 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI INPUT 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI OUTPUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI OUTPUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "EXT REF",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "15-pin D-sub (female), LV-TTL level contact-closure I/O for presets/tally/alarm, not RS-232 serial data — closest listed connector type used to represent the D-sub form factor"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "manufacturer": "Lightware",
+  "model": "MX2-8x8-HDMI20-L",
+  "category": "switcher",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://qed-productions.com/downloads/lightware/MX2-8x8-HDMI20_series_Users_Manual_v2.4.pdf",
+  "confidence": "high",
+  "notes": "Plain \"-L\" SKU (no \"Audio\" suffix) has no analog audio Phoenix connectors — confirmed via retailer spec pages (Creation Networks, Nationwide Video) and Lightware's own naming convention, distinguishing it from the MX2-8x8-HDMI20-Audio-L which adds 5-pole Phoenix balanced-audio embed/de-embed jacks per port. Mechanical chassis, power, RS-232, Ethernet, and USB specs are shared across the -L/-Audio-L/-CA family and were verified against Lightware's official MX2-8x8-HDMI20 series User's Manual (rev 2.4) and the -Audio-L datasheet, since a standalone plain-L datasheet PDF could not be located. HDMI ports carry the router's rated 18 Gbps / 4K@60Hz 4:4:4 (up to 600 MHz pixel clock) bandwidth, i.e. HDMI 2.0 grade; DVI 1.0 and HDMI 1.4 are also supported for backward compatibility. RS-232 uses a 3-pole Phoenix/Euroblock connector (not DE-9); USB is a Mini-USB port on the front panel for local control/firmware via Lightware Device Controller software (no data grade specified, so omitted). Power is IEC C14 inlet, 100-240V AC, max 75W. Unit is 1U rack-mountable with included/removable rack ears.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pole Phoenix/Euroblock combicon (3.5mm pitch)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB Control",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel Mini/Micro-USB port for local control via Lightware Device Controller software; exact sub-type (Mini-B vs Micro-B) varies by source"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

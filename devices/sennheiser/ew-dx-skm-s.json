@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EW-DX SKM-S",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/ew-d/ew-d/specifications-ew-dx-skm.html",
+  "confidence": "medium",
+  "notes": "This is a handheld wireless microphone transmitter, not a wired AV device, so it has no signal cable ports — RF is its \"signal\" path. Its only physical interfaces are: (1) the Sennheiser Standard Capsule Interface, a proprietary bayonet-style mechanical/electrical mount for interchangeable mic capsules (e.g. MMD 835) — no connector ID in the provided list matches this proprietary interface, so it is omitted as a port rather than mismapped; (2) charging contacts (proprietary pogo-pin pads on the base, used with the CHG 70N charger or L 70 USB charging dock) — modeled as dc-barrel as the closest available connector id, since it is a proprietary low-voltage DC charging contact, not a full connector; (3) a battery compartment accepting 2x AA alkaline batteries or the Sennheiser BA 70 rechargeable Li-ion pack (not a port). There is no USB, RJ45, Bluetooth radio, or any audio/data connector on the transmitter body itself — Bluetooth Low Energy (Smart Assist app control) and RJ45/PoE networking belong to the EW-DX receiver (EM 2/4), not this handheld. Confidence is medium because the manufacturer's own spec pages (docs.cloud.sennheiser.com and sennheiser.com catalog) do not enumerate connector types explicitly; details on the charging-contact interface were corroborated via secondary sources (retailer listings, accessory pages for BA 70/CHG 70N). No bandwidth-graded connectors apply to this device.",
+  "ports": [
+    {
+      "name": "Charging contacts",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary pogo-pin charging contacts on base of housing for use with CHG 70N charger or L 70 USB charging dock; not a literal DC barrel jack but closest available connector id for a low-voltage DC charging interface."
+    }
+  ]
+}

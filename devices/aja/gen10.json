@@ -1,0 +1,59 @@
+{
+  "manufacturer": "AJA",
+  "model": "GEN10",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/assets/support/files/90/en/AJA_manual_GEN10_v1.0r2.pdf",
+  "confidence": "high",
+  "notes": "AJA GEN10 is an HD/SD/AES tri-level sync (genlock) generator with 7 BNC outputs (6 video sync BNCs in two independently switchable groups of 4 and 2, plus 1 AES-11 BNC) and one DC barrel power input. All video outputs are analog tri-level HD sync or SD color-black/bars, not digital SDI data streams, so SDI bandwidth grades were intentionally omitted (device carries no video payload, only sync/reference). Confirmed against AJA's official spec sheet (aja.com/products/gen10/spec-sheet.pdf) and official Installation & Operation Guide, which includes an annotated connector-panel photo and an explicit connector count in Appendix A: Specifications (\"Video Sync Outputs: 4 BNCs-Outputs 1 through 4; 2 BNCs-Outputs 5 and 6\"; \"AES-11 Output: ...1 BNC\"; \"Power: Uses AJA Power Supply model DWP-U-R1... +5V DC regulated\"). Desktop mini-converter form factor (5.8 x 3.1 x 1.0 in), not rack-mountable, so rackUnits omitted. Categorized as converter/Converter since no better-fitting category/type exists in the allowed list for a standalone sync generator.",
+  "ports": [
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 1 (Outputs 1-4), DIP-switch assignable to HD tri-level sync or SD (color black/bars); analog sync signal, not a digital SDI data stream, so no grade set"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 1 (Outputs 1-4), DIP-switch assignable to HD tri-level sync or SD (color black/bars)"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 1 (Outputs 1-4), DIP-switch assignable to HD tri-level sync or SD (color black/bars)"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 1 (Outputs 1-4), DIP-switch assignable to HD tri-level sync or SD (color black/bars)"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 2 (Outputs 5-6), independently DIP-switch assignable to HD tri-level sync or SD (color black/bars)"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Group 2 (Outputs 5-6), independently DIP-switch assignable to HD tri-level sync or SD (color black/bars)"
+    },
+    {
+      "name": "AES-11",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "AES-11 digital audio sync reference output, 48kHz, silent or 1kHz tone, carried on BNC (not XLR)"
+    },
+    {
+      "name": "Power 5-18V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "+5 to +18VDC coaxial power input; ships with AJA DWP-U-R1 universal 100-240VAC to 5VDC external power supply"
+    }
+  ]
+}

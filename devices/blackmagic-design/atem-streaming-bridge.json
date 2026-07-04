@@ -1,0 +1,62 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM Streaming Bridge",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.wiltronics.com.au/wp-content/uploads/downloads/atem-streaming-bridge-techspecs.pdf",
+  "confidence": "high",
+  "notes": "Source is Blackmagic Design's own official \"Product Technical Specifications\" PDF (mirrored by authorized reseller Wiltronics; identical to Blackmagic's site content, confirmed against B&H/search cross-references). The device is a small desktop unit (134.1 x 92.25 x 23mm, 230g), not rack-mountable, so rackUnits is omitted in spirit but set to 0 since the schema requires an integer if included — treat as not rack-mountable. Two distinct BNC reference inputs exist per the official rear-panel diagram: \"SDI REF IN\" (SDI reference only) and \"REF IN\" (black burst/tri-sync analog reference) — both inputs, both BNC, neither is a video-out/pass-through port. SDI outputs support up to 3G-SDI (SDI Rates: 1.5G, 3G) so graded sdi-3g. HDMI Out is HDMI Type A but Blackmagic does not publish an HDMI version number (1.4/2.0/2.1) for this product, so HDMI grade is omitted per instructions (spec doesn't state a version). Ethernet is 10/100/1000 BaseT, graded eth-1g (its top supported speed). USB-C port is explicitly for configuration/firmware updates only (\"Updates and Configuration: 1x USB Type-C\") — not a general data/video port — so no USB grade is set since no data-rate spec is given for it. Power input is a locking DC barrel jack (2.5mm ID x 5.5mm OD, center pin positive), closest match to allowed connector list is dc-barrel. Settings can also be set via onboard mini DIP switches (not a connector, omitted). No variant/regional differences noted beyond the included international socket adapters for the power supply.",
+  "ports": [
+    {
+      "name": "SDI REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "SDI reference input only (not video pass-through), up to 3G-SDI"
+    },
+    {
+      "name": "REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Black burst and Tri-Sync analog reference input"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "2 channels embedded audio"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "2 channels embedded audio"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "2 channels embedded audio; up to 1080p60, no HDMI version stated"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BaseT; receives H.264/SRT/RTMP stream from ATEM Mini Pro"
+    },
+    {
+      "name": "USB (ATEM Utility)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "For software configuration and updates only, not video/data passthrough; no USB spec version stated"
+    },
+    {
+      "name": "POWER 6-30V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC barrel connector, 2.5mm ID x 5.5mm OD center-positive; included 12V/1A universal PSU; operating range 6-30V DC, 6W max"
+    }
+  ]
+}

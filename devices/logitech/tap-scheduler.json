@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Logitech",
+  "model": "Tap Scheduler",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/tap-scheduler.pdf",
+  "confidence": "high",
+  "notes": "Official Logitech data sheet (published July 2022, part numbers 952-000091 Graphite / 952-000094 White). Tap Scheduler is a 10.1\" wall/glass/mullion-mounted room-scheduling touch panel, not a video source/switch — it has no HDMI, USB, or analog A/V ports. Its only physical I/O is a single RJ45 port carrying both 10/100 Mbps Ethernet data and PoE power (802.3af Type 1, Class 3); no separate power jack exists. WiFi 802.11a/b/g/n/ac and Bluetooth 5.0 are present but wireless (Bluetooth currently inactive, reserved for future use) so not listed as physical ports. Cross-checked against Logitech Hub support spec page and IPPhone Warehouse retailer listing, both consistent with the data sheet.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps RJ45; also serves as the power input via PoE (IEEE 802.3af Type 1, Class 3) — device has no separate power connector. Requires a PoE-enabled network switch or PoE injector (not included)."
+    }
+  ]
+}

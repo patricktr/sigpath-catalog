@@ -1,0 +1,110 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM Constellation 8K",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/atemconstellation8k/techspecs",
+  "confidence": "high",
+  "notes": "Authoritative source: Blackmagic Design's official PDF spec sheet (mirrored copy fetched from catalogue.lang-ag.com, content identical to blackmagicdesign.com/products/atemconstellation8k/techspecs) plus the official Design page rear-panel diagram. Rear panel has 40 SDI BNC inputs and 24 SDI BNC outputs (custom Blackmagic BNC connectors), all rated up to 12G-SDI; in 8K mode these are grouped in fours for Quad Link 12G-SDI (2SI). \"Total Video Outputs\" spec (28) = the 24 assignable SDI outputs + 4 dedicated SDI multiview outputs, modeled here as one representative 12G-SDI output port and one representative 12G-SDI multiview output port each (not expanded to all 64 individual BNCs). Likewise the 40 SDI inputs are modeled as one representative 12G-SDI input port. Audio: 2x balanced 1/4\" (6.35mm TRS) analog in and 2x out; 1x MADI in / 2x MADI out on BNC (75-ohm coax MADI, no bandwidth grade applicable — modeled as bnc connector, no grade set since MADI is not in the SDI video grade scale); front-panel 5-pin XLR talkback headset jack (modeled as xlr5, bidirectional since it carries both talkback mic in and program/PGM audio out to the headset) plus a separate rear RJ12 talkback expansion port for ClearCom/RTS (closest available connector id is rj45; noted as RJ12 in name/notes since RJ12 is not in the allowed list). RS-422 remote control is also on a rear RJ12 jack (modeled as rj45 connector with rs422 in accepts, noted). Reference input (Tri-Sync/Black Burst) is BNC, ungraded. USB is 1x USB 2.0 port for computer/software-control connection (host/control interface, modeled bidirectional per instructions, grade usb-2.0). Ethernet is for control-panel-to-chassis connection; exact link speed not stated as an Ethernet PHY grade in the spec sheet (only \"10/100/1000 BaseT\" supported) so grade set to eth-1g as the top supported rate. Power: two independent internal AC power supplies, each with its own rear AC inlet (\"2 x Internal 100-240 AC\", redundant). The spec sheet does not name the exact IEC inlet variant (C13/C14 vs C19/C20); the rear-panel photo/diagram shows standard small IEC inlets consistent with a 300W load, so these are modeled as \"iec\" (C13/C14-style) — this detail is inferred, not explicitly confirmed in text, hence flagged. Unit is 2U rack-mount, 19 in wide.",
+  "ports": [
+    {
+      "name": "SDI In (1-40)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "40x 12G-SDI BNC inputs total (custom Blackmagic BNC); represents the full bank. In 8K mode, groups of 4 combine via Quad Link 12G-SDI (2SI) to give 10 x 8K-capable input groups."
+    },
+    {
+      "name": "SDI Out (1-24)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "24x 12G-SDI BNC independently assignable program/aux/preview outputs total; represents the full bank. Groups of 4 combine for 8K Quad Link output (6 groups)."
+    },
+    {
+      "name": "Multi View Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "4x dedicated SDI multiview (Ultra HD/8K) BNC outputs total; represents the full bank."
+    },
+    {
+      "name": "REF In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference input, Tri-Sync or Black Burst."
+    },
+    {
+      "name": "MADI In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "32 stereo channel MADI input over 75-ohm BNC coax."
+    },
+    {
+      "name": "MADI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "2x 32 stereo channel MADI outputs over 75-ohm BNC coax; represents both."
+    },
+    {
+      "name": "Analog Audio In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "2x balanced 1/4 inch (6.35mm) jack analog audio inputs; represents both."
+    },
+    {
+      "name": "Analog Audio Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "2x balanced 1/4 inch (6.35mm) jack analog audio outputs; represents both."
+    },
+    {
+      "name": "Talkback",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Front-panel 5-pin XLR broadcast headset connector carrying talkback mic input and program monitor output."
+    },
+    {
+      "name": "Talkback Remote (rear)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Rear RJ12 talkback expansion connector for ClearCom/RTS-style systems; RJ12 is the actual connector (closest listed id is RJ45/8P8C)."
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "RS-422 remote control on RJ12 jack; RJ12 is the actual connector (closest listed id is RJ45/8P8C)."
+    },
+    {
+      "name": "Control (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BaseT connection between control panel and chassis (or via network)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "1x USB 2.0 port for direct computer connection (software control / firmware setup)."
+    },
+    {
+      "name": "Power In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "First of two independent internal 100-240V AC power supplies/inlets (redundant power); exact IEC inlet variant (C13/C14) not stated in spec text, inferred from rear panel diagram."
+    },
+    {
+      "name": "Power In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second of two independent internal 100-240V AC power supplies/inlets (redundant power); exact IEC inlet variant (C13/C14) not stated in spec text, inferred from rear panel diagram."
+    }
+  ]
+}

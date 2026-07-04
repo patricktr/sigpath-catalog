@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Web Presenter HD",
+  "category": "converter",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/blackmagicwebpresenter/techspecs",
+  "confidence": "high",
+  "notes": "Blackmagic renamed this product from \"Web Presenter HD\" to \"Streaming Encoder HD\" (same SKU family, BDLKWEBPTRPRO / BDLKWEB/C/SEDHD); the manufacturer's current tech-specs page lists it under the new name but describes the identical unit. HDMI monitor output's HDMI version and the USB-C webcam port's USB generation are not stated in the spec sheet, so no grade was assigned to either (grade omitted per instructions when unstated). AC inlet is a standard IEC C14 (confirmed via multiple retailer/review descriptions of the internal 100-240V AC supply requiring a separate IEC cord, not included). Desktop/portable unit (one-third rack width) with an optional accessory shelf to rack-mount three units together — not itself assigned rackUnits since it is not a full rack-width chassis. SDI ports are physically BNC connectors carrying SDI signal, graded to the highest supported rate (12G) as stated (\"1.5G, 3G, 6G, 12G\" auto-switching).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI Monitor Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB-C (Webcam Out)",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR, +12V DC input for external power supply or battery use"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100-240V AC power supply, IEC C14 inlet"
+    }
+  ]
+}

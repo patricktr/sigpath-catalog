@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Aurora Multimedia",
+  "model": "IPX-TC1",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://auroramultimedia.com/products/ipxtc1",
+  "confidence": "medium",
+  "notes": "The IPX-TC1 is a bidirectional IP/AV transceiver (field-configurable as encoder or decoder) sold in two network-interface variants: IPX-TC1-F (10G SFP+ fiber) and IPX-TC1-C (10G copper RJ-45); physical port set is otherwise identical. Desktop/under-table form factor, not natively rack-mountable (no rackUnits set); optional RK2-1-K (1U, holds 2 units) or RK2-5-K (5U, holds 12 units) rack trays are sold separately. Dimensions 6.875 x 4 x 1.31 in (175 x 102 x 33.3mm), weight 2.58 lb. HDMI is rated 1.4 per Aurora's own user manual (distinguishing it from the higher-tier IPX-TC2 model, which is HDMI 2.0); this is consistent with the product page's stated max resolution of 4K2K 4:2:0 @60Hz (within HDMI 1.4's ~10.2Gbps budget). Audio port count varies by source: the manufacturer product page states \"3 stereo line in/out (3.5mm TRS)\" while the official user manual's rear-panel diagram lists one Audio In and one Audio Out; I've modeled the confirmed manual pair (1 in / 1 out) and flagged the discrepancy here rather than guess at 3 pairs. USB 2.0 Type-A port and Dante audio option both require populating the SO-DIMM expansion slot with an optional card (IPX ExtremeUSB or IPE-DTE-1 Dante card) — the USB port is physically present but nonfunctional without the card. Power input connector is described in Aurora's documentation only as a \"48VDC red euro connector\" (i.e., a euroblock/terminal-block style DC connector), not a barrel jack; modeled as euroblock-dc. Could not obtain a fully rendered official spec/connector-pinout table (ManualsLib served the surrounding manual text but not the literal front/rear panel diagram graphic), so confidence is medium rather than high. Primary sources used: manufacturer product page (auroramultimedia.com/products/ipxtc1) and Aurora's official IPX-TC1-F/IPX-TC1-C User Manual as indexed/excerpted via ManualsLib (manualslib.com/manual/1382804/Aurora-Ipx-Tc1-F.html, rear-panel and front-panel description pages).",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "SFP+ (10G IPBaseT)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "IPX-TC1-F fiber variant; single or multi-mode SFP+ module for the 10G IPBaseT link. The IPX-TC1-C copper variant instead uses a 10G RJ-45 port for this link."
+    },
+    {
+      "name": "1G LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Mbps pass-through LAN port"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo line-level audio input"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog stereo line-level de-embedded audio output"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS serial pass-through/control, up to 115.2kbps; tip=TX, ring=RX, sleeve=GND"
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Bidirectional IR pass-through, 20kHz-60kHz, autosenses TS (emitter) or TRS (receiver) 3.5mm connector"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A, host or device software-selectable; requires optional ExtremeUSB SO-DIMM expansion card to be populated"
+    },
+    {
+      "name": "48VDC",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "48V isolated DC power input via 2-pin captive/euroblock terminal connector (\"red euro connector\"); unit can alternatively be powered via PoE on the 1G LAN port"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "manufacturer": "Leader",
+  "model": "LT4610",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://assets.tequipment.net/assets/1/26/Leader_LT4610_Test_Sync_Generator_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Leader LT4610 is a 1RU triple-rate (3G/HD/SD-SDI) sync/test-signal generator, not a display/switcher/source/etc., so none of the fixed 'type' enum values fit well; type left as 'Other' and category as 'other' (conceptually closest to a test/reference signal generator). Base unit: dual redundant AC inlets (2x IEC C13/C14-style captive inlets, per datasheet rear-panel photo and 'cover/inlet stoppers x2' + '2x power cords' accessories), 2x SDI OUT BNCs (SDI OUT1 carries 3G-A/HD/SD; SDI OUT2 carries 3G-B/HD dual-link), 2x Genlock IN BNCs (75-ohm loop-through pair), 6x independent analog black-burst/tri-level sync BNC outputs, AES/EBU digital audio out, AES/EBU silence out, and word-clock out (all BNC), plus rear RJ-45 Ethernet (10BASE-T/100BASE-TX, SNMP v2c) and a front-panel USB Type-A 2.0 port for preset/logo/firmware transfer via USB memory stick. The optional LT4610SER01 module (GPS & Time-code option) adds a GPS antenna input (BNC, 50 ohm), a 10 MHz CW reference input (BNC, 50 ohm), and a shared LTC input/output on a D-SUB 15-pin connector -- the connector-id list has no DB15/D-SUB option, so 'rs232' was used as the nearest generic D-SUB serial stand-in for that one port; this is a labeling compromise, not a literal RS-232 signal, flagged via the port's own note field. SDI grade set to sdi-3g for both SDI OUT ports since the unit is explicitly triple-rate 3G/HD/SD (2.970/1.485/0.270 Gbps switchable) with 3G being its highest supported grade; 12G-SDI is NOT supported by this base LT4610 (later/other Leader models such as LT4611 or LT4670 cover 12G/IP). Ethernet grade set to eth-100m per the datasheet's explicit '10BASE-T/100BASE-TX (auto switching)' spec. Analog black BNC outputs, genlock BNC inputs, and audio/word-clock BNC outputs intentionally have no grade set since BNC/analog-audio ports are outside the SDI/HDMI/DP/USB/Ethernet graded scales requested (BNC only grades when used for SDI). Datasheet retrieved from a tequipment.net-hosted PDF that is Leader Instruments Corporation's own manufacturer datasheet (same content also mirrored at leader.co.jp and testequipmentdepot.com); confidence is high because the datasheet is authoritative, complete, and states explicit rear-panel connector counts/types directly (BNC quantities, RJ-45, USB Type A, D-SUB 15). The LT4610 is now listed as a discontinued product by Leader (superseded by newer generation units), which does not affect spec accuracy for units already in service.",
+  "ports": [
+    {
+      "name": "SDI OUT 1 (3G-A/HD/SD)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2 (3G-B/HD(DL))",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "GENLOCK IN 1",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "GENLOCK IN 2 (loop-through)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 5",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ANALOG BLACK OUT 6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SILENCE OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WCLK OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB (front panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "GPS IN (LT4610SER01 option)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "CW IN (LT4610SER01 option)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "LTC IN/OUT (LT4610SER01 option)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical connector is a D-SUB 15-pin shared in/out for LTC timecode; no DB15 id exists in the list, rs232 used as nearest D-SUB serial stand-in"
+    },
+    {
+      "name": "AC INPUT 1",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "AC INPUT 2",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

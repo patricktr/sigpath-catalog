@@ -1,0 +1,23 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "AP9563",
+  "category": "power",
+  "rackUnits": 1,
+  "sourceUrl": "https://andovercg.com/datasheets/apc-AP9563-datasheet.pdf",
+  "confidence": "high",
+  "notes": "Model name in APC/Schneider literature is \"Rack PDU, Basic, 1U, 20A, 120V, (10)5-20; 5-20P\" (also listed as \"NetShelter Basic Rack PDU\"). This is a basic (non-metered, non-switched) rack PDU: one 20A circuit breaker, no monitoring/networking. Connector taxonomy provided has no NEMA 5-20 option (5-15 or 5-20 both map to a generic NEMA 15A duplex); nema-5-15 was used as the closest available id for both the 10 output receptacles (actually NEMA 5-20R) and the input plug (actually NEMA 5-20P) — actual receptacle/plug type is NEMA 5-20, rated 20A/120V, not the 15A 5-15 variant implied by the taxonomy id. Ships with both horizontal and vertical mounting brackets (unit is 1U horizontal form factor, 17.6 in wide). A companion inlet/outlet variant AP9564 uses a NEMA L5-20 twist-lock inlet instead — do not confuse with AP9563.",
+  "ports": [
+    {
+      "name": "Output 1-10 (NEMA 5-20R)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual connector is NEMA 5-20R (20A/120V duplex); represents all 10 identical output receptacles on the strip"
+    },
+    {
+      "name": "AC In (NEMA 5-20P)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Actual connector is NEMA 5-20P attached to a captive 12 ft (3.66 m) power cord, 120V/20A max input"
+    }
+  ]
+}

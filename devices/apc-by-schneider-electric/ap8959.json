@@ -1,0 +1,47 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "AP8959",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://www.se.com/ca/en/download/document/990-3446_EN/",
+  "confidence": "high",
+  "notes": "This is a Switched Rack PDU (2G platform), not a signal-chain AV device — its only \"signal\" ports are for remote monitoring/management, not AV routing. Physical form factor is 0U (zero rack-unit), vertical/side-of-rack mount via toolless pegs, height 179.1 cm (70.5 in) — rackUnits omitted since it does not occupy horizontal rack space. Power input is IEC-320-C20 (mates with a C19 cord); mapped to connector id \"iec-c19\" as the closest match since C20/C19 is the high-current IEC pair distinct from standard IEC C13/C14 (\"iec\"). The local console/serial port is a proprietary RJ12 jack (not DB9) carrying RS232-type signaling — mapped to \"rs232\" as the closest available connector id; grade omitted (RS232 has no bandwidth grade in the given scale). Network port is RJ45 for Web/SNMP/SSH/Telnet management; exact Ethernet speed (10/100 Base-T) is not explicitly stated in the manufacturer overview doc, so grade is omitted rather than guessed. USB port is Type-A, used only for firmware upgrade via flash drive (not a data-transfer host in the AV sense); grade omitted since no USB spec version is stated. Two additional physical ports exist on the unit — a CAN port and an \"environmental sensor\" port (both proprietary, for daisy-chaining APC temperature/humidity sensors and future expansion) — these have no reasonable match in the allowed connector enum (not RJ45/RJ12/USB/etc. in the conventional sense) and are omitted from the port list; consult the manufacturer overview (Schneider Electric doc 990-3446B) if these need representation. Regional variants (e.g. AP8959NA3) may differ in included cordset but share this port layout. Source: Schneider Electric official \"Switched Rack Power Distribution Unit (AP8959) — Overview and Specifications\" document 990-3446B (Oct 2013), fetched via se.com download link https://www.se.com/ca/en/download/document/990-3446_EN/.",
+  "ports": [
+    {
+      "name": "Power Cord Inlet",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC-320-C20 inlet; mates with C19 cord/plug. 100-240 VAC, 16A max per phase."
+    },
+    {
+      "name": "Outlets 1-21",
+      "direction": "output",
+      "connector": "iec",
+      "note": "21x IEC-320-C13 locking outlets, 12A max (10A VDE) each."
+    },
+    {
+      "name": "Outlets 22-24",
+      "direction": "output",
+      "connector": "iec-c19",
+      "note": "3x IEC-320-C19 locking outlets, 16A max each."
+    },
+    {
+      "name": "Network Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "For remote monitoring/control via Web, SNMP, SSH, Telnet, StruxureWare. Ethernet speed not stated in manufacturer overview doc."
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Local console access; physically an RJ12 jack carrying RS232-type signaling, not a DB9 connector."
+    },
+    {
+      "name": "USB Port",
+      "direction": "input",
+      "connector": "usb-a",
+      "note": "USB Type-A; used for firmware upgrade via flash drive, not general data transfer."
+    }
+  ]
+}

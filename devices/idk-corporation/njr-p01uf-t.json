@@ -1,0 +1,56 @@
+{
+  "manufacturer": "IDK Corporation",
+  "model": "NJR-P01UF-T",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.idkav.com/products/product_detail/?model=NJR-P01UF-T",
+  "confidence": "medium",
+  "notes": "Manufacturer product page (idkav.com) and the AV-iQ/av-iq.com spec sheet were used as primary and cross-check sources, corroborated by IDK's NJR-P01U Series user manual (via ManualsLib) which confirms the transmitter has one HDMI input, one RJ-45 LAN port, one SFP+ cage, one USB Type-B (HID), one RS-232C captive-screw port, one IR captive-screw port, and a DC 12V input. Desktop/tabletop unit (dimensions ~4.2 x 1.1 x 7.1 in / 106 x 28 x 180 mm); optional rack-mount brackets (RM-SF, RM-SFL, RM-SBP, RM-SV3) are available as accessories but the unit itself is not natively rack sized, so rackUnits omitted/0. HDMI grade of hdmi-2.0 is inferred from stated 18 Gbps/300 MHz TMDS bandwidth (matches HDMI 2.0 spec ceiling) — manufacturer does not explicitly cite an HDMI version number, so this is an inferred grade. RS-232 and IR ports are 3-pin captive screw terminals, not true DB9/3.5mm jacks or a real euroblock — \"euroblock\" was chosen as the closest available connector id. One secondary source (av-iq.com) listed \"2 port/female Type-B\" for USB, but this conflicted with the manufacturer's own page (confirmed twice) which states 1 port; went with the manufacturer figure. AC adapter accessory itself was not evaluated as a separate powered device.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "TMDS clock up to 300 MHz, TMDS data rate up to 18 Gbps, 4K@60 4:4:4, HDCP 1.4/2.2 — bandwidth matches HDMI 2.0 spec though device is not explicitly HDMI-version-certified by manufacturer"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10Base-T/100Base-TX/1000Base-T, auto MDI/MDI-X — control/management port, not the AV signal path"
+    },
+    {
+      "name": "SFP+",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "SFP+ optical transceiver cage for the AV-over-fiber uplink to the NJR-P01UF-R receiver; supports OM3 multimode (300 m) or OS1 singlemode (10 km, or 40 km with extended-range module). No grade set — SFP/fiber link speed not on the defined graded connector scales."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Female Type-B, HID class only, for USB KVM/HID extension"
+    },
+    {
+      "name": "RS-232C",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin captive screw terminal, full duplex, up to 115.2 kbps — closest listed connector id to the captive-screw terminal actually used"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin captive screw terminal for IR pass-through; closest listed connector id to the captive-screw terminal actually used (not a true 3.5mm IR jack)"
+    },
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input powered by included external AC adapter (adapter output rated 12V/3A); unit draw approx. 0.6A/8W"
+    }
+  ]
+}

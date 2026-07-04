@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Tannoy",
+  "model": "CMS 603DC BM",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.fullcompass.com/common/files/21738-TannoyCMS603DCDataSheet.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Tannoy's official Technical Data Sheet (tannoypro.com, V1.02, hosted via Full Compass file mirror). This is a passive 2-way ceiling loudspeaker (Dual Concentric coaxial driver) — it has no bandwidth-graded digital/video ports and no AC mains input; it is powered entirely via the speaker-level signal line. Single physical I/O point: a removable locking screw-terminal block (loop-through) on the recessed backcan termination box, wired for either 70V/100V constant-voltage (taps: 60W/30W/15W, plus 7.5W on 70V only) or 16-ohm direct/low-impedance operation via a front-panel rotary tap switch. Connector list has no dedicated captive screw-terminal/euroblock-style loudspeaker terminal id closest match used is 'euroblock' with accepts:['banana'] noted since many installers terminate with banana/spade into this block; treat this as an approximation of a proprietary Tannoy pluggable barrier-strip connector, not a true Euroblock. Two mechanical variants exist (BM = blind-mount with integral back-can, used here; PI = pre-install without back-can) with identical electrical/connector specs. No power rating (grade) applies since audio speaker-level connectors are outside the graded connector list (SDI/HDMI/DP/USB/RJ45).",
+  "ports": [
+    {
+      "name": "Input (Removable Locking Connector, loop-through)",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "banana"
+      ],
+      "note": "Passive loudspeaker line input. Removable locking screw-terminal connector with loop-through facility, accepting either 70V/100V constant-voltage transformer taps (60W/30W/15W/7.5W selectable via front rotary switch) or direct 16-ohm low-impedance drive. No mains/AC power connector — the unit is fully passive."
+    }
+  ]
+}

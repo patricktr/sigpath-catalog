@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Community",
+  "model": "R.5-94Z",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.proacousticsusa.com/media/wysiwyg/R.5-94Z_spec.pdf",
+  "confidence": "medium",
+  "notes": "This is a passive 2-way horn-loaded weather-resistant loudspeaker (12in woofer + 1in compression driver, 8ohm nominal, 200W cont./500W program, crossover at 2kHz), manufactured by Community Professional Loudspeakers (a Biamp brand). The manufacturer datasheet explicitly states \"Input Connection: 12 foot (4m) SJOW #16 gauge cable with stripped ends\" — there is no connector or terminal cup on the enclosure; it is a permanently attached flying-lead pigtail that installers splice/wire-nut directly to amplifier speaker cable in the field. None of the allowed connector IDs represent a bare-wire pigtail, so \"euroblock\" was used as the closest analog for a field-wired screw/terminal-style connection — this is an approximation, not a literal port on the unit. No power input port exists because this is a passive (non-powered) loudspeaker with no AC/DC power requirement. Datasheet states \"Controls: None\" and no other physical I/O (no pass-through jack). Dimensions 16 x 16 x 15.94 in, weight 35 lbs (desktop/pole/yoke-mounted, not rack-mountable, so rackUnits omitted). All electrical/physical specs are confirmed from the authoritative manufacturer datasheet; medium confidence reflects only the connector-encoding approximation, not any doubt about the underlying facts.",
+  "ports": [
+    {
+      "name": "Input Connection (12 ft SJOW #16 AWG pigtail, stripped ends)",
+      "direction": "input",
+      "connector": "euroblock"
+    }
+  ]
+}

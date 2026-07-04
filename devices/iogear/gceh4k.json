@@ -1,0 +1,72 @@
+{
+  "manufacturer": "IOGEAR",
+  "model": "GCEH4K",
+  "category": "converter",
+  "sourceUrl": "https://iogear.com/products/gceh4k",
+  "confidence": "high",
+  "notes": "KVM-style HDMI-over-Cat5e/6/6A extender sold as a TX/RX pair (IOGEAR calls them \"CPU\" side and \"Console\" side). CPU/transmitter unit: 1x HDMI in, 1x USB-B (uplink to host USB), 1x RJ45, 1x DC power in. Console/receiver unit: 1x HDMI out, 2x USB-A (keyboard + mouse), 1x RJ45, 1x DC power in, plus a 3.5mm analog audio de-embed output. Both TX and RX units are physically identical small metal enclosures (0.87 x 2.7 x 3.5 in) and both require their own 12V/1A DC power connection (with PoC/Power-over-Cable letting either end back-feed the other over the RJ45 run). Modeled here as a single device with all ports merged (TX-side and RX-side ports distinguished in the port names). Manufacturer spec table does not state an Ethernet speed grade for the RJ45 link (it's a proprietary HDBaseT-like signaling link over Cat5e/6/6A, not a standard switched-Ethernet port), so no eth-x.x grade was set. HDMI grade set to hdmi-2.0 based on stated 18Gbps/4K60 4:4:4 bandwidth (matches HDMI 2.0 spec, not HDMI 2.1). Several third-party retailer listing titles (e.g. CompSource, NetworkHardwares) state \"2x HDMI Out / 4x USB\", which appears to be an error/confusion with a different bundle SKU — the manufacturer's own spec table (iogear.com/products/gceh4k), cross-checked twice, and independently corroborated by B&H's search summary and Micro Center's summary, consistently show 1 HDMI in (CPU) + 1 HDMI out (Console) and USB-B (CPU) + 2x USB-A (Console). Direct HTML fetch of B&H/Amazon/Insight pages was blocked by anti-bot 403s; relied on WebFetch tool's rendered extraction plus manufacturer page as primary source.",
+  "ports": [
+    {
+      "name": "HDMI (CPU/Source In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Transmitter unit HDMI input from source device"
+    },
+    {
+      "name": "USB-B (CPU/Host Uplink)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Transmitter unit USB-B port connects to host computer USB to carry keyboard/mouse HID"
+    },
+    {
+      "name": "RJ45 (CPU Link)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transmitter-side link to receiver over Cat5e/6/6A; proprietary extender signaling, not rated switched Ethernet"
+    },
+    {
+      "name": "DC Power In (CPU)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/1A external power jack; supports Power-over-Cable from remote unit"
+    },
+    {
+      "name": "HDMI (Console/Display Out)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Receiver unit HDMI output to display"
+    },
+    {
+      "name": "USB-A (Console/Keyboard)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Receiver unit USB-A port for keyboard"
+    },
+    {
+      "name": "USB-A (Console/Mouse)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Receiver unit USB-A port for mouse"
+    },
+    {
+      "name": "RJ45 (Console Link)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Receiver-side link to transmitter over Cat5e/6/6A; proprietary extender signaling, not rated switched Ethernet"
+    },
+    {
+      "name": "DC Power In (Console)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/1A external power jack; supports Power-over-Cable from remote unit"
+    },
+    {
+      "name": "L/R Audio Out (Console)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog audio de-embed output on receiver unit"
+    }
+  ]
+}

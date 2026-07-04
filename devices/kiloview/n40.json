@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Kiloview",
+  "model": "N40",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.manualslib.com/manual/2274743/Kiloview-N40.html",
+  "confidence": "medium",
+  "notes": "Kiloview's own product/spec pages (kiloview.com) returned HTTP 403 to automated fetches, so the primary source used was the Kiloview N40 User Manual as mirrored on ManualsLib, cross-checked against mediacastsys.com (authorized reseller spec table) and multiple other retailer listings (Avacab, ProFlix, CDM Technologies), which agreed on all ports. Key finding: the N40 has TWO separate USB Type-C ports — one dedicated to power input (DC 5-18V, nominal 5V/2A, also accepts PoE/USB/power-bank/camera-battery power) and one 'Expansion' port used with a USB-to-serial (RS232/422/485) adapter for PTZ control; neither is a general-purpose USB host/data port, so no USB grade was set (power port omitted grade entirely; expansion port likewise, since it's a control breakout, not a data link). No dedicated RS232/DIN/GPIO physical connector exists — serial control is only reachable via the USB-C expansion port plus an external adapter. A physical tally light and 1/4-20 camera mounting screw exist but are not signal/power connectors so were excluded from the port list. Device is a compact 100x80x24mm handheld unit (not rack-mountable), so rackUnits is omitted. HDMI is confirmed as version 2.0 (supports true 4Kp60) per multiple sources. Ethernet speed confirmed as Gigabit (10/100/1000M) with PoE. Note: encode and decode functions are mutually exclusive (cannot run simultaneously) — this affects how the two HDMI ports behave but not their physical existence. A newer \"N40 Plus\" variant exists with additional features (LCD display) — this spec is for the base N40 only.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Encoder input; supports up to 4Kp60"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through output when encoding, or decoded NDI-to-HDMI output when decoding; encode/decode functions are mutually exclusive"
+    },
+    {
+      "name": "Audio (3.5mm mic/headset)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for mic input / intercom headset; supports embedded audio and talkback"
+    },
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000M Ethernet, carries NDI stream, control, and PoE power"
+    },
+    {
+      "name": "Power Input (TYPE-C)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "DC power input via USB-C, DC 5-18V wide range (nominal 5V/2A); can be powered by USB, power bank, or camera battery. Not a data/host USB port."
+    },
+    {
+      "name": "Expansion (TYPE-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C expansion port used with a USB-to-RS232/RS422/RS485 adapter for PTZ camera control"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Datavideo",
+  "model": "NVS-33",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.datavideo.com/product/NVS-33",
+  "confidence": "medium",
+  "notes": "No physical USB port was found on the device's front or rear panel per the official manual (front panel: power switch, SD card slot, INPUT/BITRATE/RECORD/STREAM buttons; rear panel: HDMI in, SDI in, RCA audio in, LAN, DC 12V in). An SD card slot exists for MP4 recording but is storage media, not a signal/power port, so it is omitted from the port list per schema scope. The SDI input is consistently labeled \"HD-SDI\" (not 3G-SDI) by Datavideo and retailers (Markertek, B&H, manual), which is graded here as sdi-hd; note that the unit's supported input resolution list includes 1080p50/60, which on a single BNC link is more typically associated with 3G-SDI signaling — this may reflect informal/marketing labeling rather than strict SMPTE grade, so treat the sdi-hd grade as an inference from the stated connector name rather than a confirmed SMPTE spec. Manufacturer's own product page (datavideo.com/product/NVS-33) returned HTTP 403 to automated fetch; specs were cross-verified via Datavideo's own instruction manual (hosted on ManualsLib) plus retailer spec tables (Markertek, B&H) that mirror the manufacturer data, so sourceUrl points to the manufacturer product page as the canonical reference. Physical dimensions are given inconsistently across sources as either 220 x 115 x 45.5 mm or 220 x 95 x 47 mm; device is a compact desktop unit, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Labeled 'HD-SDI' by manufacturer/retailers; supports up to 1080p60 input, embedded audio"
+    },
+    {
+      "name": "Audio In (L/R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC power adapter input; screw-locking outer fastening ring secures the barrel connector"
+    }
+  ]
+}

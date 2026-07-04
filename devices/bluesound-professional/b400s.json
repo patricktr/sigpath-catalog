@@ -1,0 +1,132 @@
+{
+  "manufacturer": "Bluesound Professional",
+  "model": "B400S",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bluesoundprofessional.com/wp-content/uploads/2019/06/Bluesound-Professional-B400S-OM_EN.pdf",
+  "confidence": "high",
+  "notes": "Sources cross-checked: manufacturer data sheet (Bluesound-Professional-B400S-Data-Sheet.pdf) and the official Owner's Manual (Bluesound-Professional-B400S-OM_EN.pdf, rev v05 Sep 2019), both from bluesoundprofessional.com. The Owner's Manual rear-panel diagram and connector table were used as the primary authority since they are more detailed than the one-page data sheet. PREAMPLIFIER IN and PREAMPLIFIER OUT x4, +12V TRIGGER IN/OUT, IR IN, and SIGNAL BLOCK all use pluggable Phoenix-style terminal blocks, mapped here to \"euroblock\" (closest list match). PREAMPLIFIER IN doubles as a mic input with switchable +48V phantom power (LINE/MIC switch + Phantom ON/OFF switch) - noted on that port. SIGNAL BLOCK is a 4-position terminal block; only pins 1 and GND are currently used (pin +5V and pin 2 reserved for future software-defined use). USB Type-B (mini) port is explicitly documented as \"for product servicing... not for consumer use\" - included since it is a real physical port, but not intended for end-user I/O. AC inlet is a standard detachable IEC connector (confirmed by rear-panel photo showing a 3-pin IEC socket and the manual's mention of \"two detachable mains power cord[s]\" for different regions); auto-switching 100-240V 50/60Hz. No grades apply: RJ45 is Gigabit Ethernet but spec sheet only states \"Gigabit\" generically (interpreted as eth-1g); TOSLINK/RCA digital audio and Phoenix/Euroblock connectors are not part of any graded connector scale per the instructions, so no grade was set on those. Device is a 1U rack-mountable 4-zone network audio streamer/DSP player, not a full AV receiver or amplifier - categorized as \"audio\" / type \"Audio interface\" as the closest fit (no dedicated \"network streamer\" type exists in the provided enum).",
+  "ports": [
+    {
+      "name": "PREAMPLIFIER IN (LINE/MIC)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix/Euroblock terminal block; switchable LINE/MIC with +48V phantom power option for mic use"
+    },
+    {
+      "name": "OPTICAL IN",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "PREAMPLIFIER OUT 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix/Euroblock terminal block, zone 1"
+    },
+    {
+      "name": "PREAMPLIFIER OUT 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix/Euroblock terminal block, zone 2"
+    },
+    {
+      "name": "PREAMPLIFIER OUT 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix/Euroblock terminal block, zone 3"
+    },
+    {
+      "name": "PREAMPLIFIER OUT 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix/Euroblock terminal block, zone 4"
+    },
+    {
+      "name": "OPTICAL OUT 1",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "OPTICAL OUT 2",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "OPTICAL OUT 3",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "OPTICAL OUT 4",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "COAXIAL OUT 1",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "COAXIAL OUT 2",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "COAXIAL OUT 3",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "COAXIAL OUT 4",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for USB memory stick / mass-storage playback (FAT32/NTFS)"
+    },
+    {
+      "name": "SERVICE (USB Type-B mini)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Type-B mini port for factory servicing only, not for consumer use; closest list match used since usb-b-mini is not a distinct id"
+    },
+    {
+      "name": "+12V TRIGGER IN",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "+12V TRIGGER OUT",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "SIGNAL BLOCK",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "4-position terminal block for dry-contact/magnetic switch signal interrupt; only pins 1 and GND currently active"
+    },
+    {
+      "name": "AC MAINS INPUT",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power inlet, 100-240V 50/60Hz auto-switching; two regional power cords supplied"
+    }
+  ]
+}

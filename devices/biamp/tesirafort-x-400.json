@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Biamp",
+  "model": "TesiraFORTÉ X 400",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/manuals/biamp_manual_tesiraforte-x_feb23.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Biamp's official data sheet (rev.1025, Nov 2025) and the official TesiraFORTÉ X 400/800/1600 Installation & Operation Guide (Feb 2023), both from downloads.biamp.com. Ethernet port 1 is a plain RJ-45 (no PoE); ports 2-5 are RJ-45 with PoE+ (IEEE 802.3at Class 4, 30W) and also carry AVB/Dante/AES67/VoIP traffic. USB port is USB Type-B, used for USB Class 1 Audio (up to 2x2 channels, 16/24-bit, 48kHz) plus HID - no USB data-transfer speed (e.g. 2.0) is stated in the spec, so grade is omitted per instructions. The 2 mic/line inputs and 2 mic/line outputs, and the 4-channel GPIO (Logic I/O), are all on pluggable 3-pole/6-pole screw-terminal (euroblock) connectors per the Architects & Engineers spec and back-panel legend. Power input is an external locking 2.5mm DC barrel jack (back panel item 7); the external power brick itself runs on 100-240VAC 50/60Hz and the whole system (unit + PoE+ loads) draws <150W, but the unit's own rear-panel receptacle is the 2.5mm DC barrel, not a mains inlet - modeled here as dc-barrel accordingly. Desktop/surface-mount unit (comes with wall-mount bracket); no rack ears, so rackUnits omitted (optional RMX 100 rack shelf accessory exists but is not native rack-mounting).",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Plain RJ-45 control/programming port, no PoE+ (per manual: \"Port 1 does not provide PoE+\")"
+    },
+    {
+      "name": "Ethernet 2 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports AVB, Dante, AES67, VoIP; PoE+ IEEE 802.3at Class 4, 30W"
+    },
+    {
+      "name": "Ethernet 3 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports AVB, Dante, AES67, VoIP; PoE+ IEEE 802.3at Class 4, 30W"
+    },
+    {
+      "name": "Ethernet 4 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports AVB, Dante, AES67, VoIP; PoE+ IEEE 802.3at Class 4, 30W"
+    },
+    {
+      "name": "Ethernet 5 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports AVB, Dante, AES67, VoIP; PoE+ IEEE 802.3at Class 4, 30W"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B; USB Class 1 Audio up to 2x2 ch (16/24-bit, 48kHz) plus HID sync; no USB speed/version stated in spec so grade omitted"
+    },
+    {
+      "name": "In 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/line level balanced input, 3-pole pluggable screw terminal; +48VDC phantom power available (7mA/input)"
+    },
+    {
+      "name": "In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/line level balanced input, 3-pole pluggable screw terminal; +48VDC phantom power available (7mA/input)"
+    },
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Mic/line level balanced output, 3-pole pluggable screw terminal"
+    },
+    {
+      "name": "Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Mic/line level balanced output, 3-pole pluggable screw terminal"
+    },
+    {
+      "name": "Logic I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-channel software-configurable GPIO on a 6-pole pluggable screw terminal block"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 2.5mm DC barrel jack fed by external inline power supply; threaded lock prevents accidental disconnection and prevents mismatched lower-voltage 2.5mm supplies from being used. Overall system power consumption <150W at 100-240VAC 50/60Hz (measured at the external supply's mains input)."
+    }
+  ]
+}

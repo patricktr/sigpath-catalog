@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Middle Atlantic",
+  "model": "RLNK-P920R",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn.assetserver.net/_assets/middle%20atlantic/pdf/rlnkp920rsp-spec.pdf",
+  "confidence": "medium",
+  "notes": "Premium+ PDU with RackLink (Raritan Xerus platform), 9-outlet 20A unit with 2-Stage MOV surge protection (the RLNK-P920R-SP sibling instead uses \"Series Protection\" surge and adds per-outlet metering). Outlets: 9x NEMA 5-20R total = 8 rear IP-controllable outlets + 1 front-panel convenience outlet (uncontrolled), all on one shared NEMA 5-20P/20A input circuit. Power input is a permanently-attached 9 ft cord terminating in a NEMA 5-20P plug (not a detachable IEC inlet), modeled here as a nema-5-15 port (closest list option; actual plug is 5-20P, 20A/120V). One RJ-45 Ethernet port for RackLink management/monitoring (LAN/SNMP/RESTful API/SSH/HTTPS) — link speed is not published by Middle Atlantic/Legrand for this SKU, so grade is omitted (commonly 10/100 on this PDU family). The unit also supports up to 32 daisy-chained environmental (temp/humidity) sensors via a proprietary RJ-45-style \"feature/sensor\" port, but the exact connector and count could not be confirmed from available sources, so it is not listed as a port. No USB port is documented on this model. Rack size 1RU, 19\"W x 9.83\"D x 1.75\"H, horizontal mount, ~13 lbs. Primary data pulled from the Legrand/Middle Atlantic hosted spec-sheet PDF (rlnkp920rsp-spec.pdf, covering the closely related -SP variant's electrical specs which match the base unit) plus corroborating retailer spec tables (B&H, standsandmounts.com, compsource) for outlet/cord/dimension details, since the live legrandav.com and Middle Atlantic product pages did not render their spec tables via fetch.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Actual plug is NEMA 5-20P (20A/120V) on a permanently attached 9 ft cord; nema-5-15 is the closest available connector id."
+    },
+    {
+      "name": "Outlet 1 (Front, Uncontrolled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; front-panel convenience outlet, not RackLink-controlled."
+    },
+    {
+      "name": "Outlet 2 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 3 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 4 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 5 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 6 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 7 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 8 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "Outlet 9 (Rear, Controlled)",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Actual receptacle is NEMA 5-20R, 20A/120V; individually IP-switched via RackLink."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RackLink Ethernet management port (SNMP v3/MIB, RESTful API, SSH, HTTPS); published link speed not stated by manufacturer, so no grade assigned."
+    }
+  ]
+}

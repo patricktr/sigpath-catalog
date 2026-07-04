@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Sony",
+  "model": "FW-75BZ40L",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/FW75BZ40L.pdf",
+  "confidence": "high",
+  "notes": "Primary source: official Sony datasheet for FW-75BZ40L hosted at av-iq.com (mirrors the pro.sony spec page content, which returned HTTP 403 to automated fetch) — confirms 4 HDMI inputs (HDCP2.3), 1 composite video input, 1 analog audio input, 1 digital audio output, 2 USB ports, 1 Ethernet input, RS-232C control, rated power consumption 299W. Panel-diagram and connector-type details (RS-232C is a 3.5mm stereo mini-jack, not D-sub; AV IN is a 3.5mm 4-pole breakout to composite+stereo RCA; DIGITAL AUDIO OUT is TOSLINK optical) were confirmed against Sony's official multi-model Reference Guide (doc 5-049-506-11(1), \"LCD Monitor\", covering FW-98BZ50L/85BZ40L/85BZ35L/85BZ30L/75BZ40L/75BZ35L/75BZ30L/65BZ40L/65BZ35L/65BZ30L/55BZ40L/55BZ35L/55BZ30L/50BZ30L/43BZ30L), which includes the exact rear/side connector diagram and pinouts shared by this model group. USB port speed (2.0 vs higher) is not stated in any source found — omitted per instructions since grade could not be confirmed. LAN port speed (eth-1g etc.) not stated by Sony for this model — omitted, grade not confirmed. AC power inlet: Sony's reference guide does not include a power-input diagram; classified as `iec` based on OEM replacement power-cord listings for sibling models in the same BZ30L/BZ40L family (detachable IEC cord), but the exact IEC variant (C13/C14 vs C7) was not directly confirmed — flagged as the main residual uncertainty. This is a wall-mount/tabletop professional display, not rack-mountable, so rackUnits is omitted. Model number written as \"FW-75BZ40L\" (Sony's own hyphenated form); commonly also sold/listed as \"FW75BZ40L\" (no hyphen) by US retailers — same product.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.3"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 2.3"
+    },
+    {
+      "name": "HDMI IN 3 (eARC/ARC)",
+      "direction": "bidirectional",
+      "connector": "hdmi",
+      "note": "Supports eARC/ARC for connecting an audio system; HDCP 2.3"
+    },
+    {
+      "name": "HDMI IN 4 (DVI)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Also accepts DVI source via HDMI-DVI adapter (not supplied); HDCP 2.3"
+    },
+    {
+      "name": "HDMI 4 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-jack; carries analog audio companion for HDMI IN 4 when used with a DVI source"
+    },
+    {
+      "name": "AV IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "accepts": [
+        "rca"
+      ],
+      "note": "3.5mm 4-pole mini-jack (pinout: L / Video / Ground / R); composite video + stereo audio via supplied/optional breakout cable to RCA"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT (OPTICAL)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3-pole stereo mini jack"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "5V/900mA max"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "5V/900mA max"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Wired network; USB/version speed not stated by Sony (commonly 1G on this class of display)"
+    },
+    {
+      "name": "REMOTE RS-232C",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-plug (TIP/RING/SLEEVE = RXD/TXD/GND), not a D-sub connector"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power cord (replacement cords sold as standard IEC cable for this display family); exact C13/C14 vs C7 rating not confirmed in available documentation"
+    }
+  ]
+}

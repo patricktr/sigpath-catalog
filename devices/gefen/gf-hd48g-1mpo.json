@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Gefen",
+  "model": "GF-HD48G-1MPO",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://manuals.plus/m/6bafad6d24e80a89dde280d525c037ed9e2ab33ef244817c48af73d88463335c_optim.pdf",
+  "confidence": "high",
+  "notes": "This is a two-piece TX/RX HDMI 2.1 fiber extender kit, not a single chassis; ports listed cover both the Transmitter and Receiver modules as documented in the official Gefen/Nice user guide (Connectors & Indicators table, p.7) and datasheet. Official spec table lists: Input Connector (Sender) 1x HDMI Type A 19-pin female; Output Connector (Receiver) 1x HDMI Type A 19-pin female; Link Connector (Sender/Receiver) 1x MPO/MTP-type female each; Power Connector (Sender/Receiver) 1x DC jack 1.3mm each. HDMI grade set to hdmi-2.1 based on confirmed 48Gbps bandwidth and 5940MHz TMDS clock (full HDMI 2.1 spec). The physical fiber connector is MPO/MTP (multi-fiber push-on), which has no exact id in the allowed connector list; fiber-lc was used as the closest generic fiber-optic placeholder -- treat as approximate. Each unit (TX and RX) is a small dongle-style enclosure (300 x 16 x 31mm, not rack-mountable), so rackUnits is omitted. Ships with two interchangeable-plug 5V/2A DC power supplies (US/UK/AU/EU blades) -- the AC side of those supplies is a generic wall-wart plug, not modeled as a port here since the DC barrel jack on the unit is the relevant device-side connector.",
+  "ports": [
+    {
+      "name": "HDMI In (Transmitter)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "MPO/MTP (Transmitter)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Actual connector is MPO/MTP female, 8-core or 12-core OM3 multimode fiber, Polarity Type A; fiber-lc chosen as closest available id in the allowed list"
+    },
+    {
+      "name": "DC 5V Power Jack (Transmitter)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "1.3mm DC jack; 5V/2A external power supply included, only required if HDMI source doesn't provide enough power"
+    },
+    {
+      "name": "HDMI Out (Receiver)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "MPO/MTP (Receiver)",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Actual connector is MPO/MTP female, 8-core or 12-core OM3 multimode fiber, Polarity Type A; fiber-lc chosen as closest available id in the allowed list"
+    },
+    {
+      "name": "DC 5V Power Jack (Receiver)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "1.3mm DC jack; 5V/2A external power supply included, required for receiver operation"
+    }
+  ]
+}

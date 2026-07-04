@@ -1,0 +1,140 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VP-550X",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://ivojo.co.uk/instruction-books/kramer/kramer-vp-550x.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Kramer's official VP-550X User Manual (P/N 2900-301496 Rev 1, kramerav.com/downloads/VP-550X), which includes a labeled rear-panel diagram and a Technical Specifications table -- this is the authoritative manufacturer source. All 26 rear-panel callouts were extracted directly. Terminal-block audio/control ports (MIC, AUX, VGA audio, CV audio, LINE OUT, CTRL IN, CTRL OUT) are 3-pin or 5-pin captive screw terminal blocks; mapped to the closest listed connector id \"euroblock\" since no more specific terminal-block id exists in the allowed set. The MIC input is a combo-style 3-pin terminal (tip/ring/sleeve equivalent) supporting both condenser (48V phantom, switchable) and dynamic mics -- not modeled as a combo connector since both configurations use the same physical 3-pin block. HDMI inputs/outputs are graded hdmi-2.0 per the manual's explicit statement (\"as specified in HDMI 2.0\", HDCP 2.2, 4K@60Hz 4:4:4). The Ethernet RJ-45 port's link speed is not explicitly stated in the manual (only default TCP/UDP ports and static IP are given); eth-100m grade is inferred as the conservative default for a control-oriented RJ-45 on this device class -- treat this grade as medium-confidence. The mains inlet appears in the rear-panel photo as a standard 3-prong IEC-style receptacle with an adjacent fuse holder and rocker power switch, consistent with an IEC C13/C14 connector (the manual just calls it \"Mains Socket\" without specifying C13/C14 vs C7/C19; C13/14 is the visually correct match at this power draw of 1A @ 100-240VAC). No physical IR input/output jack exists on the rear panel -- IR is handled via a front-panel receiver for the included remote, not a wired port, so it was not included as a port. USB-C is a video-input-only port (with charging), not a host/data USB-C, so no eth/usb grade was assigned beyond noting its power-delivery function in the note field.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB-C IN",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Video/Alt-DP input; also provides up to 18W power delivery to the connected source"
+    },
+    {
+      "name": "VGA IN",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "CV IN",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Composite video"
+    },
+    {
+      "name": "MIC",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin terminal block; switchable 48V phantom power for condenser mics"
+    },
+    {
+      "name": "AUX",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, unbalanced stereo analog audio"
+    },
+    {
+      "name": "VGA (audio)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, unbalanced stereo audio paired with VGA IN"
+    },
+    {
+      "name": "CV (audio)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, unbalanced stereo audio paired with CV IN"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored with HDMI OUT 2"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored with HDMI OUT 1"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin terminal block, balanced stereo analog audio output"
+    },
+    {
+      "name": "CTRL IN",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, RS-232 to control the VP-550X"
+    },
+    {
+      "name": "CTRL OUT",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, RS-232 pass-through to control an external acceptor device"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet for control/web pages; speed not explicitly stated in spec, inferred 100M-class control port"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains socket, IEC C13/C14-style inlet with adjacent fuse holder and power switch; universal 100-240V AC 50/60Hz, 1A"
+    }
+  ]
+}

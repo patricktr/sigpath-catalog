@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Ultra Stream HDMI",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.magewell.com/static/tech-specs/Ultra_Stream/UltraStreamHDMI.pdf",
+  "confidence": "high",
+  "notes": "Desktop unit (94.2 x 94.2 x 22.3mm), no rack ears — rackUnits omitted. Physical port layout and labels (POWER, ETHERNET, HDMI OUT, HDMI IN, AUDIO OUT, AUDIO IN, USB FLASH DRIVE/USB Modem) confirmed via the official Magewell Ultra Stream user manual diagram (magewell.com/files/documents/User_Manual/ultra_stream_family_user_manual_app_v1.4.34_en.pdf, page 6). HDMI grade set to hdmi-1.4 per manufacturer spec sheet stating 'HDMI Input and loop-through interfaces: HDMI 1.4a, DVI-D' (max signal support up to 4096x2160 60fps 4:2:0 exceeds strict 1.4a bandwidth on paper, but the device explicitly states its HDMI interface generation is 1.4a — likely using chroma subsampling/compression tricks or the spec sheet is imprecise; taking the manufacturer's stated interface version at face value). USB port type/version (2.0 Type-A) confirmed via B&H Photo listing and multiple retailer sources, not explicit in the manufacturer PDF's prose but shown in the manual's port diagram as a standard USB-A shape. Power input is DC 5V/2A external barrel-style adapter (accessory list includes 'AC adapter'); mapped to dc-barrel as the closest connector type in the allowed list. A sister product, Ultra Stream SDI, has identical chassis/ports except HDMI IN/OUT are replaced with SDI IN/OUT (BNC) — not included here since this record is for the HDMI variant only.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4a/DVI-D; supports up to 4096x2160 60fps (4:2:0) or 30fps (4:4:4/4:2:2); 8-channel embedded audio"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Loop-through of HDMI IN signal, same HDMI 1.4a/DVI-D spec"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog microphone input for narration/comments"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog headphone output, extracts audio from HDMI signal for monitoring"
+    },
+    {
+      "name": "USB (Flash Drive / USB Modem)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A; for USB flash drive recording or 3G/4G USB modem (modem not included)"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000Mbps wired network"
+    },
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 5V/2A via included AC adapter; max consumption ~9.6W"
+    }
+  ]
+}

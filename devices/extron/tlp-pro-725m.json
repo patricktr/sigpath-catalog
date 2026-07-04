@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Extron",
+  "model": "TLP Pro 725M",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/tlp_pro_725m_tls_725m_6087-D5.pdf",
+  "confidence": "high",
+  "notes": "7-inch wall-mount TouchLink Pro touchpanel (also mountable to furniture or rack accessory), not a rack-unit device — rackUnits omitted. Powered exclusively via PoE (802.3af, Class 3) through the single RJ-45 Ethernet port; there is no separate AC or DC power connector, so no dedicated power port is listed. The RJ-45 is rated 10/100/1000Base-T (gigabit-capable), hence eth-1g. USB port is a single Micro-B receptacle (USB 2.0 high-speed/480 Mbps host-adjacent port used for peripherals); modeled as usb-micro with usb-2.0 grade. The \"digital input\" is a 3.5 mm 2-pole captive screw (Euroblock-style) control/logic contact input (0-24 VDC, configurable), not an audio line-level jack — closest connector id is euroblock; no bandwidth grade applies. Unit has an internal mono speaker (89 dB SPL) for audio playback but no physical external audio output jack, so it is not listed as a port. Source is Extron's official specifications PDF (doc 6087-D5, covers TLP Pro 725M Series and TLS 725M); all values confirmed directly from this authoritative datasheet.",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Also receives power via PoE 802.3af Class 3; no separate power inlet on the unit"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Digital I/O",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "1-channel configurable digital/logic input, 3.5 mm captive screw connector, 2-pole (signal + ground) — not an analog audio jack"
+    }
+  ]
+}

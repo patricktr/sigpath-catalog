@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Crown Audio",
+  "model": "DCi 8|300N",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.fullcompass.com/common/files/24616-CrownDCiSeriesOperationManual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Crown's official DCi Series - Network Input Models Operation Manual (Harman/Crown Audio, doc #5040450, rev 02/15), page 7 \"Back Panel Features (2|300N, 2|600N, 2|1250N, 4|300N, 4|600N, 4|1250N, 8|300N, 8|600N)\" — this back panel layout is explicitly shared by, and labeled as applicable to, the 8|300N. Cross-checked against Crown's product page (crownaudio.com/en-US/products/dci-8-300n) and B&H/Full Compass/Vintage King listings. All 4 input-pair and 4 output-pair connectors are physically identical repeated euroblock/Phoenix-style pluggable terminal blocks (6-pin for inputs, 4-pole for outputs); third-party parts references confirm Euroblock/Phoenix part P/N 5024623 for inputs. IMPORTANT CAVEAT: the GPIO port is physically a 6-position RJ-11 telephone-style modular jack per the manual, NOT an RJ45 — RJ-11 is not present in the supplied connector enum, so \"rj45\" was substituted as the closest available modular-jack id; treat this single port's connector field as an approximation, not a literal match. AC inlet is confirmed 15A IEC C14 specifically for the 8|300N (the higher-power 8|600N in the same chassis instead uses a 20A IEC inlet — only the 8|300N's 15A rating is reported here). Ethernet control-port link speed (10/100 vs Gigabit) is not stated anywhere in the manual or Crown's marketing pages, so grade was omitted for it; the two BLU link ports were graded eth-1g because the manual explicitly states BLU link is \"Based on Gigabit Ethernet technology\" run over Cat5e cabling (100m per hop), though BLU link is a proprietary audio bus/ring rather than routable Ethernet. Confidence is \"high\" given the primary source is Crown's own authoritative operation manual with a labeled rear-panel diagram; the RJ-11-as-rj45 substitution and the unstated Ethernet control-port speed are the two open caveats.",
+  "ports": [
+    {
+      "name": "Input 1/2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, high-impedance balanced analog input for channel pair 1/2"
+    },
+    {
+      "name": "Input 3/4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, high-impedance balanced analog input for channel pair 3/4"
+    },
+    {
+      "name": "Input 5/6",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, high-impedance balanced analog input for channel pair 5/6"
+    },
+    {
+      "name": "Input 7/8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-pin plug-in terminal block, high-impedance balanced analog input for channel pair 7/8"
+    },
+    {
+      "name": "Output 1/2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks"
+    },
+    {
+      "name": "Output 3/4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks"
+    },
+    {
+      "name": "Output 5/6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks"
+    },
+    {
+      "name": "Output 7/8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole touch-proof terminal strip, accepts up to 10 AWG wire or terminal forks"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Cat5e; HiQnet monitoring/control via Audio Architect software. Manual does not state link speed, so grade omitted."
+    },
+    {
+      "name": "BLU link In",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Part of BLU link I/O ring; manual states 'Based on Gigabit Ethernet technology', Cat5e, up to 256 channels @48kHz"
+    },
+    {
+      "name": "BLU link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Part of BLU link I/O ring; manual states 'Based on Gigabit Ethernet technology', Cat5e, up to 256 channels @48kHz"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physical connector is actually a 6-position RJ-11 jack (not RJ45) — RJ-11 is not in the allowed connector enum, so rj45 (closest modular-jack family match) was used as a placeholder. 2 analog/binary inputs + 2 binary outputs for preset recall, volume control, etc. No grade applies; this is a low-voltage control port, not a data-network link."
+    },
+    {
+      "name": "Aux",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin plug-in block connector; enables Sleep mode and Amp Status monitoring"
+    },
+    {
+      "name": "AC Power Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Standard IEC 320 inlet, 15A, 100-240V~ 50/60Hz (the 8|600N variant instead uses a 20A IEC inlet)"
+    }
+  ]
+}

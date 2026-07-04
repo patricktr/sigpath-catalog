@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Vivitek",
+  "model": "NP2000US (NovoPro)",
+  "category": "network",
+  "type": "Media player",
+  "sourceUrl": "https://novoconnect.eu/wp-content/uploads/2018/07/novopro_spec.pdf",
+  "confidence": "high",
+  "notes": "The NP2000US is the North American SKU of Vivitek's NovoPro NP2000 wireless presentation/collaboration gateway (a small desktop puck, not a projector despite the \"Vivitek\" association with projectors). Confirmed via the official NovoConnect (a Delta Group / Vivitek brand) spec-sheet PDF and corroborated by B&H's retailer spec table, which both list identical port sets: HDMI-Out x1, Ethernet RJ45, USB Type-A x1, MicroSD card slot, and MicroUSB Power-In. A MicroSD card slot is also present (storage expansion) but is omitted here as it is not a signal or power connector per the requested scope. Desktop unit (120 x 75 x 16 mm, 128g) — not rack-mountable, so rackUnits is omitted. HDMI grade inferred as hdmi-1.4 class from the stated max resolution/frame rate (1080p60); the spec sheet does not explicitly state an HDMI version number. Ethernet grade of 100M is from B&H's retailer spec table (10/100 Mbps); the manufacturer sheet just says \"Ethernet RJ45\" without speed. No grade set for USB Type-A since neither source states a USB version.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Max output 1920x1080 (FullHD) at 60fps; bandwidth consistent with HDMI 1.4 class, not explicitly stated as a version in the spec sheet."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "B&H retailer spec lists LAN as 10/100 Mbps."
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Grade/version not specified in either source; likely USB 2.0 given the device class, but not confirmed so grade omitted."
+    },
+    {
+      "name": "MicroUSB Power-In",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "This is the device's DC power input (fed by an external AC adapter rated 100-240VAC in / 5V 2A out), not a USB data port. Labeled 'MicroUSB Power-In' on both the Vivitek/NovoConnect spec sheet and B&H's spec table."
+    }
+  ]
+}

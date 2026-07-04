@@ -1,0 +1,148 @@
+{
+  "manufacturer": "Epiphan",
+  "model": "Video Pearl-2 Rack",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.epiphan.com/products/pearl-2/tech-specs/",
+  "confidence": "high",
+  "notes": "Manufacturer tech-specs page (epiphan.com/products/pearl-2/tech-specs and the mirrored userguide page) lists identical connector counts for the portable and 19\" rackmount (2U, ESP1151) variants; only dimensions/weight differ. HDMI inputs are dual-purpose HDMI 1.4a/DVI (connector modeled as HDMI, DVI listed under accepts). USB \"video\" input ports (UVC, rear panel) are functionally inputs but are physically standard USB-A/3.0 host-type receptacles carrying UVC video plus USB audio (UAC) — grade inferred as usb-5g (USB 3.0/3.1 Gen1) since exact USB revision isn't stated. Two of the three rear \"USB 3.0\" ports double as UVC video inputs and UAC audio inputs simultaneously; only the two rear ports credited as \"(2) USB 3.0 (UVC)\" video inputs are listed separately as video inputs above, all three rear+front USB-A ports are also listed as generic bidirectional host ports since manufacturer specs don't clearly separate physical receptacles from logical functions. Power: manufacturer specifies only \"Internal: 100-240 VAC, 50-60 Hz, 0.8A\" with no explicit AC inlet connector name; connector type is inferred as IEC (C13/C14, standard for rack gear with internal PSU) rather than confirmed via a rear-panel photo/diagram — treat as medium-confidence for that one port. RS-232 is bidirectional but only one closest connector id (rs232) exists in the palette; direction set to bidirectional per instructions is not literal to the enum note (RJ45/USB) but reflects that RS-232 control ports are typically two-way for command/response - if a stricter reading is wanted this could be \"input\" or \"output\" instead. Also cross-checked against B&H (blocked by 403) via Epiphan brochure and search snippets, and Markertek listing, which broadly agree but Markertek's page inaccurately suggested \"PoE+/DC power\" for this model — not corroborated by the manufacturer and excluded.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dvi"
+      ],
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dvi"
+      ],
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "4K HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dvi"
+      ],
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "4K HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "accepts": [
+        "dvi"
+      ],
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "USB Video In 1 (rear panel)",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB Video In 2 (rear panel)",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "HDMI Out (port 1)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out (port 2)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "XLR Audio In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Audio In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Audio In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Audio In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RCA Audio In (L/R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB (front panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 1 (rear panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2 (rear panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

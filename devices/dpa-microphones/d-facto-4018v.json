@@ -1,0 +1,16 @@
+{
+  "manufacturer": "DPA Microphones",
+  "model": "d:facto 4018V",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.dpamicrophones.com/microphones/handheld/4018v?variant=14",
+  "confidence": "medium",
+  "notes": "Handheld supercardioid condenser vocal microphone capsule (d:facto II series, \"Softboost\" variant with +3dB boost at 12kHz; the 4018VL \"Linear\" variant is otherwise identical). Modular design: the wired configuration reviewed here uses the standard DPA Handle terminating in a male XLR-3 (XLR-3M) output carrying the balanced audio signal and receiving 48V (±4V) phantom power over the same connector, per DPA's published mic wiring convention (pin 1 shield, pin 2 signal+phase, pin 3 signal-phase) — consistent across DPA's condenser mic line. The same capsule is also sold with wireless-transmitter adapters (SE2/SE5 for Sennheiser, SL1 for Shure/Sony/Audio-Technica/Lectrosonics/Wisycom, WI2 for Wisycom) instead of the XLR handle; those variants have no user-facing connector at all (the capsule mates to a proprietary transmitter body) and are out of scope for this single-port XLR entry. No other physical ports exist — it is a passive-powered (phantom) single-connector microphone with no separate power inlet, no controls, no data ports.",
+  "ports": [
+    {
+      "name": "Audio Output (XLR-3M)",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

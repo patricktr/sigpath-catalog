@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Samsung",
+  "model": "WM75B Flip Pro",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://files.bbystatic.com/bPgjDjkzeTMHchq0/e68hA==/Spec",
+  "confidence": "medium",
+  "notes": "Primary source is Samsung's official spec sheet for the WM75B Flip Pro (hosted via Best Buy's static file server, matches Samsung's manufacturer spec sheet format/content exactly; cross-checked against Samsung's own product pages and smartboards.com retailer listing, which agree on HDMI 2/DP 1/USB-C front/OPS I/F). Desktop/wall-mount unit, not rack-mountable (rackUnits omitted logically but field required zero as placeholder — treat as N/A). No HDMI or DisplayPort version is stated anywhere in the manufacturer spec sheet, so grade is omitted on those ports per instructions. USB 3.0 front port is explicitly labeled '3.0' so usb-5g grade applied; the other two USB ports (rear/front, 'For SoC') have no stated version so grade is omitted. The two USB Upstream 'Touch Out' ports are almost certainly USB-B (Samsung Flip series historically uses USB-B upstream for touch-back) but the spec sheet only says 'USB Upstream Type' without specifying connector shape — flagged as an inference. The AC power inlet type (IEC vs captcaptive cord) is not explicitly stated in the spec sheet; inferred as IEC C13/C14 based on the detachable-cord accessory line and Samsung's other WM/QM/QB-series displays, which uniformly use IEC inlets — treat this one port as medium-confidence within an otherwise high-confidence device. The 'OPS I/F' slot interface (for optional Open Pluggable Specification PC module) was omitted as a port since it is a proprietary card-slot interface, not a standard external connector in the given connector list. Also omitted: internal Wi-Fi/Bluetooth module (no external antenna port) and the internal OPS-module's own power draw (16V/4.5A), which is internal to the OPS slot rather than an external device port.",
+  "ports": [
+    {
+      "name": "HDMI (Rear)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI (Front)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DP",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "USB-C (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Front USB-C accepts video input (DP Alt Mode) plus USB touch/data; speed/DP version not stated"
+    },
+    {
+      "name": "USB 3.0 (Front, external)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Labeled 'external 3.0x1(Front)' in spec sheet"
+    },
+    {
+      "name": "USB (Rear, for SoC)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled '2(For SoC, Rear/Front)' in spec sheet; version not stated for this pair"
+    },
+    {
+      "name": "USB (Front, for SoC)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled '2(For SoC, Rear/Front)' in spec sheet; version not stated for this pair"
+    },
+    {
+      "name": "Touch Out (Front, USB Upstream)",
+      "direction": "output",
+      "connector": "usb-b",
+      "note": "Spec sheet: 'Touch Out 2 (USB Upstream Type, Front 1, Rear 1)' — sends touch data to a connected PC"
+    },
+    {
+      "name": "Touch Out (Rear, USB Upstream)",
+      "direction": "output",
+      "connector": "usb-b",
+      "note": "Spec sheet: 'Touch Out 2 (USB Upstream Type, Front 1, Rear 1)' — sends touch data to a connected PC"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Labeled '1(Stereo Mini Jack)' in spec sheet"
+    },
+    {
+      "name": "RS232C (thru stereo jack)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "External control input; spec sheet: 'Touch Input RS232C thru stereo jack'"
+    },
+    {
+      "name": "RJ45 (MDC)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "For MDC (Multiple Display Control); Ethernet speed grade not stated"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal auto-switching AC100-240V 50/60Hz supply with detachable power cord (3M/2.4M US variant) — connector inferred as IEC C13/C14 inlet, consistent with Samsung's other large-format commercial displays; not explicitly named in the spec sheet"
+    }
+  ]
+}

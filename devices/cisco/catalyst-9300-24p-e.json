@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 9300-24P-E",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/hardware/install/b_c9300_hig/Product-overview.html",
+  "confidence": "medium",
+  "notes": "Cisco's own product/spec pages (cisco.com) returned HTTP 403 to automated fetch, so this was compiled from the Cisco Hardware Installation Guide content as mirrored on ManualsLib, cross-checked against multiple resellers (networkoutlet.com, networkdevicesinc.com, B&H listing found via search) and Cisco's data-sheet summary via search snippets. Key figures (24x RJ45 PoE+ downlinks, modular uplink bay, RJ45 console, USB mini-B console, USB-A storage port, RJ45 MGMT port, StackWise-480, 1RU, PWR-C1-715WAC default PSU) were consistent across all sources. Two items are approximations: (1) the uplink bay ships empty on this SKU — no fixed uplink connector/speed is guaranteed until a network module (1G/10G/25G/40G) is purchased and installed, so that port's connector/grade should be treated as indicative only; (2) the AC input receptacle is documented as IEC 320-C16 (a locking variant), which has no exact match in the allowed connector list — it was mapped to iec-c19 as the closest high-current IEC option rather than plain \"iec\" (C13/14). StackWise-480 stacking ports and the StackPower connector on the rear panel are proprietary Cisco connectors with no equivalent in the allowed connector list and were omitted rather than force-mapped. Confidence is medium because the manufacturer's own site blocked direct fetch and specifics were triangulated from a mirrored installation guide plus reseller pages rather than a single authoritative page load.",
+  "ports": [
+    {
+      "name": "GigabitEthernet 1/0/1-24 (PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x downlink ports, 10/100/1000 Mbps copper, 802.3at PoE+ up to 30W/port (445W PoE budget with default PSU, up to 720W with upgraded PSU)"
+    },
+    {
+      "name": "Uplink Module Slot",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Empty modular uplink bay on base SKU; populated by an optional network module (e.g. C9300-NM-4G for 1G RJ45/SFP, C9300-NM-8X for 10G SFP+, C9300-NM-2Q for 40G QSFP+, C9300-NM-2Y for 25G SFP28). No fixed uplink ports ship with this part number, so exact connector/grade depends on the module installed and cannot be confirmed as shipped."
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated 10/100/1000 Ethernet out-of-band management port (VRF interface)"
+    },
+    {
+      "name": "CONSOLE (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Rear-panel RJ-45 serial console port, 9600 baud; ships with RJ-45-to-DB-9 adapter"
+    },
+    {
+      "name": "CONSOLE (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel USB 5-pin mini-Type-B console port; closest listed connector id used since usb-mini-b is not in the allowed set"
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB storage port for Cisco USB flash drives (128MB-8GB)"
+    },
+    {
+      "name": "AC Power Supply Input",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Default PWR-C1-715WAC power supply (optional 350W or 1100W variants also supported); AC input receptacle is IEC 320-C16, which is not a distinct id in the allowed list — mapped to the closest high-current locking IEC option (iec-c19). Two internal hot-swappable PSU bays."
+    }
+  ]
+}

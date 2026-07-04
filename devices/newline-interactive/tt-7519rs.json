@@ -1,0 +1,119 @@
+{
+  "manufacturer": "Newline Interactive",
+  "model": "TT-7519RS",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://newline-interactive.com/wp-content/uploads/2021/03/RS-Series-Full-Specifications.pdf",
+  "confidence": "high",
+  "notes": "Primary source is Newline's official \"RS+ Series Full Specifications\" PDF (newline-interactive.com), which explicitly tables the TT-7519RS alongside TT-6519RS and TT-8619RS and lists: Input Ports \"(2) HDMI 2.0 4K@60Hz; (1) DisplayPort 1.2 4K@60Hz; (1) VGA; (1) PC Audio In; (1) Microphone in; (5) USB Touch; (2) USB 2.0\"; Output Ports \"(1) HDMI out - Supports 4k@60Hz, 1920x1080@60Hz\"; Other Ports \"(1) USB 2.0; (1) USB 3.0; (1) Embedded USB 2.0; (1) RS232; (2) RJ45; (1) DC 5V-2A out; (1) Line Out; (1) SPDIF out\". Working voltage AC 100-240V 50/60Hz, max power ≤400W. Cross-checked port layout/labels (HDMI1/HDMI2/HDMI FRONT, DP, VGA, USB Touch, RS232, LAN x2, DC out, Line/Audio out, SPDIF) against the front/rear port diagrams in Newline's predecessor \"RS-series\" user manual (which covers the closely related TT-6518RS/TT-7518RS/TT-8618RS/TT-9818RS naming generation) for physical confirmation; port counts and generation-specific HDMI/DP versions were taken from the RS+ spec PDF since it is the sheet that names TT-7519RS directly. The AC input connector type (IEC C14) is inferred from the rear-panel diagram (a standard IEC inlet with adjacent rocker switch) rather than an explicit \"IEC\" label in the text spec sheet — flagged as a minor inference. The \"USB Touch\" ports are the panel's built-in touch-controller USB connections (paired with each video input for HID touch data), not general-purpose USB-A file ports; modeled as usb-a/bidirectional since that is the closest connector type. No grade is set on the RJ45 (Ethernet) ports because the source materials do not state a link speed (likely Fast/Gigabit Ethernet for OS/network features, but unconfirmed). No grade is set on USB 3.0 beyond usb-5g since the spec sheet says \"USB 3.0\" without further qualifier (assumed base USB 3.0 = 5Gbps, i.e. usb-5g). This is a desktop/wall-mounted interactive flat panel display, not rack-mountable (rackUnits omitted conceptually; set to 0/not applicable).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "PC Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Microphone In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "SPDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "USB Touch",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "5 total across front/rear panels; carries touch (HID) data alongside the paired video input"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "2 front-panel USB 2.0 ports"
+    },
+    {
+      "name": "USB 2.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Embedded USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "for internal OPS PC slot"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "LAN 1 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "LAN 2 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "DC 5V Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "5V/2A auxiliary DC output for accessories such as the Newline X10D Android box"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14-style inlet with rocker power switch, per rear-panel diagram in the RS-series manual; AC 100-240V 50/60Hz, max 400W"
+    }
+  ]
+}

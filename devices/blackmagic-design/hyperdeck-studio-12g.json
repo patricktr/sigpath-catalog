@@ -1,0 +1,89 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio 12G",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.fullcompass.com/common/files/34898-HyperDeckStudio12GProductSpecifications.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Blackmagic Design's own official \"Product Technical Specifications\" PDF for the HyperDeck Studio 12G (Blackmagic-authored document, mirrored/hosted by authorized reseller Full Compass at the sourceUrl since Blackmagic's current live techspecs page no longer lists this discontinued/superseded model — it now only shows current models like HyperDeck Studio 4K Pro). The PDF includes an official rear-panel connector diagram which was used to verify exact port counts and labels. Connections confirmed: 1x SDI In, 1x SDI Loop Through (output), 2x SDI Out (playback), 1x Monitor Out, 1x Ref In (all BNC), 1x HDMI In + 1x HDMI Out (HDMI 2.0 type A), 1x RS-422 remote (DE-9), 1x Ethernet (RJ45), 1x USB 2.0 Mini-B, 1x internal 100-240V AC power supply (IEC inlet). No analog audio, no analog video, and no timecode connector exist on this unit (audio is embedded-only over SDI/HDMI; spec sheet explicitly states \"None\" for these fields). SDI ports graded sdi-12g reflecting the unit's top-line supported rate (spec lists supported SDI rates as 270Mb/1.5G/3G/6G/12G — all ports are multi-rate capable down to SD). Ethernet link speed not stated in the spec sheet (this is a 2016-era 1RU deck; likely 100M/1G but not confirmed), so grade omitted per instructions. USB connector mapped to closest available enum \"usb-micro\" since \"Mini-B\" is not a distinct option in the allowed connector list — physically it is a Mini-B receptacle, not Micro-USB. Two \"SDI Out\" ports are physically identical/unlabeled duplicates (both silkscreened \"SDI Out\" per the official diagram) so both share the same name.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Loop Through",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "Mirrors/re-clocks the SDI In signal"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "First of two identical playback SDI outputs"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "Second of two identical playback SDI outputs"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference input, Tri-Sync or Black Burst; not a data-carrying SDI signal so no bandwidth grade applies"
+    },
+    {
+      "name": "HDMI In/Out",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI In connector"
+    },
+    {
+      "name": "HDMI In/Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Out connector"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Spec sheet does not state a link speed (10/100/1000); grade omitted"
+    },
+    {
+      "name": "Remote (RS-422)",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DE-9 deck control port, Sony-compatible"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Physically a USB 2.0 Mini-B port; closest available enum value is usb-micro. Used for software updates and HyperDeck Utility control, not a general data-transfer host/device port, so no usb-2.0 grade assigned"
+    },
+    {
+      "name": "Power Connection",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100-240V AC supply, IEC C14 inlet with fuse (rear panel silkscreen: 100-240V 1.9A 50-60Hz Fuse T5AL)"
+    }
+  ]
+}

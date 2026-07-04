@@ -1,0 +1,32 @@
+{
+  "manufacturer": "RCF",
+  "model": "ART 715-A MK5",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.rcf.it/en/products/product-detail/art-715-a-mk5",
+  "confidence": "medium",
+  "notes": "Physical I/O (Input connectors: XLR, Jack; Output connectors: XLR) confirmed on the official RCF datasheet (Rev. M, 23/02/2024, rcf.it). The datasheet itself does not name the power-inlet connector type explicitly (it only states \"Connections: VDE\" plus SMPS/CE compliance); the IEC-style inlet with fuse holder and rocker power switch was corroborated via secondary retailer/manual sources and is consistent with the rest of the RCF ART MK4/MK5 line, hence medium overall confidence (high confidence on the audio I/O, lower on the exact power-inlet connector). No bandwidth-graded connectors are present (pure analog audio plus AC power), so no \"grade\" field applies to any port. Not rack-mountable — portable pole-mount cabinet with M10 fly points, 35 mm pole socket, and top+side carry handles; rackUnits omitted. Sold as two non-interchangeable AC-voltage SKUs (100-120V and 220-240V); connector layout is identical between them.",
+  "ports": [
+    {
+      "name": "Input (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo mic/line input, balanced/unbalanced; XLR with parallel 1/4\" jack; Mic sensitivity -32 dBu, Line sensitivity -2/+4 dBu, selectable via rear MIC/LINE switch"
+    },
+    {
+      "name": "Output (XLR Link)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced link output for daisy-chaining to additional powered speakers"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains power inlet; VDE-compliant with fuse holder and power switch; sold in two non-interchangeable factory voltage variants (100-120V PN 13000855, 220-240V PN 13000824)"
+    }
+  ]
+}

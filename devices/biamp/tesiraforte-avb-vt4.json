@@ -1,0 +1,110 @@
+{
+  "manufacturer": "Biamp",
+  "model": "TesiraFORTE AVB VT4",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_tesiraforte_avb_vt4_oct20.pdf",
+  "confidence": "high",
+  "notes": "Official Biamp data sheet (TESFDS-360-2010-EN-R1) confirms rear-panel layout and A&E spec text. Analog inputs/outputs use screw-down, removable (euroblock/phoenix-style) balanced connectors, each input carrying +48V phantom power (7mA/input) alongside signal on the same connector - phantom power is not a separate port. AVB port (\\\"AVB Only\\\", RJ-45) and Control/Ethernet port (RJ-45) are both Gigabit Ethernet per the feature list (\\\"Gigabit Ethernet port\\\", \\\"128x128 channels of AVB\\\"); datasheet does not explicitly print speed on the silkscreen but Tesira AVB devices are documented elsewhere as Gigabit Ethernet on both ports, so eth-1g is used for both with medium-confidence inference for the AVB port specifically (only one port is called out by name as \"Gigabit Ethernet\" in the feature bullet, and AVB over standard Ethernet requires at least 1G to hit rated channel counts). VoIP and Telephone Line/RS-232/Logic I/O (GPIO) ports are control/telephony connectors, not bandwidth-graded, so no grade set. USB-B port is described as \"standard USB-B type connector\" for USB Class 1 Audio (up to 8ch/24-bit/48kHz) - this is a legacy full-speed/high-speed USB Audio class device; no explicit USB generation stated, so grade omitted rather than guessed. RS-232 on this unit is a mini-terminal/header (not a DE-9), mapped to rs232 as the closest connector id. GPIO \"Logic I/O\" is a 6-position terminal block (+5V, GPIO 1-4, GND) mapped to euroblock as the closest connector id. Power inlet is a standard IEC C13/C14 (universal 100-240VAC internal supply, <35W) shown on back panel as a 3-prong IEC receptacle, mapped to \"iec\". Unit is desktop/rack (1RU, 19in wide) rack-mountable.",
+  "ports": [
+    {
+      "name": "Inputs 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, screw-down removable terminal block; +48VDC phantom power (7mA) available on same connector"
+    },
+    {
+      "name": "Inputs 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, screw-down removable terminal block; +48VDC phantom power (7mA) available on same connector"
+    },
+    {
+      "name": "Inputs 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, screw-down removable terminal block; +48VDC phantom power (7mA) available on same connector"
+    },
+    {
+      "name": "Inputs 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, screw-down removable terminal block; +48VDC phantom power (7mA) available on same connector"
+    },
+    {
+      "name": "Outputs 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced mic/line output, screw-down removable terminal block"
+    },
+    {
+      "name": "Outputs 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced mic/line output, screw-down removable terminal block"
+    },
+    {
+      "name": "Outputs 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced mic/line output, screw-down removable terminal block"
+    },
+    {
+      "name": "Outputs 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced mic/line output, screw-down removable terminal block"
+    },
+    {
+      "name": "AVB Only",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "AVB digital audio networking port, up to 128x128 channels"
+    },
+    {
+      "name": "Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet port for programming/control (IEEE 802.1X port authentication supported)"
+    },
+    {
+      "name": "VoIP",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "SIP VoIP interface, 2 lines"
+    },
+    {
+      "name": "Telephone Line",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Standard FXO telephone interface via RJ-11 connector; mapped to closest available connector id (rj45) as RJ-11 is not in the allowed list"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Class 1 Audio, up to 8 channels, 16/24-bit, 48kHz"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port for third-party control integration"
+    },
+    {
+      "name": "Logic I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin GPIO plus +5V and ground on a 6-position screw terminal block; software-configurable logic input/output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal internal power supply, 100-240VAC 50/60Hz, <35W"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Powersoft",
+  "model": "K10 DSP+D",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/powersoft_k10_data_en_v1.2.pdf",
+  "confidence": "medium",
+  "notes": "\"K10 DSP+D\" designates the DSP-equipped K10 in its non-AESOP (RS-485 serial control) configuration, whose rear panel provides an AES3/analog switch on channel 2 for digital (\"+D\") input — distinct from the Ethernet-networked \"K10 DSP+AESOP\" SKU, which replaces the RS-485 RJ45 with two RJ45 Ethernet+AESOP ports and adds a 2-pin Vext DC input. Primary source used was the official Powersoft K10 datasheet (K10_DATASHEET_1009_EN, mirrored via AV-iQ since powersoft.com is currently displaying a site-maintenance placeholder) cross-checked against the official Powersoft K Series User Guide (powersoft_KSeries_uguide_en_v3.0, 2014), which contains rear-panel diagrams/pinouts for K2/K3/K6/K8/K10/K20 in both non-AESOP and AESOP variants and a detailed spec table (shown for K20 but identically structured/labelled for K10). Channel 2's combo XLR/TRS input doubles as the AES3 digital input (selected via a rear-panel push-button switch) — modeled here as two separate ports (IN2 analog combo, and a logical AES3 input) since both use the same physical connector but different signal domains; accepts is used on IN2 combo for TRS. The AES3 grade is omitted per instructions since AES3 has no bandwidth-grade scale in the provided list. RS-485 port physically uses RJ45 but carries serial data, not Ethernet, so no eth-* grade applies. AC mains connector is the proprietary AMP CPC 45A (region-specific cable); modeled as the closest listed type, iec-c19 (high-current IEC-family inlet), as no closer match exists in the allowed connector list. Rack unit height: 1U (1 standard rack space, 19 in x 1.8 in x 18.7 in / 483 x 44.5 x 475 mm), weight 12 kg / 26.5 lb.",
+  "ports": [
+    {
+      "name": "IN 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Channel 1 balanced analog input, Neutrik XLR/TRS combo connector"
+    },
+    {
+      "name": "IN 2 / ANALOG-AES3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Channel 2 balanced analog input, Neutrik XLR/TRS combo; rear-panel push-button switches this same XLR to accept an AES3 digital input instead"
+    },
+    {
+      "name": "OUT 1",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Channel 1 speaker output, Neutrik Speakon NL4MD"
+    },
+    {
+      "name": "OUT 2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Channel 2 speaker output, Neutrik Speakon NL4MD"
+    },
+    {
+      "name": "DATA PORT (RS-485)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-485 serial control bus over RJ45 (8P8C), used with Armonia Pro Audio Suite; not Ethernet, so no eth-* grade applies"
+    },
+    {
+      "name": "MAINS",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "AC mains inlet is a proprietary AMP CPC 45A connector (detachable region-specific cord); iec-c19 is the closest listed high-current IEC-family type, not an exact match"
+    }
+  ]
+}

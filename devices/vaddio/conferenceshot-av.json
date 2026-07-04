@@ -1,0 +1,38 @@
+{
+  "manufacturer": "Vaddio",
+  "model": "ConferenceSHOT AV",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://cdn-docs.av-iq.com/other/999-99950-x00B_Manual.pdf",
+  "confidence": "high",
+  "notes": "Camera-only I/O shown; the optional bundled speaker connects via a proprietary 4-pin cable to the camera's Audio Output terminal block and is not modeled as a separate generic port. The camera has no built-in HDMI port — HDMI video comes from the connected computer's UC client, and an optional external \"HDMI audio embedder\" accessory (third-party accessory, not part of the camera) can embed far-end audio into that HDMI path; this was excluded since it is not a physical port on the device itself. Power is delivered entirely via PoE+ over the Network RJ-45 port (25W); there is no separate AC/DC power inlet on the camera. EasyMic ports are RJ-45 but carry proprietary 12V bidirectional balanced mic signal, not Ethernet data — connector id is still rj45 per the given connector list, direction set to input since they only receive mic signal (no data pass-through use case). Audio Output is a 4-pin Phoenix/detachable terminal block; closest available connector id is euroblock. No RS-232, IR input, or video (SDI/HDMI) ports exist on the physical unit itself. Source: Vaddio \"Complete Manual for the ConferenceSHOT AV Enterprise-Class Conferencing System\" (Document 411-0001-30 Rev F, August 2020), pages 4 (Back of the Camera) and 91 (Specifications).",
+  "ports": [
+    {
+      "name": "Network PoE+",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "EasyMic Port 1",
+      "direction": "input",
+      "connector": "rj45"
+    },
+    {
+      "name": "EasyMic Port 2",
+      "direction": "input",
+      "connector": "rj45"
+    },
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "euroblock"
+    }
+  ]
+}

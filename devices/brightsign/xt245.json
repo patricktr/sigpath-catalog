@@ -1,0 +1,55 @@
+{
+  "manufacturer": "BrightSign",
+  "model": "XT245",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.brightsign.biz/wp-content/uploads/2024/06/XT5-datasheet-2024.pdf",
+  "confidence": "high",
+  "notes": "XT245 is the \"Standard I/O\" member of BrightSign's XT5 series (siblings: XT1145 \"Expanded I/O\", XT2145 \"Expanded Multiplex I/O\"). Unlike its siblings, the XT245 has no HDMI input, no USB-A/USB-C, and no serial port — confirmed explicitly in both BrightSign's hardware docs and the official XT5 datasheet. Audio out is a combo 3.5mm jack supporting analog and SPDIF digital simultaneously; modeled here as trs-3.5 (closest listed id — SPDIF-over-3.5mm has no dedicated id in the allowed connector list). GPIO is a 12-pin Phoenix/terminal-block connector (8 bi-directional GPIOs), modeled as euroblock. IR in/out is a 3.5mm jack, modeled with connector id \"ir\". Locking power input is a proprietary locking 12V/3A DC connector, modeled as dc-barrel (closest standard id; physically a locking barrel-style DC inlet, not a generic unlocked barrel jack). Internal-only interfaces (M.2 PCIe for NVMe SSD, M.2 E-key for Wi-Fi/Bluetooth module, 2x Wi-Fi antenna connectors) and non-signal control buttons (SVC, Reset) and status LEDs were omitted as they are not external cabling I/O. Device is a compact desktop/wall-mount unit (238.62 x 185.90 x 19.19 mm) with built-in wall mounting, not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI 1 output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Labeled HDMI 1 output (2.1a); supports up to 8K60p 10-bit. HDCP support noted as coming in a future BrightSignOS update."
+    },
+    {
+      "name": "PoE+ Gigabit Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Also provides Power-over-Ethernet+ (PoE+) input to power the player."
+    },
+    {
+      "name": "Audio",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm combo audio-out jack; supports analog and SPDIF digital simultaneously."
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "3.5mm jack, IR in/out for remote control."
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "12-pin Phoenix/terminal-block connector; 8 bi-directional GPIOs."
+    },
+    {
+      "name": "MicroSD",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "MicroSD card slot for Class 10 storage cards; no exact card-slot id exists in the allowed connector list, included for completeness but connector id is a placeholder/approximation — treat with caution."
+    },
+    {
+      "name": "Locking Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary locking DC power inlet, 12V/3A."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "manufacturer": "ATEN",
+  "model": "VM3200",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 9,
+  "sourceUrl": "https://www.aten.com/global/en/products/professional-audiovideo/video-matrix-switches/vm3200/",
+  "confidence": "medium",
+  "notes": "The VM3200 is a modular 32x32 matrix chassis with 8 input-board slots and 8 output-board slots (4 ports per board); it ships with NO video I/O boards installed, so it has no fixed video connectors of its own. Actual video port count/type/grade depends entirely on which ATEN I/O boards are purchased separately (e.g. VM7804/VM8804 HDMI 4-port boards, VM7814/VM8814 4K HDMI, VM7824/VM8824 true 4K HDMI, VM7904 DisplayPort input, VM7604/VM8604 DVI, VM7104 VGA input, VM7404 3G-SDI input, VM7514/VM8514 HDBaseT, VM7584/VM8584 10G optical/SFP+). Only the fixed chassis ports (power, RS-232, RS-485/422, Ethernet) are listed here as ports; no grade is assigned since these are not bandwidth-graded connector types. Power connector is described by ATEN as a \"3-prong socket\" on a hot-swappable power module (100-240VAC, 50-60Hz, 10A, ~800W typical); modeled here as IEC (C13/C14 family) which is the standard for this description, though ATEN's own wording does not explicitly say \"IEC\". A second redundant power module slot exists but is optional/covered and not populated by default, so it is omitted. RS-485/RS-422 port is a 5-pole captcaptive screw / terminal-block connector, modeled as euroblock (closest match; connector list has no generic \"terminal block/phoenix connector\" id). Confidence is medium because grades are not applicable/confirmable for the fixed ports and the bulk of the device's real I/O is board-dependent and not enumerable as a fixed spec.",
+  "ports": [
+    {
+      "name": "AC In (Primary Power)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Hot-swappable power module, 100-240VAC 50-60Hz 10A, ATEN describes as a standard 3-pin power socket"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 female, for serial control (19200 baud)"
+    },
+    {
+      "name": "RS-485/RS-422",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pole captive screw/terminal block connector"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 for Telnet/Web GUI control"
+    }
+  ]
+}

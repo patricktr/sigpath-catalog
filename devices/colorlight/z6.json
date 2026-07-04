@@ -1,0 +1,207 @@
+{
+  "manufacturer": "Colorlight",
+  "model": "Z6",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.colorlight.net/wp-content/uploads/2024/11/Z6SpecificationV2.2_1675338310.pdf",
+  "confidence": "high",
+  "notes": "Official Colorlight manufacturer datasheet (Z6 Specification V2.2, Colorlight Cloud Tech Ltd.), cross-verified against the rear-panel photo in the same document. The Z6 is an LED display video controller/splicer (combines video processor, splicer, and LED sending functions) — closest category taxonomy fit is \"Converter\" since \"LED video processor/controller\" isn't a listed type; category set to \"converter\". HDMI 2.0 port is a combo IN + LOOP-out pair (HDMI 2.0 IN input, HDMI 2.0 LOOP output/passthrough) — both graded hdmi-2.0 per datasheet (\"HDMI2.0 specification\"). SDI ports support 3G-SDI max per datasheet (\"2x3G SDI\"), graded sdi-3g. DVI ports are VESA-standard single-link DVI with no version grade scale in the given list (DVI has no grade tier defined for this connector, so omitted per instructions). The 16 output ports are Neutrik EtherCon (locking RJ45) connectors carrying Gigabit Ethernet to LED receiving cards — mapped to connector \"rj45\" with grade eth-1g. The RS232 port is physically an RJ11 (6P6C) jack per datasheet (with included RJ11-to-DB9 adapter cable diagram) — mapped to connector \"rs232\" (closest available id; the physical jack is RJ11, not DB9, but rs232 is the correct protocol/connector class in the allowed list). Genlock and Genlock Loop are BNC connectors for synchronization signal, not graded (no applicable grade scale). USB IN (USB-B shape, for PC debug connection) and USB OUT (USB-A shape, for cascading) are visually confirmed from the rear-panel photo; datasheet does not state a USB spec version, so grade omitted. Power inlet is a standard IEC C14 (AC100-240V, rated 70W, built-in fuse) confirmed from rear-panel photo. Front-panel-only controls (LCD, knob, function buttons) are not physical I/O ports and were excluded.",
+  "ports": [
+    {
+      "name": "Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik EtherCon locking RJ45, LED receiving-card output"
+    },
+    {
+      "name": "Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Port 16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "HDMI 2.0 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "EIA/CEA-861, HDCP2.2 compliant, up to 4096x2160@60Hz"
+    },
+    {
+      "name": "HDMI 2.0 LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through output of the HDMI 2.0 IN signal"
+    },
+    {
+      "name": "DP",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "DP1.2 specification, HDCP1.3 compliant"
+    },
+    {
+      "name": "DVI 1",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "VESA standard, HDCP1.4 compliant, up to 1920x1200@60Hz; no version grade specified"
+    },
+    {
+      "name": "DVI 2",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DVI 3",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DVI 4",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G-SDI/HD-SDI/SD-SDI, SMPTE-424M/372M/292M"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Genlock",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Input synchronized signal"
+    },
+    {
+      "name": "Genlock Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Output synchronized signal (loop-through)"
+    },
+    {
+      "name": "USB IN",
+      "direction": "input",
+      "connector": "usb-b",
+      "note": "Connects to PC for debugging; USB spec version not stated"
+    },
+    {
+      "name": "USB OUT",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Cascading output; USB spec version not stated"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical jack is RJ11 (6P6C); ships with RJ11-to-DB9 adapter cable for third-party device control"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Fast Ethernet port for PC/LAN connection or Art-Net control"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, AC100-240V 50/60Hz, built-in fuse, rated 70W"
+    }
+  ]
+}

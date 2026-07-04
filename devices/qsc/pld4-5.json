@@ -1,0 +1,102 @@
+{
+  "manufacturer": "QSC",
+  "model": "PLD4.5",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/amp/pld/q_amp_pld_specs.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: QSC official PLD Series spec sheet (q_amp_pld_specs.pdf, rev 09/19/16) plus the official PLD Series User Manual (TD-000368-00-A, q_amp_pld_usermanual.pdf) for exact rear-panel connector counts/labels, since the spec sheet's feature bullets alone were ambiguous (\"four Input XLR\" + \"six NL-4 Output\"). Confirmed rear panel per the manual: 4x female XLR inputs (labeled 1-4), 4x male XLR loop-through outputs (parallel with inputs, for daisy-chaining), 4x NL4 individual/parallel speaker outputs (labeled A/B/C/D), 2x NL4 dedicated bridged outputs (labeled X/Y, X=A+B bridge, Y=C+D bridge), 1x USB Type-B 4-pin (control/firmware via Amplifier Navigator, not a network port), and 1x locking IEC AC inlet (100-240VAC universal). No Ethernet/RJ45, RS-232, or network/Dante/CobraNet card was found anywhere in the manual or spec sheet - this model has no network control port. No grade fields apply: XLR analog audio, Speakon speaker outputs, USB used only as a PC control link (no data-rate spec given, so omitted per no-grade-when-unstated rule), and IEC power input are all ungraded connector types. Rack height is 2U (3.5\" x 19\" x 16\", shared chassis with PLD4.3; PLD4.2 is 12\" deep but same 2RU height). Weight: 22.0 lb (10.0 kg) net.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR balanced/unbalanced line input, >10k ohm impedance, selectable +4/+14 dBu sensitivity"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 1 (Loop)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, wired in parallel with Input 1 for daisy-chaining to next amplifier's input"
+    },
+    {
+      "name": "Output 2 (Loop)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 3 (Loop)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 4 (Loop)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "NL4 A",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Speaker output, channel A (individual/parallel configurations)"
+    },
+    {
+      "name": "NL4 B",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Speaker output, channel B (individual/parallel configurations)"
+    },
+    {
+      "name": "NL4 C",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Speaker output, channel C (individual/parallel configurations)"
+    },
+    {
+      "name": "NL4 D",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Speaker output, channel D (individual/parallel configurations)"
+    },
+    {
+      "name": "NL4 X",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Dedicated bridged output for A+B Bridged mode"
+    },
+    {
+      "name": "NL4 Y",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Dedicated bridged output for C+D Bridged mode"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B, 4-pin; connects to PC/Mac running QSC Amplifier Navigator software for control, preset management, and firmware updates"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC power inlet, universal 100-240 VAC 50-60 Hz switchmode supply; ships with a locking IEC cable"
+    }
+  ]
+}

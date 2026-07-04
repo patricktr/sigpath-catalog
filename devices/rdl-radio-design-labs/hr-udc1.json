@@ -1,0 +1,61 @@
+{
+  "manufacturer": "RDL (Radio Design Labs)",
+  "model": "HR-UDC1",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.fullcompass.com/common/files/10799-RDLHRUDC1.pdf",
+  "confidence": "high",
+  "notes": "Half-rack desktop unit (1.7 x 8.6 x 4.59 in); ships with feet for free-standing use, optional HR-RA2 rack adapter needed for rack mounting, so rackUnits omitted. Front panel has 4 input jacks (S/PDIF optical, S/PDIF coaxial RCA, AES-3ID BNC, AES/EBU XLR) that are always live and auto-detected. Rear panel has 4 output jacks (same four connector types) but a rear-panel selector switch enables only one output format/jack at a time; all four are listed as physical connectors per the datasheet. AES/EBU I/O is 110 ohm transformer-isolated; S/PDIF coaxial and AES-3ID are 75 ohm. No SDI/HDMI/network ports exist, so the SDI-BNC bandwidth grade scale does not apply to the AES-3ID BNC jacks (they carry digital audio, not video) -- grade omitted for all ports per instructions since none are on the graded connector/format list (SDI-BNC grade applies to video signals; this BNC carries AES-3ID digital audio). Power: 24-33 Vdc via DC barrel jack or detachable terminal block (modeled as dc-barrel and euroblock-dc), either usable interchangeably.",
+  "ports": [
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES-3ID In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "S/PDIF Coaxial In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Optical In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES-3ID Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "S/PDIF Coaxial Out",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Optical Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "24 VDC",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "24 VDC (Terminal Block)",
+      "direction": "input",
+      "connector": "euroblock-dc"
+    }
+  ]
+}

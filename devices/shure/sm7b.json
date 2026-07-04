@@ -1,0 +1,15 @@
+{
+  "manufacturer": "Shure",
+  "model": "SM7B",
+  "category": "audio",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/225820-REG/Shure_SM7B_SM7B_Cardioid_Dynamic.html",
+  "confidence": "high",
+  "notes": "Passive dynamic cardioid microphone — moving-coil transducer, no internal electronics requiring power. It must NOT be phantom-powered (48V phantom power is not needed and Shure does not recommend it, though pin wiring makes it generally tolerant; some users pair it with an inline preamp like a Cloudlifter which itself is phantom-powered by the mixer/interface, but that is a separate accessory, not part of the SM7B itself). Single output: 3-pin XLR male, output impedance 150 ohms (rated for connection to mic inputs 19-300 ohms). No grade applies to XLR3 (not in the bandwidth-graded connector list). Desktop/handheld microphone — no rack units. Dimensions: 189.7mm (L) x 63.5mm (max dia), weight 765g. Mounts via integrated captive nut, 5/8\"-27 thread (mechanical mount, not an electrical port, so not listed). Category set to \"audio\" (no more specific \"Microphone\" fit issue) and type set to \"Microphone\" per the provided type enum.",
+  "ports": [
+    {
+      "name": "Output (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

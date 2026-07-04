@@ -1,0 +1,99 @@
+{
+  "manufacturer": "Lynx Studio Technology",
+  "model": "Aurora(n) 16-DNT",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.lynxstudio.com/products/aurora-n/",
+  "confidence": "medium",
+  "notes": "Aurora(n) 16-DNT = the Aurora(n) modular chassis configured for 16 analog I/O channels plus the preinstalled LT-DANTE LSlot expansion card. Manufacturer's live product pages (lynxstudio.com/products/aurora-n/ and lynxstudio.com/products/lynx-lt-dante/) do not publish a single consolidated rear-panel connector table for the DNT variant; details were cross-corroborated from Lynx's own Aurora(n) product page, Aurora(n) specifications PDF, LT-DANTE product page, and the legacy Aurora 16 manual excerpt (word clock, MIDI, headphone jack, IEC inlet features carried unchanged into Aurora(n) per Lynx documentation), plus retailer listings (B&H, Sweetwater, Vintage King, getdante.com, Audinate). Analog I/O is 16 in/16 out balanced on 2x DB25 connectors each (Tascam-style pinout, 8 channels per DB25), switchable +4dBU/-10dBV; DB25 is not in the provided connector enum so \"euroblock\" was used as a placeholder for a multi-channel analog D-sub connector -- this is an imperfect match and should be treated as DB25/D-sub in any downstream rendering. LT-DANTE card is described by Lynx/B&H as \"a two-port expansion card\" using standard CAT5e/CAT6 cabling (RJ45); could not confirm from a spec table whether the two ports are a primary/secondary redundant pair or independently switched -- assumed redundant Dante primary/secondary pair per standard Dante LSlot card convention, each treated as bidirectional network port. MIDI 5-pin DIN in/out is used only for firmware updates per Lynx documentation (not part of the DNT's main audio signal chain but included as a real physical port). No grade fields set because Dante/RJ45 line rate is not stated on any source consulted and word clock/MIDI/analog/headphone ports are not bandwidth-graded connector types per the given scales. Power inlet confirmed as IEC with universal 100/115/230/240V switching supply from Aurora(n) family documentation; exact wattage not found for the (n) generation (legacy Aurora 16 spec sheet listed 70W but this may differ for Aurora(n) with Dante card installed, so wattage omitted). microSD slot exists for onboard recording but is not a cable I/O port so it is omitted from the port list.",
+  "ports": [
+    {
+      "name": "Analog In 1-8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "DB25 connector (Tascam/D-Sub analog pinout), balanced +4dBu/-10dBV, 8 channels; DB25 not in enum, closest analog multi-pin option chosen"
+    },
+    {
+      "name": "Analog In 9-16",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "DB25 connector (Tascam/D-Sub analog pinout), balanced +4dBu/-10dBV, 8 channels; DB25 not in enum, closest analog multi-pin option chosen"
+    },
+    {
+      "name": "Analog Out 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB25 connector (Tascam/D-Sub analog pinout), balanced +4dBu/-10dBV, 8 channels; DB25 not in enum, closest analog multi-pin option chosen"
+    },
+    {
+      "name": "Analog Out 9-16",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "DB25 connector (Tascam/D-Sub analog pinout), balanced +4dBu/-10dBV, 8 channels; DB25 not in enum, closest analog multi-pin option chosen"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75ohm BNC, SynchroLock 2 clocking"
+    },
+    {
+      "name": "Word Clock Out 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "opto-isolated 5-pin DIN, used for firmware updates"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "opto-isolated 5-pin DIN, used for firmware updates"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "1/4 inch TRS stereo headphone jack with independent volume; closest enum id is ts-6.35"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "1/4 inch TRS stereo headphone jack with independent volume; closest enum id is ts-6.35"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "LT-DANTE LSlot card port, standard CAT5e/CAT6 Ethernet; line rate not confirmed on sources consulted so grade omitted"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "LT-DANTE LSlot card second port, standard CAT5e/CAT6 Ethernet; assumed redundant pair per typical Dante LSlot convention, unconfirmed"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet, universal switching supply 100/115/230/240V"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "ATW-3212",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.audio-technica.com/us/wireless3000_um_232416960_v2_en_web_200306.pdf",
+  "confidence": "high",
+  "notes": "The ATW-3212 is a 3000 Series (4th Gen) UHF wireless handheld microphone system consisting of the ATW-R3210 half-rack receiver and ATW-T3202 handheld transmitter (with interchangeable ATW-C510 dynamic or ATW-C710 condenser capsule, sold as ATW-3212/C510 or ATW-3212/C710). Physical I/O documented here is the ATW-R3210 receiver's rear panel, per the official Audio-Technica user manual and submittal sheet. The two BNC antenna inputs (ANT A / ANT B) supply switchable 12V DC antenna power for powered/active antenna accessories; grade omitted since SDI/BNC video grading does not apply to RF antenna connections. The handheld transmitter (ATW-T3202) is battery-only (2x AA) with no external DC input and no separate physical audio input connector (microphone signal comes from the screw-on capsule internally), so it contributes no additional physical I/O ports to this device-level record. The receiver ships half-rack-width with rack-mount adapters/joining plate to occupy 1U when paired with a second half-rack unit; rackUnits set to 1 reflecting its standard mounting form factor. Two power supply variants exist by region (100-240V AC external adapter, output 12V DC 1A center-positive) — only the receiver's DC input jack is modeled since the AC adapter is a separate accessory (IEC/mains cord depends on region, not specified on the unit itself). Frequency band variants (DE2 470-530MHz / EE1 530-590MHz) do not affect I/O.",
+  "ports": [
+    {
+      "name": "ANT A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "True-diversity antenna input; supplies switchable 12V DC/80mA antenna power for powered antenna accessories"
+    },
+    {
+      "name": "ANT B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "True-diversity antenna input; supplies switchable 12V DC/80mA antenna power for powered antenna accessories"
+    },
+    {
+      "name": "AF Output (Balanced, XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced audio output, +14 dBV max; ground-lift switch isolates pin 1 from ground"
+    },
+    {
+      "name": "AF Output (Unbalanced)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 6.3mm mono output jack, +8 dBV max"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC 1A center-positive input from included external switched-mode AC adapter (100-240V AC 50/60Hz)"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "manufacturer": "SurgeX",
+  "model": "SA-1810",
+  "category": "power",
+  "type": "Power conditioner",
+  "sourceUrl": "https://www.ametekesp.com/-/media/ametekesp/downloads/data-sheets/surgex-ametek_data-sheet_sa-1810.pdf",
+  "confidence": "high",
+  "notes": "Standalone (desktop) unit, not rack-mountable — optional mounting brackets are for wall/surface mounting, not a rack chassis, so rackUnits is omitted. Datasheet explicitly lists Network Port: No, Serial Port: None, Temperature Sensor Input: None, Auxiliary Relay Outputs: No, Contact Closure Input: No, so the unit has no data/control I/O — only the AC input and 10 AC outputs. Input plug is captive 9 ft cord terminating in a NEMA 5-15P plug; the 10 outputs are NEMA 5-15R receptacles. No bandwidth-graded connectors are present, so no grade fields apply.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 1",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 2",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 3",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 4",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 5",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 6",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 7",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 8",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 9",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "AC Out 10",
+      "direction": "output",
+      "connector": "nema-5-15"
+    }
+  ]
+}

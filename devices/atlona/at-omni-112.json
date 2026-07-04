@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Atlona",
+  "model": "AT-OMNI-112",
+  "category": "converter",
+  "sourceUrl": "https://atlona.com/pdf/data_sheet/AT-OMNI-112_Spec.pdf",
+  "confidence": "medium",
+  "notes": "Atlona's domain (atlona.com) now 301-redirects entirely to hallresearch.com and no longer serves the original spec sheet/manual content (the AT-OMNI-112 PDFs at atlona.com/pdf/... redirect but the destination pages return empty/generic content), suggesting Atlona's site has been folded into Hall Research and this product's original documentation may no longer be actively hosted. Data below was triangulated from cached search-result excerpts of the official spec sheet and installation manual (as indexed pre-redirect), plus retailer listings (B&H, SnapAV, Midwich/AV-iQ). Two HDMI 2.0b inputs (channel 1 and channel 2), HDCP 2.2, up to 4K/60 4:4:4 HDR, confirmed consistently across sources. Two Gigabit Ethernet ports (labeled ETHERNET 1 / ETHERNET 2) for dual-network redundant streaming, PoE-capable (up to ~12-13W draw) - one lower-confidence extraction pass returned \"1x RJ45\" but this conflicts with multiple independent sources (AV-iQ catalog, search-indexed spec-sheet copy, installation-manual excerpts) that explicitly reference two separate Ethernet ports/labels, so two ports was treated as correct. RS-232 pass-through (2 logical RS-232 channels) plus IR pass-through (channel 2 only) share a single 6-pin captive-screw/Phoenix-style terminal block - modeled here as one euroblock port; could not confirm exact pin count/assignment from primary source. Power: primarily PoE; optional external 48V DC/0.83A supply (Atlona AT-PS-48083-C) connects via a 2-pin captcaptive-screw/Phoenix terminal block rather than a molded barrel jack - modeled as euroblock-dc (closest match) rather than dc-barrel. Housed in a small half-width, non-rack desktop/shelf enclosure (approx. 8.2 x 1.3 x 4.4 in / 208 x 34 x 112 mm); rackUnits omitted since it is not a standard full-width rack-mount chassis (requires an optional rack shelf to mount 2 side-by-side in 1U). No USB ports. HDMI grade could not be confirmed as HDMI 2.0 vs 2.0b bandwidth class distinction beyond \"2.0\", so grade set to hdmi-2.0. Ethernet grade set to eth-1g (Gigabit) per multiple sources. Recommend verifying directly with Atlona/Hall Research support or an archived copy of the original PDF spec sheet if higher confidence is required.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE capable; LAN/stream output"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Second network for stream redundancy; PoE capable"
+    },
+    {
+      "name": "RS-232 / IR",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-pin captive-screw terminal block carrying 2 channels of RS-232 pass-through plus IR pass-through (IR on channel 2 only)"
+    },
+    {
+      "name": "DC 48V",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Optional external 48V DC / 0.83A power supply (AT-PS-48083-C) via 2-pin captive-screw terminal block; unit is primarily PoE-powered"
+    }
+  ]
+}

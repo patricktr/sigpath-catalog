@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Optoma",
+  "model": "ZU920T",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.optomaeurope.com/ContentStorage/Documents/5c1b0d82-5e34-42e0-9a11-d7534acfff9b.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: official Optoma Europe ZU920T datasheet PDF (optomaeurope.com), cross-checked against optomausa.com/product/proscene-zu920t (identical connector list) and projectorcentral.com. This is a WUXGA (1920x1200) 9,800-lumen DuraCore laser installation projector - NOT a native 4K device (marketed as \"4K/HDR compatible\" via input signal support, i.e. accepts a 4K signal and scales it). Some secondary web snippets (e.g. from AI-search summaries) incorrectly attributed 3G-SDI and DVI-D ports to this model - the manufacturer's own spec sheet and product page confirm NO SDI and NO DVI port exists on the ZU920T; those references appear to be confusion with a different Optoma model. HDMI grade: manufacturer specifies all HDMI ports (2 in, 1 out) as \"HDMI 2.0\" - an earlier third-party summary claimed HDMI2 was \"v1.4a\" but the official Optoma datasheet lists both inputs simply as \"2 x HDMI 2.0\", which I've used as authoritative. The \"3D sync\" in/out and \"12V trigger\" ports are listed by the manufacturer only as connection types without specifying exact physical connector (likely mini-DIN or 3.5mm jack in practice) - mapped to the closest available connector id (dc-barrel) per instructions since no better match exists in the allowed list; treat these three ports' connector field as an approximation, not a confirmed physical connector type. AC power inlet type (IEC) was confirmed visually from the rear-panel product photo in the official datasheet (standard IEC C13/C14 inlet), since the spec sheet text only states voltage/wattage without naming the inlet type. HDBaseT input is carried over RJ45 - assigned eth-1g as a reasonable grade since HDBaseT typically operates at gigabit-class bandwidth, though this is not explicitly stated by Optoma. LAN RJ45 grade (eth-100m) is inferred as a control/network port typical of this projector class, not explicitly stated. No dedicated USB-A data/service port is listed - the single USB-A port is power-only (1.5A) for accessory power, not a host/data connection.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "HDBaseT input over RJ45; also carries LAN/media per manual"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "3D Sync In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Manufacturer spec lists as '3D sync' input; physical connector on Optoma installation projectors is typically a mini-DIN/DC-jack style 3D sync port, not a standard DC barrel jack - closest list match"
+    },
+    {
+      "name": "3D Sync Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Manufacturer spec lists as '3D sync' output; same connector caveat as 3D Sync In"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-A (Power 1.5A)",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Power-only USB-A output (1.5A) for powering a streaming/media dongle, not a data host port"
+    },
+    {
+      "name": "12V Trigger",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Screen/curtain trigger jack; typically a 3.5mm mono jack, closest list match is dc-barrel"
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Wired remote control jack, typically 3.5mm mini-jack"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC inlet visible in product photo; rated AC 90-264V 50/60Hz, matches standard IEC C13/C14 for this power class (max 505W)"
+    }
+  ]
+}

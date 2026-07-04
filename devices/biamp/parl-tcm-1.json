@@ -1,0 +1,32 @@
+{
+  "manufacturer": "Biamp",
+  "model": "Parlé TCM-1",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_parle_tcm-1_jul22.pdf?sfvrsn=d3006c31_28",
+  "confidence": "high",
+  "notes": "Source: Biamp official Parlé TCM-1 data sheet (PARDS-1115-2207-EN-R1, Jul 2022), manufacturer's authoritative PDF. The product is a two-piece pendant microphone system: a pendant mic head (custom 2-pin proprietary digital-array connector, fixed 10 ft/3 m cable, not user-accessible as a separate port) plus a plenum box with all external-facing physical connectors. Plenum box connectors per datasheet: \"Two RJ-45: one between TCM-1 plenum box and switch, the other between TCM-1 plenum box and additional TCM-1EX plenum box; 2-pin 3.5 mm Phoenix connector to TCM-1 microphone.\" The front-panel photo on the datasheet labels the network/control port \"AVB / Control\" and the mic port \"Mic\"; the second (daisy-chain) RJ-45 is not visible in that photo angle but is confirmed by spec text and product description. No power port is listed because the unit is PoE-powered (IEEE 802.3at Class 3, 15.4W) via the AVB/Control RJ-45 — there is no separate AC or DC power input. AVB/TSN network link speed (e.g. 100M vs 1G) is not stated in this datasheet, so no bandwidth grade was assigned to either RJ-45 port (avoiding an unconfirmed grade per instructions). The pendant mic's own 2-pin custom connector was omitted as a discrete \"port\" since it is a fixed captive cable to the plenum box, not a field-mateable I/O connector in the same sense as the plenum box's ports; if desired it could be added as an additional proprietary/custom connector but there is no matching id in the allowed connector list. Desktop/ceiling-mounted device — no rack units. Not to be confused with the TCM-1A (adds a built-in Dante/analog amplifier) or TCM-1EX (expansion-only unit with no plenum-box network uplink) variants, which have different port sets.",
+  "ports": [
+    {
+      "name": "AVB / Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 to network switch; carries AVB/TSN audio networking, Tesira software configuration/control, and PoE power (IEEE 802.3at Class 3, 15.4W) to the plenum box. Link speed not stated in datasheet, so no grade assigned."
+    },
+    {
+      "name": "Expansion (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ-45 on plenum box for daisy-chaining up to two TCM-1EX expansion microphones (max 3 mics per chain: one TCM-1/TCM-1A plus up to two TCM-1EX). Not separately labeled in the front-panel photo; identified from spec text. Link speed not stated, so no grade assigned."
+    },
+    {
+      "name": "Mic",
+      "direction": "input",
+      "connector": "euroblock",
+      "accepts": [
+        "trs-3.5"
+      ],
+      "note": "2-pin 3.5 mm Phoenix (captive-screw) connector on the plenum box, connects to the pendant microphone head via a fixed 10 ft (3 m) custom 2-pin cable. Modeled as euroblock (Phoenix-style pluggable screw terminal) since no closer id exists in the allowed connector list; this is a proprietary low-voltage mic/data link, not a standard XLR or 3.5mm audio jack."
+    }
+  ]
+}

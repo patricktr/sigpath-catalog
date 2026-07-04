@@ -1,0 +1,164 @@
+{
+  "manufacturer": "Novastar",
+  "model": "NovaPro UHD Jr",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 3,
+  "sourceUrl": "https://oss.novastar.tech/uploads/2024/11/NovaPro-UHD-Jr-All-in-One-Controller-Specifications-V1.5.1.pdf",
+  "confidence": "high",
+  "notes": "Source: Novastar official \"NovaPro UHD Jr All-in-One Controller Specifications V1.5.1\" PDF (2024-11-07), https://oss.novastar.tech/uploads/2024/11/NovaPro-UHD-Jr-All-in-One-Controller-Specifications-V1.5.1.pdf. This is an LED-display all-in-one controller combining video processor + sending card (\"Video controller\" / \"Fiber convertor\" working modes); no single listed category/type fits perfectly, so it is classified as category \"converter\" / type \"Converter\" as the closest match (it converts/routes video sources to LED-panel Ethernet/fiber sending signals). DVI inputs: 4x connectors, default single-link (4x independent inputs, downward compatible to lower res); in dual-link mode DVI1/DVI3 become 2 dual-link inputs and DVI2/DVI4 are disabled — modeled here as the default single-link 4-port configuration. 12G-SDI inputs and outputs are true BNC connectors, graded sdi-12g since they support ST-2082-1 (12G) as the top-end spec (also support 6G/3G/HD downward). HDMI input/loop-output and DP input are graded per spec table (HDMI 2.0, DP 1.2); Monitor-out HDMI port has no stated version, so no grade was set (max 1920x1080@60Hz suggests it's a lower-bandwidth tap, but exact HDMI version isn't stated). Ethernet: 16x Neutrik (etherCON) Gigabit output ports (rj45 connector chosen since etherCON is a locking RJ45 variant and not in the allowed id list) graded eth-1g; separate 1x standard RJ45 \"ETHERNET\" control port for PC/web control, ungraded (control port speed not stated, though likely also Gigabit — omitted grade per spec silence). 4x OPT ports are 10G fiber connectors, modeled as fiber-lc (closest available id; actual connector is Novastar's proprietary/SC-type optical module, not confirmed as LC) — grade omitted since fiber ports are not in the SDI/HDMI/DP/USB/Ethernet graded scale list. USB-B (front panel, PC debug/control) and USB-A + USB-B (rear panel, image-mosaic device chaining) are bidirectional per USB host convention; USB version/speed not stated in the spec, so no grade set. Power: single IEC inlet (100-240V~, 50/60Hz, 2A max) matching rear-panel photo of a standard IEC C13/C14-style inlet with rocker switch — modeled as \"iec\". GENLOCK IN-LOOP is a BNC connector (sync in/loop, bidirectional loop-through) — grade omitted (not an SDI/HDMI-graded signal). RS232 is DE-9 typically for Novastar gear but only \"RS232\" connector id exists in the allowed list, used as-is. Rack unit: 2U based on 139.0mm height (matches standard 3U at times, but per official 482.6 x 395.5 x 139.0mm dimensions, 139mm corresponds to ~3U desk depth chassis — measured against 1U=44.45mm, 139mm/44.45mm ≈ 3.13, so set rackUnits to 3).",
+  "ports": [
+    {
+      "name": "DVI 1",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Single-link by default; input up to 2048x1152@60Hz downward compatible. In dual-link mode, DVI1/DVI3 become dual-link (up to 3840x1080@60Hz) and DVI2/DVI4 are disabled."
+    },
+    {
+      "name": "DVI 2",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Single-link by default; input up to 2048x1152@60Hz downward compatible. Unavailable when DVI1/DVI3 dual-link mode is enabled."
+    },
+    {
+      "name": "DVI 3",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Single-link by default; input up to 2048x1152@60Hz downward compatible. In dual-link mode, DVI1/DVI3 become dual-link (up to 3840x1080@60Hz) and DVI2/DVI4 are disabled."
+    },
+    {
+      "name": "DVI 4",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Single-link by default; input up to 2048x1152@60Hz downward compatible. Unavailable when DVI1/DVI3 dual-link mode is enabled."
+    },
+    {
+      "name": "12G-SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Supports ST-2082-1 (12G), ST-2081-1 (6G), ST-424 (3G), ST-292 (HD); input up to 4096x2160@60Hz."
+    },
+    {
+      "name": "12G-SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Supports ST-2082-1 (12G), ST-2081-1 (6G), ST-424 (3G), ST-292 (HD); input up to 4096x2160@60Hz."
+    },
+    {
+      "name": "DP 1.2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Input up to 3840x2160@60Hz, HDCP 1.3."
+    },
+    {
+      "name": "HDMI 2.0",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Input up to 3840x2160@60Hz, HDCP 2.2."
+    },
+    {
+      "name": "HDMI 2.0 LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-through output of the HDMI 2.0 input; only 1 level of device cascading supported; HDCP 2.2."
+    },
+    {
+      "name": "12G-SDI LOOP 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Loop-through output for 12G-SDI input 1."
+    },
+    {
+      "name": "12G-SDI LOOP 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Loop-through output for 12G-SDI input 2."
+    },
+    {
+      "name": "MONITOR",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Dedicated output-monitoring HDMI port; resolution up to 1920x1080@60Hz. HDMI version not stated by manufacturer, so no grade set."
+    },
+    {
+      "name": "Ethernet 1-16",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "16x Neutrik (etherCON-style locking RJ45) Gigabit Ethernet sending-card outputs to LED receiving cards; closest available connector id used since etherCON is a locking RJ45 variant. Total loading capacity up to 10,400,000 pixels."
+    },
+    {
+      "name": "OPT 1",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "10G optical output; transmits data of Ethernet ports 1-8. Connector modeled as fiber-lc (closest available id); actual Novastar optical module type not confirmed. No bandwidth grade set (fiber not covered by the graded connector scales)."
+    },
+    {
+      "name": "OPT 2",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "10G optical output; transmits data of Ethernet ports 9-16."
+    },
+    {
+      "name": "OPT 3",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "10G optical output; serves as copy/hot backup for OPT 1."
+    },
+    {
+      "name": "OPT 4",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "10G optical output; serves as copy/hot backup for OPT 2."
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control-network RJ45 port; connects to PC for communication or to the network/Web for device control. Speed not stated by manufacturer, grade omitted."
+    },
+    {
+      "name": "USB-B (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connect to PC for device control; also used as input connector to chain another NovaPro UHD Jr unit for image mosaic. USB version not stated."
+    },
+    {
+      "name": "USB-A (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Used as the output connector to chain another NovaPro UHD Jr unit for image mosaic. USB version not stated."
+    },
+    {
+      "name": "USB-B (front)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel USB-B port for PC connection for debugging. USB version not stated."
+    },
+    {
+      "name": "GENLOCK IN-LOOP",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Genlock sync input with loop-through; synchronizes multiple connected NovaPro UHD Jr units."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Connects to a central control device."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V~, 50/60Hz, 2A max, 70W max consumption. Rear-panel inlet with rocker power switch, consistent with IEC C13/C14 style inlet."
+    }
+  ]
+}

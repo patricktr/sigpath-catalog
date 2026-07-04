@@ -1,0 +1,124 @@
+{
+  "manufacturer": "QSC",
+  "model": "Core 8 Flex",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/dn/dsp_cores/core_8-flex/q_dn_core_8flex_specs.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: official QSC/Q-SYS Core 8 Flex spec sheet PDF (includes rear-panel photo and full spec tables), cross-checked against Q-SYS Help hardware page (help.qsys.com/q-sys_9.3/content/Hardware/Cores/Core_8_Flex.htm) and the official Q-SYS FAQ on Euroblock connector compatibility. Unit is 1U half-width (not full-width rack), ships with rack-mounting hardware for a half-rack tray; rackUnits is given as height-equivalent. FLEX CHANNELS: 8x user-configurable analog audio channels (input or output per-channel, software-selectable), each on a 3-terminal (+/-/ground) 3.5mm Euroblock/captive-screw connector; modeled as bidirectional since direction is set in software, not fixed by hardware. Phantom power +48VDC available on inputs. GPIO INPUTS/OUTPUTS use captive screw terminal blocks (modeled as euroblock, the closest connector id); GPIO INPUTS accept 0-24V analog or contact closure, GPIO OUTPUTS are open-collector 24V/0.2A max. RS232 (COM A/COM B): spec sheet labels these \"RS232\" with TX/RX pins on a 3-position 3.5mm terminal connector (not a DE-9); modeled connector as euroblock (closest physical match) since no rs232-specific terminal-block id exists in the allowed list, and no grade applies (RS-232 is not a graded connector type). USB-C is spec'd as \"USB 3.1\" (host/device/DisplayPort-alt-mode combo port) without Gen 1/Gen 2 distinction in QSC literature; graded conservatively as usb-5g (USB 3.1 Gen 1 = 5Gbps) since QSC does not confirm Gen 2/10Gbps support — treat as a possible underestimate. USB-B and both USB-A ports are spec'd as USB 3.0 = usb-5g. DisplayPort-alt-mode over the USB-C port is not broken out as a separate DP port since it shares the single physical USB-C connector; not listed separately per the \"exactly one connector id\" rule for a combo port. AC input is IEC 60320 C14 inlet, universal 100-240VAC 50/60Hz, rated 1.2A per the rear-panel photo silkscreen (\"100-240V~ 50/60Hz 1.2A\"); modeled as connector id \"iec\" (C13/C14 family). LAN A/LAN B are Gigabit Ethernet (RJ45, 1000 Mbps per Q-SYS Help) — graded eth-1g; both ports are software-assignable for Q-LAN control/audio, Dante, VoIP, or redundancy, so both are bidirectional network ports, not fixed source/sink.",
+  "ports": [
+    {
+      "name": "CH1",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH2",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH3",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH4",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH5",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH6",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH7",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "CH8",
+      "direction": "bidirectional",
+      "connector": "euroblock"
+    },
+    {
+      "name": "GPIO Inputs 1-8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "0-24V DC analog input or contact closure, 8 pins on one captive terminal block"
+    },
+    {
+      "name": "GPIO Outputs 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Open-collector, 24V, 0.2A max, 8 pins on one captive terminal block, pulled up to +3.3V"
+    },
+    {
+      "name": "RS232 A (COM)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Labeled RS232, TX/RX on 3-position 3.5mm terminal connector; not a DE-9 D-sub"
+    },
+    {
+      "name": "RS232 B (COM)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Labeled RS232, TX/RX on 3-position 3.5mm terminal connector; not a DE-9 D-sub"
+    },
+    {
+      "name": "USB C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 host/device port with DisplayPort alt-mode; Gen1/Gen2 not specified by QSC, graded conservatively as 5Gbps"
+    },
+    {
+      "name": "USB B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "Dedicated USB 3.0 device port for audio"
+    },
+    {
+      "name": "USB A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port, audio device hosting"
+    },
+    {
+      "name": "USB A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port, audio device hosting"
+    },
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet, software-assignable for Q-LAN audio/control, Dante, VoIP, or redundancy"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet, software-assignable for Q-LAN audio/control, Dante, VoIP, or redundancy"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet, universal 100-240V~ 50/60Hz, 1.2A, internal power supply"
+    }
+  ]
+}

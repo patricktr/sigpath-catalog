@@ -1,0 +1,116 @@
+{
+  "manufacturer": "Panamax",
+  "model": "MR4300",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "http://resources.nortekcontrol.com/products/MR4300/pdf_MR4300_manual.pdf",
+  "confidence": "high",
+  "notes": "Power line conditioner / surge protector, not a signal-routing AV device. \"Power conditioner\" is not in the allowed type enum, so type is set to PDU (closest fit: rack-mountable AC power distribution/protection unit). Official Panamax \"Model MR4300 Reference Guide\" (DIN-00015 REV. C) panel diagram confirms: front panel has 1 convenience AC outlet, USB Type-A charger (0.5A/5V), volt meter, power/bank indicators (not physical ports). Back panel has 8 switched AC outlets in two banks of 4 (Bank 2 = High Current, Bank 1 = Linear Filtration), an 8 ft. permanently-attached (captive) power cord with 45-degree low-profile NEMA 5-15 plug (no IEC inlet on the chassis), a ground lug, 1 pair RJ-45 in/out (LAN, 10/100/1000baseT), 1 pair RJ-11 in/out (telephone), and 2 pairs F-type coax in/out (CATV/SAT 1 and CATV/SAT 2, 0 MHz-2.2GHz, bidirectional passive surge-protected pass-through). The 9 protected AC outlets (1 front + 8 rear) are receptacles that pass through conditioned/filtered power to connected gear; modeled here as NEMA-5-15 outputs since no closer connector id exists for a US duplex outlet. Ethernet and coax pairs are physically separate IN and OUT jacks (surge-protection pass-through), not a single bidirectional port, so each is listed as a distinct input and output. Ethernet grade set to eth-1g reflecting stated 10/100/1000baseT compatibility. TEL (RJ-11) ports modeled with rj45 connector id as the closest available match since RJ-11 is missing from the connector list; noted as a caveat. Desktop/rack-convertible unit: 17\"W x 6\"D x 1.75\"H, rack-mountable with optional (not included) rack ears — modeled as 1U given its 1.75\" height and rack-mount capability.",
+  "ports": [
+    {
+      "name": "AC In (Power Cord)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "8 ft. captive/permanently-attached power cord with 45-degree low-profile plug; no IEC inlet on chassis"
+    },
+    {
+      "name": "Front Panel Convenience Outlet",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Always-on, protected & filtered front-panel AC outlet"
+    },
+    {
+      "name": "Bank 1 Outlet 1 (Linear Filtration)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 1 Outlet 2 (Linear Filtration)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 1 Outlet 3 (Linear Filtration)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 1 Outlet 4 (Linear Filtration)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 2 Outlet 1 (High Current)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 2 Outlet 2 (High Current)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 2 Outlet 3 (High Current)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Bank 2 Outlet 4 (High Current)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "USB Charger",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "Front-panel USB charging port, 0.5A/5V; not a data/host port"
+    },
+    {
+      "name": "CATV/SAT 1 In",
+      "direction": "input",
+      "connector": "f-type"
+    },
+    {
+      "name": "CATV/SAT 1 Out",
+      "direction": "output",
+      "connector": "f-type"
+    },
+    {
+      "name": "CATV/SAT 2 In",
+      "direction": "input",
+      "connector": "f-type"
+    },
+    {
+      "name": "CATV/SAT 2 Out",
+      "direction": "output",
+      "connector": "f-type"
+    },
+    {
+      "name": "LAN In",
+      "direction": "input",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000baseT-compatible surge-protection pass-through"
+    },
+    {
+      "name": "LAN Out",
+      "direction": "output",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000baseT-compatible surge-protection pass-through"
+    },
+    {
+      "name": "TEL In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "RJ-11 telephone surge protection; RJ-11 not in connector list, modeled as closest (rj45); 2-wire, pair 4-5"
+    },
+    {
+      "name": "TEL Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ-11 telephone surge protection; RJ-11 not in connector list, modeled as closest (rj45); 2-wire, pair 4-5"
+    }
+  ]
+}

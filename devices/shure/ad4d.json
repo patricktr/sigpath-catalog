@@ -1,0 +1,130 @@
+{
+  "manufacturer": "Shure",
+  "model": "AD4D",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://pubs.shure.com/view/guide/AD4D/en-US.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Shure AD4D User Guide (pubs.shure.com/view/guide/AD4D/en-US.pdf), which includes a labeled rear-panel and front-panel diagram — the most authoritative and complete source found. The AD4D is a 2-channel (dual receiver) unit: each of the two channels has its own XLR and 1/4in analog outputs, while a single \"AES3 1&2\" XLR-type connector carries the AES3 digital output for both channels. Ethernet: the unit has 4 RJ45 ports (ctrl1, ctrl2, Dante Primary, Dante Secondary) supporting 10/100Mbps or 1Gbps depending on mode (Split-Redundant: 2 ctrl + 2 Dante; Switched: all 4 ports carry both). AES3 connector on the rear panel is drawn as a 3-pin XLR-type connector per the official wiring diagram (not a standard analog XLR, but physically the same 3-pin XLR form factor) — labeled here as xlr3 since that's the closest connector type in the given list. Antenna, RF cascade, and word clock connectors are all BNC. Power input is an IEC locking connector (not a standard IEC C13/14 - it's Shure's proprietary \"VLock\" locking IEC-style connector), rated 100-240V AC. An optional AD4D-DC power module variant exists supporting redundant DC power (10.9-14.8V DC, 3.3A max) as an internal add-on module rather than a distinct rear-panel port on the base AD4D — this DC input was not included as a separate port since it's an optional accessory module, not a standard connector on the base unit. Grades were only set on RJ45 Ethernet ports (eth-1g, since the network interface spec explicitly states 10/100Mbps and 1Gbps support) — no grade applies to BNC (RF/word clock, not video/SDI), XLR/TRS (analog/AES3 audio, not USB/HDMI/DP), or IEC (power) connectors per the grading rules.",
+  "ports": [
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF input, 50 ohm, 12-13.5V DC switchable bias for active antennas"
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF input, 50 ohm, 12-13.5V DC switchable bias for active antennas"
+    },
+    {
+      "name": "RF Cascade C",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes Antenna A RF signal to one additional receiver; 50 ohm, unbalanced passive"
+    },
+    {
+      "name": "RF Cascade D",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes Antenna B RF signal to one additional receiver; 50 ohm, unbalanced passive"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External word clock to resolve AES3 digital output"
+    },
+    {
+      "name": "Word Clock Thru",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes word clock signal to additional components; switchable to 75 ohm termination when unused"
+    },
+    {
+      "name": "AES3 1&2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "AES3 digital audio output carrying both channels 1 and 2"
+    },
+    {
+      "name": "Output 1 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR analog audio output, channel 1, transformer balanced, mic/line switchable with ground lift"
+    },
+    {
+      "name": "Output 1 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "1/4in (6.35mm) transformer-balanced analog audio output, channel 1 (TRS wiring: tip=audio+, ring=audio-, sleeve=ground)"
+    },
+    {
+      "name": "Output 2 (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR analog audio output, channel 2, transformer balanced, mic/line switchable with ground lift"
+    },
+    {
+      "name": "Output 2 (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "1/4in (6.35mm) transformer-balanced analog audio output, channel 2 (TRS wiring: tip=audio+, ring=audio-, sleeve=ground)"
+    },
+    {
+      "name": "ctrl 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network control Ethernet port with PoE; 10/100Mbps or 1Gbps"
+    },
+    {
+      "name": "ctrl 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network control Ethernet port with PoE; 10/100Mbps or 1Gbps"
+    },
+    {
+      "name": "Dante 1 (Primary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante digital audio Ethernet port; 10/100Mbps or 1Gbps"
+    },
+    {
+      "name": "Dante 2 (Secondary)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante digital audio Ethernet port; 10/100Mbps or 1Gbps"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC locking connector (VLock), 100-240V AC, 50-60Hz, 0.55A max"
+    },
+    {
+      "name": "AC Power Cascade",
+      "direction": "output",
+      "connector": "iec",
+      "note": "Locking IEC output to loop AC power through to additional cascaded components"
+    },
+    {
+      "name": "Monitor (Headphone)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Front panel 1/4in (6.3mm) headphone monitor output jack with volume knob; supports Dante Cue/Browse monitoring"
+    }
+  ]
+}

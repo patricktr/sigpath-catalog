@@ -1,0 +1,90 @@
+{
+  "manufacturer": "Christie",
+  "model": "Spyder X80",
+  "category": "converter",
+  "rackUnits": 6,
+  "sourceUrl": "https://www.christiedigital.com/globalassets/resources/public/020-102024-02-christie-lit-man-instal-x80.pdf",
+  "confidence": "high",
+  "notes": "Modular, fully-scalable I/O: up to 6 input cards x 4 inputs each (max 24 inputs) and up to 4 output cards x 4 outputs each (max 16 outputs); user populates only the cards needed (1-6 in, 1-4 out). Each input and each output physically provides all three connector types simultaneously (BNC/SDI, HDMI, DisplayPort) per the official installation manual's rear-panel diagram, not a single connector selectable by card variant. Grades (12G-SDI, HDMI 2.0, DisplayPort 1.2) are stated for all inputs/outputs per Christie's spec sheet/brochure. Power: 4 IEC-type AC receptacles per unit -- 2 active + 2 redundant (represented here as a single iec port entry with a note; exact IEC sub-type, C13/C14 vs C19, not stated in available docs, but Christie's standard rack gear of this era uses IEC C13/C14, and \"standard AC power cords\" are listed as accessories). Control card also exposes PCI-Express in/out (proprietary expansion, not in the connector list) and BNC Genlock/loop-out (bandwidth grade not applicable/not stated, omitted). Front-panel USB port is for firmware/manual access, not a general host/signal port, but included since it is a physical port on the device. RS-232 and Ethernet ports are confirmed in spec sheet but not individually diagrammed with connector sub-type in the manual excerpt reviewed; RS-232 assumed DE-9 (rs232 id) per industry-standard Christie practice, Ethernet is RJ45 10/100/1000 (eth-1g grade, as 1000BASE-T is the ceiling stated).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Up to 24x (6 input cards x 4). BNC connector for 12G-SDI per input."
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 24x (6 input cards x 4)."
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Up to 24x (6 input cards x 4)."
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Up to 16x (4 output cards x 4)."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Up to 16x (4 output cards x 4)."
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Up to 16x (4 output cards x 4)."
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "BNC for Genlock, on control card."
+    },
+    {
+      "name": "Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "BNC loop-out of the Genlock signal, on control card."
+    },
+    {
+      "name": "RS-232 In/Out",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port(s), in/out."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 control and Spyder Studio network connection."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port, used for firmware/manual access via USB drive."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "4x AC power receptacles total (2 active + 2 redundant); standard AC power cords included. Exact IEC sub-type (C13/C14) not explicitly stated in reviewed docs."
+    }
+  ]
+}

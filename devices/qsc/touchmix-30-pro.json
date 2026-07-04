@@ -1,0 +1,117 @@
+{
+  "manufacturer": "QSC",
+  "model": "TouchMix-30 Pro",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/mix/q_mix_tmix_specs_web.pdf",
+  "confidence": "high",
+  "notes": "Physical I/O compiled from QSC's official TouchMix Series Spec Sheet (March 2024 PDF) plus the TouchMix-30 Pro User Manual rear-panel description (via ManualsLib). Input/output \"Total\" figures in QSC's spec table (32 in / 16 out) count logical mixer channels, not physical rear-panel jacks, so this port list enumerates actual physical connectors instead: Mic/Line 1-20 (XLR), Mic/Line 21-24 (XLR/TRS combo), 3 stereo TRS input pairs (Line 25/26, 27/28, 29/30 — note 29/30 is duplicated on a top-panel 1/8\" TRS jack per QSC's own FAQ, not an additional rear jack), Talkback XLR, Main L/R XLR out, Monitor L/R XLR out, 14x Aux XLR outs, 2x stereo IEM TRS outs (tapped from Aux 11/12 and 13/14), 1x stereo Cue/headphone TRS out, 2x USB-A (one is USB 3.0 for multitrack recording/storage, the other USB-A port version not separately specified — treated as USB 2.0 for MP3/Wi-Fi-dongle use per common configuration), 1x USB-B (DAW interface, 32x32), 1x RJ45 (for external Wi-Fi router, not a native Ethernet data port), and the AC power inlet which multiple retailer/parts sources confirm is an IEC C13/C14 detachable-cord inlet (85W, 100-240VAC 50/60Hz) rather than a captive cord. A Kensington-style security slot exists but is not a signal/power port so it is omitted. Grades: RJ45 has no stated Ethernet speed in QSC literature (it exists solely to attach a Wi-Fi router, so no eth-* grade is asserted). USB ports have no stated USB version except the \"USB 3.0 Type A\" callout on one USB-A port per the manual; the second USB-A and the USB-B port versions are not explicitly stated by QSC and are left ungraded to avoid asserting an unconfirmed spec.",
+  "ports": [
+    {
+      "name": "Mic/Line 1-20",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "20x individual balanced XLR female mic/line inputs, 48V phantom switchable"
+    },
+    {
+      "name": "Mic/Line 21-24",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "4x combo XLR/TRS female inputs, 48V phantom switchable"
+    },
+    {
+      "name": "Line In 25/26",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo balanced 1/4\" TRS pair"
+    },
+    {
+      "name": "Line In 27/28",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo balanced 1/4\" TRS pair"
+    },
+    {
+      "name": "Line In 29/30",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo balanced 1/4\" TRS pair; also mirrored on a top-panel 1/8\" (3.5mm) stereo jack, not a separate rear connector"
+    },
+    {
+      "name": "Talkback",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR female, 48V phantom power available"
+    },
+    {
+      "name": "Main L/R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "2x balanced XLR male, line-level"
+    },
+    {
+      "name": "Monitor L/R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "2x balanced XLR male, line-level"
+    },
+    {
+      "name": "Aux 1-14",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "14x individual balanced XLR male line-level aux outputs; pairs may be linked for stereo/IEM use"
+    },
+    {
+      "name": "In-Ear Monitor (Aux 11/12)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo TRS output tapped from Aux 11/12, min. 16 ohm load"
+    },
+    {
+      "name": "In-Ear Monitor (Aux 13/14)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo TRS output tapped from Aux 13/14, min. 16 ohm load"
+    },
+    {
+      "name": "Cue",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo TRS, line or headphone use, min. 16 ohm load"
+    },
+    {
+      "name": "USB (Storage)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB 3.0 Type A per user manual, for USB storage drive (multitrack record/playback) and firmware updates"
+    },
+    {
+      "name": "USB (Wi-Fi/MP3)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Second USB Type A connector; version not separately specified by QSC (used for USB Wi-Fi adaptor or MP3 media)"
+    },
+    {
+      "name": "USB (DAW)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B, 32x32 DAW interface for Mac OS/Windows"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 port for connecting an external Wi-Fi router; not a general Ethernet data port and no speed grade is published"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet accepting detachable IEC C13 power cord; 85W, 100-240VAC, 50/60Hz per QSC spec sheet and confirmed IEC C13/NEMA 5-15P cord by third-party parts listings"
+    }
+  ]
+}

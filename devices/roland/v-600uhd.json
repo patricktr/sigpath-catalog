@@ -1,0 +1,149 @@
+{
+  "manufacturer": "Roland",
+  "model": "V-600UHD",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 2,
+  "sourceUrl": "https://static.roland.com/assets/media/pdf/V-600UHD_reference_eng01_W.pdf",
+  "confidence": "high",
+  "notes": "Sourced directly from Roland's official V-600UHD Reference Manual PDF (static.roland.com), Main Specifications / Connectors section (p.48) plus Rear Panel section (p.4) for the AC IN connector. All HDMI I/O is HDMI 2.0 except MULTI-VIEW output which is HDMI 1.4; all SDI I/O is 12G/3G/HD-SDI (graded as sdi-12g, the highest supported tier). RGB IN 1 is an HD DB-15 (VGA-style) analog RGB input, mapped to the 'vga' connector id. TALLY/GPI is a DB-25 female connector (16 tally + 8 GPI channels) — DB-25 is not in the provided connector enum, so it was mapped to 'euroblock' as the closest generic multi-pin control/GPIO connector type; this is an approximation and should be treated as a caveat. USB MEMORY port is USB-A but functions only as a flash-drive slot for settings/still-image files, not a general USB host/data port — marked bidirectional per the schema's rule for USB host ports. AC power connector: the manual calls it \"AC IN connector\" on the rear panel (with cord hook and ground terminal) and lists \"Power cord\" as an included accessory (not an external brick/adapter), consistent with an IEC C13/C14-style inlet; mapped to 'iec'. Power consumption is 80 W; unit is 2U rack-mountable (482mm W x 300mm D x 109mm H, includes rack-mount angles as accessories).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Selectable with RGB IN 1 via menu (shared input)"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI IN 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/3G/HD-SDI, conforms to SMPTE 2082, 424M (Level-A/B), 292M"
+    },
+    {
+      "name": "SDI IN 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/3G/HD-SDI, conforms to SMPTE 2082, 424M (Level-A/B), 292M"
+    },
+    {
+      "name": "RGB IN 1",
+      "direction": "input",
+      "connector": "vga",
+      "note": "HD DB-15 type, analog RGB; selectable with HDMI IN 1 via menu"
+    },
+    {
+      "name": "AUDIO IN L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR-3-31 type, balanced, +4 dBu nominal (max +24 dBu)"
+    },
+    {
+      "name": "AUDIO IN R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR-3-31 type, balanced, +4 dBu nominal (max +24 dBu)"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/3G-SDI, conforms to SMPTE 2082, 424M (Level-A)"
+    },
+    {
+      "name": "HDMI OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "MULTI-VIEW",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "AUDIO OUT L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-3-32 type, balanced, +4 dBu nominal (max +24 dBu)"
+    },
+    {
+      "name": "AUDIO OUT R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR-3-32 type, balanced, +4 dBu nominal (max +24 dBu)"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo miniature phone jack, 92 mW + 92 mW into 32 ohms"
+    },
+    {
+      "name": "USB MEMORY",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A, for USB flash drive (file save/load), not a host/data port to a computer"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 type male, for remote control"
+    },
+    {
+      "name": "CONTROL (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX, for remote control"
+    },
+    {
+      "name": "TALLY/GPI",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "DB-25 type female (Tally: 16 channels, GPI: 8 channels); DB-25 not in connector list, mapped to closest generic multi-pin control connector"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel AC IN connector with cord hook and ground terminal; accepts the included detachable power cord (IEC-style inlet). Power consumption 80 W."
+    }
+  ]
+}

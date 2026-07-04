@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Advantech",
+  "model": "DS-086",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://advdownload.advantech.com/productfile/PIS/DS-086/file/DS-086_DS(121725)20251222125940.pdf",
+  "confidence": "high",
+  "notes": "Ultra-slim (22mm) 8K60/4x4K60 digital signage player / media player, wall/VESA mountable. Ports per official Advantech datasheet (DS-086_DS, updated 17-Dec-2025) and product photos (front/rear panel views). HDMI Port1 supports 8K60 (HDMI 2.1 FRL); HDMI Ports 2-4 support 4K60 (HDMI 2.1 TMDS) — EDID coexistence between Port1 and the others is not supported. USB: 2x USB 3.2 Gen1 (5Gbps) + 2x USB 2.0 total (front panel shows USB1/USB4, rear panel shows USB2/USB3 per product photos; assigned Gen1 to front pair, USB2.0 to rear pair based on typical labeling but exact per-port speed assignment (USB1 vs USB4 vs USB2 vs USB3) is not explicitly keyed to speed in the datasheet table, so this is a reasonable inference). Ethernet port count varies by SKU: base SKU DS-086GB-U1A1E ships with 1x RJ45 (2.5GbE); other SKUs (U2A1E, U3A1E, U0A1E) ship with 2x RJ45 (2.5GbE) - product photos show 2x LAN (LAN1 supports vPro on Vpro SKUs), so 2x RJ45 was used as the representative/fully-populated configuration. Audio is a single 3.5mm jack that is software-configurable as Line-Out OR Mic-In (not both simultaneously) - modeled as bidirectional TRS-3.5. RS-232 is DB9 but only Tx/Rx wired (no full RS232 signal set) - mapped to rs232 connector type per the port list (closest match; physically a DB9/RS232 port). An IR phone jack (3.5mm) is present on some SKUs \"reserved for OEM demand\" - included as ir connector, direction input, per photos on rear panel. Power is a 19V DC external adapter via barrel jack (P/N 96PSA-A65W19V1-3), mapped to dc-barrel. No SDI/analog video/VGA/DisplayPort ports exist on this device. Grades: HDMI ports set to hdmi-2.1 per explicit datasheet callout (\"HDMI 2.1 8K60/4K60 Ports\"); Ethernet set to eth-2.5g per explicit \"2.5 Gigabit LAN Controller\" spec; USB set to usb-5g (3.2 Gen1) and usb-2.0 per explicit datasheet spec, but exact physical port-to-speed assignment among the 4 USB ports is inferred from typical front/rear grouping in product photos, not explicitly labeled per-port in the datasheet.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Supports up to 8K60 (HDMI 2.1 FRL); EDID coexistence with other HDMI ports not supported"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "4K60 (HDMI 2.1 TMDS)"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "4K60 (HDMI 2.1 TMDS)"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "4K60 (HDMI 2.1 TMDS)"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel; USB 3.2 Gen1"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel; USB 3.2 Gen1"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel; USB 2.0"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel; USB 2.0"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "2.5GbE; supports Intel vPro remote management on vPro SKUs"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "2.5GbE; present on 2-LAN SKUs (e.g. U2A1E, U3A1E, U0A1E); base SKU U1A1E has only 1 LAN"
+    },
+    {
+      "name": "COM (RS-232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9; Tx/Rx only"
+    },
+    {
+      "name": "Audio",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Single 3.5mm jack, software-configurable as Line-Out or Mic-In (not simultaneous)"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm IR phone jack, reserved for OEM demand; present on select SKUs only"
+    },
+    {
+      "name": "DC-IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "19V DC external power adapter input"
+    }
+  ]
+}

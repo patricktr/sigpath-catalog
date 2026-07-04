@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Bogen",
+  "model": "TPU60B",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.bogen.com/sites/default/files/2021-01/tpu250-100b-60b-35b_specsheet.pdf",
+  "confidence": "high",
+  "notes": "Wall-mounted 60W telephone paging mixer-amplifier; rack-mountable only with the optional RPK82 accessory kit (not natively rack-eared), so rackUnits is omitted. All signal I/O (TEL, MIC, MUSIC, MUSIC MUTE, CONTACT RING, TEL RING, and all speaker outputs) terminate on rear barrier/screw terminal strips under removable access covers — modeled here using the closest available connector id, \"euroblock\", though Bogen's actual hardware is a plain screw/barrier terminal block rather than a Euroblock/Phoenix-style pluggable connector. MUSIC IN is uniquely available at both an RCA jack and a parallel screw terminal for the same signal. AC power connection method (captive cord with NEMA 5-15P plug) was confirmed from the companion Installation and Use Manual (bogen.com), which states \"Only connect unit to AC mains outlet providing protective earthing connection\" and \"Mains plug is used as disconnect device,\" rather than being explicit in the spec sheet itself. No connectors carry a bandwidth \"grade\" — all are analog audio/control/power, so grade was omitted throughout per instructions. Weight 15 lb; dimensions 14-1/4\" W x 8-3/8\" H x 3-5/8\" D.",
+  "ports": [
+    {
+      "name": "TEL (T/R)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "600-ohm balanced, transformer-isolated dry-loop telephone page input; screw terminals labeled T and R"
+    },
+    {
+      "name": "MIC BAL (+/-, GND)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Lo-Z balanced dynamic microphone input, screw terminals (dynamic mics only, designed for Bogen MBS1000A push-to-talk mic)"
+    },
+    {
+      "name": "MUSIC IN",
+      "direction": "input",
+      "connector": "rca",
+      "accepts": [
+        "euroblock"
+      ],
+      "note": "Hi-Z unbalanced mono background-music input; available as an RCA jack or parallel screw terminals (same signal, either connection point)"
+    },
+    {
+      "name": "MUSIC MUTE",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal control input; mutes background music when shorted (e.g. by mic push-to-talk contact closure)"
+    },
+    {
+      "name": "CONTACT RING (GND)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal control input; sounds night ringer tone when customer-supplied dry contacts are closed"
+    },
+    {
+      "name": "TEL RING (T/R)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal input; sounds night ringer in response to a standard 90V AC telephone ring signal"
+    },
+    {
+      "name": "BRIDGING",
+      "direction": "bidirectional",
+      "connector": "rca",
+      "note": "Parallel RCA jack for bridging two TPU amplifiers together to combine inputs/output power"
+    },
+    {
+      "name": "16 OHM",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal low-impedance speaker output"
+    },
+    {
+      "name": "25V",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal 25V constant-voltage speaker line output, balanced or unbalanced via COM/GND shorting clip"
+    },
+    {
+      "name": "25V CT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal 25V center-tapped speaker line output"
+    },
+    {
+      "name": "70V",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal 70V constant-voltage speaker line output, balanced or unbalanced via COM/GND shorting clip"
+    },
+    {
+      "name": "WMT1A (line-matching transformer jack)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "RCA jack for optional WMT1A accessory transformer, providing a 600-ohm balanced telephone-level output (~1.73V) for driving long lines to remote equipment"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "120V AC, 60 Hz, captive line cord with grounded plug; 1.6A resettable circuit breaker; no power switch (unplug to power off)"
+    }
+  ]
+}

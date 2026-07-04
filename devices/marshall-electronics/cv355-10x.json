@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Marshall Electronics",
+  "model": "CV355-10X",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://marshall-usa.com/cameras/CV355-10X/",
+  "confidence": "high",
+  "notes": "Primary sources: Marshall's official product page (https://marshall-usa.com/cameras/CV355-10X/) and the manufacturer's user manual (https://marshall-usa.com/pdf/CV355-10X-Manual.pdf), cross-checked against retailer listings (B&H, Full Compass). The camera has one physical BNC connector that outputs either HD-SDI (1080i/720p) or 3G-SDI (1080p) depending on the OSD-selected output format — graded here as sdi-3g since 3G is the highest signal the port supports and 1080p/60 3G-SDI is the default/headline mode. HDMI grade of 1.4 is inferred from the max resolution/frame-rate support (1080p60) since Marshall does not publish an explicit HDMI version number; treat as medium-confidence on that specific sub-point. The camera body itself has only 3 physical connectors: BNC (3G-SDI), HDMI, and a locking multi-pin \"I/O\"/Service connector (Hirose-style, closest catalog match modeled as euroblock since no dedicated multi-pin AV connector id exists in the allowed list). The included breakout cable splits that single I/O connector into three cable ends: RS485 (green terminal block, also modeled as euroblock), 3.5mm TRS audio in (Mic/Line selectable, no phantom on Line, 1.7V/3mA Mic bias), and DC power (barrel-style plug, 12VDC nominal, 7-15VDC accepted, ~6W). No USB, Ethernet, or genlock/reference BNC input is present on this specific model (genlock/Tri-Level references in the manual's troubleshooting section describe generic Marshall camera behavior but CV355-10X's spec page does not list a genlock input). Desktop/handheld form factor (104.55 x 56 x 56 mm, ~0.8 lb) — no rack units apply.",
+  "ports": [
+    {
+      "name": "3G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Single BNC output; switchable between HD-SDI (1080i/720p) and 3G-SDI (1080p) per OSD Output Format setting"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Full-size HDMI; simultaneous output with SDI, up to 1080p60"
+    },
+    {
+      "name": "I/O (Service)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Locking Hirose-style multi-pin connector on camera body; breaks out via included cable to RS485, Audio In, and Power. Modeled here as the RS485 control leg of the breakout; see separate Audio In and Power entries for the other legs."
+    },
+    {
+      "name": "RS485 (I/O breakout)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Green terminal-block connector on breakout cable; VISCA (Sony) / Pelco-P/D control, baud rates 2400-115200"
+    },
+    {
+      "name": "Audio In (I/O breakout)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mic/Line selectable; Mic Bias 1.7V up to 3mA; Line input unpowered; 16/24/32-bit sampling"
+    },
+    {
+      "name": "DC Power In (I/O breakout)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC (7-15VDC range), ~6W draw; included 12V external power supply; red barrel-style plug on breakout cable"
+    }
+  ]
+}

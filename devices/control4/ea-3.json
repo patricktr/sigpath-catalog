@@ -1,0 +1,123 @@
+{
+  "manufacturer": "Control4",
+  "model": "EA-3",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://docs.control4.com/docs/product/ea-3/data-sheet/english/revision/D/",
+  "confidence": "high",
+  "notes": "Data pulled from Control4's official data sheet (doc 201-00381-D, rev D, 10-22-19), covering both C4-EA3 (V1) and C4-EA3-V2. Port set is identical between V1 and V2 (V2 differs only in WiFi implementation: internal on V1 vs optional external USB WiFi adapter on V2, which is not a physical port on the chassis itself). AC power inlet is an IEC 60320 C5 (\"cloverleaf/mickey-mouse\") connector per Control4 installation-guide/FCC documentation; C5 is not in the allowed connector-id list, so it is mapped to the closest match, iec-c7 (figure-8 style) — physically it is actually a 3-pin C5, not a 2-pin C7. Unit can alternatively be powered via PoE+ (802.3at, 25.5W) over its Ethernet/PoE RJ45 in lieu of AC; that capability is noted here but PoE power is delivered through the Ethernet In port already listed, not a separate port. IR out ports 1-3 are shared/switchable with Serial out 1-3 (3.5mm jacks operate as either IR or serial, not simultaneously) — modeled here as 6 IR out jacks plus a note; only the IR-mode use is listed as connector ir since the jacks are physically TS/TRS 3.5mm mini-jacks wired for IR or RS-232-level serial depending on configuration. Contact and Relay are on a shared captive-screw terminal block (euroblock-style, 5 positions: relay COM/NC/NO + contact +12/SIG/GND) — modeled as one euroblock relay port and one euroblock contact/sensor port. No grades were stated for Ethernet speed beyond 10/100/1000BaseT support, so grade eth-1g used (device supports up to Gigabit). No rack-mount native form factor — optional third-party rack kits (C4-EA3RMK1/2) exist as accessories, so rackUnits omitted per instructions (desktop/AV-closet unit). Source: https://docs.control4.com/docs/product/ea-3/data-sheet/english/revision/D/",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "Audio Out (Analog)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out (Digital Coax)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Audio In (Analog)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In (Digital Coax)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Ethernet/PoE In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "IR Out 1 (Serial 1)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "3.5mm jack, switchable to RS-232 serial out"
+    },
+    {
+      "name": "IR Out 2 (Serial 2)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "3.5mm jack, switchable to RS-232 serial out"
+    },
+    {
+      "name": "IR Out 3 (Serial 3)",
+      "direction": "output",
+      "connector": "ir",
+      "note": "3.5mm jack, switchable to RS-232 serial out"
+    },
+    {
+      "name": "IR Out 4",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "IR Out 5",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "IR Blaster (Front)",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "IR Receiver (Front)",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "Relay",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Terminal block: COM/NC/NO, AC 36V 2A or DC 24V 2A max"
+    },
+    {
+      "name": "Contact",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Terminal block: +12/SIG/GND, 2-30VDC input"
+    },
+    {
+      "name": "ZigBee Antenna",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "External reverse-SMA antenna connector for ZigBee radio; SMA not in allowed connector list, mapped to closest available id"
+    },
+    {
+      "name": "WiFi Antenna (V1 only)",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "External reverse-SMA antenna connector, EA-3 V1 only; SMA not in allowed connector list, mapped to closest available id"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec-c7",
+      "note": "IEC 60320 C5 (cloverleaf) AC inlet, 100-240VAC 50/60Hz; closest available connector id used since C5 is not in the allowed list. Unit can alternatively be powered via PoE+ over the Ethernet/PoE In port."
+    }
+  ]
+}

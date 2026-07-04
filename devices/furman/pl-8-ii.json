@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Furman",
+  "model": "PL-8 II",
+  "category": "power",
+  "type": "Power conditioner",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/55551/Furman-Pl-8-Ii.html",
+  "confidence": "medium",
+  "notes": "Legacy Furman \"Series II\" power conditioner (predecessor to the current PL-8C); no longer sold new by Furman but well documented via the official owner's manual (mirrored on ManualsLib) and retailer/marketplace listings (Musician's Friend, Reverb, Equipboard). It is a pure AC power-conditioning/rack-light unit with no audio/video/data signal I/O. Outlets are the standard US grounded duplex type; the manual does not print the literal \"NEMA 5-15R\" designation but this is the universal connector for 15A/120V duplex outlets in this Furman product class (confirmed by name for the closely related PL-Plus II). The power cord is a captive/hardwired 10 ft, 14 AWG cord (not a detachable IEC inlet), so it is modeled here as a NEMA 5-15 male-plug input rather than an IEC appliance inlet. The rear BNC jack is a 12VAC/0.5A gooseneck-lamp accessory power output, not a data/video signal port, so no bandwidth grade applies. Two front-panel retractable LED light fixtures and a front circuit breaker are present but are not connector ports. Rated 15A, 120VAC, 60Hz; 1U rackmount, 19\" W x 10.5\" D x 1.75\" H.",
+  "ports": [
+    {
+      "name": "Rear Outlets 1-8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Eight switched/protected rear-panel duplex outlets (Bank A/B), 15A/120VAC shared total"
+    },
+    {
+      "name": "Front Panel Outlet",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "One switched/protected front-panel convenience outlet"
+    },
+    {
+      "name": "AC Power Cord",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive/hardwired 10 ft, 14 AWG power cord terminating in a NEMA 5-15P plug; not a detachable IEC inlet"
+    },
+    {
+      "name": "Rack Light Jack",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Rear-panel BNC connector supplying 12VAC/0.5A for an accessory gooseneck rack lamp; power accessory jack, not a data/video signal connector"
+    }
+  ]
+}

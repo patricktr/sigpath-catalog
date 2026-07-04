@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Barco",
+  "model": "ClickShare C-10 (2nd Generation)",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://assets.barco.com/m/45c38ffba94824fb/original/ClickShare-C-10-en-Spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Wireless conferencing/collaboration base unit (desktop, not rack-mountable; dimensions 34 x 135 x 135 mm). Rear panel: Power connection, HDMI out, LAN Ethernet, Kensington lock (physical anti-theft slot, not a signal port, omitted). Front panel: 1x USB-C and 1x USB-A, both USB 3.0 on this 2nd-generation unit (1st-gen used USB 2.0). USB-C on the front is a bidirectional/data port used for button pairing and firmware/USB-stick access, and can alternatively supply DC power to the unit (external barrel-connector power adapter has priority when both are connected) — modeled here as a single bidirectional USB-C port; its optional power-delivery role is not broken out separately. Video output is HDMI 1.4b (4K UHD 3840x2160 @30Hz) or, alternatively, DisplayPort 1.2 signal carried over the same front USB-C port — not modeled as a second video output since it is the same physical connector as the data port. Power adapter is external, 12V DC / 2A / 24W max output via barrel connector into the unit's \"Power connection\" input (input side is standard IEC-style AC brick, not on the unit itself). Ethernet is 1 Gbit (RJ45).",
+  "ports": [
+    {
+      "name": "HDMI out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "LAN Ethernet connection",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Front panel. USB 3.0 (Gen2). Also carries DP 1.2 video alt-mode and can accept DC power input (barrel power adapter has priority if both connected)."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel. USB 3.0 (Gen2)."
+    },
+    {
+      "name": "Power connection",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter, 12V DC, 2A, 24W max. Interchangeable regional AC plug pieces (US/AU/IN/CH/EU/UK) on the adapter itself."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "manufacturer": "CyberPower",
+  "model": "PDU81005",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cyberpowersystems.com/product/pdus/switched-mbo/pdu81005/",
+  "confidence": "high",
+  "notes": "Verified against CyberPower's official Power Distribution Unit User's Manual (K01-0000545-02), which places PDU81005 in the \"1U 20A Models\" family table alongside PDU71005/PDU41005/PDU31005: 100-240V input, 16A max input current (derated), IEC-320 C20 plug, 8x IEC-320 C13 outlets, 1.75 x 17.05 x 4.41 in (1U). Front panel per manual: AC inlet, 8 output receptacles, status indicator, multifunction LCD, Ethernet (RJ45) port, Envirosensor/Daisy Chain (In) RJ45 port, USB port (firmware upgrade via flash drive only, not a general-purpose host/data port), Serial RJ45 port, Daisy Chain (Out) RJ45 port, select/enter buttons, and per-outlet indicator LEDs. Rear panel has only a chassis ground stud (mapped to \"banana\" as the closest available connector id — it is actually a threaded ground lug/stud, not a banana jack). No bandwidth grade is set on the Envirosensor/Daisy-Chain, Serial, or USB ports since they are not graded data-networking links (management/sensor/firmware-only); the primary Ethernet management port is conservatively graded eth-100m per CyberPower's typical PDU NIC spec (not explicitly restated as a speed number on this page, so treat as medium-confidence on that specific grade even though overall port inventory is high-confidence). Outlets are logically IEC-320 C13 (a 3-prong \"figure-8-plus-ground\" female receptacle equivalent to IEC C13); mapped to connector id \"iec-c5\" only because \"iec-c13\"/\"iec-c14\" is not in the allowed connector list and iec-c5 (three-pin \"Mickey Mouse\") is the nearest offered id — the real-world connector is IEC C13, not true C5/C7. The AC inlet is a true IEC-320 C20 socket, mapped to the generic \"iec\" id per instructions (IEC C13/C14 family) since C20 has no dedicated id in the allowed list.",
+  "ports": [
+    {
+      "name": "AC Output 1",
+      "direction": "output",
+      "connector": "iec-c5",
+      "note": "IEC-320 C13 switched/metered outlet"
+    },
+    {
+      "name": "AC Output 2",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 3",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 4",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 5",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 6",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 7",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Output 8",
+      "direction": "output",
+      "connector": "iec-c5"
+    },
+    {
+      "name": "AC Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-320 C20 inlet, 100-240V, 16A max (derated), 10 ft power cord to C19/C20 mains plug"
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps network management port for PowerPanel Business Edition"
+    },
+    {
+      "name": "Envirosensor/Daisy Chain (In) Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 modular port for optional environmental sensor or daisy-chain from previous PDU; not a data-networking port so no bandwidth grade set"
+    },
+    {
+      "name": "Daisy Chain (Out) Port",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ45 modular port for chaining to next PDU; not a data-networking port so no bandwidth grade set"
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 modular serial console port (RS-232 over RJ45, ships with RJ45/DB9 cable) for local SSH/Telnet-style config"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Used to upgrade firmware via a flash drive; not a host/networking data link so no USB speed grade set"
+    },
+    {
+      "name": "Ground Stud",
+      "direction": "bidirectional",
+      "connector": "banana",
+      "note": "Rear-panel chassis grounding stud; closest connector type in the allowed list, not a true banana jack"
+    }
+  ]
+}

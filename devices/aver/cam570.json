@@ -1,0 +1,50 @@
+{
+  "manufacturer": "AVer",
+  "model": "CAM570",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.averusa.com/business/downloads/cam570-datasheet.pdf",
+  "confidence": "high",
+  "notes": "Desktop/mount PTZ conferencing camera; not rack-mountable (rackUnits omitted). Power: DC 12V/2A barrel-jack input (bundled AC 100-240V external adapter) is the primary wired power port; the RJ45/LAN port additionally supports PoE+ (802.3at) as an alternate power path, so the unit can be powered via either the DC jack or PoE+ over the same Ethernet run used for IP streaming/control — both are listed on the RJ45 port's role rather than as a second physical power connector. HDMI out is HDMI 1.3 (1080p 30/60fps only, not 4K), grade set accordingly to the closest scale value (hdmi-1.4 is the lowest available enum option; datasheet explicitly states \"HDMI 1.3\" so this is a slight upward rounding to fit the given grade scale - flagged as inferred). USB port is 3.1 Gen 1 Type-B (device side), backward compatible with USB 2.0; mapped to usb-5g per USB 3.1 Gen 1 = 5Gbps. RS232 in/out is a Mini DIN9 connector (not a standard DE-9/DB9); mapped to rs232 as the closest connector id in the allowed list, with a note. Audio-in is a 3.5mm (TRS) line-level input only, no audio-out on the unit itself (HDMI carries video only per datasheet; no embedded audio-out port is listed separately). No SDI, VGA, or DisplayPort ports exist on this device. Ethernet is Gigabit-class in practice for PoE+/802.3at and IP streaming/virtual-USB-over-IP use case, but the datasheet does not explicitly state \"1000BASE-T\"/1GbE — grade eth-1g applied as the reasonable/expected default for a PoE+ 802.3at capable camera of this class (inferred, not explicitly stated in datasheet, hence flagged).",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Datasheet specifies HDMI 1.3 (1080p 30/60fps only); hdmi-1.4 chosen as closest available grade since hdmi-1.3 is not an option in the allowed enum."
+    },
+    {
+      "name": "USB 3.1 Type-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1 (5Gbps), backward compatible with USB 2.0. UVC 1.1/1.5 video class device."
+    },
+    {
+      "name": "LAN (IP streaming / PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Supports IP streaming (RTSP/RTMP), VISCA over IP control, virtual USB-over-IP, and PoE+ (802.3at) power input. Exact link speed (1GbE) inferred from PoE+ class and camera segment, not explicitly stated as '1000BASE-T' in the datasheet."
+    },
+    {
+      "name": "RS232 In/Out",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical connector is Mini DIN9 (VISCA/Pelco P/Pelco D control, camera daisy-chain), not a standard DE-9 RS232 connector; rs232 chosen as closest connector id in allowed list."
+    },
+    {
+      "name": "Audio-in",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm line-level audio input only (e.g. from a speakerphone's line-out), not used as a conferencing audio source; no built-in audio-out port on the unit."
+    },
+    {
+      "name": "DC 12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V/2A DC barrel jack, powered by bundled external AC 100-240V/50-60Hz power adapter. Alternate power path via PoE+ 802.3at on the LAN/RJ45 port."
+    }
+  ]
+}

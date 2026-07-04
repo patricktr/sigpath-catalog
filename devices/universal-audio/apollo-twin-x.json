@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Universal Audio",
+  "model": "Apollo Twin X",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://media.uaudio.com/support/manuals/hardware/Apollo%20Twin%20X%20Hardware%20Manual.pdf",
+  "confidence": "high",
+  "notes": "This is the Thunderbolt 3 version of Apollo Twin X (Mac/Windows), distinct from the \"Apollo Twin X USB\" variant (Windows-only, USB-C/USB 3.0, different power spec). Data pulled directly from the official UA \"Apollo Twin X Hardware Manual\" (Manual Version 210429), the manufacturer's authoritative source. Mic/Line Combo Inputs 1 & 2 are XLR female (pin 2 positive) combo jacks that also accept 1/4\" TRS line-level plugs — modeled as xlr3 primary with trs-6.35 accepted. The front-panel Hi-Z instrument input is a separate physical 1/4\" TS jack that internally overrides channel 1's mic/line input when a plug is inserted (not a combo jack on the same physical connector). Rear-panel 1/4\" jacks (line outs, monitor outs) accept both TS unbalanced and TRS balanced plugs per the manual, and are wired balanced TRS female. The Thunderbolt 3 port is a USB-C-shaped connector (confirmed by hardware block diagram labeling it \"TYPE-C\"); grade set to usb-40g reflecting Thunderbolt 3's 40 Gbps signaling rate (thunderbolt is not in the HDMI/DP/SDI/RJ45 graded families but is included in the USB-family grade scale per the instructions). Power is via external 12VDC power brick (Level VI compliant AC-to-DC supply) connecting to the unit via a locking 2.1mm x 5.5mm center-positive DC barrel jack — the brick itself has an IEC C8/C7 AC inlet, but the device's own physical port is the DC barrel input. Optical input is a single TOSLINK jack, software-selectable between ADAT (up to 8ch) or S/PDIF (2ch) — not simultaneous, so listed as one bidirectional-protocol input port. Desktop unit, not rack-mountable (no rackUnits set).",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS input for preamp channel 1; XLR pin 2 positive, 48V phantom switchable"
+    },
+    {
+      "name": "Mic/Line 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS input for preamp channel 2; XLR pin 2 positive, 48V phantom switchable"
+    },
+    {
+      "name": "Hi-Z Instrument Input",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Front panel, 1/4\" TS unbalanced only; overrides channel 1 mic/line when plugged in"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel stereo headphone output, 1/4\" TRS"
+    },
+    {
+      "name": "Monitor L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear panel balanced monitor output, DC coupled"
+    },
+    {
+      "name": "Monitor R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear panel balanced monitor output, DC coupled"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear panel balanced line output 3-4, software accessed, DC coupled"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear panel balanced line output 3-4, software accessed, DC coupled"
+    },
+    {
+      "name": "Optical In",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "TOSLINK, software-selectable ADAT (8ch @44.1/48kHz) or S/PDIF (2ch, up to 96kHz)"
+    },
+    {
+      "name": "Thunderbolt 3",
+      "direction": "bidirectional",
+      "connector": "thunderbolt",
+      "grade": "usb-40g",
+      "note": "USB-C shaped connector; single-cable PCIe host connection, required for full functionality"
+    },
+    {
+      "name": "Power (12VDC)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 2.1mm x 5.5mm center-positive barrel from external 12VDC/Level VI power supply; unit cannot be bus/Thunderbolt powered"
+    }
+  ]
+}

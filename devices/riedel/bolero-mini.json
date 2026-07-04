@@ -1,0 +1,19 @@
+{
+  "manufacturer": "Riedel",
+  "model": "Bolero Mini",
+  "category": "audio",
+  "sourceUrl": "https://www.riedel.net/fileadmin/user_upload/Bolero_Mini_2pager.pdf",
+  "confidence": "medium",
+  "notes": "Wireless DECT (1.9GHz) / 2.4GHz intercom beltpack, not a wired video/audio-routing device. Riedel's official Bolero Mini brochure (riedel.net/fileadmin/user_upload/Bolero_Mini_2pager.pdf) labels only one physical connector on the beltpack body: a \"Hirose HR10 6-pin connector,\" described elsewhere in the same brochure's marketing copy as a \"small push-pull connector.\" This single port is the combined interface for wired headset audio (mic/earpiece) and USB charging/firmware update, mirroring Riedel's full-size Bolero beltpack (which instead exposes separate 4-pin XLR headset + USB-C charging ports) but condensed into one miniature connector for the Mini's 28mm-thin form factor. HR10 6-pin is not present in the given connector enum, so it is modeled here as the closest available id (xlr4-dc, a small multi-pin circular connector) with usb-c listed under accepts since the port also carries USB charging/data. No grade is set: this is an analog-audio + proprietary-DC/USB combo connector and the brochure states no USB speed. No separate AC/DC power inlet, RJ45, or RF antenna connector is shown on the beltpack itself in the brochure's labeled diagram. Confidence is medium: the brochure explicitly names and diagrams the single HR10 port, but gives no pin-level signal breakdown and does not state a USB version. The companion antenna (BL-ANT-1010) and 5-bay charger dock are separate accessory products not covered by this entry.",
+  "ports": [
+    {
+      "name": "Hirose HR10 6-pin connector",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "accepts": [
+        "usb-c"
+      ],
+      "note": "Single combined push-pull connector on the beltpack body carrying wired headset audio (mic/earpiece) plus USB charging and firmware-update data. Labeled \"Hirose HR10 6-pin connector\" in Riedel's official Bolero Mini brochure; marketing copy separately calls it a \"small push-pull connector.\" No exact match in the connector enum for a 6-pin Hirose HR10 circular push-pull connector; xlr4-dc chosen as closest analog."
+    }
+  ]
+}

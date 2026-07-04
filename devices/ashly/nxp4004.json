@@ -1,0 +1,107 @@
+{
+  "manufacturer": "Ashly",
+  "model": "nXp4004",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://ashly.com/wp-content/uploads/2018/05/nX-amp-manual-r10.pdf",
+  "confidence": "medium",
+  "notes": "Base nXp4004 is analog-only for program audio: DSP (32-bit SHARC) is standard, but Dante/CobraNet network-audio and AES3 digital I/O are factory-installed OPTIONS, not present on a stock unit, so they are omitted here. Each of the 4 analog inputs is a combo XLR/1/4\" TRS jack wired in parallel with a Euroblock terminal (same physical port, multiple accepted connectors) — modeled as one xlr3 port per channel accepting trs-6.35 and euroblock. Speaker outputs: Ashly's manual and rear-panel diagrams for the 4-channel nX/nXe/nXp models show 2 Neutrik SpeakON (NL4) jacks, each carrying a pair of channels (1+/1-, 2+/2- and 3+/3-, 4+/4-); exact per-jack channel pairing is a well-documented Ashly nX4004/nXp4004 convention but the retail listings did not give an explicit rear-panel photo count, so this is a medium-confidence inference within an otherwise high-confidence, manufacturer-sourced spec set. Ethernet is 10/100 Mbit (spec sheets state \"100MB Ethernet\"), graded eth-100m. Dimensions 19in x 3.5in (2RU) x 16.84in, weight 32.4 lb, per SoundPro's retailer listing (soundpro.com), consistent with the 2RU chassis stated in Ashly's own manual. Serial data / fault / standby / preset / remote-level connectors are all 3.5mm Euroblock pluggable terminal blocks per Ashly's manual; no bandwidth grade applies to any of these control/logic/analog-audio/power connectors. Primary source: Ashly's own \"nX, nXe, and nXp Power Amplifiers\" Operating Manual (r10), hosted at ashly.com; cross-checked against Markertek's and Ashly's product pages (ashly.com/nxp-multi-mode/, ashly.com/amplifier-card/nxp4004/) and SoundPro's retailer listing for dimensions/weight.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ]
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ]
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ]
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35",
+        "euroblock"
+      ]
+    },
+    {
+      "name": "Speaker Out 1/2",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Speaker Out 3/4",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "AUX Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Pseudo-balanced preamp output(s) for driving additional amplifiers"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100 Mbit Ethernet control/monitoring via Proteane software"
+    },
+    {
+      "name": "Data (Serial)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin (G, +18V, IN, OUT) serial data port for Ashly WR-series remotes; optional INA-1 adapter for third-party RS-232 control"
+    },
+    {
+      "name": "Fault Logic Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Per-channel fault logic pin, drives external LED or controller input"
+    },
+    {
+      "name": "Standby",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Contact-closure input to trigger standby mode"
+    },
+    {
+      "name": "Preset Recall",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Contact-closure pins (P1-P4 to ground) for preset recall"
+    },
+    {
+      "name": "Remote DC Level Control",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Per-channel remote attenuation potentiometer input"
+    },
+    {
+      "name": "AC Mains",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Detachable Neutrik powerCON, auto-sensing 100-120/220-240VAC 50-60Hz"
+    }
+  ]
+}

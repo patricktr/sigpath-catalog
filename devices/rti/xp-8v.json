@@ -1,0 +1,88 @@
+{
+  "manufacturer": "RTI",
+  "model": "XP-8v",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.avproglobal.com/products/rti-xp8v",
+  "confidence": "medium",
+  "notes": "Manufacturer page rticontrol.com/xp-8v-control-processor.html and the cutsheet/manual PDFs on rticontrol.com now 302-redirect to avproglobal.com (RTI's parent/successor storefront); used the AVPro Global product page (current authoritative RTI source) plus corroborating manual excerpts (ManualsLib/Manualzz mirrors of the official XP-8v Reference Guide) and the Snap One/AV-iQ spec listings. RS-232 ports are RJ45 jacks wired for 3-wire RS-232 (568B pinout), shipping with 8x RJ45-to-DB9 adapters — modeled here as rs232 connector since that's the electrical standard, note the physical jack is RJ45. MPIO ports are custom 3.5mm 4-conductor (TRRS-style) jacks used for IR emitters/RTI modules/voltage sensing — modeled as trs-3.5 (closest listed connector); not full-duplex audio. Sense inputs and relay/trigger outputs terminate on included pluggable terminal blocks (3x 4-position + 3x 2-position ship in box) — modeled as euroblock (closest listed connector) rather than true dry-contact relay to bare wire. Relay outputs are actually low-voltage programmable outputs (12VDC@100mA or dry-contact-configurable), not high-current speaker/mains relays. RTI-COM (Zigbee) port and the Expansion (RS-485/IR/PWR) port are both RJ45-keyed proprietary ports, not standard Ethernet — included anyway as rj45 bidirectional control ports since no better id exists; grade omitted since they are not Ethernet-speed-graded. USB: two rear Host ports + one front Programming port; exact USB revision (2.0 assumed, standard for this control-processor generation) and Programming port's physical sub-connector (A vs Mini/Micro) could not be confirmed from available sources — modeled all three as usb-a/usb-2.0, flagged as inferred. Power input is a 12VDC/1A wall-adapter barrel jack (same PS-2 style supply shared across RTI's XP-8/XP-8s/XP-6 family per third-party PSU listings); modeled as dc-barrel. HDMI OSD output version not stated by RTI (spec only says \"720p/1080p\" resolution support) — omitted grade since no HDMI spec revision (1.4/2.0/2.1) is published.",
+  "ports": [
+    {
+      "name": "RS-232 1-8",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "8x two-way RS-232 ports on RJ45 jacks (568B pinout); ships with 8x RJ45-to-DB9 adapters for standard serial gear"
+    },
+    {
+      "name": "MPIO 1-8",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "8x Multi-Purpose I/O ports, custom 3.5mm 4-conductor jacks; used for IR emitters/blasters, RTI RS-232 modules, or voltage sensing"
+    },
+    {
+      "name": "Sense 1-8",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8x contact-closure/voltage (2-12VDC) sense inputs on pluggable terminal block"
+    },
+    {
+      "name": "Relay/Trigger 1-8",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8x outputs on pluggable terminal block, configurable as dry contact closure or 12VDC@100mA voltage trigger"
+    },
+    {
+      "name": "HDMI (OSD Out)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "On-screen display video output, 720p/1080p; HDMI version not published"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T network port for IP control"
+    },
+    {
+      "name": "RTI-COM",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Two-way Zigbee communication port (proprietary, RJ45-keyed) for ZM-24 module"
+    },
+    {
+      "name": "Expansion",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-485/IR/PWR proprietary expansion port, RJ45-keyed"
+    },
+    {
+      "name": "USB Host 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB host port; revision inferred"
+    },
+    {
+      "name": "USB Host 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB host port; revision inferred"
+    },
+    {
+      "name": "USB Programming",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB port for Integration Designer programming; exact sub-connector type unconfirmed"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC 1A external power supply (same PS-2-style adapter used across RTI XP series); barrel jack internally tied to the +12VDC terminal block pin"
+    }
+  ]
+}

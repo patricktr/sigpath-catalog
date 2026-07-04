@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Uniguest",
+  "model": "NTB-4K-10",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://uniguest.com/wp-content/uploads/2024/03/NTB-4K-10-Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from the manufacturer's official datasheet (accessed via Wayback Machine archive dated 2024-05-09, since uniguest.com is Cloudflare-protected and blocks direct automated fetches — same file, same URL). This is a compact fanless 4K digital signage media player (Onelan NTB series), not sold through general AV retailers (B&H/Sweetwater/Markertek/Crutchfield do not carry it), so no secondary retailer spec table exists. Datasheet lists connector types (HDMI, DisplayPort, 3.5mm audio, RJ45, USB, RS-232, DC-IN) but does NOT state exact per-port counts for HDMI/DisplayPort (industry convention for this single-output media-player class is 1x each, assumed here) nor HDMI/DisplayPort version numbers, so no 'grade' was set on those two ports (would be a guess). Audio is also embedded over HDMI per the datasheet but that isn't a separate physical port. USB is specified only as an aggregate count (4x USB 2.0 + 2x USB 3.2) with no per-port labels or connector sub-type beyond \"USB\" — front-panel product photo confirms 2 Type-A ports (blue = USB 3.x) plus 3.5mm mic and headphone jacks, but a rear-panel photo (where HDMI/DisplayPort/Ethernet/RS-232/power would be) is not included in the datasheet, so exact port placement/labeling could not be visually confirmed. Ethernet grade eth-1g is confirmed explicit (\"10/100/1000Base-T\"). Dimensions 189.6 x 148.3 x 26 mm — small desktop/behind-screen mount unit, not rack-mountable (rackUnits omitted). Optional internal M.2 Wi-Fi card is not a physical port and was omitted. Model variants exist (NTB-4K-10-S, -S-W, -0, -0-W; also a distinct NTB-4K-10F fanned variant with its own datasheet) — this entry covers the base NTB-4K-10 hardware I/O common to all license variants.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Datasheet lists 4x USB 2.0 total (Type-A) across the unit"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Datasheet lists 2x USB 3.2 (Type-A); USB 3.2 Gen1 = 5Gbps assumed, generation not specified"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "DC-IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 19V/2.37A DC power supply"
+    }
+  ]
+}

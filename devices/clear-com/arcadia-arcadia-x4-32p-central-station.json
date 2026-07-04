@@ -1,0 +1,180 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "Arcadia ARCADIA-X4-32P Central Station",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://clearcom.com/DownloadCenter/datasheets/Arcadia/Arcadia_Central_Station_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer datasheet (clearcom.com) used as authoritative source, cross-checked against Markertek's spec table. ARCADIA-X4-32P is the 32-Licensed-Port variant with 4-pin XLR-M headset jack (the X5 variant uses a 5-pin XLR-F instead). Port-count/type mappings that needed a \"closest match\" against the allowed connector-id list: (1) the front-panel Headset jack is a 4-pin XLR-M for audio+mic, not DC power - mapped to xlr4-dc only because that is the sole 4-pin XLR id available; (2) the two rear GPIO connectors are DB9F (D-sub 9-pin, not RS-232 serial) - mapped to rs232 as the closest D-sub id available, each carries 1 optically-isolated GPI + 2 relay GPO per connector (2 GPI / 4 GPO total across both); (3) the DC power inlet uses a locking KPJX-4S-S connector (12V DC, 12A max) which is closer to a 4-pin locking DC connector than a barrel jack - mapped to dc-barrel as closest available id. The \"Program Audio In / Stage Announce Out\" (XLR-3F in / XLR-3M out) is NOT a separate chassis jack - it is accessed by breaking out RJ45 4-Wire port #8 using the included CAB-RJ45-PGM-SA cable, so it was not added as a distinct physical port. LAN RJ45/SFP and FreeSpeak E1 RJ45/SFP ports carry no manufacturer-stated Ethernet speed grade for the device's own interface (only \"recommended switch\" guidance of 100/1000 Base-T was given, which describes external switches, not confirmed Arcadia port speed), so grade was omitted per instructions. USB-A port version/speed is not stated in the datasheet, so grade omitted. Unit ships with an external 12V/12.5A PSU (PSU-EXT-001, IEC-C14 input) as an alternative to using the internal AC supply directly - the AC IEC-C14 inlet listed is the unit's own primary power input.",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR-M mic/headset jack (Arcadia-X4 variant); not a DC power connector - closest available connector id to a 4-pin XLR"
+    },
+    {
+      "name": "USB A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel USB-A host port; version/speed not stated in datasheet"
+    },
+    {
+      "name": "2-Wire A",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog 2-wire partyline I/O, 560mA optional power per pair"
+    },
+    {
+      "name": "2-Wire B",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog 2-wire partyline I/O, 560mA optional power per pair"
+    },
+    {
+      "name": "2-Wire C",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog 2-wire partyline I/O, 560mA optional power per pair"
+    },
+    {
+      "name": "2-Wire D",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Analog 2-wire partyline I/O, 560mA optional power per pair"
+    },
+    {
+      "name": "4-Wire 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Transformer-balanced 4-wire line level I/O"
+    },
+    {
+      "name": "4-Wire 8 (PGM/SA)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Also breaks out to Program Audio In / Stage Announce Out via included CAB-RJ45-PGM-SA cable (XLR-3F in, XLR-3M out)"
+    },
+    {
+      "name": "GPIO 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9F connector: 1 optically-isolated GPI + 2 relay GPO on this connector; closest available id to DB9 D-sub, not an RS-232 serial port"
+    },
+    {
+      "name": "GPIO 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9F connector: 1 optically-isolated GPI + 2 relay GPO on this connector; closest available id to DB9 D-sub, not an RS-232 serial port"
+    },
+    {
+      "name": "E1 DECT SYNC IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "FreeSpeak II E1 DECT synchronization input"
+    },
+    {
+      "name": "E1 DECT SYNC OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "FreeSpeak II E1 DECT synchronization output"
+    },
+    {
+      "name": "SPL/TCVR 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "FreeSpeak II E1 transceiver/splitter port, RJ45/SFP switchable (2 active max)"
+    },
+    {
+      "name": "SPL/TCVR 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "FreeSpeak II E1 transceiver/splitter port, RJ45/SFP switchable (2 active max)"
+    },
+    {
+      "name": "E1 SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "FreeSpeak II E1 fiber SFP slot, alternative to SPL/TCVR RJ45 (2 active max between RJ45/SFP)"
+    },
+    {
+      "name": "E1 SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "FreeSpeak II E1 fiber SFP slot, alternative to SPL/TCVR RJ45 (2 active max between RJ45/SFP)"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Function-assignable LAN port (management, AES67/AoIP, or Dante); speed not stated in datasheet"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Function-assignable LAN port (management, AES67/AoIP, or Dante); speed not stated in datasheet"
+    },
+    {
+      "name": "LAN 3 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Function-assignable LAN SFP port (management, AES67/AoIP, or Dante); speed not stated in datasheet"
+    },
+    {
+      "name": "LAN 4 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Function-assignable LAN SFP port (management, AES67/AoIP, or Dante); speed not stated in datasheet"
+    },
+    {
+      "name": "Power Input - AC",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-C14 inlet, 100-240V AC 50-60Hz, 160W max"
+    },
+    {
+      "name": "Power Input - DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "KPJX-4S-S locking 4-pin DC connector, 12V DC +/-5%, 12A max; closest available connector id"
+    }
+  ]
+}

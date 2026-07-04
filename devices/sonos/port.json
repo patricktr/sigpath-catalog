@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Sonos",
+  "model": "Port",
+  "category": "audio",
+  "type": "Media player",
+  "sourceUrl": "https://sonoscenter.ru/upload/medialibrary/876/avrwrwg9y0ckabvdy8fvc6mvnoz4wt56/Sonos_Port_Manual_en.pdf",
+  "confidence": "high",
+  "notes": "Desktop/shelf unit; not natively rack-mountable (official guide: \"fits...in any electronics rack using a third-party shelf... 3 units across a standard rack, 1U of vertical space\") so rackUnits omitted. Power: external auto-switching AC-DC adapter (100-240V AC in, output 12.0VDC/1.0A/12.0W) feeding a DC barrel-style input on the unit — modeled as dc-barrel; no grade applies (power, not signal). \"Digital audio out\" is an S/PDIF coaxial output physically using an RCA-style plug (no dedicated S/PDIF-coax id in the allowed connector list), so it is represented with connector \"rca\" alongside the analog RCA in/out — do not confuse the three RCA-type jacks. \"Analog audio in\" and \"Analog audio out\" are each a stereo pair (L/R) sharing one RCA jack pair per direction; modeled as one input port and one output port. 12V trigger is a control output using a 3.5mm mono/stereo mini-jack (manual: \"Use a stereo or 3.5 mm to 3.5 mm cable\"), mapped to trs-3.5 with no grade (control voltage, not audio). Two Ethernet ports are both 10/100 Mbps (eth-100m) switch/bridge ports for daisy-chaining, not WAN/LAN distinct roles. No USB port exists on this device. Source: official Sonos Port User Guide PDF (rear \"Connector panel\" diagram + full Specifications table), cross-checked against Sonos official Fact Sheet PDF and Sonos support pages — all agree on port set (2x Ethernet, RCA in, RCA out, digital coax out, 12V trigger, AC power via included external supply).",
+  "ports": [
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo analog line-in (L/R RCA pair), auto-detecting"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog line-out (L/R RCA pair)"
+    },
+    {
+      "name": "Digital Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "S/PDIF digital coaxial output on an RCA-style jack"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "12V Trigger",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Control-voltage trigger output to wake a connected amplifier; 200mA rated"
+    },
+    {
+      "name": "AC Power (mains) Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC input from included external auto-switching power supply (100-240VAC in / 12.0VDC 1.0A 12.0W out); unit itself accepts DC, not mains"
+    }
+  ]
+}

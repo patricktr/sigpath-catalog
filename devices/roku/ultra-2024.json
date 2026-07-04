@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Roku",
+  "model": "Ultra (2024)",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.roku.com/products/players/roku-ultra",
+  "confidence": "high",
+  "notes": "Desktop/set-top streaming puck; no rack units apply. Model is the 2024 Roku Ultra (streaming player, SKU 4850X); a \"Roku Ultra LT\" variant exists with lesser specs but is a separate product. Single HDMI 2.1b output carries video + digital audio (Dolby Atmos decode, DTS pass-through) — there is no separate optical/analog audio output or microSD slot on this generation. USB is USB-A 3.0 (SuperSpeed, 5 Gbps) used for local media playback, functionally host-only in practice but the connector is bidirectional-capable so classified as such per the USB-A convention. Power is a proprietary/generic 12V DC barrel adapter (not USB-C PD) confirmed by both the manufacturer spec page and third-party replacement-adapter listings. Wi-Fi 6 (802.11ax) is also present but omitted here as it is not a physical port.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 port for local media playback"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Base-T"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12V/1.5A power adapter"
+    }
+  ]
+}

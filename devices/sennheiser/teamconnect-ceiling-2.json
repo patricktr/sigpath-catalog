@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "TeamConnect Ceiling 2",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.sennheiser.com/globalassets/digizuite/41893-en-teamconnect_ceiling_2_manual_02_2022_en.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source is Sennheiser's own instruction manual (matches the manufacturer product-page downloads at sennheiser.com; a redirect chain made the sennheiser.com asset URL itself return 403 to automated fetch, so the identical PDF was retrieved via a manufacturer-authorized reseller mirror at dekom.com — content, part numbers, and publication date match the Sennheiser original). The manual internally refers to the product as \"SL Ceiling Mic 2\" in several section headers (an OEM/internal alias) but the cover page, spec table, and all Sennheiser retail listings confirm this is the TeamConnect Ceiling 2. No rack-mount ears; it is a 590x590x43mm ceiling tile-format array, so rackUnits is omitted. The two Dante RJ-45 ports (Primary/Secondary) support redundant or daisy-chain (switched) mode; exact Ethernet speed (100M vs 1G) is not stated in the spec sheet, so no bandwidth grade was assigned to any RJ45 port per the omit-if-unstated rule. The analog output is a 3-pin terminal block (Phoenix Contact MCVW 1.5-3-ST-3.81 pluggable connector), modeled as euroblock with a note since the connector list also has \"euroblock-dc\" but this is a signal (audio) output, not DC power, so plain \"euroblock\" was chosen. Power arrives solely via the Ethernet PoE/Ctrl RJ-45 port (PoE IEEE 802.3af Class 3, max 8.8 W); there is no separate mains power inlet on the device.",
+  "ports": [
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante digital audio output, RJ-45. Supports redundant or switched (daisy-chain) mode with Secondary port."
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dante digital audio output, RJ-45. Used for redundant Dante network or series/daisy-chain connection with other units."
+    },
+    {
+      "name": "Analog Out (+/-)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin terminal block, suitable for Phoenix Contact MCVW 1.5-3-ST-3.81 pluggable connector. Balanced analog audio output."
+    },
+    {
+      "name": "Ethernet PoE/Ctrl",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single RJ-45 socket used for both PoE power (IEEE 802.3af Class 3, max 8.8 W) and network configuration/control via Sennheiser Control Cockpit. This is the device's sole power input — no separate power inlet exists."
+    }
+  ]
+}

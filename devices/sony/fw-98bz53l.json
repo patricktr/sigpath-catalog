@@ -1,0 +1,96 @@
+{
+  "manufacturer": "Sony",
+  "model": "FW-98BZ53L",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.manualslib.com/manual/3493664/Sony-Fw-98bz53l.html",
+  "confidence": "medium",
+  "notes": "Primary source is the Sony FW-98BZ53L Reference Manual as hosted on ManualsLib (manual pages 6-9 for terminal/connection diagrams, pages 18-19 for specifications table); Sony's own pro.sony product/spec pages and B&H returned HTTP 403 to automated fetch, so the official first-party page could not be scraped directly, though B&H, CDW, and other retailer listings (confirmed via web search) corroborate 4x HDMI, 2x USB, RS-232, and LAN counts. Notes/caveats: (1) Wi-Fi (802.11a/b/g/n/ac) and Bluetooth 4.2 are present but omitted as they are not physical wired ports. (2) HDMI version is not explicitly stated as \"2.0\" in the manual - only HDCP 2.3 support and max resolution/refresh (4096x2160@60Hz, 3840x2160@120Hz) are given; hdmi-2.0 grade is inferred from those specs and is the closest standard match (true 4K120 4:4:4 would need 2.1, but Sony does not state 2.1/48Gbps support, so treat this grade as inferred, not confirmed). (3) The RS-232 terminal is physically labeled \"REMOTE\" on the unit and functions as RS-232C serial (RX/TX/GND) - modeled here as connector type rs232 though the actual physical connector on this Sony display panel is a mini-jack style connector rather than a DE-9/DB9; closest available connector id chosen per instructions. (4) AC power: manual states hardwired AC plug operating on 110-240V AC (120V AC/60Hz in US/Canada) with no separate IEC inlet - modeled as nema-5-15 to represent the captive US-style AC cord; other regions would use a different captive plug. (5) \"AV IN\" and \"S-CENTER OUT\" share a hybrid breakout jack per one retailer summary; exact physical connector (single combined mini-jack vs. separate jacks) could not be fully confirmed from accessible manual pages. (6) Rated power consumption figures vary slightly across sources (342W vs 505W); manual page 19 stated 505W operating / <0.5W standby, used here for AC IN note context though not included as a port attribute. (7) IR receiver/IR-blaster-specific terminal was not confirmed as a separate physical port - remote control appears to use the built-in IR receiver on the bezel, not a dedicated \"IR IN\" jack, distinct from \"REMOTE\" (RS-232C).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3 (eARC/ARC)",
+      "direction": "bidirectional",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 4 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack analog audio companion input for HDMI IN 4 when used with a DVI-HDMI adapter"
+    },
+    {
+      "name": "AV IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Composite video + stereo audio via breakout mini-jack (hybrid with S-Center speaker input)"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT (OPTICAL)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S-CENTER OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Speaker/center-channel output terminal for audio-system integration; hybrid jack shared with AV IN"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "500 mA output"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "900 mA output"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX"
+    },
+    {
+      "name": "REMOTE (RS-232C)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control terminal, labeled REMOTE on the panel; RX/TX/GND"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive/hardwired AC power cord; rated 110-240V AC (120V AC 60Hz for US/Canada)"
+    }
+  ]
+}

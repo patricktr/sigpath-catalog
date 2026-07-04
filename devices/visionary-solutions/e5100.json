@@ -1,0 +1,51 @@
+{
+  "manufacturer": "Visionary Solutions",
+  "model": "E5100",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://visionary-av.com/wp-content/uploads/2024/10/VISIONARY-ED5100-SpecSheet-241016.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the manufacturer's official combined spec sheet for the E5100 (Encoder) / D5100 (Decoder) pair (VISIONARY-ED5100-SpecSheet-241016.pdf), which is the newest and most complete version found (dated 2024-10-16; an older 2023-08-15 version exists with the same port set). This record covers only the E5100 encoder half of the shared datasheet, not the D5100 decoder. The unit has no separate DC/AC power jack — it is powered exclusively via PoE (802.3af/at) on its single RJ-45 LAN port, so that port is listed as the power input as well as network. The two 8-pin Euroblock terminal blocks are labeled on the physical unit (per the datasheet's port diagram) with combined legends \"PWR LINK / RS-232 / AUDIO INPUT / USB\"; \"PWR\" and \"LINK\" there denote status LEDs, not a power connector — confirmed against the connector table, which defines the two Euroblocks purely as RS-232+GPIO-out and audio-input+GPIO-in. HDMI is explicitly stated as \"HDMI 2.0 and HDCP 2.2, 2.3 Compliant\" in the features section, supporting the hdmi-2.0 grade (note: 4K60 4:4:4 8-bit uncompressed would technically require >18Gbps bandwidth beyond strict HDMI 2.0 spec, but the datasheet's own compliance statement says HDMI 2.0, so that is used here rather than inferring 2.1). No rack-mount ears/rack units are specified — this is a small desktop/surface-mount enclosure (5.75 x 5.37 x 1.15 in), so rackUnits is omitted. Category set to \"converter\" and type to \"Encoder/Decoder\" (closest fit in the given type list would otherwise be \"Other\"; used the descriptive term since the product line is explicitly an AV-over-IP encoder). No fan, PoE-only power, single Ethernet port carries video/audio/USB/RS-232/GPIO/control simultaneously.",
+  "ports": [
+    {
+      "name": "LAN/POE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "8-pin RJ-45, female; 100BASE-TX/1000BASE-T; also PoE powered-device (PD) input per IEEE 802.3af/802.3at — this is the unit's only power input, carrying AV stream, control, and PoE power"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A, female; HDCP 2.2/2.3 compliant; accepts up to 4K60 4:4:4"
+    },
+    {
+      "name": "HDMI LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI Type A, female; local loop-through output of the input signal, up to 4K60 4:4:4"
+    },
+    {
+      "name": "RS-232 / GPIO OUT",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "1st 8-pin Euroblock 3.81mm pitch terminal block; carries RS-232 bi-directional serial and GPIO output for third-party device control"
+    },
+    {
+      "name": "AUDIO INPUT / GPIO IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2nd 8-pin Euroblock 3.81mm pitch terminal block; carries balanced stereo analog audio input plus GPIO input"
+    },
+    {
+      "name": "USB (Device)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Type-B, female; USB 2.0 device port for connecting to a computer/host, extended over IP"
+    }
+  ]
+}

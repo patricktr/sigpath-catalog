@@ -1,0 +1,76 @@
+{
+  "manufacturer": "Powersoft",
+  "model": "X4L",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.powersoft.com/wp-content/uploads/2019/03/powersoft_X4L_DS_EN_WEB.pdf",
+  "confidence": "medium",
+  "notes": "Powersoft's own website (powersoft.com) is currently serving a temporary \"site under renewal\" placeholder for all product and datasheet URLs, including the canonical X4L datasheet PDF (powersoft_X4L_DS_EN_WEB.pdf) and the X Series User Guide — attempts to fetch them (including with a browser user-agent) returned the placeholder page, not the real document. sourceUrl above is the correct canonical Powersoft datasheet URL, but it was not retrievable live at research time; findings are instead corroborated via (1) Powersoft's own official X4 datasheet PDF (same document family, DO000170.01, successfully fetched and read in full — the X4L is the higher-power/3-phase-PSU sibling sharing the identical rear-panel connector layout and channel counts) and (2) multiple secondary sources (B&H, Full Compass, Bekafun, Kinovox, ManualsLib X4/X Series manuals, and search-indexed snippets of the actual Powersoft X4L datasheet/user guide) that consistently report: 4x XLR analog in, 2x XLR AES3 in (4 AES3 channels), 2x RJ45 Dante/etherCON (primary+secondary redundant), 2x Neutrik NL4MD speakON outputs (one per bridgeable channel pair), and a 5-pin Phoenix/Euroblock AC mains inlet (single/bi/three-phase 85-460VAC, no voltage selector). Ethernet grade (eth-1g) is inferred from \"Gigabit Ethernet\" support text, not an explicit port-label spec. Did not find any dedicated GPIO/logic/remote connector on the X4/X4L rear panel besides the AC-integrated remote-on/off sensing — could not fully confirm absence. AES3 outputs (as opposed to inputs) were not confirmed to exist as separate physical ports; the 2 AES3 XLR connectors appear to be inputs only (selectable/backup source), consistent across all sources. Power output figures (4x8200W@2ohm / 4x6800W@4ohm / 4x4800W@8ohm), 2U rack, 495mm depth, 24kg weight for the X4L were confirmed via search-indexed content matching the real Powersoft X4L spec sheet. Given the primary source could not be live-verified end-to-end, confidence is set to medium.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 In 1/2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Carries AES3 digital channels 1 and 2"
+    },
+    {
+      "name": "AES3 In 3/4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Carries AES3 digital channels 3 and 4"
+    },
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON, primary Dante/Ethernet network port"
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON, redundant secondary Dante network port"
+    },
+    {
+      "name": "Output 1/2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4MD speakON, channels 1 and 2 (bridgeable per pair)"
+    },
+    {
+      "name": "Output 3/4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik NL4MD speakON, channels 3 and 4 (bridgeable per pair)"
+    },
+    {
+      "name": "AC Mains",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pin Phoenix/Euroblock (PC 5/5-STF-7.62), L1/L2/L3/N/PE — supports single-phase, bi-phase, or three-phase 85-460 VAC"
+    }
+  ]
+}

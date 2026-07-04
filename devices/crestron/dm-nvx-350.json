@@ -1,0 +1,106 @@
+{
+  "manufacturer": "Crestron",
+  "model": "DM-NVX-350",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.crestron.com/getmedia/7d1f5634-7cb4-4952-94e8-b15a02057172/ss_DM-NVX-350",
+  "confidence": "high",
+  "notes": "Primary source: official Crestron spec sheet PDF (ss_DM-NVX-350, Rev 09/20/22), Connectors section on page 6, cross-checked against docs.crestron.com specifications and installation pages. This is a compact desktop/surface-mount unit (8.61 x 9.27 x 1.50 in), not rack-mountable as a standalone RU (can optionally attach to a single rack rail via accessory), so rackUnits omitted. HDMI grade set to hdmi-2.0 as an inference: Crestron specifies an 18 Gbps TMDS bandwidth requirement for full 4K60 4:4:4/HDR10 performance, which corresponds to HDMI 2.0 signaling; the spec sheet does not explicitly state \"HDMI 2.0\" by version number. Ethernet grade eth-1g is explicit (1000BASE-T). USB ports are explicitly USB 2.0. The COM port and Console-Serial port are both RS-232 but on different physical connectors (COM = 5-pin terminal block, bidirectional device control; Console-Serial = RJ-45, setup-only console) - modeled as separate ports. Device can be field-configured as either an encoder (Tx) or decoder (Rx); the physical ports are identical either way. A chassis ground lug (6-32 screw, labeled \"G\") exists but was omitted as it is not a signal/power connector in the requested taxonomy.",
+  "ports": [
+    {
+      "name": "HDMI Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "18 Gbps TMDS required for 4K60 4:4:4/HDR10; DVI and Dual-Mode DisplayPort compatible via adapter"
+    },
+    {
+      "name": "HDMI Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "18 Gbps TMDS required for 4K60 4:4:4/HDR10; DVI and Dual-Mode DisplayPort compatible via adapter"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "18 Gbps TMDS required for 4K60 4:4:4/HDR10; DVI compatible via adapter"
+    },
+    {
+      "name": "Audio I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm detachable terminal block; balanced/unbalanced stereo line-level audio, configurable as input OR output, not both"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T; PoE++ or UPOE powered-device input (IEEE 802.3bt Type 3 Class 5, 60W/4-pair)"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100BASE-TX/1000BASE-T"
+    },
+    {
+      "name": "Ethernet 3",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage; accepts Crestron SFP-1G Series transceiver module (sold separately) for fiber connectivity"
+    },
+    {
+      "name": "USB Device",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 device port for USB signal extension to a host computer"
+    },
+    {
+      "name": "USB Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port for mouse/keyboard/peripheral extension; 500mA @ 5VDC available"
+    },
+    {
+      "name": "Console, Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "8-pin RJ-45 RS-232 computer console port, used for device setup only, not general control"
+    },
+    {
+      "name": "Console, USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 computer console port, used for device setup only"
+    },
+    {
+      "name": "IR 1-2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin 3.5mm detachable terminal block comprising two IR / 1-way serial (TTL/RS-232 0-5V) ports for device control"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "5-pin 3.5mm detachable terminal block; bidirectional RS-232 device control up to 115.2k baud"
+    },
+    {
+      "name": "24VDC 2.0A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm DC power input; 24VDC; included PW-2420RU universal power pack (100-240VAC). Alternatively powered via PoE++/UPOE on Ethernet 1."
+    }
+  ]
+}

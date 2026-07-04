@@ -1,0 +1,131 @@
+{
+  "manufacturer": "IOGEAR",
+  "model": "GCS1934H",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://iogear.com/products/gcs1934h",
+  "confidence": "high",
+  "notes": "Desktop unit, not rack-mountable (rackUnits set to 0/omitted in practice). HDMI is confirmed HDMI 2.0 (4096x2160@60Hz, HDCP 2.2, HDR) on both console output and all 4 computer inputs. USB hub ports and computer-side USB Type-B ports are USB 3.1 Gen 1 (5Gbps, mapped to usb-5g); keyboard/mouse console ports are USB 2.0 Type-A. RS-232 control uses an RJ-11 jack (closest available connector id is 'rs232'; physically it is RJ-11, not DB9 — noted as caveat). Audio: console side has 2x 3.5mm \"Speaker Audio Jack\" (labeled output-direction, green) and computer side has 4x 3.5mm \"Audio Jack\" (one per PC, feeding into the switch as input) — manufacturer material does not explicitly document microphone/bidirectional capability on these jacks, so they are modeled as speaker-out (console) and audio-in (per-PC) only; no grade applies to analog audio or RS-232/power connectors per spec rules. Power is an external DC 5V adapter via barrel jack (2.535W consumption). Sources: manufacturer product page https://iogear.com/products/gcs1934h and support page https://support.iogear.com/product/GCS1934H (specs identical/consistent across both).",
+  "ports": [
+    {
+      "name": "Console HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "CPU 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "CPU 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "CPU 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "CPU 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Keyboard",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Mouse",
+      "direction": "input",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.0 Hub (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 Hub (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "PC 1 USB",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "PC 2 USB",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "PC 3 USB",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "PC 4 USB",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Speaker Out 1",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Speaker Out 2",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PC 1 Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PC 2 Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PC 3 Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PC 4 Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "RJ-11 connector carrying RS-232 signaling, not a wired DB9"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter, 5V DC / 2.535W"
+    }
+  ]
+}

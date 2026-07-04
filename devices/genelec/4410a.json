@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Genelec",
+  "model": "4410A",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.genelec.com/4410a",
+  "confidence": "high",
+  "notes": "Smart IP active install loudspeaker: single RJ45 carries AES67/Dante audio-over-IP input AND power simultaneously (no separate power inlet exists). Powered via PoE+ (IEEE 802.3at, 30W recommended) or PoE (802.3af, 15W, reduces sustained max output duration). Grade omitted on the RJ45 port because the spec describes it by PoE class and AES67/Dante audio streaming (32-96kHz, 16-24 bit), not by Ethernet link speed (100M/1G/etc.) — link speed is not stated on the manufacturer page. Available in black (4410AB) or white (4410AW) finishes; port configuration identical across variants. Desktop/surface-mount install speaker, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single RJ45 accepts AES67/ST2110 and Dante audio-over-IP input (32-96kHz, 16-24 bit) and simultaneously delivers PoE/PoE+ power to the speaker; no separate power inlet."
+    }
+  ]
+}

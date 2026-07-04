@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "PT-VMZ71U7",
+  "category": "source",
+  "sourceUrl": "https://www.ggvideo.com/pan/ptvmz71_specs.pdf",
+  "confidence": "high",
+  "notes": "PT-VMZ71U7 is the North American (NTSC-region) SKU of the PT-VMZ71 series 3LCD laser projector, bundled with a standard zoom lens. Terminal panel and specs confirmed from Panasonic's official Spec File (VMZ71G_STR_01, dated Jan 2022, docs.connect.panasonic.com) which documents the PT-VMZ71 core model; the U7 regional variant shares identical electronics/terminal panel (differs only in included lens/power cord region and cosmetic color per Panasonic's documentation conventions). Power inlet is labeled \"AC IN ~\" on the rear panel next to SERIAL IN; it takes a detachable IEC power cord (2 supplied for Europe/Asia models, 1 for other regions), consistent with a standard IEC C13/C14-style inlet — exact IEC pin/current rating (C13 vs C19) not explicitly printed in the spec sheet, so classified as \"iec\" (C13/C14 class) based on the 420W/100-240V rating, which is well within C13 range. There are two separate RJ-45 ports: one labeled simply \"LAN\" (network control only, 10Base-T/100Base-TX) and one labeled \"LAN/DIGITAL LINK\" (HDBaseT-compliant, carries video signal + network + RS-232 control, supports HDCP 1.4/Deep Color/4K@30p). Both are graded eth-100m per their stated 10/100Base-TX spec (no gigabit support stated). HDMI inputs support 4K/30p and HDCP 1.4/Deep Color — graded hdmi-1.4 (does not meet HDMI 2.0 bandwidth/features). USB port is Type-A, used for Memory Viewer/optional wireless module/5V-2A DC power-out — functions as a host port (bidirectional data + power out), but spec sheet gives no USB signaling speed (likely USB 2.0 class); grade omitted since no explicit spec was stated (could reasonably be inferred as usb-2.0 for a Type-A projector viewer port, but left blank per \"omit whenever the spec does not state a version/speed\"). Desktop/ceiling-mount unit, no rack ears — rackUnits omitted. Weight 7.0 kg (15.4 lb).",
+  "ports": [
+    {
+      "name": "HDMI 1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 19-pin, HDCP 1.4, Deep Color, 4K/30p signal input, CEC supported"
+    },
+    {
+      "name": "HDMI 2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 19-pin, HDCP 1.4, Deep Color, 4K/30p signal input, CEC supported"
+    },
+    {
+      "name": "COMPUTER 1 IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "D-sub 15-pin female, RGB/YPbPr/YCbCr analog"
+    },
+    {
+      "name": "COMPUTER 2 IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "D-sub 15-pin female, RGB/YPbPr/YCbCr analog"
+    },
+    {
+      "name": "AUDIO 1 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini-jack"
+    },
+    {
+      "name": "AUDIO 2 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini-jack"
+    },
+    {
+      "name": "VARIABLE AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini-jack, variable level output"
+    },
+    {
+      "name": "SERIAL IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female, RS-232C compliant, for computer control"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Network control only, 10Base-T/100Base-TX, PJLink Class 2"
+    },
+    {
+      "name": "LAN/DIGITAL LINK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "HDBaseT-compliant DIGITAL LINK: carries video, network, and RS-232 control over one cable; 100Base-TX; HDCP 1.4, Deep Color, 4K/30p signal input"
+    },
+    {
+      "name": "USB (VIEWER/WIRELESS/DC OUT)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Type-A host port for Memory Viewer function, optional AJ-WM50 wireless module, and DC 5V/2A power output; USB signaling speed not stated in spec sheet"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC AC power cord inlet; AC 100-240V 50/60Hz, max 420W (100-120V)/410W (200-240V); labeled \"AC IN ~\" on rear panel"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Bose Professional",
+  "model": "EdgeMax EM90",
+  "category": "audio",
+  "sourceUrl": "https://assets.bose.com/content/dam/Bose_DAM/Web/pro/global/products/loudspeakers/EdgemaxEM90/Downloads/Technical_data_sheet/tds_EdgeMax_EM90_PG_v5.pdf",
+  "confidence": "high",
+  "notes": "Passive in-ceiling directional loudspeaker (8-inch woofer + compression driver, PhaseGuide technology), not an active/powered electronic device — it has no AC or DC power inlet. Signal and power both arrive via the single 6-pin Euroblock (pluggable screw-terminal) connector on the front baffle, which the manufacturer's Technical Data Sheet (11/2024, BoseProfessional.com) describes as a \"6-pin Euroblock connector with loop-through.\" The 6 pins provide the speaker-line input plus a loop-through pass-to-next-speaker path for daisy-chaining multiple EM90 units off one amplifier line (typical pinout: input +/-, loop-through +/-, plus additional taps) — the datasheet does not break the 6 pins into individually labeled sub-ports, so this is modeled as one bidirectional Euroblock terminal block port representing that connector. Internally the unit has a passive 2-way crossover at 1 kHz with an integrated, bypassable 70/100V transformer (taps: 70V = 2.5/5/10/20/40/80 W + bypass; 100V = 5/10/20/40/80 W + bypass); nominal impedance 8 ohms with transformer bypassed. No grade applies (analog speaker-level signal, not a graded digital interface). Desktop/ceiling-mount form factor — not rack-mountable, so rackUnits is omitted. Related SKUs (EM90-LP low-profile, EM180 wide-coverage) share the same connector approach but were not the subject of this lookup.",
+  "ports": [
+    {
+      "name": "Loudspeaker Input/Loop-through",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-pin pluggable Euroblock screw-terminal block, front-baffle mounted; accepts 18-14 AWG wire; carries speaker-level signal into the integrated 70/100V transformer/crossover and loops through to daisy-chain additional EdgeMax units on the same line. No separate AC/DC power inlet exists on this passive loudspeaker."
+    }
+  ]
+}

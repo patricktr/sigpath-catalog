@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Astrodesign",
+  "model": "CT-1860 / PM-1860-H1",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.astrodesign.co.jp/astro_updata/Catalog/VG/CT-1860-3.pdf",
+  "confidence": "medium",
+  "notes": "The CT-1860 is a bench cable-tester/measurement instrument, not a signal-routing AV device, so it doesn't map cleanly to the given category/type enums (used \"other\"/\"Other\"). It ships as two parts: the CT-1860 tester chassis (rear panel: AC In, LAN, USB, TRIGGER) and the PM-1860-H1 \"HDMI Response/Frequency Characteristic Module\" (also referred to as CT-1860-HDMI), which mounts into the front bay and carries the actual HDMI In/Out loop-test connectors — the CT-1860 body \"does not operate alone\" without a performance module (per manufacturer catalog). HDMI In/Out ports and grade were confirmed from the manufacturer's official catalog PDF (100MHz-15GHz bandwidth, \"HDMI2.1 FRL 48Gbps can be tested\") plus a zoomed-in crop of the manufacturer's own product photo showing \"HDMI [Frequency] CHECKER / In — Out\" labels; grade hdmi-2.1 is inferred from FRL 48Gbps support (not an explicit \"HDMI 2.1\" version claim). USB connector type on the rear panel is inferred as USB-B from the product photo (icon/shape), not textually specified. TRIGGER and AC-inlet exact connector shapes (BNC, IEC) are inferred from a low-resolution photo, not confirmed in written specs — treat as low-confidence for those two. Also visible on the module front panel: a \"POWER SUPPLY DC +12V 0.5A\" section with two USB-A-shaped receptacles that appear to be +5V line voltage/current measurement test taps (per spec: \"measurement of voltage and current consumption value of the +5V line\"), not general-purpose USB data ports — omitted from the port list since their function/connector role is ambiguous from available material. No rack-mount ears/rack-unit spec found; unit is a 210(W)x88(H)x235(D)mm desktop chassis. A separate PM-1860-H1 DC adapter (12V) exists for standalone module operation but is not part of the CT-1860 unit's own I/O when mounted.",
+  "ports": [
+    {
+      "name": "In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "HDMI Type-A loop-test input on the PM-1860-H1 module front panel (labeled 'HDMI CHECKER / In / Out'); measures TMDS/FRL transmission characteristics of the cable under test looped between In and Out. Module supports up to 48Gbps FRL / 15GHz bandwidth (HDMI2.1 class)."
+    },
+    {
+      "name": "Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "HDMI Type-A loop-test output on the PM-1860-H1 module front panel, paired with 'In' to loop the cable under test."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Rear panel; used for control/operation via the SP-1860 PC application. Speed grade not stated in the datasheet."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Rear panel port on CT-1860 chassis; per datasheet this is the PM-1860-H1 module's own USB control port, only usable when the module is operated standalone (disabled while mounted in the CT-1860). Exact USB revision not stated."
+    },
+    {
+      "name": "TRIGGER",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Rear panel external trigger input; connector shape inferred as BNC (typical for test-equipment trigger I/O) from a low-resolution product photo — not explicitly confirmed in text specs."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "CT-1860 main chassis power inlet, AC 100-240V 50/60Hz, 47W max. Rear-panel recessed inlet consistent with IEC C13/C14; exact IEC variant not textually confirmed, inferred from product photo."
+    }
+  ]
+}

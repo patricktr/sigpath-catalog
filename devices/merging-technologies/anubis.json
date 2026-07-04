@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Merging Technologies",
+  "model": "Anubis",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.merging.com/uploads/assets/Merging_pdfs/Brochures/Neumann/Technical_Sheet_Merging_Anubis_and_Missions_V1.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Merging Technologies' official Technical Sheet PDF (merging.com), cross-checked against the manufacturer product page (now redirecting to Neumann, which acquired Merging) and the SoundOnSound review. Rear panel: Mic/Line In 1-2 are combo XLR/TRS jacks; Main Out 1-2 are XLR; Line Out 3-4 are TRS; GPI/MIDI and GPO/MIDI are 1/4\" TRS; two RJ45 network ports (locking EtherCON-compatible) carry RAVENNA/AES67 (Gigabit Ethernet, 256x256 ch) and/or Dante Ready (64x64 ch, license required) plus PoE+. Front panel: Inst/Hi-Z/Line In 3-4 are combo TRS jacks; two independent 1/4\" TRS stereo headphone outputs. Power connector is a locking DC barrel jack (2.5mm ID/5.5mm OD); unit can alternatively be powered via PoE+ over either network port (not modeled as a separate port here since it shares the RJ45 jacks). No USB, SDI, HDMI, or word-clock BNC connector is present on this model — Anubis is purely AoIP-networked for digital audio transport. Two hardware variants exist (Pro and Premium, differing only in supported sample rates/DSD - not physical I/O); the \"SPS\" suffix in some listings refers to an internal power supply option, not a connector change. Talkback mic is built-in (no external connector).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Inst/Line In 3",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Inst/Line In 4",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Main Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Main Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "RAVENNA/AES67 Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Locking EtherCON-compatible RJ45; also carries Dante Ready and PoE+"
+    },
+    {
+      "name": "RAVENNA/AES67 Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Locking EtherCON-compatible RJ45; also carries Dante Ready and PoE+"
+    },
+    {
+      "name": "GPI/MIDI In",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "GPO/MIDI Out",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking barrel jack, 2.5mm/5.5mm, 10.2-14.4V DC; also supports PoE+ (IEEE 802.3at) via Ethernet ports as an alternative power source"
+    }
+  ]
+}

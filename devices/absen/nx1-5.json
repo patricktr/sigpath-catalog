@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Absen",
+  "model": "NX1.5",
+  "category": "display",
+  "sourceUrl": "https://www.prase.it/wp-content/uploads/NX-Series-User-Manual-V202402.pdf",
+  "confidence": "medium",
+  "notes": "The NX1.5 is a 1.5mm-pixel-pitch indoor fine-pitch LED video wall cabinet (960x540x43.5mm full cabinet, 10.5kg; a 240x540mm sub-panel variant also exists at 2.7kg), not a traditional single-box AV source/display. It has no HDMI/SDI/DP input of its own — video is fed via a separate LED sending/processing card into a \"sending cabinet,\" and pixel data is then daisy-chained cabinet-to-cabinet over RJ45 CAT5 cable (port labeled \"SIGNAL IN/OUT\" in the official manual's wiring diagram; the same physical port class serves both directions across the chain, so it is modeled here as one bidirectional RJ45 port). Power is 100-240V AC, distributed cabinet-to-cabinet via a 3x1.5mm² cable through ports labeled \"POWER IN\" and \"POWER OUT\" in the manual. The manual's wiring diagram (Absen NX Series Product User Manual, \"4.2 Power cable connection\" / \"4.3 Signal cable connection\", pp.42-43) shows schematic port outlines only, not photographs -- it does not show the actual connector shell shape. Cross-referencing other Absen LED lines (e.g. PL V2 series manual) indicates Absen cabinets typically use circular locking \"aviation\"-style connectors for both power and data links between cabinets, a connector family not present in the given connector id list; RJ45 was used for signal since the manual explicitly and repeatedly names \"RJ45 CAT5 network cable\" as the signal medium, but the POWER IN/OUT ports are approximated with the closest available generic ids (dc-barrel for a captive low-voltage-style daisy link is not accurate either, since it truly carries mains AC/L-N-PE) -- treat the power connector \"connector\" field as a best-effort approximation, not a confirmed physical connector type. No grade applies to the RJ45 signal port because the manual does not state an Ethernet PHY speed -- it is a proprietary LED pixel-data protocol over Cat5 cable, not standard Ethernet networking, so \"grade\" was intentionally omitted. Rack units omitted -- this is a modular tile/panel product, not a rack-mount device. Sourced primarily from the official Absen NX Series Product User Manual (matches the model-specific \"ABSEN NX1.5 USER MANUAL\" on ManualsLib) and the official Absen (usabsen.com) NX-Series specification sheet PDF (V20230306), both first-party Absen documents.",
+  "ports": [
+    {
+      "name": "POWER IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "AC mains input (L/N/PE), 100-240V AC, daisy-chained from previous cabinet or distribution box via 3x1.5mm2 cable. Manual does not show/name the physical connector shell; approximated here."
+    },
+    {
+      "name": "POWER OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "AC mains loop-through output to the next cabinet in the power chain. Same caveat as POWER IN regarding exact connector shell."
+    },
+    {
+      "name": "SIGNAL IN/OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Pixel/control data daisy-chain port using RJ45 CAT5 cable, explicitly named in the manual. Carries a proprietary LED sending-card protocol, not standard Ethernet, so no eth-* grade is stated or applicable."
+    }
+  ]
+}

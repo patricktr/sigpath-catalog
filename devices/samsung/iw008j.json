@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Samsung",
+  "model": "IW008J",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.samsung.com/us/business/support/owners/product/indoor-direct-view-led-cabinet-iw008j/",
+  "confidence": "medium",
+  "notes": "The IW008J is a 0.84mm-pixel-pitch MicroLED direct-view cabinet from Samsung's \"The Wall\" (IWJ) series, sold as an individual tileable cabinet (960x540px, 806.4x453.6x72.2mm, 12.5kg) rather than a standalone device with a rich I/O panel. Samsung's official spec page (used as sourceUrl) lists physical/optical/electrical parameters (pixel pitch, brightness, power consumption, etc.) but does NOT publish a connector/interface table. Port names (DATA IN, DATA OUT, POWER IN, POWER OUT) and general connector families were corroborated from the Samsung IWJ-series installation/user manuals (hosted on ManualsLib): data loop-through requires shielded CAT6/CAT7 (STP/FTP) cable (CAT6 UTP explicitly disallowed) — mapped to \\\"rj45\\\" as the closest listed connector id, though the cabinet's actual mating connector is a ruggedized/keyed variant, not a bare RJ45 jack. Power loop-through is AC 100-240VAC 50/60Hz via a proprietary quick-connect cabinet-to-cabinet connector — mapped to \\\"iec\\\" as the closest listed id since no standard IEC/NEMA connector name was confirmed. No rackUnits (this is a modular video-wall tile, not a rack-mount device). The cabinet itself has no HDMI/DP/USB inputs — actual video signal processing/input happens upstream in the accompanying S-Box (SNOW-1810U) controller/media player, which is a separate product not covered by this record. Could not access a PDF datasheet or manufacturer connector diagram directly (Samsung's displaysolutions.samsung.com detail page redirected; SHI retailer page returned 403); relied on Samsung's owner-support spec page plus ManualsLib-hosted Samsung installation manuals for port names and cable requirements. Treat exact physical connector shape for POWER IN/OUT and DATA IN/OUT as unconfirmed pending direct manual/datasheet access.",
+  "ports": [
+    {
+      "name": "DATA IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Signal loop-through input from previous cabinet or S-Box controller. Manual specifies shielded CAT6/CAT7 (STP/FTP) cabling; CAT6 UTP is explicitly disallowed. Connector housing on the cabinet PCB may be a ruggedized/keyed RJ45-style connector rather than a bare consumer RJ45 jack."
+    },
+    {
+      "name": "DATA OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Signal loop-through output to the next cabinet in the daisy chain. Same CAT6/CAT7 STP/FTP cable requirement as DATA IN."
+    },
+    {
+      "name": "POWER IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC mains input, 100-240VAC 50/60Hz. The cabinet uses a ruggedized quick-connect AC connector for cabinet-to-cabinet daisy-chaining rather than a standard IEC C13/C14 inlet; IEC is the closest listed connector id for this AC mains port. Exact proprietary connector part/shape not published in available documentation."
+    },
+    {
+      "name": "POWER OUT",
+      "direction": "output",
+      "connector": "iec",
+      "note": "AC power loop-through to the next cabinet in the chain, same 100-240VAC 50/60Hz rating. Same proprietary-connector caveat as POWER IN."
+    }
+  ]
+}

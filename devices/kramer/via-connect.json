@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VIA Connect²",
+  "category": "control",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.fullcompass.com/common/files/61274-VIAConncet2SpecSheet.pdf",
+  "confidence": "high",
+  "notes": "Category/type are approximations — VIA Connect² is a wireless/wired presentation & collaboration gateway (BYOD screen-sharing box), which does not map cleanly onto any of the provided type enum values; 'Encoder/Decoder' and category 'control' were chosen as the closest fits since it encodes a wired HDMI source and decodes wireless/network streams to an HDMI display, with network-based control/management (VSM). Not rack-mountable (omit rackUnits) — it is a super-compact 74x74x33mm puck-style unit designed for VESA/desk/behind-display mounting. The '2 Pin connector: Video Switching control' spec item is a proprietary 2-pin connector (ships with a dedicated control cable) used to trigger an external video switcher/display, not a power or standard audio/data connector — mapped to 'euroblock' as the closest available id since no generic 2-pin control connector exists in the taxonomy; treat with caution. Power is rated 12V DC / 1.3A, supplied by an included external power adapter (brick), hence connector 'dc-barrel' rather than an AC inlet on the unit itself. All grades confirmed from the official Kramer/Full Compass spec sheet PDF (HDMI 2.0 in/out up to 4K@60 4:2:0; 1x Gigabit LAN; 2x USB 3.0 + 1x USB 2.0). Model name is officially styled 'VIA Connect²' (superscript 2) — also commonly written 'VIA Connect2'.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Qty 2, female USB Type-A"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "female USB Type-A"
+    },
+    {
+      "name": "Video Switching Control",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Proprietary 2-pin connector for video-switching control/relay trigger, not a standard Euroblock terminal block; closest available connector id in taxonomy."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 1.3A, via external power adapter"
+    }
+  ]
+}

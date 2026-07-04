@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VS-1616DN-EM",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 4,
+  "sourceUrl": "https://charmex.net/downloads/kramer-vs-1616dn-em-um-3-_2017_3.pdf",
+  "confidence": "medium",
+  "notes": "This is a modular chassis: the 16 input and 16 output slots ship empty and are populated with user-selected I/O cards (DVI, DVI dual-link, HDMI, HDMI+analog/digital audio, HDCP, HDBaseT/HDBaseT Lite, DTAxr fiber, DGKat twisted-pair, VGA, SDI-over-fiber input, etc.), 2 physical ports per card (1 port on DVI dual-link cards). Physical video I/O below reflects the manual's default/representative configuration: 16x16 using the standard DVI-IN2-F16/DVI-OUT2-F16 cards (8 dual-port input cards + 8 dual-port output cards), which is how Kramer illustrates the chassis throughout the user manual and how it is most commonly quoted. Actual shipped port count/type varies by card selection (2x2 up to 16x16, mixable). No bandwidth grade is stated for the DVI ports (single-link DVI, no HDCP on this card type) so grade is omitted; chassis-level max is 3.4Gbps per channel / 10.2Gbps aggregate but this is not a named connector-scale grade. Power: rear panel shows an IEC-style fused power-cord inlet per supply (100-240V AC, 50/60Hz, 1.5A); unit ships with a single PS-16DN supply, second PS-16DN slot optional for hot-swap redundancy (both shown as separate AC inlets in manual, only one required for operation). Control: RS-232 (9-pin D-sub), USB Mini-B (VCOM), and RJ-45 Ethernet are on the chassis and confirmed authoritative. Test module includes a DVI Molex 24-pin video connector and a 3.5mm unbalanced analog audio jack for troubleshooting, listed here as extra ports. IR receiver exists on front panel but is \"for future use\" per manual, not a functional control port, so omitted. Sources: Kramer manufacturer product page (blocked by 403 on direct fetch, but confirmed via search snippet) and the official VS-1616DN-EM User Manual (P/N 2900-300928 Rev 3), fetched directly as PDF via curl from https://charmex.net/downloads/kramer-vs-1616dn-em-um-3-_2017_3.pdf (mirror of Kramer's own manual), Technical Specifications section, p.6-9 and p.91.",
+  "ports": [
+    {
+      "name": "IN 1-16 (DVI, per installed DVI-IN2-F16 cards)",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "OUT 1-16 (DVI, per installed DVI-OUT2-F16 cards)",
+      "direction": "output",
+      "connector": "dvi"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "USB (VCOM)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Labeled USB Mini-B connector in manual; closest available id is usb-micro"
+    },
+    {
+      "name": "NET (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "PS-1 AC Power",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "PS-2 AC Power (optional redundant)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second power supply is optional/hot-swap redundant"
+    },
+    {
+      "name": "Test Module Video (DVI Molex 24-pin)",
+      "direction": "bidirectional",
+      "connector": "dvi",
+      "note": "Manual specifies a 24-pin Molex-style DVI connector on the test module used for troubleshooting; closest listed id is dvi"
+    },
+    {
+      "name": "Test Module Audio (3.5mm unbalanced)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    }
+  ]
+}

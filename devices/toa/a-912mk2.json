@@ -1,0 +1,78 @@
+{
+  "manufacturer": "TOA",
+  "model": "A-912MK2",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.proacousticsusa.com/media/wysiwyg/a912mk2_cs1e_1.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer cut-sheet (TOA/ProAcoustics) is the authoritative source, cross-checked against TOA's official product page (toaelectronics.com) and Markertek's spec listing — all three agree. The unit also has eight card-edge module bays on the rear panel (labeled \"Input #1\" to \"#8\") that accept over 50 optional plug-in modules (mic preamp, line, phono, transformer, etc.); these are proprietary edge-connector slots, not a fixed cable connector, so they are NOT included as ports above since \"card-edge\" has no equivalent in the allowed connector list and the actual field-facing connector type is undetermined until a module is installed (e.g., an M-series mic module would expose an XLR3 or terminal block on its own faceplate). This is the single biggest caveat: the device's true signal I/O is modular/user-configurable per slot. No grade fields apply — none of the physical ports are on a bandwidth-graded connector family (no HDMI/SDI/DisplayPort/USB/Ethernet). Power is captive AC cord (SJT/3-prong), so nema-5-15 was used as the closest match to a captive-cord US mains connector; a pass-through convenience AC outlet is also present on the rear panel. Screw-terminal strips (output speaker terminals, mute, remote VR) were mapped to \"euroblock\" as the closest connector id in the allowed list.",
+  "ports": [
+    {
+      "name": "Bridging Input",
+      "direction": "input",
+      "connector": "rca",
+      "note": "100 mV / 3.3 kΩ; part of bridging input/output pair for external signal processing insert"
+    },
+    {
+      "name": "Bridging Output",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Part of bridging input/output pair for external signal processing insert"
+    },
+    {
+      "name": "Mixer Preamp Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "1000 mV into 600 ohms; preamp section output, normally jumpered to Power Amp In"
+    },
+    {
+      "name": "Power Amp In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "1000 mV, 10 kΩ; power amp section input, normally jumpered from Mixer Preamp Out"
+    },
+    {
+      "name": "Aux Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "10 kΩ, 1V auxiliary/monitor output"
+    },
+    {
+      "name": "Main Output (Direct)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal strip; 4 ohms, unbalanced direct speaker output"
+    },
+    {
+      "name": "Main Output (Transformer)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal strip; 8 ohms / 25V / 70V balanced constant-voltage speaker output"
+    },
+    {
+      "name": "Remote Master VR",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal strip for external 10 kohm potentiometer, remote master volume control"
+    },
+    {
+      "name": "Mute",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal strip; external mute control input (function depends on installed module)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "AC power cord/plug: SJT, 3-prong type, 120V 60Hz, 180W consumption"
+    },
+    {
+      "name": "AC Outlet",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel 3-pin grounding convenience/pass-through outlet for powering external equipment"
+    }
+  ]
+}

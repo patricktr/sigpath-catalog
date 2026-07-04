@@ -1,0 +1,153 @@
+{
+  "manufacturer": "Biamp",
+  "model": "TesiraFORTE DAN AI",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_tesiraforte_dan_ai_oct20.pdf",
+  "confidence": "high",
+  "notes": "Source: official Biamp data sheet (TESFDS-355-2010-EN-R1), including rear-panel photo/diagram. 12 mic/line analog inputs and 8 mic/line analog outputs are on balanced, screw-down/removable (euroblock-style) terminal blocks, individually numbered 1-12 (inputs) and 1-8 (outputs) on the rear panel; phantom power +48VDC available per input. Two RJ45 Gigabit Ethernet ports: one labeled \"Dante\" (32x32 channel Dante/AES67 digital audio) and one labeled \"Control\" (Tesira system configuration/control) - both graded eth-1g per the \"2 Gigabit Ethernet ports\" spec. RS-232 port is shown on the rear panel as a terminal-block style connector (screw terminals) rather than a DB9 in the photo, but the A&E spec just calls it \"RS-232 connection\" - modeled as rs232 connector (closest standard id) with a note. USB port is standard USB-B (device-side USB Class 1 Audio, up to 8 ch/48kHz/16-24bit), bidirectional. Logic I/O block is a 4-channel software-configurable GPIO on screw terminals plus a +5V pin - modeled as a single euroblock control port since \"ir\"/\"rs485\" etc. do not fit generic logic I/O; noted as GPIO. Power inlet is a standard IEC C14 (IEC) inlet per rear panel image, 100-240VAC 50/60Hz universal supply, no on/off switch shown. No HDMI/video/SDI I/O exists on this device (it is audio-DSP only). Rack unit: 1RU per data sheet.",
+  "ports": [
+    {
+      "name": "Dante",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "32x32 channel Dante/AES67 digital audio networking"
+    },
+    {
+      "name": "Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Ethernet for Tesira system configuration and control, IEEE 802.1X port authentication"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Rear panel shows a screw-terminal style RS-232 connector rather than a DB9; used for third-party control data in/out"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB Class 1 Audio, up to 8 channels, 16/24-bit, 48kHz; also used as USB audio host interface"
+    },
+    {
+      "name": "Logic I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-channel software-configurable GPIO (logic in/out) plus +5V pin, on a 6-pin screw-terminal block"
+    },
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line analog input, screw-down removable terminal block; +48VDC phantom power available"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 9",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 10",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 11",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Input 12",
+      "direction": "input",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced mic/line analog output, screw-down removable terminal block"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal internal power supply, 100-240VAC 50/60Hz, <35W; IEC C14 inlet per rear panel photo"
+    }
+  ]
+}

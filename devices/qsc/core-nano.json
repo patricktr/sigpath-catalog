@@ -1,0 +1,86 @@
+{
+  "manufacturer": "QSC",
+  "model": "Core Nano",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://help.qsys.com/Content/Hardware/Processing/Core_Nano.htm",
+  "confidence": "high",
+  "notes": "Core Nano is a network-only Q-SYS AV&C processor with no onboard analog audio I/O; all audio/video is carried over the two Gigabit Ethernet ports (Q-LAN/AES67/Dante/VoIP). Listed as 1U half-width (occupies half a standard rack width at 1U height); rackUnits set to 1 to reflect height. RS232 x2 ports use a 3-position 3.5mm captive/euroblock-style connector (mapped to euroblock, the closest listed connector; QSC uses TX/RX/GND terminals per port). USB-C port is multi-function (USB 3.1 host, DisplayPort alt-mode, or USB device port when USB-B is idle) — modeled as bidirectional usb-c graded usb-5g (USB 3.1 Gen1/\"3.0\" class transfer rate per QSC's own USB 3.0/3.1 labeling; note QSC datasheet's USB Inputs & Outputs table separately states 16-bit/8x8/48kHz audio over USB, which is a protocol-level spec not a physical port). USB-B port is a dedicated USB 3.0 device port. Four USB-A host ports total, confirmed via official Q-SYS Help hardware pages (grouped as two pairs on the rear panel; QSC does not give each an individual numeric label, so they are named USB A1-A4 here for disambiguation). LAN A and LAN B are both RJ45 Gigabit Ethernet (1000 Mbps) - LAN A primary, LAN B backup/failover, both used for Q-LAN/AES67/Dante/VoIP/control traffic. AC power inlet is IEC 60320 C14, universal 100-240V 50/60Hz auto-switching (mapped to connector id \"iec\" as the closest match to C13/C14 family per instructions). Sources cross-checked: QSC/Q-SYS official spec sheet PDF (qsys.com) and Q-SYS Help hardware documentation (help.qsys.com, multiple version pages consistent).",
+  "ports": [
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary network port: Q-LAN, AES67, Dante, VoIP, WAN streaming, control"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Backup/secondary network port: Q-LAN, AES67, Dante, VoIP, WAN streaming, control"
+    },
+    {
+      "name": "USB C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Multi-function: USB 3.1 host port, DisplayPort (alt mode), or USB device port when USB Type B is not in use"
+    },
+    {
+      "name": "USB B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "Dedicated USB 3.0 device port for PC/conferencing host connection"
+    },
+    {
+      "name": "USB A1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port for peripherals (headset, speakerphone, camera)"
+    },
+    {
+      "name": "USB A2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port for peripherals"
+    },
+    {
+      "name": "USB A3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port for peripherals"
+    },
+    {
+      "name": "USB A4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port for peripherals"
+    },
+    {
+      "name": "RS232 (COM 1)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-position, 3.5mm captive screw-terminal connector (TX/RX/GND) for third-party serial control; closest listed connector to QSC's 3.5mm terminal block"
+    },
+    {
+      "name": "RS232 (COM 2)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-position, 3.5mm captive screw-terminal connector (TX/RX/GND) for third-party serial control"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 receptacle, universal power input 100-240V 50/60Hz, internal power supply, 40W typical"
+    }
+  ]
+}
