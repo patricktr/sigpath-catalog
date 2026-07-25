@@ -1,0 +1,64 @@
+{
+  "manufacturer": "Lumens",
+  "model": "DC193",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.mylumens.com/Download/DC193,V01-DataSheet_English(LEI)-2019-0531.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from the official Lumens datasheet PDF (DC193,V01-DataSheet_English(LEI)-2019-0531.pdf, dated May 2019), which includes a labeled rear-panel \"User Interface\" diagram: HDMI Input, HDMI Output, Kensington Lock Slot (physical security slot, not a signal/power port — omitted), AC Power Supply, VGA Output to Projector, Audio Output, USB 2.0 for Data Exchange for PC, VGA Pass Through from Computer, C-Video/RS-232 Output (\"Extender\"), and USB 2.0 (host). Desktop/gooseneck document camera — not rack-mountable (rackUnits omitted). No HDMI/VGA bandwidth version is stated anywhere in the datasheet (device tops out at 1080p30 output resolution), so HDMI/VGA grades were omitted per the no-inference rule. USB 2.0 (480 Mbps) is explicitly stated and applied to both USB ports as a grade. Two ambiguous points lower confidence from high to medium: (1) the exact physical AC inlet type, and (2) the exact USB-B vs Mini/Micro-B shape of the \"USB 2.0 for Data Exchange for PC\" port — neither is explicitly spelled out in the source, only inferred from typical port diagrams and function labels. The combo \"C-Video/RS-232 Output\" (EXTENDER) port is unusual: it is one physical jack serving two logical signal types (composite video output + RS-232 output), which the current connector enum has no direct combo representation for; RS-232 was chosen as the primary/closest listed connector type. B&H's product listing page did not expose a usable spec table (403/nav-only), so the manufacturer PDF datasheet was used as the authoritative source instead.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal (built-in) 100-240VAC power supply; detachable power cable included. Exact IEC inlet variant (C13/C14 vs C7/C8 figure-8) not specified in datasheet — 'iec' used as closest match."
+    },
+    {
+      "name": "VGA OUT",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Labeled 'VGA Output to Projector'"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Labeled 'USB 2.0 for Data Exchange for PC' in the datasheet's rear-panel diagram; used for webcam/TWAIN-style PC connection. Physical connector shape (Type-B vs Mini/Micro-B) not confirmed from source imagery."
+    },
+    {
+      "name": "VGA IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Labeled 'VGA Pass Through from Computer'"
+    },
+    {
+      "name": "EXTENDER",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Labeled 'C-Video/RS-232 Output' — a single combo jack carrying both composite video and RS-232 signals via a breakout cable (not confirmed as a standard connector; 'rs232' chosen as closest single listed type since composite video has no dedicated combo mechanism in the schema)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host port for USB flash drives (image storage, expandable to 4TB) and USB mouse for annotation."
+    }
+  ]
+}

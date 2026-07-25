@@ -1,0 +1,98 @@
+{
+  "manufacturer": "TC Electronic",
+  "model": "DB8 MKII",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.manualslib.com/manual/640847/Tc-Electronic-Db4-Mkii.html",
+  "confidence": "medium",
+  "notes": "TC Electronic DB8 MKII is a 2U, modular broadcast loudness/dynamics-processing mainframe (4 DSP engines, vs. 2 in the DB4 MKII) built on a shared DB4/DB8 MKII chassis with two I/O card slots (max 16 audio channels in / 16 out combined per TC Electronic's own product description). The port list above reflects the standard \"DB-8 MKII AES XLR 8CH\" configuration (TC model code P0CXR): one AES/EBU-balanced card giving 4x XLR in + 4x XLR out (8 ch each direction, \"aes3\" connector = balanced AES3 digital audio on XLR3-style jacks). A second card slot can duplicate this (to reach 16/16), or be swapped for AES3-id unbalanced (75-ohm BNC) or embedded SD/HD-SDI audio (BNC) cards instead — those alternate I/O variants are not included in the port list. Frame-level connectors (Word Clock BNC, SMPTE sync, Pedal/GPI, MIDI In/Out/Thru, 10/100 Ethernet, dual redundant power) come from the \"Technical Specifications - Frame\" section of the shared DB4 MKII/DB8 MKII Operation Manual (mirrored on ManualsLib; TC Electronic's own tcelectronic.com and service-tcgroup.tcelectronic.com pages returned 404/DNS errors to automated fetch during this research, so the manual host was used instead). Power inlet connector was documented only as \"dual mains inlets\" / IEC-range voltage (100-240VAC) — assumed standard IEC (C13/C14) since exact variant wasn't stated. SMPTE/Pedal jack type (1/4\" TS) was confirmed on the original (non-MKII) DB8 hardware manual and carried forward by inference for the MKII; not independently reconfirmed against an MKII rear-panel photo. Only the Ethernet port qualified for a bandwidth grade (100Base-T -> eth-100m); AES3/BNC word-clock/GPI/MIDI/power ports correctly carry no grade per the rules given. Given the reliance on a secondary manual host and some inferred labeling/connector details rather than a single authoritative TC Electronic spec page, confidence is medium.",
+  "ports": [
+    {
+      "name": "AES/EBU In 1",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU In 2",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU In 3",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU In 4",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 1",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 2",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 3",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 4",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "Word Clock",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "SMPTE Sync In",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Pedal (GPI)",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Power In 1",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Power In 2",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Denon DJ",
+  "model": "SC6000 Prime",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://cdn.inmusicbrands.com/denondj/SC6000/SC6000_PRIME_User_Guide_v1.7.pdf",
+  "confidence": "medium",
+  "notes": "SC6000 Prime is a tabletop (desktop) standalone DJ media player, not rack-mountable — rackUnits omitted. Front-panel SD card slot and rear Kensington lock slot exist but are not cable/power connectors and were omitted from the port list. Grades omitted for Link Port (Ethernet) and USB B Port because the manufacturer does not publish their exact speed. USB-A grades (5G/2.0) and mA ratings sourced from the manufacturer's spec page (denondj.com/sc6000-prime.html); all port names/locations verified against the official Denon DJ SC6000 Prime User Guide (Rear Panel and Front Panel diagrams, p.9). \"Digital Outputs A/B\" are S/PDIF coaxial on RCA jacks per the manual, not AES/EBU. Manufacturer brand is commonly written \"Denon DJ\" (a sub-brand of Denon, part of inMusic).",
+  "ports": [
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC inlet; included locking power cable or standard IEC cable"
+    },
+    {
+      "name": "Link Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Networks players to each other or a Denon DJ mixer; speed not stated by manufacturer"
+    },
+    {
+      "name": "USB B Port",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Computer MIDI I/O; USB version not stated by manufacturer"
+    },
+    {
+      "name": "Rear USB Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "900 mA, USB 3.0 (per denondj.com spec page)"
+    },
+    {
+      "name": "Rear USB Port 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "500 mA, USB 2.0 (per denondj.com spec page)"
+    },
+    {
+      "name": "Front USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "500 mA, USB 2.0 (per denondj.com spec page); located on front panel"
+    },
+    {
+      "name": "Layer A Output (L)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog line output, Layer A, left channel"
+    },
+    {
+      "name": "Layer A Output (R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog line output, Layer A, right channel"
+    },
+    {
+      "name": "Layer B Output (L)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog line output, Layer B, left channel"
+    },
+    {
+      "name": "Layer B Output (R)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Stereo analog line output, Layer B, right channel"
+    },
+    {
+      "name": "Digital Output A",
+      "direction": "output",
+      "connector": "rca",
+      "note": "24-bit/96kHz S/PDIF coaxial digital output on RCA jack; no bandwidth grade applies to S/PDIF coax"
+    },
+    {
+      "name": "Digital Output B",
+      "direction": "output",
+      "connector": "rca",
+      "note": "24-bit/96kHz S/PDIF coaxial digital output on RCA jack; no bandwidth grade applies to S/PDIF coax"
+    },
+    {
+      "name": "Remote Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "For remote/fader-start cable to a compatible mixer; device is actually a 1/8\" mono TS jack, closest available id used"
+    }
+  ]
+}

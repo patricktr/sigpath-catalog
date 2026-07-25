@@ -1,0 +1,128 @@
+{
+  "manufacturer": "Rosendahl",
+  "model": "Nanosyncs HD",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.rosendahl-studiotechnik.com/nanosyncs_hd_20.pdf",
+  "confidence": "high",
+  "notes": "Multistandard video & audio sync/reference generator (genlock + word clock generator); no \"sync generator\" type exists in the given type enum so \"Other\" was used — category \"other\" for the same reason (it doesn't source/switch/convert AV content, it generates timing references). Discontinued/EOL (manufacturer page marks it \"sold out\" as of 3/2023, support only). Shipped in two fixed mains variants selected by an internal slide switch: 115VAC/60Hz or 230VAC/50Hz, ~10W (rear-panel photo on one unit reads \"230VAC 60mA 50Hz\" — minor label variance across production runs, same IEC inlet). AES1/AES2 outputs are AES/EBU (AES3) signals delivered on 3-pin male XLR connectors — connector set to \"xlr3\" (the physical connector) rather than the separate \"aes3\" enum id, since AES3 there appears to denote a different physical form (e.g. 75-ohm coax); no bandwidth-grade scale applies to AES/EBU so grade was omitted. All BNC video-sync (VO1-VO6, SD/HD video sync input) and word-clock (WORD CLOCK in, WO1-WO8) ports carry analog reference/clock signals, not SDI payloads, so no sdi-* grade applies despite the BNC connector. LTC in/out confirmed as RCA jacks per manual text (C9/C10), not the smaller TRS jacks a rear-panel photo might suggest at a glance. USB port is a single USB-B, \"USB 2.0 MIDI device class compliant\" (device-class MIDI over USB to host computer for MTC/MMC and firmware update) — graded usb-2.0 and marked bidirectional per the stated convention for USB host-facing ports.",
+  "ports": [
+    {
+      "name": "VO 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VO 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VO 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VO 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VO 5",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VO 6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SD/HD Video (Sync Input)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock (Sync Input)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "WO 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 5",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 7",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "WO 8",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "SPDIF",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

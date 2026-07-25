@@ -1,0 +1,50 @@
+{
+  "manufacturer": "FeelWorld",
+  "model": "LUT7S",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1531473-REG/feelworld_lut7s_7_touch_screen.html/specs",
+  "confidence": "high",
+  "notes": "7\" 1920x1200 IPS touchscreen on-camera field monitor, 2200 cd/m² brightness, 3D LUT support; handheld/on-camera unit, not rack-mountable (mounts via 1/4\"-20 thread on bottom/left/right). Cross-checked B&H Photo spec table (bhphotovideo.com, BH#FELUT7S/MFR#LUT7S) against the manufacturer's own product page (feelworld.ltd) — both agree: 1x HDMI 1.4 in + 1x HDMI 1.4 out, 1x 3G-SDI (BNC) in + 1x 3G-SDI (BNC) out, 1x 3.5mm headphone out, DC power input (7-24VDC, ≤20W, B&H lists nominal 12VDC/2.1mm barrel), and a secondary DC barrel output (~8.4VDC) for powering an accessory/camera via optional cable — manufacturer's page gives that output barrel as 3.5mm OD/1.1mm ID rather than B&H's stated 2.1mm, a minor sourcing discrepancy on that one port's exact barrel size (mapped to dc-barrel regardless). Included accessory cable is \"Micro-HDMI to HDMI\"; product listings don't explicitly state whether the monitor's own HDMI ports are full-size or micro/mini, so the cable is most likely for adapting a camera's micro-HDMI output to the monitor's HDMI port — mapped as standard hdmi connector per both spec tables, but treat as low-confidence on that specific sub-detail. Device does not support HDMI/SDI cross-conversion. Power is also supplemented by a dual Sony L-series/NP-F battery plate (not a fixed connector type in the given enum, so omitted as a port).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC In (12V)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "DC Out (8.4V Aux)",
+      "direction": "output",
+      "connector": "dc-barrel"
+    }
+  ]
+}

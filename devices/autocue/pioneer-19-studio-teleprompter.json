@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Autocue",
+  "model": "Pioneer 19\" Studio Teleprompter",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.autocue.com/product/19-pioneer-studio-teleprompter/",
+  "confidence": "medium",
+  "notes": "Manufacturer's official spec page (autocue.com) confirms: Connectivity/Inputs = 3G/HD/SD-SDI (with looped output), CVBS (with looped output), HDMI, VGA; Input Voltage 12V DC; Power Consumption 35W max; Power Supply brick = 110-240V AC 50/60Hz input, 12V DC 5A max output; Aux. Output = 12V DC 3A max. The page's spec table does not state exact physical connector types for the video ports, the monitor's DC input jack, the aux DC output jack, or the exact IEC cord variant for the external PSU — these are inferred from typical broadcast-monitor/teleprompter convention (BNC for SDI/CVBS, DC barrel for 12V power, IEC for AC mains) and should be verified against a rear-panel photo or user manual if precision matters. No HDMI/SDI bandwidth grade (e.g. HDMI 1.4 vs 2.0, or exact SDI tier beyond \"3G/HD/SD\") is published, so SDI grade was set to the top tier stated (sdi-3g) and HDMI grade was omitted. This is a monitor/prompter unit (not a full computer-based prompting system); the \"Pioneer\" line also includes a separate \"19\" Pioneer Studio Box Lens\" variant and 17\"/12\" siblings with likely-identical I/O — this entry is specifically the standard (non-box-lens) 19\" Studio model, SKU P7008-0901 (bundle package P7008-0910). Desktop/mount-arm unit, not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD/SD-SDI input; connector type (BNC) inferred, not explicitly stated by manufacturer"
+    },
+    {
+      "name": "SDI Out (Loop)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Passive looped-through SDI output; connector type (BNC) inferred"
+    },
+    {
+      "name": "CVBS In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite video input; connector type inferred as BNC (could be RCA on some units — not confirmed by manufacturer spec table)"
+    },
+    {
+      "name": "CVBS Out (Loop)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passive looped-through composite output; connector type inferred"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Version/bandwidth not stated by manufacturer; unit ships with a 10m HDMI cable"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Monitor takes 12V DC, 35W max from the included external PSU brick (110-240V AC 50/60Hz in, 12V DC 5A max out). Physical connector type on the monitor not explicitly documented — assumed locking DC barrel, common on Autocue prompter monitors; could be a 4-pin XLR DC on some variants."
+    },
+    {
+      "name": "Aux DC Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "12V DC, 3A max auxiliary output, likely for powering tally/clock accessory; exact connector type not documented"
+    },
+    {
+      "name": "AC In (PSU)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "External power supply brick's AC inlet; box includes a UK/EU or US IEC power cable. Exact IEC variant (C13/C14) not explicitly confirmed."
+    }
+  ]
+}

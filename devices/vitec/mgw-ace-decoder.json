@@ -1,0 +1,116 @@
+{
+  "manufacturer": "VITEC",
+  "model": "MGW Ace Decoder",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.vitec.com/fileadmin/downloads/Collateral/VITEC_Ace_Decoder__Datasheet__23-Y.pdf",
+  "confidence": "high",
+  "notes": "Sourced from VITEC's own datasheet PDF, \"VITEC_Ace_Decoder_Datasheet_23-Y.pdf\" (Version 1.0, © VITEC 2022), fetched from vitec.com. This is the portable-appliance version of the MGW Ace Decoder (P/N 16647, \"MGW Ace Decoder HD/SD,\" breakout cable included), which is single-channel, HEVC/H.264/MPEG-2, up to UHDp60 4:2:2 10-bit. A separate openGear card variant (\"MGW Ace Decoder OG\", P/N 17597) exists with a different rear I/O layout: SDI1-A/SDI1-B + SDI2 (2x 12G-SDI equivalent), HDMI, CVBS, DVB-ASI IN, a second Ethernet port, and a multi-pin AUDIO connector — it has no standalone power connector since it draws power from the openGear frame. Not modeled here. Most audio ports (AES3 BNC, RCA unbalanced, XLR balanced, talkback mini-jacks) and the Genlock/Serial signals are physically delivered through a single rear-panel \"SERIAL / AUDIO / GENLOCK\" multi-pin connector via an included breakout cable (P/N 16732); the datasheet gives the discrete signal/connector types (explicitly: 2x AES3 BNC female, 1x RCA female unbalanced stereo, 1x XLR male balanced stereo, mini-jack talkback in/out) but not the physical shape of the breakout connector itself on the chassis. The DC power connector shape (approximated here as xlr4-dc) and the exact serial standard (RS-232 vs RS-422) are inferred, not explicitly stated — lower confidence on just those two ports. Unit is compact/desktop (42.4 x 202 x 117.5 mm) with an optional 1RU 19\" rack-mount kit, hence rackUnits set to 1.",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DVB-ASI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "DVB-ASI transport stream input with loop-through; not a video-grade SDI signal, no grade applies."
+    },
+    {
+      "name": "DVB-ASI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "DVB-ASI loop-through output."
+    },
+    {
+      "name": "SDI 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G-SDI (SMPTE 2082-1). openGear card version provides 2x 12G-SDI."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI/SD-SDI, auto-rate (SMPTE 259M-C/292M/274M/296M/424M/425M-A); 3G is the highest supported rate on this port."
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "CVBS",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite analog video output, BNC connector; not a digital SDI grade."
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync input, reached via the rear-panel SERIAL/AUDIO/GENLOCK breakout connector and included breakout cable (P/N 16732); datasheet notes 'limitations apply'. Exact connector on the breakout leg inferred as BNC."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Control serial port on the SERIAL/AUDIO/GENLOCK breakout connector/cable. Datasheet does not state RS-232 vs RS-422 or the breakout connector shape — inferred as RS-232, low confidence on this specific port."
+    },
+    {
+      "name": "AES3 Audio Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "AES3 digital audio, BNC female, delivered via the SERIAL/AUDIO/GENLOCK breakout cable (device provides 2x AES3 BNC female outputs)."
+    },
+    {
+      "name": "AES3 Audio Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Second AES3 digital audio output, BNC female, via breakout cable."
+    },
+    {
+      "name": "Analog Audio Out (Unbalanced)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "1x analog unbalanced stereo audio, AC-coupled, RCA female, via breakout cable."
+    },
+    {
+      "name": "Analog Audio Out (Balanced)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "1x balanced analog stereo audio, XLR male, via breakout cable."
+    },
+    {
+      "name": "Talkback Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog unbalanced stereo talkback/IFB input, AC-coupled mini-jack, via breakout cable."
+    },
+    {
+      "name": "Talkback Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog unbalanced stereo talkback/IFB output, AC-coupled mini-jack, via breakout cable."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "20-50VDC wide-range DC input (22W typical consumption). Rear-panel diagram shows a round locking connector; exact connector series is not named in the datasheet — approximated as a 4-pin XLR-style DC connector, low confidence on this specific port."
+    }
+  ]
+}

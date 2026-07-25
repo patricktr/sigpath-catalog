@@ -1,0 +1,330 @@
+{
+  "manufacturer": "Evertz",
+  "model": "EQX16",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 16,
+  "sourceUrl": "https://evertz.com/products/EQX16",
+  "confidence": "medium",
+  "notes": "Evertz EQX16 is a highly modular, passive-backplane routing frame (16RU main frame + separate 1RU power-supply frame) that scales from 18x18 up to 288x288 video I/O in steps of 18 via hot-swappable input/output cards; there is no single fixed port count or fixed set of labeled ports. The Video In/Out ports listed here (18 in / 18 out) represent the smallest concrete, officially orderable configuration, the \"EQX16G-18X18-3G\" base package (3G/HD/SD-SDI + ASI), which matches the \"3G\" grade shown on the datasheet's front page icons; larger configs (up to 288x288) use the same BNC connectors and formats, just more of them, and an HD-only base package (EQX16G-18X18H) exists that would be graded sdi-hd instead. Q-Link, Serial (RS-422/232 D9), Ethernet (4x RJ-45, 10/100baseT), and the 2x BNC reference inputs are fixed connectors present on every EQX16 frame controller regardless of I/O card population. Optional fiber I/O (SFP1R-2 dual optical receiver / SFP1T13-2 dual optical transmitter, LC/PC connectors, up to 3Gb/s, via the \"+F\" fiber rear-plate option on input cards) is available but not included in the port list since it is a non-default card option. Power: PSU modules are auto-ranging 100-240V AC (1200W per module, up to 4 load-sharing modules for 1:1 redundancy) with an external 48V DC alternative per module; the datasheet does not specify the physical AC inlet connector, so IEC (C14-style) was assumed. RS-422/232 ports use a shared D9 female connector, software-selectable per port between the two protocols. Sourced from Evertz's own product page (evertz.com/products/EQX16) and its official \"EQX16 — 288x288 Enterprise Hybrid Video/Audio/IP Router\" datasheet (Rev. 17-1), the latter mirrored by authorized dealer PlanetComm (planetcomm.com) — both agree on all specs extracted.",
+  "ports": [
+    {
+      "name": "Video In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 9",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 10",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 11",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 12",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 13",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 14",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 15",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 17",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video In 18",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 7",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 8",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 9",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 10",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 11",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 12",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 13",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 14",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 15",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 16",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 17",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Video Out 18",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ref In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog 525/625/tri-level HD looping reference input, 1V p-p"
+    },
+    {
+      "name": "Ref In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog 525/625/tri-level HD looping reference input, 1V p-p"
+    },
+    {
+      "name": "Q-Link 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "75-ohm video-cable control link to local/emergency control panels, max 500m"
+    },
+    {
+      "name": "Q-Link 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "75-ohm video-cable control link to local/emergency control panels, max 500m"
+    },
+    {
+      "name": "Q-Link 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "75-ohm video-cable control link to local/emergency control panels, max 500m"
+    },
+    {
+      "name": "Q-Link 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "75-ohm video-cable control link to local/emergency control panels, max 500m"
+    },
+    {
+      "name": "Serial 1 (RS-422/232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "D9 female, software-selectable RS-422 or RS-232"
+    },
+    {
+      "name": "Serial 2 (RS-422/232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "D9 female, software-selectable RS-422 or RS-232"
+    },
+    {
+      "name": "Serial 3 (RS-422/232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "D9 female, software-selectable RS-422 or RS-232"
+    },
+    {
+      "name": "Serial 4 (RS-422/232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "D9 female, software-selectable RS-422 or RS-232"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "AC In (PSU module)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Auto-ranging 100-240V 50/60Hz, per load-sharing PSU module in the separate 1RU power supply frame (up to 4 modules); exact inlet type (assumed IEC C14) not stated in datasheet. External 48V DC option also available per module (connector type not specified)."
+    }
+  ]
+}

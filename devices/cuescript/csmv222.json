@@ -1,0 +1,104 @@
+{
+  "manufacturer": "CueScript",
+  "model": "CSMV222",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "http://www.cuescript.tv/downloads/Manuals/CSMV2_Monitor_Manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official CueScript CSM17-19-22 V2 Prompter Installation and Operation Manual (covers CSMV217/CSMV219/CSMV222, same connector panel design, only screen size/dimensions differ) plus the CSMV222 product page at cuescript.tv/product-profile.php?pid=CSMV222. This is an on-camera/desktop teleprompter monitor (21.3\" 1600x1200 UXGA panel), not rack-mountable, so rackUnits is omitted; \"Display\" was chosen as the closest type since \"Teleprompter\" is not in the enum. SDI grade is sdi-3g (spec states SD/HD/3G-SDI per SMPTE 259M-C/292M/424M). HDMI grade is hdmi-1.4 (spec states compatible with HDMI 1.3/1.4/1.4a). Ethernet port speed is not stated in any source, so no grade was set. USB A/B connector versions are also not stated. The rear-panel photo in the manual is labeled for the 19\" variant (CSM V2-19) but the manual explicitly states the connector layout/spec applies to all three V2 models including the 222. Power draw: 41VA AC max / 46W DC max (with CSCN clock + CSTD accessories connected); rises to 85VA AC when a CSTM22 companion talent monitor is also connected.",
+  "ports": [
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR male, accepts 9-18VDC (nominal 12V/4A)"
+    },
+    {
+      "name": "DC OUT",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR female accessory power out, 12VDC @4A max, only live when unit is AC-powered"
+    },
+    {
+      "name": "PROMPT SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "TALENT SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SWITCHED SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Auxiliary switched SDI output; source selectable among Prompt SDI/Talent SDI/SFP feeds"
+    },
+    {
+      "name": "PROMPT CVBS IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite video (PAL/NTSC/SECAM), analog - no bandwidth grade"
+    },
+    {
+      "name": "PROMPT HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "SFP+ IP VIDEO",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SMPTE ST2110 IP video input, requires license + compatible SFP module; no bandwidth grade in defined scale"
+    },
+    {
+      "name": "Ethernet 1 (CueTALK)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Ethernet 2 (CueTALK)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB B (CueTALK)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "USB A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Multipurpose: CueTALK relay for scroll controller, USB keyboard for network config, or USB mass storage for debug logging"
+    },
+    {
+      "name": "USB A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Multipurpose: CueTALK relay for scroll controller, USB keyboard for network config, or USB mass storage for debug logging"
+    },
+    {
+      "name": "TALLY SENSOR",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Physically a USB Mini-B socket (closest available id in the connector list, not USB data) used for CueScript CueLight optical/tally sensor input"
+    },
+    {
+      "name": "LTC IN",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Physically a 3-pin mini-XLR (Neutrik RT3FC-B mating plug), not full-size XLR3; balanced/unbalanced LTC timecode input"
+    }
+  ]
+}

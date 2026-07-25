@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Exterity",
+  "model": "AvediaStream m9605",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.vitec.com/fileadmin/downloads/Collateral/VITEC_AvediaStream_m9605__Datasheet__22-B.pdf",
+  "confidence": "high",
+  "notes": "Sourced from VITEC's official datasheet (VITEC acquired Exterity; device chassis is branded \"Exterity\", VITEC is now the parent/publisher — manufacturer set to \"Exterity\" per the branding on the unit itself and product family name). Compact desktop/wall-mount unit (45mm H x 200mm L x 140mm D, 0.8kg) — not rack-mountable, so rackUnits omitted. Product photos show a rear panel with 2x RJ45, 2x USB-A, 1x HDMI out, and a DC barrel power jack, plus a separate 3.5mm jack (documented as an IR extender/tethered remote input). Network spec lists \"2 x 1000BASE-T, 100BASE-TX and 10BASE-T\" so both RJ45 ports graded eth-1g (top speed). HDMI v2.0 confirmed explicitly (up to 2160p60); device is output-only (no HDMI input — it's an IPTV decoder/media player, not a switcher). Audio ships embedded in HDMI (2ch PCM) — no separate analog/digital audio output port exists, so none was added. USB-A port count (2) confirmed via product photo, but USB version/speed is not stated in the datasheet text, so grade was omitted per instructions. The datasheet's Management section states \"Access via SSH and Serial RS232 Admin Port\" confirming a physical RS232 port exists, but its exact connector form factor isn't clearly visible in the available photography (could be a mini-jack breakout rather than a full DB9) — connector id \"rs232\" used as the closest/most literal match. A third-party retailer page (Avanta Digital) lists slightly different HDMI audio spec (\"2 or 8 channel PCM or Bitstream\", HDCP 1.4/2.2) not present in the manufacturer PDF (v1.3, 2022) — likely a newer firmware/revision note; not used here since the manufacturer datasheet was treated as authoritative.",
+  "ports": [
+    {
+      "name": "LAN A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "IR/Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for IR extender or tethered remote control"
+    },
+    {
+      "name": "Serial Admin Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "RS232 admin/console access; exact physical connector form factor (e.g. DB9 vs breakout) not shown in product photography"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 16W typical / 24W max, external PSU + regional power cord included"
+    }
+  ]
+}

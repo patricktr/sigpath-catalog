@@ -1,0 +1,50 @@
+{
+  "manufacturer": "Utah Scientific",
+  "model": "UT400 288R",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 13,
+  "sourceUrl": "https://utahscientific.com/product/ut400-288r/",
+  "confidence": "medium",
+  "notes": "UT400 288R is a modular 288x288 hybrid SDI/IP routing switcher; physical I/O is entirely card-based (BNC per card, 12 I/O per card) rather than fixed connectors, so SDI ports are represented as grouped ranges (1-288) per sigpath catalog convention for large matrix routers, matching the manufacturer's \"Standard Card\" default configuration (auto-select SD/HD/3G-SDI + DVB-ASI). Optional cards (12G-SDI, hybrid HD-BNC+Ethernet, MADI, analog, fiber/SFP) exist per Utah Scientific but are not itemized since the product page does not specify a default mix and grades for those options weren't confirmed on this SKU's page. Control/monitoring ports (MX-Bus proprietary DB-25 bus for control-panel daisy-chaining, RS-422, Ethernet, and a Phoenix-style dry-contact SMPTE-269M alarm relay) are documented in the general Utah-400 platform manual (covering the related \"288x288 Redundant\"/15RU variant, a different but closely related SKU) but were not itemized here as first-party ports because the connector types don't map cleanly onto the allowed list and were not confirmed specifically for the 13RU UT400 288R chassis. Power inlet connector type is inferred, not explicitly published. Primary source used: manufacturer product page (utahscientific.com/product/ut400-288r/). Supplementary/cross-check source: Utah-400 Series 2 Operations Guide and the \"Utah-400/288x288 Redundant\" Setup and Operations manual (utahscientific.com/support/protected/manuals/), used only for platform-level confirmation, not for the exact 288R SKU's rack size or control-port specifics.",
+  "ports": [
+    {
+      "name": "SDI In 1-288",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "288 BNC inputs populated across standard 12-in/12-out I/O cards (24 slots of 12); base cards support SD/HD/3G-SDI at 270Mbps/1.485Gbps/2.970Gbps plus DVB-ASI, auto-selecting. Optional 12G-SDI and hybrid SDI/IP (HD-BNC + Ethernet/SFP) cards are available and would carry a higher grade — not modeled here since the base/standard card is the documented default."
+    },
+    {
+      "name": "SDI Out 1-288",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "288 BNC outputs populated across standard 12-in/12-out I/O cards; same SD/HD/3G-SDI + DVB-ASI support as inputs."
+    },
+    {
+      "name": "Video Ref A In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "2x BNC, looping/non-terminating; accepts analog PAL, NTSC, or tri-level sync reference."
+    },
+    {
+      "name": "Video Ref B In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "2x BNC, looping/non-terminating; accepts analog PAL, NTSC, or tri-level sync reference (second reference bus)."
+    },
+    {
+      "name": "AES Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "2x BNC, looping/non-terminating AES3-id DARS/AES3-id digital audio reference."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "90-240VAC, 50/60Hz, 600W max; redundant power feeds/PSUs available. Exact inlet connector (assumed IEC C13/C14) is not stated on the product page — inferred from typical Utah-400 platform PSU modules; not directly confirmed."
+    }
+  ]
+}

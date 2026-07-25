@@ -1,0 +1,48 @@
+{
+  "manufacturer": "TVLogic",
+  "model": "VFM-058W",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "http://web.archive.org/web/20160804042935/http://tvlogic.tv/Monitors/FileDown.asp?strFileName=VFM-058W.pdf",
+  "confidence": "high",
+  "notes": "The VFM-058W is a discontinued 5.5\" Full HD (1920x1080) magnesium-body viewfinder/field monitor; it no longer appears on TVLogic's current site (tvlogic.tv / tvlogicusa.com) or on B&H/Markertek, so this is the manufacturer's own datasheet PDF retrieved via a Wayback Machine snapshot (original TVLogic URL now 404s). Video I/O and grades (SDI up to 3G-SDI 2.970Gb/s, \"3G-SDI Level A/B\" support) are directly confirmed by the spec sheet, as are the physical rear-panel port labels (HDMI IN, HDMI OUT, SDI IN, SDI OUT, HEADPHONE, DC 6.8-12V) which are legible in the product photo on the datasheet. Two minor caveats noted per-port: the HDMI input's stated version (1.2) falls outside the allowed grade enum's minimum (hdmi-1.4), so grade was omitted rather than forced; and exact connector subtype for the headphone jack (3.5mm assumed) and DC input (barrel-style assumed) are inferred from typical form factor, not explicitly pictured/specified. Desktop/handheld accessory unit, not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Spec sheet lists this as \"HDMI(1.2Ver) Input\" — HDMI 1.2 is below the lowest grade option (hdmi-1.4), so no grade tag was applied."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Datasheet lists only \"HDMI Output\" with no version stated; likely matches the input's HDMI 1.2, but unconfirmed, so grade omitted."
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Labeled \"SDI OUT\" on the rear panel; datasheet describes it as the \"HDMI-to-SDI conversion output\" (cross-converts the HDMI input to SDI, up to 3G-SDI Level A/B)."
+    },
+    {
+      "name": "HEADPHONE",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Datasheet lists \"Audio Out: Analog Stereo (Phone Jack) / Internal Speaker (Mono)\" without stating jack size; 3.5mm assumed given the compact viewfinder form factor (156x98x28.5mm) — could not confirm exact size."
+    },
+    {
+      "name": "DC 6.8-12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Rear panel is labeled \"DC 6.8-12V\"; the spec table separately states \"Power: DC 12V/3A (Max 6.0A)\". Connector is a DC power input; exact locking/barrel type not explicitly pictured/specified in the datasheet, dc-barrel used as closest match. Ships with AC Power Cord + DC Power Adapter per included accessories."
+    }
+  ]
+}

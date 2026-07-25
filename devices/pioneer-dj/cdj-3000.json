@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Pioneer DJ",
+  "model": "CDJ-3000",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://www.pioneerdj.com/en-us/product/player/cdj-3000/black/specifications/",
+  "confidence": "medium",
+  "notes": "Confirmed physical terminals across the AlphaTheta/Pioneer DJ manual (specifications page, via manualslib mirror) and cross-checked against retailer spec tables (djbox.ie, B&H listing). The manufacturer's own web spec page omits a full connector table (it links out to the PDF manual for that), so terminal names/counts were taken from the manual excerpt and corroborated by retailer tables, which agreed exactly (LAN 1000BASE-T x1, USB-A x1, USB-B x1, RCA analog out x1, RCA coaxial digital out x1). USB speed grade (2.0) is not explicitly printed on the spec sheet and was inferred from secondary sources/forum discussion — treat as a soft confirmation. No HDMI/video, no analog audio inputs, and no headphone jack exist on this unit (headphone monitoring lives on the mixer, not the CDJ). The unit also has an SD card slot, omitted here since memory-card slots aren't in the connector taxonomy. Power connector is Pioneer's proprietary locking \"V-Lock\" cable; physically it is an IEC C13/C14 pair with a locking clip, so it was mapped to \"iec\". Desktop tabletop unit — no rack units. This is the standard CDJ-3000 (black); a white \"CDJ-3000-W\" variant exists with identical specs, and a newer CDJ-3000X model exists with slightly different power draw (45W) — not covered here.",
+  "ports": [
+    {
+      "name": "LAN (PRO DJ LINK)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel host port for USB storage devices; USB 2.0 speed inferred from third-party sources, not stated on manufacturer spec page."
+    },
+    {
+      "name": "USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rear PC/Mac connection for Link Export, rekordbox Performance mode, and Serato DJ Pro library browsing; USB 2.0 speed inferred from third-party sources."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Analog stereo line output, 2.0 Vrms (1 kHz)."
+    },
+    {
+      "name": "Digital Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital audio output, up to 96 kHz / 24-bit. Physically a coaxial RCA jack; mapped to 'rca' as the closest connector id since a dedicated digital-coax id isn't in the list."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC 100-240V 50/60Hz, 40W. Ships with Pioneer's locking 'V-Lock' power cable, a locking variant of the standard IEC C13/C14 connector."
+    }
+  ]
+}

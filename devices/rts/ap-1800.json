@@ -1,0 +1,37 @@
+{
+  "manufacturer": "RTS",
+  "model": "AP-1800",
+  "category": "network",
+  "type": "Other",
+  "sourceUrl": "https://www.concept-sonore.com/content_page/download/153/359/23.html",
+  "confidence": "high",
+  "notes": "RTS ROAMEO AP-1800 is a DECT wireless access point for the ROAMEO wireless intercom system (Bosch/RTS), not a traditional AV signal-routing box — included here per request. Source is the official Bosch Security Systems / RTS Technical Data Sheet (Form F.01U.306.748 Rev 03, Aug 2017), mirrored at the concept-sonore.com URL above and matching the manufacturer product page at products.rtsintercoms.com/na/en/ap-1800. Two Reverse-Polarity-SMA-Female (R-SMA-F) detachable antenna connectors are also present on the unit (for the included ANT-1800 antennas) but were omitted from the ports list because no RF-antenna connector type exists in the given enum. Ethernet is specified only as \"Standard 100Base-T or GigE Ethernet\" (auto-capable, no fixed per-port speed given), so eth-1g was used as the (max-supported) grade. Optical/SFP port's link-rate class isn't stated in the datasheet, so no grade was set. Not rack-mountable — small surface/pole-mount enclosure (5.17\"H x 7.67\"W x 1.52\"D). An EU variant (AP-1800 EU) exists with a different DECT frequency band (1880-1900 MHz vs 1920-1930 MHz NA) but identical physical I/O.",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "One of 2 daisy-chainable RJ-45 jacks (up to 7 APs/hops); auto-selects 100Base-T or GigE per datasheet, protocol OMNEO."
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Second RJ-45 jack, same spec as Ethernet 1, used for daisy-chaining APs."
+    },
+    {
+      "name": "Optical",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Accepts SFP modules (Single Mode F.01U.278.502 or Multi Mode F.01U.278.503); optional fiber alternative to Ethernet. Data rate/grade not stated in datasheet."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC @ 1.5A, positive center, 5.5mm x 2.5mm x 13.8mm locking barrel jack; fed by external wall-wart PSU (100-240VAC input)."
+    }
+  ]
+}

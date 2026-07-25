@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Axis Communications",
+  "model": "C1310-E Network Horn Speaker",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.axis.com/dam/public/bb/81/ac/datasheet-axis-c1310-e-network-horn-speaker-en-US-463444.pdf",
+  "confidence": "high",
+  "notes": "Full manufacturer datasheet (Axis Communications, doc T10139377/EN/M22.2/2501) was read directly. AXIS C1310-E is an outdoor network horn speaker with an integrated 7 W Class D amplifier and built-in microphone — there are no external analog audio jacks; audio is delivered entirely over the network (SIP/VAPIX/AAC/G.711/etc.), so no audio connector ports are listed. Power arrives solely via PoE on the RJ45 port (802.3af/802.3at Type 1 Class 3, 12.95 W max) — no separate mains or DC-barrel input exists on this unit. Ethernet grade set to eth-100m because the datasheet specifies \"RJ45 10BASE-T/100BASE-TX PoE\" (Fast Ethernet only, not Gigabit). The 4-pin 2.5 mm terminal block is generic GPIO (virtual/external input + output for triggers, e.g. door contact or relay) rather than a bandwidth-graded connector; \"euroblock\" was chosen as the closest connector id in the allowed list for a pluggable screw-terminal block — no grade applies. Note: Axis has since released a \"C1310-E Mk II\" successor; specs above are for the original (non-Mk II) C1310-E.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX; also the PoE power input (IEEE 802.3af/802.3at Type 1 Class 3, max 12.95 W) — device has no separate DC power jack."
+    },
+    {
+      "name": "I/O (Input)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "One of two contacts on the shared 4-pin, 2.5 mm pitch terminal block (1 in + 1 out, GPIO-style alarm/relay I/O, not audio-grade)."
+    },
+    {
+      "name": "I/O (Output)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "One of two contacts on the shared 4-pin, 2.5 mm pitch terminal block (1 in + 1 out, GPIO-style alarm/relay I/O, not audio-grade)."
+    }
+  ]
+}

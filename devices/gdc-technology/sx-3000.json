@@ -1,0 +1,131 @@
+{
+  "manufacturer": "GDC Technology",
+  "model": "SX-3000",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.digitronic-cinema.it/wp-content/uploads/2015/05/GDC_SX-3000_brochure_Eng_120413_v1_Final-s.pdf",
+  "confidence": "high",
+  "notes": "GDC SX-3000 is a card-format \"Standalone Integrated Media Block\" (IMB) that slots directly into a Series 2 DLP Cinema projector's card cage — it is not a standalone rack chassis (dimensions 320x240x63.7mm, 1.5kg), so rackUnits is omitted. It draws power (max 75W) through the projector's internal card-cage backplane/edge connector rather than a standalone AC/DC power jack, so no power-input port is listed. Video decode output to the projector's image processor is also internal via the backplane, not an external connector. Source is the manufacturer's official brochure (GDC Technology copyright, PB-0115-1204-V1E) as re-hosted by dealer Digitronic Cinema, including GDC's own rear-panel technical drawing with silkscreen labels (COMM, LTC-IN/OUT, REF-IN/OUT, USB, eSATA, ETHERNET 1/2, SDI-IN1/2, HDMI-IN, and an AUDIO AES / AUTOMATION GPI/O 6-port RJ45 block) cross-referenced against the spec table. Caveats: (1) eSATA has no matching connector id in the taxonomy — mapped to usb-a as the closest external-storage host connector, but the physical connector differs. (2) HDMI-IN version/grade is not stated by GDC, so grade is omitted. (3) The two AES-audio RJ45 ports and four GPI/O RJ45 ports are confirmed by aggregate count (2x RJ45 audio, 4x RJ45 GPI/O = 6 total, matching the drawing's A/B/C-TOP/BOT 6-port block) but GDC's source does not specify which exact silkscreen position is audio vs. automation. (4) SDI input grade (3g) is inferred from the brochure's \"3G SD HDI x2\" line, read as \"3G/SD-SDI\".",
+  "ports": [
+    {
+      "name": "SDI - IN1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Alternative content input; spec lists '3G SD HDI x2' (3G/SD-SDI auto-sensing)"
+    },
+    {
+      "name": "SDI - IN2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Alternative content input; spec lists '3G SD HDI x2' (3G/SD-SDI auto-sensing)"
+    },
+    {
+      "name": "HDMI - IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Alternative content input; HDMI version not stated in spec"
+    },
+    {
+      "name": "LTC - IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Linear timecode input"
+    },
+    {
+      "name": "LTC - OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Linear timecode output"
+    },
+    {
+      "name": "REF - IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Video sync (genlock) reference input"
+    },
+    {
+      "name": "REF - OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passive loop-through of REF-IN"
+    },
+    {
+      "name": "ETHERNET 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BaseT"
+    },
+    {
+      "name": "ETHERNET 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BaseT"
+    },
+    {
+      "name": "eSATA",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Actual connector is eSATA (external storage); no eSATA id exists in the taxonomy, usb-a chosen as closest external-storage-host analog — connector shape differs"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel silkscreened simply 'USB'; two identical USB2.0 A-type female ports"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel silkscreened simply 'USB'; two identical USB2.0 A-type female ports"
+    },
+    {
+      "name": "COMM",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "RS232 debug port"
+    },
+    {
+      "name": "Audio AES 1",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "16/24-bit AES/EBU digital audio, 16ch, 48/96kHz, carried over RJ45; exact silkscreen position (A/B/C-TOP/BOT) among the 6-port block not identifiable from source, only aggregate count of 2"
+    },
+    {
+      "name": "Audio AES 2",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "16/24-bit AES/EBU digital audio, 16ch, 48/96kHz, carried over RJ45; exact silkscreen position not identifiable from source"
+    },
+    {
+      "name": "GPI/O 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of 4x RJ45 automation block providing 8 GPIs and 8 GPOs total; exact per-port pinout not detailed in source"
+    },
+    {
+      "name": "GPI/O 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of 4x RJ45 automation block providing 8 GPIs and 8 GPOs total"
+    },
+    {
+      "name": "GPI/O 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of 4x RJ45 automation block providing 8 GPIs and 8 GPOs total"
+    },
+    {
+      "name": "GPI/O 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of 4x RJ45 automation block providing 8 GPIs and 8 GPOs total"
+    }
+  ]
+}

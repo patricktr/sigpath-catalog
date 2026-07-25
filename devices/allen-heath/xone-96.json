@@ -1,0 +1,241 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "Xone:96",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.manualslib.com/manual/1534707/Allen-And-Heath-Xone-96.html",
+  "confidence": "medium",
+  "notes": "6-channel analogue club/DJ mixer with dual built-in USB audio interfaces. Desktop unit (no rackUnits — not rack-mountable). Port data drawn from the official Xone:96 User Guide (AP11645) as mirrored on ManualsLib (Rear Panel Connectors pages, Top Panel headphone section, and Specifications page), cross-checked against B&H/DJ TechTools/Sweetwater retailer copy and the official Allen & Heath support article (support.allen-heath.com/hc/en-gb/articles/43053562464017) which returned HTTP 403 to direct fetch. Caveats: (1) USB 1/USB 2 are USB-B, dual 24-channel (6 stereo in/6 stereo out) 32-bit/96kHz soundcards described as \"Hi-Speed USB\" — graded usb-2.0 since no USB 3.x spec is stated. (2) X:LINK is a proprietary RJ45/Cat5 link to Xone:K series controllers (MIDI/control over Ethernet cabling), not a standard graded Ethernet network port, so no eth-* grade was set. (3) RTN A / RTN B are shown in the manual as one line item each per mic/return channel (paralleling the mono MIC A/MIC B XLR inputs); some retailer copy describes channels A/B as having \"stereo 1/4-inch line inputs,\" so an additional R jack per channel is possible but not confirmed from the primary source — modeled here as single balanced TRS jacks. (4) RTN C/RTN D are modelled as the L/R pair of one unbalanced auxiliary stereo return. (5) Two independent headphone amp circuits each provide a 1/4\" TRS and a 1/8\" (3.5mm) mini-jack (4 physical sockets total) per general retailer/manual description. (6) MIDI I/O also happens virtually over USB1/USB2 (2 in/2 out) per the spec page — only the single physical 5-pin DIN MIDI OUT is listed as a physical port. (7) Power: internal auto-sensing SMPS, 100–240V AC 50/60Hz, ~45W max, IEC C13/14 inlet with integrated on/off switch.",
+  "ports": [
+    {
+      "name": "Phono In CH1 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH1 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH2 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH2 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH3 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH3 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH4 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Phono In CH4 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH1 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH1 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH2 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH2 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH3 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH3 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH4 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Line In CH4 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Mic A",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic B",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RTN A",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Line return input, alternate source for channel A (selectable with Mic A)"
+    },
+    {
+      "name": "RTN B",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Line return input, alternate source for channel B (selectable with Mic B)"
+    },
+    {
+      "name": "RTN C",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced auxiliary return, left of stereo pair with RTN D"
+    },
+    {
+      "name": "RTN D",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced auxiliary return, right of stereo pair with RTN C"
+    },
+    {
+      "name": "Master Insert Return",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "MST 1 Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MST 1 Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "MST 2 Out L",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "MST 2 Out R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Booth Out L",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Booth Out R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Record Out L",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Record Out R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Audio Sync Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Send 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Send 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Master Insert Send",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 1 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 1 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphones 2 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones 2 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "24-channel (6 stereo in/6 stereo out), 32-bit/96kHz audio interface + MIDI"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "24-channel (6 stereo in/6 stereo out), 32-bit/96kHz audio interface + MIDI"
+    },
+    {
+      "name": "X:Link",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link to Xone:K series controllers, not a graded network Ethernet port"
+    },
+    {
+      "name": "AC Mains In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with integrated on/off switch; auto-sensing 100-240V AC 50/60Hz, ~45W max"
+    }
+  ]
+}

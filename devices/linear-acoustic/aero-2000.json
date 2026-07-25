@@ -1,0 +1,137 @@
+{
+  "manufacturer": "Linear Acoustic",
+  "model": "AERO.2000",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 2,
+  "sourceUrl": "https://telosalliance-uat.s3.amazonaws.com/public/LA+Product+Photos/AERO+Family+Owners+Manual+-+v3.32.25+-+240918.pdf",
+  "confidence": "high",
+  "notes": "Source: Telos Alliance / Linear Acoustic \"AERO Family Owner's Guide\" v3.32.25 (official manual, AERO.2000 rear-panel connector list p.21 + connector pinout tables p.95-97 + specifications table p.92-94), cross-checked against the manufacturer product page https://www.telosalliance.com/Linear/AERO2000. AERO.2000 is a 2RU broadcast audio/loudness processing platform (AEROMAX loudness control, UPMAX upmixing, optional Dolby D/D+ encode/transcode, Nielsen/Verance watermarking) with single SDI I/O path (de-embed/re-embed up to 16 audio channels) plus 8 main AES3 channels on BNC and 8 auxiliary AES3 channels (9-16) on a DB25 breakout.\n\nTwo rear-panel connectors were omitted from the port list because the manual explicitly documents them as non-functional: a DB9 \"Analog I/O\" (stereo +4dBu, \"currently not used\") and a spare \"Reserved\" RJ45 (\"reserved for future use, not connected internally\").\n\nTwo ports (AES I/O DB25 aux and GPI/O DB25) have no true match in the allowed connector-id list, since it contains no generic D-sub id — \"aes3\" and \"rs232\" were used as the closest available approximations respectively; see each port's note for the real physical connector (25-pin female D-sub in both cases).\n\nPSU inlet connector style (assumed IEC C14) is inferred, not manufacturer-confirmed in the reviewed text. USB front-panel connector type is likewise a reasonable assumption (USB-A), not explicitly specified.",
+  "ports": [
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Metadata I/O",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "RS-485 Dolby serial metadata (SMPTE RDD6), pinout per SMPTE 207M, 115.2 kbps, physical connector is DB9-F"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "auto-sensing SD or HD (SMPTE 292M/259M); AERO.2000 does not support 3G-SDI (that's on AERO.20/200/2400)"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "AES3 In 1/2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 In 3/4",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 In 5/6",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 In 7/8",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 Out 1/2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 Out 3/4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 Out 5/6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 Out 7/8",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES3 Ref",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "48 kHz DARS or any AES3 reference signal"
+    },
+    {
+      "name": "ENC Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "encoder output, fed in parallel with AES 15/16"
+    },
+    {
+      "name": "Vref",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "video reference input; documented in manual as \"not currently supported\""
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "LTC timecode input; documented in manual as \"not currently supported\""
+    },
+    {
+      "name": "AES I/O",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "auxiliary AES3 channels 9-16 (4 pairs, in+out on same connector), unbalanced, per SMPTE 276M/AES-3ID-2001. Physical connector is a 25-pin female D-sub (DB25); no D-sub id exists in the allowed connector list, so \"aes3\" was chosen as the closest functional match."
+    },
+    {
+      "name": "GPI/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "8 GPI inputs + 8 GPO outputs, 0-5V TTL, pull-to-ground activation. Physical connector is a 25-pin female D-sub (DB25) carrying parallel TTL contact-closure I/O, not RS-232 serial data; no D-sub/GPIO id exists in the allowed connector list, so \"rs232\" was chosen only as the closest D-sub-shaped control connector."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "front panel, +12 dBu max, with volume control"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "front panel; exact USB type/purpose not detailed in the manual excerpt reviewed, USB-A assumed"
+    },
+    {
+      "name": "PSU1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "one of two redundant AC inlets, 100-240 VAC 50/60 Hz auto-sensing, 175W max combined. Exact IEC inlet style (e.g. C13/C14) not explicitly stated in the manual; assumed standard IEC C14, typical of dual-redundant broadcast PSU modules."
+    },
+    {
+      "name": "PSU2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "second of two redundant AC inlets, see PSU1"
+    }
+  ]
+}

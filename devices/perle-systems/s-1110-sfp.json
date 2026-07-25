@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Perle Systems",
+  "model": "S-1110-SFP",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://objects.eanixter.com/PD641555.PDF",
+  "confidence": "high",
+  "notes": "Standalone desktop media/rate converter, 120 x 80 x 26 mm (4.7 x 3.1 x 1.0 in), 0.3 kg — not rack-mounted by default (optional DIN-rail or rack-mount tray kits are available separately, so rackUnits omitted). The manufacturer's own product page (perle.com/products/product_detail.aspx, i.e. the S-1110-SFP product detail page) returned HTTP 500 during this research session, so the authoritative Perle datasheet was retrieved via a verbatim mirror hosted on eanixter.com (a Perle distributor) — the document header itself cites perle.com/products/product_detail.aspx as its source and is corroborated by Perle's own official installation-guide PDF (perle.com/support_services/documentation_pdfs/perle_s-1110_installation_guide.pdf), which confirms the same RJ-45 copper port, empty SFP slot, and barrel-connector power adapter. SFP slot has no bandwidth grade set per instructions since SFP is not one of the connector types covered by the eth-* grading scale (RJ45/etherCON only) — actual link speed (100M or 1G) depends on whichever transceiver module is inserted. There is also a \"-XT\" extended-temperature variant that uses a terminal-block DC connector instead of the barrel jack; specs above are for the standard S-1110-SFP.",
+  "ports": [
+    {
+      "name": "10/100/1000Base-T",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Copper RJ-45 port, auto-negotiating 10/100/1000 Mbps, rate-converted to the SFP fiber port"
+    },
+    {
+      "name": "SFP",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Empty SFP cage for customer-supplied 1000Base-X or 100Base-X MSA-compliant fiber transceiver (Perle/Cisco/3rd-party); grade depends on inserted module so left unset"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "6-30 VDC unregulated (12 VDC nominal), 5.5mm x 9.5mm x 2.1mm barrel socket; ships with a 100-240VAC universal power adapter"
+    }
+  ]
+}

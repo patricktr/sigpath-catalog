@@ -1,0 +1,89 @@
+{
+  "manufacturer": "Matrox",
+  "model": "DSX LE4 FH",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://documentation.vizrt.com/viz-engine-guide/3.11/Matrox_X.mio_3___DSX_LE_4.html",
+  "confidence": "medium",
+  "notes": "DSX LE4 FH is a half-length, full-height PCIe Gen2 x8 broadcast SDI I/O developer card (not a display/AV-over-IP endpoint). Manufacturer page (video.matrox.com/en/node/80) exists per search results but returned HTTP 403 on every fetch attempt (bot-blocked); specs cross-verified via Vizrt's official card documentation (documentation.vizrt.com, describes this exact card by name) and a reseller listing at hssl.us that mirrors Matrox's own copy. 13 Mini-BNC (HD-BNC) connectors total on the bracket: 12 individually reconfigurable SDI I/O (max 8 can be the same direction simultaneously) plus 1 REF analog black-burst reference input; adapter cables convert Mini-BNC to standard BNC. Exact SDI bandwidth grade (3G/6G/12G-SDI) is not stated by any accessible source — spec sheets only say \"SD to 4K capable\" — so grade was omitted rather than assumed. Card also supports up to 16ch AES/EBU audio and 8ch LTC timecode plus RS422 control, but only via an optional add-on \"AES Audio Kit\" (separate external breakout cables/brackets occupying an extra PCIe slot) — not standard equipment, so not listed as base-card ports. No external power connector exists; the card is powered entirely from the PCIe slot. No rack unit applicable (internal expansion card).",
+  "ports": [
+    {
+      "name": "IO 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC) connector on FH bracket; software-reconfigurable as SDI input or output (max 8 of the 12 IOs can be the same direction at once); adapter cable required for standard BNC"
+    },
+    {
+      "name": "IO 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 5",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 6",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 7",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 8",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 9",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 10",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 11",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "IO 12",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); reconfigurable SDI input/output"
+    },
+    {
+      "name": "REF",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Mini-BNC (HD-BNC); analog black burst reference/genlock input, tri-level or bi-level"
+    }
+  ]
+}

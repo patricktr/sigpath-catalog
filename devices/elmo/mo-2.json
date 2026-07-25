@@ -1,0 +1,60 @@
+{
+  "manufacturer": "ELMO",
+  "model": "MO-2",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://elmousa.com/product/mo-2/",
+  "confidence": "medium",
+  "notes": "Source: ELMO USA official product page (elmousa.com/product/mo-2), the manufacturer's own regional distributor site — treated as authoritative for I/O list. Manufacturer does not publish HDMI version, USB speed class, or exact DC power connector shape, so no bandwidth grades were set on HDMI/USB/Ethernet ports per instructions (grade omitted where unstated). DC In is listed as \"DC5V In\" with an external AC adapter (model TT-12W) and an internal ~3-hour battery; connector mapped to dc-barrel as the closest match in the allowed list, but exact physical connector shape (barrel vs proprietary) could not be confirmed. B&H spec page returned HTTP 403 and could not be used as a secondary cross-check; Markertek page fetched resolved to their homepage, not the product spec page. No rack-mount info — this is a desktop/portable folding document camera (visual presenter), not rack-mountable.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "RGB Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Labeled RGB Out, D-sub 15-pin"
+    },
+    {
+      "name": "USB (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Qty 2, host ports for storage/peripherals"
+    },
+    {
+      "name": "USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Device port, used for USB camera/webcam mode to a PC"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC 5V input; powered via included AC adapter (TT-12W) or internal battery (~3hr runtime). Physical connector style not explicitly confirmed as barrel — closest match from connector list."
+    }
+  ]
+}

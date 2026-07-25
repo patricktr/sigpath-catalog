@@ -1,0 +1,49 @@
+{
+  "manufacturer": "ARRI",
+  "model": "SkyPanel S60-C",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.arri.com/resource/blob/31124/a3ef8cd7d9f50f5dcd314e9e1b2299de/arri-skypanel-s60-c-data-sheet-en-data.pdf",
+  "confidence": "high",
+  "notes": "Source: official ARRI \"SkyPanel S60-C\" Product Information datasheet (Ident.-No. 80.0006856, Sept 2022), www.arri.com. Ports listed are on the lamphead unit itself. The S60-C is typically sold with a separate external Power Supply Unit (PSU) that has its own powerCON TRUE1 AC input (100-240V~) and a female 3-pin XLR 48V DC output to the lamphead plus a powerCON TRUE1 mains-through pass-through connector — that PSU is a distinct physical unit (not the fixture itself) and was not modeled as a port here. No rack unit size applies; this is a hand-held/yoke-mounted soft light fixture (28mm Junior spigot mount), not rack-mountable. No product category/type in the given enum precisely fits a lighting fixture, so category \"other\" / type \"Other\" were used. All connector grades were intentionally omitted because the datasheet does not specify a DMX/Ethernet link speed or USB generation.",
+  "ports": [
+    {
+      "name": "Power In (48V DC, from PSU)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Male 3-pin XLR, 15A, Pin1 negative / Pin2 positive. Carries 48V DC from the external PSU, not audio. No dedicated 3-pin DC connector id exists in the allowed list, so xlr3 was used as the closest match."
+    },
+    {
+      "name": "Battery In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Male 4-pin XLR, 10A, Pin1 negative / Pin4 positive. On-board battery input, 23-36V DC (industry-standard V-mount/Anton-style DC connector)."
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Through",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin DMX loop-through to next fixture."
+    },
+    {
+      "name": "EtherCon (LAN)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "note": "Locking Neutrik etherCon network port for DMX-over-Ethernet, Art-Net, sACN, and PC/Mac control software. Datasheet does not state link speed, so no grade was assigned."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For firmware updates via flash drive; can also power small USB devices (~500mA @5V per secondary source). USB generation not stated in the datasheet, so no grade was assigned."
+    }
+  ]
+}

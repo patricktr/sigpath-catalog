@@ -1,0 +1,126 @@
+{
+  "manufacturer": "Tieline",
+  "model": "Gateway 4 (TLR6200-4)",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.tieline.com/manuals/TLR6200/en/v3_06/gateway-specifications_2.html",
+  "confidence": "medium",
+  "notes": "Desktop/rack unit: 1RU, 19\" rackmount (not desktop). Data drawn from Tieline's own manual \"Gateway 4 Rear Panel Connections\" page, the official Gateway specifications table, and the official Gateway 4 product datasheet PDF (labeled rear/front panel diagrams), all on tieline.com / hosted verbatim reseller mirrors. Two ports (the DB-25 Analog/AES3 I/O breakout and the DB-25 Control Port) use a 25-pin D-sub connector that has no matching id in the allowed connector enum; \"rs232\" (the only D-sub-family id available) was used as the closest approximation for both — flag these if the app does connector/cable-compatibility matching, since they are not literally RS232 serial ports. A supplementary chassis ground terminal (screw stud) also exists on the rear panel but was omitted since it isn't a signal/power connector type in the schema. An optional Euro ISDN module (2 B-channel ISDN, adds ports via the internal module slot) and an optional WheatNet-IP card (reuses the existing AoIP1 RJ45) are purchasable add-ons, not standard physical connectors, so they were not added as separate ports. AoIP Port 2 and USB 3.0 store-and-forward are both marked \"future release\" in the source datasheet — physically present but not fully functional in early firmware. Grades for RJ45 network ports (LAN1/2, AoIP1/2) set to eth-1g per their stated \"Gigabit (10/100/1000)\" auto-negotiating spec; the audio-carrying RJ45 jacks (ANALOG/AES3 IN/OUT) intentionally have no grade since they carry analog/AES3 audio, not Ethernet.",
+  "ports": [
+    {
+      "name": "MAINS 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant AC inlets, 90-240V 2A 50-60Hz"
+    },
+    {
+      "name": "MAINS 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant AC inlets, 90-240V 2A 50-60Hz"
+    },
+    {
+      "name": "ANALOG/AES3 IN 1",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Carries stereo analog line input pair 1-2 or stereo AES3 digital input pair 1-2 (shared/configurable per jack)"
+    },
+    {
+      "name": "ANALOG/AES3 IN 2",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Carries stereo analog line input pair 3-4 or stereo AES3 digital input pair 3-4 (shared/configurable per jack)"
+    },
+    {
+      "name": "ANALOG/AES3 OUT 1",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Carries stereo analog line output pair 1-2 or stereo AES3 digital output pair 1-2 (shared/configurable per jack)"
+    },
+    {
+      "name": "ANALOG/AES3 OUT 2",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Carries stereo analog line output pair 3-4 or stereo AES3 digital output pair 3-4 (shared/configurable per jack)"
+    },
+    {
+      "name": "ANALOG/AES3 IN & OUT",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a Female DB-25 (25-pin D-sub, Tascam pinout) providing 4-channel analog or AES3 I/O; no D-sub audio connector id exists in the allowed list so rs232 (nearest D-sub family id) was used as a placeholder. This DB-25 mirrors the same 4 in / 4 out audio channels available via the RJ45 ANALOG/AES3 IN and OUT jacks (alternate wiring option), not additional channels."
+    },
+    {
+      "name": "SYNC IO 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Configurable as Wordclock, AES3 input, AES11id, PTP sample clock, or fixed"
+    },
+    {
+      "name": "SYNC IO 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Configurable as Wordclock, AES3 input, AES11id, PTP sample clock, or fixed"
+    },
+    {
+      "name": "CONTROL PORT IO 1-8",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a Female DB-25 supporting 8 CMOS control inputs and 8 opto-isolated solid-state relay outputs (GPIO), not a serial data port; rs232 used as nearest D-sub family placeholder since no generic D-sub id exists in the allowed list."
+    },
+    {
+      "name": "AoIP 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "AES67 / ST 2110-30 / ST 2022-7 or optional WheatNet-IP streaming; auto-negotiating 10/100/1000"
+    },
+    {
+      "name": "AoIP 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Present in hardware but listed by Tieline as not operational in early firmware releases / future release"
+    },
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit (10/100/1000) LAN port for IP streaming over WANs; primary"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit (10/100/1000) LAN port for IP streaming over WANs; backup"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear panel host port; supports record/playback of audio files (store-and-forward listed as future release)"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Female DB-9 serial port, up to 115kbps, used for local/remote equipment control or in-band data channel"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel host port; firmware upgrades, Wi-Fi USB modem, memory sticks"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel 6.35mm (1/4\") headphone output with level adjust"
+    }
+  ]
+}

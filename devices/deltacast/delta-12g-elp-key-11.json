@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Deltacast",
+  "model": "DELTA-12G-elp-key 11",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.deltacast.tv/products/developer-products/sdi-capture-cards/delta-12g-elp-key-11",
+  "confidence": "high",
+  "notes": "This is a low-profile, half-length PCIe Gen3 x4 capture/playout card (not a standalone rack unit), so rackUnits is omitted and no discrete power port is listed — it is bus-powered entirely from the PCIe slot with no external/auxiliary power connector per the manufacturer spec page. Model naming convention: \"11\" = 1 SDI input / 1 SDI output; \"key\" = integrated hardware keyer for graphics overlay mixing. Video I/O is single-link 4:2:2 10-bit over BNC, supporting SD-SDI up to 12G-SDI (ST 2082-10), so both video ports are graded sdi-12g (max supported). A third BNC carries the blackburst/tri-level sync (genlock) reference input, which also natively carries LTC; this reference port is not bandwidth-graded since it is a sync/timecode signal, not an SDI payload path — its exact bracket silkscreen label could not be confirmed (site describes it functionally as \"reference input\" rather than showing a labeled photo), so the port name is a best-effort description. Up to 16 audio channels per HD-SDI link (32 per 3G-SDI link) are embedded/de-embedded within the SDI signal itself, not via separate physical audio ports.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Ref In (Genlock/LTC)",
+      "direction": "input",
+      "connector": "bnc"
+    }
+  ]
+}

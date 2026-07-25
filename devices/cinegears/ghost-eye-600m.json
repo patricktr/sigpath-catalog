@@ -1,0 +1,69 @@
+{
+  "manufacturer": "CINEGEARS",
+  "model": "Ghost-Eye 600M",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://cinegears.com/wp-content/uploads/manual/800T_1000M_600M_Manual.pdf",
+  "confidence": "medium",
+  "notes": "The \"Ghost-Eye 600M\" is Cine Gears' M-series wireless HDMI/SDI video transmission kit, sold as a matched Transmitter + Receiver pair (also available as separate TX-only or RX-only SKUs, and as an \"600MP\" L-series-battery variant). Ports listed here combine the official M-Series Transmitter and M-Series Receiver interface diagrams from Cine Gears' own manual covering the 600M/1000M/800T family (same hardware/connector layout across the M-series range; only transmission distance differs between 600M/1000M). The 800T/800TC T-series variants add TALLY I/O and a 3.5mm MIC/HP jack not present on the plain 600M units and were excluded. SDI grade (3G-SDI Type A/B) is confirmed on Cine Gears' product/retail pages and B&H's listing rather than explicitly in this manual's spec table, so it is inferred (medium confidence). HDMI version is not stated anywhere; system max is 1080p up to 60fps, 10-bit 4:2:2, <1ms latency, 5.1-5.9GHz (region-dependent) with a 2.4GHz control link. Antenna connectors (RPSMA on transmitter x2/5G, SMA 2.4G on receiver) and the V-mount/L-series battery clips are physically present but omitted as ports since there is no matching connector id in the given list. Power input connector is physically a 2-pin LEMO (9-18V DC), approximated here as \"dc-barrel\" since LEMO is not in the allowed connector list.",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Transmitter. 3G-SDI Type A/B support stated on Cine Gears retail listings, not explicit in this manual table."
+    },
+    {
+      "name": "SDI OUT (Loop Through)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Transmitter loop-through output."
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Transmitter. HDMI version not stated by manufacturer (max signal 1080p60, 10-bit 4:2:2)."
+    },
+    {
+      "name": "Power Supply IN (Lemo)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Transmitter DC input, 9-18V. Physical connector is a 2-pin LEMO, not a barrel jack; 'dc-barrel' used as closest available id. Unit also has a Sony V-mount/L-series battery clip (mechanical mount, not listed as a port)."
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Receiver, dual SDI output (SDI OUTx2 in manual)."
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Receiver, second of dual SDI outputs."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Receiver. HDMI version not stated by manufacturer."
+    },
+    {
+      "name": "Power Supply IN (Lemo)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Receiver DC input, 9-18V. Physical connector is a 2-pin LEMO; 'dc-barrel' used as closest available id. Unit also has a Sony V-mount battery clip (mechanical mount, not listed as a port)."
+    },
+    {
+      "name": "BAT-out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Receiver auxiliary DC power output for external accessories, sourced from the mounted battery. Exact connector style not specified in the manual; mapped to closest available id."
+    }
+  ]
+}

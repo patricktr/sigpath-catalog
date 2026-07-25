@@ -1,0 +1,169 @@
+{
+  "manufacturer": "Dolby",
+  "model": "CP850",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 2,
+  "sourceUrl": "https://manuals.plus/m/ac1b33f0e9058dc609a88113478eda13467dd05b3e46d802a9fea9f8a5f10df1",
+  "confidence": "medium",
+  "notes": "Primary source: the official Dolby Atmos Cinema Processor CP850 Manual (Issue 2, Dolby Part Number 9111710) — the authoritative Dolby Laboratories installation/user manual, mirrored in full at manuals.plus (Dolby's own professional.dolby.com hosting returns 404s for the manual now). Physical/power/rack specs cross-checked against Dolby's official CP850 line product sheet PDF (https://professional.dolby.com/siteassets/products/cp850/dolby_cp850_line_product_sheet.pdf): 45.2x44.1x8.9cm (2U rack), 100-240VAC 50-60Hz, 140W. This is the full Dolby Atmos-enabled CP850; a \"CP850 Base\" variant exists with identical physical I/O but reduced feature enablement (Atmos rendering only down-mixed to 7.1, no full object-based rendering). Caveats: (1) the given connector-id list has no 25-pin D-sub/DB25 option, so \"aes3\" was used as the nearest placeholder for the 8x AES In, Channel 1-8 Out, and Channel 9-16 Out D-sub connectors, and \"rs232\" for the DB25 Automation contact-closure port — none of these four are literally XLR/coax AES3 or literal RS-232 serial pinouts. (2) HDMI generation/version and the Ethernet speed of the two Dolby Atmos Connect ports are not stated anywhere in the manual, so grade was omitted rather than inferred. (3) The manual's overview text mentions built-in \"USB... interfaces\" generically, but no discrete USB connector is documented in the rear-panel diagram or per-connector descriptions, so no USB port is listed. (4) The \"Remote\" (Dolby CAT868 fader) connector's exact physical form factor isn't specified beyond a warning that it is not a standard Ethernet port. (5) An optional second/redundant internal power supply exists as a field option and is not counted as a standing second AC inlet.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Unswitched IEC power inlet, 100-240VAC 50-60Hz. An optional second (redundant) internal power supply is a field-installable option; not counted as a separate always-present inlet."
+    },
+    {
+      "name": "Command",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet port connecting the CP850 to the digital cinema auditorium network."
+    },
+    {
+      "name": "Dolby Atmos Input",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet point-to-point link carrying the Dolby Atmos audio-over-Ethernet stream from a DSS200/DSS220 playback system; requires Atmos enablement; must not be connected to a switch."
+    },
+    {
+      "name": "Dolby Atmos Connect Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 port transmitting Dolby Atmos audio-over-Ethernet to a DAC3201 breakout box or Atmos Connect-enabled amplifier; requires Atmos enablement. Ethernet speed not stated by Dolby, so grade omitted."
+    },
+    {
+      "name": "Dolby Atmos Connect In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Companion RJ-45 port for daisy-chaining a second DAC3201; requires Atmos enablement. Ethernet speed not stated by Dolby, so grade omitted."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin serial port for ASCII string control (9600 baud, no parity, 1 stop bit); duplicates control functions also available over Ethernet."
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary connector for the Dolby CAT868 remote fader. Manual explicitly states it is NOT a standard Ethernet port and warns against connecting Ethernet devices; exact connector form factor isn't detailed, rj45 chosen as closest visual match."
+    },
+    {
+      "name": "8x AES In (A)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "25-pin female D-sub (DB25/Tascam-style) carrying 8 time-aligned AES/EBU (AES3) pairs, up to 96kHz/24-bit PCM or Dolby Digital. No D-sub id exists in the allowed connector list; \"aes3\" chosen as closest semantic match for this multi-channel AES connector."
+    },
+    {
+      "name": "1x AES In A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "AES3-id (75-ohm coax) digital audio input, PCM up to 96kHz/24-bit or Dolby Digital/Dolby Digital Plus."
+    },
+    {
+      "name": "1x AES In B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Second AES3-id BNC input, same spec as 1x AES In A."
+    },
+    {
+      "name": "S/PDIF In (Optical)",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "S/PDIF In (RCA)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Alternate connector carrying the same S/PDIF input signal as the optical jack."
+    },
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Used as an audio source only. HDMI version/generation not stated by Dolby, so grade omitted."
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Used as an audio source only. HDMI version/generation not stated by Dolby, so grade omitted."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Passes through video from the selected HDMI input; manual notes this pass-through was \"currently inactive\" as of this manual revision. HDMI version not stated."
+    },
+    {
+      "name": "Nonsync In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo nonsync (e.g., CD/DVD) input, accepts up to 3 Vrms."
+    },
+    {
+      "name": "Nonsync In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo nonsync (e.g., CD/DVD) input, accepts up to 3 Vrms."
+    },
+    {
+      "name": "PA Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR for PA/auditorium microphone; switchable phantom power via web client."
+    },
+    {
+      "name": "RTA Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR for RTA/auditorium equalization microphone; switchable phantom power via web client."
+    },
+    {
+      "name": "Automation",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "25-pin female D-sub (DB25) contact-closure automation interface (input select, status, remote mute) — not a literal RS-232 serial link. No D-sub id exists in the allowed connector list; rs232 chosen only as the closest D-sub-family placeholder."
+    },
+    {
+      "name": "Channel 13/14 Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passes through the standard sync signal and other data embedded in channels 13/14."
+    },
+    {
+      "name": "Channel 1-8 Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "25-pin female D-sub (DB25) balanced analog output, channels 1-8. No D-sub id in the allowed connector list; aes3 chosen as nearest multi-channel pro-audio placeholder (signal here is analog, not AES3 digital)."
+    },
+    {
+      "name": "Channel 9-16 Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "25-pin female D-sub (DB25) balanced analog output, channels 9-16. Same caveat as Channel 1-8 Out."
+    },
+    {
+      "name": "Monitor Out (MON)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Booth monitor/active-loudspeaker feed; user-selectable channel or channel sum."
+    },
+    {
+      "name": "Hearing Impaired Out (HI)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Assignable to any digital audio track."
+    },
+    {
+      "name": "Visually Impaired Out (VI)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Assignable to any digital audio track."
+    }
+  ]
+}

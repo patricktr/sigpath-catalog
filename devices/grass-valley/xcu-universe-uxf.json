@@ -1,0 +1,214 @@
+{
+  "manufacturer": "Grass Valley",
+  "model": "XCU Universe UXF",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.grassvalley.com/wp-content/uploads/2026/02/XCU_DS-PUB-3-1041C-EN.pdf",
+  "confidence": "medium",
+  "notes": "\"XCU Universe\" is a software/firmware license tier (alongside \"XCU UXF Enterprise\" and \"XCU UXF Xpress\") applied to the same physical XCU UXF base-station hardware, per Grass Valley's own \"XCU UXF Universe / Enterprise / Xpress\" release notes (v17-v30, 2021-2024). Grass Valley does not publish a separate spec sheet per license tier; the authoritative connector/electrical spec used here is the manufacturer's \"XCU Camera Base Station\" datasheet (DS-PUB-3-1041C-EN, dated 2026), which documents the shared XCU UXF hardware platform (referred to there as \"XCU Xpress UXF\"). Physical I/O should be identical across Xpress/Enterprise/Universe tiers; only enabled features (e.g. full IP, high-speed/4K formats) differ by license. Ports listed reflect the SFP+ (IP-capable) \"UXF Cradle\" configuration (4x SFP+ in two redundant pairs, Port A1/A2 + Port B1/B2). An alternate factory configuration (\"UXF Cradle 12G SDI\") swaps those 4 SFP+ cages for 4 additional fixed 1.5G-12G SDI BNC outputs instead — not included here to avoid double-counting; add 4x bnc output ports graded sdi-12g if modeling that variant. Two connector types have no exact match in the allowed id list and were mapped to the closest available option (see per-port notes): the D-sub 15-pin Signaling I/O and Intercom I/O connectors (mapped to \"vga\"), and the proprietary LEMO hybrid SMPTE ST304 camera fiber/power connector (mapped to \"fiber-lc\"). Exact physical BNC layout/labeling (e.g. BNC-A/B/C/D/E per firmware release notes) can shift certain outputs between HD-SDI, SD-SDI, or 4K-UHD 2SI/Quad roles depending on the selected video mode; the port list enumerates the datasheet's \"HD/3G 1X/3X/6X modes\" connector table, the most complete published enumeration. Confidence is medium because this is a shared-hardware datasheet rather than a \"Universe\"-specific spec sheet, and some SDI grades (sdi-hd/sdi-sd) were inferred from the stated SMPTE standards (ST 292 = HD-SDI, ST 259 = SD-SDI) rather than an explicit bit-rate table per port.",
+  "ports": [
+    {
+      "name": "Teleprompter In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite (C)VBS, 1.0 Vp-p, 75Ω, loop-through"
+    },
+    {
+      "name": "Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "HD tri-level sync or SD blackburst, loop-through"
+    },
+    {
+      "name": "HD-SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out (Live/Effect) 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Out (Live/Effect) 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD-SDI Monitoring Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "SD-SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "SD-SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "SD-SDI Monitoring Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "Composite Video Monitoring Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "CVBS, 1.0 Vp-p, 75Ω, text overlay for viewing"
+    },
+    {
+      "name": "External Video In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-SDI (1.5G/3G) or SD-SDI; loop-through output"
+    },
+    {
+      "name": "External Video In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-SDI (1.5G/3G) or SD-SDI; no loop-through"
+    },
+    {
+      "name": "External Video In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-SDI (1.5G/3G) or SD-SDI; no loop-through"
+    },
+    {
+      "name": "Audio Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog audio out, 0/+6 dBu"
+    },
+    {
+      "name": "Audio Out 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog audio out, 0/+6 dBu"
+    },
+    {
+      "name": "AES-EBU 1+2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Digital audio out (AES3-id), 75Ω BNC, carries audio channels 1 and 2"
+    },
+    {
+      "name": "AES-EBU 3+4",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Digital audio out (AES3-id), 75Ω BNC, carries audio channels 3 and 4"
+    },
+    {
+      "name": "Signaling In/Out",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Actual connector is D-sub 15-pin (male): preview, tally (green/yellow/red dry contacts), remote audio level control, DC. Mapped to nearest allowed id (vga = closest DB15-family connector); physically NOT video VGA."
+    },
+    {
+      "name": "Auxiliary In/Out (RS-232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female, private data in/out, 100 kb TTL"
+    },
+    {
+      "name": "Intercom In/Out",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Actual connector is D-sub 15-pin (female), 2/4-wire intercom (program in, production in/out, engineering in/out). Mapped to nearest allowed id (vga); physically NOT video VGA."
+    },
+    {
+      "name": "Control Data (C2IP)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Camera control (C2IP) Ethernet port"
+    },
+    {
+      "name": "Control Data (IP Trunk)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "IP trunk up to 1 GbE"
+    },
+    {
+      "name": "Hybrid Fiber (Camera)",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Proprietary LEMO hybrid connector per SMPTE ST 304 (fiber + copper power to camera head, up to 3000m); mapped to nearest allowed id (fiber-lc) — not a true LC fiber connector."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-type 3-pin inlet, 100-240V AC, 47-63Hz; total power (camera+XCU) 450W max"
+    },
+    {
+      "name": "IP Port A1 (SFP+)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Redundant 10 GbE IP (SMPTE ST 2110/ST 2022-6, NMOS); optionally fitted with 12G-SDI SFP module instead"
+    },
+    {
+      "name": "IP Port A2 (SFP+)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Redundant 10 GbE IP (SMPTE ST 2110/ST 2022-6, NMOS); optionally fitted with 12G-SDI SFP module instead"
+    },
+    {
+      "name": "IP Port B1 (SFP+)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Redundant 10 GbE IP (SMPTE ST 2110/ST 2022-6, NMOS); optionally fitted with 12G-SDI SFP module instead"
+    },
+    {
+      "name": "IP Port B2 (SFP+)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Redundant 10 GbE IP (SMPTE ST 2110/ST 2022-6, NMOS); optionally fitted with 12G-SDI SFP module instead"
+    }
+  ]
+}

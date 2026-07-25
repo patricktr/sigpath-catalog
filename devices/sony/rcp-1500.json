@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Sony",
+  "model": "RCP-1500",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.manualslib.com/manual/859983/Sony-Rcp-1500.html",
+  "confidence": "medium",
+  "notes": "Sony's own pro.sony product page returned HTTP 403 during research, so the source used is the official Sony RCP-1500/1501/1530 Operation Manual as hosted on ManualsLib (page 29 \"Connector Panel\" and page 80 \"Specifications\"). Confirmed specs: power supply 10.5–30 V DC, power consumption 4 W, operating temp 5–40°C, weight 1.8 kg (RCP-1500/1501) / 1.6 kg (RCP-1530), dimensions 102×125×80 mm (RCP-1500). This is a compact desktop control panel, not itself rack-mounted (an optional tray holds up to 4 units in a 19\" EIA rack), so rackUnits is omitted. Only 4 connectors are documented on the connector panel: Network (RJ-45), CCU/CNU REMOTE (8-pin multi-connector), AUX REMOTE (8-pin multi-connector, RCP-1500/1501 only), and EXT I/O (D-sub 9-pin). No separate DC-in/power jack is documented — power appears to be delivered via the CCU/CNU REMOTE cable from the camera control unit, and possibly via PoE on the network port (mentioned in a secondary summary but not independently verified in the primary manual text), so no dedicated power port was added. The CCU/CNU REMOTE and AUX REMOTE connectors are proprietary Sony round 8-pin multi-pin connectors with no exact match in the allowed connector-id list; rs422 was chosen as the closest analog for a multi-conductor serial remote-control link — treat this mapping as approximate. No connector in this list carries a defined bandwidth grade (no SDI/HDMI/DP/USB/Ethernet-speed spec confirmed), so no grade fields were set. Family variants RCP-1501 (adds tally lamps) and RCP-1530 (compact, no AUX REMOTE, slightly different dimensions) share the same base connector panel described here.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "8-pin RJ-45 LAN connector for system/network control; manual notes shielded cable required. Link speed not stated in available documentation."
+    },
+    {
+      "name": "CCU/CNU REMOTE",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Proprietary Sony 8-pin multi-connector (female) linking to the RCP/CNU connector on the CCU or CNU; carries remote-control data and appears to also supply the panel's DC power (no separate power inlet is documented). Mapped to rs422 as the closest connector in the allowed list — physically it is a round 8-pin multi-pin connector, not a D-sub RS-422 connector."
+    },
+    {
+      "name": "AUX REMOTE",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Spare 8-pin multi-connector (female), same physical type as CCU/CNU REMOTE. Present on RCP-1500/RCP-1501 only, not on RCP-1530. Mapped to rs422 as closest connector in the allowed list."
+    },
+    {
+      "name": "EXT I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-sub 9-pin female connector for external interface (GPI-type) connections. Mapped to rs232 since D-sub 9-pin is that connector's standard shape; exact signaling is not detailed in the available manual excerpts."
+    }
+  ]
+}

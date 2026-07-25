@@ -1,0 +1,89 @@
+{
+  "manufacturer": "Tascam",
+  "model": "Portacapture X8",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://tascam.com/us/product/portacapture_x8/spec",
+  "confidence": "medium",
+  "notes": "Manufacturer spec page (tascam.com) used as primary source; cross-checked against the Tascam product overview page (tascam.com/us/product/portacapture_x8/top), which corroborated all connector counts and types. Unit is handheld/desktop, not rack-mountable (rackUnits omitted). Power: also runs on 4x AA batteries (no discrete connector) or USB bus power via the USB-C port — only the optional AC adapter jack is listed as a port; its exact barrel dimensions are not published, so dc-barrel is inferred (closest match in the allowed list). Two additional physical connectors exist but were omitted because they have no id in the allowed connector list: a proprietary Bluetooth-adapter port (for the optional AK-BT1 dongle) and a cold-shoe/tripod mechanical mount (non-signal). microSD card slot (up to 512GB) also omitted as it is storage media, not a cabled I/O connector. B&H's spec page returned HTTP 403 and could not be used as a secondary retailer cross-check, but the two manufacturer pages agree, so confidence remains high.",
+  "ports": [
+    {
+      "name": "Input 1 (Mic)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced mic in, plug-in power supported; also routes to detachable stereo mic capsule"
+    },
+    {
+      "name": "Input 2 (Mic)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced mic in, plug-in power supported; also routes to detachable stereo mic capsule"
+    },
+    {
+      "name": "Input 3 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR/TRS combo jack, individual phantom power"
+    },
+    {
+      "name": "Input 4 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR/TRS combo jack, individual phantom power"
+    },
+    {
+      "name": "Input 5 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR/TRS combo jack, individual phantom power"
+    },
+    {
+      "name": "Input 6 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Balanced XLR/TRS combo jack, individual phantom power"
+    },
+    {
+      "name": "EXT IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo mini line input, e.g. for camera or wireless receiver output"
+    },
+    {
+      "name": "LINE OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Headphone out, 45mW+45mW into 32ohm"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB2.0 High Speed mass-storage class; also used for USB bus power and as a USB audio interface"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "For optional TASCAM PS-P520U AC adapter; exact barrel size not stated on spec page, inferred as standard DC barrel"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Teradek",
+  "model": "Bolt 6 LT 750",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.markertek.com/product/ter-blt6lt750trx/teradek-bolt-6-lt-750-6ghz-wireless-transmitter-and-receiver-kit-no-mount",
+  "confidence": "medium",
+  "notes": "The \"Teradek Bolt 6 LT 750\" (SKU 10-2260 family, \"3G-SDI/HDMI Transmitter/Receiver Kit\") ships as TWO separate physical boxes — a transmitter and a receiver — each with its own I/O, so ports above are prefixed TX/RX to disambiguate. This is the SDI+HDMI combo variant of the Bolt 6 LT line (as distinct from the separately-sold \"Bolt 6 LT HDMI 750\" which is HDMI-only in/out on both ends). Video specs: max 1080p60 10-bit 4:2:2 HDR over 3G-SDI, or up to 4Kp30 10-bit 4:2:2 over HDMI, zero-delay (<0.001s) wireless link, 6GHz/5GHz radio, AES-256 encryption, ~750ft line-of-sight range, internal (non-external) antennas on the \"750\" variant so no RF connector is exposed. DC power connector is a proprietary 2-pin locking circular connector (Lemo/Fischer-style, 6-28VDC input) — not a true coaxial barrel jack; \"dc-barrel\" was chosen as the closest available connector id. USB is a 5-pin Micro-USB port (same physical port serves firmware updates and camera-control pass-through); no data-rate/version is published so no USB grade was set. Manufacturer's own teradek.com spec tables render via JS and could not be scraped directly; specs were cross-verified across the manufacturer's marketing copy and two independent Markertek spec-sheet pages (kit page and per-unit TX/RX pages), which agreed on all connector types and versions. Category/type were mapped to the closest available enum values (converter / Encoder-Decoder) since \"wireless video transmitter/receiver\" has no dedicated category in the schema. Not rack-mountable (compact camera-mounted transmitter and belt/cage-mounted receiver), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "TX SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "3G-SDI, SMPTE 424M, 75ohm BNC, on the Bolt 6 LT 750 transmitter unit"
+    },
+    {
+      "name": "TX HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b Type-A receptacle, on the transmitter unit; accepts up to 4Kp30"
+    },
+    {
+      "name": "TX SDI Out (Loop)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "3G-SDI loop-through output on the transmitter unit; this TX variant loops SDI only, not HDMI"
+    },
+    {
+      "name": "TX DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a proprietary 2-pin circular locking connector (Lemo/Fischer-style), 6-28VDC, ~9W nominal; not a true barrel jack but closest available connector id. 18W AC adapter with 2-pin plug ships in the box."
+    },
+    {
+      "name": "TX USB (Camera Control / Firmware)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "5-pin Micro-USB port; used for camera-control integration (e.g. SmallHD Smart Monitors) and firmware upgrades. No stated USB speed/version."
+    },
+    {
+      "name": "RX SDI Out",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "3G-SDI, SMPTE 424M, 75ohm BNC, on the Bolt 6 LT 750 receiver unit"
+    },
+    {
+      "name": "RX HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4b Type-A receptacle, on the receiver unit; outputs up to 4Kp30"
+    },
+    {
+      "name": "RX DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a proprietary 2-pin circular locking connector (Lemo/Fischer-style), 6-28VDC, ~11W nominal; not a true barrel jack but closest available connector id. 18W AC adapter with 2-pin plug ships in the box."
+    },
+    {
+      "name": "RX USB (Camera Control / Firmware)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "5-pin Micro-USB port; used for camera-control integration (e.g. SmallHD Smart Monitors) and firmware upgrades. No stated USB speed/version."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "manufacturer": "Datasat",
+  "model": "AP20",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://datasatdigital.com/products/ap20/",
+  "confidence": "medium",
+  "notes": "Datasat's own domain (datasat.com) now resolves to an unrelated, expired-domain placeholder (TLS cert for a2zcarsales.co.uk), and the live manufacturer site datasatdigital.com sits behind a Cloudflare bot challenge that blocked direct fetch tools. Specs were retrieved via a text-extraction proxy of https://datasatdigital.com/products/ap20/ (Datasat's current AP20 product page), cross-checked across two independent fetches with consistent, self-coherent detail (parent company Amplifier Technologies Inc./Theta Digital/BGW, Dirac Live licensing, etc. match known facts about Datasat), giving reasonable confidence in the content, but I could not visually confirm rear-panel silkscreen port labels or exact power-inlet connector type, and several ports use DB25 D-sub connectors that have no exact match in the allowed connector enum (mapped to the closest protocol/analog id: aes3 for AES/EBU DB25 breakouts, trs-6.35 for balanced-analog DB25 breakouts, euroblock for the GPIO DB25). HDMI is spec'd as HDMI 1.3, which is below the lowest available grade option (hdmi-1.4), so grade was omitted on all 5 HDMI ports rather than overstate bandwidth. AC inlet connector type (assumed IEC C13/C14) was not explicitly stated in the source. An 8-channel reduced-I/O variant of the AP20 also exists per the datasheet notes but was not itemized separately.",
+  "ports": [
+    {
+      "name": "AES/EBU Digital In A (DB25, ch 1-8)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Physically a female DB25 D-sub carrying 8 channels of AES/EBU digital audio (2 DB25 connectors = 16 ch total); DB25 isn't in the allowed connector list so the AES3 protocol id was used as the closest match."
+    },
+    {
+      "name": "AES/EBU Digital In B (DB25, ch 9-16)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Second female DB25 D-sub, channels 9-16 of the 16-channel AES/EBU digital input."
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "TOSLINK In 1",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "TOSLINK In 2",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Spec states HDMI 1.3 compliant, which is below the lowest gradeable option (hdmi-1.4) so grade was omitted rather than overstate bandwidth."
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 1.3 compliant; grade omitted (below hdmi-1.4 floor)."
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 1.3 compliant; grade omitted (below hdmi-1.4 floor)."
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI 1.3 compliant; grade omitted (below hdmi-1.4 floor)."
+    },
+    {
+      "name": "HDMI Out (video pass-through)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "5th HDMI connector, switchable to output with video pass-through; HDMI 1.3 compliant, grade omitted (below hdmi-1.4 floor)."
+    },
+    {
+      "name": "Analog Audio In (DB25, 8 balanced ch)",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Physically a female DB25 D-sub carrying 8 balanced analog channels (10k ohm, 300mV rms); DB25 not in the connector enum, so the balanced-analog id trs-6.35 was used as the closest match."
+    },
+    {
+      "name": "Aux In L (RCA)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "One of 2 single-ended stereo aux/non-sync input pairs."
+    },
+    {
+      "name": "Aux In R (RCA)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "One of 2 single-ended stereo aux/non-sync input pairs."
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Single female XLR mic input, switchable +48V phantom power."
+    },
+    {
+      "name": "AES/EBU Digital Out A (DB25, ch 1-8)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Male DB25 D-sub, 8 of 16 AES/EBU digital output channels; DB25 not in enum, aes3 used as closest match."
+    },
+    {
+      "name": "AES/EBU Digital Out B (DB25, ch 9-16)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Second male DB25 D-sub, remaining 8 of 16 AES/EBU digital output channels."
+    },
+    {
+      "name": "Analog Audio Out A (DB25, ch 1-8)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Male DB25 D-sub, 8 of 16 balanced analog output channels; DB25 not in enum, balanced-analog id used as closest match."
+    },
+    {
+      "name": "Analog Audio Out B (DB25, ch 9-16)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Second male DB25 D-sub, remaining 8 of 16 balanced analog output channels."
+    },
+    {
+      "name": "Monitor Out (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Single-ended, channel-selectable monitor output, adjustable level."
+    },
+    {
+      "name": "Assistive Listening Out (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Fixed-level (300mV rms) summed output for assistive listening systems."
+    },
+    {
+      "name": "RS232 1",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "RS232 2",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "GPIO / Automation (DB25)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Parallel contact-closure automation I/O on a DB25 D-sub; no exact multi-pin control connector exists in the enum, euroblock (terminal-block control connector) chosen as the closest control-I/O analog."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60Hz auto-switching, 60W. Datasheet did not show a photo of the inlet; IEC C13/C14 assumed as the standard connector for this class of rack processor."
+    }
+  ]
+}

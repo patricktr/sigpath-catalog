@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Shotoku",
+  "model": "TR-XT",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.shotoku.co.uk/wp-content/uploads/trxtdatasheet.pdf",
+  "confidence": "medium",
+  "notes": "TR-XT is a modular robotic-camera control system: a 19\"x3RU joystick control panel, a 22\" LCD touch screen, and a 19\"x2RU \"TR-XT Computer\" electronics unit that hosts the physical rear I/O documented here (per the manufacturer's own system diagram). rackUnits reflects the 2RU computer/electronics chassis; the separate control panel is 3RU and is not itself a connector-bearing rack unit. The datasheet names connections by protocol only (no labeled rear-panel photo), so several connector shells are inferred rather than confirmed: RS422/232 Automation and Router-control ports are shown as DB-style serial (assumed rs422, switchable to RS232 per spec sheet — physical shell not pictured); GPI/O for on-air tally/router is assumed to be a terminal block (euroblock) — common for broadcast GPIO but not confirmed; USB link to the touch screen is assumed USB-A, exact version/type unstated; AC inlet is assumed a standard IEC C13/C14 rack inlet for a ~200W unit — not explicitly pictured. Ethernet may be single or dual port depending on configuration; link speed (100M/1G) is not stated, so no grade was set. DVI link type (single/dual-link) is not stated. HD-SDI/SD-SDI video-capture input was graded sdi-hd as the highest explicitly confirmed tier (no 3G/6G/12G mentioned in the datasheet).",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single or dual Ethernet (config-dependent); connects panel/computer to the Shotoku control network. Link speed not stated."
+    },
+    {
+      "name": "Video Capture In (HD-SDI/SD-SDI)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Accepts HD-SDI or SD-SDI for preview/capture; no 3G/6G/12G mentioned."
+    },
+    {
+      "name": "Automation I/F (RS422/232)",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Serial automation control, switchable RS422/RS232 per datasheet; also offered over IP. Physical connector shell not pictured in datasheet."
+    },
+    {
+      "name": "Router Control (RS422/232)",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Serial router-control interface, switchable RS422/RS232; also offered over IP. Physical connector shell not pictured."
+    },
+    {
+      "name": "GPI/O (On-Air Tally / Router)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "GPI in/out used for on-air tally and router control. Datasheet names it by function only; terminal block assumed and unconfirmed."
+    },
+    {
+      "name": "DVI Out (Touch Screen)",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Drives the 22\" touch-screen display per the system diagram; single/dual-link not specified."
+    },
+    {
+      "name": "USB (Touch Screen)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Carries touch input from the 22\" touch screen back to the computer per the system diagram; exact USB type/version unstated."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60Hz, ~200W. Exact IEC inlet variant (C13/C14) not confirmed by datasheet."
+    }
+  ]
+}

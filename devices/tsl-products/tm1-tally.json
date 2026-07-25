@@ -1,0 +1,68 @@
+{
+  "manufacturer": "TSL Products",
+  "model": "TM1-Tally",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://tslproducts.com/wp-content/uploads/Datasheets/Control/tm1-tally-datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Official TSL Products datasheet confirms: 1RU chassis (483 x 233mm), 2.15kg, 60W max, single (non-redundant) internal PSU (vs. the TM1-Mk3+'s dual hot-swap), 2.2\" front display + rotary control knob, 2x Gigabit Ethernet, 4x RS422 serial (COM1-COM4), and 64x configurable GPIO split across two rear D-sub headers (GPIO 1-32 / GPIO 33-64). It also has an unlabeled-function rear connector marked \"WatchMan\" on the panel photo whose pinout/direction is not documented in the datasheet text. TM1-Tally is a tally/device-control processor, not a video/audio routing device — it carries no SDI/HDMI/analog A/V ports itself; it controls up to 6 (upgradeable to 12) external switchers/routers/multiviewers/cameras via these control ports using third-party protocols (Grass Valley, Evertz, Ross, Blackmagic, Sony, Panasonic, etc.). The provided connector enum has no generic multi-pin D-sub/GPIO id, so the GPIO 1-32, GPIO 33-64, and WatchMan connectors (which appear to be wide multi-pin D-sub shells, not standard 9-pin) were mapped to the closest available id, \"rs232\" (the only D-sub-family id in the list) — flagged per-port. The AC power inlet connector was not explicitly named in the datasheet; \"iec\" (IEC C13/14) was inferred from the rear-panel photo as the standard for this class of 1RU broadcast gear. RS422 (COM1-4) and Ethernet (2x Gigabit, per the ordering-code description) mapped cleanly to their exact connector ids.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC-style power inlet with rocker switch; exact IEC variant inferred from panel photo, not explicitly named in the datasheet text."
+    },
+    {
+      "name": "GPIO 1-32",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Part of the 64x configurable GPIO (input or output). Physical connector is a wide multi-pin D-sub header per the rear-panel photo; no generic multi-pin D-sub/GPIO id exists in the allowed connector list, so mapped to the closest available id (rs232 = D-sub family). Not an actual RS-232 serial port."
+    },
+    {
+      "name": "GPIO 33-64",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Second half of the 64x configurable GPIO. Same D-sub-family connector-mapping caveat as GPIO 1-32."
+    },
+    {
+      "name": "WatchMan",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Auxiliary rear connector visible on the datasheet panel photo, labeled 'WatchMan'; its exact function and pinout are not documented. Connector shape mapped to closest available id (D-sub family)."
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "COM1",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "COM2",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "COM3",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "COM4",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    }
+  ]
+}

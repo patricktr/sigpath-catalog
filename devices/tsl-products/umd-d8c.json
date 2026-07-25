@@ -1,0 +1,23 @@
+{
+  "manufacturer": "TSL Products",
+  "model": "UMD-D8C",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://tslproducts.com/wp-content/uploads/Manuals/Control/09-umd_imd-displays.pdf",
+  "confidence": "high",
+  "notes": "UMD-D8C is a single 8-character tricolour (red/green/amber) tally/under-monitor text display, part of TSL's TallyMan UMD/TM1 system -- it has no video (HDMI/SDI) I/O; it only displays mnemonic text and tally state driven by RS485 serial data (TSL UMD protocol, Probel SWP-04/SWP-06 selectable) at 38.4k baud. Overall size is 174 x 38 x 60mm and it is not itself full 19\" rack width -- TSL notes it \"will normally need to be mounted on P1 or P2 panels for fitting into a standard 1RU 19\" aperture,\" so rackUnits was omitted rather than guessed. There is no separate power-input connector: DC power (nominal +24V, unregulated, ~2.5W typical) is fed in over the same RJ45 \"Data\" jack (pins 7/8), commonly from a TM1/TMx controller or TSL PSU-22 power supply via a straight-through CAT5 cable. Exact rear-panel silkscreen labels for the two RJ45 jacks were not shown in the source (only functional labels \"Serial Connections\" / \"Parallel Tally Connections\" and pinout tables); \"Data\" and \"Tally\" are TSL's own functional names for them and are the commonly used labels in TSL/reseller documentation. Source used is TSL's own manual \"09-umd_imd-displays.pdf\" (Under Monitor Displays V5) from tslproducts.com, which includes the full Section 4.0 Technical Specifications and Section 5.0 Connection Details/pinouts for the UMD-D8C. Secondary confirmation (RJ45 data + RJ45 parallel tally, external 24V DC) came from reseller pages bsbroadcast.com and sonotechnique.ca.",
+  "ports": [
+    {
+      "name": "Data",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial data (RS485, TX+/TX-/RX+/RX-) to/from TM1/TMx tally controller, plus nominal +24V DC power IN on pins 7/8. Combined data+power RJ45, not Ethernet despite the connector shape."
+    },
+    {
+      "name": "Tally",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Parallel tally connector: 4 tally GPI/GPO lines (pins 3-6, active-low/ground) for stand-alone static-mode control or driving external cue lights; pins 7/8 are +24V OUT ONLY (no power input allowed on this jack)."
+    }
+  ]
+}

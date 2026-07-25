@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Magewell",
+  "model": "Pro Capture Quad SDI",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.magewell.com/static/tech-specs/USBCaptureHDMI4KPro/ProCaptureQuadSDI.pdf",
+  "confidence": "high",
+  "notes": "Internal PCIe Gen2 x4 add-in capture card (normal-profile, 112.15mm x 102.92mm, no bracket dimension given) — not a standalone/rack-mountable enclosure, so rackUnits is omitted. Per Magewell's own datasheet (rev. 06/18/2025), the only physical I/O is \"Input Interfaces: 4x BNC, SD/HD/3G SDI\" — no SDI outputs or loop-through are listed on the official spec sheet, so all four BNCs are modeled as inputs (grade sdi-3g, the highest tier stated: SD/HD/3Ga/3Gb/3Gb-DL/3Gb-DS). Note: a third-party reseller listing (ForeFront Imaging) advertises \"each with its own loop-through,\" which would imply 4 additional SDI outputs, but this is not corroborated by Magewell's own spec sheet, so it was not included — verify physically/with Magewell if loop-through outputs matter for your use case. There is no discrete power connector: the card is bus-powered entirely from the PCIe edge connector (max ~17.1W, drawing from the 12V and 3.3V rails), so no separate power port is listed. Individual port labels (e.g. exact silkscreen text like \"IN1\"–\"IN4\") were not confirmed from the datasheet and are inferred for clarity. Audio is embedded in the SDI signal (up to 8 mono channels @48kHz per input); there are no discrete audio connectors.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    }
+  ]
+}

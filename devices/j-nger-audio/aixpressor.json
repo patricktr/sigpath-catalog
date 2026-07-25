@@ -1,0 +1,117 @@
+{
+  "manufacturer": "Jünger Audio",
+  "model": "AIXpressor",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.telosalliance.com/signal-distribution-format-conversion/audio-interfaces/junger-audio-aixpressor",
+  "confidence": "medium",
+  "notes": "Base/on-board I/O only; excludes the 4 modular expansion slots (optional cards: 16ch 3G/HD/SD-SDI, Dante 64ch AoIP, 64ch MADI, additional AES/analog, mic in, 8x8 GPIO) since their connectors vary by ordered configuration. Sources cross-checked: manufacturer product page (junger-audio.com), manufacturer/parent PDF brochure (jungeraudio.com \"WOKS_prod_AIXpressor_A4_web.pdf\"), and the Telos Alliance (parent company, current commercial site) product page, which had the most complete connector-level breakdown. The AES I/O and Analog In/Out are physically 25-pin D-Sub connectors wired to the AES59 standard, not literally XLR/AES3 or TRS jacks — \"aes3\" and \"trs-6.35\" were chosen as the closest available connector ids per instructions. AES I/O is switchable 8x8 or 4x12 channels; Analog In/Out are 8 channels each (Analog Out is a dedicated, separate DB-25, +4dBu balanced). MADI I/O ports are SFP cages that can alternatively be configured as Jünger's proprietary \"tieLight\" optical tie-line (up to 1024 ch/direction) instead of MADI. USB Client connector shape (B vs Micro-B vs C) and USB speed grade were not stated in any source, so USB ports are listed without a grade; USB-A used for the 2 host ports as the de-facto standard shape (not explicitly pictured in text). Sync In is a multi-standard input (Word Clock/AES11/Black Burst/Tri-Level), not a graded SDI signal, so left ungraded. Front-panel headphone jack included as physical audio I/O.",
+  "ports": [
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant control/management Ethernet"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant control/management Ethernet"
+    },
+    {
+      "name": "AoIP 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Independent Audio-over-IP interface; AES67 / SMPTE ST2110-30 / Livewire+ / Ravenna / Dante (protocol via license/option)"
+    },
+    {
+      "name": "AoIP 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Independent Audio-over-IP interface; AES67 / SMPTE ST2110-30 / Livewire+ / Ravenna / Dante (protocol via license/option)"
+    },
+    {
+      "name": "MADI I/O 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage; user-fitted module selects MADI (optical/coax) or Jünger tieLight optical tie-line"
+    },
+    {
+      "name": "MADI I/O 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage; user-fitted module selects MADI (optical/coax) or Jünger tieLight optical tie-line"
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75Ω internally-terminated BNC; accepts Word Clock, AES11/AES3 sync, Black Burst, or Tri-Level"
+    },
+    {
+      "name": "AES I/O",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "25-pin D-Sub (AES59/DB-25), 110Ω balanced; switchable 8x8 or 4x12 channel AES3 I/O"
+    },
+    {
+      "name": "Analog In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "euroblock"
+      ],
+      "note": "25-pin D-Sub (AES59/DB-25) analog input, 8 channels; connector id approximated (actual is DB-25, not TRS)"
+    },
+    {
+      "name": "Analog Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "accepts": [
+        "euroblock"
+      ],
+      "note": "Dedicated 25-pin D-Sub (AES59/DB-25) analog output, 8 channels, +4dBu balanced; connector id approximated (actual is DB-25, not TRS)"
+    },
+    {
+      "name": "USB Host 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel host port for backup/config import-export"
+    },
+    {
+      "name": "USB Host 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Client",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connector shape not confirmed by source (B/Micro-B/C); used for PC connection as USB client device"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone amplifier output"
+    },
+    {
+      "name": "PSU 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Auto-ranging 100-240VAC 50/60Hz, dual redundant power supplies"
+    },
+    {
+      "name": "PSU 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Auto-ranging 100-240VAC 50/60Hz, dual redundant power supplies"
+    }
+  ]
+}

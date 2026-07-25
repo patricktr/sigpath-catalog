@@ -1,0 +1,57 @@
+{
+  "manufacturer": "ARRI",
+  "model": "Orbiter",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.arri.com/resource/blob/294120/1e4261476a297dd1ff2576e9ad8b5c1f/arri-orbiter-data-sheet-en-sep2022-2-data.pdf",
+  "confidence": "high",
+  "notes": "ARRI Orbiter is an LED lighting fixture (point-source luminaire), not a traditional AV signal-chain device, so category/type were set to \"other\" — no better fit exists in the given enum. Physical I/O per ARRI's official data sheet (Feb 2024, Ident.-No. 80.0033506) and the \"Control & Connectivity\" / \"Tech Specs\" pages at arri.com/en/lighting/led-spotlights/orbiter: mains powerCON TRUE1 TOP in; 3-pin XLR DC battery in (48-52V); two 5-pin XLR DMX ports (in and thru, daisy-chainable, also carry RDM E1.20); two EtherCON ports (in and thru, daisy-chainable, Art-Net 4/sACN/TCP-IP) — no link-speed (100M/1G) is stated in the datasheet so no \"grade\" was set; two USB-A ports (LiOS firmware updates via USB stick, third-party peripherals e.g. Wi-Fi dongles); one USB-C port (PC communication/servicing). Two additional physical features are documented but omitted from the port list because no connector id in the allowed taxonomy fits them: an SD-card slot (firmware/software expansion) and a dedicated camera \"sync input\" port for frame-accurate flashing (connector type not disclosed in any source checked, including B&H and Newsshooter's review — likely a small proprietary or mini-jack connector). The removable Control Panel accessory connects \"via PoE\" per the datasheet; this is not broken out as a separate physical port since ARRI's own port list does not distinguish it from the EtherCON ports. No SDI/HDMI/video ports exist on this fixture (it is lighting-only). Also has built-in wireless DMX (LumenRadio CRMX) which is not a physical port.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "DC In (Battery)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR DC power input, 48-52V (Pin 1 negative, Pin 2 positive) — not an audio signal; closest taxonomy connector to a 3-pin XLR DC port is xlr3 since xlr3-dc is not in the allowed list."
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Thru",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "EtherCON In",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "EtherCON Thru",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    }
+  ]
+}

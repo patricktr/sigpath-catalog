@@ -1,0 +1,26 @@
+{
+  "manufacturer": "KRK",
+  "model": "Rokit 5 G4",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.krkmusic.com/products/rokit-5-generation-4-powered-studio-monitor-black",
+  "confidence": "high",
+  "notes": "Active/powered 5.25\" 2-way studio monitor (5.25\\\" Kevlar woofer + 1\\\" Kevlar tweeter), 55W Class-D total amp power, no rack mounting (desktop/stand-mounted nearfield monitor, rackUnits omitted). I/O verified against two official KRK sources: the krkmusic.com product page (audio spec table: \"Balanced TRS/XLR Combo Jacks\", input impedance 5.12KΩ) and the official KRK ROKIT Generation 4 series user manual (PDF, cdn.shopify.com host under krkmusic.com/pages/downloads-and-manuals), which explicitly describes plugging the power cord \"into the IEC socket on the rear panel\" and describes the single balanced input accepting XLR (pins 1/3) or 1/4\" TRS (sleeve/ring) — i.e. one combo jack, not separate XLR and TRS ports. No USB, RCA, or other rear-panel connectors are present on this generation (confirmed by an independent Recording Magazine review noting \"the new models do away with RCA inputs\"). No grade applies to either port (analog audio combo jack and mains power are outside the graded connector families). One product-page fetch attempt returned an apparently mismatched \"7-inch LF driver\" figure — likely a scraping artifact/cache bleed from the Rokit 7 page — so I did not use it; the 5.25\" woofer figure is corroborated by KRK's own marketing copy and third-party retailers instead.",
+  "ports": [
+    {
+      "name": "Audio In (Combo XLR/TRS)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Single Neutrik balanced combo jack; pins 1/3 for XLR, sleeve/ring for 1/4\" TRS. G4 generation dropped the separate RCA input found on earlier KRK RP-series monitors."
+    },
+    {
+      "name": "AC Power (IEC socket)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC power inlet with adjacent user-replaceable mains fuse; power switch nearby."
+    }
+  ]
+}

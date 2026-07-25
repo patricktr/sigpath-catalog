@@ -1,0 +1,218 @@
+{
+  "manufacturer": "Moxa",
+  "model": "PT-7728",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.moxa.com/Moxa/media/PDIM/S100000132/moxa-pt-7728-series-datasheet-v1.0.pdf",
+  "confidence": "medium",
+  "notes": "PT-7728 is a modular, IEC 61850-3 / EN 50121-4 rackmount chassis (3 front/rear \"PM-7200\" module slots for Fast Ethernet + 1 slot for a Gigabit module) rather than a fixed-port switch — the manufacturer names it \"24+4G-port\" (max). Port list below reflects the maximum/most common build: 3x PM-7200-8TX modules (24x 10/100BaseT(X) RJ45, slots 1-3) + 1x PM-7200-4GTXSFP module (4x 10/100/1000BaseT(X)/SFP combo RJ45, slot 4). Many alternate modules exist (fiber SC/ST/MTRJ, M12, SFP-only, PTP variants) that would change actual fitted port types/connectors — actual as-shipped ports depend on the customer's module selection. Console port is an RJ45 shell carrying RS-232 signaling (ships with a DB9-female-to-RJ45 adapter cable). Power/alarm: datasheet states power connects via a single 10-pin captive/pluggable terminal block (\"Connection: 10-pin terminal block\"); the exact pin allocation between the two power inputs, relay/alarm output, and ground is not itemized in the datasheet, so the euroblock connector choice and the 3-port split (PW1/PW2/Relay) shown here is a best-effort interpretation, not a confirmed pinout. Base model suffixes without a second voltage code (e.g. PT-7728-F-24) have only ONE power input (no PW2/redundant module); dual-input \"redundant power module\" variants (e.g. -24-24, -24-HV, -48-48, -48-HV, -HV-HV) add PW2, which can be a different voltage class than PW1. Input voltage/current by suffix: -24 series = 24 VDC (18-36 VDC) @ 2.38 A; -48 series = 48 VDC (36-72 VDC) @ 1.12 A; -HV series = 110/220 VAC/VDC (85-264 VAC / 88-300 VDC) @ 0.49/0.26 A (AC) or 0.59/0.30 A (DC). Product is listed end-of-life by Moxa; successor is the RKS-G4000 series.",
+  "ports": [
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 console over RJ45 shell; ships with DB9-female-to-RJ45 adapter cable"
+    },
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BaseT(X); one of 24 Fast Ethernet ports from 3x PM-7200-8TX modules in slots 1-3 (max full-Fast-Ethernet build)"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "G1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g",
+      "note": "10/100/1000BaseT(X) or 1000Base SFP combo port; one of 4 Gigabit ports from PM-7200-4GTXSFP module in slot 4"
+    },
+    {
+      "name": "G2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g"
+    },
+    {
+      "name": "G3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g"
+    },
+    {
+      "name": "G4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Relay Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Fault/alarm relay, resistive load 3 A @ 30 VDC / 240 VAC; part of the switch's 10-pin power/relay terminal block (exact pin split not itemized in datasheet)"
+    },
+    {
+      "name": "PW1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Primary power input on 10-pin terminal block. Voltage by model suffix: -24=24VDC(18-36V), -48=48VDC(36-72V), -HV=110/220VAC/VDC(85-264VAC/88-300VDC)"
+    },
+    {
+      "name": "PW2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Redundant second power input, present only on dual-voltage-suffix models (e.g. -24-24, -24-HV, -48-48, -48-HV, -HV-HV); isolated from PW1 and can be a different voltage class"
+    }
+  ]
+}

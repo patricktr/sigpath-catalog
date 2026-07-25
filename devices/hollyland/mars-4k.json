@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Hollyland",
+  "model": "Mars 4K",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.hollyland.com/product/mars-4k",
+  "confidence": "medium",
+  "notes": "Mars 4K is sold as a matched TX+RX kit (1 transmitter + 1 receiver), each a separate physical box, so \"physical I/O\" spans two enclosures — ports above are tagged (TX) or (RX) accordingly; if this catalog models TX and RX as distinct devices, split this entry using the existing convention seen elsewhere in the catalog (e.g. \"Mars 4K TX\" / \"Mars 4K RX\"). Each unit also has an RP-SMA antenna connector (x1-2, for the 5GHz wireless link) which is omitted from ports since no RF/antenna connector id exists in the allowed connector list. Each unit has a 1/4\"-20 tripod mounting hole (mechanical, not a signal/power port, omitted). HDMI is confirmed 1.4b and SDI confirmed 3G-SDI directly on the manufacturer spec page; other web sources (B&H, Amazon, Filmtools) corroborate 3G-SDI/HDMI and general capability but could not be fetched directly (403/parse errors) for independent cross-check, hence confidence is medium rather than high. Desktop/handheld form factor (115x65x32mm, 223g), not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI In (TX)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "On transmitter unit; HDMI 1.4b, Type-A female"
+    },
+    {
+      "name": "SDI In (TX)",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "On transmitter unit; BNC connector, 3G-SDI"
+    },
+    {
+      "name": "DC In (TX)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "On transmitter unit; 2.0mm center-pin barrel, 6-16V DC. Unit also accepts NP-F battery (6.8-8.4V) via battery plate, not modeled as a separate port."
+    },
+    {
+      "name": "USB-C Power (TX)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "On transmitter unit; 5V/2.5A power input only, does not support QC or PD fast-charge protocols"
+    },
+    {
+      "name": "USB-C (TX)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "On transmitter unit; USB 2.0 OTG, used for mobile device connection and firmware updates"
+    },
+    {
+      "name": "HDMI Out (RX)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "On receiver unit; HDMI 1.4b, Type-A female"
+    },
+    {
+      "name": "SDI Out (RX)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "On receiver unit; BNC connector, 3G-SDI"
+    },
+    {
+      "name": "DC In (RX)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "On receiver unit; 2.0mm center-pin barrel, 6-16V DC. Unit also accepts NP-F battery (6.8-8.4V) via battery plate, not modeled as a separate port."
+    },
+    {
+      "name": "USB-C Power (RX)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "On receiver unit; 5V/2.5A power input only, does not support QC or PD fast-charge protocols"
+    },
+    {
+      "name": "USB-C (RX)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "On receiver unit; USB 2.0 OTG, used for mobile device connection and firmware updates"
+    }
+  ]
+}

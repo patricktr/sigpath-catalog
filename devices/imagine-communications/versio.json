@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Imagine Communications",
+  "model": "Versio",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.imaginecommunications.com/products/playout/integrated-playout/versio-channel-box",
+  "confidence": "low",
+  "notes": "Versio is Imagine Communications' 100%-software integrated/channel-in-a-box playout platform (automation + video server + switcher + graphics + master control), delivered on an HPE ProLiant Gen10-based 1RU or 2RU rack server (VER-HW-1UG10 / VER-HW-2UG10). Physical I/O is license/board-configurable rather than fixed. Data pulled from Imagine Communications' own \"Versio Channel in a Box\" and \"Versio Modular Playout\" datasheets (both list an identical \"BROADCAST I/O\" / \"SYSTEM SPECIFICATION\" table), retrieved via the av-iq.com document CDN because imaginecommunications.com direct PDF links returned 404/403; both PDFs cite imaginecommunications.com as their canonical source in-document. Genlock/reference is carried via PTP (SMPTE ST 2059-2) over the network rather than a physical BNC black-burst input, so no analog genlock port is listed. SDI grade is listed only as \"HD-SDI\" (mapped to sdi-hd) except for the optional quad-link UHD I/O, which is explicitly \"four-wire 3G-SDI\" (sdi-3g). AC power connector type is not stated in either datasheet and is inferred from typical HPE Gen10 server PSUs — treat with low confidence specifically for that port. B&H hosts a separate litfile (lit_files/584207.pdf) referencing \"2 x 12Gb/s SDI\" for what appears to be a related Versio/Nexio product, but that file could not be retrieved (403) or corroborated, so higher SDI grades (6G/12G) were not included.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-hd",
+      "note": "Outputs are software-configurable (program/preview/branded variants). Board options scale SDI count up to 6 in / 6 out (2RU MA500 I/O card, VER-HW-2UIO-SDI)."
+    },
+    {
+      "name": "Key/Fill In (optional)",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-hd",
+      "note": "Optional external key+fill input pair for upstream keyer sources; up to 2 pairs available per datasheet."
+    },
+    {
+      "name": "UHD In (optional, 4x SDI quad-link)",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Optional single UHD live input, four-wire 3G-SDI, 2SI or QSD mode; requires UHD license."
+    },
+    {
+      "name": "UHD Out (optional, 4x SDI quad-link)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Optional single UHD program output, four-wire 3G-SDI, 2SI or QSD mode; requires UHD Graphics license."
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "System management network port."
+    },
+    {
+      "name": "Control (Automation)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Automation/device-control network port."
+    },
+    {
+      "name": "Compressed Video (IP)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Optional port for compressed IP in/out (MPEG-2 TS, H.264)."
+    },
+    {
+      "name": "Uncompressed Video (IP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Optional port for uncompressed SMPTE ST 2022-6 / ST 2110 video, Intel 82599 chipset. Listed as 1x 10GbE in the 'Versio Channel in a Box' datasheet; the 'Versio Modular Playout' datasheet lists 2x 25GbE for the same field on some server configs — connector inferred as SFP/SFP+, not stated explicitly."
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Not detailed in the datasheet; inferred from the standard redundant hot-plug power supplies on the underlying HPE ProLiant Gen10-based 1RU/2RU chassis (VER-HW-1UG10 / VER-HW-2UG10) that Versio ships on."
+    }
+  ]
+}

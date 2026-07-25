@@ -1,0 +1,84 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "HDbridge 2920 (HDb2920-NA)",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.zeevee.com/wp-content/uploads/2023/04/HDBridge-2920-NA-Configuration-Guide.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: ZeeVee's own \"HDbridge 2920 Configuration Guide\" PDF (rear-panel diagram with numbered callouts) at zeevee.com, cross-checked against ZeeVee's HDb2920-NA product datasheet PDF and product page (zeevee.com/product/hdb2920-na/). All SDI, LAN, power, and Delay Matched Audio Out connectors are explicitly confirmed in ZeeVee's own documentation. Two items are only visually inferred rather than textually specified by ZeeVee: (1) the Coax Output (QAM RF) connector — documented only as \"Coax Output,\" photo suggests BNC-style but F-type is also common for CATV RF distribution, so treat this as the weakest point in the extraction; (2) the \"Alert Media\" connector shape (assumed RCA from the photo). \"Alert Media\" and \"Event Detection\" are physically present on the rear panel per ZeeVee's diagram but are explicitly labeled by ZeeVee itself as \"not implemented yet\" (as of the configuration guide's publish date), so they may be non-functional legacy silicon carried over from another HDbridge model in this shared chassis design. HDb2920-NA is the North American / QAM (NTSC-plan) variant; a HDb2920i-NA \"invisible/IP\" sibling and EU/DT regional variants exist in the same HDbridge 2000 series with different feature sets — this record covers HDb2920-NA only. No USB or HDMI ports exist on this device; it is SDI-in / QAM-RF-out only.",
+  "ports": [
+    {
+      "name": "Media Port 1 (SDI In)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "75 ohm; supports SDI (SMPTE 259M), HD-SDI (SMPTE 292M), 3G-SDI (SMPTE 424M) with embedded digital audio"
+    },
+    {
+      "name": "Media Port 1 (SDI Loop Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Reclocked, amplified loop-through of Media Port 1 input"
+    },
+    {
+      "name": "Media Port 2 (SDI In)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "75 ohm; supports SDI/HD-SDI/3G-SDI with embedded digital audio"
+    },
+    {
+      "name": "Media Port 2 (SDI Loop Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Reclocked, amplified loop-through of Media Port 2 input"
+    },
+    {
+      "name": "Coax Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "QAM RF CATV output, up to 2 frequency-agile channels (CATV ch 2-135), +25 to +45 dBmV; connector style inferred from rear-panel photo (matches SDI BNC style), not explicitly labeled by ZeeVee as BNC vs F-type"
+    },
+    {
+      "name": "Alert Media",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Present on rear panel per ZeeVee's own configuration guide; labeled 'this function not implemented yet' as of guide publication; connector shape inferred from panel photo, not textually confirmed"
+    },
+    {
+      "name": "Delay Matched Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Delay-matched analog stereo audio output for external audio system; first port (Media Port 1) only, requires analog audio as input"
+    },
+    {
+      "name": "Event Detection",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Green pluggable terminal block visible on rear panel; labeled 'this function not implemented yet' in ZeeVee's configuration guide; likely GPI/contact-closure input"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mb Ethernet, for configuration and remote management"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mb Ethernet, symmetrical with LAN 1"
+    },
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet, 100-240 VAC 50/60 Hz, 60W max / 30W typical"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Chauvet Professional",
+  "model": "Rogue R2X Spot",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://chauvetprofessional.com/product/rogue-r2x-spot/",
+  "confidence": "medium",
+  "notes": "This is a 300W LED moving-head spot fixture (automated lighting), not a conventional AV signal-chain device — none of the taxonomy category/type options fit well, so \"other\" was used for both. No RJ45, no built-in wireless DMX (W-DMX), and not rack-mountable (desktop/truss/omega-bracket mounted, 47.8 lb, 16.1x13.5x19.25in). Rear panel (per official user manual, Rev. 3) has two DMX connector pairs, each offering a 3-pin XLR and 5-pin XLR socket, functioning as one logical DMX In and one logical DMX Out (RDM-enabled, 18 or 21 selectable DMX channels). Power is Neutrik powerCON A in/out (auto-ranging 100-240VAC 50/60Hz); ships with Edison-to-powerCON cord (US) or local-plug equivalent worldwide; fuse F7A/250V. No grade applied to any port — DMX/XLR and powerCON connectors are outside the given bandwidth-grade scales. Verified against both the manufacturer product page (chauvetprofessional.com) and the official Chauvet Rogue R2X Spot User Manual Rev. 3 (rear-panel diagram + Technical Specifications table), which agree on all connector counts/types.",
+  "ports": [
+    {
+      "name": "DMX In (3-pin)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DMX In (5-pin)",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out (3-pin)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DMX Out (5-pin)",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Power linking output for daisy-chaining up to 3 units @120V / 6 @208V / 7 @230V"
+    }
+  ]
+}

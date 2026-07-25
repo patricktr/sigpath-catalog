@@ -1,0 +1,64 @@
+{
+  "manufacturer": "PreSonus",
+  "model": "Revelator io24",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.presonus.com/products/revelator-io24",
+  "confidence": "high",
+  "notes": "Desktop, bus-powered unit — no rack size, no separate power connector (powered entirely via the USB-C host connection). Cross-verified against three sources: PreSonus official product/spec page (presonus.com/products/revelator-io24), the official PreSonus Owner's Manual PDF (fmicassets.com .../OM_2777700302_Revelator-io24_EN.pdf, sections 2.1 Front Panel / 2.1.2 Back Panel / 9.1.10 Technical Specifications), and B&H Photo's detailed spec table (bhphotovideo.com, BH# PRRIO24), which all agree. Product is discontinued/no-longer-available per PreSonus and B&H listings, but specs are authoritative historical record. Headphone output is a 1/4\\\" TRS jack but unbalanced (mono-summed stereo, per B&H); listed here simply as trs-6.35 since the connector-id list has no balanced/unbalanced distinction. USB-C port carries both USB 2.0 audio/MIDI data and bus power — no separate DC/power port exists on this unit. MIDI In/Out are standard 5-pin DIN connectors (confirmed \"1x DIN 5-Pin Input\" / \"1x DIN 5-Pin Output\" on B&H spec table); PreSonus's own marketing spec page omits MIDI entirely, so that detail is corroborated only by the manual and B&H, not the top-level presonus.com marketing spec block. No grades apply to the analog XLR/TRS or MIDI-DIN ports per the grading rules.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Front-panel combo jack, XLR mic or 1/4\" TRS line/instrument (Hi-Z)"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Front-panel combo jack, XLR mic or 1/4\" TRS line/instrument (Hi-Z)"
+    },
+    {
+      "name": "Main Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS main/monitor output"
+    },
+    {
+      "name": "Main Out R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS main/monitor output"
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Unbalanced 1/4\" TRS headphone jack"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Host connection to computer/iPad/Android; also bus power (no separate power input)"
+    }
+  ]
+}

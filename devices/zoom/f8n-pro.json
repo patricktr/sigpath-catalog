@@ -1,0 +1,138 @@
+{
+  "manufacturer": "Zoom",
+  "model": "F8n Pro",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://zoomcorp.com/manuals/f8n_pro-en",
+  "confidence": "high",
+  "notes": "Physical I/O verified against Zoom's own online Operation Manual (\"Names of Parts\" chapter, https://zoomcorp.com/manuals/f8n_pro-en) and cross-checked against Sweetwater's and other retailers' spec tables (which independently confirm \"TA3\" main outs, BNC timecode I/O, and Mini-B USB). Not a rack-mount device (handheld field recorder), so rackUnits is omitted. Two ports could not be exactly represented by the given connector enum: (1) the rear \"MIC IN\" jack is Zoom's proprietary multi-pin connector for detachable mic capsules (e.g. MSH-6/XYH-6) and has no standard equivalent in the list, so it was omitted entirely; (2) the two MAIN OUT jacks use TA3 (mini-XLR3), mapped to \"xlr3\" as the nearest listed type; (3) EXT DC IN uses a Hirose HR10 4-pin locking DC connector, mapped to \"xlr4-dc\" as the nearest listed DC-power type even though it is not physically an XLR shell. Region/package variants (e.g. bundled AD-19 adapter plug type) may differ by market but do not affect the recorder's own port set.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Locking Neutrik XLR/TRS combo jack; mic or line level, switchable +4dB."
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo 1/8\" mini jack, front-panel volume control."
+    },
+    {
+      "name": "Sub Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo mini jack output."
+    },
+    {
+      "name": "Main Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced output on a TA3 (mini-XLR3) jack; mapped to XLR3 as the closest listed connector. Zoom TXF-8 cable adapts TA3 to full-size XLR3."
+    },
+    {
+      "name": "Main Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced output on a TA3 (mini-XLR3) jack; mapped to XLR3 as the closest listed connector. Zoom TXF-8 cable adapts TA3 to full-size XLR3."
+    },
+    {
+      "name": "Timecode In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "SMPTE timecode input; TCXO-generated, 0.2ppm accuracy."
+    },
+    {
+      "name": "Timecode Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "SMPTE timecode output."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Mini-B connector. Used as SD card reader or as an 8-in/4-out audio interface; mass-storage mode is USB 2.0 High Speed. Bus power not supported."
+    },
+    {
+      "name": "Ext DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Physically a locking Hirose (HR10) 4-pin DC connector, not XLR; mapped to the closest listed DC-power connector type. Accepts external 9-18V DC supplies."
+    },
+    {
+      "name": "12V DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Dedicated jack for the included Zoom AD-19 12V AC adapter."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Amino",
+  "model": "AmiNET130",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.intelek.cz/db/repository.nsf/v/BA4EC065075648B5C125744100486366/$file/Datasheet_Amino_AmiNET130.pdf",
+  "confidence": "medium",
+  "notes": "Desktop IPTV set-top box (not rack-mountable, rackUnits omitted). Primary source is Amino's own product datasheet (PDF hosted in distributor Intelek.cz's document repository, authored/branded by Amino Communications, contact aminocom.com) which gives functional I/O and detailed spec table but not a rear-panel connector diagram. Physical connector types/layout were cross-checked against the Amino AmiNET130 Installation Manual (ManualsLib, 'Back Panel Connections' page) which enumerates: Power (5V DC), USB, Ethernet ('Digital TV input'), HDMI, A/V OUT (Component/SCART/S-Video/Composite/stereo audio breakout), SPDIF (optical), and RF antenna in/out (loop-through). HDMI version/grade is not stated by Amino and was left unset; the single A/V OUT breakout connector has no exact match in the allowed connector list and was approximated as 'rca' with a note. Confidence set to medium because of these two inferences/approximations; all other ports (power, USB, Ethernet, SPDIF, RF, HDMI presence) are confirmed by the manufacturer datasheet and/or installation manual.",
+  "ports": [
+    {
+      "name": "Power (5V DC)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External plug-top power supply, 5V 1500mA per datasheet"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Labeled 'USB' on rear panel; datasheet calls it 'USB 2.0 Peripheral Port' for connecting accessories (e.g. IR keyboard)"
+    },
+    {
+      "name": "Ethernet (Digital TV input)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T IP network interface carrying the IPTV service; rear panel diagram labels it 'Digital TV input'"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Digital HD output with HDCP; exact HDMI version not stated in the manufacturer datasheet (one third-party Amino A-series config guide references HDMI 1.2a but that is not confirmed specifically for this model)"
+    },
+    {
+      "name": "A/V Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Single proprietary multi-pin breakout jack (not a bare RCA) that fans out via optional dongle cables to Composite, S-Video, Component (YPbPr), SCART/RGB, and stereo analogue audio; 'rca' chosen as closest listed connector type"
+    },
+    {
+      "name": "SPDIF",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical digital audio out, stereo and Dolby 5.1 surround pass-through"
+    },
+    {
+      "name": "RF Antenna In",
+      "direction": "input",
+      "connector": "f-type"
+    },
+    {
+      "name": "RF Antenna Out",
+      "direction": "output",
+      "connector": "f-type",
+      "note": "Loop-through RF output to a second TV"
+    }
+  ]
+}

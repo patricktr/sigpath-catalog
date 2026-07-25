@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Wheatstone",
+  "model": "Dimension Three",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.manualslib.com/manual/1603841/Wheatstone-Corporation-Dimension-Three.html",
+  "confidence": "medium",
+  "notes": "The Dimension Three control-surface chassis itself has no fixed analog/digital audio signal connectors — Wheatstone's own marketing copy states any channel can route to HD/SDI, AES, MADI, AoIP, analog, or TDM sources \"from the network,\" with actual audio I/O terminated on separate WheatNet-IP Blade rack units, not on the console. Ports listed above are the console's own control/network/power connectors per the technical manual's \"I/O Connections,\" \"Power Supply,\" and \"Optical Fiber Interface\" chapters. Source used is the Wheatstone technical manual as hosted/paginated on ManualsLib (manufacturer's own wheatstone.com/consoles page returned HTTP 403 and lacked a connector spec table). A PS/2 keyboard connector (factory use only) is also present on the CPU panel but has no matching connector id in the allowed list and was omitted. Ethernet/Mixer Link speed (1G etc.) and USB version (2.0/3.0) are not stated in the manual, so grades were omitted rather than guessed. Power connectors are proprietary Wheatstone 5-pin (console side) connectors, not true XLR4 — xlr4-dc was chosen only as the closest available id. Desktop/console form factor, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "ETH A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Main CPU network connector (redundant computer network)"
+    },
+    {
+      "name": "ETH B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional redundant computer Ethernet connector"
+    },
+    {
+      "name": "Mixer Link",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "CAT5/CAT6 crossover-wired control link to the Gibraltar mixing engine"
+    },
+    {
+      "name": "Mixer Link (Fiber)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "accepts": [
+        "fiber-lc"
+      ],
+      "note": "Optional SFP multi-mode fiber alternative to the RJ-45 Mixer Link, for extended distance to the Gibraltar engine"
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 connector on main CPU; manual states 'not used'"
+    },
+    {
+      "name": "VGA",
+      "direction": "output",
+      "connector": "vga",
+      "note": "DB-15 connector, factory use only, default 1366x768"
+    },
+    {
+      "name": "AUDIO USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Meterbridge port for USB thumb drives with WAV audio and M3U playlist files"
+    },
+    {
+      "name": "USER USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Meterbridge port for file/configuration access"
+    },
+    {
+      "name": "Power A",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Proprietary 5-pin DC power input from an external SPS-400 rackmount supply; closest listed connector id used as an approximation, not a true XLR4"
+    },
+    {
+      "name": "Power B",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Second DC power input for optional failsafe dual-redundant SPS-400 supply; same connector caveat as Power A"
+    }
+  ]
+}

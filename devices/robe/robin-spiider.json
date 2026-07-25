@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Robe",
+  "model": "Robin Spiider",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.robelighting.com/res/downloads/user_manuals/User_manual_Robin_Spiider.pdf",
+  "confidence": "high",
+  "notes": "Source: official Robe Lighting user manual (Version 3.3, robelighting.com), Section 3 \"Fixture exterior view\" and Section 10 \"Technical Specifications\" > \"Connection\". Manual states: \"DMX data in/out: Locking 3-pin and 5-pin XLR\", \"AC power IN: Neutrik TrueOne NAC3MPX\", \"Ethernet IN/Out: RJ45\". DMX sockets are wired in parallel (3-pin and 5-pin duplicate the same signal, both provided for compatibility). No bandwidth \"grade\" is set on any port: DMX-512/RS-485 and AC power are outside the gradeable connector families, and the manual does not state a modern Ethernet speed (it explicitly cites 10BaseT for Art-Net, below the lowest available grade tier eth-100m) or a USB spec version, so grade is omitted per instructions rather than guessed. The AC inlet (Neutrik TrueOne NAC3MPX) is a locking powerCON TRUE1-family connector — mapped to \"powercon\" as the closest id in the allowed list. The front-panel \"USB port\" (item 6 in the exterior-view diagram) is confirmed to physically exist but its exact type/purpose is not detailed in the manual body (software updates are documented via a separate RS232/DMX flash cable or \"Robe Universal Interface\" over USB from a PC, not explicitly via this front port) — connector type USB-A is inferred, not manual-confirmed, hence flagged. Fixture is a moving-head LED wash/beam luminaire (19x RGBW LED pixels, 4°-50° zoom, pan/tilt), not rackmount (13.25 kg, IP2x, floor/truss mounted via omega brackets) — rackUnits omitted. It does not cleanly fit any provided category/type enum (it's stage lighting, not AV switching/display/audio gear); category set to \"other\" and type to \"Other\" as the closest available options. A \"Wireless DMX\" (CRMX by LumenRadio, 2.4GHz) version exists as an optional/alternate SKU with an added RF antenna — this is not a physical cabled I/O port and was not included.",
+  "ports": [
+    {
+      "name": "3-pin DMX IN",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "5-pin DMX IN",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "3-pin DMX OUT",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "5-pin DMX OUT",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Ethernet IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Manual states Art-Net runs as 10BaseT Ethernet; no exact grade enum for 10Mbit so grade omitted."
+    },
+    {
+      "name": "Ethernet OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Manual states Art-Net runs as 10BaseT Ethernet; no exact grade enum for 10Mbit so grade omitted."
+    },
+    {
+      "name": "Mains IN",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Manual specifies connector as Neutrik TrueOne NAC3MPX (powerCON TRUE1 family locking AC connector); auto-ranging 100-240V 50-60Hz, T8A fuse."
+    },
+    {
+      "name": "USB port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front control-panel USB port shown in fixture exterior-view diagram; manual does not state its exact type/speed or purpose in detail (likely direct firmware/data access), so this is inferred from typical Robe fixture design, not explicitly confirmed in the manual text."
+    }
+  ]
+}

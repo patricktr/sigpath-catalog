@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Absen",
+  "model": "PL3.9 Pro V10",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.usabsen.com/wp-content/uploads/2025/02/PL-Series-Spec-Sheet-PL-Series-Spec-Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Absen PL3.9 Pro V10 (per Absen's own PL-Series Spec Sheet, \"PL3.9 Pro V10\" table): 3.9mm pixel pitch, 500x500x88mm panel, 128x128px, 8.4kg, die-cast aluminum, 4500 nit max brightness, 3840Hz refresh, 14-bit, 7500:1 contrast, 140/100 viewing angle, AC input 100-240V, 680W/m² max / 230W/m² avg power consumption, -20 to +50C operating temp, IP65 (front) / IP54 (rear), rear-serviceable PSU, hanging/stacking install, max rigging qty 20 panels. A double-wide \"PL3.9 Pro XL V10\" variant (500x1000x88mm, 13.7kg, same electro-optical specs) also exists. Older hardware revisions (V2, V3) of \"PL3.9 Pro\" carry different specs (e.g. lower brightness/refresh) — this record is specifically the V10 revision.\n\nPhysical I/O (power/data connectors) are NOT itemized on Absen's spec sheet or product page — these display cabinets don't publish a port/connector table the way AV source/switching gear does. Connector types above are inferred from Absen's official PL-series accessory catalog and user manuals for closely related PL-family products (PL V2 Series and PL Lite Series manuals both state \"network cables and power cables of all series are connected by aviation connector\"; a PL-series \"Main Data Cable\" accessory is CAT5E terminated in Neutrik etherCON NE8MC; Absen's FL outdoor series manual explicitly documents Seetronic SAC3FCA power connectors + Neutrik etherCON data connectors as its \"aviation/etherCON\" connector pairing). No connector in the given enum matches a true circular locking \"aviation\" AC connector, so powercon was chosen as the closest functional analog (locking IP-rated AC connector); the real hardware connector is not a genuine Neutrik powerCON. On-cabinet port silkscreen labels (\"Power In/Out\", \"Data In/Out\") were not independently confirmed for this exact SKU — no cable/connector grade (e.g. eth-100m/1g) is published for the PL3.9 Pro's data link, so grade was omitted per instructions. Given the inference chain, treat connector identities as medium confidence; treat all electro-optical/physical specs as high confidence (sourced directly from Absen's official spec sheet).",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Locking IP65 aviation-style AC power inlet (100-240V AC); closest catalog match to the locking waterproof connector Absen uses (a related Absen outdoor series, FL, documents this connector family as Seetronic SAC3FCA, a powerCON-compatible locking IP65 connector)."
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Power loop-through to daisy-chain the next cabinet; same locking IP65 connector type as Power In."
+    },
+    {
+      "name": "Data In",
+      "direction": "input",
+      "connector": "ethercon",
+      "note": "Locking IP65 Neutrik etherCON (RJ45-based) data input; confirmed by Absen's own PL-series 'Main Data Cable' accessory, which is CAT5E terminated in Neutrik etherCON NE8MC connectors."
+    },
+    {
+      "name": "Data Out",
+      "direction": "output",
+      "connector": "ethercon",
+      "note": "Data loop-through to daisy-chain the next cabinet; same etherCON connector type as Data In."
+    }
+  ]
+}

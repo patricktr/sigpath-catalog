@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Novastar",
+  "model": "MRV366",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.ledcontrolcard.com/download/novastar/specifications/Novastar-MRV366-LED-Receiving-Card-Specifications-V1.2.0.pdf",
+  "confidence": "medium",
+  "notes": "Official Novastar (Xi'an NovaStar Tech Co., Ltd.) \"MRV366 Receiving Card Specifications V1.2.0\" (doc NS110100898, footer branded www.novastar.tech), mirrored/hosted on ledcontrolcard.com — content is the manufacturer's own datasheet. The MRV366 is a bare LED-display receiving-card PCB module (not a rack/enclosure product; no rackUnits set), 145.6x91.5x17.2mm, 100.1g. Physical I/O confirmed from the datasheet's \"Appearance\" diagram: 16x HUB75 connectors (labeled JH1-JH16 in the pinout diagram), dual Gigabit Ethernet ports, and power connector(s). Connector-id caveats: (1) HUB75 is a 16-pin, 2.54mm-pitch IDC box-header/ribbon connector carrying parallel RGB pixel data (HD/HC/HB/HA/HE/HOE/HDCLK/HLAT + GND) — no matching id exists in the provided connector enum, so \"euroblock\" was used as the closest available generic small pluggable-header id (same approximation precedent used elsewhere in this catalog for other Novastar proprietary headers); no bandwidth grade applies. (2) Power input is documented electrically as DC 3.3V-5.0V / 0.5A / 2.5W via a screw-terminal-style \"Power Connector\" per the appearance photo; modeled as one euroblock-dc input port. The datasheet also lists a \"dual power supplies\" monitoring feature (redundant power status detection) which may imply a second physical power input, but the document does not clearly show/label a second distinct power connector, so only one Power In port is included — treat this as a possible under-count. (3) Ethernet: datasheet text says \"adopts the Gigabit Ethernet port\" (singular) but the appearance photo caption shows \"Gigabit Ethernet Ports\" (plural, stacked dual RJ45 jacks), consistent with the documented main/backup loop-cascade redundancy feature — modeled as Ethernet In + Ethernet Out, both eth-1g. (4) A small 5-pin header for an optional cabinet status LCD accessory is mentioned/shown but omitted here as it is a control/status accessory interface rather than a general AV signal or power port.",
+  "ports": [
+    {
+      "name": "HUB75 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "16-pin, 2.54mm IDC pin-header (standard HUB75 parallel RGB data-out to LED module); no matching connector id exists in the enum, euroblock used as closest generic pluggable-header approximation"
+    },
+    {
+      "name": "HUB75 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 9",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 10",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 11",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 12",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 13",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 14",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 15",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "HUB75 16",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Ethernet In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet input from sending card / upstream receiving card; count and in/out roles inferred from the datasheet's dual-RJ45 appearance photo and documented main/backup cascade-loop redundancy feature"
+    },
+    {
+      "name": "Ethernet Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet loop-through output to next cascaded receiving card"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "DC 3.3V-5.0V, 0.5A rated, 2.5W rated power consumption per the datasheet's Electrical Specifications table; shown as a screw-terminal-style connector in the appearance photo. Datasheet also describes a 'dual power supplies' redundancy-monitoring feature that may imply a second physical power input not clearly confirmed/labeled in the document"
+    }
+  ]
+}

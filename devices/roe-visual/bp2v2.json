@@ -1,0 +1,31 @@
+{
+  "manufacturer": "ROE Visual",
+  "model": "BP2V2",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.ledwallcentral.com/manuals/led_wall_manual_series_102.pdf",
+  "confidence": "medium",
+  "notes": "BP2V2 (Black Pearl 2V2) is a modular indoor LED video wall tile (500x500x90mm, 176x176px, 2.84mm pitch), not a traditional rack AV device — rackUnits omitted. Panels daisy-chain: each panel has a Power In/Power Out pair (Neutrik powerCON TRUE1, per the manual's cable table: 'Power cable ... Neutrik_Neutrik Connectors ... Connect the power source and panels' / 'Connect neighboring panels vertically') and a Data In/Data Out pair (Neutrik etherCON, per 'Data cable ... etherCON-etherCON ... Connect the processor and panels' / 'Connect neighboring panels vertically'). Only the first panel in a chain connects to an external processor (data) and power source (via a Weipu CEE-to-Neutrik-True1 mains cable); downstream panels loop through the prior panel's Out ports. Manual figure 3-2 labels the two data jacks simply 'Data' (top and bottom) without explicit In/Out text; I inferred In/Out from their position mirroring the adjacent labeled Power In/Power Out pair — flag this if precision matters. No bandwidth/version is stated for the etherCON data link (it carries ROE's proprietary panel data protocol, not confirmed as standard 1G/2.5G Ethernet), so grade was omitted rather than guessed. Power input rated 100-240VAC, 50-60Hz, <=16A per panel (equipment must be earthed). Source used is ROE Visual's own 'BO & BP Series User Manual' v1.8 (2023-10-08) — authoritative and ROE-authored — but only reachable via a third-party mirror (ledwallcentral.com) rather than roevisual.com directly, hence medium rather than high confidence. The manufacturer's own roevisual.com product page and 2021 spec-sheet PDF list performance specs (brightness, refresh rate, power draw, weight) but do not document connector types at all. Minor cross-source discrepancy: the 2021 spec PDF lists max/avg power as 185W/92W while the 2023 manual lists 190W/95W for the same BP2V2 — likely a spec revision, unrelated to I/O.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon"
+    },
+    {
+      "name": "Data In",
+      "direction": "input",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Data Out",
+      "direction": "output",
+      "connector": "ethercon"
+    }
+  ]
+}

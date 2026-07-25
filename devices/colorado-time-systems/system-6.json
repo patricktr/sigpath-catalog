@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Colorado Time Systems",
+  "model": "System 6",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://coloradotime.com/hubfs/CTS%20Website%20%20Assets/Manuals/Swim%20Timing%20Components/System6/System_6_Swimming_Manual_F890.pdf",
+  "confidence": "medium",
+  "notes": "Source: Colorado Time Systems, \"Swimming 6\" Software User Guide for the System 6 Sports Timer (Part No. F870, Rev. 2024-11-07), section \"System 6 Back Panel\" / Figure 2-H \"System 6 I/O Panel,\" official manual hosted at coloradotime.com. Cross-checked against the manufacturer's System 6 product brochure (Rev 03/19, also distributed by dealer scoreboards.com) for physical dimensions, weight, power, and USB details.\n\nProduct is a swim/dive/water-polo/pace-clock timing and scoring console, not conventional broadcast/display AV gear, so several ports required approximation against the given AV-oriented connector taxonomy (flagged per-port above): the external power DIN, Judges I/O DIN, PS/2 mouse/keyboard mini-DIN, and parallel printer port all lack exact matches in the allowed connector list.\n\nOMITTED from the port list: the console's primary signal inputs — Near-End and Far-End touchpad/start-system/backup-button cable-harness connectors (multiple large proprietary multi-pin connectors per the I/O-panel diagram, covering lanes 1-10 plus extra connectors for lanes 11-12 and a duplicate near/far pair for a second backup timer). These use a proprietary Colorado Time Systems multi-pin harness connector with no reasonable match among the allowed connector ids, so including them would have required a misleading choice.\n\nPhysical form factor: desktop/portable clamshell unit (laptop-like, hinged screen over keyboard), not rack-mountable — 9.75\" x 18.38\" x 11.5\" (H x W x D), 10 lbs, durable molded plastic construction, UL certified. rackUnits omitted accordingly.\n\nPower (per brochure, for the external AC-DC power brick that feeds the console's DIN power input): 120/220V, 50/60Hz, 0.8A. Includes an internal rechargeable battery for power-outage backup.\n\nNo bandwidth/version grades apply to any listed port (no HDMI/SDI/DisplayPort/USB-speed/Ethernet-speed figures are stated anywhere in the source), so grade was omitted throughout per instructions.\n\nColorado Time Systems has since introduced a newer \"Gen 7\" console line; System 6 appears to be a legacy/still-supported product (software user guide revised as recently as November 2024).",
+  "ports": [
+    {
+      "name": "External Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Console manual specifies a DIN connector from an approved external 15V DC power supply (P/N R-920-004); mapped to dc-barrel as the closest listed DC-power connector — actual plug is a locking DIN, not a coaxial barrel jack."
+    },
+    {
+      "name": "Judges I/O",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "DIN connector accepting input from judging expansion hardware (e.g. diving wireless judging interface) and other sport expansion I/O; mapped to midi-din as the closest DIN-family option — not an actual MIDI port."
+    },
+    {
+      "name": "Scoreboard",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Manual describes a locking quarter-inch (6.35mm) jack carrying proprietary serial scoreboard data, not audio."
+    },
+    {
+      "name": "COM Port 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub RS-232 serial port for a computer running meet management software."
+    },
+    {
+      "name": "COM Port 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub RS-232 serial port used for TV broadcast data output. Not present on units built after 2024-11-07 per the manual."
+    },
+    {
+      "name": "Printer Port",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Manual states this is a standard IBM PC parallel (Centronics/DB-25) port. No parallel-port connector exists in the given taxonomy; approximated to rs232 (closest D-sub family) — physical connector actually has 25 pins."
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Standard VGA output mirroring the console's own screen to an external monitor."
+    },
+    {
+      "name": "Mouse",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Standard IBM PC PS/2 mouse connector (6-pin mini-DIN); approximated to midi-din as the closest DIN-family connector in the taxonomy — not an actual MIDI port."
+    },
+    {
+      "name": "Keyboard",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Standard IBM PC PS/2 keyboard connector (6-pin mini-DIN); approximated to midi-din as the closest DIN-family connector in the taxonomy — not an actual MIDI port."
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Used for storage to a USB device or to connect a USB printer (newer units)."
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Used for online software updates. Link speed not stated in source, so no bandwidth grade set."
+    }
+  ]
+}

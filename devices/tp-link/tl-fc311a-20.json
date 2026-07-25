@@ -1,0 +1,29 @@
+{
+  "manufacturer": "TP-Link",
+  "model": "TL-FC311A-20",
+  "category": "network",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.omadanetworks.com/us/business-networking/omada-accessory-media-converter/tl-fc311a-20/",
+  "confidence": "high",
+  "notes": "TL-FC311A-20 is a single-strand (WDM) Gigabit Ethernet-to-fiber media converter, not an AV-specific device — closest listed category/type is network/Encoder-Decoder since no \"Media converter\" type exists in the allowed list. It is an \"A\" unit of a WDM pair (mates with a TL-FC311B-20 at the far end); TX/RX wavelengths are reversed on the B unit. The fiber port is physically an SC connector (single-mode, 9/125um, bidirectional over one fiber, 20km max) — mapped to \"fiber-lc\" only because SC is not among the allowed connector ids; treat as SC in practice. RJ45 port is 10/100/1000Mbps auto-negotiating with Auto-MDI/MDIX, graded eth-1g. Power is via an included external adapter (5V/0.6A); TP-Link's spec page does not state the DC barrel plug dimensions, so dc-barrel is inferred (standard for this device class) rather than confirmed. Desktop unit, not rack-mountable on its own (optional TL-FC1420 rack-mount tray available for multiple units), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SC (WDM Fiber)",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Physical connector is single-strand SC, single-mode 9/125um WDM (TX 1550nm / RX 1310nm), up to 20km. 'fiber-lc' chosen as closest allowed id since SC is not in the connector list."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter rated 5V/0.6A; connector barrel size not published on the product page."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXCWAPT",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.shure.com/en-US/docs/guide/MXCW",
+  "confidence": "high",
+  "notes": "Source: official Shure MXCW system User Guide (covers the MXCWAPT Access Point Transceiver), which lists the full Specifications table used here. The MXCWAPT has no dedicated power inlet — it is powered exclusively via PoE through its single RJ45 Ethernet port, which simultaneously carries Gigabit Ethernet, Dante audio, and control traffic. Desktop/ceiling/wall/stand-mounted unit (mounting bracket included), not rack-mountable, so rackUnits is omitted. Regional SKU variants exist (e.g. MXCWAPT-A for US) but I/O is identical across variants. Category/type were chosen as the closest fit (audio / Audio interface) since MXCWAPT is a wireless-to-Dante audio access point/hub rather than a pure microphone.",
+  "ports": [
+    {
+      "name": "Analog XLR Audio Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced line/aux level input, standard XLR pinout (1=ground, 2=audio+, 3=audio-), female XLR"
+    },
+    {
+      "name": "Analog XLR Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced output, 3-pin male XLR, standard pinout"
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ45 port carries Gigabit network, Dante digital audio (10 in/10 out channels), device control, and Power over Ethernet (PoE, 37-57V, 12.95W max) — no separate power connector on the unit. Cat5e or higher, 100m max cable length. Link speed spec lists 10/100/1000 Mbps but 1 Gbps is required for digital audio routing per the manual."
+    }
+  ]
+}

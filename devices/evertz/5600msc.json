@@ -1,0 +1,102 @@
+{
+  "manufacturer": "Evertz",
+  "model": "5600MSC",
+  "category": "control",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://cvp.com/pdf/560x_msc_manual.pdf",
+  "confidence": "medium",
+  "notes": "Evertz 5600MSC (Master Sync/Clock Generator, i.e. Master SPG + Master Clock) is a DISCONTINUED product; Evertz's own site no longer hosts a live product/spec page for it and its \"Discontinued Products\" listing shows it replaced by the 5700MSC-IP. Source used is Evertz's own Instruction Manual (Rev 1.6, Apr 2006), mirrored/hosted by reseller CVP (cvp.com/pdf/560x_msc_manual.pdf) since Evertz's site redirects 5600MSC searches to the newer 5800MSC/5700MSC-IP pages. All port names/pinouts/specs above are taken directly from the manual's Rear Panel (§2.1) and Specifications (§4.1) sections, so the data itself is authoritative; confidence is set to \"medium\" rather than \"high\" only because (a) the manufacturer's own live webpage is unavailable and (b) several connector-id choices are approximations forced by the fixed connector enum (see per-port notes for MODEM/AUX I/O/GPS).\n\nPorts listed reflect the standard/base rear panel as pictured in the manual (Fig 2-1), which includes cutouts for GPS, MODEM, ETHERNET, COM and AUX I/O even though GPS requires the +G option, MODEM requires the M option, and NTP-server function on the Ethernet port requires the T option (the RJ45 jack itself and VistaLINK-C config are standard).\n\nNOT included above (add-on test-signal-generator modules, omitted as they are optional and not part of the core sync/clock function):\n- STG option (analog + SD-SDI test generator): adds ANALOG TG OUT (BNC), AES OUT (BNC, unbalanced AES3 tone), DARS OUT (BNC), a DARS/AES/ANALOG 12-pin balanced terminal strip (euroblock-style), 2x SD SDI TG OUT (BNC, SMPTE 259M-C) and 2x SD SDI BLACK (BNC).\n- HTG option (HD-SDI test generator): adds TG GEN LOCK (BNC, genlock input), 2x HD SDI TG OUT (BNC, SMPTE 292M) and 2x HD SDI BLACK (BNC).\n- 2PS option: adds a second AC IN (IEC) inlet for redundant power.\n\nNo graded (bandwidth-versioned) SDI or HDMI ports exist on the base unit's sync/timing I/O since GENLOCK/SYNC/10MHz BNCs all carry analog reference signals (colour black / tri-level sync / sine wave), not digital SDI, so no sdi-* grade applies to them per the instructions. Ethernet is graded eth-100m (Fast Ethernet, its top supported speed; it also falls back to 10Base-T).",
+  "ports": [
+    {
+      "name": "10 MHz IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "10 MHz OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "GENLOCK",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 5",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SYNC 6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "LTC OUT",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Menu-configurable RS-232 or RS-422; used for firmware upload, PC control, or Synchro-mode link between two 5600MSC units"
+    },
+    {
+      "name": "GPS",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "9-pin D proprietary differential serial + 1PPS + 17VDC power interface to Trimble Accutime 2000 GPS smart antenna (G option); mapped to rs422 as closest connector id"
+    },
+    {
+      "name": "MODEM",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically an RJ11 telephone jack (300 baud Bell 103 modem, M option); RJ11 is not in the allowed connector list so RJ45 is used as the closest id"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10Base-T/100Base-TX (Fast Ethernet); used for VistaLINK-C configuration and, with T option, RFC-1305 NTP server"
+    },
+    {
+      "name": "AUX I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D combining 2x GPI in, 2x GPO out, and a secondary LTC output plus a copy of the primary LTC output; not an RS-232 data port — mapped to rs232 only because it shares the DB9 shell shape (closest available id)"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Autoranging 100-240VAC 50/60Hz, 90W max, 1A time-delay fuse. A second IEC inlet is available with the optional 2PS redundant power supply but is not fitted standard"
+    }
+  ]
+}

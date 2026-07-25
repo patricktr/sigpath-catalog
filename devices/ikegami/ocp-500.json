@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Ikegami",
+  "model": "OCP-500",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1912394-REG/ikegami_ocp_500_operation_control_panel.html",
+  "confidence": "medium",
+  "notes": "Ikegami OCP-500 is a compact desktop \"Operation Control Panel\" for controlling Ikegami camera systems (e.g. UNICAM/HDK-X500) via a BSX-100 base station, supporting up to 48 cameras. Two mechanical variants exist with the same connector set: Joystick model (W82 x H354 x D129.2mm) and VR/dial model (W82 x H354 x D82.6mm); weight ~1.2kg. It is a tabletop/panel-mount unit, not rack-mountable, so rackUnits is omitted. Power/dimension specs (manufacturer, high confidence) came from the official Ikegami USA product page (https://www.ikegami.com/product/detail/800/), which lists \"+12 V DC (+10 to +18 V DC)\" power and max cable lengths of 60m (CP/serial \"ICCP\" cable) and 100m (Ethernet/PoE) but does not itemize physical connectors. The connector list (RJ45 Ethernet/PoE, ICCP connector, DB9 Arcnet, 12-18VDC input) came from B&H Photo's spec table for the same product (secondary/reseller source), which also notes the product is discontinued/special-order there. No SDI/HDMI/DP/USB/RJ45 bandwidth grade is stated anywhere, so grade is omitted on all ports (the Ethernet port carries only control traffic + PoE, no stated line speed). Connector types for the ICCP port and the DB9 Arcnet port are approximations to the closest allowed enum values (rs422 / rs485 respectively) since neither source gives an exact pin/shell spec; the DC input's physical connector shape (barrel jack vs. a locking multi-pin type) is likewise unconfirmed and given as dc-barrel by default. Region/variant naming may differ slightly between Ikegami USA, Ikegami Japan, and Ikegami Europe (ikegami.de) sites, though all reviewed sites reported identical core specs.",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet control link to BSX-100 base station / camera system; also carries PoE power to the panel. Speed/grade not stated by source."
+    },
+    {
+      "name": "ICCP",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Ikegami camera-control-protocol serial link ('CP cable', max 60 m per manufacturer spec). Exact physical connector shape not confirmed by source; mapped to closest available connector type (RS-422 serial)."
+    },
+    {
+      "name": "Arcnet",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "DB9 connector carrying ARCNET camera-control-network signaling. DB9 is not in the allowed connector list; mapped to closest match (RS-485-style serial)."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "+12 V DC (+10 to +18 V DC per Ikegami; listed as 12-18 VDC by B&H), alternate power source to PoE. Exact connector shape (barrel vs. locking multi-pin such as Hirose/XLR4-DC common on broadcast accessories) not confirmed by source."
+    }
+  ]
+}

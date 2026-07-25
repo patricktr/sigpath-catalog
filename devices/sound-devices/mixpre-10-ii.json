@@ -1,0 +1,151 @@
+{
+  "manufacturer": "Sound Devices",
+  "model": "MixPre-10 II",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://cdn.sounddevices.com/wp-content/uploads/2022/01/MixPre-II-User-Guide_01.04.22.pdf",
+  "confidence": "high",
+  "notes": "Sourced primarily from Sound Devices' official MixPre II Series User Guide (Rev 4-D, 01/22), which includes a dedicated panel-view diagram and specifications table for the MixPre-10 II specifically. Device has 8 identical mic/line combo inputs (numbered 1-8 on the front-panel gain knobs); listed individually. Two connector types required best-fit mapping to the allowed id list: the rear-panel power input is a locking 4-pin Hirose connector (mapped to xlr4-dc, the closest available id — not a true XLR); the L/R analog line outputs use TA3 (3-pin mini-XLR) connectors (mapped to xlr3, the closest available id — physically smaller than full-size XLR3). The camera-trigger timecode input is Micro-HDMI per the spec sheet (\"HDMI (micro)\"), not full-size HDMI. Two BNC ports are menu-switchable between LTC timecode and word clock, not SDI video, so no SDI grade was applied. USB-A grade (usb-2.0) is inferred from the device's overall \"Class-compliant USB 2.0 high speed\" spec rather than a USB-A-specific statement. Not included as ports: the SD card slot and the battery-sled contacts (AA/L-mount), since neither is a connector type in the provided id list. Device is a handheld/portable field recorder-mixer, not rack-mountable (rackUnits omitted). Dimensions 36 x 206 x 175 mm, 0.91 kg unpackaged.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Female XLR / 1/4\" TRS combo jack, mic or line level"
+    },
+    {
+      "name": "Aux/Mic/Timecode Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Menu-selectable: unbalanced stereo audio, plug-in-power mic, or LTC timecode"
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm TRS stereo unbalanced, 300mW+300mW"
+    },
+    {
+      "name": "X1/X2 Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo 3.5mm female, routing set in Outputs menu (X1=tip, X2=ring)"
+    },
+    {
+      "name": "TA3 Output L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin mini-XLR (TA3) balanced line output, +18dBu max; closest listed connector is xlr3 (true connector is TA3, smaller than full-size XLR3)"
+    },
+    {
+      "name": "TA3 Output R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin mini-XLR (TA3) balanced line output, +18dBu max; closest listed connector is xlr3 (true connector is TA3, smaller than full-size XLR3)"
+    },
+    {
+      "name": "BNC Timecode/Word Clock Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Menu-selectable LTC timecode output or word clock output; not a video/SDI signal so no bandwidth grade applies"
+    },
+    {
+      "name": "BNC Timecode/Word Clock Input",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Menu-selectable LTC timecode input or word clock input; not a video/SDI signal so no bandwidth grade applies"
+    },
+    {
+      "name": "HDMI TC Input",
+      "direction": "input",
+      "connector": "micro-hdmi",
+      "note": "Spec sheet lists this as \"HDMI (micro)\" — receives HDMI timecode/record-start-stop flag from compatible cameras, not a video passthrough"
+    },
+    {
+      "name": "USB-A Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB keyboard/X-Keys, thumbdrive auto-copy, 3rd-party USB control surfaces, USB hub; USB 2.0 speed inferred from device's overall \"Class-compliant USB 2.0 high speed\" spec"
+    },
+    {
+      "name": "USB-C Port",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB audio interface (12-in/4-out) and mass storage; explicitly spec'd as USB 2.0 high speed. Also used to power the unit"
+    },
+    {
+      "name": "4-Pin Hirose DC Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Actual connector is a locking 4-pin Hirose DC power connector (10-17V), not true XLR; xlr4-dc is the closest listed id. Included XL-WPH3 AC adapter (45W, Hirose 4-pin out, detachable IEC power cord) connects here"
+    }
+  ]
+}

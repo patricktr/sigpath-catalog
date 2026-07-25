@@ -1,0 +1,29 @@
+{
+  "manufacturer": "ADAM Audio",
+  "model": "T7V",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.adam-audio.com/content/uploads/2020/10/adam-audio-t-series-user-manual-english.pdf",
+  "confidence": "high",
+  "notes": "Powered 2-way nearfield studio monitor (built-in Class D amps: 20W tweeter / 50W woofer), not rack-mountable (desktop/stand-mounted), so rackUnits omitted. Rear panel also has non-connector controls (Level knob, HF and LF 3-way shelving switches ±2dB, +4dBu/-10dBV input-select switch, power on/off rocker) which are not physical I/O ports and were excluded. The IEC power inlet is the standard 3-conductor IEC-320 type used for detachable AC cords (manual does not further specify C13/C14 designation, but this is the ubiquitous IEC C13/C14 style used on virtually all such gear). Source: official ADAM Audio T-Series (T5V/T7V/T8V) Operation Manual, rear-panel diagram (page 10-11) and audio connections section (page 12), cross-checked against the manufacturer product page (adam-audio.com/en/t-series/t7v/) which corroborates the XLR/RCA input impedances and 132W max power consumption.",
+  "ports": [
+    {
+      "name": "Bal. in",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog input, +4 dBu nominal, 10 kOhm input impedance. Pin 1 GND, Pin 2 Signal+, Pin 3 Signal-."
+    },
+    {
+      "name": "Unbal. in",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced analog input, -10 dBV nominal, 20 kOhm input impedance. A rear-panel 2-way switch selects which of the two (XLR or RCA) is active."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Standard 3-prong IEC AC power receptacle (detachable cord). Auto-sensing 100-240V~ 50/60Hz, 132W max. Earthed/grounded mains connection required."
+    }
+  ]
+}

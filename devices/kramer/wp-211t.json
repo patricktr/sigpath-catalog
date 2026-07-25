@@ -1,0 +1,33 @@
+{
+  "manufacturer": "Kramer",
+  "model": "WP-211T",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www1.kramerav.com/product/wp-211t",
+  "confidence": "high",
+  "notes": "Manufacturer product/spec page (Kramer, redirects from kramerav.com to www1.kramerav.com), cross-checked against Kramer's own connector diagram image (kramer_wp-211t_connection_diagram.jpg) which labels the front panel \"INPUT 1\"/\"INPUT 2\" HDMI jacks and the rear board \"HDBT OUT\" RJ-45 plus a 2-pin captive screw terminal labeled \"GND / +5V\". This is a 1-gang in-wall device, not rack-mountable (rackUnits omitted). HDMI grade set to hdmi-2.0 per manufacturer's explicit \"HDMI 2.0 and HDCP 2.2 compliant\" statement (max 4K@60Hz 4:2:0, HDCP 2.2, does not support HDCP-1.4 conversion); the stated 8.91Gbps max data rate reflects the specific 4K60(4:2:0) mode rather than full HDMI 2.0 18Gbps ceiling. The HDBT Out RJ-45 carries HDBaseT video/audio/control (manufacturer lists it under \"Outputs\") — grade omitted since HDBaseT has no defined grade scale in this system, but note it is also a PoE acceptor (draws power from a PoE-capable HDBaseT link over that same RJ-45) in addition to/instead of the local GND/+5V DC terminal; power consumption 780mA (local) or 9W (via PoE). No RS-232/IR ports on this transmitter model (present on companion receivers like TP-789R, not on WP-211T itself). Two physical SKUs share identical electrical I/O: WP-211T/US(W/B) (US 1-gang Decora, reviewed here) and WP-211T/EU-80/86(W) (EU/UK frame) — only frame/faceplate size differs, confirmed via Kramer's own configuration images.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDBT Out",
+      "direction": "output",
+      "connector": "hdbaset"
+    },
+    {
+      "name": "GND / +5V",
+      "direction": "input",
+      "connector": "euroblock-dc"
+    }
+  ]
+}

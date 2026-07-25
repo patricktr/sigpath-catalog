@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Aputure",
+  "model": "LS 600d Pro",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://aputure.com/en-US/products/ls-600d-pro",
+  "confidence": "high",
+  "notes": "Aputure LS 600d Pro is a professional daylight-balanced LED film/video light (Bowens-mount head + separate control box), not a conventional AV signal-chain device — no category/type in the taxonomy fits well, so category=\"other\"/type=\"Other\" was used. Not rack-mountable (handheld control box on a light-stand quick-release clamp), so rackUnits omitted. Primary source: Aputure's official LS 600d Pro Product Manual (English), which includes labeled control-box front/back panel diagrams — accessed via its FCC filing mirror (fccid.io/2AABZ-LS600DPRO) since it is the same document Aputure publishes; cross-checked against Aputure's live product page (aputure.com/en-US/products/ls-600d-pro) and the LS 600d Pro Control Box page. The control box also has a mechanical V-Mount or Gold-Mount (Anton Bauer) battery plate that is itself a power input, but that connector type isn't in the provided connector taxonomy (it's a proprietary blade/clip battery mount, not XLR/barrel/etc.), so it was omitted as a discrete port rather than mis-mapped; batteries: 14.4V-28.8V, ≥180Wh. No HDMI/SDI/video ports exist on this device — it is a lighting fixture, and its only \"signal\" I/O is DMX and Ethernet for lighting control. IP54 weatherproof rating with rubber port covers on all connectors.",
+  "ports": [
+    {
+      "name": "PowerCON Power Input",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON female locking connector, AC 100-240V 50/60Hz, ≤720W draw, on the control box"
+    },
+    {
+      "name": "Battery Input (DC)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "48V/15A DC input for external power stations, per control-box rear panel diagram in the official product manual; pin count (3-pin XLR) corroborated by Aputure's own product page and CineD's LS 600d launch article rather than shown explicitly in the manual diagram"
+    },
+    {
+      "name": "5-Pin XLR Power Output",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "Proprietary 5-pin XLR head-cable output on the control box that feeds power + control data to the lamp head via the supplied 5-pin male-to-female cable; not a DMX or audio signal"
+    },
+    {
+      "name": "DMX IN",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "DMX512 5-pin XLR input for daisy-chaining/controlling the fixture from a DMX console"
+    },
+    {
+      "name": "DMX OUT",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 5-pin XLR output for daisy-chaining additional fixtures"
+    },
+    {
+      "name": "RJ45 Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Wired Ethernet for Art-Net/sACN control (one of 4 control systems: Bluetooth, 2.4G, LumenRadio, Ethernet); link speed not stated in manual so grade omitted"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled 'USB Port' on the control box side panel in the manual diagram; exact USB type (A vs C) and function (firmware update, etc.) not spelled out in text, USB-A inferred from the diagram icon shape — treat as medium-confidence detail within an overall high-confidence source"
+    }
+  ]
+}

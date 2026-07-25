@@ -1,0 +1,34 @@
+{
+  "manufacturer": "Televic",
+  "model": "Confidea F-DIV",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.televic-conference.fr/wp-content/uploads/2023/10/Fiche-technique-ConfideaF-DIV-EN.pdf",
+  "confidence": "high",
+  "notes": "Official Televic Conference datasheet (SKU 71.98.0504 / 71.98.2000), v1.0, 26 March 2021 — fetched from Televic's own regional site (televic-conference.fr). The unit is Plixus-powered over the RJ45 network cabling (48 VDC, 4.5 W) with no separate discrete power connector, so no power port is listed. The microphone input uses Televic's proprietary screw-lock connector (not literal XLR) — mapped to xlr3 as the closest taxonomy match. No bandwidth/link-speed grade is stated for the RJ45 Plixus network ports, so grade is omitted per instructions. Device is a tabletop/flush-mount delegate panel (discussion + simultaneous interpretation + voting), not rack-mountable, so rackUnits is omitted. No \"delegate/interpretation panel\" category exists in the given type enum, so type is set to Other; category is set to audio as the closest fit (integrated speaker, mic input, headphone output, interpretation audio).",
+  "ports": [
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Proprietary Televic screw-lock gooseneck mic connector (accepts D-MIC30SL/40SL/50SL, sold separately) — closest standard connector in the taxonomy, not a literal XLR."
+    },
+    {
+      "name": "Network 1 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Plixus network loop-through port; also delivers power to the unit (Plixus-powered, no separate power connector). Datasheet does not state a link-speed grade."
+    },
+    {
+      "name": "Network 2 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ45 for daisy-chain loop-through cabling. Datasheet does not state a link-speed grade."
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-3.5"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Telos",
+  "model": "Zephyr Xstream",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.telosalliance.com/legacy/telos-zephyr-xstream",
+  "confidence": "medium",
+  "notes": "Telos Zephyr Xstream is a legacy ISDN/IP audio codec (broadcast remote-contribution audio transceiver) originally from Telos Systems, now archived under Telos Alliance's \"legacy\" product line. It ships in two form factors: a 1U rackmount unit (this entry) and a portable Xstream MX/MXP with a 4-channel mixer front end that has different rear I/O (fewer combo inputs, added local monitor outputs) — do not conflate the two. AES/EBU digital I/O is rackmount-only. Livewire AoIP and remote control both run over the single 100Base-T Ethernet RJ-45 port rather than a dedicated Livewire jack. ISDN S (8-pin RJ-45-style) and ISDN U (6-pin RJ-11) telephony jacks have no exact match in the given connector taxonomy (no ISDN/RJ11 option) so both were mapped to the closest available (rj45); no bandwidth grade was set since ISDN framing doesn't belong on the Ethernet grade scale. Likewise the 25-pin D-Sub parallel GPIO (8 contact-closure in / 8 out) port has no matching connector in the taxonomy and was mapped to the closest available (rs232) — it is physically and electrically a different connector from the true RS-232 D-Sub port. An optional V.35/X.21 synchronous data interface card (two ports) exists for the rackmount unit but was omitted as a non-standard add-in option. Specs were assembled from Telos Alliance's official legacy product page plus the Zephyr Xstream user manual and a broadcast-equipment retailer (BS Broadcast) spec listing, since no single page fully itemized the rear panel; confidence is medium rather than high because of this cross-referencing and the RJ11/GPIO connector substitutions.",
+  "ports": [
+    {
+      "name": "Input 1 (Send to Network)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS balanced analog input"
+    },
+    {
+      "name": "Input 2 (Send to Network)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS balanced analog input"
+    },
+    {
+      "name": "Output 1 (Receive from Network)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog output, XLR male"
+    },
+    {
+      "name": "Output 2 (Receive from Network)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog output, XLR male"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Rackmount version only; 32/44.1/48kHz"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Rackmount version only; 32/44.1/48kHz"
+    },
+    {
+      "name": "AES Sync In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "110-ohm balanced XLR house reference/word-clock input, separate from main AES I/O pair"
+    },
+    {
+      "name": "Ethernet / Livewire",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T; carries Livewire AoIP and remote control on the same port (no separate Livewire jack)"
+    },
+    {
+      "name": "ISDN S Interface",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "8-pin RJ-45-style ISDN S/T jack for external NT1 (worldwide use); connector taxonomy has no ISDN-specific option so mapped to closest (rj45); no Ethernet-style bandwidth grade applies"
+    },
+    {
+      "name": "ISDN U Interface",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual jack is 6-pin RJ-11 (built-in NT1, US/Canada use); RJ-11 is not in the connector taxonomy, mapped to closest available (rj45)"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-Sub female, wired as DCE; remote control and ancillary data"
+    },
+    {
+      "name": "Parallel GPIO (8 In / 8 Out)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a 25-pin D-Sub contact-closure/GPIO port, not RS-232; no matching connector exists in the taxonomy, mapped to closest available (rs232)"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal internal supply, 100-240VAC 50/60Hz, IEC inlet with power switch"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "manufacturer": "Harmonic",
+  "model": "Spectrum X (VSX2), 1RU",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.harmonicinc.com/hubfs/datasheet/spectrum-x.pdf",
+  "confidence": "medium",
+  "notes": "Spectrum X (branded \"VSX2\" in the current datasheet) is a modular, software-licensed broadcast media server, not a fixed-port device — exact SDI channel/port function is field-configurable (Standard/Enhanced/UHD channel mode), and several IP ports are optional add-in modules rather than standard-fit. Data reflects the 1RU chassis variant; a 2RU variant exists with different Ethernet mix (four 1GE mgmt instead of 10GE), optional 25GE SMPTE 2110 I/O, and UHD 12G-SDI support that the 1RU chassis does not carry (1RU tops out at 3G-SDI per the datasheet's raster table). SDI/reference/AES/LTC connectors are documented in the installation manual as DIN 1.0/2.3 mini-coax reached via an SDI/Reference breakout cable off a 60-pin DSUB card connector — mapped to \"bnc\" as the closest listed connector id since DIN 1.0/2.3 isn't in the enum. GPIO and PSU inlet exact connector shapes were not explicitly stated in the sources reviewed and are best-guess closest matches. Port-level detail was cross-checked against the official Harmonic installation manual as hosted on ManualsLib (manufacturer content, third-party host) since Harmonic's own site does not publish the full installation manual for public download.",
+  "ports": [
+    {
+      "name": "I/O 1 (Ext. Input 1 / Key 1)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Standard Channel Mode. Actual connector is DIN 1.0/2.3 mini-coax, not full-size BNC — closest listed connector used."
+    },
+    {
+      "name": "I/O 2 (Ext. Input 2 / Fill 1)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 3 (Ext. Input 3)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 4 (Output, Primary)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 5 (Ext. Input 4 / Key 2)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 6 (Ext. Input 5 / Fill 2)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 7 (Ext. Input 6)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax."
+    },
+    {
+      "name": "I/O 8 (Output, Secondary)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax. All 8 SDI I/O connectors are on a single card breaking out from a 60-pin DSUB via SDI breakout cable; function per position is field-configurable and channel-mode-dependent."
+    },
+    {
+      "name": "Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog black burst / reference input, part of Reference Breakout Cable off the DSUB-60 connector."
+    },
+    {
+      "name": "MF1 (Ch A AES/LTC In)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Combined-function breakout lead: wired for either AES3 audio in or LTC in per Standard Channel Mode. Physical connector style unconfirmed beyond 'multi-function I/O' coax lead."
+    },
+    {
+      "name": "MF2 (Ch A LTC Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Multi-function breakout lead."
+    },
+    {
+      "name": "MF3 (Ch B AES/LTC In)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Multi-function breakout lead."
+    },
+    {
+      "name": "MF4 (Ch B LTC Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Multi-function breakout lead."
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Automation/VDCP control (Polaris Play, Oxtel protocol, VDCP), broken out from DSUB-60."
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "General-purpose tally/relay I/O broken out from DSUB-60; exact physical connector style on the adapter cable unconfirmed — euroblock chosen as closest terminal-style match."
+    },
+    {
+      "name": "10GbE Mgmt 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "One of four fixed 10GE ports (1RU chassis) for SystemManager, file transfer, and API control."
+    },
+    {
+      "name": "10GbE Mgmt 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GbE Mgmt 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GbE Mgmt 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "Server Interface (GbE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Private, point-to-point, non-switchable gigabit Ethernet link to a MediaDirector or MediaCenter server."
+    },
+    {
+      "name": "IP I/O 1 (NDI, 10GE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Optional add-in module — one of dual 10GE ports for NDI I/O. Copper vs SFP+ fiber not confirmed in public docs."
+    },
+    {
+      "name": "IP I/O 2 (NDI, 10GE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Optional add-in module."
+    },
+    {
+      "name": "IP I/O 1 (MediaGrid, 10GE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Optional add-in module — dual 10GE ports for Ingest/Play from Harmonic MediaGrid."
+    },
+    {
+      "name": "IP I/O 2 (MediaGrid, 10GE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Optional add-in module."
+    },
+    {
+      "name": "Power Supply 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual, redundant, hot-swappable PSU (1 of 2). 1RU rated 550W typical / 800W max. Exact IEC inlet variant (C13/C14 vs C19/C20) not stated in public docs."
+    },
+    {
+      "name": "Power Supply 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant hot-swappable PSU (2 of 2)."
+    }
+  ]
+}

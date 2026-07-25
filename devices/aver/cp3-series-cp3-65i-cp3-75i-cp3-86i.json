@@ -1,0 +1,116 @@
+{
+  "manufacturer": "AVer",
+  "model": "CP3 Series (CP3-65i / CP3-75i / CP3-86i)",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://presentation.aver.com/model/cp3",
+  "confidence": "medium",
+  "notes": "Official AVer manufacturer datasheet (2018) for the CP3 Series interactive flat panel, sold in three screen sizes with identical I/O layout: CP3-65i (65\"), CP3-75i (75\"), CP3-86i (86\"). Differences between sizes are limited to brightness (450 vs 400 cd/m2 on the 86i), response time, and power consumption (180W/330W/380W respectively) — not I/O. Category/type set as a large-format touch Display (education interactive flat panel), not a typical AV rack device — desktop/wall-mount, no rackUnits. Two ports were omitted because no matching connector id exists in the schema: 1x MicroSD card reader and 2x Wi-Fi antenna ports (also 1x unlabeled \"Firmware upgrade port\" service connector was omitted for the same reason). HDMI inputs are HDCP-licensed but no HDMI version (1.4/2.0/2.1) is stated, so grade was omitted per instructions. Several analog jack sizes (Audio In, Mic In, Audio Out) and the SPDIF connector type (optical vs coax) were not explicitly specified in the datasheet and were inferred from typical AVer/display convention — flagged individually. The AC power connector type is likewise not explicitly stated (only \"Power cable x1\" listed as an included accessory) and was inferred as IEC. Source PDF datasheet: https://presentation.aver.com/DownloadFile.ashx?n=2035&t=ModelDataSheet (dated 201811).",
+  "ports": [
+    {
+      "name": "HDMI In (Front)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 1 (Rear)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 2 (Rear)",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Type-C (AV In + Touch)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C alt-mode video input plus touch data return"
+    },
+    {
+      "name": "USB-B Touch (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "USB-B Touch 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "USB-B Touch 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "USB-B Touch 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "USB 3.0 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "PC Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "jack size inferred (3.5mm), datasheet only labels it 'Audio in'"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "jack size inferred (3.5mm)"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "jack size inferred (3.5mm)"
+    },
+    {
+      "name": "SPDIF Out",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "optical vs coaxial not specified in datasheet; assumed optical Toslink"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Gigabit LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "connector type not explicitly stated in datasheet (only 'Power cable x1' listed as accessory); inferred IEC based on typical commercial-display practice at this power draw (180-380W)"
+    }
+  ]
+}

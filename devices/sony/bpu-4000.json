@@ -1,0 +1,215 @@
+{
+  "manufacturer": "Sony",
+  "model": "BPU-4000",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.bhphotovideo.com/lit_files/1327865.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Sony's official BPU-4000 Operation Manual (1st Edition, Revised 6), a 46-page PDF hosted at B&H's product listing for this item — this is Sony's authoritative manual content, not a retailer-authored spec table. The manual's official \"Specifications\" table (connector counts + SMPTE format/bandwidth data) was cross-checked against the \"Rear Panel\"/\"Front Panel\" narrative descriptions and diagram labels; both agree. One nuance: the spec table's summary line for each SLOT1/SLOT2 bank (\"12G-SDI/6G-SDI/3G-SDI/HD-SDI selectable\") reads as if all 8 BNCs per slot support 12G, but the manual's connection-example text explicitly limits 12G/6G output to only SDI OUT 1 and SDI OUT 2 of each slot (and only on units with serial numbers 15001-29999, 35001+, or hardware/software-upgraded units) — graded accordingly (OUT1/OUT2 = sdi-12g, OUT3-8 = sdi-3g). Dimensions (from manual diagram): approx. 482 x 66 x 424 mm (19 x 2-5/8 x 16-3/4 in, W x H x D), with a secondary depth figure of 395mm (likely excluding rear protrusions); mass approx. 7.1 kg (15 lb 10 oz). Measured height (66mm) doesn't map cleanly to a whole rack unit (~1.5U); rackUnits set to 2 as the nearest whole-U rack footprint it occupies — treat as approximate. The REMOTE connector (Sony proprietary round 8-pin) and the CAMERA/CCU optical connectors (Sony/SMPTE hybrid fiber) have no exact match in the allowed connector-id list; closest approximations were used and flagged per-port. AC IN connector sub-type (C13/C14 vs other IEC variant) is inferred, not explicitly named in the manual. Current consumption: 1.4A max; operating temp 5-40°C.",
+  "ports": [
+    {
+      "name": "CAMERA",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Optical fiber connector to PMW-F55/CA4000, HDC-4300, HDC-P43 or F65 camera; single fiber carries power, control, video and audio simultaneously. Actual connector is Sony/SMPTE-style optical fiber connector, not a literal LC connector — closest available enum value used."
+    },
+    {
+      "name": "CCU",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Optical fiber connector to HDCU-2000/2500 Camera Control Unit; same fiber-connector caveat as CAMERA port."
+    },
+    {
+      "name": "REMOTE",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Sony proprietary round-type 8-pin multi-connector for RCP-3000/1000 series Remote Control Panel or MSU-1000 Master Setup Unit (via CCA-5 cable); also supplies power to the RCP. No listed enum matches this connector exactly — 'midi-din' used as closest round multi-pin approximation."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45 8-pin, 10BASE-T/100BASE-TX."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100V to 240V AC, 1.4A max. Uses a detachable power supply cord retained by an optional plug holder — consistent with an IEC inlet, but the manual does not explicitly name the inlet type/variant (C13/C14 assumed)."
+    },
+    {
+      "name": "SDI1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Return video input (3G/HD-SDI, SMPTE ST424/425 Level-B / ST292). Selected via camera's return switch."
+    },
+    {
+      "name": "SDI2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Return video input (3G/HD-SDI); becomes HD prompter input when HD PROMPTER is enabled in menu."
+    },
+    {
+      "name": "REFERENCE IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "HD tri-level sync (SMPTE ST274) or SD black-burst reference input; format auto-detected. Analog sync signal, not digital SDI payload, so no sdi-* grade applies."
+    },
+    {
+      "name": "REFERENCE OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of REFERENCE IN, or internally generated HD tri-level/SD composite sync. Available only when used as a camera extension unit. No sdi-* grade (analog sync)."
+    },
+    {
+      "name": "SDI OUT 1 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "SMPTE ST2082 12G-SDI / ST2081 6G-SDI / ST424-425 3G-SDI / ST292 HD-SDI, selectable. Part of SLOT1's 8-connector Multi-Link output bank; only OUT1/OUT2 support 12G/6G (serial 15001-29999, 35001+, or upgraded units)."
+    },
+    {
+      "name": "SDI OUT 2 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Same capability as SDI OUT 1 (SLOT1)."
+    },
+    {
+      "name": "SDI OUT 3 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 4 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 5 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 6 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 7 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 8 (SLOT1)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT1 8-connector bank). When HD CUTOUT option is used, the extracted cut-out signal outputs from this SLOT1 bank."
+    },
+    {
+      "name": "SDI OUT 1 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Mirrors SLOT1: 12G/6G/3G/HD-SDI selectable; only OUT1/OUT2 support 12G/6G."
+    },
+    {
+      "name": "SDI OUT 2 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Same capability as SDI OUT 1 (SLOT2)."
+    },
+    {
+      "name": "SDI OUT 3 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 4 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 5 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 6 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 7 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "SDI OUT 8 (SLOT2)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Multi-Link 3G-SDI/HD-SDI output (part of SLOT2 8-connector bank)."
+    },
+    {
+      "name": "3G/HD SDI OUT 1 (SLOT3)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "SLOT3 outputs 1 video system as 3G-SDI or HD-SDI (selectable), with superimposed text/markers optional; identical signal duplicated across both SLOT3 BNCs (paired)."
+    },
+    {
+      "name": "3G/HD SDI OUT 2 (SLOT3)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Paired with 3G/HD SDI OUT 1 (SLOT3); same signal."
+    },
+    {
+      "name": "HD SDI OUT 1 (SLOT4)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "SLOT4 outputs 1 video system as HD-SDI only, with optional superimposed text/markers; identical signal duplicated across both SLOT4 BNCs (paired)."
+    },
+    {
+      "name": "HD SDI OUT 2 (SLOT4)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Paired with HD SDI OUT 1 (SLOT4); same signal."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB connector, labeled 'for service personnel' — not for general use. Exact USB connector sub-type/version not stated in the manual; usb-a assumed."
+    }
+  ]
+}

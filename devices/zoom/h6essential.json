@@ -1,0 +1,64 @@
+{
+  "manufacturer": "Zoom",
+  "model": "H6essential",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://zoomcorp.com/en/us/handheld-recorders/handheld-recorders/h6essential/",
+  "confidence": "high",
+  "notes": "Manufacturer spec page (zoomcorp.com) confirms: 4 combo XLR/TRS inputs (XLR pin2 hot, TRS tip hot) with +48V phantom power (32mA/channel max); stereo mini-jack Line Out (max +1dBu) and stereo mini-jack Phones out (20mW+20mW into 32ohm); USB Type-C running USB 2.0 High Speed (also usable for bus power); power via 4x AA batteries or optional ZOOM AD-17 AC adapter (DC 5V/1A) — exact barrel-jack size not published, mapped to generic dc-barrel. Recording media is microSDHC/XC (not modeled as a port). The device also has a proprietary \"3.0 Capsule System\" input for its interchangeable X/Y mic capsule (included XYH-6e) — this is a mechanical/electrical module-dock connector, not a standard cable connector in the given list, so it was omitted as a port rather than mis-mapped; note it if capsule swapping/output-of-capsule matters. Individual combo-input on-device numbering (1-4) confirmed via general Zoom H6 family convention/manual layout, not explicitly spelled out character-by-character in the fetched marketing copy. Handheld unit, not rack-mountable (rackUnits omitted). B&H product page returned HTTP 403 and could not be used as a cross-check; manufacturer page was sufficient and treated as authoritative.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

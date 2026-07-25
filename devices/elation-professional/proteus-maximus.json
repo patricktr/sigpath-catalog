@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Elation Professional",
+  "model": "Proteus Maximus",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://d295jznhem2tn9.cloudfront.net/ItemRelatedFiles/11992/%20Proteus%20Maximus%20-%20Spec%20Sheet%202024-06-18.pdf",
+  "confidence": "high",
+  "notes": "Proteus Maximus is a 950W IP65 LED framing/profile moving-light fixture (automated lighting), not a traditional AV switching/display device — none of the required category/type enum values fit well, so \"other\"/\"Other\" were used. Data pulled verbatim from Elation's official datasheet (also mirrored at https://www.elationlighting.com/products/proteus-maximus): \"5pin XLR DMX In/Out\", \"IP65 RJ45 ethernet In/Out\", \"IP65 Locking Power Cable In\". The power inlet connector's exact part/model is not named in the datasheet (only described generically as an \"IP65 Locking Power Cable\"); powercon was chosen as the closest listed id since Neutrik powerCON-style IP65 locking connectors are standard on this class of outdoor fixture, but this is an inference, not a confirmed part number. No power-out/link port is documented (unlike some other Elation fixtures that daisy-chain power). Ethernet and DMX are each physically in/out pairs for daisy-chaining multiple fixtures; no Ethernet speed (10/100/1000) is published. Device is not rack-mountable (yoke-mounted moving-light fixture), so rackUnits was omitted. Weight 117 lbs (53 kg); AC 120-240V 50/60Hz, max 1,400W consumption. Supports DMX, RDM, Art-Net, sACN control protocols.",
+  "ports": [
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Ethernet In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "IP65-rated RJ45; data rate not specified by manufacturer"
+    },
+    {
+      "name": "Ethernet Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "IP65-rated RJ45 (daisy-chain thru); data rate not specified by manufacturer"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Labeled by Elation only as \"IP65 Locking Power Cable In\" — exact connector model (likely Neutrik powerCON TRUE1-style IP65 locking AC connector) not stated; mapped to closest listed id. AC 120-240V 50/60Hz, max 1,400W. No power-out/link connector documented."
+    }
+  ]
+}

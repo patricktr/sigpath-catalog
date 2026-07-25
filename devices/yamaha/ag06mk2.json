@@ -1,0 +1,115 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "AG06MK2",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/live_streaming_gaming/ag/ag06mk2/specs.html",
+  "confidence": "high",
+  "notes": "Sourced from Yamaha USA's official AG06MK2 specs page and the official AG06MK2 User Guide PDF (usa.yamaha.com/files/download/other_assets/2/1549762/AG06mk2_user_guide_En_C0.pdf). This is a desktop unit (not rack-mountable). Ch1 and Ch2 are combo XLR/TRS mic-line inputs sharing one +48V phantom switch; Ch2 additionally has a HI-Z/guitar mode on the same jack. Ch3/4 (phone) and Ch5/6 (RCA) are stereo line inputs. STEREO OUT (fixed mix, phone jacks) is distinct from MONITOR OUT (level-controlled by the Speaker knob, also phone jacks) — the AG03MK2 variant instead uses RCA monitor-out jacks, but AG06MK2 uses phone/TRS for both. The rear panel has two separate USB-C jacks: one carries USB Audio Class 2.0 data plus bus power to/from the host (\"USB 2.0\" jack, explicitly named and shipped with a USB 2.0 cable, hence grade usb-2.0), and a second power-only USB-C jack for an external 5V/1A adapter or battery when the host can't supply enough bus power (no data, so no USB grade assigned). No SDI/HDMI/DisplayPort/Ethernet ports exist on this device. Confidence is high because all connector names and types come directly from Yamaha's own manual/spec page rather than inference.",
+  "ports": [
+    {
+      "name": "Mic/Line 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo jack; XLR (balanced, +48V phantom via CH1-2MIC switch) or phone (balanced/unbalanced)"
+    },
+    {
+      "name": "Mic/Line/Guitar 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo jack; XLR (+48V phantom) or phone; GUITAR/HI-Z switch for direct instrument input"
+    },
+    {
+      "name": "Ch 3/4 L (Mono)",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo line input, phone jack; mono source here feeds both L/R"
+    },
+    {
+      "name": "Ch 3/4 R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Ch 5/6 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Ch 5/6 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Stereo Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Fixed mixed stereo out, unaffected by monitor/streaming-out settings"
+    },
+    {
+      "name": "Stereo Out R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Monitor Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Powered-monitor output, level set by Speaker knob"
+    },
+    {
+      "name": "Monitor Out R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Foot SW",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "For optional Yamaha FC5 footswitch, mutes reverb"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone jack"
+    },
+    {
+      "name": "Headset Mic",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Pink 3.5mm mic input, feeds Ch1; mutually exclusive with Ch1 mic/line jack"
+    },
+    {
+      "name": "Headset Phones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Light-green 3.5mm output, mirrors main Phones jack"
+    },
+    {
+      "name": "AUX",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "4-conductor TRRS (CTIA) smartphone audio input/output"
+    },
+    {
+      "name": "USB 2.0 (to PC/iPhone)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB Audio Class 2.0, 24-bit/192kHz, 2in/2out; carries bus power from a computer; ships with USB-C to USB-A 2.0 cable"
+    },
+    {
+      "name": "5V DC IN (USB)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Power-only USB-C input for a USB adapter/battery (4.8-5.2V, min 1A) when connected to an iPhone/iPad or a non-powering computer port"
+    }
+  ]
+}

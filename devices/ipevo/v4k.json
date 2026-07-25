@@ -1,0 +1,18 @@
+{
+  "manufacturer": "IPEVO",
+  "model": "V4K",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://us.ipevo.com/pages/v4k-specs",
+  "confidence": "high",
+  "notes": "Manufacturer spec page confirms a single USB 2.0 Video Class (UVC) interface as the device's only physical I/O; the device is bus-powered via this same USB connection, so there is no separate power connector. The cable is captive/attached to the document camera and terminates in a USB Type-A plug for the host computer (Mac/PC/Chromebook). This base V4K model has no HDMI output — that is a distinguishing feature of the separate IPEVO VZ-R / V4K PRO models, so do not confuse them. Cross-checked against global.ipevo.com/products/v4k/specs (same \"USB 2.0 Video Class (UVC) interface\" wording) and B&H's listing summary (\"USB Type-A Output\"), both consistent with the primary source.",
+  "ports": [
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Attached/captive USB cable (~4.9 ft / 150cm) terminating in USB Type-A; device is bus-powered over this connection, no separate power input"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Ensemble Designs",
+  "model": "BrightEye 55",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://www.ensembledesigns.com/download/datasheets/brighteye/be55.pdf",
+  "confidence": "high",
+  "notes": "Genlockable Sync Generator and Test Signal Generator (SPG/TSG); \"Media source\" is the closest fit in the allowed type list, not a literal media player. Desktop enclosure, 5.625\"W x 0.8\"H x 5.5\"D — not rack-mountable, so rackUnits omitted. SDI Out confirmed as SD-SDI (SMPTE 259M, 270 Mb/s serialization) -> grade sdi-sd. HD Tri-Level Sync Out is a tri-level sync/reference signal (selectable 720p/1080i/1080p/1080sF) on BNC, not a framed SDI video signal, so no SDI grade was assigned to it (would be an error per the connector-scale rule). AES Out is AES3id digital audio on a 75Ω BNC connector; no grade exists for AES in the provided scale so it is omitted. Audio Out Ch1/Ch2 use a single 6-pin locking removable terminal block (Ground/+/- per channel) — mapped to \"euroblock\" as the closest listed connector; balanced, -10 to +4 dBu adjustable. Power input is a locking 12VDC jack (rear panel labeled \"GND / 12VDC 800mA\", secured with a locking ring) fed from an external 100-230VAC modular \"universal\" power supply with an IEC line cord that is NOT included with the unit — the device's own port was mapped to \"dc-barrel\" as the closest listed connector (it is a locking barrel/coax type, not a plain unlocked barrel). USB (USB-B, square connector per rear-panel photo) is used only for control/diagnostics/firmware via BrightEye PC/Mac software, not signal I/O; no USB version/speed is stated in the documentation so grade is omitted. Sources used: manufacturer datasheet (be55.pdf) and manufacturer User Guide (BrightEye55_R3.1_SW102.pdf), both from ensembledesigns.com — fully authoritative and internally consistent.",
+  "ports": [
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "Audio Out Ch 1",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Audio Out Ch 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "AES Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "HD Tri-Level Sync Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Cpst Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "12VDC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

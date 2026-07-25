@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Numark",
+  "model": "Mixstream Pro",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.numark.com/product/mixstream-pro",
+  "confidence": "high",
+  "notes": "Desktop standalone DJ controller/media player (built-in speakers, 7\" touchscreen); not rack-mountable, so rackUnits omitted. Also has a 1x SD card slot for storage — omitted from ports list because no connector id in the allowed taxonomy corresponds to a memory-card slot. No grade set on any port: USB ports have no stated version/speed in manufacturer specs, and none of the other connectors (XLR, RCA, TRS/TS, DC barrel) are bandwidth-graded connector types per the taxonomy rules. Mic input connector shown as ts-6.35 (unbalanced 1/4\"); manufacturer copy just says \"1/4\" microphone input\" without explicitly confirming TS vs TRS, so this is a light inference. Cross-checked against B&H/VirtualDJ manual excerpts and Numark's own product page; all three agree on port counts and types. This is the original \"Mixstream Pro\" (not the later \"Mixstream Pro+\" or \"Mixstream Pro Go\" variants, which differ in power spec — Pro Go uses 19V/3.42A).",
+  "ports": [
+    {
+      "name": "Master Out L (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced main output, left channel"
+    },
+    {
+      "name": "Master Out R (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced main output, right channel"
+    },
+    {
+      "name": "Master Out L (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced main output, left channel"
+    },
+    {
+      "name": "Master Out R (RCA)",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced main output, right channel"
+    },
+    {
+      "name": "Headphone Out (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "Headphone Out (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo headphone output"
+    },
+    {
+      "name": "Mic Input",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "1/4\" unbalanced microphone input"
+    },
+    {
+      "name": "USB (Media 1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For USB flash drives/hard drives; not available as a computer storage device in Standalone (Engine) mode. USB spec version not stated by manufacturer."
+    },
+    {
+      "name": "USB (Media 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For USB flash drives/hard drives; not available as a computer storage device in Standalone (Engine) mode. USB spec version not stated by manufacturer."
+    },
+    {
+      "name": "USB PC",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connects to computer; sends/receives audio and control data. USB spec version not stated by manufacturer."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External AC/DC adapter input, 12.0V 3.0A, center positive"
+    }
+  ]
+}

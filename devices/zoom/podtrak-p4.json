@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Zoom",
+  "model": "PodTrak P4",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://zoomcorp.com/en/us/podtrak-recorders/podcast-recorders/podtrak-p4/",
+  "confidence": "high",
+  "notes": "Sourced from Zoom's official US product/spec page (zoomcorp.com/en/us/podtrak-recorders/podcast-recorders/podtrak-p4/). Desktop unit, no rack mounting (rackUnits omitted). 4 mic inputs are plain XLR (not combo XLR/TRS) per manufacturer spec table \"MIC: XLR jacks (2: HOT)\" — line-level input acceptance is not documented. The smartphone jack is a 4-conductor TRRS connector; mapped to the closest available connector id \"trs-3.5\" since TRRS is not a distinct option in the enum, and marked bidirectional since it both sends the mix to the phone and receives the caller's audio. Two separate USB-C ports exist: one for USB audio-interface/mass-storage (data, bidirectional) and one dedicated solely to power input (DC 5V/1A) — neither has a stated USB speed grade in the manufacturer spec, so \"grade\" was omitted per instructions rather than guessed. Power can alternatively come from 2x AA batteries (not a physical connector, so not listed as a port). No line-level audio outputs exist beyond the four independent 3.5mm headphone jacks.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Phone (Smartphone TRRS)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "4-contact TRRS mini jack (TIP:L, RING1:R, RING2:GND, SLEEVE:MIC) for phone call audio in/out; closest listed connector id is trs-3.5, actual jack is TRRS not 3-conductor TRS"
+    },
+    {
+      "name": "Headphone 1",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphone 2",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphone 3",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphone 4",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB (Audio Interface / Mass Storage)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C, used for USB audio interface mode and SD card mass-storage file transfer; USB spec version (2.0/3.x) not stated by manufacturer, so no grade set"
+    },
+    {
+      "name": "USB-C (Power)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Dedicated power-only USB-C port, DC 5V/1A; also runs on 2x AA batteries (not a connector)"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "HS8S",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://data.yamaha.com/files/download/other_assets/4/793644/VHM5490_HS8I_En_OM_D0_views.pdf",
+  "confidence": "high",
+  "notes": "Desktop/floor powered studio subwoofer, not rack-mountable (omitted rackUnits). Rear panel (per Yamaha's official HS Series Owner's Manual, which includes an actual rear-panel diagram for the HS8S) has: two input channels (L and R), each with a separate balanced XLR3-31 (female) jack and a separate balanced 1/4\" TRS phone jack — these are two distinct physical sockets per channel, not a single combo jack, and per Yamaha's note \"the XLR and phone jack input connectors can not be used simultaneously.\" Two balanced male XLR3-32 output jacks (OUTPUT L, OUTPUT R) pass the (possibly low-cut-filtered) input signal through to the main L/R monitors. AC IN is a standard IEC inlet (mates with the supplied IEC C13 line cord); rear-panel drawing shows the typical 3-prong IEC C13/C14-style recessed socket, so mapped to \"iec\". No connector on this device belongs to a bandwidth-graded category (XLR/TRS/IEC), so no \"grade\" fields were set. Caveat: an older (March 2017) Yamaha \"Technical Data Sheet\" PDF and several retailer spec tables (echoed by web search) describe a third output, \"XLR3-32 (EXT SUB),\" implying 3 physical output jacks total. The current, more detailed official Owner's Manual rear-panel diagram and accompanying text (\"OUTPUT L/R connectors\") show only 2 physical output XLR jacks (L and R) with no separate EXT SUB jack, so I trusted the manual (with actual panel artwork) over the older datasheet's summary wording and omitted a third output port. Also note the amplifier is Class-D, 150W dynamic, and includes non-connector rear-panel controls (LEVEL, LOW CUT switch/control, HIGH CUT control, PHASE switch, power rocker switch) that are not physical I/O ports and were excluded per the task scope.",
+  "ports": [
+    {
+      "name": "INPUT L (XLR)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "INPUT L (PHONE)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "INPUT R (XLR)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "INPUT R (PHONE)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "OUTPUT L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUTPUT R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

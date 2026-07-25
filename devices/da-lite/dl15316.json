@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Da-Lite",
+  "model": "DL15316",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1867540-REG/da_lite_dl15316_screen_controller.html",
+  "confidence": "medium",
+  "notes": "Manufacturer's own page (legrandav.com/Da-Lite) returned SSL certificate errors on every fetch attempt during research, so the B&H Photo \"Specs\" tab (a reputable AV retailer spec table) was used instead — it lists the same TCP/IP, VPI Trigger, RS-232, and PoE+ control features confirmed via the overview text and product photo. Also controllable via TCP/IP and RS-232 per the product description, but no dedicated physical RS-232 (DB9) or Ethernet-data-only jack is broken out in the spec table — control appears to route through the same PoE RJ45 (web UI / TCP/IP) and possibly VPI/dry-contact terminals not itemized as a distinct connector in the retailer spec sheet, so those control paths are not represented as separate ports here. No Ethernet speed/grade (e.g. 100M/1G) is stated anywhere, so grade was omitted on the RJ45 ports per instructions. Direction on the Screen, Wall Switch, and IR jacks is inferred from typical function (not explicitly labeled input/output by the manufacturer); per task rule all RJ45 ports are marked bidirectional regardless of typical data flow. The IR jack's exact connector wiring (mono TS vs TRS) isn't confirmed; used the dedicated \"ir\" connector id as the closest/best match. Device is a small desktop/wall-mount box (0.865 lb, ~8.7x7.4x4.2\" shipping box) — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Network connection; also the PoE+ power input for the unit (5–12VDC, 30W draw; ships with a PoE+ injector and AC cord)"
+    },
+    {
+      "name": "Screen",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary low-voltage control link to a Da-Lite motorized screen's control board"
+    },
+    {
+      "name": "Wall Switch 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Low-voltage wired wall switch input for local up/down/stop control"
+    },
+    {
+      "name": "Wall Switch 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second low-voltage wired wall switch input"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3.5mm jack for a wired IR receiver eye"
+    }
+  ]
+}

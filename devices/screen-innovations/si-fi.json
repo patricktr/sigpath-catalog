@@ -1,0 +1,32 @@
+{
+  "manufacturer": "Screen Innovations",
+  "model": "SI.FI",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.screeninnovations.com/accessories/si.fi",
+  "confidence": "medium",
+  "notes": "SI.FI is an IP-based, PoE-powered automation/control gateway for motorized shades and projection screens (Somfy SDN ecosystem), integrating with Control4, Crestron, Savant, and Alexa. It is now DISCONTINUED per the manufacturer, superseded by the TRO.Y device — treat specs as historical/legacy. Physical connector types for Port 1 and Port 2 are inferred: manufacturer copy describes them functionally (\"RS232 input or RS485/Power input\", \"485 input\") as pluggable terminal blocks rather than DE-9 connectors, so they were mapped to the rs232/rs485 connector ids per the allowed list rather than a generic euroblock id. No bandwidth/version grade applies to any port (no SDI/HDMI/DP/USB/Ethernet-speed spec was published — Ethernet speed for the PoE module was not stated, so grade was omitted). Unit also has two internal expansion-module bays (PoE module included; WiFi (WEC MK I) and Zigbee 3.0 (ZEC MK I) modules sold separately) — not modeled as ports since they are internal card slots, not external I/O. Dimensions 3.53\" L x 2.375\" W x 2.125\" H, DIN-rail mountable, indoor use only, ABS housing, 1 lb. Primary source used: manufacturer page https://www.screeninnovations.com/accessories/si.fi (mirrored identically at https://www.shadeinnovations.com/accessories/si.fi); a full spec sheet/quick manual PDF with pinout diagrams exists on Screen Innovations' support library (support.screeninnovations.com) but could not be opened directly to confirm exact pin assignments.",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "PoE 48V DC network/control uplink to router; up to 328 ft of Cat5e. Physical jack is provided via the included PoE expansion card (PEC MK II) in one of the unit's two expansion bays."
+    },
+    {
+      "name": "Port 1 (RS-232 / RS-485 + Power)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs485"
+      ],
+      "note": "Single pluggable terminal block configurable as an RS-232 serial input or as RS-485 with optional 24V DC backup power input (consumes 6 power units when used for power)."
+    },
+    {
+      "name": "Port 2 (485 Bus)",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Terminal block RS-485 SDN bus connection to a Somfy Data Hub / Power Panel; distributes 40 power units, max 900 ft total wire length."
+    }
+  ]
+}

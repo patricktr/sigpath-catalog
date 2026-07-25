@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Telemetrics",
+  "model": "RCCP-2A",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/RCCP-2A-LGS.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Telemetrics' own manufacturer datasheet (hosted via AV-iQ CDN, dated 07/08/2019) for the \"RCCP-2A LGS\" (Legislative Software) variant, which is the same physical control-panel/I-O chassis as the base RCCP-2A with a different bundled software package — no separate base-model datasheet could be located, and Telemetrics' own site (telemetrics.com) now redirects through telemetricsinc.com to EVS's T-Motion product line (evs.com/solutions/t-motion), where the RCCP-2A is no longer listed, suggesting it may be discontinued/legacy. Corroborated as a real, distinct SKU (RCCP-2A, ~$16,000 list) via B&H Photo and EAR store listings, though those retailer pages carried no spec detail. It is a desktop control-surface unit, not rack-mountable (17\"W x 8.75\"D x 3.94\"H, 9.9 lbs), so rackUnits is omitted. No bandwidth grade is stated for HD-SDI beyond \"HD-SDI\" (assumed sdi-hd, not confirmed 3G/6G capable) or for USB/HDMI (versions unstated, so grade omitted on those). The \"Tally In/Control Out\" connector's physical type (likely a multi-pin D-sub or terminal block for contact-closure tally/GPI, not literally RS-232 serial data) and the exact DC power connector style (barrel jack vs. locking DC connector) could not be confirmed from the datasheet and are best-guess mappings to the closest available connector IDs. DIP switches and the main power switch on the I/O panel are functional controls, not signal/power connectors, and were omitted.",
+  "ports": [
+    {
+      "name": "SDI In/Out 1 (Frame Capture, loop-thru)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "SDI In/Out 2 (Video Capture, loop-thru)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "AUX Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB Type-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 4",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 5",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 6",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type-A 7",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "HDMI Video Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VGA Video Monitor Out",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Tally In/Control Out",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Multi-pin tally/GPI control connector; exact pin/connector style not specified on datasheet, closest listed type used"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12VDC from included external power adapter (115-230VAC / 12VDC, 65W); exact DC connector style (barrel vs. locking) not specified on datasheet"
+    }
+  ]
+}

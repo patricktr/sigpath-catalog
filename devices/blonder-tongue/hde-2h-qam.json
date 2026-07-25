@@ -1,0 +1,164 @@
+{
+  "manufacturer": "Blonder Tongue",
+  "model": "HDE-2H-QAM",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://archive.org/details/hde-2-h-qam-user-manual",
+  "confidence": "high",
+  "notes": "Sourced from the official Blonder Tongue \"HDE-2H/C-QAM Instruction Manual\" (Doc No. 651224900B, Rev 2, Aug 2010), which covers both the HDE-2H-QAM (stock #6375, 2xHDMI+2xComponent-to-QAM) and its component-only sibling HDE-2C-QAM (stock #6377, no HDMI/CC inputs) on one shared chassis/manual. Confirmed against the manufacturer's own front/rear panel diagrams and spec tables (Section 2.3). Note this HDE-2H-QAM (single QAM RF output, \"F\" female) is a different/older product than the similarly-named \"HDE-2H/2S-QAM\" (stock #6379, adds 2xHD-SDI inputs and 4x independent QAM outputs + GigE) sold via Toner Cable Equipment - do not conflate the two SKUs. No HDMI version (1.4/2.0/etc.) is stated anywhere in the datasheet, so that grade was omitted rather than guessed; the unit only supports up to 1080i/720p and explicitly does not support HDCP. Ethernet grade (eth-100m) inferred from the stated \"10/100Base-T\" interface spec. EAS Control's screw-terminal block has no exact match in the allowed connector list; \"euroblock\" was used as the closest analog. The rear ASI In/ASI Out BNC pair is an internal loop (self-looped via an included jumper cable to route the encoder's ASI multiplex into the internal QAM modulator) rather than general-purpose external I/O, though it is physically exposed and usable as such.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Unencrypted HDMI only (HDCP not supported); up to 1080i/720p. HDMI version not stated in datasheet."
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Unencrypted HDMI only (HDCP not supported); up to 1080i/720p. HDMI version not stated in datasheet."
+    },
+    {
+      "name": "CC 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Analog NTSC closed-caption (EIA-608/Line 21) insertion input paired with Input 1 (HDMI 1 or Component In 1)."
+    },
+    {
+      "name": "CC 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Analog NTSC closed-caption (EIA-608/Line 21) insertion input paired with Input 2 (HDMI 2 or Component In 2)."
+    },
+    {
+      "name": "Component In 1 - Y",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Analog component video, part of 3xRCA Y/Pb/Pr set."
+    },
+    {
+      "name": "Component In 1 - Pb",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 1 - Pr",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 1 - Audio L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 1 - Audio R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 1 - Digital Audio",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial digital audio (RCA, not TOSLINK)."
+    },
+    {
+      "name": "Component In 2 - Y",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 2 - Pb",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 2 - Pr",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 2 - Audio L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 2 - Audio R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Component In 2 - Digital Audio",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial digital audio (RCA, not TOSLINK)."
+    },
+    {
+      "name": "EAS Input - Video",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Emergency Alert System video feed; substituted onto QAM output when EAS Control is triggered."
+    },
+    {
+      "name": "EAS Input - Audio L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "EAS Input - Audio R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "EAS Control",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Screw-terminal strip (IN/GROUND), 5-12VDC or dry-contact closure trigger for EAS. Closest listed connector id to the actual pluggable terminal block."
+    },
+    {
+      "name": "ASI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Front-panel primary usable output: DVB-ASI (EN 50083-9), 270 Mbps multiplexed transport stream; typically feeds an external modulator. Not a video-SDI signal, so no SDI bandwidth grade applies."
+    },
+    {
+      "name": "ASI In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Rear panel; feeds the internal ASI-to-QAM modulator, normally looped from the rear ASI Out via the included BNC jumper cable."
+    },
+    {
+      "name": "ASI Out (rear, loop)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Rear panel; duplicate of the multiplexed ASI stream, intended to loop into the adjacent ASI In via included jumper cable."
+    },
+    {
+      "name": "QAM RF Out",
+      "direction": "output",
+      "connector": "f-type",
+      "note": "Primary RF output, agile 5.75-864MHz, QAM16/32/64/128/256/512/1024, up to +60dBmV. No standardized bandwidth grade scale applies to F-type/QAM RF."
+    },
+    {
+      "name": "QAM RF Test",
+      "direction": "output",
+      "connector": "f-type",
+      "note": "Front-panel monitor tap, 20dB below primary QAM output."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Front-panel 10/100Base-T management interface."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet. Unit ships fixed for 115VAC only (2.0A, Slo-Blo 3.0A/250V fuse) - rear panel explicitly warns it is NOT auto-switching and must be factory-refitted by Blonder Tongue for 220VAC."
+    }
+  ]
+}

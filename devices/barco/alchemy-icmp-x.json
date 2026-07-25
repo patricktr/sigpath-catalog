@@ -1,0 +1,113 @@
+{
+  "manufacturer": "Barco",
+  "model": "Alchemy ICMP-X",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.soundassociates.co.uk/assets/datasheets/Barco_datasheets/Barco-Alchemy-ICMP-X_en_1687392819.9673765.pdf",
+  "confidence": "medium",
+  "notes": "Source is Barco's own product datasheet (last updated 22 Jun 2023), mirrored by a reseller since www.barco.com/en/product/barco-alchemy-icmp-x returned HTTP 403 to automated fetch. The ICMP-X is a plug-in Integrated Cinema Media Processor module for Barco Alchemy Series 2/4 digital cinema projectors, not a standalone rack appliance — it draws power from the host projector's card-cage backplane via an internal edge connector, so no standalone AC/DC power port is listed and rackUnits is omitted. Datasheet confirms port counts/types (2x HDMI2.0a in, 2x 3G-SDI in, 16x AES/EBU audio on 2x RJ45, 8x GPI + 8x GPO on 4x RJ45, 2x GbE, 2x USB3.0 + 2x USB2.0 front) but does not give legible rear-panel silkscreen text; individual port names (HDMI 1/2, SDI 1/2, Audio A/B, GPIO A-D) follow Barco's typical ICMP panel labeling convention and are inferred, as are the AES/EBU ports being output-only (feeding the theater sound processor) and the GPIO RJ45 breakouts being bidirectional. HDMI grade taken as HDMI 2.0 per \"HDMI2.0a\" spec text; SDI grade taken as 3G per \"3G-SDI\" spec text; Ethernet grade taken as 1G per \"Gbe\" spec text; USB 3.0 grade mapped to usb-5g (SuperSpeed 5Gbps).",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Audio A",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES/EBU digital audio breakout, 8 channels on this RJ45 (16 total across Audio A + B); feeds the cinema sound processor"
+    },
+    {
+      "name": "Audio B",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES/EBU digital audio breakout, 8 channels on this RJ45 (16 total across Audio A + B); feeds the cinema sound processor"
+    },
+    {
+      "name": "GPIO A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General-purpose I/O breakout carrying a mix of the module's 8x GPI / 8x GPO lines across 4 RJ45 connectors (A-D)"
+    },
+    {
+      "name": "GPIO B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General-purpose I/O breakout carrying a mix of the module's 8x GPI / 8x GPO lines across 4 RJ45 connectors (A-D)"
+    },
+    {
+      "name": "GPIO C",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General-purpose I/O breakout carrying a mix of the module's 8x GPI / 8x GPO lines across 4 RJ45 connectors (A-D)"
+    },
+    {
+      "name": "GPIO D",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General-purpose I/O breakout carrying a mix of the module's 8x GPI / 8x GPO lines across 4 RJ45 connectors (A-D)"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Content connectivity & ingest (GbE)"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Content connectivity & ingest (GbE)"
+    },
+    {
+      "name": "USB 3.0 (front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-accessible, for fast content ingest"
+    },
+    {
+      "name": "USB 3.0 (front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-accessible, for fast content ingest"
+    },
+    {
+      "name": "USB 2.0 (front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-accessible"
+    },
+    {
+      "name": "USB 2.0 (front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-accessible"
+    }
+  ]
+}

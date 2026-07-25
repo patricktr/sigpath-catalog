@@ -1,0 +1,134 @@
+{
+  "manufacturer": "Telos Alliance",
+  "model": "Omnia.9",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://telosalliance-uat.s3.amazonaws.com/public/Omnia%20Products/Omnia%209/Omnia9_Audio_Processing_Quick_Start_Guide-C1815068.pdf",
+  "confidence": "high",
+  "notes": "Rear-panel I/O and labels were read directly off the official Telos Alliance Omnia.9 Quick-Start Installation Guide's rear-panel photo (Main Analog I/O, Main Digital I/O, Aux Digital I/O, Composite I/O blocks) plus the guide's network-port diagram; cross-checked against the manufacturer product page (telosalliance.com/radio-processing/radio-processors/omnia9). All AES/EBU digital audio jacks are physically female XLR3 connectors carrying an AES3 signal, coded here as \"aes3\". Composite I/O BNCs carry analog MPX/composite signal, not SDI, so no SDI grade applies. AoIP (dual RJ45: AES67/Livewire+ + WAN) is standard on units built since April 2018; legacy pre-2018 units instead have single ports labeled \"Ethernet\" and \"Future\" and need an MKII upgrade for AES67/Livewire+ I/O — treat this device as the current MKII-era rear panel. eth-1g grade on the two RJ45 ports is inferred from the product page's statement of \"100 and 1000BASE-T\" Ethernet support (the quick-start guide itself does not print a speed grade next to the ports), so treat as medium-confidence for that specific attribute. The front-panel headphone jack's connector size (assumed 6.35mm/1/4\" TRS, industry-standard for this class of broadcast processor) and the front-panel USB port's exact type/version (assumed USB-A; version unstated in the sourced documents) are inferred, not explicitly confirmed in the sourced material. Power: dual redundant, hot-swappable internal supplies, 100-264VAC 47-63Hz autosensing, each with a standard IEC power-cord inlet (referred to in Telos's troubleshooting FAQ as \"IEC male connectors\"); modeled here as two \"iec\" ports since the exact C13/C14 vs C7/C19 variant is not spelled out.",
+  "ports": [
+    {
+      "name": "LEFT In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Main Analog I/O — balanced line-level analog audio input"
+    },
+    {
+      "name": "RIGHT In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Main Analog I/O — balanced line-level analog audio input"
+    },
+    {
+      "name": "LEFT Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main Analog I/O — balanced line-level analog audio output"
+    },
+    {
+      "name": "RIGHT Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main Analog I/O — balanced line-level analog audio output"
+    },
+    {
+      "name": "Main In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Main Digital I/O — AES/EBU digital audio input on XLR3"
+    },
+    {
+      "name": "AES Reference",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Main Digital I/O — external AES/EBU sync/word-clock reference input, XLR3"
+    },
+    {
+      "name": "Main FM Out 1",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Main Digital I/O — AES/EBU digital output on XLR3; can carry Omnia Direct (MPX over AES/EBU)"
+    },
+    {
+      "name": "Main FM Out 2",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Main Digital I/O — AES/EBU digital output on XLR3; can carry Omnia Direct (MPX over AES/EBU)"
+    },
+    {
+      "name": "Aux In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Aux Digital I/O — AES/EBU digital audio input on XLR3"
+    },
+    {
+      "name": "Aux Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Aux Digital I/O — AES/EBU digital audio output on XLR3"
+    },
+    {
+      "name": "IN 1 (SCA/Bypass In)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite I/O — 75-ohm composite/SCA bypass input"
+    },
+    {
+      "name": "IN 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite I/O — 75-ohm composite input"
+    },
+    {
+      "name": "OUT 1 (Composite/Pilot Out)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite I/O — 75-ohm composite MPX/pilot output"
+    },
+    {
+      "name": "OUT 2 (19kHz)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite I/O — 75-ohm composite MPX output"
+    },
+    {
+      "name": "AES67/Livewire+",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "AoIP network port for Livewire+/AES67 audio-over-IP; 100/1000BASE-T (grade inferred from manufacturer product page, not printed on the port)"
+    },
+    {
+      "name": "WAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Administrative/remote-control network port (NfRemote, SNMP, HTTP); 100/1000BASE-T (grade inferred)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB port; exact USB version not stated in sourced documents"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel monitor headphone jack next to touchscreen; connector size (1/4\" TRS) inferred, not explicitly confirmed in sourced documents"
+    },
+    {
+      "name": "AC Power 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant, hot-swappable internal power supplies; 100-264VAC, 47-63Hz autosensing"
+    },
+    {
+      "name": "AC Power 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant, hot-swappable internal power supplies; 100-264VAC, 47-63Hz autosensing"
+    }
+  ]
+}

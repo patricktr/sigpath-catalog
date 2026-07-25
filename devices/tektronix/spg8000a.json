@@ -1,0 +1,183 @@
+{
+  "manufacturer": "Tektronix",
+  "model": "SPG8000A",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.telestream.net/pdfs/datasheets/SPG8000A-Master-Sync-Master-Clock-Reference-Generator-Datasheet-20W602611.pdf",
+  "confidence": "medium",
+  "notes": "Master Sync / Master Clock Reference Generator (video sync, timecode/PTP, and test-signal generator), not a display/switcher/etc. — mapped to category \"other\"/type \"Other\" since no closer fit exists in the taxonomy. Port list reflects the FULLY-OPTIONED unit per the official Tektronix/Telestream datasheet (base SPG8000A ships with only REF IN/LOOP, BLACK 1-3, LTC/GPI D-sub, WORD CLOCK, ETHERNET, USB and AC IN — options noted per-port add the rest): Option BG adds BLACK 4-5 + CMPST 1-2; Option SDI adds the 4 SDI BNC outputs (grade sdi-3g, the highest format the unit generates — it supports SD/HD/3G-SDI); Option AG adds 4 AES/EBU BNCs + 1 DARS BNC; Option GPS adds the GPS/GLONASS antenna BNC input; Option PTP adds a dedicated RJ45 (\"Ethernet connection 1\") plus an SFP cage (\"Ethernet connection 2\", populated via Option LX 1310nm single-mode or Option SX 850nm multimode module) — the datasheet lists these as connectors distinct from the base management Ethernet port, though it does not show a rear-panel diagram confirming physical separation. Option DPW adds a second hot-swappable power supply with its own AC inlet/cord. LTC I/O (3 dedicated outputs + LTC1 selectable in/out) and GPI (2 out/1 in) are combined on one rear D-sub 15-pin connector; no \"generic D-sub-15\" id exists in the allowed connector list, so \"vga\" (also a DB-15 shell) was chosen as the closest available shape — it is NOT a video/VGA signal. An optional accessory breakout cable (Option XLR, not itself a built-in port) splits this into 4 XLR (LTC) + 3 BNC (GPI). AC inlet type is inferred as IEC (C13/C14) per standard 1U Tektronix/Telestream rack-gear practice; the datasheet gives voltage/frequency (100-240 VAC, 50/60 Hz) and regional power-plug/cord options but does not explicitly name the inlet connector, hence medium rather than high confidence. Front-panel USB port (preset backup/restore, firmware upgrade) has no stated USB version, so grade omitted. Word clock and AES/EBU/DARS/reference-sync BNCs carry non-SDI analog/clock signals, so no sdi-* grade was applied to them (only the actual SDI outputs got sdi-3g) per the grading rule that BNC ports are graded only when they carry bandwidth-tiered signals. GPS antenna and GPS/GLONASS receiver themselves add no separate port beyond the BNC antenna input. Secondary source cross-checked: Tektronix SPG8000A User Manual (download.tek.com/manual/SPG8000A-User-Manual-077121600.pdf), which corroborates BLACK 1-5, CMPST, GPI/LTC port, and PTP/Ethernet naming but does not include machine-readable rear-panel diagram text.",
+  "ports": [
+    {
+      "name": "REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External genlock/reference input: NTSC/PAL black burst, HD tri-level sync, or 10 MHz CW."
+    },
+    {
+      "name": "REF LOOP",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Passive (unterminated) loop-through of REF IN for daisy-chaining to another unit; must be 75-ohm terminated on the last device in the chain."
+    },
+    {
+      "name": "BLACK 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Base configuration. Independently configurable: NTSC/PAL black burst, HD tri-level sync, or 1pps."
+    },
+    {
+      "name": "BLACK 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Base configuration. Independently configurable: NTSC/PAL black burst, HD tri-level sync, or 1pps."
+    },
+    {
+      "name": "BLACK 3",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Base configuration. Independently configurable: NTSC/PAL black burst, HD tri-level sync, 10 MHz CW, or 1pps."
+    },
+    {
+      "name": "BLACK 4",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option BG. NTSC/PAL black burst or HD tri-level sync."
+    },
+    {
+      "name": "BLACK 5",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option BG. NTSC/PAL black burst or HD tri-level sync."
+    },
+    {
+      "name": "CMPST 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option BG. Independent composite analog (NTSC/PAL) test-pattern generator output."
+    },
+    {
+      "name": "CMPST 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option BG. Independent composite analog (NTSC/PAL) test-pattern generator output."
+    },
+    {
+      "name": "WORD CLOCK",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Base configuration. 48 kHz word clock, 5V DC (CMOS) or 1V AC into 75 ohm (AES level)."
+    },
+    {
+      "name": "SDI 1A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Requires Option SDI. Generator channel 1, output A; configurable to any SD/HD/3G-SDI format."
+    },
+    {
+      "name": "SDI 1B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Requires Option SDI. Generator channel 1, output B (test pattern or digital black)."
+    },
+    {
+      "name": "SDI 2A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Requires Option SDI. Generator channel 2, output A; configurable to any SD/HD/3G-SDI format."
+    },
+    {
+      "name": "SDI 2B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Requires Option SDI. Generator channel 2, output B (test pattern or digital black)."
+    },
+    {
+      "name": "AES 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option AG. AES3-format (AES/EBU) test-tone pair, 75-ohm unbalanced BNC."
+    },
+    {
+      "name": "AES 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option AG. AES3-format (AES/EBU) test-tone pair, 75-ohm unbalanced BNC."
+    },
+    {
+      "name": "AES 3",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option AG. AES3-format (AES/EBU) test-tone pair, 75-ohm unbalanced BNC."
+    },
+    {
+      "name": "AES 4",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option AG. AES3-format (AES/EBU) test-tone pair, 75-ohm unbalanced BNC."
+    },
+    {
+      "name": "DARS",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Requires Option AG. Digital Audio Reference Signal (AES3-format), 75-ohm unbalanced BNC."
+    },
+    {
+      "name": "GPS ANT",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Requires Option GPS. 50-ohm, internally terminated GPS/GLONASS L1 antenna input; supplies 3.3V or 5V DC (55 mA) to power an active antenna (e.g. SPG8000ANT, which itself uses an F-type connector)."
+    },
+    {
+      "name": "LTC/GPI (D-Sub 15)",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "accepts": [
+        "rs232"
+      ],
+      "note": "Generic 15-pin D-sub, NOT a video/VGA signal — closest available connector id chosen for its DB-15 shell shape. Carries 3 dedicated LTC outputs + 1 LTC input/output, plus 2 GPI outputs + 1 GPI input. An optional accessory breakout cable (Option XLR) splits this to 4 male XLR (LTC) + 3 male BNC (GPI)."
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Base configuration. 10/100/1000BASE-T for web UI remote configuration, SNMPv2 management, and NTP server (with Option GPS)."
+    },
+    {
+      "name": "Ethernet connection 1 (PTP)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Requires Option PTP. RJ45 8P8C, 10/100/1000BASE-T, listed in the datasheet as a connector distinct from the base management ETHERNET port."
+    },
+    {
+      "name": "Ethernet connection 2 (PTP SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Requires Option PTP plus an SFP module (Option LX: 1310nm single-mode LC, or Option SX: 850nm multimode LC). MSA-standard 1 Gigabit Ethernet SFP cage."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for backing up/restoring presets and user data, and performing firmware upgrades. USB version not stated in the datasheet."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Primary hot-swappable power supply module inlet, 100-240 VAC 50/60Hz, 130VA max. Connector type (IEC C13/C14) inferred from standard rack-gear practice; not explicitly named in the datasheet."
+    },
+    {
+      "name": "AC IN 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Requires Option DPW (second hot-swappable redundant power supply module with its own power cord). Connector type inferred as IEC, same caveat as AC IN."
+    }
+  ]
+}

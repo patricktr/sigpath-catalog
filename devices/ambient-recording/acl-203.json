@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Ambient Recording",
+  "model": "ACL-203",
+  "category": "source",
+  "type": "Other",
+  "sourceUrl": "https://interstage.no/Sider/Produkter/Brochure_manual/Ambient/Ambient_ACL203_man.pdf",
+  "confidence": "high",
+  "notes": "Ambient ACL-203 \"Lockit\" is a portable battery-powered timecode/video-sync/genlock/wordclock/AES-3 black-audio generator (not a typical AV switcher/display-class box) — sized 100x74x26mm, 250g without batteries, so rackUnits omitted. It supersedes the ACL-202CT and was itself later superseded (current ambient.de shop lists newer models like ACN-CL \"Lockit\" / ACN-LP \"Lockit+\"; ACL-203 no longer appears on the manufacturer's live site). Internally powered by 2x AA (Mignon) cells (alkaline/NiMH/Lithium, selectable low-battery threshold); the DC and USB \"power\" paths described in the ports are external alternates, not separate dedicated power inlets — there is no standalone power connector (e.g. barrel/IEC) on this device. Source used is the full official Ambient Recording GmbH product manual/instructions PDF (letterhead, address, and content all Ambient's own), as mirrored on AV dealer Interstage's (Denmark) site; a matching one-page Ambient brochure PDF and several third-party manual-hosting sites (manualshelf, manualmachine, manualsdir) independently confirm the same model and panel layout. No bandwidth \"grade\" applies to any port: the BNC output is analog sync/wordclock/black-audio (not SDI), and USB version is unstated.",
+  "ports": [
+    {
+      "name": "Sync Outputs (BNC)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Single front-panel BNC jack. Rotary Switch 1 selects what is present: SD or HD tri-level video sync/genlock (23.98–60p, incl. 1080i/PsF, 1080P, 720P), Word Clock (32–192kHz, pull up/down), or AES-3 black audio (24-bit, same sample rates). Video out is 1Vpp into 75 ohm; not SDI, so no bandwidth grade applies. Supplied with a ~40cm BNC-to-BNC cable."
+    },
+    {
+      "name": "Timecode / DC In (5-pin Lemo Socket)",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Physical connector is a proprietary 5-pin Lemo socket (mates with FGG/JGG.0B.305.xxx), not a true XLR — mapped to xlr5 as the closest listed 5-pin locking connector id. Pinout: 1=Ground, 2=LTC In (0.1–5Vpp), 3=Aaton ASCII In/Out (also usable via built-in IR with Ambient Controller ACC501), 4=External DC In 6–16V (also outputs 1.92MHz tune reference), 5=LTC Out (BNC-level, 1Vpp). Optional Ambient breakout cables adapt this single socket to XLR-3F (TC in), XLR-3M (TC out), or BNC (TC in from cameras with BNC TC output)."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Panel-labeled 'USB'; physical connector is type Mini-A (not Micro) — mapped to usb-micro as the closest listed small-form-factor USB id. Used for unit setup/configuration and firmware upgrade (rotary Switch 1 positions E/F), and can alternatively power the unit (5.0–5.2V max, internal batteries remain fitted as backup). USB signaling version/speed is not stated in the manual (device dates to ~2008, so likely USB 1.1/2.0 full-speed) — grade omitted."
+    },
+    {
+      "name": "IR",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Infrared window for wireless Aaton ASCII communication with the Ambient Controller ACC501 (used to set/jam the unit and read back timecode), as an alternative to the wired ASCII pin on the Lemo socket."
+    }
+  ]
+}

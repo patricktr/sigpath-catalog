@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Plura",
+  "model": "P9400-4K",
+  "category": "source",
+  "type": "Media source",
+  "sourceUrl": "https://plurainc.com/products/p9400/",
+  "confidence": "medium",
+  "notes": "Manufacturer's own product page + linked cut-sheet PDF (https://plurainc.com/files/downloads/signal-processing/datasheet/Avenue_P9400_cut_sheet_rev_A2.pdf) were used. The device is the \"Avenue P9400-4K\" test-signal/sync-pulse generator, originally an Ensemble Designs product (the cut-sheet is still Ensemble Designs-branded) that Plura now sells/hosts under its own site as \"Plura P9400-4K\" — treat this as a Plura-branded continuation of the Ensemble Designs Avenue line. It is a card-based module comprised of two \"9400\" modules locked together, occupying two slots in a 1RU or 3RU Avenue frame — it has NO standalone AC power connector (draws 20W via the frame backplane), so no power port is listed. The 4 SDI outputs are individually 3G-SDI (SMPTE 425M-5 Level A); when combined they form a Quad-Link 4K/UHD signal (Square Division or 2-Sample-Interleave) — grade sdi-3g reflects the physical connector rating, not the composite 4K signal. Each of the two internal 9400 modules also has several additional software-programmable BNC outputs (individually configurable as Color Black, Tri-Level Sync, AES, DARS, Word Clock, LTC, or VITC), but the exact physical count of these programmable BNCs is not stated in the public cut-sheet, so they were omitted rather than guessed — actual unit likely has more BNC ports than listed here. No RS-232/RS-422, Ethernet, USB, or analog/AES audio connectors are documented on the cut-sheet (audio/timecode are embedded/programmable-output based, not on dedicated physical jacks per the available docs). No rack-unit size applies since this is a two-slot card, not a standalone chassis.",
+  "ports": [
+    {
+      "name": "Ext Ref A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference input on Module A (master); selectable as external reference or frame master reference — PAL/NTSC composite, tri-level sync, or 10 MHz sine/square"
+    },
+    {
+      "name": "Ext Ref B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference input on Module B (slave); selectable as external reference or frame master reference"
+    },
+    {
+      "name": "GPS Antenna",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Optional, requires Model 7400-GPS option, for <10^-12 frequency accuracy"
+    },
+    {
+      "name": "SDI Out A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out C",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out D",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AK-UCU600",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 2,
+  "sourceUrl": "https://eu.connect.panasonic.com/gb/en/broadcast-proav/accessories/ak-ucu600",
+  "confidence": "medium",
+  "notes": "Panasonic AK-UCU600 is the Camera Control Unit (CCU/base station) for Panasonic's AK-UC4000/UC3000 series 4K studio/field cameras — it is not the camera head itself, but the rack-mount unit that pairs with it over a single optical fiber camera cable. Category/type were set to converter/Encoder-Decoder since its core function is converting the proprietary optical camera signal into studio SDI/analog/audio/data and vice versa; no closer match exists in the given type enum (it also functions as a control processor for the remote camera). Primary spec source: Panasonic Connect EU product page (https://eu.connect.panasonic.com/gb/en/broadcast-proav/accessories/ak-ucu600). Physical connector shells and pin assignments (used to choose exact connector ids) were cross-checked against Panasonic's official AK-UCU600 Operating Instructions manual (https://pro-av.panasonic.net/manual/html/AK-UCU600P_PS_E_ES(DVQP1734XA)_E/ — see chapter03 \"Parts and their functions\" for rear-panel layout and chapter08 \"Reference\" for the connector pin-assignment table, and chapter09 \"Specifications\"). Dimensions given as 424(W)x88(H)x401(D)mm, ~8.9kg; rackUnits set to 2 from the 88mm height, though the 424mm width is narrower than a standard 19\" rack (a mounting frame/kit may be required — not confirmed from source). Several rear-panel connectors use proprietary/non-standard shells (Hirose circular, JST D-sub, LEMO optical hybrid) that don't map cleanly onto the given connector-id list; each such port has a note explaining the substitution made. The exact numbering/order of the 8 rear SDI OUT BNCs into 12G vs 3G vs HD groups is inferred from the manual's rear-panel labeling (\"UHD/HS/HD SDI OUT [1]-[4]\" and \"HD SDI OUT [5]-[7]/[8-PM]\") combined with the spec sheet's line-count breakdown (2x 12G/6G/3G/HD-SDI + 5x 3G/HD-SDI + 1x HD-SDI shared with monitor) — Panasonic's source materials do not explicitly state which physical BNC carries which grade, so treat per-connector grade assignment as medium confidence even though the aggregate counts are directly sourced. AC power inlet connector type (IEC vs other) is likewise an assumption, not confirmed in the manual.",
+  "ports": [
+    {
+      "name": "UHD/HS/HD SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Part of the spec sheet's '12G/6G/3G/HD-SDI, 2 lines' group; exact 1-of-8 numbering inferred from rear-panel connector grouping, not explicitly itemized by Panasonic."
+    },
+    {
+      "name": "UHD/HS/HD SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Second line of the '12G/6G/3G/HD-SDI, 2 lines' group."
+    },
+    {
+      "name": "UHD/HS/HD SDI OUT 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Part of the spec sheet's '3G/HD-SDI, 5 lines' group (embedded audio for HD only)."
+    },
+    {
+      "name": "UHD/HS/HD SDI OUT 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HD SDI OUT 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HD SDI OUT 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HD SDI OUT 7",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HD SDI OUT 8 / PM OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Shared with picture monitor output."
+    },
+    {
+      "name": "HD TRUNK OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "1.5G HD-SDI trunk output."
+    },
+    {
+      "name": "TICO OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "TICO-compressed 4K carried over 3G/1.5G HD-SDI."
+    },
+    {
+      "name": "VBS OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Analog composite (SD) video output."
+    },
+    {
+      "name": "VBS OUT 2 / PM OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Analog composite output, shared with picture monitor."
+    },
+    {
+      "name": "RET1 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Auto-detects 3G-HD/HD/SD-SDI; has active-through output (RET1 OUT)."
+    },
+    {
+      "name": "RET2 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "RET3 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "RET4 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "RET1 OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Active-through loop of RET1 IN."
+    },
+    {
+      "name": "VBS RET IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog composite (SD) return input."
+    },
+    {
+      "name": "PROMPT IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "HD-SDI prompter input, has active-through output."
+    },
+    {
+      "name": "PROMPT OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Active-through of PROMPT IN."
+    },
+    {
+      "name": "ANALOG PROMPT 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "SD analog composite prompter input."
+    },
+    {
+      "name": "ANALOG PROMPT 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "SD analog composite prompter input."
+    },
+    {
+      "name": "REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Black burst (BB) or tri-level sync input; loop-through output provided."
+    },
+    {
+      "name": "REF THROUGH OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of REF IN."
+    },
+    {
+      "name": "MIC1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Labeled 'Microphone Output', 0 dBm/600 ohm balanced. Physical shell is a Hirose HA16RV-3PG 3-pin circular connector, not full-size XLR; mapped to xlr3 as closest equivalent."
+    },
+    {
+      "name": "MIC2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Same as MIC1; Hirose HA16RV-3PG 3-pin circular connector mapped to xlr3."
+    },
+    {
+      "name": "AUX",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Waveform-monitor / external system control port. Physical connector is a 15-pin D-sub (JAE JAY-15S); mapped to 'vga' (DE-15 shape) as the closest listed connector — it does not carry VGA video."
+    },
+    {
+      "name": "TRUNK",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Two systems of camera trunk data (RS-422 and RS-232C combined). Physical connector is a 9-pin D-sub (JST JEY-9S); mapped to 'rs232' as closest, though it also carries RS-422."
+    },
+    {
+      "name": "COMMUNICATION",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Carries 2-line intercom (ENG/PROD/CLRCOM), tally (red/green/yellow), and 2-line PGM audio input. Physical connector is a 25-pin D-sub (JST JBY-25S); no DB25 option exists in the connector list so it was mapped to 'rs232' (DB9) as the nearest D-sub type — pin count and signal are NOT true RS-232."
+    },
+    {
+      "name": "ROP",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Remote Operation Panel port: RS-422, also supplies 16V DC (selectable). Physical connector is a 10-pin Hirose HR10G circular connector, not a standard RS-422 terminal; mapped to 'rs422' as closest by function."
+    },
+    {
+      "name": "MSU",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Master Setup Unit port: RS-422. Physical connector is a 10-pin Hirose HR10G circular connector; mapped to 'rs422' as closest by function."
+    },
+    {
+      "name": "CAMERA",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Single optical fiber multi-core hybrid cable to the camera head, carrying video, audio, intercom, tally, control data and camera power (240V AC, 1.46A supplied to camera). Physical connector is a proprietary LEMO/OPS2404 optical hybrid connector; mapped to 'fiber-lc' as the closest fiber option in the list."
+    },
+    {
+      "name": "LAN TRUNK",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Optical LAN trunk connection, 100BASE-TX/1000BASE-T. Mapped to 'fiber-lc' as closest optical connector option."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "For IP connection to ROP (AK-HRP1000/1005) or PC web access; 10BASE-T/100BASE-TX only."
+    },
+    {
+      "name": "AC power inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-120V AC or 100-240V AC (model dependent, 50/60Hz), 500W (90W without camera). Exact inlet type (C13/C14 vs captive cord) is not specified in the manual, which only describes a grounded 3-prong socket; 'iec' assumed as the standard for a multi-voltage rack unit — unconfirmed."
+    }
+  ]
+}

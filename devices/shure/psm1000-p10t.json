@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Shure",
+  "model": "PSM1000 P10T",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://pubs.shure.com/view/guide/PSM1000/en-US.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Shure's official PSM1000 online user guide (pubs.shure.com/view/guide/PSM1000/en-US.pdf, version 11, 2020-F) — content verified via a byte-identical mirrored copy at avc-group.com since the pubs.shure.com PDF itself returned 403/unparsable to automated fetch. The P10T is a full-rack (1U, 44 x 483 x 343 mm), dual-channel wireless IEM transmitter. Audio In (L/R) and Loop Out (L/R) are a stereo pair corresponding to the unit's two independent RF channels (Stereo/MX audio mode \"transmits each input as a separate channel\"). No connector on this device carries a documented bandwidth/version grade: Ethernet speed (10/100/1000) is not stated in Shure's documentation, so grade was omitted per instructions rather than guessed. Antenna BNC ports are RF transmit connections, not signal-graded. The device type enum has no dedicated \"wireless in-ear monitor\" category; \"Wireless mic\" was chosen as the closest match (same RF wireless-audio product family) even though the P10T sends a monitor mix to a bodypack rather than transmitting a microphone signal — flagging this as a low-confidence field even though port data itself is high-confidence. Model variants (frequency bands G10/H22/J8/J8A/L8, etc.) differ only in RF range/output power, not in physical I/O.",
+  "ports": [
+    {
+      "name": "Audio Input L",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack, balanced or unbalanced. Use either jack alone for mono input."
+    },
+    {
+      "name": "Audio Input R",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack, balanced or unbalanced."
+    },
+    {
+      "name": "Loop Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Sends a copy of the audio signal going into the transmitter to another device; unaffected by input level/pad."
+    },
+    {
+      "name": "Loop Out R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Sends a copy of the audio signal going into the transmitter to another device; unaffected by input level/pad."
+    },
+    {
+      "name": "Antenna 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF transmit antenna port."
+    },
+    {
+      "name": "Antenna 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF transmit antenna port."
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of a two-port RJ-45 jack for network/computer connection and daisy-chaining transmitters. Speed not specified by Shure."
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Part of a two-port RJ-45 jack for network/computer connection and daisy-chaining transmitters. Speed not specified by Shure."
+    },
+    {
+      "name": "Headphone Monitor",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel 3.5 mm headphone jack for local monitoring; monitor control adjusts level, button toggles between the two transmitter channels."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC mains power input, IEC connector, 100-240 Vac."
+    },
+    {
+      "name": "AC Power Passthrough",
+      "direction": "output",
+      "connector": "iec",
+      "note": "Unswitched IEC power passthrough used with an IEC extension cable to power another device (internal power-chaining)."
+    }
+  ]
+}

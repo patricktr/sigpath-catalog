@@ -1,0 +1,126 @@
+{
+  "manufacturer": "EEG Enterprises",
+  "model": "HD492 iCap Encoder",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.ai-media.tv/wp-content/uploads/Manual_HD492.pdf",
+  "confidence": "high",
+  "notes": "Product is the EEG Enterprises HD492 iCap SDI Closed Caption Encoder (1RU). EEG Enterprises is now part of Ai-Media / operates under Access Innovation IP Pty Ltd; the current official manual is hosted at ai-media.tv. Primary source used: official HD492 iCap Encoder User Manual (Ai-Media, rev. March 15 2023), specifically the \"Rear Panel,\" \"Encoder Specs,\" and \"GPIO Pinout\" sections (pp. 30-37), cross-checked against the EEG/Ai-Media iCap Encoder datasheet PDF. Dimensions conflict between sources: the marketing datasheet states 19\" x 1RU x 25\" deep while the (more current/detailed) manual's Encoder Specs table states 19\" x 1RU x 16.5\" deep — the manual figure was used. GP In/GP Out are physically 16-pin headers (mate to Omron XG5N-161-U) carrying 8 GPI + 8 GPO channels respectively; no listed connector id matches this, so \"euroblock\" was used as the closest approximation — treat with caution if exact connector fit matters. Modem A/B ports are physically RJ-11 (6P4C) jacks; \"rj45\" was used as the closest listed connector id since RJ-11 is not in the allowed list. SDI output grade (sdi-3g) was inferred from the relay-bypass pass-through design matching the 3G/HD/SD-capable SDI inputs; the output spec table did not restate a Format row separately. AC inlet connector variant (IEC C13/C14 vs other) is not explicitly named in either source document — inferred from standard broadcast rack-gear convention. Could not find a B&H/Sweetwater/Markertek/Crutchfield listing for this professional broadcast-only product, so the manufacturer's own manual/datasheet was used as the sole authoritative source.",
+  "ports": [
+    {
+      "name": "Master Video In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Program SDI input; accepts 3G (SMPTE 424M), HD (SMPTE 292M), or SD (SMPTE 259M/344M)"
+    },
+    {
+      "name": "Aux Video In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Secondary/auxiliary SDI caption-data source input"
+    },
+    {
+      "name": "Master Video Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Relay-bypass protected primary video output"
+    },
+    {
+      "name": "Video Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Non-relay-bypass copy of primary video output (Master copy)"
+    },
+    {
+      "name": "Decoder Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Relay-bypass protected Auxiliary SDI output; also serves as open-caption decoder monitor output"
+    },
+    {
+      "name": "Time Code In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced audio input for LTC time code (used by CCPlay feature)"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Female XLR; balanced analog or AES3 (110-ohm digital, 48kHz PCM) companion program audio for iCap"
+    },
+    {
+      "name": "LAN Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Base-T TCP/IP"
+    },
+    {
+      "name": "USB Port (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Firmware update / VANC capture via USB flash drive"
+    },
+    {
+      "name": "USB Port (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Two USB-A jacks present on rear panel under this label (3 USB ports total on unit)"
+    },
+    {
+      "name": "Serial Port 1 (333/GA Out)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "DB-9, selectable RS-232C/RS-422; also supports 708 caption data"
+    },
+    {
+      "name": "Serial Port 2 (RS232)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9, RS-232 only"
+    },
+    {
+      "name": "Modem A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual jack is RJ-11 (6P4C); rj45 chosen as closest listed connector. Standard/installed modem for dial-up captioning"
+    },
+    {
+      "name": "Modem B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual jack is RJ-11 (6P4C); rj45 chosen as closest listed connector. Optional add-on second modem, paid option"
+    },
+    {
+      "name": "GP In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Actual connector is a 16-pin header mating an Omron XG5N-161-U receptacle (8 optocoupler GPI inputs), not a true euroblock terminal block; euroblock chosen as closest listed connector type"
+    },
+    {
+      "name": "GP Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Actual connector is a 16-pin header mating an Omron XG5N-161-U receptacle (8 normally-open relay GPO outputs, 2A/30VDC), not a true euroblock terminal block; euroblock chosen as closest listed connector type"
+    },
+    {
+      "name": "AC Power Source",
+      "direction": "input",
+      "connector": "iec",
+      "note": "115/230V AC 50/60Hz, tolerant 120-240V. Exact IEC inlet variant (C13/C14) not explicitly stated in source docs; inferred from standard 1RU broadcast-gear convention"
+    }
+  ]
+}

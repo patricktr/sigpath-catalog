@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "DeckLink 8K Pro G2",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/decklink/techspecs/W-DLK-45",
+  "confidence": "high",
+  "notes": "Sourced from Blackmagic Design's official DeckLink tech-specs page (manufacturer authoritative) and cross-verified against B&H Photo's detailed spec table (https://www.bhphotovideo.com/c/product/1831934-REG/blackmagic_design_bdlkhcpro8k12gg2_decklink_8k_pro_g2.html/specs) for exact connector labeling (4x BNC 12G-SDI, 1x HDMI 2.1 in, 1x HDMI 2.1 out, 1x BNC Blackburst reference in, 1x DE-9/DB-9 RS-422). As of 2026, Blackmagic no longer sells a standalone non-G2 \"DeckLink 8K Pro\" — the only card currently shipping under that base name is the \"DeckLink 8K Pro G2\" (adds HDMI 2.1 mezzanine card and RS-422 vs. the original 8K Pro's HDMI 2.0/no RS-422); B&H also lists a $105 \"G2 Upgrade\" mezzanine card to retrofit older units. This is a full-height PCIe x8 Gen3 capture/playback card (installs in a desktop/workstation, not rack-mountable, so rackUnits omitted); the PCIe edge connector itself is the computer interface and isn't included as a port since it has no id in the given connector taxonomy. Power connector is approximated as \"dc-barrel\" — see port note for the caveat that the real connector is a small internal DC power cable/connector, not a literal barrel jack.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "bidirectional",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "Ref In (Tri-Sync/Black Burst)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference/genlock input, tri-level sync or black burst; not a bandwidth-graded video signal so no grade set"
+    },
+    {
+      "name": "RS-422 Out",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DE-9/DB-9 deck-control port; Blackmagic labels it 'RS-422 Out' though the serial protocol is inherently bidirectional"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Card ships with an internal power cable from the PC's power supply to a small connector on the board (supplementing PCIe slot power, 30W total draw). Not a literal barrel jack — 'dc-barrel' is the closest available id in the enumerated connector list; the real connector is a small mini-fit-style DC power connector."
+    }
+  ]
+}

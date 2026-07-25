@@ -1,0 +1,104 @@
+{
+  "manufacturer": "Comrex",
+  "model": "ACCESS NX Rack",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.comrex.com/resources/access-nx-rack-manual/",
+  "confidence": "high",
+  "notes": "Primary source: Comrex ACCESS NX Rack Product Manual (Sept 2025 edition, PDF at comrex.com/wp-content/uploads/2026/05/ACCESS-NX-Rack-2-Manual-2026-1.pdf, linked from the manual resource page above), rear-panel diagram (Fig. 1, p.15) and pinout tables (p.16-17); cross-checked against the manufacturer product/spec page https://www.comrex.com/products/access-nx-rack-ip-audio-codec/ for the summarized spec list (audio levels, \"2x Ethernet 1000baseT\", \"4x USB\", \"3 conductor IEC\", \"DB-9 male\" GPIO / \"DB-9 female\" Serial, 1U 19\"x9\"x1.75\", 9 lbs, 120/240VAC 50/60Hz 50W). Device is a rackmount IP audio codec (encoder/decoder) supporting AES67, AES3, and analog audio I/O plus POTS/ISDN-BRIC-era compatibility features (not physically wired here — no POTS/telephone jack is present on this current-generation rear panel; older ACCESS Rack models had one, but the NX Rack manual's own rear-panel diagram does not show an RJ11 port). GPIO connector mapped to \"rs232\" only because it is the closest DB-9 D-sub id in the allowed connector list — electrically it is a simple 4-in/4-out contact-closure port, not RS-232. Display/console video-out connector type is inferred as standard HDMI (confirmed via a companion Comrex \"ACCESS Rack\" manual describing an \"HDMI Output\" for the same console function); no HDMI version is published, so grade was omitted per instructions. USB port speed/generation is not published by Comrex, so grade was omitted. The manual's own appendix shows a \"Legacy Model Diagram\" with a slightly different connector layout (labeled DP alongside DISPLAY) for an older hardware revision of this same product line — the port list above reflects the current-generation rear panel (Fig. 1), not the legacy variant.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "3-conductor IEC power inlet; auto-sensing 110-240 VAC 50/60 Hz, 50W."
+    },
+    {
+      "name": "Line In Left / AES3 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Rear-panel Analog/AES3 switch selects balanced analog line input or AES3 digital input on this XLR; left channel used for mono encoding modes."
+    },
+    {
+      "name": "Line In Right",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog input only (no AES3 option); not used in mono encoding modes. 0 dBu nominal, +20 dBu peak."
+    },
+    {
+      "name": "Line Out Left",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog output, 0 dBu nominal, +20 dBu peak."
+    },
+    {
+      "name": "Line Out Right",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog output, 0 dBu nominal, +20 dBu peak."
+    },
+    {
+      "name": "AES3 Output",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "48 kHz AES3 stereo digital output, active simultaneously with the analog outputs; locks to input clock when AES3 input is active."
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub MALE contact-closure port (4 inputs + 4 open-collector outputs, sinks up to 200mA/12V) — not RS-232 signaling. DB-9 shell mapped to the closest connector id in the taxonomy; true protocol is simple contact closure."
+    },
+    {
+      "name": "Display",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Labeled 'DISPLAY' on rear panel; console video output for attaching a monitor (with USB keyboard/mouse) to access the local Console Connection Interface. Comrex does not publish an HDMI version/generation; a companion ACCESS Rack manual refers to this simply as an 'HDMI Output' with no mini/micro qualifier."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "One of 4x USB-A ports (rear panel, stacked in pairs); supports USB keyboard/mouse for console use and supported USB Wi-Fi/3G/4G adapters. Speed/generation not specified by Comrex."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "Network Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit (1000baseT) Ethernet; use as the sole network port if not running separate AES67 traffic."
+    },
+    {
+      "name": "Network Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit (1000baseT) Ethernet; intended for AES67 network traffic when AES67 and codec control/IP-audio networks are kept separate."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub FEMALE, RS-232, DCE-style pinning, default 9600,n,8,1; passes ancillary data to the far end of the link."
+    }
+  ]
+}

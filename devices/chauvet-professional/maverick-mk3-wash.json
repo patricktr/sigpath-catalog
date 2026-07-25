@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Chauvet Professional",
+  "model": "Maverick MK3 Wash",
+  "category": "other",
+  "sourceUrl": "https://www.chauvetprofessional.com/wp-content/uploads/2018/10/Maverick_MK3_Wash_UM_Rev11.pdf",
+  "confidence": "high",
+  "notes": "LED moving-head wash fixture (27x 40W RGBW LEDs), IP20 dry-location housing (the power connector itself is IP65-rated, but the fixture body is not). Weight 68.2 lb (31 kg); dimensions 18.7 x 11.49 x 22.93 in (459 x 292 x 583 mm) — not rack-mountable. No rackUnits/type set since none of the allowed category/type enums represent a lighting fixture; category defaulted to \"other\". Power connector \"Seetronic Powerkon IP65\" mapped to the closest listed id \"powercon\" (it is physically/electrically compatible with Neutrik powerCON TRUE1). Data I/O confirmed directly from the manufacturer's official User Manual (Rev. 11) product-overview diagram and Technical Specifications table (p.3 and p.64): \"3- and 5-pin DMX in/out\" ports and \"two Amphenol XLRnet [RJ45] through ports\" used for Art-Net/sACN/Kling-Net/RDM/WDMX. Ethernet port speed/grade is not published by Chauvet, so grade was omitted rather than assumed. Power spec table explicitly lists both a \"Power input connector\" and a \"Power output connector\" (both Seetronic Powerkon IP65) for daisy-chaining, confirmed for both US/Worldwide and UK/Europe variants. Cross-checked against chauvetprofessional.com product page and B&H search-result summary (B&H page itself returned HTTP 403 and could not be fetched directly), both consistent with the manual.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Seetronic Powerkon IP65 (Neutrik powerCON TRUE1-compatible); auto-ranging 100-240 VAC 50/60Hz, F20A 250V fuse"
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Seetronic Powerkon IP65 link/through output for daisy-chaining power to additional fixtures"
+    },
+    {
+      "name": "DMX In (3-pin)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DMX Out (3-pin)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DMX In (5-pin)",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out (5-pin)",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Ethernet In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Amphenol XLRnet locking-shell RJ45 (etherCON-style); carries Art-Net, sACN, Kling-Net, RDM, WDMX; link speed not stated by manufacturer"
+    },
+    {
+      "name": "Ethernet Thru",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Amphenol XLRnet locking-shell RJ45 (etherCON-style) daisy-chain-through port"
+    }
+  ]
+}

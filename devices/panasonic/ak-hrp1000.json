@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "AK-HRP1000",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://pro-av.panasonic.net/en/products/ak-hrp1000gj/index.html",
+  "confidence": "medium",
+  "notes": "Manufacturer page confirms model AK-HRP1000GJ (the GJ suffix denotes the Japan/Asia region SKU; requested as \"AK-HRP1000\"). This is a 1/4-rack-size Remote Operation Panel (ROP) for Panasonic system/studio cameras — a desktop control surface, not conventionally rack-mounted, so rackUnits is omitted. Rear panel has exactly 3 cable connectors (confirmed from official product photo, labeled PREVIEW / CCU / LAN) plus an unlabeled chassis \"SIGNAL GND\" screw terminal, which is not included as a port since it's a ground lug, not a signal/power cable connector. The unit has NO dedicated AC/DC power inlet: it is powered either through the CCU connector (10–16V DC from a directly connected camera, or 16V DC when a CCU is in the chain) or through the LAN port via PoE+ (42–57V DC, requires a PoE+-capable switch and CAT5e-or-better cable, ≤100m). LAN Ethernet speed (e.g. 100M vs 1G) is not stated on the spec page, so no grade was set. The PREVIEW (4-pin) and CCU (7-pin) connectors are proprietary circular locking connectors (visually Hirose-style); \"midi-din\" was chosen only as the closest available connector id in the allowed list — it is not an actual MIDI DIN connector, and exact manufacturer part numbers were not found. Unit also has a front-panel SD card slot (firmware/scene-file storage) and a 3.5\" LCD touch/joystick control surface, neither of which are cable I/O so they are omitted from the ports list.",
+  "ports": [
+    {
+      "name": "PREVIEW",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Proprietary 4-pin circular locking connector (Hirose-style), not a true MIDI DIN — closest available id. Likely outputs a composite preview-video feed to an external monitor; exact signal not documented on the spec sheet."
+    },
+    {
+      "name": "CCU",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Proprietary 7-pin circular locking connector (Hirose-style), not a true MIDI DIN — closest available id. Carries camera/CCU serial control signals and also delivers DC power to the panel (12V DC from a directly-connected camera, or 16V DC when connected via a CCU). Max cable length 20 m (camera) / 50 m (CCU)."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    }
+  ]
+}

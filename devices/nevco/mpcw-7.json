@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Nevco",
+  "model": "MPCW-7",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://nevcodocs.s3.amazonaws.com/Controls/MPC-7/Hockey.PDF",
+  "confidence": "high",
+  "notes": "Nevco MPCW-7 is a handheld/desktop wired-or-wireless scoreboard console controller (11in x 9.5in x 4in, 3.35 lb; not rack-mountable, so rackUnits omitted). No signal-graded connectors (HDMI/SDI/USB/RJ45-network/DP) are present — the two BNC jacks carry Nevco's proprietary coax control/data protocol to the scoreboard, not SDI video, so no grade was set. Port physical details (BNC output x2, dual hand-held-switch jacks, 9V DC barrel power input) came from the rear-view diagram (Figure 2) in Nevco's official MPCW-7 Operator's Instructions manual (hosted on nevco.com's own docs S3 bucket); dimensions/range/capacity came from the manufacturer product page https://www.nevco.com/product/mpcw-7-wireless-wired/. Optional wireless receiver is a separate accessory box, not a physical port on the MPCW-7 unit itself, so it was not listed as a port. Hand-held-switch jack connector type was approximated to \"rj45\" as the closest schema id — actual hardware is a smaller coiled modular phone-jack style connector, not true 8P8C RJ45.",
+  "ports": [
+    {
+      "name": "Output to Scoreboard 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Output to Scoreboard 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Hand Held Switch Jack (Left)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual connector is a small coiled-cord modular phone-style jack (handset-style), not full-size RJ45; approximated to closest available connector id."
+    },
+    {
+      "name": "Hand Held Switch Jack (Right)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual connector is a small coiled-cord modular phone-style jack (handset-style), not full-size RJ45; approximated to closest available connector id."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "9V DC from included external wall-wart power supply."
+    }
+  ]
+}

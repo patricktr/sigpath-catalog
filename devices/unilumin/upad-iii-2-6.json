@@ -1,0 +1,31 @@
+{
+  "manufacturer": "Unilumin",
+  "model": "UPAD III 2.6",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.matrixvisual.com/wp-content/uploads/2016/01/UNILUMIN-UPAD-III-2.6MM-Spec-Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Legacy Unilumin rental LED tile (2.6mm pitch, 500x500mm cabinet, Novastar-driven); superseded by UPAD IV and no longer on Unilumin's own site under this name, so sourced from reseller/AV-integrator spec sheets (Matrix Visual, AVS-US, dbpixelhouse, LMG) plus the official Unilumin UPAD III product manual on ManualsLib. Electrical/optical specs (pixel pitch, brightness, refresh, cabinet size/weight, input voltage) are well cross-corroborated across sources, but NONE of the spec sheets or the manual's wiring diagrams state an explicit connector part name for the cabinet's rear signal/power jacks (manual only names cable types: \"signal cable,\" \"power cable,\" plus DVI/USB for the sending-card/control-PC side, which are not physical ports on the tile itself and were omitted here). Data In/Out ports as RJ45 and Power In/Out as locking powerCON-class connectors are inferred from standard practice for Novastar-driven indoor rental LED cabinets of this generation, not confirmed via a manufacturer photo/diagram of this specific SKU — treat connector types as best-effort, not verified. No bandwidth/speed grade is stated anywhere for the Ethernet data link, so grade was omitted per instructions. Minor source disagreement on brightness (1000 cd/m² vs 1200 nits), IP rating (IP30 vs IP44), and cabinet depth (76mm vs 86–90.6mm) likely reflects sub-revisions of the same product line.",
+  "ports": [
+    {
+      "name": "Data In",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Data Out",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "AC Power Out",
+      "direction": "output",
+      "connector": "powercon"
+    }
+  ]
+}

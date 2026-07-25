@@ -1,0 +1,29 @@
+{
+  "manufacturer": "StarTech.com",
+  "model": "MCM1110MMLC",
+  "category": "network",
+  "type": "Converter",
+  "sourceUrl": "https://sgcdn.startech.com/005329/media/sets/MCM1110MMLC_manual/MCM1110MMLC_Manual.pdf",
+  "confidence": "high",
+  "notes": "Desktop unit, not rack-mountable (two mounting holes on the bottom for surface/wall mount instead). Also sold/listed as \"StarTech.com Gigabit Ethernet Fiber Media Converter - MM LC\" and at retail as \"Gigabit Multi-Mode LC Fiber Converter, 550m, TAA\". Fiber port ships with a fixed 850nm MM SFP but the cage is a standard SFP slot; RJ45 auto-negotiates 10/100/1000Mbps, fiber side runs 1000Mbps full-duplex (1000Base-SX/LX) — both graded eth-1g. Link Fault Pass-through (LFP) DIP switch present but is a control feature, not a physical I/O connector. Sourced from the official StarTech instruction manual (PDF hosted on startech.com's CDN); the interactive product/spec page at startech.com/en-us/networking-io/mcm1110mmlc is JS-rendered and did not yield readable spec text via fetch, so the manual PDF was used as the authoritative source instead.",
+  "ports": [
+    {
+      "name": "RJ45 port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Fiber (Mini-GBIC/SFP) Port",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Pre-installed with a 1000Base-SX (850nm) multimode Gigabit SFP transceiver module with duplex LC connectors; slot accepts any MSA-compliant Gigabit SFP (1000Base-SX or 1000Base-LX), not 10/100Mbps modules."
+    },
+    {
+      "name": "DC input port",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5V DC input from included universal (NA/EU/UK/AU) external power adapter."
+    }
+  ]
+}

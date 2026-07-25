@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Shure",
+  "model": "PSM300 P3T",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://pubs.shure.com/guide/PSM300",
+  "confidence": "high",
+  "notes": "Shure P3T is the half-rack transmitter of the PSM300 Stereo Personal Monitor (in-ear monitor) system; no product category in the given list matches \"wireless IEM transmitter\" so category/type were set to closest generic options (audio / Other). Rear panel per official Shure user guide (pubs.shure.com/guide/PSM300, v2.5, 2024-H): two balanced 1/4\" (6.35mm) TRS Audio In jacks (L/R, tip=hot/ring=cold/sleeve=ground, switchable +4dBu/-10dBV, phantom-power protected to 60VDC), two balanced 1/4\" TRS Loop Out jacks (L/R, pass-through of the input signal), a BNC antenna connector (accepts the supplied 1/4-wave antenna, a directional antenna, or a Shure PA411 combiner), and a DC power input for the included Shure PS24 external power supply (12-15V DC, 260mA max) — connector type for the PS24 jack is a round coaxial DC barrel per the panel diagram/icon, exact barrel size (e.g. 2.1mm) not stated in the manual. No connector on this device is bandwidth-graded (analog audio, RF antenna, and DC power only), so no \"grade\" field was set on any port. Two rear-panel switches (Stereo-MX/Mono, Line/Aux) are input-sensitivity/mix controls, not physical ports, and were omitted. Dimensions 43 x 198 x 172mm (H x W x D) — the ~43mm (1.7in) height corresponds to standard 1U rack height (device is half-rack width; ships with a rackmount kit for two units side by side).",
+  "ports": [
+    {
+      "name": "Audio In L",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Audio In R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Loop Out L",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Loop Out R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Antenna",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

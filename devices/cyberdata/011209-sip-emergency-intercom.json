@@ -1,0 +1,35 @@
+{
+  "manufacturer": "CyberData",
+  "model": "011209 SIP Emergency Intercom",
+  "category": "audio",
+  "sourceUrl": "https://www.cyberdata.net/products/011209",
+  "confidence": "medium",
+  "notes": "Manufacturer datasheet (https://files.cyberdata.net/assets/011209/011209_SIP_Emergency_Intercom.pdf) confirms: Ethernet I/F 10/100 Mbps; Power Input = PoE 802.3af compliant OR +8 to +12VDC @ 1000mA regulated supply (not included); On-Board Relay 1A @ 30VDC. Audio Output 86dB@1m, payloads G.711a/u, G.722, G.729; surface-mount plastic enclosure, 4.53 x 2.22 x 4.53 in, indoor use only — no rackUnits (desktop/surface-mount device). The device's non-network I/O (alternate DC power, relay dry-contact, door-sense input) live on an internal multi-pin terminal block shown in an installation diagram (8 numbered terminals) but the datasheet/operations guide does not publish a labeled pin table, so exact pin numbers and precise connector style (screw terminal vs. pluggable Euroblock) are inferred — mapped to the closest listed ids (euroblock-dc for DC power, euroblock for relay/sense). No integrated speaker/mic external connectors are broken out (audio transducers are built into the enclosure, not exposed as external ports). \"Category/type\": no listed `type` enum cleanly matches a SIP door/emergency intercom, so type is omitted; category set to \"audio\". Model number 011209 corresponds specifically to the wall-surface-mount red \"EMERGENCY / PRESS BUTTON TO CALL\" intercom (also sold in gray/other colors under related SKUs in the same product family per the Operations Guide part-number list: 011186, 011209, 011211, 011214, 011216, 011304, 011305, 011309, 011567 — those are different physical enclosures/features but share this core I/O).",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps; PoE 802.3af compliant powering"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Alternative to PoE: +8 to +12 VDC @ 1000mA regulated supply (not included), wired into the device's internal terminal block. Exact connector style not pictured in datasheet; terminal-block wiring inferred from installation diagram."
+    },
+    {
+      "name": "Relay Out (Door Strike)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "On-board DTMF-controlled dry relay contact, 1A @ 30VDC, normally-open; switches an externally supplied DC source to trigger an electric door strike. Part of the same multi-pin terminal block shown in the install diagram; exact pin numbering not published."
+    },
+    {
+      "name": "Sense Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Door closure / tamper sense input wired to the terminal block (labeled \"Sense Input\" in the installation diagram, used with an externally supplied door sensor)."
+    }
+  ]
+}

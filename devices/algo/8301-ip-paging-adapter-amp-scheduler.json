@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Algo",
+  "model": "8301 IP Paging Adapter &amp; Scheduler",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.algosolutions.com/product/8301-ip-paging-adapter-scheduler/",
+  "confidence": "medium",
+  "notes": "Algo 8301 \"IP Paging Adapter & Scheduler\" bridges SIP/VoIP paging to legacy analog amplifiers/PA systems and doubles as a bell/announcement scheduler; PoE-powered, no separate mains power input. A compliance variant, 8301-IC (InformaCast), also exists — spec sheet used here is for the standard 8301. Physical size 6.75 x 4.3 x 1.18 in with a snap mounting bracket (desktop/wall-mount, not rack-mountable, so rackUnits omitted). Line In/Out are each broken out to two parallel connectors (locking mini-XLR and a screw terminal block carrying the same signal) — both listed as separate physical ports since they are distinct connectors on the chassis. Relay In/Out and the terminal-block audio ports are screw/euroblock-style terminals; \"euroblock\" was used as the closest connector id since a plain terminal-block id is not in the allowed list. Ethernet link speed (10/100 vs Gigabit) was not stated on the fetched product page, so no eth-* grade was set per instructions. Content was retrieved via an AI-summarized page fetch (WebFetch) rather than direct HTML/table parsing, and a direct PDF spec-sheet URL 404'd, so confidence is medium rather than high — recommend a human spot-check against the official downloadable \"8301 Spec Sheet\" PDF on algosolutions.com if exact figures (e.g., precise relay ratings, Ethernet speed) are critical.",
+  "ports": [
+    {
+      "name": "Line Out (Mini-XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Locking mini-XLR female; balanced/isolated audio to amplifier. Ships with mini-XLR-to-standard-XLR-male cable."
+    },
+    {
+      "name": "Line Out (Terminal Block)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced/isolated wire-pair output, parallel signal to the mini-XLR Line Out."
+    },
+    {
+      "name": "Line In (Mini-XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Locking mini-XLR male; balanced/isolated page or music input."
+    },
+    {
+      "name": "Line In (Terminal Block)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced/isolated wire-pair input, parallel signal to the mini-XLR Line In."
+    },
+    {
+      "name": "Aux In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack, non-isolated analog line-level music input."
+    },
+    {
+      "name": "Aux Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack, non-isolated output for PC speakers/headset."
+    },
+    {
+      "name": "Relay Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Supervised dry-contact (NO/NC) input; supports Algo 1202/1203 call buttons."
+    },
+    {
+      "name": "Relay Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dry-contact relay output, max 30V 50mA (normally open)."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "PoE (IEEE 802.3af Class 0), 48V 15.4W supplied; device draws max 4W, idle 2W. No separate power connector — the unit is powered entirely via this port. Link speed not stated on source page, so no bandwidth grade set."
+    }
+  ]
+}

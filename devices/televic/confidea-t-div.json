@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Televic",
+  "model": "Confidea T-DIV",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.soundscenter.com/images/catalog_images/confidea_t_div_71.98.0108-0.3.pdf",
+  "confidence": "high",
+  "notes": "Official Televic Conference datasheet (doc 71.98.0108, v0.3, Sept 2015), mirrored on a reseller site (soundscenter.com); content is Televic-authored and matches Televic's product-line branding. Televic's own knowledge base now lists this as a discontinued/legacy model (see https://conference.televic.digital/knowledgebase/discontinued-products/legacy-confidea-t/), superseded by newer Confidea units, but the datasheet remains the authoritative spec source. Device is a tabletop delegate unit for discussion + simultaneous interpretation + electronic voting (built-in loudspeaker, OLED display, RFID card reader, 5 voting buttons) — no port-diagram category in the schema fits exactly, so category/type were set to the closest generic (audio/Other). No rackUnits — it is a desktop/tabletop unit. Power arrives solely via the Plixus RJ45 network cabling (48VDC, <3.5W); there is no separate dedicated power connector to list. The two RJ45 ports use Televic's proprietary Plixus protocol over Cat5e, not generic Ethernet, so no eth-* grade is stated or applicable. The microphone connector is a proprietary Televic screw-lock socket (not true XLR); xlr3 was chosen only as the closest connector id in the allowed list.",
+  "ports": [
+    {
+      "name": "Microphone (screw-lock socket)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Proprietary Televic screw-lock connector for removable gooseneck mic (D-MIC30SL/40SL/50SL), not a true 3-pin XLR; chosen as closest listed connector."
+    },
+    {
+      "name": "Network 1 (RJ45, Plixus loop-through)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Carries Plixus proprietary audio/data/control over Cat5e and also delivers 48VDC power to the unit (<3.5W draw) — no separate power connector exists. Not standard Ethernet, so no bandwidth grade is stated."
+    },
+    {
+      "name": "Network 2 (RJ45, Plixus loop-through)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second Plixus RJ45 for daisy-chain/loop cabling to the next unit; in/out are auto-sensing and interchangeable."
+    },
+    {
+      "name": "Headphone 1 (3.5mm jack)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphone 2 (3.5mm jack)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    }
+  ]
+}

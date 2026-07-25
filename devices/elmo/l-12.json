@@ -1,0 +1,65 @@
+{
+  "manufacturer": "ELMO",
+  "model": "L-12",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.manualslib.com/manual/564874/Elmo-L-12.html",
+  "confidence": "medium",
+  "notes": "ELMO L-12 is a discontinued document camera / visual presenter (superseded by the 4K L-12F/L-12G/L-12W line, which are NOT the same product and were excluded from this research). Could not reach an ELMO manufacturer spec page for this specific legacy model (elmousa.com's current lineup no longer lists it); data was extracted from the official ELMO L-12 instruction manual as hosted/paginated by ManualsLib (manual ID 564874), cross-checked across its Rear Panel, Side Panel, and Specifications sections, so content is manufacturer-authored even though third-party hosted. Also present but omitted (no matching connector id in the allowed list): a side-panel SD card slot (\"commercially available SD card\"). Built-in microphone and remote-control IR sensor are integrated, not physical ports, so also omitted. Max video output is 1080p/720p (no 4K on base L-12) — power: 12VDC via external AC adapter (100-240V input), 17.5W consumption. Desktop unit (not rack-mountable), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Rear-panel 'USB' terminal for PC connection; manual specifies a Mini-B receptacle (USB 2.0 compliant) — closest available connector id used is usb-micro."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Outputs up to 1080p/720p; HDMI version not stated in the manual so grade omitted."
+    },
+    {
+      "name": "RGB OUT",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin analog RGB output; mirrors HDMI OUT simultaneously."
+    },
+    {
+      "name": "RGB IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin analog RGB input, pass-through to RGB OUT when selected."
+    },
+    {
+      "name": "VIDEO",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Composite video output (NTSC/PAL); RGB and HDMI are disabled when this output is selected."
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB (Host)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Side-panel Type-A host port for a USB flash drive or wireless pen tablet accessory."
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Side-panel mic/line input jack; exact silkscreen label not fully confirmed from available manual excerpts (described in text as 'mic and line input')."
+    }
+  ]
+}

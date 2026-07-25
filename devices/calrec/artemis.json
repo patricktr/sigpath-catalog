@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Calrec",
+  "model": "Artemis",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://calrec.com/wp-content/uploads/2020/01/Artemis-Installation-Manual-926-149-Iss29-Lo.pdf",
+  "confidence": "medium",
+  "notes": "Calrec Artemis is a modular broadcast audio production console sold as a control surface (desk) plus a physically separate processing core (4U \"Artemis Light\" or 8U \"Artemis Shine/Beam/Ray\") linked by SFP (copper/fibre); Hydra2 I/O boxes provide the actual analogue/AES/SDI audio I/O elsewhere in the system. Ports above cover only the control-surface rear interface, per the official Installation & Technical Manual (926-149, Iss.29), Figure 1 \"Rear of Artemis Control Surface\" and associated sections (found via calrec.com product page https://calrec.com/shop/broadcast-audio-consoles/artemis/, which lacks connector detail itself). Two rear-panel items shown in the manual's Figure 1 legend (\"Ancillary Inputs\" and \"Screen/Ancillary power\") could not be confirmed to a specific connector type from the manual text and were omitted rather than guessed. DB25 (25-pin D-sub/D-Type) is used for the Headphone Input and Meter I/O ports but is not present in the allowed connector-id list; \"euroblock\" was substituted as the closest multi-pin balanced-audio connector — actual hardware connector is DB25 female. Processing-core I/O (BNC video sync/reference x4, further SFP Hydra2 ports x8-32 depending on router card, RJ45 LAN, IEC PSU inputs x2) and Hydra2 I/O-box connectors (XLR/BNC/D-type analogue & AES) were intentionally excluded since they belong to separate, configurable rack units rather than the console itself — the Artemis line spans 4 sizes (Light/Ray/Beam/Shine) with differing DSP/router capacity, so exact core I/O counts vary by configuration and aren't a single fixed spec. rackUnits omitted: the control surface is a desk-mounted unit, not rack-mounted.",
+  "ports": [
+    {
+      "name": "AC IN 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Primary AC mains inlet, 100-240V AC. Console has 2 redundant primary IEC inlets (AC IN 1 / AC IN 2) plus a 3rd ancillary IEC inlet."
+    },
+    {
+      "name": "AC IN 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Secondary/redundant AC mains inlet, 100-240V AC."
+    },
+    {
+      "name": "Anc (Ancillary AC)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Third IEC AC inlet, 100-240V AC, powers 3rd-party single-PSU accessories mounted in the console (e.g. PC monitor, surround meters)."
+    },
+    {
+      "name": "PC Interface",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 Ethernet port on the rear interface for the console's internal PC; data rate/version not stated in manual."
+    },
+    {
+      "name": "Talkback Microphone Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "XLR male; outputs the console talkback mic signal for feeding external talkback systems."
+    },
+    {
+      "name": "Headphone Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Labelled '25 Pin D-Type' balanced analogue input on the rear interface, feeding up to 3 stereo headphone circuits. DB25/D-sub is not in the provided connector list; euroblock chosen as nearest multi-pin balanced-audio substitute."
+    },
+    {
+      "name": "Meter I/O (x8)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8x female 25-pin D-Type (D25) connectors on the rear interface, each switchable between balanced analogue (moving-coil VU) or AES3 unbalanced digital meter feed, for driving external meter bridges (e.g. DK, RTW). DB25/D-sub is not in the provided connector list; euroblock chosen as nearest multi-pin substitute."
+    },
+    {
+      "name": "Primary Surface-to-Core Link",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage (copper or fibre SFP module) carrying the primary redundant data link from the control surface's Surface Switch to the separate processing core's Control Processor 'Surface 1' (MAC7) port. Link speed/version not stated in the manual."
+    },
+    {
+      "name": "Secondary Surface-to-Core Link",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Redundant secondary SFP link (copper or fibre) from the secondary Surface Switch to the secondary Control Processor."
+    }
+  ]
+}

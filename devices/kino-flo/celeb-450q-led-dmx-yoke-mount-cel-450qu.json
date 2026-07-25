@@ -1,0 +1,34 @@
+{
+  "manufacturer": "Kino Flo",
+  "model": "Celeb 450Q LED DMX (Yoke Mount, CEL-450QU)",
+  "category": "other",
+  "sourceUrl": "https://kinoflo.com/wp-content/uploads/2022/07/3100105-Rev-D-Celeb%C2%AE-250450450@-LED-DMX-05-13-2022-1.pdf",
+  "confidence": "high",
+  "notes": "Kino Flo Celeb 450Q LED DMX was discontinued as of Jan 1, 2023 but full manufacturer specs remain published (kinoflo.com product page + Operation Manual PN 3100105 Rev D, 05-13-2022). Specs above are for the Yoke Mount variant (CEL-450QU, 24 lb, 30x5x26in) sourced directly from the manual's \"Fixture Specifications\" page; a Pole-Op variant (CEL-450QPU, 26 lb) exists with identical I/O/electricals, only mount hardware differs. This is a studio LED soft-light panel, not a signal-routing device, so no listed \"category\"/\"type\" enum fits well — left category as \"other\" and omitted \"type\". Not rack-mountable (rackUnits omitted). No grade set on any port since DMX (XLR5) and IEC power are not in the graded connector families listed in the instructions. The Celeb 250 model (smaller sibling) additionally has a 3-pin XLR 24VDC battery input, but the manual states this DC input applies only to the Celeb 250, not the 450/450Q, so no DC input port was included here. The DATA port is physically a USB Mini-B connector (manual explicitly calls it \"Mini B USB\"); since usb-micro/usb-b/usb-c/usb-a/thunderbolt were the only USB-family options given and none is an exact match, usb-micro was chosen as the closest and the discrepancy is noted on that port.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC power cord (included); universal 100-240VAC 50/60Hz, 270W, 2.7A @120VAC"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin XLR, standard DMX-512 in (Kino Flo also sells 'XLR-5' DMX cables as accessories); wireless DMX (LumenRadio) also built in"
+    },
+    {
+      "name": "DMX Out",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR, DMX-512 thru/loop; auto-terminates if no cable is attached"
+    },
+    {
+      "name": "Data",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Labeled 'DATA' on control panel; actual connector is USB Mini-B (not in provided connector list, usb-micro used as closest match) for firmware updates from a PC"
+    }
+  ]
+}

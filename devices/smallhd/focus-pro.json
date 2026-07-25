@@ -1,0 +1,35 @@
+{
+  "manufacturer": "SmallHD",
+  "model": "Focus Pro",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://smallhd.com/products/focus-pro",
+  "confidence": "medium",
+  "notes": "SmallHD \"Focus Pro\" is a distinct SKU (MON-FOCUS-PRO) from the older \"FOCUS 5\\\" Base HDMI/SDI\" line — this device is SDI-only, purpose-built for RED KOMODO cameras (5-pin control port drives KOMODO menu/control). No HDMI input exists on this model. Manufacturer page (smallhd.com/products/focus-pro) confirms display specs, SDI input, headphone jack, 2-pin power input, and 5-pin USB control port; B&H product listing (https://www.bhphotovideo.com/c/product/1578339-REG/smallhd_mon_focus_pro_focus_pro_monitor.html) corroborates and adds the 3G/HD/SD-SDI grade detail and confirms the power connector is a 2-pin LEMO type and that the unit is Sony L-series battery powered. Desktop/camera-top accessory monitor — not rack-mountable, so rackUnits omitted. Weight 9.6 oz, 5\\\" 1280x720 LCD, 800 cd/m², milled aluminum chassis, PageOS software (waveform/vectorscope/histogram/3D LUT/focus assist).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD/SD-SDI input with embedded audio"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Camera Control",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Proprietary 5-pin locking USB-style connector used for RED KOMODO camera control, not a standard data/host USB port; no bandwidth grade applicable"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a locking 2-pin LEMO-style power connector (7-16.8V), not a literal barrel jack — closest taxonomy match. Unit also mounts a Sony L-series battery plate as an alternate/primary power source (not a fixed port)."
+    }
+  ]
+}

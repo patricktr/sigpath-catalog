@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Tripleplay",
+  "model": "PLAY3R-P2",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.scribd.com/document/810018714/PLAY3R-P2-Brochure",
+  "confidence": "medium",
+  "notes": "Tripleplay PLAY3R-P2 is a compact IPTV/hospitality set-top box (custom Set-Top Box for hotel/guest-room IPTV portal deployments), now part of the Uniguest product family. The manufacturer's own tripleplay.tv product page and Uniguest's live spec pages returned 403/JS-gated responses during research, so this listing is built from Tripleplay's official \"PLAY3R-P2 Brochure\" (2-page PDF, title confirms it is the manufacturer document) as reproduced on a third-party document host — treat as a secondary reproduction of a primary source, not a live manufacturer/retailer page. Key specs found: Amlogic S905X2 SoC (quad-core Cortex-A53 @1.9GHz, 18400 DMIPS), 1GB RAM, 4GB eMMC, Linux 4.9, 4K2160p60/1080p60 H.265/H.264 decode, HDCP 2.2, RF/IR remote support. Physical dimensions 120 x 78 x 21 mm — a small puck-style unit, not rack-mountable (rackUnits omitted). Power is 5V DC 2A via an external/mains PSU (dc-barrel, closest match for a low-voltage DC brick input). HDMI is listed by the manufacturer brochure as \"HDMI 2.1\" — taken as stated, though this is an unusually high spec for this SoC class and could not be independently corroborated; treat the hdmi-2.1 grade as manufacturer-claimed rather than fully verified. Ethernet is stated as \"RJ45 100 Mbps\" (eth-100m), notably not Gigabit. Could not confirm any analog audio output jack or dedicated IR port physically on this exact SKU (a related, differently-dimensioned Uniguest-branded product, \"SP2-EAC3\", advertises a 3.5mm audio out, 3.5mm serial, and IR port plus PoE — but its spec sheet (205 x 186.5 x 19.2 mm, PoE 802.3af, wall-mount bracket) does not match the PLAY3R-P2 brochure's dimensions/power, so it was treated as a distinct model and excluded here rather than merged). A distributor listing (kern-stelly.at) shows the SKU \"TPS_PLAY3R-P2-NOPOE\", implying a PoE-equipped variant of the PLAY3R-P2 may also exist, but no separate PoE Ethernet spec was confirmed for the base PLAY3R-P2 model — flagged as an open caveat. No SDI, VGA, DisplayPort, or additional USB ports were found in the sourced brochure.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port; brochure confirms RS232 control but does not specify the physical connector form factor (could be DE-9 or a 3.5mm TRS breakout common on compact STBs)."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5V DC 2A via external mains PSU."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "manufacturer": "INFiLED",
+  "model": "DB2.6",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.infiled.com/wp-content/uploads/2024/01/db-series.pdf",
+  "confidence": "medium",
+  "notes": "Model is a fine-pitch indoor LED video wall cabinet, full model number IL-RSS-IRDB2.6 (DB Series, Deep Black). Cabinet: 500x500x75.5mm, 8.8kg, die-cast aluminum, 192x192 pixel resolution, 1,000-1,200 nits, 160/160 viewing angle, IP30, refresh rate up to 3,840Hz, max rigging 18 panels. Not rack-mountable (wall-hung/floor-stacked/flown panel), so rackUnits omitted.\n\nPhysical connectors on the cabinet are confirmed by two sources: the official INFiLED manufacturer datasheet (db-series.pdf, which lists identical mechanicals/connectors across the whole DB pitch family) and a distributor datasheet for the closely related \"DB2.6 PRO\" variant (TCLG event technology, https://filedn.eu/lSxQj00hMxjjxEBi5BdN8Bb/LED%20Screens/Datasheets/Infiled_DB2.6/Datenblatt_DB2_6_PRO.pdf) whose product photos explicitly label \"Neutrik® powerCON\" and \"Neutrik® etherCON\" as the two connector types on the cabinet. Both sources agree: power connector = Neutrik powerCON (100-240V AC), data/control connector = Neutrik etherCON.\n\nEvery cabinet in this family is daisy-chainable (link cables sold as accessories), which by industry convention for this connector pairing means one power IN + one power OUT (loop-through) and one data IN + one data OUT (loop-through) per cabinet — I've listed these as 4 ports, but the manufacturer datasheet does not itemize per-port IN/OUT labels or confirm the exact count, so this layout is an inference from standard practice, not a directly cited spec.\n\nThe official datasheet lists \"Signal Input Source: DVI, HDMI, DP, Mini DP, VGA, SDI, HD SDI\" identically for every pitch variant in the DB family (1.5mm through 3.4mm) — this describes the source formats the associated external video processor/sending system can accept, not physical connectors present on the LED cabinet itself (LED cabinets in this class never expose HDMI/SDI directly), so these were NOT included as cabinet ports.\n\nThe etherCON data link's Ethernet grade (eth-1g) is explicitly stated only for the \"VSS\" (Virtual Studio Solution) variant of this model (IL-RSS-IRDB2.6-VSS, Brompton R2+ receiving card: \"EtherCON 1Gpbs\"). The standard/base DB2.6 (and the \"PRO\" variant, which uses a NovaStar A8s receiving card) do not explicitly restate a speed figure, though NovaStar A8s is commonly Gigabit-capable — treat the eth-1g grade on the base model as inferred rather than directly confirmed, which is the main driver of the \"medium\" confidence rating.\n\nA separate \"PRO\" variant (IL-RSS-IRDB2.6 Pro) exists with slightly different published brightness (>1,200 nits), NovaStar A8s receiving card, and 14-16 bit greyscale — connectors are identical (same powerCON/etherCON pair). A cable-free (contactless power/data through mounting spine) option is also offered across the DB series as an alternative to the standard link-cable connectors described here.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON. Operating power source 100-240V AC, 50/60Hz. Max 150W/avg 50W per cabinet."
+    },
+    {
+      "name": "Power Out (Link)",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik powerCON loop-through output for daisy-chaining to the next cabinet's power in; in/out pairing inferred from standard practice for this connector on modular LED cabinets, not itemized separately in the manufacturer datasheet."
+    },
+    {
+      "name": "Data In",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON (ruggedized RJ45) carrying the receiving-card Ethernet control/data signal. 1Gbps grade is explicitly stated for the closely related IL-RSS-IRDB2.6-VSS variant (Brompton R2+ receiving card, \"EtherCON 1Gpbs\"); not explicitly restated for the base DB2.6 model, so treat as inferred."
+    },
+    {
+      "name": "Data Out (Link)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "etherCON loop-through output for daisy-chaining to the next cabinet's data in; in/out pairing inferred from standard practice, not itemized separately in the manufacturer datasheet."
+    }
+  ]
+}

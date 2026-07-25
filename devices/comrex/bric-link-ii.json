@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Comrex",
+  "model": "BRIC-Link II",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.comrex.com/downloads/firmware/BRIC-Link%20II/BRIC-Link%20II%20Manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced primarily from the official Comrex BRIC-Link II Product Manual (Feb 2015 edition), rear-panel Figure 1 and front-panel Figure 2, cross-checked against Comrex's product/resource page (comrex.com/resources/bric-link-ii/) and the separate power-supply product listing. Also present but omitted from the port list as it is not an I/O connector: a \"Card Slot\" reserved \"For future use.\" Two connectors were approximated against the fixed enum: (1) the rear 9-pin mini-DIN \"Contact Closures\" jack, mapped to midi-din as the nearest DIN-family option though it is a 9-pin (not 5-pin MIDI) shell; (2) the 4-pin DC power inlet, mapped to xlr4-dc since Comrex documentation only says \"4-pin connector\" without confirming true XLR shell. The USB port is present on the rear panel but explicitly marked \"for future use\" (non-functional) in the manual; its exact sub-type (USB-A assumed) is not stated. Left-channel XLR jacks are combo analog/AES3 (DIP-switch selectable), matching combo-jack guidance (primary xlr3 + accepts:[aes3]); no AES3 grade applies. Ethernet is confirmed 1000BASE-T (eth-1g); no other connectors carry a defined bandwidth grade per spec sheet. This is a small desktop unit (two units can share an optional 1U rack tray sold separately), so rackUnits is omitted per instructions for desktop gear.",
+  "ports": [
+    {
+      "name": "Left Audio/AES3 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Balanced professional analog audio by default (pin1 GND, pin2+, pin3-); DIP switch 1 reconfigures the same XLR jack as an AES3 digital stereo input (32/44.1/48kHz)"
+    },
+    {
+      "name": "Right Audio Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog only, balanced professional level"
+    },
+    {
+      "name": "Left Audio/AES3 Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Balanced professional analog audio by default; DIP switch 2 reconfigures the same XLR jack as an AES3 digital stereo output, sample-locked to the AES3 input rate"
+    },
+    {
+      "name": "Right Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog only, balanced professional level"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Labeled '1000baseT' on rear panel"
+    },
+    {
+      "name": "Contact Closures",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Physical connector is a 9-pin mini-DIN carrying 4 contact-closure inputs + 4 open-drain outputs (200mA/12V max) sent end-to-end with the audio stream; mini-DIN is not in the provided connector list, midi-din (DIN family) chosen as closest approximation - actual shell is 9-pin, not 5-pin MIDI"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Ancillary serial data I/O carried across the IP link alongside audio; pinout matches older Macintosh serial (mini-DIN 8/9-style), configurable data rate"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Rear panel labeled 'Power', a locking 4-pin connector for the Comrex-approved external DC adapter, 24V DC @ 1A. Manual/parts pages do not explicitly confirm the shell is true XLR (vs. a similar locking 4-pin style); xlr4-dc chosen as the closest listed 4-pin DC option."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear panel port explicitly labeled 'For future use' in the manual - not functional as of the manual's publication (Feb 2015) and connector sub-type (A vs other) is not confirmed, only inferred from the panel icon"
+    },
+    {
+      "name": "Headphone Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front panel, monitors input (TX) or decoded (RX) audio, selectable via DIP switch 5"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Vinten",
+  "model": "Vantage",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.vinten.com/wp-content/uploads/2023/08/Vantage-User-Guide.pdf",
+  "confidence": "medium",
+  "notes": "Vinten Vantage (model no. V4142-001) is a compact, camera/lens-agnostic robotic pan-tilt head, not an integrated camera — it carries no native video I/O of its own; the customer's own camcorder/lens supplies the actual video signal. Physical I/O is limited to 5 ports located in a single rear cluster, confirmed from Vinten's official \"Vantage Brochure\" (2017/2023, vinten.com/wp-content/uploads/2023/07/Vantage_Brochure.pdf) and the labeled connector-panel illustration in the official \"Vantage User Guide\" (vinten.com/wp-content/uploads/2023/08/Vantage-User-Guide.pdf): 24V DC power in, Genlock, Ethernet, a combined RS232/422 serial port labeled \"CAMERA\", and a LANC control port. No bandwidth/version grade is published for any port (e.g. no Ethernet speed stated), so grade is omitted throughout — none of this unit's connector types fall on a gradeable scale anyway except Ethernet, whose speed isn't disclosed. Connector shell identification for the DC power jack, BNC (Genlock) and RJ45 (Ethernet) is clear from the manual's 3D-rendered connector-panel close-up; the RS232/422 \"CAMERA\" port and the LANC jack are rendered as small proprietary-looking connectors in that same diagram and their exact physical shell could not be independently confirmed, so the closest available connector ids (rs232 w/ rs422 accepts, and trs-3.5) were used — flag these two as lower-confidence. The live manufacturer site (vinten.com) returned HTTP 403 to automated fetches, so data was sourced from the manufacturer's own PDF documents via web.archive.org captures (brochure capture dated 2024-03-25, user guide capture dated 2024-07-18), not directly from the live page. Other specs found alongside I/O: payload 4.5 kg/10 lb, head weight 2.2 kg, pan 355°, tilt 90°, speed 0.02–60°/s, operating temp +5° to 40°C, base fixing flat (bowl adapter optional) — device is desktop/mount-type, not rack-mountable, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "24V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Low-voltage 24V DC, 1.25A / 24W. Powered from supplied external AC/DC power supply, a 24V distribution unit, or battery."
+    },
+    {
+      "name": "Genlock",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync input, enables VR/AR tracking capability."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Standard Ethernet connectivity for direct connection to network infrastructure and HD-VRC/µVRC control systems. No speed/version stated by manufacturer."
+    },
+    {
+      "name": "Camera",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Labeled 'CAMERA' on the connector panel. RS232/422 serial port for control of a wide range of cameras and lenses."
+    },
+    {
+      "name": "LANC",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Closest listed connector id; LANC is industry-standard on a 2.5mm sub-mini stereo jack (not 3.5mm), which is not in the allowed connector list. Controls LANC-compatible camera functions (autofocus, auto iris, menu, zoom, focus, iris)."
+    }
+  ]
+}

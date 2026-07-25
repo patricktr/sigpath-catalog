@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Axia",
+  "model": "Quasar SR",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.telosalliance.com/consoles-audio-mixing/broadcast-consoles/axia-quasar-sr",
+  "confidence": "medium",
+  "notes": "Axia Quasar SR is a modular broadcast mixing-console control surface (Telos Alliance/Axia brand). The manufacturer's product page did not itemize connectors; port details above were extracted from the official \"Quasar User Manual\" (1490-00224-004 v3.2.0.2, https://telosalliance-uat.s3.us-east-1.amazonaws.com/public/Axia+Products/Quasar/Assets/1490-00224-004+Quasar+User+Manual+v3.2.0.2_public-1.pdf) and the Quick-Start Installation Guide. Important scope caveats: (1) Quasar SR shares its Rear I/O module, chassis, and power system with the Quasar XR (motorized-fader) console — the only difference is non-motorized SR-4FAD fader modules vs. motorized XR-4FAD modules; documented I/O is identical between SR and XR. (2) The console surface itself carries NO direct analog/AES audio signal I/O — actual mic/line/AES/GPIO connections are provided by separate external \"Axia xNode\" audio interface devices over the AoIP network (not part of this SKU), so no audio ports are listed here even though the manual states the Rear I/O module carries \"Network, USB, HDMI and Audio connections\" — the exact analog \"Audio\" connector(s) on that module are not documented in public materials, so they were omitted rather than guessed. (3) A required separate \"Quasar Engine\" 1U DSP unit (with its own NET1/NET2 RJ45, VGA, USB-keyboard, and dual redundant IEC power) is sold and specified separately and is NOT included in this device's port list since it is a distinct catalog product. (4) A 15-pin D-sub GPIO connector (48VDC max) is documented generically for the Axia accessory/xNode ecosystem but its presence directly on the Quasar SR surface itself was not confirmed, so it was omitted. (5) Optional plug-in accessory modules (e.g. Mic In/Headphone Out module) attach to the Rear I/O module via an internal headphone-amp board; the external connector type for that module's headphone/mic jacks is not documented. Confidence is medium because primary specs came from the user manual rather than a dedicated spec sheet, and some rear-panel connectors (additional USB, \"Audio\") could not be fully confirmed.",
+  "ports": [
+    {
+      "name": "PORT #0 (Primary Network)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary AoIP/Livewire network connection on the console's Rear I/O module; connects to a Gigabit switch port."
+    },
+    {
+      "name": "PORT #1 (Secondary Network)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Optional redundant AoIP network connection, requires special switch port configuration."
+    },
+    {
+      "name": "HDMI (Rear I/O)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Mirrors the Master Touchscreen (MTS-MON) UI on an external monitor. HDMI version not specified in documentation."
+    },
+    {
+      "name": "USB DATA",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel port on the MTS-MON master module, documented as \"for future use\"; USB version not specified."
+    },
+    {
+      "name": "AC Power (PSU Module)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC receptacle with locking clip, internal fuse; universal auto-ranging 90-264VAC, 47-63Hz. Frame supports 1-4 hot-swappable/redundant PSU modules, each with its own IEC inlet."
+    }
+  ]
+}

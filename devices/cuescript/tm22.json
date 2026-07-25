@@ -1,0 +1,67 @@
+{
+  "manufacturer": "CueScript",
+  "model": "TM22",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "http://www.cuescript.tv/downloads/Manuals/CSTM_22-24_Monitor_Manual.pdf",
+  "confidence": "high",
+  "notes": "Cross-validated against CueScript's own product page (cuescript.tv/product-profile.php?pid=CSTM22), Markertek, and CVP.com — all report identical screen size (21.5\" diag, 1920x1080), dimensions (530x346x48mm), weight (3.72kg/8.2lb), brightness (1500 cd/m2), and power (12V DC via 4-pin XLR), confirming this manual (titled \"CSTMN\"/\"CSTML\" — the internal engineering names for the commercially-sold TM22/TM24) describes the TM22. Rear-panel photo and connector sections in the manual show: a 3-BNC group serving Composite(CVBS)/Component(YPbPr)/RGB duty (only CVBS/Y, Pb, Pr are separately labeled — RGB reuses the same 3 BNCs per the OSD input menu), a VGA D-sub, a DVI connector, and a 3-BNC SDI group (SDI1 in, SDI2 in, one re-generated/looped SDI output). SDI is only specified as \"HD-SDI and SD-SDI\" with no 3G/6G mention, so graded sdi-hd (not higher). The on-screen INPUT menu also lists an \"HDMI\" option, but no HDMI connector appears in the manual's rear-panel photo or connector documentation for this unit — likely a shared/generic OSD firmware option not physically wired on the TM22, so it was omitted here as unconfirmed. DVI pinout/type (DVI-I vs DVI-D) is not spelled out in the manual, so \"dvi\" was used as the closest generic id. Desktop/hang-under-prompter unit — not rack-mountable, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "CVBS / Y",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Shared with component Y; composite PAL/NTSC/SECAM, 75 ohm terminated"
+    },
+    {
+      "name": "Pb",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Component video Pb, part of shared 3-BNC component/RGB group"
+    },
+    {
+      "name": "Pr",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Component video Pr, part of shared 3-BNC component/RGB group"
+    },
+    {
+      "name": "VGA",
+      "direction": "input",
+      "connector": "vga",
+      "note": "15-pin HD D-sub, standard VGA pinout, auto-scaled to panel native resolution"
+    },
+    {
+      "name": "DVI",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "75 ohm BNC, autosensing HD-SDI/SD-SDI"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "75 ohm BNC, autosensing HD-SDI/SD-SDI"
+    },
+    {
+      "name": "HD-SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Re-generated/looped copy of currently selected SDI1 or SDI2 input"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR male, 12V DC regulated, ~4.3A/52W max; pin1=GND, pin4=+12V"
+    }
+  ]
+}

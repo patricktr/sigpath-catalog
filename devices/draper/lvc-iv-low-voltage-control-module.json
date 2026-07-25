@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Draper",
+  "model": "LVC-IV Low-Voltage Control Module",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.draperinc.com/liftsmounts/productdetailaccessories/204",
+  "confidence": "high",
+  "notes": "Draper LVC-IV is a low-voltage relay/control module for motorized projection screens (not a signal switcher) — it converts IR/RF/dry-contact/serial/DC-trigger control inputs into a 115V (or 230V, P/N 121230) SPDT relay output that drives the screen's motor. No bandwidth-graded connectors (HDMI/SDI/USB/Ethernet-data) exist on this device, so no \"grade\" values apply anywhere. Built-in 433MHz RF receiver (learns handheld remotes via a physical button) has no exposed antenna port and is not listed as a discrete port. The RJ25 serial jacks and the hardwired AC leads use connector codes approximated to the nearest allowed enum value (rj45 and euroblock respectively) since exact matches (RJ25/6P6C, bare hardwired leads) are not in the provided connector list — see per-port notes. Internal factory wiring from the module to the screen's motor harness is proprietary and not exposed as a standard connector, so it was not enumerated. Enclosure is a wall/case-mounted metal box (~4.5in x 2.2in x 10.4in), not rack-mountable. Primary spec source is Draper's own official instruction manual (Form LVCIV_110_Wiring22), retrieved via a manual-mirror site; manufacturer product page confirms model/part numbers and general port list.",
+  "ports": [
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Hardwired 115V/120V (60Hz) line-voltage pigtail leads (Hot/Neutral/Ground) routed through an enclosure knockout and spliced to building wiring — not a plug/inlet connector. 'euroblock' chosen as the closest enumerated code for a field-wired hard connection. In-line 3.15A user-replaceable fuse. A 230V variant (P/N 121230) also exists."
+    },
+    {
+      "name": "Low-Voltage Wall Switch",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-screw terminal block accepting a low-voltage dry-contact wall switch (e.g. Draper LVC-S) or 3rd-party dry-contact/relay control."
+    },
+    {
+      "name": "IR Receiver",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini-jack (mini-plug) input for the optional plug-in IR eye receiver (P/N 121227/121228). Max IR-eye cable length 42in (1m); IR remote range 26ft (7.9m)."
+    },
+    {
+      "name": "Low-Voltage Trigger In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Mini-jack DC trigger input, 4-28VDC, typically wired to a projector's screen-trigger output; deploys the screen when voltage is present and retracts it when removed."
+    },
+    {
+      "name": "RS-232/RS-485 (RJ25) Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physical jack is a 6P6C RJ25 modular connector (not 8P8C RJ45) — 'rj45' used as the closest enumerated code. Carries jumper-selectable RS-232 or RS-485 plus dedicated Up/Down control pins and a 5VDC output pin. Two identical RJ25 ports are provided for daisy-chaining multiple units; specs: 2400 baud, 8 data bits, no parity, 1 stop bit, no flow control."
+    },
+    {
+      "name": "RS-232/RS-485 (RJ25) Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Identical to RJ25 Port 1; the two ports are interchangeable and used together for daisy-chaining control units."
+    }
+  ]
+}

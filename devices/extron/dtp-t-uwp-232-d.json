@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Extron",
+  "model": "DTP T UWP 232 D",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://media.extron.com/public/download/files/specs/DTP_T_UWP_232_D_D9_092818.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Extron's official spec sheet (media.extron.com, part# 4460-D9, rev D9, 09/28/18) plus the official DTP T HWP/UWP 232/332 D Setup Guide (68-2547-50 Rev B) for physical panel labels/connector counts, since Extron's live product page (extron.com/product/dtptuwp232d) blocks automated fetches. This is a 2-module Decora-style wallplate transmitter that fits a 2-gang wall box (two ~2.7\"x3.5\"x1.9\" modules); the spec sheet's General/Mounting section literally states \"Rack mount: Yes, with included rack ears,\" which contradicts the decora-wallplate physical description elsewhere in the same document and appears to be boilerplate carried over from Extron's DTP product-family template — rackUnits was therefore omitted rather than guessed. This is the standard-definition non-4K \"232 D\" model (max ~1920x1200/1080p60, 2048x1080p60); do not confuse with the separate \"DTP T UWP 4K 232 D\" variant, which supports 4K/18Gbps HDMI over a different (thicker) cable spec. HDMI grade (hdmi-1.4) is inferred from stated max pixel clock/data rate, not an explicit HDMI version number in the source — lowering overall confidence to medium. USB port is physically Mini-USB Type B (mapped to usb-b, the closest available enum). Two DTP T UWP 232 D units are shown side-by-side in setup-guide diagrams as separate faceplate modules (HDMI module + VGA module) sharing one rear DTP-out chassis; port list here reflects the combined unit as sold under this single model/part number.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Actual max data rate is 6.75 Gbps (2.25 Gbps/color), max pixel clock 165 MHz, resolution up to 1920x1200/1080p60 8-bit or 2048x1080p60 (2K) — below full HDMI 1.4 bandwidth (closer to single-link DVI/HDMI 1.2-1.3 class). hdmi-1.4 chosen as the closest available grade bucket; treat as inferred/approximate, not a manufacturer-stated version number. Also accepts DVI-D via adapter (DVI 1.0)."
+    },
+    {
+      "name": "VGA IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Analog RGBHV, HD-15, 0.7 Vp-p nominal, 75 ohm."
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Front-panel 3.5 mm stereo jack on the HDMI input module, unbalanced. Panel silkscreen label is 'AUDIO IN' (both audio jacks share this exact label; numbered here for disambiguation)."
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Front-panel 3.5 mm stereo jack on the VGA input module, unbalanced. Panel silkscreen label is 'AUDIO IN'."
+    },
+    {
+      "name": "IR Out",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-pole 3.5 mm captive screw pass-through connector for IR control of a source/sink device."
+    },
+    {
+      "name": "Mini USB (Config)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Actual connector is Mini-USB Type B (female); 'usb-b' chosen as closest available enum value (no mini-USB option exists). Used for SIS configuration and firmware updates, not general host/device data."
+    },
+    {
+      "name": "DC Power Input (12V)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pole 3.5 mm captive screw connector for the included external 12 VDC, 1.5 A power supply (input 100-240 VAC 50-60 Hz). Unit can alternatively be powered remotely over the DTP line by the receiver."
+    },
+    {
+      "name": "Over DTP",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Rear-panel 3-pole 3.5 mm captive screw connector; bidirectional RS-232 pass-through, embedded into the DTP link and delivered to the far-end device."
+    },
+    {
+      "name": "Remote",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Rear-panel 5-pole 3.5 mm captive screw connector; local RS-232 control of the transmitter (9600,8,1,none) plus contact-closure input switching (shared connector)."
+    },
+    {
+      "name": "DTP Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Female RJ-45 carrying Extron's proprietary DTP 230 signal (video, audio, and control) up to 230 ft over shielded twisted pair — not a standard Ethernet/network link (manufacturer explicitly warns not to connect to a telecom/data network), so no eth-* grade is assigned. Direction marked bidirectional per RJ-45 convention; can also receive remote power from a compatible DTP receiver/transmitter."
+    }
+  ]
+}

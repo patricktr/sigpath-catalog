@@ -1,0 +1,132 @@
+{
+  "manufacturer": "Sound Devices",
+  "model": "833",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.sounddevices.com/product/833/",
+  "confidence": "high",
+  "notes": "Sourced from the manufacturer's official product/spec page (sounddevices.com/product/833) plus the manufacturer's own back/side panel photos (cdn.sounddevices.com .../833_side1.png, 833_side2.png) used to confirm exact connector types and physical layout, since the accordion spec text alone doesn't state connector shells for every port. Two ports on the device were intentionally omitted from this list because no connector id in the allowed set fits them: the SMA \"Antenna\" jack (for the Bluetooth LE / wireless-remote antenna) and the two SD card slots (SD1/SD2, plus the internal 256GB SSD, none of which are external cable ports). TA3 (3-pin mini-XLR) and TA5 (5-pin mini-XLR) connectors, used throughout, have no dedicated id in the allowed connector list, so they were mapped to the closest generic ids xlr3 and xlr5 respectively — physically they are smaller \"mini\" XLR shells, not full-size XLR. The \"LTC/WClk/GPIO\" port is a single locking multi-pin connector (visually similar to but likely a different pinout/keying than the TA5 headset jack); it was mapped to xlr5 only as the closest available id — actual connector may be a Hirose/Lemo-style part, not a true XLR. The \"Com Rtn\" audio-return signal is exposed on two separate physical jacks (a TA3 on one side panel and a plain 3.5mm \"Rtn\" jack on the other) for the same signal; modeled as one port with trs-3.5 as an alternate \"accepts\" connector. The 3.5mm \"X3/X4\" jack is documented in the spec sheet as both a stereo analog output and, elsewhere, as a 2-channel unbalanced \"Aux\" input — since the device is fully routable and only one 3.5mm jack of this type appears in the product photos, it's modeled as a single bidirectional port. USB-A speed/grade was left unset because the spec text only says \"USB-A host\" without a version number, even though the connector photographs blue (suggesting SuperSpeed); USB-C grade (usb-5g) is directly stated (\"USB 3.1 Type 1\"). This is a bag-mount portable unit, not rack-mountable, so rackUnits is omitted. The device also ships with a \"+4 Plugin\" software option that adds four more ISO channels/tracks but no new physical connectors, so it does not affect the port list.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Full-size XLR; also accepts AES3/AES42 digital input (input 1 only)"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Full-size XLR"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Full-size XLR"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "TA3 (3-pin mini-XLR), mapped to generic xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "TA3 (3-pin mini-XLR), mapped to generic xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "TA3 (3-pin mini-XLR), mapped to generic xlr3"
+    },
+    {
+      "name": "Com Rtn",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-3.5"
+      ],
+      "note": "TA3 mini-XLR (mapped to xlr3) on one panel plus a redundant 3.5mm 'Rtn' jack on the opposite panel for the same signal"
+    },
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "TA5 (5-pin mini-XLR, mapped to xlr5); combines slate mic input with a headphone output on shared pins"
+    },
+    {
+      "name": "Out L (AES 1,2)",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Full-size XLR analog output; also carries AES3 digital pair 1-2"
+    },
+    {
+      "name": "Out R (AES 3,4)",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Full-size XLR analog output; also carries AES3 digital pair 3-4"
+    },
+    {
+      "name": "X1 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "TA3 (3-pin mini-XLR) analog output, mapped to generic xlr3"
+    },
+    {
+      "name": "X2 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "TA3 (3-pin mini-XLR) analog output, mapped to generic xlr3"
+    },
+    {
+      "name": "X3/X4",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm unbalanced stereo jack, configurable as analog output (X3/X4) or as the 2-channel Aux input, per Sound Devices spec sheet"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4 inch TRS headphone jack"
+    },
+    {
+      "name": "LTC/WClk/GPIO",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Single locking multi-pin connector combining Timecode In/Out, Word Clock In/Out, and GPIO; likely a 5-pin Hirose/Lemo-style connector, mapped to closest listed id xlr5"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Type 1 (5 Gbps) for SSD/SD file transfer and 2-in/2-out USB audio interface"
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A host port for keyboard, external controllers, hubs; spec text does not state a USB version (photo shows a blue SuperSpeed-style receptacle)"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "10-18V locking TA4 connector, pin 4 positive / pin 1 ground"
+    }
+  ]
+}

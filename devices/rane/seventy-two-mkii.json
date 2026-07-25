@@ -1,0 +1,185 @@
+{
+  "manufacturer": "Rane",
+  "model": "Seventy-Two MKII",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://cdn.inmusicbrands.com/rane/seventy-twoMKII/Seventy-Two_MKII-UserGuide-v1.4.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Rane (inMusic Brands) Seventy-Two MKII User Guide v1.4, which includes both the labeled rear/front panel connection diagrams and a consolidated \"Connectors\" spec table (p.102). Desktop DJ mixer, not rack-mountable (rackUnits omitted). Stereo RCA pairs (Deck 1/2 PH-CD In, Deck 1/2 Aux In, Session In, Session Out) are each two physical RCA jacks (L/R), listed individually. Mic 1/2 inputs are combo XLR/1.4\" (6.35mm) TRS jacks, Mic/Line switchable (primary connector xlr3, accepts trs-6.35). Headphone outputs (1/4\" TRS and 1/8\" TRS) and the 1/4\" TRS footswitch input are front-panel jacks but included as physical I/O per the manufacturer's own Connectors list. No connector on this device carries a bandwidth \"grade\" (all analog audio, USB legacy audio/MIDI at unspecified speed rather than a data-transfer-speed spec, and IEC power) so no grade fields are set. Power connector is a standard IEC (C13/C14-style) inlet, 100-240V 50/60Hz per the manual's Power spec table.",
+  "ports": [
+    {
+      "name": "Main Out L (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main/Master balanced output to amplifier or loudspeakers, left channel"
+    },
+    {
+      "name": "Main Out R (XLR)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Main/Master balanced output to amplifier or loudspeakers, right channel"
+    },
+    {
+      "name": "Booth Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" (6.35mm) TRS booth monitor output, left channel"
+    },
+    {
+      "name": "Booth Out R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" (6.35mm) TRS booth monitor output, right channel"
+    },
+    {
+      "name": "Deck 1 PH/CD In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono/line input for Deck 1, switchable Phono/CD gain via rear selector; left channel"
+    },
+    {
+      "name": "Deck 1 PH/CD In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono/line input for Deck 1, switchable Phono/CD gain via rear selector; right channel"
+    },
+    {
+      "name": "Deck 2 PH/CD In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono/line input for Deck 2, switchable Phono/CD gain via rear selector; left channel"
+    },
+    {
+      "name": "Deck 2 PH/CD In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA phono/line input for Deck 2, switchable Phono/CD gain via rear selector; right channel"
+    },
+    {
+      "name": "Deck 1 Aux In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA line-level auxiliary input routable to Deck 1; left channel"
+    },
+    {
+      "name": "Deck 1 Aux In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA line-level auxiliary input routable to Deck 1; right channel"
+    },
+    {
+      "name": "Deck 2 Aux In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA line-level auxiliary input routable to Deck 2; left channel"
+    },
+    {
+      "name": "Deck 2 Aux In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA line-level auxiliary input routable to Deck 2; right channel"
+    },
+    {
+      "name": "Phono Ground 1",
+      "direction": "input",
+      "connector": "banana",
+      "note": "Turntable ground terminal for Deck 1; screw/binding-post terminal, not a signal jack — closest listed connector chosen, low confidence on this mapping"
+    },
+    {
+      "name": "Phono Ground 2",
+      "direction": "input",
+      "connector": "banana",
+      "note": "Turntable ground terminal for Deck 2; screw/binding-post terminal, not a signal jack — closest listed connector chosen, low confidence on this mapping"
+    },
+    {
+      "name": "Mic 1 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR / 1/4\" (6.35mm) TRS input, Mic/Line switchable"
+    },
+    {
+      "name": "Mic 2 Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR / 1/4\" (6.35mm) TRS input, Mic/Line switchable"
+    },
+    {
+      "name": "Session In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA stereo line input summed directly into program mix; left channel"
+    },
+    {
+      "name": "Session In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA stereo line input summed directly into program mix; right channel"
+    },
+    {
+      "name": "Session Out L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "RCA stereo program-mix output for recording/another mixer; left channel"
+    },
+    {
+      "name": "Session Out R",
+      "direction": "output",
+      "connector": "rca",
+      "note": "RCA stereo program-mix output for recording/another mixer; right channel"
+    },
+    {
+      "name": "Headphones (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" (6.35mm) TRS headphone output"
+    },
+    {
+      "name": "Headphones (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel 1/8\" (3.5mm) TRS headphone output"
+    },
+    {
+      "name": "Footswitch",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" (6.35mm) TRS footswitch control input"
+    },
+    {
+      "name": "Twelve/Controller USB (Deck 1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A host port for Rane Twelve or standard USB MIDI controller, Deck 1"
+    },
+    {
+      "name": "Twelve/Controller USB (Deck 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A host port for Rane Twelve or standard USB MIDI controller, Deck 2"
+    },
+    {
+      "name": "USB B (Computer 1)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B port to computer for Serato DJ Pro audio/MIDI; USB speed generation not stated by manufacturer, grade omitted"
+    },
+    {
+      "name": "USB B (Computer 2)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type-B port to computer for Serato DJ Pro audio/MIDI; USB speed generation not stated by manufacturer, grade omitted"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power inlet, 100-240V 50/60Hz, 30W consumption"
+    }
+  ]
+}

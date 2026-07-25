@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Video Assist 7\" 12G HDR",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/blackmagicvideoassist/techspecs/W-VASS-04",
+  "confidence": "high",
+  "notes": "Manufacturer spec page (Blackmagic Design, model code W-VASS-04) confirms: 1x SDI in / 1x SDI out (BNC, multi-rate 270Mb-12G, i.e. 12G-SDI capable), 1x HDMI 2.0a in / 1x HDMI 2.0a out, 2x balanced mini XLR audio in with phantom power, 1x 3.5mm headphone out, 1x USB-C 3.1 Gen 1 (for external drive recording), 1x 2.5mm LANC (record start/stop), dual UHS-II SD card slots (not listed as a port — no SD-slot connector id in the allowed enum), and 1x external 12V DC power input (also accepts Sony NP-F style battery plates on the rear). Mini XLR audio jacks and the 2.5mm LANC jack have no exact match in the provided connector enum; mapped to the closest ids (xlr3, trs-3.5 respectively) per instructions. SDI grade set to sdi-12g reflecting the model's top supported rate (also handles lower rates down to SD-SDI). This is a handheld/on-camera monitor-recorder, not rack-mountable, so rackUnits is omitted. B&H Photo listing (https://www.bhphotovideo.com/c/product/1507213-REG/) corroborates the SDI/HDMI/audio I/O counts from an independent retailer but could not be fetched directly (403); cross-check was via search-result summary only.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced mini XLR with phantom power; device uses a sub-miniature 3-pin XLR, not full-size — mapped to closest available connector id"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced mini XLR with phantom power; device uses a sub-miniature 3-pin XLR, not full-size — mapped to closest available connector id"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1, for external drive recording"
+    },
+    {
+      "name": "LANC",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm LANC connector for record start/stop; no 2.5mm id in the connector list, mapped to closest available (trs-3.5)"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12V power supply; barrel connector; unit also accepts Sony NP-F style battery plates (not a separate wired port)"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXCW640",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://www.shure.com/en-US/docs/guide/MXCW",
+  "confidence": "high",
+  "notes": "MXCW640 is the wireless \"Conference Unit\" component of Shure's modular Microflex Complete Wireless (MXCW) system (the system also includes the separate MXCWAPT access-point transceiver and MXCWNCS networked charging station, not covered here). Specs cross-checked against Shure's official MXCW User Guide (www.shure.com/en-US/docs/guide/MXCW), the B&H Photo product/specs page (bhphotovideo.com/c/product/1467057-REG), and Shure's product page (www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640). Physical I/O is entirely audio/power (no HDMI/SDI/Ethernet), so no port on this device qualifies for a bandwidth \"grade\" — the RF wireless link (2.4/5 GHz, AES-128 encrypted, up to 125 units) is not a physical connector and is omitted from the port list. Desktop/handheld tabletop unit — not rack-mountable, so rackUnits is omitted. The two headphone jacks are not individually labeled on the device silkscreen; \"Headphone Output 1/2\" is used descriptively for the pair of identical side-mounted TRRS jacks. Battery is a removable SB930 Li-ion pack (charged in-unit via USB Micro-B, or externally in the separate MXCWNCS charging station) — the external battery-station charging contacts are not part of this device's own port set.",
+  "ports": [
+    {
+      "name": "Microphone Connector",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary Shure locking 10-pin \"modular\" connector for MXC-series gooseneck microphones (MXC416/420/425/406-MS). Not a real RJ45/Ethernet jack — carries analog mic audio plus DC power to the gooseneck mic. Mapped to rj45 as the closest connector id in the allowed list."
+    },
+    {
+      "name": "Headphone Output 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "TRRS 3.5 mm jack with volume knob, one of two identical headphone outputs (one on each side of the unit) carrying floor audio or an interpretation channel."
+    },
+    {
+      "name": "Headphone Output 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "TRRS 3.5 mm jack with volume knob, second of two identical headphone outputs (opposite side of the unit)."
+    },
+    {
+      "name": "TRRS Port",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "TRRS 3.5 mm jack for connecting a mobile phone so a remote caller can listen to and be heard over the floor mix."
+    },
+    {
+      "name": "USB Micro-B Connector",
+      "direction": "input",
+      "connector": "usb-micro",
+      "note": "Charges the installed SB930 rechargeable battery while it remains in the unit. Charging-only port; no USB data speed is specified, so no grade is set."
+    }
+  ]
+}

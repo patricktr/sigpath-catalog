@@ -1,0 +1,78 @@
+{
+  "manufacturer": "AMX by Harman",
+  "model": "NMX-DEC-N2422A",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.amx.com/en-US/products/nmx-dec-n2422a",
+  "confidence": "medium",
+  "notes": "Primary source: AMX (Harman) product page at amx.com/en-US/products/nmx-dec-n2422a, retrieved via automated fetch/summarization (page content, not a downloaded PDF spec sheet). The manufacturer's dedicated Harman Pro page and B&H Photo's spec page both returned HTTP 403 to automated fetch, so the amx.com data could not be cross-checked against a second retailer/manufacturer source in this session — confidence set to medium rather than high on that basis. HDMI 2.0 grade is inferred (not explicitly stated as \"HDMI 2.0\" in the spec text) from the stated support for 4096x2160@30/60Hz 4:4:4 with HDR10, which requires >10.2Gbps bandwidth. DVI-D output is available only via an HDMI-to-DVI adapter from the same HDMI jack, so it is not modeled as a separate physical port. USB Mini-B mapped to \"usb-b\" (closest available id) since \"usb-mini\" is not in the allowed connector list. No USB/Ethernet speed grade is stated for the USB ports, so grade was omitted. Compact desktop form factor (1.05\"H x 7.888\"W x 5\"D, 1.54 lbs) with optional accessory rack shelf/wing kit for mounting — rackUnits omitted per instructions for desktop-form units. Unit is a standalone JPEG2000 AVoIP decoder (part of the N2400 series, successor to AMX SVSI), so category \"converter\" / type \"Encoder/Decoder\" was used since no more specific matrix/switcher role applies.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Supports up to 4096x2160@60Hz 4:4:4 / HDR10; also usable as DVI-D output via adapter (not a separate physical port). HDMI 2.0 grade inferred from stated 4K60 4:4:4 resolution support, not explicitly labeled on the spec page."
+    },
+    {
+      "name": "P0 (Network)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Gigabit Ethernet port carrying network video/PCM/AES-67 audio; supports PoE+ (802.3at) as an alternate power source"
+    },
+    {
+      "name": "P1 (SFP)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Gigabit SFP fiber port for network video/audio; transceiver/fiber cable not included"
+    },
+    {
+      "name": "USB Mini B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel control/service port; actual physical connector is USB Mini-B (closest available connector id chosen since usb-mini is not in the list)"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Second front-panel USB Type-A control port"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "3-pin 3.5mm screw terminal (front panel); closest connector id chosen for a terminal-block IR input"
+    },
+    {
+      "name": "IR",
+      "direction": "output",
+      "connector": "ir",
+      "note": "2-pin 3.5mm screw terminal (rear panel); closest connector id chosen for a terminal-block IR output"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-pin 3.5mm screw terminal serial control port"
+    },
+    {
+      "name": "Audio",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "5-pin 3.5mm screw terminal (Phoenix-style); user-selectable balanced/unbalanced stereo analog audio output"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "+12V 3A DC power input; unit can alternatively be powered via PoE+ on the P0 Ethernet port instead of this connector"
+    }
+  ]
+}

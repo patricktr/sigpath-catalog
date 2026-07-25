@@ -1,0 +1,51 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Corvid 44",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.aja.com/products/corvid-44",
+  "confidence": "medium",
+  "notes": "Corvid 44 is an 8-lane PCIe 2.0 capture/playback card (no rack units — internal card, not rack-mountable), powered entirely from the PCIe slot (17W typical/19W max) with no external power connector, so no power port is listed. All video/reference connectors on the card bracket are DIN 1.0/2.3 miniature coax (not full-size BNC); AJA supplies a breakout cable terminating in standard BNC connectors — \"bnc\" was used as the closest connector id per instructions. AJA also sells \"Corvid 44 BNC\" and \"Corvid 44 12G\"/\"Corvid 44 12G BNC\" variants (full-size BNC bracket, and 12G-SDI versions respectively) — this entry is for the base 3G-SDI \"Corvid 44\" model. Could not directly confirm from primary source whether the Reference/LTC input connector is DIN 1.0/2.3 or a separate style, or the exact RS-422 connector shape (assumed DB9, AJA's standard) — inferred from AJA's consistent hardware conventions across the Corvid/KONA line, not explicitly stated on the spec page fetched.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Card bracket uses a DIN 1.0/2.3 mini-coax connector (not full-size BNC); AJA ships a breakout cable to standard BNC. Software-configurable as input or output; supports 3G/1.5G/270Mb SDI (SMPTE 425/292M/259M-C)."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax on bracket, BNC via breakout cable. Configurable as input or output."
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax on bracket, BNC via breakout cable. Configurable as input or output."
+    },
+    {
+      "name": "SDI 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "DIN 1.0/2.3 mini-coax on bracket, BNC via breakout cable. Configurable as input or output."
+    },
+    {
+      "name": "Ref/LTC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "DIN 1.0/2.3 mini-coax on bracket (BNC via breakout cable); switchable Analog Color Black or HD Tri-level sync reference, or LTC timecode input. A second internal LTC input header also exists (not an external port)."
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "External connector present on the full-height bracket variant for frame-accurate deck/device control; on the low-profile card it is only an internal header, not an external port."
+    }
+  ]
+}

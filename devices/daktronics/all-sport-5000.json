@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Daktronics",
+  "model": "All Sport 5000",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.daktronics.com/Web%20Documents/Customer-Service-Manuals/ED11976.pdf",
+  "confidence": "high",
+  "notes": "Sourced primarily from Daktronics' own All Sport 5000 Series Operation Manual (ED-11976, Rev 32, 04 Nov 2024), specifically Appendix A drawing DWG-102142 \"Rear View, A/S 5010 Connector Assignments\" (title block: \"ALL SPORT 5000 SERIES CONSOLES\"), which Daktronics documents as the rear-panel/connector reference for the whole All Sport 5000 series (models 5010=120VAC, 5020=230VAC, 5012=12VDC). Physical dimensions (4.25\"H x 16.25\"W x 9\"D), weight (7 lb), and power (120/240 VAC, 6 W) cross-checked against the shorter Daktronics product spec sheet SL-03991. This is a desktop scoring/timing control console, not rack-mountable (rackUnits omitted). No graded connector types apply (no HDMI/SDI/USB/Ethernet/DisplayPort ports present), so no \"grade\" field was set on any port, per instructions. Two front-panel cutouts seen on the rear-view drawing, J5 \"Computer I/O Port\" and J8 \"Switch Inputs\", are explicitly labeled \"NOT USED ON THIS MODEL\" and were omitted as non-functional. Several connector-taxonomy approximations were needed since the console predates modern AV standards and uses Daktronics-proprietary 20 mA current-loop scoreboard signaling: the J1-J3 \"Scoreboard Outputs\" are 1/4\" phone jacks (trs-6.35) but carry current-loop signal, not audio; J4/J7 remote start/stop switch jacks are actually 6-pin modular (RJ12-style) jacks, approximated to rj45 (closest/only modular-jack option in the taxonomy); and J6 \"Main Output and Input Port\" is physically a 25-pin D-sub (DB25) combining RS-232 with current-loop and relay/switch signals, approximated to rs232 as the closest single listed connector (full DB25 pinout given in the port note). These approximations are noted individually on each affected port.",
+  "ports": [
+    {
+      "name": "Scoreboard Output 1 (J1)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" phone jack wired Tip=Current Loop Output+, Ring=Current Loop Output-, Sleeve=GND — a proprietary 20 mA current-loop scoreboard drive signal, not analog audio."
+    },
+    {
+      "name": "Scoreboard Output 2 (J2)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Same wiring/function as J1 (current-loop scoreboard drive, not audio)."
+    },
+    {
+      "name": "Scoreboard Output 3 (J3)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Same wiring/function as J1 (current-loop scoreboard drive, not audio)."
+    },
+    {
+      "name": "Main Clock Start/Stop/Horn Switch (J4)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Physically a 6-pin modular (RJ12/RJ25-style, 6P6C) control jack for the optional remote clock switch accessory — not Ethernet/8P8C. rj45 chosen as closest listed connector (no RJ11/12 option in taxonomy)."
+    },
+    {
+      "name": "Main Output and Input Port (J6)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physically a 25-pin D-sub (DB25), not DB9. Combo port: pins 2/3/7 carry RS-232 serial TX/RX/GND; remaining pins carry 4 channels of 20 mA current-loop scoreboard output, 1 current-loop input, a relay output, a switch input, and a 10V AC/DC power-sense input. rs232 chosen as closest single listed connector type — no generic multi-signal D-sub/current-loop option exists in the taxonomy."
+    },
+    {
+      "name": "Shot Clock Start/Stop/Reset Switch (J7)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Same 6-pin modular (RJ12-style) jack type as J4, for the optional remote shot-clock switch accessory."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 8 ft (2.44 m) three-prong power cord (not a detachable IEC inlet) on the standard 120 VAC (All Sport 5010) variant. The 240 VAC export variant (All Sport 5020) uses a different captive-cord/inlet arrangement — confirm for your specific regional unit."
+    }
+  ]
+}

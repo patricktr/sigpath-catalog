@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Crestron",
+  "model": "CSM-QMTDC-275-4-CN",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.crestron.com/getmedia/78b69ccb-47a0-4ebe-bacd-f2dfcbdbca58/ss_csm-qmtdc-275-4-cn",
+  "confidence": "high",
+  "notes": "This is a Crestron QMT5-series digital roller-shade motor (lighting/environmental control actuator), not a conventional AV signal-path device — no video/audio ports exist, so category is set to \"other\"/\"Other\". It has exactly one physical connector on the unit: the \"NET\" Cresnet port (a 4-conductor lead with an inline detachable terminal block) which combines bidirectional Cresnet control data and 24 VDC power delivery; there is no separate onboard power inlet, since 24 VDC arrives over the same Cresnet cable from an external power supply (CSA-PWS40 single-motor, or CSA-PWS10S-HUB-ENET 10-motor hub with Ethernet-to-Cresnet bridge), both sold separately. Also present but not physical I/O connectors: three local pushbuttons (UP/SET/DN) for setup/testing and one multicolor status LED. Desktop/inline form factor (2.75 in. dia. x 13.91 in. long roller-shade tube motor) — not rack-mountable, so rackUnits is omitted. A wireless sibling model, CSM-QMTDC-275-4-EX, uses infiNET EX RF instead of wired Cresnet — do not confuse the two. Source: official Crestron spec sheet PDF (Rev 02/21/20), cross-checked against the Crestron product catalog page (crestron.com/Products/Catalog/Lighting-and-Environmental/Shades/Motors/CSM-QMTDC-275-4-CN).",
+  "ports": [
+    {
+      "name": "NET",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Cresnet bus connection: single 4-conductor attached lead terminating in an inline detachable terminal block. Carries bidirectional Cresnet communication (motor runs in Cresnet slave mode) plus 24 VDC/Class 2 power (42.5 W, 1.8 A draw) sourced from a separate power supply (CSA-PWS40 or CSA-PWS10S-HUB-ENET, sold separately). No standard connector id matches Cresnet's proprietary 4-pin plug exactly; 'euroblock' (detachable terminal block) is the closest match."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "manufacturer": "Nanlux",
+  "model": "Evoke 1200B",
+  "category": "other",
+  "sourceUrl": "https://impact-even.com/userfiles/files/telechargement/eclairage/nanlux_evoke1200b_manuel.pdf",
+  "confidence": "medium",
+  "notes": "Device is a 1200W bi-color (2700-6500K) LED spot light sold as two pieces: a light-fixture head (on a yoke) plus a separate external power supply/ballast box, connected by an included DC cable. Port/pinout data was extracted directly from Nanlux's own official \"Evoke 1200B User Manual\" (product diagram + detailed description on pp.2-5, and the DMX pinout diagram on p.17), mirrored at the distributor URL used as sourceUrl since nanlux.com's own product/spec pages are JS-rendered and could not be fetched as static content; content matches Nanlux's official spec sheet and is corroborated by B&H's listing (bhphotovideo.com/c/product/1726270-REG) confirming 5-pin XLR DMX and AC100-240V/DC48V 25A power specs. Confidence set to medium (not high) because three connectors had to be approximated to the closest allowed connector ID rather than confirmed exactly: (1) the USB port's exact sub-type (assumed USB-A based on included USB flash drive accessory), (2) the small proprietary \"Wire Control Socket\" for the wired remote (no official connector name given), and (3) the locking AC inlet on the power supply (mapped to \"powercon\" purely by visual/functional resemblance, not confirmed as an actual Neutrik powerCON part). The two DC power connectors (DC IN on the head, DC Power Output Socket on the PSU) are proprietary 3-pin locking connectors that share the XLR3 pin pattern per the manual's own wiring diagram (Pin1 DC+, Pin2 DC-, Pin3 ground) but are not standard audio XLR3 connectors - mapped to xlr3 as the closest available ID. No bandwidth-graded connectors are present on this device (no HDMI/SDI/DP/USB-data/Ethernet), so no \"grade\" fields were set. Rack units omitted - this is a standalone/yoke-mounted lighting fixture, not rack equipment. Also compatible with wireless control (Bluetooth, 2.4GHz NANLINK app, LumenRadio CRMX/TIMOTWO, RDM) which has no physical port.",
+  "ports": [
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "On light-fixture head. For firmware updates (via included USB flash drive) or connecting external USB devices; max output 5V/1A. Manual does not explicitly state connector sub-type or USB spec version."
+    },
+    {
+      "name": "DMX IN",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin XLR (pins 1/2/3 used = GND/DATA-/DATA+, pins 4/5 no-connect); manual confirms fixture uses 5-pin XLR by default, with a 3-pin XLR adapter option documented for legacy DMX cables."
+    },
+    {
+      "name": "DMX OUT",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR, same pinout convention as DMX IN (pass-through/loop-out for daisy-chaining fixtures)."
+    },
+    {
+      "name": "Wire Control Socket",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Small proprietary locking control-signal jack for the included WS-RC-C2 wired remote controller. Exact connector part/type is not specified in the manual; trs-3.5 chosen only as closest available shape match from the allowed list — treat with low confidence."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin locking DC power input from the external power supply (Pin1 = DC+, Pin2 = DC-, Pin3 = ground per manual pinout diagram). Physically a 3-pin XLR-shaped locking connector but carries DC power (48V/25A max), not audio — closest available list match."
+    },
+    {
+      "name": "AC Power Input Socket",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "On the separate power supply/ballast unit. A locking twist-type AC inlet (same connector shell/keyway style as the unit's DC output socket); rated AC100-240V 50/60Hz. Exact connector brand/model not stated by Nanlux — powercon chosen as closest listed match for a locking AV-grade AC connector; low confidence on exact part."
+    },
+    {
+      "name": "DC Power Output Socket",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "On the power supply/ballast unit. Locking 3-pin DC output feeding the light fixture head via the included 7.5m DC connection cable (DC48V/25A Max). Same connector family as the fixture's DC IN port."
+    }
+  ]
+}

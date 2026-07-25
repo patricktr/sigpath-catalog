@@ -1,0 +1,192 @@
+{
+  "manufacturer": "Grace Design",
+  "model": "m905",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.gracedesign.com/press/pdf/grace-m905.pdf",
+  "confidence": "high",
+  "notes": "Extracted from a detailed Sound On Sound technical review (July 2014) that Grace Design hosts on its own site (gracedesign.com/press/pdf/grace-m905.pdf) — used in place of a bare spec sheet because it's the most complete connector-by-connector description available and is manufacturer-distributed; core facts (3x stereo XLR speaker outs, RCA unbalanced ins, 2x AES3 + S/PDIF(RCA+Toslink) + ADAT digital inputs, USB2 Type-B computer I/O, 15-pin D-Sub remote link, IEC power) are corroborated by B&H/Vintage King listings. This is the full-featured \"m905\" (rack unit + included desktop Remote Control Unit); Grace also sells an analog-only variant \"m905 Analog\" (M905-AN) that omits the entire digital section (AES3/S-PDIF/Toslink/ADAT/USB/wordclock) — do not conflate the two SKUs. Exact rear-panel silkscreen text (e.g. whether it reads \"SPEAKER 1\" vs \"SPKR 1\") is inferred from prose description, not from a labeled panel diagram, so port names are best-effort. No connector in this device's I/O falls on the SDI/HDMI/DP/RJ45 grading scales, so only the USB computer port carries a grade (usb-2.0, explicitly stated as \"USB 2\"/\"Class-2 compliant\"). ADAT's connector, the RCU link, and the firmware Mini-USB port all had to be mapped to the nearest available connector id (toslink, vga, usb-micro respectively) since the schema has no dedicated ADAT/D-Sub/Mini-USB ids — flagged individually in each port's note. Only the main rack-unit's own chassis I/O is modeled; the included RCU accessory panel duplicates a headphone jack and a firmware Mini-USB port but isn't treated as a separately cabled device.",
+  "ports": [
+    {
+      "name": "Speaker 1 L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Speaker 1 R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Speaker 2 L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Speaker 2 R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Speaker 3 L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Speaker 3 R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Cue Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Cue Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Sub/DAC/Meter Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Configurable: subwoofer feed, direct D-A output, or meter feed"
+    },
+    {
+      "name": "Sub/DAC/Meter Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Configurable: subwoofer feed, direct D-A output, or meter feed"
+    },
+    {
+      "name": "Talkback Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Mono line-level output of internal/external talkback mic"
+    },
+    {
+      "name": "Balanced In L",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Balanced In R",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Cue In L",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Cue In R",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Talkback Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "External talkback mic input; switchable phantom power"
+    },
+    {
+      "name": "Unbalanced In L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "AES3 In 1",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 In 2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "AES3 inputs configurable as a dual-wire pair"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Toslink In",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Optical S/PDIF input"
+    },
+    {
+      "name": "ADAT In",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Modeled as toslink (closest available id) — physically a TOSLINK-style optical connector carrying ADAT lightpipe/S-MUX, not S/PDIF"
+    },
+    {
+      "name": "USB 2 (Computer)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Asynchronous Class-2 USB audio interface; 2-in/10-up or 2-in/2-out modes"
+    },
+    {
+      "name": "Digital Out (AES3)",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "Digital Out (S/PDIF)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Switchable 75-ohm termination"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Remote (RCU)",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "15-pin D-Sub link to the included desktop remote-control unit (7m Mogami cable) — modeled as vga/DE-15 (closest available id); mechanically similar but a proprietary control/audio link, not VGA video"
+    },
+    {
+      "name": "Footswitch/Tally",
+      "direction": "bidirectional",
+      "connector": "trs-6.35",
+      "note": "Combined footswitch input (talkback activation) and tally-light output on one 1/4\" TRS jack"
+    },
+    {
+      "name": "USB (Firmware Update)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Actual connector is Mini-USB Type-B, not Micro-USB; closest available id used. Used only for rack-unit firmware updates"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" headphone jack; wired in parallel with the RCU headphone jack"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Universal internal PSU, 100-240VAC 50-60Hz, up to 60W"
+    }
+  ]
+}

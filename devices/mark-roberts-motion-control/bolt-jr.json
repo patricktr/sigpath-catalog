@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Mark Roberts Motion Control",
+  "model": "Bolt Jr+",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.mrmoco.com/motion-control/bolt-jr-plus/",
+  "confidence": "low",
+  "notes": "The Bolt Jr+ is a bespoke, quote-only robotic motion-control camera crane (list price in the hundreds of thousands of dollars), not a catalog AV product — it is not sold or spec'd by any AV retailer (B&H, Sweetwater, Markertek, Crutchfield all show no listing), so the manufacturer's own materials are the only source. I pulled both the live product page (mrmoco.com/motion-control/bolt-jr-plus/) and MRMC's official PDF leaflet (\"BOLTJR_PLUS Leaflet 081025 AW.indd\", linked from that page). Both confirm mechanical/performance specs (10 kg payload, 11 m/s, 318 kg base weight, etc.) and a single power line item: \"1 x 220 VAC\" / \"1 x 200-220 VAC\" single-phase — no amperage, phase-connector type, or IEC rating is published anywhere I could access. Confirmed features imply additional physical I/O that MRMC does NOT document with connector-level detail in any public source: (1) an Ethernet-based control link between the operator control unit/Flair software PC and the Bolt base — MRMC's other literature describes Flair as networked control but never states RJ45 vs. proprietary, so I omitted it rather than guess; (2) a timecode input for frame-accurate sync/repeat passes; (3) a DMX output for lighting trigger (\"Control DMX Lighting\"); (4) an external \"Triggers Box\" accessory for equipment triggering, connector type unstated; (5) integrated through-arm camera cabling (video/data/power to the payload camera and lens motors), connector type unstated — camera-side connectors on MRMC rigs are typically proprietary multi-pin (e.g., Fischer/Lemo-style), not in the allowed connector list, so I could not responsibly map them. I did not fabricate entries for any of these because no source states the actual connector type, and guessing wrong would be worse than omitting. Only the power inlet is included, and even that connector id (iec-c19) is my best-fit approximation, not a confirmed spec — treat the whole port list as low-confidence/incomplete. Recommend contacting MRMC directly (info@mrmoco.com) or requesting the service/integration manual for authoritative connector-level I/O.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Manufacturer spec sheet states only \"1 x 220 VAC\" (product page lists \"1 x 200-220 VAC\"), single-phase mains, with no connector type or amperage disclosed. iec-c19 is the closest listed high-current IEC option for a 318 kg servo-driven rig; the actual inlet may be a hardwired terminal or an industrial (e.g. CEE/commando) plug not present in the allowed connector list."
+    }
+  ]
+}

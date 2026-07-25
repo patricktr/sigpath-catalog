@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Telemetrics",
+  "model": "PT-RM-1",
+  "category": "control",
+  "type": "Camera",
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/PT-RM-1_Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Product is a robotic broadcast pan/tilt camera head (multi-axis: pan, tilt, zoom, focus, track, televator, dolly, iris, master pedestal), not a rack-box or the camera itself — none of the provided category/type enums describe \"robotic pan/tilt head\" precisely, so category was set to \"control\" (matches Telemetrics' \"Camera Control Systems\" line) and type to \"Camera\" (closest available) as approximations. Desktop/mounted unit (13.25\"W x 14.87\"H x 10.58\"D, 25 lbs) — rackUnits omitted, not rack-mountable itself (its optional fiber base station / 48V PSU accessories are separate 1U rack products). Sourced from Telemetrics' own manufacturer datasheet (footer lists telemetricsinc.com / Mahwah NJ address) hosted via the AV-iQ product database at cdn-docs.av-iq.com/dataSheet/PT-RM-1_Datasheet.pdf; telemetricsinc.com itself now 301-redirects to EVS's T-Motion robotics page (Telemetrics was acquired by EVS), so this cached datasheet was the only accessible authoritative copy. The datasheet text confirms \"Serial Control through RS232, RS422, or 10/100 Base-T Ethernet,\" \"Camera Power with optional redundant backup input,\" \"Dual Tally Control (Red/Green),\" and \"Facility for power, Ethernet/serial control, video, genlock and prompter video... at the base\" and a photo of the head's base connector panel, but does NOT give an explicit port-by-port connector table. Video/Genlock/Prompter-Video connectors were inferred as BNC per universal broadcast convention (not explicitly labeled in text) — omitted grade since no SDI version is stated for the base electrical connection (the optional Fiber module datasheet separately states it carries \"3G/HD/SD SDI,\" suggesting the base BNC video likely tops out around 3G-SDI, but this isn't stated for the direct/electrical port itself). Camera-power delivery to the camera/lens/teleprompter and the Dual Tally control signal are described in the text/options but no distinct physical connector for them could be confidently identified from the datasheet or photo, so they were omitted from the port list rather than guessed. Options exist (not included as base ports): Slip Ring (PTO-RM-SR, unrestrained pan rotation), Electronic Drag (PTO-RM-1-ED), and a Fiber Optic option (PTO-RM-FO-GL / PTO-RM-FO-PWR) that converts Ethernet + HD/SD/3G-SDI + Genlock to duplex single-mode fiber with LC connectors (or an OpticalCON hybrid cable carrying 2 fibers + 2x16AWG power), requiring a separate PT-RM-FB fiber base station — these fiber/LC ports belong to the optional accessory modules, not the base PT-RM-1 head, so were not added to its port list.",
+  "ports": [
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Video",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Genlock",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Prompter Video",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Power In (48V DC)",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "38-53 VDC / 4.0A max; datasheet cable diagram calls this a 7-pin XLR (CA-PWR-7XLR), which is not in the allowed connector list — xlr5 (closest available circular-XLR option) used as an approximation. Actual connector is 7-pin, not 5-pin."
+    }
+  ]
+}

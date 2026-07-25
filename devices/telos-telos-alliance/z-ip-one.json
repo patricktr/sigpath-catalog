@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Telos (Telos Alliance)",
+  "model": "Z/IP ONE",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.telosalliance.com/site-to-site-connectivity/codecs-transceivers/telos-zip-one",
+  "confidence": "medium",
+  "notes": "Primary source: Telos Alliance official Z/IP ONE product page (spec table for model with Analog + AES/EBU + Livewire I/O, PN 2001-00289). Cross-checked against the official Z/IP ONE User's Manual (Oct 2013, v1.9.0r) for pinouts, panel labels (\"CH 1 In\"/\"CH 2 In\" etc.), and confirmation of 1RU (1.75in) form factor, IEC power inlet (100-240VAC 50-60Hz internal switching supply), DB25 GPIO pinout (8 outputs/8 inputs, +5V, ground), USB-A pinout, and RJ45 100BASE-T pinout. Note: the manual reviewed only exposed \"Analog XLR\" or \"Livewire\" as audio-input-source menu choices (no AES option shown in that menu screenshot), which may reflect a non-AES base SKU or an earlier firmware revision predating the AES source-select option — however the manufacturer's current spec page for this model lists AES/EBU I/O as standard, so it is included here with high confidence. GPIO/parallel connector is physically a 25-pin D-sub (DB25); no exact match exists in the provided connector-id list, so \"rs232\" was used as the closest D-sub-style placeholder — this is a contact-closure/GPIO port, not a serial RS-232 data port. True RS-232 serial pass-through on this device is achieved via an external USB-to-serial adapter on one of the two USB-A ports, not a dedicated serial connector. No bandwidth/version grade is stated for the USB ports (omitted). Rack width is standard 19in with 1RU (1.75in) height; unit ships without an internal fan.",
+  "ports": [
+    {
+      "name": "CH 1 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog audio input, left channel; line/mic/mic+phantom selectable"
+    },
+    {
+      "name": "CH 2 In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog audio input, right channel; line/mic/mic+phantom selectable"
+    },
+    {
+      "name": "CH 1 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, left channel"
+    },
+    {
+      "name": "CH 2 Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog audio output, right channel"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Stereo AES/EBU digital input, 24-bit with sample rate conversion"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Stereo AES/EBU digital output"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Also carries Livewire audio-over-IP and local control/GPIO"
+    },
+    {
+      "name": "WAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Recommended port for IP-codec streaming to the internet"
+    },
+    {
+      "name": "Parallel (GPIO)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a 25-pin D-sub (DB25 male) with 8 open-collector outputs + 8 open-collector inputs for time-aligned contact closures, plus +5V and ground; no D-sub/DB25 id exists in the allowed connector list so rs232 was chosen as the closest D-sub analog. This is NOT an RS-232 serial port."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For approved Wi-Fi/3G/4G modems or USB-serial adapter (RS-232 pass-through); USB speed generation not stated in spec"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For approved Wi-Fi/3G/4G modems or accessories; USB speed generation not stated in spec"
+    },
+    {
+      "name": "Headphone (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel monitor output, selectable between receive and transmit audio"
+    },
+    {
+      "name": "Headphone (3.5mm)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel monitor output"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC receptacle with internal fuse; auto-ranging 90-240VAC (mfr page) / 100-240VAC (manual), 50-60Hz"
+    }
+  ]
+}

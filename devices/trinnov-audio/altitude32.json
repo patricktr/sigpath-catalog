@@ -1,0 +1,414 @@
+{
+  "manufacturer": "Trinnov Audio",
+  "model": "Altitude32",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.trinnov.com/en/products/altitude32/",
+  "confidence": "medium",
+  "notes": "Documents the fully-populated flagship \"24-32\" (32-channel) hardware configuration, matching the \"Altitude32\" name; the same 3.5U chassis is also sold pre-populated as 8-8, 8-16, and 16-24 channel SKUs with fewer active XLR/DB25 analog and AES channels (per manufacturer spec table, not modeled separately here). Rack size is actually 3.5U (rounded up to 4 here since rackUnits must be an integer). HDMI, S/PDIF, AES, analog-audio and power figures are from Trinnov's current official product/spec page (reflects the current HDMI 2.1/40Gbps hardware revision, 8 HDMI inputs). Control/PC connectors (Gigabit Ethernet, 2x USB2.0 + 2x USB3.0, RS-232, 12V trigger in/out, PS/2, WiFi antenna, PC video out) are not listed on the current spec page and were instead sourced from Trinnov's official Altitude32 user manual (PDF hosted on trinnov.com, dated 2019), which documents an earlier hardware revision (7 HDMI inputs, HDMI 1.4/2.0) — these control-port counts/types are plausible but not re-confirmed against the current \"NextGen\" hardware board, hence medium confidence. Two rear-panel items have no matching connector id in the allowed list and are omitted from the ports array: a PS/2 keyboard/mouse port, and a WiFi antenna (SMA-type RF) connector. Onboard PC audio jacks on the rear panel are explicitly marked \"unused\" in the manual and were omitted. DB25 connectors have no id in the allowed connector list: analog DB25 breakouts are mapped to \"xlr3\" (closest balanced-analog connector) and AES/digital DB25 breakouts are mapped to \"aes3\", following this catalog's established convention for DB25 audio breakouts — physically these are 25-pin D-sub jacks, not discrete XLR/AES3 connectors. The two \"Audio Network\" RJ45-style ports are explicitly documented by Trinnov as \"for future use\" with no protocol/speed specified, so no grade was set. XLR Analog Out 1-16 duplicate DB25 Analog Out channels 1-16; DB25 channels 17-32 (present only on the 24-32 configuration) have no discrete XLR equivalent.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 5",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 6",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 7",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI In 8",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Supports ARC/eARC. 40Gbps, up to 4K120/8K60, HDCP 2.3."
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "40Gbps, up to 4K120/8K60, HDCP 2.3."
+    },
+    {
+      "name": "S/PDIF In (Optical) 1",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "S/PDIF In (Optical) 2",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "S/PDIF In (Coaxial) 1",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF In (Coaxial) 2",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out (Optical)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "S/PDIF Out (Coaxial)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AES3 In (XLR) 1",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 In (XLR) 2",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 Out (XLR)",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 Output (DB25)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Physical connector is DB25 (D-sub 25-pin), not discrete AES3 XLR; carries up to 16 channels (8 AES pairs). 8-8/8-16 SKUs populate 8 of the 16 channels."
+    },
+    {
+      "name": "AES3/DCI Input (DB25)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Physical connector is DB25; DCI-compliant AES3 digital cinema input."
+    },
+    {
+      "name": "Mic In (3D Microphone)",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin XLR input for Trinnov's 3D acoustic measurement microphone."
+    },
+    {
+      "name": "Balanced In (XLR) 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Balanced In (XLR) 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Unbalanced In 1 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In 1 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In 2 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In 2 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In 3 L",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced In 3 R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Part of the 8-jack 7.1-channel unbalanced analog input."
+    },
+    {
+      "name": "7.1 Analog In R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In C",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In LFE",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In LS",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In RS",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In LSr",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "7.1 Analog In RSr",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced Out L",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Unbalanced Out R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "XLR Analog Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 9",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Present on 8-16, 16-24 and 24-32 configurations (16 total); 8-8 base model has only 8 XLR outputs."
+    },
+    {
+      "name": "XLR Analog Out 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 11",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 12",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 13",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 14",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 15",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "XLR Analog Out 16",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DB25 Analog Out (Ch 1-8)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physical connector is DB25 (D-sub 25-pin), 8 balanced channels; duplicates XLR Analog Out 1-8."
+    },
+    {
+      "name": "DB25 Analog Out (Ch 9-16)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physical connector is DB25; 8 balanced channels; duplicates XLR Analog Out 9-16. Present from the 8-16 configuration up."
+    },
+    {
+      "name": "DB25 Analog Out (Ch 17-24)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physical connector is DB25; 8 balanced channels; no discrete XLR equivalent. Present from the 16-24 configuration up."
+    },
+    {
+      "name": "DB25 Analog Out (Ch 25-32)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physical connector is DB25; 8 balanced channels; no discrete XLR equivalent. Present only on the 24-32 (full 32-channel) configuration."
+    },
+    {
+      "name": "Audio Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dual network-audio connectors, documented by Trinnov as \"for future use\"; protocol/speed unspecified."
+    },
+    {
+      "name": "Audio Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dual network-audio connectors, documented by Trinnov as \"for future use\"; protocol/speed unspecified."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "RJ45 Gigabit Ethernet on the internal PC connector panel; used for VNC/web UI and network setup. Sourced from the 2019 manual — count/spec may differ on current hardware."
+    },
+    {
+      "name": "USB 2.0 Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "On the internal PC connector panel. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "USB 2.0 Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "On the internal PC connector panel. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "USB 3.0 Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "On the internal PC connector panel. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "USB 3.0 Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "On the internal PC connector panel. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "RS-232 Automation",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "Trigger In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "12V trigger input. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "Trigger Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "12V trigger output. Sourced from the 2019 manual — may differ on current hardware."
+    },
+    {
+      "name": "PC Video Output",
+      "direction": "output",
+      "connector": "vga",
+      "accepts": [
+        "dvi",
+        "hdmi"
+      ],
+      "note": "Manual states connector is \"DVI/HDMI/VGA\" and explicitly \"may change following the motherboard reference\"; mapped to VGA as the base id. Used to attach a display directly to the internal Linux PC for local GUI access."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "240V/110V, 50/60Hz with manual voltage-select switch; 2A slow-blow fuse; separate audio and processing internal PSUs; 132W max consumption."
+    }
+  ]
+}

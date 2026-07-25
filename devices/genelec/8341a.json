@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Genelec",
+  "model": "8341A",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.genelec.com/8341a",
+  "confidence": "high",
+  "notes": "Genelec 8341A is a 3-way coaxial \"The Ones\" series active/smart studio monitor with Intelligent Signal Sensing (auto-switches between analog XLR and AES/EBU digital input; AES/EBU input can loop-through to the AES/EBU output for daisy-chaining a digital chain). The two RJ45 ports are GLM control-network connectors (not audio-bearing Ethernet data ports) used to daisy-chain Genelec Loudspeaker Manager (GLM) calibration/control between units and a network interface; no bandwidth grade is published for them so no \"grade\" field was set. No bandwidth/version grade applies to the XLR analog or AES/EBU connectors either, per the grading rules (AES3 is not in the gradable connector list). Power inlet connector type (IEC C13/C14) is inferred from standard Genelec practice for this product line — the official spec page lists mains voltage/consumption but does not explicitly name the inlet connector type, so this is a medium-confidence detail within an otherwise high-confidence, manufacturer-sourced spec set. Dimensions 351 x 237 x 243 mm, weight 9.8 kg, desktop/stand-mounted monitor (not rack-mountable, so rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Analog Input",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU Input",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Output",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "Network (RJ45) 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "GLM control network, daisy-chainable"
+    },
+    {
+      "name": "Network (RJ45) 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "GLM control network, daisy-chainable"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC mains inlet inferred (standard for this Genelec series; not explicitly itemized on source page); 100-240VAC 50/60Hz auto-sensing"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "manufacturer": "WolfVision",
+  "model": "VZ-8light4",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.dekom.com/fileadmin/user_upload/manufacturers/wolfvision/wolfvision_vz_8_serie/wolfvision_8light4_user_guide_en_ger.pdf",
+  "confidence": "medium",
+  "notes": "Source is WolfVision's own official \"Instructions / Bedienungsanleitung VZ-8light4\" user manual (manufacturer-authored, printed Austria, Oct 2015), hosted by AV integrator Dekom (WolfVision's own product pages for this older/likely-discontinued model returned 404/redirect at time of research). Desktop articulated-arm document camera/visualizer — not rack mountable, so rackUnits omitted (dimensions in operation 408x312x561mm, folded 408x312x137mm, 5kg). No HDMI version (1.4/2.0) is stated anywhere in the manual despite pinout diagrams being given, so HDMI grades were omitted per instructions rather than inferred from max resolution (native 1080p, HDMI IN supports up to WUXGA 1920x1200@60Hz, max pixel clock 170MHz, no HDCP support). LAN graded eth-100m because the manual explicitly states \"10BASE-T/100BASE-TX\" (100 Mbps max), with PoE+ (802.3at, Class 4) support. The two rear USB ports are shown under one shared \"USB\" icon in the panel diagram without an explicit connector-style callout for the device/client port, so its exact physical shape (Micro-B vs Mini-B) is inferred rather than confirmed — flagged as the main source of medium (not high) confidence. Kensington lock slot present on the unit but omitted as it is a physical anti-theft mechanism, not a signal/power port.",
+  "ports": [
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "RGB OUT",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB (host, for storage)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB (device, to computer)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Manual calls this the 'USB port to Host (to computer)' / USB 2.0 device port (PTP+UVC); exact physical connector style (Micro-B vs Mini-B) is not stated in the source document, so usb-micro was chosen as the closest listed id."
+    },
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input from external multi-range 100-240VAC power pack; port also supports PoE+ (IEEE 802.3at-2009, High Power Class 4, 12.95-25.50W) via the LAN port as an alternative to this barrel jack."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    }
+  ]
+}

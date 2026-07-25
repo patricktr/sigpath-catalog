@@ -1,0 +1,136 @@
+{
+  "manufacturer": "Link Electronics",
+  "model": "PTC-892",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/95744/Link-Electronics-Caption-Encoder-Decoder-Sd-Sdi-Analog-Ptc-892.html",
+  "confidence": "medium",
+  "notes": "Discontinued product (confirmed on linkelectronics.com/support/resources/discontinued-products). It is a 1U rack-mount closed-caption encoder/decoder/data-recovery unit for SD-SDI and analog composite/Y-C(S-Video)/component/RGB video (NTSC/PAL), not a display/switcher/AV-source in the usual sense — mapped to category \"converter\" / type \"Encoder/Decoder\" as the closest fit. Physical I/O and rack/power specs are drawn from Link Electronics' own instruction manual and spec sheet (mirrored on ManualsLib, since linkelectronics.com no longer hosts the doc) plus confirmed via B&H/Markertek/Adorama listings. The manual's rear-panel section describes connections via a color-coded wiring diagram rather than a plain connector list, so exact silkscreen labels (e.g. whether it reads \"VIDEO IN\" vs \"ANALOG IN\") are reconstructed, not verbatim. Spec-sheet totals (13 BNC, 2 mini-DIN, 1 XLR, 1 3.5mm, 2x 9-pin D-sub, 1 RJ11, 1 USB-B) were cross-checked against the wiring-diagram text and add up consistently across the 22 ports listed. SDI is confirmed SD-only (SD-SDI), so grade sdi-sd was applied only to the three digital/SDI BNCs; no HD-SDI support. Three connector types had no exact match in the allowed id list and were mapped to the closest one with an inline note: S-Video mini-DIN → midi-din, mono 3.5mm GPI jack → trs-3.5, RJ11 modem jack → rj45. Confidence set to medium because the source is authoritative (manufacturer's own manual/specs) but several exact panel labels and the precise routing of the two S-Video mini-DIN jacks (which is in/out) are inferred rather than directly confirmed from a rear-panel photo/diagram.",
+  "ports": [
+    {
+      "name": "Digital In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "Digital Encoder Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-sd"
+    },
+    {
+      "name": "Digital Bypass",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-sd",
+      "note": "Passive loop-through, active when unit is powered off"
+    },
+    {
+      "name": "Analog Video In (Y/G)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Analog Video In (U/B)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Analog Video In (V/R)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Encoder Out (Y/G)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Encoder Out (U/B)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Encoder Out (V/R)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Decoder Out (Y/G)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Decoder Out (U/B)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Decoder Out (V/R)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Analog Bypass",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Passive loop-through, active when unit is powered off"
+    },
+    {
+      "name": "S-Video In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Actual connector is 4-pin mini-DIN S-Video; midi-din is the closest id in the allowed connector list"
+    },
+    {
+      "name": "S-Video Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Actual connector is 4-pin mini-DIN S-Video; midi-din is the closest id in the allowed connector list"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Nominal +4dBu analog LTC timecode input"
+    },
+    {
+      "name": "Weather Lift GPI",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Manual specifies a mono (TS) 3.5mm jack, activated when shorted; trs-3.5 is the closest available id (no mono ts-3.5 option exists)"
+    },
+    {
+      "name": "RS-232 #1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub"
+    },
+    {
+      "name": "RS-232 #2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub; internal optional modem takes priority over this port if installed"
+    },
+    {
+      "name": "USB (Port 1 alt.)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B; simulates a COM port, selectable as alternate to RS-232 #1"
+    },
+    {
+      "name": "Modem",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual jack is RJ11 for optional internal modem, not Ethernet; rj45 is the closest available id, no eth grade applies"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-320 male inlet, 85-264VAC 50/60Hz, 24W, 5x20mm 750mA fuse"
+    }
+  ]
+}

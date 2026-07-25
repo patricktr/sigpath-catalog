@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Neumann",
+  "model": "KH 120 II",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.neumann.com/en-us/products/monitors/kh-120-ii",
+  "confidence": "high",
+  "notes": "Base KH 120 II model (non-AES67). A separate variant \"KH 120 II AES67\" adds redundant AES67/RAVENNA/ST 2110 network audio ports (not modeled here). No bandwidth grade is stated for the RJ45 control port (MA 1 software uses standard IP data; speed unspecified), so grade omitted per instructions. AC inlet type confirmed as IEC (C14) via manual references; exact C13/C14 designation not explicitly stated on manufacturer spec page but matches standard IEC inlet convention for this class of monitor. Desktop/stand-mount nearfield monitor - not rack-mountable (rackUnits omitted). Dimensions 287x182x227mm, 5.4kg, power 15W idle/320W peak/0.3W standby.",
+  "ports": [
+    {
+      "name": "Analog In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Electronically balanced analog audio input, 24 kOhm impedance"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "75 ohm digital S/PDIF input, for daisy-chaining monitors"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "75 ohm digital S/PDIF output (loop-through of S/PDIF In or converted Analog In)"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control/remote port for MA 1 monitor alignment software (standard IP data); speed not published, not present on non-networked... actually present on all KH 120 II"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, universal power supply 100-240V~, mains switch"
+    }
+  ]
+}

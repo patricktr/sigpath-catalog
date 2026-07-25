@@ -1,0 +1,46 @@
+{
+  "manufacturer": "Robe",
+  "model": "MegaPointe",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://cdn.aws.robe.cz/print/en_product_635.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet lists only a power-IN connector (Neutrik powerCON TRUE1) with an included powerCON TRUE1 power cord — no power-out/link connector is documented, so this fixture is not daisy-chainable for power. DMX/RDM is described as \"Locking 3-pin & 5-pin XLR\" in/out; Robe fixtures of this generation have separate parallel 3-pin and 5-pin locking XLR sockets (not a single combo jack), so this is modeled as four distinct DMX ports (5-pin/3-pin, in/out) rather than one connector with an accepts[] list. Ethernet (RJ45) and USB-A speed/version are not stated in the spec sheet, so no grade was set for either (grades should not be guessed). Not rack-mountable — this is a moving-head lighting fixture (22 kg, IP20, truss/floor mounted via omega adaptors), hence rackUnits omitted and category/type both fall outside the given AV-signal-chain taxonomy (mapped to \"other\"/\"Other\").",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "DMX/RDM In (5-pin)",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX/RDM In (3-pin)",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DMX/RDM Out (5-pin)",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX/RDM Out (3-pin)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Ethernet In",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Litepanels",
+  "model": "Gemini 2x1 Hard",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.markertek.com/product/gemini-2x1-hard/litepanels-gemini-2x1-hard-rgbww-2x1-dmx-video-light-panel-kit-with-23000-lux-at-10ft-3m-from-500-watts",
+  "confidence": "medium",
+  "notes": "Litepanels Gemini 2x1 Hard is an RGBWW LED studio light panel (500W nominal draw, mains PowerCON True1 100-240VAC/50-60Hz, DC battery input 26-33VDC per Markertek retailer spec; another secondary source cites 28-33VDC — could not resolve the discrepancy against the primary manufacturer manual, which is Cloudflare-blocked (litepanels.com and B&H both returned HTTP 403 to automated fetch). Port list (PowerCON in/out, 3-pin XLR DC in, 5-pin XLR DMX in/out, RJ45 DMX in/out, USB-A) is corroborated across Markertek and independent aggregated search results referencing the official Litepanels connector-panel diagram, but was not verified against the manufacturer PDF directly. No standard connector id exists for \"3-pin XLR DC power\" (only xlr4-dc/euroblock-dc are power-specific XLR ids) so xlr3 was used as the closest match. Also present but omitted here because no matching connector id exists in the allowed list: a proprietary Bluetooth/wireless-DMX expansion dongle port and a future-use WiFi antenna connector. No connectors on this device carry a bandwidth grade (DMX and USB firmware port do not have stated speed/version ratings), so grade is omitted on all ports. Not rack-mountable (yoke-mounted studio fixture), so rackUnits is omitted. Category/type enums provided don't include a \"lighting fixture\" option, so both were set to \"other\"/\"Other\" as the closest available choice.",
+  "ports": [
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "AC Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Through/link output for daisy-chaining additional fixtures"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR DC battery input, 26-33VDC (one secondary source cites 28-33VDC). xlr3 used as closest connector id in the allowed list; this is a DC power jack, not audio."
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX In (RJ45)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Ethernet-style RJ45 connector carrying DMX signal, not network data; labeled In/Out on the unit so kept unidirectional rather than the generic RJ45=bidirectional default"
+    },
+    {
+      "name": "DMX Out (RJ45)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Ethernet-style RJ45 connector carrying DMX signal, not network data"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For firmware updates / settings via USB drive"
+    }
+  ]
+}

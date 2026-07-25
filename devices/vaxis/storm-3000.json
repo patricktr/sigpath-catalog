@@ -1,0 +1,63 @@
+{
+  "manufacturer": "Vaxis",
+  "model": "Storm 3000",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://vaxis.us/products/vaxis-storm-3001",
+  "confidence": "medium",
+  "notes": "Storm 3000 is sold as a wireless TX+RX kit (camera-mounted transmitter + receiver), so the port list above covers both units, prefixed TX/RX. Physical-connector details (BNC counts, LEMO power, SMA antennas, USB/DC debug ports) were confirmed against the manufacturer's own product manual as reproduced on manuals.plus (https://manuals.plus/vaxis/storm-3000-3g-sdi-and-hdmi-wireless-transmission-kit-manual), cross-checked against the Vaxis US product page and Newsshooter's hands-on review (https://www.newsshooter.com/2019/02/18/vaxis-storm-3000-wireless-kit-review/) and the B&H listing (https://www.bhphotovideo.com/c/product/1465761-REG/vaxis_vsw30aaw_storm_3000_hd_0_latency.html). Excluded from the port list (not applicable connector types in this schema): 2x SMA antenna ports on TX, 5x SMA antenna ports on RX, and USB/DC debug interfaces on both units. Power connectors are true 2-pin female LEMO jacks (7-36V DC) rather than barrel jacks; \"dc-barrel\" was used as the closest available enum id. HDMI is reported elsewhere as version 1.3, which falls outside the allowed hdmi-1.4/2.0/2.1 grade values, so HDMI grade was omitted rather than mis-stated. Desktop/camera-mount unit, not rack-mountable, so rackUnits is omitted. Variant SKUs exist with V-mount (Storm 3000DV) or Gold-mount (Storm 3000DG) battery plates on the same TX/RX electronics and connectors.",
+  "ports": [
+    {
+      "name": "TX 3G-SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "BNC female, transmitter video input"
+    },
+    {
+      "name": "TX SDI Loop Out",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "BNC female loop-through of the SDI input"
+    },
+    {
+      "name": "TX HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Type-A; manual/reviews cite HDMI 1.3, which is below the allowed grade enum, so no grade is set"
+    },
+    {
+      "name": "TX DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 2-pin female LEMO DC input, 7-36V DC (not a true barrel jack) — mapped to closest available connector id. Ships with LEMO-to-D-Tap cable; V-mount/Gold-mount battery-plate SKUs (3000DV/3000DG) exist but the plate itself isn't a discrete connector type in this list"
+    },
+    {
+      "name": "RX SDI Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "BNC female; receiver provides two simultaneous identical SDI outputs"
+    },
+    {
+      "name": "RX SDI Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "BNC female; duplicate of SDI Out 1"
+    },
+    {
+      "name": "RX HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Type-A female; same HDMI-version caveat as TX HDMI In"
+    },
+    {
+      "name": "RX DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 2-pin female LEMO DC input, 7-36V DC — mapped to closest available connector id"
+    }
+  ]
+}

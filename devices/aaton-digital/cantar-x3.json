@@ -1,0 +1,144 @@
+{
+  "manufacturer": "Aaton Digital",
+  "model": "Cantar X3",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://cantarx.com/index.php/phocadownloadmenu?download=2:cantarx3-user-manual-v3-211-c7-0",
+  "confidence": "high",
+  "notes": "Sourced from the official Aaton Digital \"CantarX3 User Manual v.3.211.C7\" (Dec 19, 2020), hosted on the manufacturer's dedicated product site cantarx.com. Physical I/O confirmed against both the \"Inputs & Outputs locations\" section (p.10-12) and the connector-pinout annex (p.137-139).\n\nNot included: the manual documents a BNC connector labeled \"SDI (N/A)\" and a DVI-D output labeled \"DVI out (N/A)\" on the rear panel — both are explicitly marked non-functional/not implemented in this manual revision, so they were omitted from the port list rather than graded. Also omitted: 2x SD-HC/SD-XC card slots and 2x internal Li-Ion battery bays (media/battery slots, not cabled I/O), and the WiFi antenna (wireless, not a physical connector).\n\nSeveral real connectors have no exact match in the allowed connector-id list, so the closest available id was used and flagged in that port's note: 5-pin LEMO timecode socket → xlr5; 3-pin TA3 mini-XLR (AES-42) → xlr3; 25-pin Sub-D/DB25 audio breakouts (Tascam TD-88 standard, both AES3 I/O and analog line out) → vga; 4-pin Hi-Rose DC output → dc-barrel; proprietary 26-pin Mini Delta Ribbon \"Option\" port → rs232. None of these substitutions carry a real grade, so no grade was set on them.\n\nDante and Ethernet RJ45 ports are present but the manual does not state a network speed (e.g. 100M/1G), so grade was omitted per instructions rather than assumed.\n\nThe Cantar X3 is a shoulder/backpack-mounted portable production sound mixer-recorder (waterproof/dustproof aluminum body), not rack-mountable, so rackUnits was omitted.",
+  "ports": [
+    {
+      "name": "Mic In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic In 3/4",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "One 5-pin XLR carries two mic channels: pins 1/2/3 = Mic 3, pins 1/4/5 = Mic 4."
+    },
+    {
+      "name": "Mic In 7/8",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "One 5-pin XLR carries two mic channels: pins 1/2/3 = Mic 7, pins 1/4/5 = Mic 8."
+    },
+    {
+      "name": "Line In 1/2",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "One 5-pin XLR carries two line channels: pins 1/2/3 = Line 1, pins 1/4/5 = Line 2."
+    },
+    {
+      "name": "Line In 3/4",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "One 5-pin XLR carries two line channels: pins 1/2/3 = Line 3, pins 1/4/5 = Line 4."
+    },
+    {
+      "name": "AES-42 In 1/2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Physical connector is a 3-pin TA3 mini-XLR (not full-size XLR3) - closest listed id used. Carries AES-42 digital mic input; can be switched to AES3."
+    },
+    {
+      "name": "AES-42 In 3/4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Physical connector is a 3-pin TA3 mini-XLR (not full-size XLR3) - closest listed id used. Carries AES-42 digital mic input; can be switched to AES3."
+    },
+    {
+      "name": "Timecode I/O",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Actual connector is a 5-pin LEMO (EGG.1B.305) socket, not an XLR - closest listed id used. Pins: LTC In, LTC Out, ASCII data."
+    },
+    {
+      "name": "AES-3 Digital I/O 1-8",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Actual connector is a 25-pin Sub-D (DB25) female, Tascam TD-88 pinout, carrying 8 channels (4 pairs) of AES3 I/O. No DB25 id exists in the connector list; VGA (same D-sub family) used as closest match."
+    },
+    {
+      "name": "Analog Line Out 1-8",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Actual connector is a 25-pin Sub-D (DB25) female, Tascam TD-88 analog pinout, carrying 8 balanced line outputs. No DB25 id exists in the connector list; VGA (same D-sub family) used as closest match."
+    },
+    {
+      "name": "USB 2.0 (rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Dante",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional Dante card; gives access to 32 Dante I/O channels. Network speed grade not stated in manual."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Speed grade not stated in manual."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "External power input, 13-18V DC, 4A max."
+    },
+    {
+      "name": "DC Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 4-pin Hi-Rose push-pull connector, not a barrel jack - closest listed id used. Outputs V-Batt, 500mA max, thermal-fuse protected."
+    },
+    {
+      "name": "Headphone/Talkback 3.5mm",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "4-conductor TRRS mini-jack (Nokia LRGM wiring): stereo headphone output plus external talkback mic input on the same jack."
+    },
+    {
+      "name": "Headphone 6.35mm",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Option Port (Mini Delta Ribbon)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Proprietary 26-pin Mini Delta Ribbon (MDR26) connector, not RS232 - closest listed id used. Multi-function: LTC I/O, ASCII data, word-clock I/O, tally, an AES3 stereo pair output (AES 5/6), V-Batt power out, remote power on/off, and Cantarem remote-control link."
+    }
+  ]
+}

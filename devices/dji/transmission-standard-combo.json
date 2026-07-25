@@ -1,0 +1,87 @@
+{
+  "manufacturer": "DJI",
+  "model": "Transmission (Standard Combo)",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.dji.com/transmission/specs",
+  "confidence": "medium",
+  "notes": "DJI Transmission (Standard Combo) is a two-piece wireless video transmission system: a DJI Video Transmitter (TX) and DJI Video Receiver (RX), linked over DJI O3 Pro wireless (2.4/5.8GHz + DFS, up to 6km FCC / 4km CE, 40Mbps max bitrate, 1080p60 max, ~70ms latency). Ports above are split by unit (TX:/RX: prefixes) since they are separate physical boxes, not one chassis. Both TX and RX are identical in size/weight (approx. 350g each, 127x87x26mm excl. antennas) and each has 2 detachable RF antenna connectors (proprietary, not in the standard connector taxonomy, so omitted as ports) plus a proprietary battery-sled \"External Power Input Port\" for WB37 or NP-F batteries (also omitted, not a standard connector type). Port existence/direction/count is sourced directly from DJI's own official User Guides (DJI_Video_Transmitter_User_Guide_v1.2.pdf and DJI_Video_Receiver_User_Guide_v1.0.pdf, linked from the dji.com/transmission/downloads page) which is why direction/topology confidence is high; however neither manual states SDI or HDMI version numbers, so the sdi-3g and hdmi-1.4 grades are inferred from secondary retailer/press sources (B&H product listing, newsshooter.com hands-on) describing \"dual 3G-SDI Output Ports\" and an \"HDMI 1.4 Type-A Output Port\" on the receiver — hence overall confidence is medium. DC power connectors on both units are locking round connectors (compatible with P-TAP/Ronin 2 accessory power via adapter cables), approximated here as dc-barrel since no closer match exists in the connector list. Not modeled: the alternative \"DJI Transmission (High-Bright Monitor Combo)\" variant, which pairs the same TX with a DJI High-Bright Remote Monitor (an integrated monitor+receiver with its own separate HDMI-out-only expansion plate) instead of the standalone Video Receiver.",
+  "ports": [
+    {
+      "name": "TX: SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Video source input to the DJI Video Transmitter"
+    },
+    {
+      "name": "TX: SDI Out (Loop)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Loops out the transmitter's input signal for local monitoring/recording"
+    },
+    {
+      "name": "TX: HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Type-A HDMI; official manual does not state HDMI version"
+    },
+    {
+      "name": "TX: USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Firmware update / DJI Assistant 2 activation; also carries voice-call audio to a headset"
+    },
+    {
+      "name": "TX: DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "6-18V DC, max 2A via included power cable. Physical connector is a locking round DC connector, not a true coaxial barrel jack — mapped to closest available type"
+    },
+    {
+      "name": "TX: Power Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "6-18V DC output to power an external accessory; same locking-connector caveat as DC In"
+    },
+    {
+      "name": "RX: SDI Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "One of two SDI output ports on the DJI Video Receiver; carries embedded audio and camera metadata"
+    },
+    {
+      "name": "RX: SDI Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "RX: HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDMI 1.4 Type-A per B&H/press; not stated in DJI's own manual"
+    },
+    {
+      "name": "RX: USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Firmware update / activation; also carries voice-call audio to a headset"
+    },
+    {
+      "name": "RX: DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "6-18V DC, max 2A via included power cable; locking round connector"
+    },
+    {
+      "name": "RX: Power Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "6-18V DC output, e.g. to power a DJI Master Wheels controller"
+    }
+  ]
+}

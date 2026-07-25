@@ -1,0 +1,60 @@
+{
+  "manufacturer": "SmallHD",
+  "model": "Cine 7",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://smallhd.com/products/cine-7",
+  "confidence": "medium",
+  "notes": "On-camera monitor, not rack-mountable (rackUnits omitted). SDI grade (3G-SDI) and core I/O counts confirmed directly on SmallHD's own product page and its hosted Quick Start Guide. HDMI connector physical size (Type D/micro-HDMI) and USB port type (USB 2.0 Micro-B) were corroborated by multiple independent retailer/aggregator spec sheets (Full Compass, B&H, Amazon listings citing SmallHD spec sheet) but not verbatim on SmallHD's marketing page, which only lists an unexpanded \"Technical Specs\" section. No HDMI version or Ethernet speed is published by SmallHD, so those grades were intentionally omitted rather than inferred. Power connector is SmallHD's proprietary 2-pin locking DC connector (10-34V, 2A) — approximated to \"dc-barrel\" since no closer id exists in the allowed connector list. Monitor also has an SD card slot (media storage, not a signal/power port) which was omitted as out of scope.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "micro-hdmi",
+      "note": "Physical size is Type D (micro-HDMI) per retailer spec sheets; SmallHD's own page just states 'HDMI In' without connector size. Supports up to 4Kp30 per SmallHD Quick Start Guide; no HDMI version (1.4/2.0/2.1) stated by SmallHD so grade omitted."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "micro-hdmi",
+      "note": "Loop-through output; Type D per retailer spec sheets. No HDMI version stated."
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In/Out",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Selectable as additional SDI input or as loop-through SDI output."
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB (Micro-B)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Micro-B per retailer spec sheets; used for firmware/data. Not confirmed on SmallHD's own marketing page."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Used primarily for ARRI camera control (e.g., Alexa Mini via LEMO-to-RJ45 cable, Amira via direct RJ45). Speed not stated by SmallHD, grade omitted."
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "SmallHD specifies a proprietary '2-pin Locking Power Input, 10-34V DC, 2A' — not a literal barrel jack; mapped to closest available connector id (dc-barrel)."
+    }
+  ]
+}

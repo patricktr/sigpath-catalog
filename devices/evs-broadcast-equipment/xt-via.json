@@ -1,0 +1,314 @@
+{
+  "manufacturer": "EVS Broadcast Equipment",
+  "model": "XT-VIA",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 6,
+  "sourceUrl": "https://evs.com/sites/default/files/2022-12/XT-VIA%20datasheet%20-%20dec%202022_0.pdf",
+  "confidence": "medium",
+  "notes": "Modular broadcast server: EVS states \"over 370 validated I/O configurations,\" so the exact video-module population and total SDI/SFP port count vary per order. Physical I/O above was read directly from the labeled rear-panel photo in EVS's own XT-VIA datasheet (evs.com), cross-checked against the datasheet's text spec table (SDI I/O, IP I/O, Audio, Multi-network, and dimensions sections). The photographed reference unit has 7 populated hot-swap video I/O module bays (out of 8 possible, per the \"MONITORING – MODULE 1-8\" bus) arranged as 6 in three stacked rows plus 1 more beside the MADI module; only one representative module's 6 ports (SDI IN A/OUT A/IN B/OUT B + SFP C/D) is listed here — multiply by the number of installed modules (up to 8) for a specific real system. SDI grade (1.5G/3G/12G) is software-selectable per the datasheet; shown at the maximum (12G). No dedicated EVS \"XT-VIA hardware/technical reference manual\" with a formal connector table could be located publicly (unlike older XT/XT-3/XS models), so port labels come from OCR-quality reading of a marketing photo rather than an installation manual — some small/blurry module-number silkscreens (module 7 vs 8, exact XNet trademark text) could not be fully confirmed. Two connector types have no exact match in the allowed id list and were mapped to the closest available: the 15-pin D-sub AES/EBU audio breakout connectors (Digital Audio In/Out) were mapped to \"vga\" (closest D-sub shell, NOT actual VGA video), and the 25-pin D-sub GPI parallel contact-closure connector was mapped to \"rs232\" (closest D-sub control connector, NOT RS232 protocol). Rack height (6U) is derived from the datasheet's stated 270 mm case height. Manufacturer's general product page: https://evs.com/products/live-production-servers/xt-via.",
+  "ports": [
+    {
+      "name": "SDI IN A (video I/O module)",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "One of 6 BNCs on a hot-swap video I/O module; software-selectable 1.5G/3G/12G-SDI. Chassis has up to 8 identical module bays (this reference unit's photographed rear panel has 7 populated)."
+    },
+    {
+      "name": "SDI OUT A (video I/O module)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI IN B (video I/O module)",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI OUT B (video I/O module)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SFP C (video I/O module)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Hybrid IP alternative to SDI IN/OUT A on the same module; used for SMPTE ST2110/2022-6 video."
+    },
+    {
+      "name": "SFP D (video I/O module)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Hybrid IP alternative to SDI IN/OUT B."
+    },
+    {
+      "name": "Monitoring – Module 1",
+      "direction": "output",
+      "connector": "sdi",
+      "note": "Fixed monitor/preview BNC bus at top of rear panel, one tap per module bay (labeled MODULE 1-8 on the panel, present regardless of which bays are populated)."
+    },
+    {
+      "name": "Monitoring – Module 2",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 3",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 4",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 5",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 6",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 7",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "Monitoring – Module 8",
+      "direction": "output",
+      "connector": "sdi"
+    },
+    {
+      "name": "XNet-VIA A1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "EVS XNet-VIA 10Gbps Ethernet-IP media-sharing network, redundant A/B paths x2 ports each."
+    },
+    {
+      "name": "XNet-VIA A2",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "XNet-VIA B1",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "XNet-VIA B2",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "MADI I1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "MADI (AES10) over 75-ohm BNC coax, labeled MADI (AES3) on the panel."
+    },
+    {
+      "name": "MADI O1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "MADI I2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "MADI O2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Digital Audio In 1-8",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Physically a 15-pin D-sub breakout for 8 AES channel pairs; no exact D-sub-15 id exists in the palette, mapped to the closest (VGA/DE-15 shell) — NOT a video VGA port."
+    },
+    {
+      "name": "Digital Audio In 9-16",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Same connector type as Digital Audio In 1-8."
+    },
+    {
+      "name": "Digital Audio Out 1-8",
+      "direction": "output",
+      "connector": "vga",
+      "note": "15-pin D-sub AES output breakout; mapped to closest available id (see Digital Audio In note)."
+    },
+    {
+      "name": "Digital Audio Out 9-16",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Audio Monitoring Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Monitoring Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Monitoring Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Monitoring Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "RS422 Control 1",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "RS422 Control 2",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "RS422 Control 3",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "RS422 Control 4",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "RS422 Control 5",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "RS422 Control 6",
+      "direction": "bidirectional",
+      "connector": "rs422"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physically a 25-pin D-sub parallel contact-closure GPI interface, not RS232 serial; no DB25/GPI id exists in the palette so RS232 was chosen as the closest D-sub control connector."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "XNet IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Legacy EVS XNet media-sharing network, 3G-SDTI over BNC coax (per datasheet: EVS XNet (3G-SDTI))."
+    },
+    {
+      "name": "XNet OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "PC LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant 1G management LAN."
+    },
+    {
+      "name": "PC LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "EVS Link",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Console VGA",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Console Keyboard",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "Timecode In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "LTC timecode."
+    },
+    {
+      "name": "Timecode Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Ref Video In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog genlock/black-burst or tri-level reference."
+    },
+    {
+      "name": "Ref Video Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "1GbE-1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Companion port for the SFP+ IP-video network card."
+    },
+    {
+      "name": "1GbE-2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G Ethernet SFP+ for ST2110/2022-6/2022-7 IP video I/O, per datasheet IP I/O spec."
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp"
+    },
+    {
+      "name": "AC In 1 (PSU 1)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Hot-swap redundant PSU, universal 100-240VAC per rear nameplate (115-240VAC ±10%)."
+    },
+    {
+      "name": "AC In 2 (PSU 2)",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

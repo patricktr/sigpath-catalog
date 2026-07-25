@@ -1,0 +1,173 @@
+{
+  "manufacturer": "Pioneer DJ",
+  "model": "DJM-900NXS2",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://support.pioneerdj.com/hc/en-us/articles/4404624192665-How-to-use-your-Pioneer-DJ-DJM-900NXS2-mixer-Instruction-Manual",
+  "confidence": "medium",
+  "notes": "Desktop unit, not rack-mountable (333 W x 107.9 H x 414.2 D mm, 8.0 kg); rackUnits omitted. Power: AC 100-240V 50/60Hz, 60W (0.4W standby). Ports extracted directly from the manufacturer's Operating Instructions manual rear-panel/control-panel diagrams and part-name lists (pp.6-10). PHONO/LINE/DIGITAL/MASTER1/MASTER2/BOOTH/REC OUT/SEND/RETURN are each physically a stereo (L/R) pair of jacks represented here as one logical port per channel. Digital I/O (DIGITAL IN x4, DIGITAL MASTER OUT) uses coaxial RCA jacks carrying S/PDIF — no bandwidth grade applies to RCA per the connector-grade rules. AC inlet is a rear IEC-style receptacle; exact C13/C14 designation not printed in the manual, approximated as \"iec\". The two top-panel USB ports (labeled A/B, for connecting up to two computers) are USB Type-B, USB 2.0 per manual instructions (\"use USB cables that conform to USB 2.0\"). A third \"Mobile device connection terminal\" USB port (near SEND/RETURN) is documented only as accepting \"the cable supplied with the [mobile] device\" — its exact physical USB sub-type is not explicitly stated in the manual; approximated here as USB-A (common convention for this 2016-era product) and its speed grade is omitted since not stated. Four per-channel SIGNAL GND screw-terminal lugs (chassis ground for turntables) exist near the phono inputs but are omitted since \"ground lug\" is not one of the allowed connector types.",
+  "ports": [
+    {
+      "name": "PHONO 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH1 phono-level stereo (L/R) input for turntables; do not connect line-level sources."
+    },
+    {
+      "name": "LINE 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH1 line-level stereo (L/R) input."
+    },
+    {
+      "name": "PHONO 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH2 phono-level stereo (L/R) input for turntables."
+    },
+    {
+      "name": "LINE 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH2 line-level stereo (L/R) input."
+    },
+    {
+      "name": "PHONO 3",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH3 phono-level stereo (L/R) input for turntables."
+    },
+    {
+      "name": "LINE 3",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH3 line-level stereo (L/R) input."
+    },
+    {
+      "name": "PHONO 4",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH4 phono-level stereo (L/R) input for turntables."
+    },
+    {
+      "name": "LINE 4",
+      "direction": "input",
+      "connector": "rca",
+      "note": "CH4 line-level stereo (L/R) input."
+    },
+    {
+      "name": "DIGITAL IN CH1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital input, feeds channel 1."
+    },
+    {
+      "name": "DIGITAL IN CH2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital input, feeds channel 2."
+    },
+    {
+      "name": "DIGITAL IN CH3",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital input, feeds channel 3."
+    },
+    {
+      "name": "DIGITAL IN CH4",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital input, feeds channel 4."
+    },
+    {
+      "name": "MIC1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS balanced microphone input with dedicated LEVEL and EQ (HI/LOW) controls."
+    },
+    {
+      "name": "MIC2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS microphone input."
+    },
+    {
+      "name": "RETURN",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "1/4\" TS L(MONO)/R return input from an external effector for the SEND/RETURN loop; mono in feeds both channels when only L is connected."
+    },
+    {
+      "name": "MASTER1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR master output (L/R) to a power amplifier; primary master out."
+    },
+    {
+      "name": "MASTER2",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Unbalanced RCA master output (L/R), secondary to MASTER1."
+    },
+    {
+      "name": "DIGITAL MASTER OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital master output; carries master channel audio."
+    },
+    {
+      "name": "BOOTH",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS booth monitor output (L/R)."
+    },
+    {
+      "name": "REC OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Fixed-level unbalanced RCA output (L/R) for recording."
+    },
+    {
+      "name": "SEND",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "1/4\" TS L(MONO)/R send output to an external effector."
+    },
+    {
+      "name": "LINK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX Ethernet for PRO DJ LINK with compatible Pioneer DJ players/rekordbox computers."
+    },
+    {
+      "name": "USB A",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Top-panel USB port for direct connection to computer 1 (built-in USB audio interface)."
+    },
+    {
+      "name": "USB B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Top-panel USB port for direct connection to computer 2 (built-in USB audio interface)."
+    },
+    {
+      "name": "Mobile device connection terminal",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB port for connecting a compatible mobile device using its supplied cable (e.g. for RMX-1000 for iPad); exact physical sub-type not explicitly stated in the manual, approximated as USB-A."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains power inlet, AC 100-240V 50/60Hz, 60W (0.4W standby); use only the included power cord."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Somfy",
+  "model": "URTSI II Universal RTS Interface",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://service.somfy.com/downloads/nam_v5/urtsiii_spec_sheet.pdf",
+  "confidence": "high",
+  "notes": "Official Somfy Systems spec sheet (D-0004, item #1810872), fetched from service.somfy.com. Physical/functional ports covered: (1) RS232/RS485 combined input RJ45, (2) RS485 expansion RJ45 (for daisy-chaining up to 16 units / 256 RTS channels), (3) IR sensor input — actually an RJ9 4-pin modular jack per the spec sheet's own diagram, approximated here as \"rj45\" since RJ9 is not in the allowed connector list, (4) 3.5mm DC barrel power jack, 9V DC 200mA. No grade values apply to any port: the RJ45 jacks carry serial (RS232/RS485) or IR-adjacent signaling, not Ethernet, and no version/speed is stated. Two additional physical elements were intentionally omitted as they aren't signal/power I/O connectors in the given taxonomy: (a) a fixed/attached RTS radio antenna (433.42 MHz) with no matching connector id in the list, and (b) the front-panel Up/Stop/Down/Program pushbuttons and rotary address/channel dial, which are user controls, not I/O jacks. Device is a compact desktop/wall unit (3\"L x 4\"W x 1.75\"H), not rack-mountable, so rackUnits is omitted. An included accessory (DB9-to-RJ45 adapter) provides a standard male DB9 for RS232 wiring but is not itself a port on the chassis.",
+  "ports": [
+    {
+      "name": "RS232 or RS485 Input",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack carrying RS232 (TX/RX) or RS485 (Data+/Data-) serial control from a 3rd-party system, per included pinout diagram; not an Ethernet port."
+    },
+    {
+      "name": "RS485 Expansion",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack for daisy-chaining up to 16 URTSI IIs on RS485 with shared power; not an Ethernet port."
+    },
+    {
+      "name": "IR Sensor Input",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Spec sheet states this is an RJ9 (4P4C) modular jack for Somfy's IR Receiver accessory (#9015078), smaller than a full RJ45; RJ45 chosen as the closest available connector id in the list."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "3.5mm barrel jack for the included external power supply, 9V DC, 200mA."
+    }
+  ]
+}

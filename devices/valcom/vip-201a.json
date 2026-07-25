@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Valcom",
+  "model": "VIP-201A",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.valcom.com/vlc-product/pagepro-ip-sip-based-paging-server-1-zone-one-way-analog-paging-plus-8-zones-ip-paging/",
+  "confidence": "medium",
+  "notes": "Valcom VIP-201A (\"PagePro IP\") is a SIP-based paging server: 1 zone of one-way analog paging output plus up to 8 zones of IP paging. Manufacturer product page (valcom.com) confirmed dimensions (1.75\"H x 16.60\"W x 5.40\"D, 4.65 lbs), PoE 802.3af support, and 1 analog paging output; the manufacturer's own Installation/Technical Spec PDFs (valcom.com/valcom.co.uk) returned dynamic-page/403 errors when fetched directly, so detailed connector info was confirmed from a third-party mirror of Valcom's official Installation Manual and Technical Specification documents (manualslib.com/manual/2041516). No rackUnits set — despite a 1U-height (1.75\") chassis, the 16.6\" width and documentation give no confirmation of 19\" rack-mount ears; likely shelf/wall-mount. Ethernet port speed (10/100 vs Gigabit) is never stated in either the manufacturer page or the manual, so no eth-* grade was applied per instructions. \"Page Output\" and \"AUX Audio Out\" are physically fixed screw-terminal blocks on the rear panel (not pluggable Euroblock connectors); euroblock was used as the closest available connector id in the given list — same reasoning applied to the two Form C relay terminals (K1/K2). Category/type (audio / Encoder/Decoder) is a best-fit judgment call since the connector list offers no dedicated \"paging gateway\" type — the device functionally decodes/converts network SIP audio into analog paging output.",
+  "ports": [
+    {
+      "name": "Network (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 network/SIP connection; also carries Power over Ethernet, IEEE 802.3af Class 3. Cat 3 or better UTP. Ethernet link speed (10/100 vs Gigabit) not stated in documentation, so no bandwidth grade is set."
+    },
+    {
+      "name": "+24V DC Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Optional external DC power (non-PoE), 24VDC @ 325mA via rear panel barrel/2.5mm jack; used with optional Valcom VIP-324D power supply when PoE is not available."
+    },
+    {
+      "name": "AUX Audio In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Auxiliary analog audio input (e.g. background music/paging source), RCA jack, 8-600 ohm, -10dBm nominal."
+    },
+    {
+      "name": "Page Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Multi-pin screw terminal block feeding up to 40 Valcom one-way self-amplified speakers; carries AUDIO, CC PAGE (page-initiate), RING (night-ring) and +24VDC/speaker power conductors. Closest listed connector type to the fixed screw-terminal block actually used."
+    },
+    {
+      "name": "AUX Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Transformer-coupled line-level audio output terminal for driving 25V/70V central paging amplifiers, 50 ohm, -10dBm nominal. Screw terminal block (euroblock used as closest listed connector id)."
+    },
+    {
+      "name": "Relay K1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Programmable Form C dry-contact relay closure (COM/N.O./N.C. on a screw terminal block), 1A @ 24VDC; asserts during paging."
+    },
+    {
+      "name": "Relay K2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Second programmable Form C dry-contact relay closure, same terminal block/rating as Relay K1."
+    }
+  ]
+}

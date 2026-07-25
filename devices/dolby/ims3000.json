@@ -1,0 +1,135 @@
+{
+  "manufacturer": "Dolby",
+  "model": "IMS3000",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://professional.dolby.com/siteassets/products/dolby-imaging-solutions-for-media/ims3000/dolby_ims3000_product_sheet_2023.pdf",
+  "confidence": "medium",
+  "notes": "Source: official Dolby \"Dolby® Integrated Media Server IMS3000\" product sheet (Imaging – April 2022 edition; Model CID1002), hosted at professional.dolby.com. This is a rack-frame card/module (not a standalone chassis) — no standalone AC/DC power inlet is documented on the unit; it is powered via the host rack frame/backplane, and the sheet only states power consumption (<70 W), so no power port is listed. Model variants matter: IMS3000-NB adds dual 3G-SDI inputs and dual-projector Chase mode; IMS3000-DS omits SDI (single-projector only); IMS3-L-NB targets LED-wall cinema installs. eSATA has no matching connector id in the allowed list and was mapped to usb-a as the closest analog (flagged per-port). GPI/GPO/AES-3/Fader/Atmos-Connect ports are all physically RJ-45 jacks per the rear-panel photo but carry non-Ethernet signaling (contact closures, AES3 audio pairs, or AES67 audio-over-IP), not general Ethernet traffic — grades were only applied to the 3 plain GbE data ports. Rack unit height could not be confirmed from the sourced documentation, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "Eth 0",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear panel silkscreen groups jacks as \"ETH-0/1\" / \"ETH-2/3\"; spec states 3 x GB Ethernet 1000Base-T total"
+    },
+    {
+      "name": "Eth 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Eth 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "eSATA",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Actual port is eSATA 3 Gbps; eSATA is not in the allowed connector list so usb-a (closest data-port analog) was chosen — no grade applied since eSATA does not map onto the USB speed scale"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "SDI-A",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Dual 3G-SDI inputs are only present on the IMS3000-NB variant (enables dual-projector Chase mode); the IMS3000-DS variant omits SDI entirely"
+    },
+    {
+      "name": "SDI-B",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "See SDI-A note re. IMS3000-NB vs -DS variants"
+    },
+    {
+      "name": "HDMI-In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0, up to 4K60, HDCP 2.2, Rec.2020-to-P3 conversion, 4K downscale to 2K"
+    },
+    {
+      "name": "AES-3 Out (Ch 1-4)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Physical RJ-45 jack carrying AES-3 digital audio pairs (not Ethernet data); spec states 8 x AES-3 pairs across 2 x RJ-45 jacks"
+    },
+    {
+      "name": "AES-3 Out (Ch 5-8)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Second AES-3-over-RJ45 jack, same note as Ch 1-4"
+    },
+    {
+      "name": "Aux AES-3 Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "2 x AES-3 auxiliary output pairs; panel labels this area \"AUX AES / FADER\" — exact connector shape inferred from rear-panel photo"
+    },
+    {
+      "name": "Aux AES-3 In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "2 x AES-3 auxiliary input pairs, same physical area as Aux AES-3 Out"
+    },
+    {
+      "name": "Dolby Atmos Connect Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES67 audio-over-IP output with loopback monitoring; no Ethernet speed stated so grade omitted"
+    },
+    {
+      "name": "GPI (1-4)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "4 GPI contact-closure inputs multiplexed on a single RJ-45 jack"
+    },
+    {
+      "name": "GPO (1-6)",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "6 GPO contact-closure outputs multiplexed on a single RJ-45 jack"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Linear timecode output; exact connector shape not spelled out in text spec, inferred as a mini-jack from typical cinema-server practice and rear-panel photo — low-medium confidence"
+    },
+    {
+      "name": "Console Out",
+      "direction": "output",
+      "connector": "mini-dp",
+      "note": "Mini DisplayPort debug console output only (no UI/no video), so no DisplayPort grade is applicable"
+    },
+    {
+      "name": "Remote Fader Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "For optional CAT868 remote fader control panel"
+    }
+  ]
+}

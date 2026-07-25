@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Nevco",
+  "model": "MPCW-6",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.nevco.com/product/console-controller-model-mpcw6/",
+  "confidence": "medium",
+  "notes": "The MPCW-6 is a wireless/wired scoring console controller for driving Nevco scoreboards (baseball, basketball, football, etc.) -- not a conventional video/audio-signal device, so none of its ports are HDMI/SDI/etc. Physical I/O details came from the \"MPCW Product Spec\" PDF linked from the manufacturer product page (a generic spec sheet covering the whole wired/wireless MPCW line, not an MPCW-6-specific document; the product page itself left the dimensions field blank). Confirmed from that spec diagram: one external DC power-adapter input, two \"control cable outputs\" for wired operation, and two receptacles for an optional coiled-cord hand-held remote time switch (works from either receptacle). Exact connector part numbers/pin counts are not published -- the control-cable and handset jacks appear in the diagram as small round modular jacks with coiled telephone-style cords, so \"rj45\" was used as the closest available connector id in the taxonomy rather than a confirmed spec (no bandwidth grade applies; these are not Ethernet ports). The console also has a recessed power toggle switch and a physical \"MPCW system key\" (a keyed lock on a tether) for owner authentication -- neither is an electrical signal/power connector, so both were omitted from the port list. A separate companion \"MPCW Receiver\" box (its own power adapter, RF antenna, and \"output jacks to scoreboards\") is required to bridge the wireless signal to a scoreboard; that accessory's I/O was not included here since it is a distinct product from the MPCW-6 console itself. Unit is a tabletop console (11\" x 9.5\" x 4.125\", ~3.75 lb), not rack-mountable, so rackUnits was omitted.",
+  "ports": [
+    {
+      "name": "Power Adapter Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External wall-wart DC power adapter plugs into the console; exact barrel size not published in the spec sheet."
+    },
+    {
+      "name": "Control Cable Output 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "One of two 'control cable outputs' used for wired scoreboard operation (can run simultaneously with wireless). Spec diagram shows a small round modular jack with a coiled cord, not a true Ethernet port -- rj45 is the closest taxonomy match, not a confirmed connector part number."
+    },
+    {
+      "name": "Control Cable Output 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second of two wired control-cable outputs; same connector-type caveat as Control Cable Output 1."
+    },
+    {
+      "name": "Hand-Held Switch Receptacle 1",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Receptacle for the optional coiled-cord hand-held remote time switch ('will operate from either receptacle'). Modular phone-jack-style connector approximated as rj45; not a network port."
+    },
+    {
+      "name": "Hand-Held Switch Receptacle 2",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Second receptacle for the hand-held remote switch; same connector-type caveat."
+    }
+  ]
+}

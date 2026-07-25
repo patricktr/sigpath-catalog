@@ -1,0 +1,117 @@
+{
+  "manufacturer": "GatesAir",
+  "model": "Intraplex IP Link 100n",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.gatesair.com/documents/products/intraplex-ip-link-100n-jd-06112024.pdf",
+  "confidence": "high",
+  "notes": "Sourced from GatesAir's official datasheet for the Intraplex IP Link 100n (1RU rack-mount model), the current flagship of the \"IP Link 100\" family — GatesAir also sells an IP Link 100c (portable half-rack chassis) and IP Link 100e (modular plug-in card for Flexiva transmitters), which have different physical I/O than what's listed here; if the user meant one of those, ports would differ. Rear-panel photo and connector table cross-checked and consistent. Ethernet grade (eth-1g) confirmed explicitly (10/100/1000 Base-T). USB-A port speed not stated, so grade omitted. The 26-pin D-sub \"EXTERNAL I/O\" (contact closures) and the 1PPS BNC have no exact id in the allowed connector list / were not visibly labeled in the rear-panel photo (only inferred from the spec table text) — flagged individually above. An optional GPS receiver plug-in kit adds an SMA antenna connector; omitted here since it's a non-standard add-on and SMA isn't in the allowed connector list.",
+  "ports": [
+    {
+      "name": "AC INPUT",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 100-240VAC 50/60Hz, T2A 250V fuse"
+    },
+    {
+      "name": "DC power (screw terminal)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Backup DC power, two-pin screw terminal; +12VDC 2A external or internal -48VDC"
+    },
+    {
+      "name": "10MHz",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External 10MHz reference clock input for GPS/timing sync"
+    },
+    {
+      "name": "1PPS",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External 1 pulse-per-second GPS timing input; datasheet lists this alongside the 10MHz BNC though only 10MHz is visible labeled in the rear-panel photo"
+    },
+    {
+      "name": "SERIAL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "RS-232 aux data, D-sub 9-pin male, programmable 2400-19200 bps"
+    },
+    {
+      "name": "EXTERNAL I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Contact closures (4 in / 4 out, opto-isolated), physically a D-sub 26-pin female connector — no exact match in the connector list, rs232 chosen as the closest D-sub-family id; this is NOT an RS-232 serial port"
+    },
+    {
+      "name": "WAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "WAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB Type A host port for playlist backup/audio playout; speed not stated in datasheet"
+    },
+    {
+      "name": "AES IN 1",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "XLR3 connector carrying digital AES/EBU (AES3) audio"
+    },
+    {
+      "name": "L IN 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "R IN 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES OUT 1",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "XLR3 connector carrying digital AES/EBU (AES3) audio"
+    },
+    {
+      "name": "L OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "R OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "ETHERNET (front panel)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front-panel management/streaming Ethernet port"
+    },
+    {
+      "name": "AUDIO (front panel headphone)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4 inch stereo headphone jack"
+    }
+  ]
+}

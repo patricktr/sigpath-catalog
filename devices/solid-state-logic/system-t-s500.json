@@ -1,0 +1,151 @@
+{
+  "manufacturer": "Solid State Logic",
+  "model": "System T S500",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://livehelp.solidstatelogic.com/Docs/InstallInfo.pdf",
+  "confidence": "medium",
+  "notes": "The System T S500 is a modular broadcast audio mixing control surface (not a rack-mount unit), so rackUnits is omitted. Physical I/O extracted from SSL's official \"System T Installation Guide\" (Part no. 82BL5G01N, hosted at livehelp.solidstatelogic.com), which is the only source found with a full connector-level breakdown — SSL's own product page (solidstatelogic.com/products/s500) and retailer listings (Vintage King) describe the modular tile/frame architecture but omit connector specifics. The S500 audio signal path itself carries no direct analog/digital audio I/O of its own (audio arrives via Dante from separate Network I/O stageboxes such as SB 8.8, SB 32.24, MADI Bridge, etc., which are sold as distinct products) — the console's own physical ports are network (OCP/Dante/Studio Integration/Remote Surface, all Gigabit Ethernet per SSL's system-wide Gigabit requirement, though the individual console port speed is not separately re-stated), USB/HDMI for its internal KVM and service/sidecar connections, GPIO via 25-way D-type connectors, one passive talkback XLR mic input, and redundant IEC mains. Two connector-panel variants exist (single- vs twin-touchscreen); the Overview HDMI output only appears on the single-touchscreen variant, noted on that port. Grades applied only to RJ45/USB/HDMI ports whose speed/version is explicitly documented; the GPI/GPO D-type connectors have no matching enum value (25-pin D-sub), so \"rs232\" was used as the closest available id and flagged in each port's note — this is not an actual RS232 serial connection.",
+  "ports": [
+    {
+      "name": "OCP Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "SSL control network (Open Control Protocol) link to Tempest Engine/Network I/O switches"
+    },
+    {
+      "name": "OCP Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant OCP control network link"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant Dante network link"
+    },
+    {
+      "name": "Talkback Mic",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Male XLR talkback mic input; passive pass-through to rear panel, no on-board electronics"
+    },
+    {
+      "name": "Studio Integration",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Port for production automation and DAW control"
+    },
+    {
+      "name": "Overview Screen HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "1920x1080 output for external overview screen; present only on single-touchscreen surface connector panel variant"
+    },
+    {
+      "name": "Console CPU Service",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Service connection to main console CPU"
+    },
+    {
+      "name": "Meter Bridge CPU Service",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Present only when optional meter bridge processor is fitted"
+    },
+    {
+      "name": "Sidecar Extension Tile 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "Sidecar Extension Tile 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "25-way male D-type carrying 12 GPI (general purpose input) circuits; DB25 D-sub is the closest listed connector type, not an RS232 serial link"
+    },
+    {
+      "name": "GPO",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "25-way female D-type carrying 12 GPO (general purpose output) circuits; DB25 D-sub is the closest listed connector type, not an RS232 serial link"
+    },
+    {
+      "name": "KVM HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Feeds internal KVM switch for console touchscreens"
+    },
+    {
+      "name": "KVM HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Feeds internal KVM switch for console touchscreens"
+    },
+    {
+      "name": "KVM HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Feeds internal KVM switch; input only, no KVM control on this input"
+    },
+    {
+      "name": "KVM Pointer USB-B 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Touchscreen KVM pointer output; max 3m for passive cables"
+    },
+    {
+      "name": "KVM Pointer USB-B 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Touchscreen KVM pointer output; max 3m for passive cables"
+    },
+    {
+      "name": "KVM Keyboard/Mouse USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "External keyboard/mouse for KVM"
+    },
+    {
+      "name": "KVM Keyboard/Mouse USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "External keyboard/mouse for KVM"
+    },
+    {
+      "name": "Additional Remote Surface",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant surface PSU input; PSUs rated 600W max, 50/60Hz, 100-240VAC, 6.0-3.0A"
+    },
+    {
+      "name": "AC In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant surface PSU input; PSUs rated 600W max, 50/60Hz, 100-240VAC, 6.0-3.0A"
+    }
+  ]
+}

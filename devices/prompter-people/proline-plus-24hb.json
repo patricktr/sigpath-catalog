@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Prompter People",
+  "model": "ProLine Plus 24HB",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://prompterpeople.com/proline-plus-widescreen-16-9-talent-monitor-teleprompter-series/",
+  "confidence": "medium",
+  "notes": "The \"24HB\" model (24\" screen, 1000-NIT High-Bright variant, part number PROP-24HB) is a monitor in Prompter People's ProLine Plus talent-monitor/prompter line. A dedicated per-model spec page for \"24HB\" alone was not found; port data comes from the manufacturer's ProLine Plus widescreen series page, which states the same connector set is identical across all screen sizes (13.3\"-24\") and across both standard (400 NIT) and High-Bright (1000 NIT) variants: \"3G-SDI in | 3G-SDI out | HDMI in | VGA | Composite\" plus \"4-Pin XLR Locking Power Side Input.\" Cross-checked against Markertek's listing for the companion kit PROP-24HB-24TM, which independently confirms \"3G-SDI, HDMI, composite, and VGA inputs\" and \"XLR power supply included.\" Composite video is carried on a BNC connector per the manufacturer page's connector shorthand (\"...VGA | BNC...\"). Power connector is a locking 4-pin XLR carrying DC from an included external AC adapter (battery-operable), mapped to xlr4-dc per the DC-power convention, not the xlr4 audio convention. No HDMI/SDI cable-length or exact resolution/version (e.g. 1080p vs 4K, HDMI 1.4 vs 2.0) was stated, so no grade is set for the HDMI port. Unit is tripod/stand-mounted, not rack-mountable, so rackUnits is omitted. No USB/RS-232/network control port was documented on the monitor itself (the bundled TeleScroll/Flip-Q prompting software runs on an external PC/Mac, not the monitor).",
+  "ports": [
+    {
+      "name": "3G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VGA In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Composite In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "DC Power In (4-Pin XLR Locking)",
+      "direction": "input",
+      "connector": "xlr4-dc"
+    }
+  ]
+}

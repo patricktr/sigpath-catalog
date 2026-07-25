@@ -1,0 +1,117 @@
+{
+  "manufacturer": "Cisco",
+  "model": "IE-2000-8TC-G-L",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.manualslib.com/manual/1180521/Cisco-Ie-2000.html",
+  "confidence": "medium",
+  "notes": "IE-2000-8TC-G-L is a compact, non-PoE, DIN-rail-mounted industrial Ethernet switch (LAN Lite image, \"-L\" suffix; part of the Cisco IE 2000 series). Chassis: ~5.1\"H x 3.6\"W x 4.51\"D (short chassis), with DIN-rail mount standard and optional wall-mount kit (WALLMOUNT-IE2K-08=) — not rack-mountable, so rackUnits omitted. Physical I/O confirmed: 8x 10/100BASE-T RJ-45 downlinks + 2x dual-purpose Gigabit uplinks (RJ-45/SFP combo), RJ-45 serial console (rear) + 5-pin mini-USB Type-B console (front, functionally identical alt. path), redundant DC power in via terminal block (labeled DC-A/DC-B, accepting 24VDC or 48/-48VDC per Cisco's own Hardware Installation Guide), and a 6-pin alarm terminal block (2 inputs + 1 relay output). Also has an optional removable 1GB SD flash card slot (not modeled — storage media, not a signal/power port). Cisco's own product/data-sheet pages (cisco.com) returned HTTP 403 to automated fetch, so this was sourced from a mirror of Cisco's official IE 2000 Hardware Installation Guide (manualslib.com) plus cross-checks against reseller spec pages (itprice.com, networkdevicesinc.com, gntme.com) which agreed on port counts, alarm pinout, and console details. Not independently confirmed: precise continuous DC input voltage range (spec sheets state nominal 24V/48V/-48V rather than a min-max range), and whether the console RJ-45 is officially graded/labeled differently on the silkscreen. USB console connector mapped to \"usb-micro\" as the closest list id even though the actual connector is USB Mini-B, not Micro-B — flagged in that port's note.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100BASE-T downlink port, front panel."
+    },
+    {
+      "name": "GE1 (Uplink)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g",
+      "note": "Dual-purpose Gigabit uplink: auto-detecting 10/100/1000BASE-T copper (RJ-45) or 100/1000BASE-X SFP module slot; only one media type active at a time."
+    },
+    {
+      "name": "GE2 (Uplink)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "accepts": [
+        "sfp"
+      ],
+      "grade": "eth-1g",
+      "note": "Dual-purpose Gigabit uplink: auto-detecting 10/100/1000BASE-T copper (RJ-45) or 100/1000BASE-X SFP module slot; only one media type active at a time."
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 RS-232 async serial console/rollover port on the rear panel. Physically RJ-45 but carries a serial console signal, not Ethernet (no grade applies)."
+    },
+    {
+      "name": "USB Console",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "5-pin mini-Type-B USB console port on the front panel (mirrors the RJ-45 console; only one active at a time). Modeled as usb-micro as the closest available connector id — physically a USB Mini-B, not Micro-B."
+    },
+    {
+      "name": "DC-A (Power Input)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Primary DC power input on the removable power/alarm terminal block. Nominal 24 VDC or 48/-48 VDC input per Cisco's installation guide; exact continuous voltage range not confirmed from this source."
+    },
+    {
+      "name": "DC-B (Power Input)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Redundant/secondary DC power input on the same terminal block as DC-A, for dual-feed redundancy."
+    },
+    {
+      "name": "Alarm I/O (IN1/IN2/NO/NC/COM/REF)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "6-position terminal block: two dry-contact alarm inputs (IN1, IN2, REF) and one alarm output relay (NO/NC/COM). Closest connector id to the actual pluggable screw-terminal block; not a power connector."
+    }
+  ]
+}

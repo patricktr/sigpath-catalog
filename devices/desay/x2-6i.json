@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Desay",
+  "model": "X2.6i",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "http://web.archive.org/web/20180802091835/http://www.desayopto.com:80/P_85.html",
+  "confidence": "low",
+  "notes": "The Desay X2.6i is a 2.6mm-pixel-pitch indoor rental LED video-wall cabinet (500×500mm tile), not a device with conventional single-purpose AV ports — it is powered and fed video data as part of a daisy-chained cabinet array. Confirmed physical/electrical specs (from Desay's own archived product page, since the live desayopto.com/P_85.html now 404s and the current desayopto.com blocks automated fetches): pixel pitch 2.6mm, resolution 172×172 (per Desay's own page) or 192×192 (per most resellers/older datasheet — sources disagree, possibly reflecting a running-change between panel revisions), brightness >1500 nits, refresh ≥3000Hz, weight ~9–10.5kg (varies slightly by source/revision), panel size 500×500mm with depth ranging 72–100mm across sources (again likely a revision difference), IP65/65 front/rear (Desay's own page) vs. IP44 (DB Pixel House reseller sheet) vs. IP41/43 (firstSpot reseller sheet) — ratings are inconsistent across sources/regions/dates, so treat with caution. Input voltage 100–240V, 50/60Hz; max power draw ~150–190W per panel depending on source. Data interconnect is Gigabit-Ethernet-based per a secondary reseller spec table (ecprostore.com), consistent with industry-standard RJ45/etherCON loop-through used on comparable rental LED tiles, but no source I could access showed an actual rear-panel photo or manual confirming the exact physical connector (plain RJ45, locking etherCON, or a proprietary quick-connect) for either data or power. Because of this connector-level uncertainty and the discrepancies between sources on IP rating/depth/resolution, overall confidence is low. Corroborating sources reviewed: DB Pixel House spec PDF (https://www.dbpixelhouse.com/content/uploads/2025/03/Desay-X-Series-2.6mm-LED.pdf), ecprostore.com product listing (https://ecprostore.com/products/desay-x1-9i-indoor-led-panel), firstSpot tech-spec PDF, and AVHireShop/YSLV dry-hire listings. rackUnits omitted — this is a wall/flown modular tile, not rack-mounted equipment.",
+  "ports": [
+    {
+      "name": "Data In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Loop-through data input for daisy-chaining cabinets; exact connector (plain RJ45 vs. locking etherCON) not confirmed by manufacturer spec sheet — inferred from a secondary Desay X-series listing describing a 'Gigabit Ethernet Transceiver' data interconnect, which is standard for this class of rental LED tile."
+    },
+    {
+      "name": "Data Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Loop-through data output to next cabinet in the chain; same caveats as Data In."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "AC power input, rated 100–240V 50/60Hz (per Desay X-series spec). Exact physical connector not confirmed by any source reviewed — powerCON (or powerCON TRUE1) is the de-facto industry standard for AC loop-through on rental LED cabinets of this type and is used here as the closest inferred match; could instead be a proprietary blade/pogo-pin connector."
+    },
+    {
+      "name": "Power Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "AC power loop-through output to the next cabinet. Same connector-type caveat as Power In."
+    }
+  ]
+}

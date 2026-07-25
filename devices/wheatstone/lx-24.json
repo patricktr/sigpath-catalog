@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Wheatstone",
+  "model": "LX-24",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.av-iq.com/avcat/ctl1642/index.cfm?manufacturer=wheatstone-corporation&product=lx-24",
+  "confidence": "medium",
+  "notes": "The LX-24 is a modular WheatNet-IP control surface (radio broadcast console), not a standalone audio interface: its own frame carries essentially no local analog/AES/GPIO audio I/O — all program, mic, and monitor audio is delivered over the WheatNet-IP Ethernet network from separate BLADE I/O units (the console ships with an IP88E Mix Engine BLADE for mix functionality). The only true physical connectors on the console frame itself are Ethernet (network), VGA (setup monitor), USB (mouse), a headphone-bracket connector, and two redundant power inputs. Desktop/tabletop unit — no rack-mount form factor, so rackUnits is omitted. Connector data is drawn from a specification aggregator (AV-IQ) and corroborated by a BSW USA/Wheatstone technical-manual excerpt found via search ('Monitor Connector: VGA DB-15', 'Ethernet: RJ-45', 'Headphone: 3-pin... remote headphone jack bracket', 'Power: Two 2-pin high power d-sub for redundant power supplies', and separately 'two 2-pin \"D-SUB 2V2\" style connectors'). I was unable to directly retrieve Wheatstone's own PDF technical manual (support.wheatstone.com/wp-content/uploads/2024/06/LX24-MANUALw-3.pdf repeatedly failed to fetch/timed out) or a manufacturer product/spec page (wheatstone.com pages 403'd) to cross-verify the rear-panel diagram firsthand, so confidence is medium rather than high. The headphone connector (proprietary 3-pin bracket cable) and the power connector (2-pin high-power D-sub) do not have exact matches in the allowed connector-id list; both were mapped to the closest available id (trs-6.35 and dc-barrel respectively) with the discrepancy flagged in each port's note. Ethernet link speed (eth-1g) is inferred from Wheatstone's general WheatNet-IP gigabit-ethernet marketing claim rather than an LX-24-specific NIC spec.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "WheatNet-IP network connection carrying all console audio, control, and BLADE traffic; console frame has no local analog/AES audio ports — those live on separate WheatNet-IP BLADE I/O units elsewhere on the network. Gigabit speed inferred from Wheatstone's stated 'gigabit ethernet architecture throughout the entire network' (stated at the BLADE level, not itemized specifically for the LX-24 NIC)."
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "vga",
+      "note": "VGA DB-15 connector for an external monitor used for console configuration/GUI, not program video."
+    },
+    {
+      "name": "USB (Mouse)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "On-board USB-mouse connector for console configuration; USB generation/speed not stated in the source."
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Source lists this as a '3-pin (for use with supplied remote headphone jack bracket)' connector — a proprietary 3-pin header feeding a separate headphone jack bracket, not a standard on-panel 1/4in jack. Mapped to trs-6.35 as the closest listed connector id; actual physical connector differs."
+    },
+    {
+      "name": "Power In A",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Source specifies 'Two 2-pin high power d-sub for redundant power supplies' (D-SUB 2V2 style). No listed connector id matches a 2-pin high-current D-sub; dc-barrel chosen as closest functional analog (external DC power feed). One of two redundant PSU inputs."
+    },
+    {
+      "name": "Power In B",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Second of two redundant 2-pin high-power D-sub (D-SUB 2V2 style) power inputs; see Power In A note on connector-id mapping."
+    }
+  ]
+}

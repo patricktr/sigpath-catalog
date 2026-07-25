@@ -1,0 +1,76 @@
+{
+  "manufacturer": "Grass Valley",
+  "model": "iTX Playout Appliance 2 (GVSP-3TB-WIN-2IO)",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.manualslib.com/manual/1990451/Belden-Grass-Valley-Itx-Playout-Appliance-2.html",
+  "confidence": "medium",
+  "notes": "Researched via the OEM \"iTX Playout Appliance 2 Installation and Service Manual\" (Belden/Grass Valley), hosted on ManualsLib after grassvalley.com's own documentation server (wwwapps.grassvalley.com) returned HTTP 403 to automated fetches. iTX is really a playout-automation software platform; the physical device cataloged here is Grass Valley's dedicated hardware appliance for running it, the \"iTX Playout Appliance 2,\" a 1RU rackmount server (437mm W x 27.8mm H x 706mm D; dual 6-core Xeon E5-2620v3, 64GB RAM, GPU: NVIDIA Quadro K2200 on GPU-equipped variants). Ports listed are for the base/entry variant GVSP-3TB-WIN-2IO (1x AJA Corvid LP card, 2 SDI I/Os on BNC, labeled SDI OUT / SDI IN / REF IN — described in the manual as \"quite straightforward\" since connectors are directly labeled). Three other hardware variants exist and are NOT reflected in the port list above: GVSP-3TB-WIN-2+2IO (2x Corvid LP cards = 4 SDI I/Os on BNC, no GPU, VGA instead of DVI), GVSP-3TB-WIN-4IO (1x AJA Corvid 44, up to 4 SDI I/Os on DIN 1.0/2.3 mini-BNC connectors rather than full BNC), and GVSP-3TB-WIN-8IO (1x AJA Corvid 88, up to 8 SDI I/Os on DIN 1.0/2.3). SDI grade (3G-SDI) was inferred from the AJA Corvid LP card family's published specs, not stated verbatim in the Grass Valley manual, so treat it as medium-confidence; this is consistent with the appliance supporting \"4K Single channel\" playout via 4x quad-link HD/3G-SDI. Ethernet (LAN1/LAN2) speed is not stated in the reviewed manual pages, so grade was omitted rather than guessed. Power inlet connector was described only as \"power supply sockets\" for AC cords on the dual redundant 750W hot-swap PSU modules (100-240V 50/60Hz) — assumed standard IEC (C13/C14 family) but not explicitly confirmed. USB 3.0 port placement (front bezel vs rear panel) is described inconsistently between two sections of the same manual (front-panel section says 2x USB 3.0 behind the bezel; the cabling/installation section separately instructs connecting a KVM cable and the iTX license dongle into \"rear USB 3.0 ports\"), so both are listed with notes flagging the ambiguity — could not visually confirm the rear-panel diagram (page 18 figures) due to the browser tool losing the rendered manual image mid-session.",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "AJA Corvid LP SDI I/O card; grade inferred from the AJA Corvid LP card family (3G-SDI), not explicitly stated in the GV manual"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "AJA Corvid LP SDI I/O card; grade inferred from the AJA Corvid LP card family (3G-SDI), not explicitly stated in the GV manual"
+    },
+    {
+      "name": "REF IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock/reference input, BNC, labeled REF IN"
+    },
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Primary network connection; speed not stated in reviewed manual excerpts"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Secondary network connection; speed not stated in reviewed manual excerpts"
+    },
+    {
+      "name": "USB 3.0 (front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "x2 ports behind the removable front bezel"
+    },
+    {
+      "name": "USB 3.0 (rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "x2 ports referenced in cabling instructions for KVM mouse/keyboard and the iTX license dongle; manual text is somewhat inconsistent about front vs rear placement of USB ports"
+    },
+    {
+      "name": "DVI (graphics)",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "NVIDIA Quadro K2200 graphics output for local console/KVM monitor (DVI-to-VGA adapter included). Not present on the GVSP-3TB-WIN-2+2IO variant, which has no GPU and uses a VGA port instead"
+    },
+    {
+      "name": "AC Power In A",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant hot-swap 750W PSU modules, 100-240V 50/60Hz auto-ranging. Manual only describes 'power supply sockets' for the AC cords; exact IEC connector variant (C13/C14) not explicitly stated"
+    },
+    {
+      "name": "AC Power In B",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second of two redundant hot-swap 750W PSU modules, 100-240V 50/60Hz auto-ranging. Manual only describes 'power supply sockets' for the AC cords; exact IEC connector variant (C13/C14) not explicitly stated"
+    }
+  ]
+}

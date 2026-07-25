@@ -1,0 +1,158 @@
+{
+  "manufacturer": "Zaxcom",
+  "model": "Nomad 12",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://zaxcom.com/wp-content/uploads/2018/10/Zaxcom_Nomad_Manual_October_2018.pdf",
+  "confidence": "high",
+  "notes": "Source: official Zaxcom Nomad User's Manual (published October 2018, software v8.01), hosted at zaxcom.com — covers the shared Nomad 8/10/12 chassis; items called out in the manual as \"Nomad 8 and 12 only\" (USB port, external USB storage/keyboard) are included since they apply to the 12. Several real connectors have no exact match in the allowed connector-id list, so the closest id was substituted and flagged in each port's note: TA-5 mini-XLR outputs/returns -> xlr5; the Hirose-4 power inlet -> xlr4-dc; the mini DB-15 (DE-15) AES3 digital I/O connector -> vga (same DE-15 shell, used here for audio not video); the SMA-female ZaxNet RF/antenna connector -> bnc. The single mini-DB15 AES connector carries 4 AES input pairs (one being AES42) and 3 AES output pairs simultaneously, modeled as one bidirectional port. No bandwidth grade applies to any port except the USB host port (explicitly spec'd as USB 2.0); all other connectors (XLR, TA5, TRS, BNC timecode, AES, Hirose power, RF antenna) are ungraded per the connector-type rules. CompactFlash card slots (primary + mirror) were omitted as storage media slots rather than signal/power connectors.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Out 1/2",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "Physical connector is TA-5M (mini-XLR 5-pin), closest listed id used; carries output buses 1 and 2."
+    },
+    {
+      "name": "Out 3/4",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "TA-5M; carries output buses 3 and 4."
+    },
+    {
+      "name": "Out 5/6",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "TA-5M; carries output buses 5 and 6."
+    },
+    {
+      "name": "Ret 1/2",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "TA-5 camera-return/line-level input pair (also usable as line inputs 7-8)."
+    },
+    {
+      "name": "Ret 3/4",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "TA-5 camera-return/line-level input pair (also usable as line inputs 9-10)."
+    },
+    {
+      "name": "Hph1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Hph2",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Mono",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Tape",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Slate",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "External slate/com microphone input, 5V-biased balanced/unbalanced."
+    },
+    {
+      "name": "AES In/Out",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Physically a mini DB-15 (DE-15) connector carrying AES3 digital audio, not video; 4 AES input pairs (incl. 1 AES42 pair) + 3 AES output pairs share this single connector."
+    },
+    {
+      "name": "TC Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "TC In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Physical connector is a 4-pin Hirose (not XLR-shelled); accepts 10-18 VDC external power. xlr4-dc used as closest listed 4-pin locking DC connector id."
+    },
+    {
+      "name": "ZaxNet",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Actual connector is SMA-female (2.4-2.475 GHz ZaxNet RF antenna, transmit or receive); no SMA id exists in the allowed list, BNC used as closest RF coax substitute."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A shaped but wired as Zaxcom-proprietary RS-422 serial, not USB data; used to connect Zaxcom Oasis, FP8 fader panel, Mix-8 control panel, or GPI Remote Roll switch via adapter cables."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Nomad 8 and 12 only. Used for recording to USB drives or attaching a USB keyboard."
+    }
+  ]
+}

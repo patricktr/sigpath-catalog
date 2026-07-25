@@ -1,0 +1,137 @@
+{
+  "manufacturer": "Brainstorm Electronics",
+  "model": "DCD-8",
+  "category": "audio",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://brainstormtime.com/wp-content/uploads/2021/01/um_dcd8_231.pdf",
+  "confidence": "high",
+  "notes": "Sourced directly from the manufacturer's official Owner's Manual (v2.31, May 2011), Chapter 2 \"I/O's Description and Cable Requirements\" and rear/front panel diagrams — this is the most authoritative available spec source; the manufacturer's product page for this now-discontinued/legacy item (brainstormtime.com/support/legacy/) does not host a separate detailed spec sheet, so the manual was used directly. No grade field applies to any port: the DCD-8's connectors are all audio/word-clock/video-reference/DC-power types, none of which fall on the SDI/HDMI/DisplayPort/USB/Ethernet bandwidth scales the schema grades. Two optional expansion cards exist but are not counted as standard I/O since they require separate purchase/installation: the VSG-4 Video Sync Generator (adds HD/SD video sync outputs) and the CX-4 Word Clock Expansion card (adds 4 more BNC word-clock outputs, pairs 9&10 and 11&12). The FireWire (IEEE 1394, 6-pin) port has no exact match in the allowed connector list; usb-b was chosen as the closest physical analog and grade was omitted since FireQire 400's 400Mbit/s spec doesn't map to the given usb-x grade scale. The chassis DC power input is a proprietary multi-pin connector fed from an external universal AC-DC brick (100-240VAC, 12VDC@25W out); dc-barrel was used as the closest listed connector id. Rear-panel AES/EBU XLR I/O and Word Clock BNC I/O are unlabeled with individual numbers on the panel itself but are referred to as AES1/AES2 and WC1/WC2 etc. throughout the front-panel menu system, which was used for naming. The unit also has a 3rd Word Clock input and 3rd (unbalanced AES3id) AES/EBU input on the front panel, in addition to the 2 of each on the rear.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by an external universal 100-240VAC/50-60Hz supply (12VDC @ 25W) via a proprietary multi-pin DIN-style DC connector on the chassis; dc-barrel is the closest listed connector type. The external brick itself has an IEC power inlet for its AC cord."
+    },
+    {
+      "name": "FireWire (1394)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "IEEE 1394 FireWire 400, 6-pin connector; not in the provided connector list, usb-b chosen as closest physical analog. Used for 8-channel bidirectional digital audio I/O and firmware updates."
+    },
+    {
+      "name": "Optical In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "Optical Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "AES/EBU In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Video Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Accepts NTSC/PAL/HD analog video reference; unterminated."
+    },
+    {
+      "name": "Video Ref Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of Video Ref In; must be 75-ohm terminated if the DCD-8 is last in chain."
+    },
+    {
+      "name": "Word Clock In 1",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock In 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 5",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 6",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 7",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out 8",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock In 3 (front panel)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU In 3 (front panel)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Unbalanced AES3id input on front-panel BNC; shares circuitry with the rear Optical I/O and is disconnected when Optical I/O is set to S/PDIF Optical mode."
+    }
+  ]
+}

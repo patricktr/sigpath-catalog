@@ -1,0 +1,119 @@
+{
+  "manufacturer": "Denon DJ",
+  "model": "X1850 Prime",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.denondj.com/x1850%20prime-x1850primexus.html",
+  "confidence": "high",
+  "notes": "Professional 4-channel club DJ mixer (desktop/tabletop unit, not rack-mountable — rackUnits omitted). Port list compiled from Denon's official spec page (denondj.com) cross-referenced with the official X1850 Prime User Guide (cdn.inmusicbrands.com) rear/front panel descriptions. Master RCA and Record RCA outputs, and the 8 Phono/Line RCA input pairs, are each represented as one stereo L/R pair per logical port (consistent with how the manufacturer groups them) rather than as individual left/right jacks. \"Digital In\" (x4, one per channel) and \"Digital Link In\" (x1) are S/PDIF-style coaxial RCA; no version/rate grade is stated for these so grade is omitted (only Digital Out's format is specified as 24-bit/96kHz but that is not a connector \"grade\" tier in the given scale, so omitted per instructions). USB Port 1/2 connector type (USB-B) is inferred from industry-standard practice for this mixer class (matches sibling X1800 Prime and Pioneer DJM equivalents) — not explicitly confirmed in the sources fetched, so treat with medium confidence for that specific detail. Ethernet Link ports are proprietary \"LAN hub\" RJ45-style ports for StagelinQ/Denon media player networking (not general-purpose gigabit LAN) — no speed grade stated by manufacturer, so grade omitted. Send/Return (Receive) 1/4\" TRS pair is an effects loop, not power.",
+  "ports": [
+    {
+      "name": "Master Out (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Master Out (RCA)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Record Out (RCA)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Booth Out",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Send",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Digital Out",
+      "direction": "output",
+      "connector": "rca",
+      "note": "Coaxial S/PDIF digital audio output"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Phono/Line In (Ch 1-4)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "8 RCA pairs total: 4 line + 4 phono, one pair each per channel"
+    },
+    {
+      "name": "Mic 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR + 1/4\" TRS input"
+    },
+    {
+      "name": "Mic 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "FX send/return loop input"
+    },
+    {
+      "name": "Digital In (Ch 1-4)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "4 coaxial S/PDIF digital channel inputs"
+    },
+    {
+      "name": "Digital Link In",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Coaxial digital link input"
+    },
+    {
+      "name": "Link Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "5 proprietary LAN-hub ports for StagelinQ/SC media-player networking; no published speed grade"
+    },
+    {
+      "name": "USB Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connector type inferred (not explicitly stated in sources); class-compliant 24-bit/96kHz USB audio interface"
+    },
+    {
+      "name": "USB Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connector type inferred (not explicitly stated in sources); class-compliant 24-bit/96kHz USB audio interface"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC power inlet, 100-240V~ 50/60Hz, 65W"
+    }
+  ]
+}

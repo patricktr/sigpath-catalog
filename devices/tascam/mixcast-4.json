@@ -1,0 +1,132 @@
+{
+  "manufacturer": "TASCAM",
+  "model": "Mixcast 4",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://tascam.com/us/product/mixcast_4/spec",
+  "confidence": "high",
+  "notes": "Desktop podcast production station (not rack-mountable; ~375x56.5x264mm). Source: TASCAM official US product spec page (SPECS tab at tascam.com/us/product/mixcast_4). No video I/O (HDMI/etc.) despite the built-in 5\" touchscreen — it is audio-only. Port names taken verbatim from the manufacturer spec table headers. \"Phones (TRRS) 1\" is a single 3.5mm 4-pole jack that the spec sheet documents on both the input-ratings table (mic-in leg, for a phone headset mic) and output-ratings table (\"splits from PHONES 1 output\"); modeled here as bidirectional. \"Line In (TRRS)\" and \"Line Out (TRRS)\" are two distinct 3.5mm 4-pole CTIA jacks (input table vs. output table) used for phone call-in send/return — could not visually confirm rear-panel silkscreen labels (retailer photos were inaccessible), so exact printed names may differ slightly (e.g. \"SMARTPHONE\") though the electrical spec is confirmed from TASCAM directly. Bluetooth (A2DP, class 2) is also supported for wireless audio in but is not a physical port so it's omitted here. USB grade confirmed explicitly (\"USB2.0 HIGH SPEED\") in the spec sheet.",
+  "ports": [
+    {
+      "name": "Mic Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, mic/line preamp"
+    },
+    {
+      "name": "Mic Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, mic/line preamp"
+    },
+    {
+      "name": "Mic Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, mic/line preamp"
+    },
+    {
+      "name": "Mic Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "XLR/TRS combo jack, mic/line preamp"
+    },
+    {
+      "name": "Phones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm standard stereo headphone jack"
+    },
+    {
+      "name": "Phones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm standard stereo headphone jack"
+    },
+    {
+      "name": "Phones 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm standard stereo headphone jack"
+    },
+    {
+      "name": "Phones 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm standard stereo headphone jack"
+    },
+    {
+      "name": "Phones (TRRS) 1",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm 4-pole (CTIA) jack splitting from Phones 1; used for smartphone headset mic input + audio output"
+    },
+    {
+      "name": "Line In (TRRS)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm 4-pole CTIA jack; smartphone/PC audio input"
+    },
+    {
+      "name": "Line Out (TRRS)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm 4-pole CTIA jack; feed to smartphone for call-in"
+    },
+    {
+      "name": "Line In L",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS line input"
+    },
+    {
+      "name": "Line In R",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS line input"
+    },
+    {
+      "name": "Monitor Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS monitor output"
+    },
+    {
+      "name": "Monitor Out R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS monitor output"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack line output"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 High Speed, 14-in/2-out USB Audio Class 2.0 interface"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC input for included locking-barrel AC adapter (PS-P1220E NUT)"
+    }
+  ]
+}

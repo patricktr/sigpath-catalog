@@ -1,0 +1,39 @@
+{
+  "manufacturer": "FSR",
+  "model": "T3-AC2",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://fsrinc.com/fsr-products/product/1441-t3-ac2/",
+  "confidence": "high",
+  "notes": "Confirmed against FSR's own manufacturer spec sheet (LIT1346A), which matches the product page description exactly. No RJ-45 category/speed rating is stated for the base T3-AC2 keystone pass-through jacks, so grade was omitted (a separate T3-AC2-CAT6 SKU exists with CAT6-rated jacks — not this model). This is a furniture/table-mount box (3.5\" round cutout), not rack-mountable, so rackUnits is omitted. The device also has empty snap-in keystone bays that can optionally be populated with network, telephone, RCA, or mini-stereo connectors by the installer — those are user-configurable options, not fixed physical I/O, so they are not listed as ports. Hardwired variants (T3-AC2HW) replace the captive line cord with direct-wire leads/wire nuts; this listing reflects the standard plug-in T3-AC2.",
+  "ports": [
+    {
+      "name": "AC Line Cord (In)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "9' integral 14 GA SJT captive power cord terminating in Edison plug; feeds the two outlets below. Hardwired -HW variants omit this cord entirely (direct-wire leads + wire nuts instead)."
+    },
+    {
+      "name": "AC Outlet 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "12A max per outlet, 12A total draw across both outlets"
+    },
+    {
+      "name": "AC Outlet 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "12A max per outlet, 12A total draw across both outlets"
+    },
+    {
+      "name": "RJ-45 Pass-Thru 1",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RJ-45 Pass-Thru 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    }
+  ]
+}

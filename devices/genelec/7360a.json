@@ -1,0 +1,143 @@
+{
+  "manufacturer": "Genelec",
+  "model": "7360A",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://assets.ctfassets.net/4zjnzn055a4v/2xfj0AkjCUMkM4msUE0Aiw/abf7c0a2fe9860608d89b063fe51254c/7360_and_7370_op-man_a_0.pdf",
+  "confidence": "high",
+  "notes": "7360A is Genelec's 10\" (250mm) Smart Active Subwoofer (7300 series); floor-standing/flush-mountable enclosure, not rack-mountable, so rackUnits omitted. Full connector-panel diagram and text confirmed from the official Genelec 7360A/7370A Operating Manual (Genelec Document D0134R001a), cross-checked against genelec.com/7360a technical specs (matching XLR counts: 7 analogue in, 7 analogue out, LFE in/out, AES/EBU in/out, 2x RJ45 GLM). AES/EBU ports use connector id \"aes3\" (signal type) though physically a 3-pin XLR shell; no bandwidth grade applies/was stated. GLM RJ45 ports carry a proprietary Genelec control protocol, not generic Ethernet, so no eth-* grade was assigned. Mains connector confirmed as a standard female IEC inlet from the panel diagram; the manual's text only specifies voltage (100-240 VAC 50/60Hz) without naming the exact IEC sub-type, so \"iec\" (C13/C14 family) is inferred rather than explicitly labeled - flagged as the one medium-confidence item in an otherwise high-confidence extraction.",
+  "ports": [
+    {
+      "name": "Analogue Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Input 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Output 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Doubles as OUT1/Test1 (85 Hz phase test tone) in standalone manual mode"
+    },
+    {
+      "name": "Analogue Output 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Doubles as OUT2/Test2, reserved for future use"
+    },
+    {
+      "name": "Analogue Output 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Output 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Output 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Output 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Output 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "LFE In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Dedicated LFE input, bandwidth extended to 150 Hz"
+    },
+    {
+      "name": "LFE Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Straight thru-put of LFE In"
+    },
+    {
+      "name": "Link In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "For daisy-chaining subwoofers"
+    },
+    {
+      "name": "Link Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Summation of main inputs 1-7, passed to next daisy-chained subwoofer"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "XLR female, 110 ohm, AES/EBU single wire, 16-24 bit / 32-192 kHz"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "XLR male, straight thru-put of AES/EBU In"
+    },
+    {
+      "name": "GLM Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Genelec GLM control network over CAT5, not standard IP Ethernet - speed grade not applicable/stated"
+    },
+    {
+      "name": "GLM Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second GLM network jack for daisy-chaining monitors/subwoofers"
+    },
+    {
+      "name": "Bypass",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Bass manager subwoofer bypass; accepts a TRS/TS contact open/close device (control, not audio signal)"
+    },
+    {
+      "name": "Mains Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60Hz; standard IEC inlet visible in connector-panel diagram, exact C-type (C13/C14) not explicitly stated in text"
+    }
+  ]
+}

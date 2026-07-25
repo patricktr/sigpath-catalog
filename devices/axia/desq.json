@@ -1,0 +1,205 @@
+{
+  "manufacturer": "Axia",
+  "model": "DESQ",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.telosalliance.com/consoles-audio-mixing/broadcast-consoles/axia-desq",
+  "confidence": "high",
+  "notes": "Axia DESQ is sold as a two-piece system: a compact desktop control surface (6 faders, ~15.3x15.3x2.8in, no rack space) that links via a single proprietary 6-pin \"latch-and-lock\" CANBus/DC-power cable to a separate 1RU QOR.16 (or QOR.32) integrated console engine. All audio, network, GPIO, and AC power connectors physically live on the QOR.16 engine's rear panel, not on the DESQ surface itself — the DESQ-to-QOR link cable and the QOR's auxiliary/accessory-panel connector are proprietary system interconnects, not general-purpose signal/power ports, so they are omitted from the port list. Analog and AES/EBU audio I/O use RJ-45 jacks wired to Axia's StudioHub+ balanced-audio pinout, not standard Ethernet — grade is intentionally omitted on those. GPIO ports are opto-isolated DA-15 (2-row D-sub) connectors; the provided connector enum has no DA-15/DB-25 option, so they were mapped to the closest available id \"vga\" (a DB15 shell) purely as an approximation — physical pin layout does not match true VGA. Rack units omitted because the DESQ control surface itself is a desktop unit (the paired QOR.16 engine is 1RU, sold/shipped separately). Two DESQ surfaces (or one DESQ + one RAQ) can share a single QOR.16. Extracted from Axia's own \"RAQ/DESQ Installation & User's Guide\" (Rev 1.1.1, Jan 2019), Figure 1-2 QOR.16 rear-panel diagram, cross-checked against Telos Alliance's official DESQ product page.",
+  "ports": [
+    {
+      "name": "Mic Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR-F, software-switchable +48V phantom power"
+    },
+    {
+      "name": "Mic Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "XLR-F, software-switchable +48V phantom power"
+    },
+    {
+      "name": "Analog Input 1",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input carried on RJ-45 via Axia/StudioHub+ pinout (not Ethernet); +4dBm nominal"
+    },
+    {
+      "name": "Analog Input 2",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 3",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 4",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 5",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 6",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 7",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Input 8",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Balanced analog line input, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Output 1",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Balanced analog line output, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Output 2",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Balanced analog line output, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Output 3",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Balanced analog line output, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "Analog Output 4",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Balanced analog line output, StudioHub+ RJ-45 pinout"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "AES3 digital audio input carried on RJ-45 via StudioHub+ pinout (not Ethernet); grade omitted, spec does not state sample-rate class"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES3 digital audio output carried on RJ-45 via StudioHub+ pinout"
+    },
+    {
+      "name": "GPIO 1",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Opto-isolated DA-15 (2-row D-sub) GPIO port; no DA-15 id exists in the connector list, mapped to closest available id 'vga' (also a DB15/HD15 shell) — actual pin pattern differs (2-row DA-15 vs 3-row HD15)"
+    },
+    {
+      "name": "GPIO 2",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Opto-isolated DA-15 GPIO port; mapped to closest connector id 'vga', see GPIO 1 note"
+    },
+    {
+      "name": "GPIO 3",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Opto-isolated DA-15 GPIO port; mapped to closest connector id 'vga', see GPIO 1 note"
+    },
+    {
+      "name": "GPIO 4",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Opto-isolated DA-15 GPIO port; mapped to closest connector id 'vga', see GPIO 1 note"
+    },
+    {
+      "name": "Livewire PoE 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port with Power-over-Ethernet, for Axia Livewire nodes"
+    },
+    {
+      "name": "Livewire PoE 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port with PoE"
+    },
+    {
+      "name": "Livewire PoE 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port with PoE"
+    },
+    {
+      "name": "Livewire PoE 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port with PoE"
+    },
+    {
+      "name": "Livewire 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port, non-PoE"
+    },
+    {
+      "name": "Livewire 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100Base-T Livewire AoIP port, non-PoE"
+    },
+    {
+      "name": "Gigabit RJ45 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T copper uplink to Livewire/AES67 network core"
+    },
+    {
+      "name": "Gigabit RJ45 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000Base-T copper uplink to network core"
+    },
+    {
+      "name": "Gigabit SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1000Base-T/fiber SFP cage uplink to network core"
+    },
+    {
+      "name": "Gigabit SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1000Base-T/fiber SFP cage uplink to network core"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC receptacle, auto-sensing 100-240VAC 50/60Hz, ~100W"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "Furio VR600",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://documentation.rossvideo.com/files/Manuals/Camera%20Motion%20Systems/Furio/Furio%20Studio/Furio_VR600_QuickStart_Guide_(5100DR-010-02).pdf",
+  "confidence": "medium",
+  "notes": "Device researched is specifically the Furio VR600 robotic pan/tilt head (a component of Ross's modular Furio dolly system — dolly + optional SE/S2 lift + VR600 or X350 head), not the full dolly. Max net payload 30 kg (66 lb); pan/tilt speed 0.001-90°/s; pan range ±358°, tilt ±90°; pan/tilt repeatability <0.02°. Head weight itself was not stated in available docs. Sources: Ross Video's official \"Furio VR600 Head QuickStart Guide\" (5100DR-010-02, connector panel diagram) and \"Technical Manual for Furio Robotic Dolly Systems\" (5100DR-043-04, dated April 2026), both fetched directly from documentation.rossvideo.com. Port names and count (9 total) are directly confirmed by two independent official diagrams that match exactly. However, physical connector types for POWER, NETWORK A/B, LENS DRIVE, FOCUS ENC, and ZOOM ENC are not explicitly specified in the documentation (no connector photos/pinout tables were available) — these are almost certainly proprietary Ross/Furio locking circular multi-pin connectors, and the schema values above are best-effort approximations to the closest available connector category, not confirmed literal connector types. A separate general spec table in the same manual (covering a broader \"Furio Camera Motion Systems\" family) lists an \"X650 Head\" with an identical port count/mix (1x 48VDC in, 1x Ethernet, 1x Sync In, 2x CAN control, 1x Serial, 3x Lens/Cam control) suggesting VR600 may also be referenced as X650 in some newer regional/product literature — flagged as a possible naming variant, not confirmed as a different product.",
+  "ports": [
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "DC power input from Furio dolly (24/48VDC per dolly Main FRU) or external PSU. Physical connector is a proprietary Ross/Furio locking multi-pin; xlr4-dc chosen as closest schema match, not confirmed as literal XLR."
+    },
+    {
+      "name": "RS232/RS422 SERIAL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "Labeled as combo RS232/RS422 on the connection panel; outputs synchronized VR/AR position-tracking data and accepts serial control."
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General network connector for head configuration/control and UDP/IP position-tracking data output. Speed/version not stated in docs."
+    },
+    {
+      "name": "NETWORK A",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Furio CAN-bus data connector to the dolly's CAN network (connects to the dolly's CAN A/B/C ports). Physical connector is a proprietary circular CAN connector; rs485 chosen as closest functional match, not a confirmed literal RS485 jack."
+    },
+    {
+      "name": "NETWORK B",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Second Furio CAN-bus data connector, functionally identical to NETWORK A (redundant/daisy-chain use)."
+    },
+    {
+      "name": "ZOOM ENC",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "Connects to an external zoom encoder on the lens when the lens itself cannot report position. Exact physical connector type not confirmed; rs422 used as closest control/data interface match."
+    },
+    {
+      "name": "FOCUS ENC",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "Connects to an external focus encoder on the lens. Exact physical connector type not confirmed; rs422 used as closest control/data interface match."
+    },
+    {
+      "name": "LENS DRIVE",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "Lens control cable to the mounted camera lens (pan/tilt/zoom/focus/iris commands). Exact physical connector type not confirmed; rs422 used as closest control interface match."
+    },
+    {
+      "name": "VIDEO SYNC",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference sync input (genlock-style, 50Hz/60Hz) used to synchronize the head's VR/AR position-tracking data output; head free-runs at 50Hz internally if unconnected."
+    }
+  ]
+}

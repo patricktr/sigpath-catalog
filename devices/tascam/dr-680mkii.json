@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Tascam",
+  "model": "DR-680MKII",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://tascam.com/us/product/dr-680mkii/spec",
+  "confidence": "medium",
+  "notes": "Source: manufacturer spec table at tascam.com/us/product/dr-680mkii/spec (fetched via WebFetch; WebSearch was unavailable due to session budget exhaustion, so cross-verification against a retailer spec table like B&H/Sweetwater could not be completed — both returned HTTP 403 when fetched directly). All port counts/labels come directly from Tascam's official \"Analog Audio Inputs / Outputs / Digital I/O / SYNC I/O / USB / Power\" spec rows. Ch1-4 are combo XLR-3-31 (pin1 GND, pin2 HOT, pin3 COLD) / 1/4\" TRS jacks with switchable mic (+48V phantom, 63dB gain) or line operation; Ch5-6 are TRS-only line/mic inputs. Line outs are 6x unbalanced RCA (one per channel). Digital I/O and Sync I/O are each a single RCA jack whose direction (in vs out) is set via menu, so both are modeled as bidirectional; no bandwidth grade applies since RCA/S-PDIF/AES3 digital audio is outside the graded connector list. USB is physically USB Mini-B (not present in the allowed connector-id list); mapped to the closest id \"usb-micro\" — flag if a more precise \"usb-mini\" id is ever added. Power: the DC input jack type/voltage/polarity was not stated on the spec page; mapped to \"dc-barrel\" as the closest listed option for an external-AC-adapter-fed unit; unit also runs on 8xAA batteries (not modeled as a port). Not rack-mountable out of the box (portable handheld/desktop field recorder), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Ch 1 Mic/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Ch 2 Mic/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Ch 3 Mic/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Ch 4 Mic/Line In",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Ch 5 Mic/Line In",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Ch 6 Mic/Line In",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Digital I/O",
+      "direction": "bidirectional",
+      "connector": "rca",
+      "note": "Single RCA jack carries S/PDIF (IEC60958-3) or AES/EBU (AES3-2003), function as input or output is set in menu"
+    },
+    {
+      "name": "Sync I/O",
+      "direction": "bidirectional",
+      "connector": "rca"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Physical connector is USB Mini-B (5-pin), which is not in the provided connector id list; usb-micro chosen as closest available id. Confirmed USB 2.0 High Speed (480Mbps)."
+    },
+    {
+      "name": "DC In (AC Adapter)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Unit ships with an AC adapter (rated AC100-240V 50/60Hz input) plus an 8xAA battery compartment; the spec table does not state the DC barrel jack's voltage/polarity, so exact pin spec is unconfirmed."
+    }
+  ]
+}

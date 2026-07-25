@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Martin",
+  "model": "MAC Aura XB",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.martin.com/en-US/products/mac-aura-xb",
+  "confidence": "high",
+  "notes": "MAC Aura XB is a compact LED moving-head wash fixture (not a traditional AV rack device), so category/type were mapped to the closest available options (\"other\"/\"Other\"). Not rack-mountable (rackUnits omitted). No Ethernet/network, video, or audio connectors on this fixture — it is DMX/RDM controlled only, confirmed via the dedicated power-connections page (https://www.martin.com/en-US/power-connections-for-mac-aura-xb) which lists Power In (NAC3FX-W) and Power Out/Thru (NAC3MX-W) powerCON TRUE1 connectors. No grade fields set since PowerCON and 5-pin XLR/DMX are not in the graded connector families (SDI/HDMI/DP/USB/Ethernet).",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1, NAC3FX-W; 100-240V AC 50/60Hz"
+    },
+    {
+      "name": "Power Out/Thru",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1, NAC3MX-W; power relay for daisy-chaining fixtures"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin locking XLR, DMX512-A / RDM (ANSI E1.20)"
+    },
+    {
+      "name": "DMX Thru",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin locking XLR, DMX/RDM pass-through to next fixture"
+    }
+  ]
+}

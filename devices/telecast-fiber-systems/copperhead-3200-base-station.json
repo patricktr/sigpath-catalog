@@ -1,0 +1,102 @@
+{
+  "manufacturer": "Telecast Fiber Systems",
+  "model": "CopperHead 3200 (Base Station)",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.markertek.com/Attachments/Specifications/TelecastFiber/ADAP-AC-04-Specifications.pdf",
+  "confidence": "medium",
+  "notes": "Source is the official Grass Valley (a Belden Brand) datasheet \"CopperHead 3200 Fiber Optic Camera Transceiver\" (doc GVB-1-0222A-EN-DS, Grass Valley 2014), retrieved via a Markertek-hosted PDF link. Telecast Fiber Systems is the originating brand; the product is now sold under Grass Valley/Belden. This entry represents the rack-mount Base Station half of the two-piece system (CHG3-BS-3200 family, 1U, 444.5x44.5x228.6mm / 17.5x1.75x9in, 2.27kg); the separate small camera-mount unit (CHG3-CAM-3200, 63.5x55.9x165.1mm) is not included. SDI ports are dual-rate SD/HD-SDI (SMPTE 259M/292M, 270Mb/s or 1.5Gb/s) and are graded sdi-hd (the higher of the two supported rates); analog VBS/timecode ports have no bandwidth grade. Ethernet is 10/100BaseT only (graded eth-100m). Several connector shells (Audio IN/OUT, Camera RCP, Data/GPI, MAIN DC power, and the camera-link fiber connector) are inferred from the datasheet's functional block diagram, ordering-code table, and breakout-cable part numbers rather than a labeled rear-panel photo, since DB25/D-sub connector types are not in the allowed connector list — these are flagged individually with the closest allowed substitute and a note. Order-code options let the base station's fiber connector be 2x ST or Neutrik opticalCON DUO (unpowered) or SMPTE 304M hybrid/opticalCON/ST+Molex (remote-power hybrid fiber), and intercom base interface be RTS 2-wire, Clear-Com, or 4-wire — the port list above reflects a representative/typical configuration rather than one fixed order code.",
+  "ports": [
+    {
+      "name": "HD/SD SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD/SD SDI OUT A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD/SD SDI OUT B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "VBS 1 (Analog Video OUT)",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VBS 2 (Analog Video IN / Sync IN)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "VBS 2 Loop OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VBS 3 (Analog Video IN / Sync IN)",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Time Code IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Time Code OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "10/100 Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Camera Remote Control Panel",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Legend lists this circuit as RS-232/422 camera control; datasheet block diagram shows a multi-pin connector icon but does not confirm exact shell (likely D-sub). Approximated as RS-422."
+    },
+    {
+      "name": "Data/GPI",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Legend lists this circuit as Data 2 (RS-232/422/485) plus Tally/GPI; exact connector shell not confirmed from a rear-panel photo. Approximated as RS-485."
+    },
+    {
+      "name": "Audio IN",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Physically a single DB25 D-sub on the chassis; the official breakout cable (CH3BAI-3200-D25-5XL3F) fans it out to 5x female XLR3 carrying line audio return and RTS/4-wire/Clear-Com intercom. DB25 is not in the allowed connector list, so XLR3 (the cable endpoint) is used as the closest approximation."
+    },
+    {
+      "name": "Audio OUT",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Physically a single DB25 D-sub on the chassis; the official breakout cable (CH3BAO-D25-4XL3M) fans it out to 4x male XLR3 carrying line audio and intercom. DB25 is not in the allowed connector list, so XLR3 (the cable endpoint) is used as the closest approximation."
+    },
+    {
+      "name": "Fiber (Camera Link)",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Single-mode optical link multiplexing SDI/HD-SDI video, VBS video, timecode, Ethernet, RS-232/422/485 control, tally/GPI, audio and 2-channel intercom to/from the camera unit. Actual connector is order-code dependent: 2x ST, Neutrik opticalCON DUO, or an SMPTE 304M hybrid connector (which also carries DC power to camera on -95VD variants) — none of these is in the allowed list, so fiber-lc is used as the closest approximation."
+    },
+    {
+      "name": "MAIN Power IN (12-18 VDC)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Datasheet specifies base station (TAC Cable variant) draws 10W at 10-18VDC via a 'MAIN' DC input; exact connector shell not confirmed from a photo, approximated as 4-pin XLR (common for broadcast DC power). The -95VD variant additionally has an internal AC-DC power supply (fed by mains or the external ADAP-AC-04 adapter) to deliver up to 95W to the camera; its AC inlet connector could not be confirmed and is not listed separately."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "manufacturer": "Orban",
+  "model": "OPTIMOD 8700i",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.orban.com/specifications-optimod8700i",
+  "confidence": "medium",
+  "notes": "Orban OPTIMOD 8700i is a discontinued FM/HD/streaming broadcast audio processor (replaced by OPTIMOD 5950); spec sourced from manufacturer's own specifications page. AES3 ports are physically XLR-type connectors per Orban's spec text but mapped to the \"aes3\" connector id (distinct from analog \"xlr3\") since digital AES3 XLR is a separate enum option. GPI is a DB-25 male 8-channel opto-isolated interface, not a true RS-232 port; DB-25/DB-9 are not in the allowed connector-id list so both GPI and the three DB-9 serial ports were mapped to \"rs232\" as the closest available id. Dante/AES67 link speed (100Mb vs Gigabit) is not published by Orban or by the Dante compatibility listing, so grade was omitted for those two RJ45 ports. No grade applies to AES3 (192kHz composite) since AES3 has no entry in the required grade scale. Corroborating detail pulled from orban.com \"In-depth description\" and \"Key features\" pages and getdante.com's Orban 8700i listing.",
+  "ports": [
+    {
+      "name": "Analog In L",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog In R",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 Digital In",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 Digital Out 1",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 Digital Out 2",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "Dante/AES67 Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AoIP, 2 stereo in / 2 stereo out (4x4), dual-redundant with Secondary; link speed not stated by manufacturer"
+    },
+    {
+      "name": "Dante/AES67 Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Redundant AoIP link, paired with Primary; link speed not stated by manufacturer"
+    },
+    {
+      "name": "Composite/MPX Out 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Composite/MPX Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Digital Composite (MPX) Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "192 kHz AES3 composite baseband output, delivered on a breakout cable"
+    },
+    {
+      "name": "SCA In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "On Digital Composite breakout cable"
+    },
+    {
+      "name": "SCA In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "On Digital Composite breakout cable"
+    },
+    {
+      "name": "Wordclock/10 MHz Ref In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Actual connector is DB-25 male, 8 opto-isolated GPI inputs; DB-25 not in the allowed list, mapped to closest D-sub serial/control id"
+    },
+    {
+      "name": "Serial 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 male"
+    },
+    {
+      "name": "Serial 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 male"
+    },
+    {
+      "name": "Serial 3",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB-9 male"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10-1000 Mbps auto-negotiating control/network port"
+    },
+    {
+      "name": "AC Power 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant power supplies, 100-264 VAC 50/60Hz"
+    },
+    {
+      "name": "AC Power 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual redundant power supplies, 100-264 VAC 50/60Hz"
+    }
+  ]
+}

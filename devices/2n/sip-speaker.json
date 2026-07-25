@@ -1,0 +1,30 @@
+{
+  "manufacturer": "2N",
+  "model": "SIP Speaker",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.2n.com/en-GB/products/2n-sip-speaker",
+  "confidence": "high",
+  "notes": "Device is the wall-mounted \"2N SIP Speaker\" (Black/White variant), a SIP/ONVIF-S based active IP speaker with an integrated 2x10W amplifier — distinct from the outdoor \"2N SIP Speaker Horn\" model. Physical connectors confirmed from the manufacturer's installation manual (2N_SIP_Speaker_Wall_Mounted_Manual_EN_2.10.pdf, wiki.2n.com), which lists \"Connectors and Controls: LAN (10/100BASE-TX RJ-45), Speaker (amplifier output terminals), RESET button, DC IN (12V DC/2A adapter connector)\" and shows a back-panel photo confirming the Speaker OUT and DC IN are 2-pin screw/captive terminal blocks (mapped here to euroblock / euroblock-dc, the closest connector-list matches — not true barrel jacks). Ethernet grade set to eth-100m because the spec explicitly states 10/100BASE-TX (Fast Ethernet, no Gigabit). No grade set on the audio or DC terminals per the schema rules. The manual's overview text also states the unit \"is equipped with a digital input and output,\" but no such connector appears in the labeled back-panel diagram/photo (only LAN, Speaker OUT, RESET, DC IN are shown) — likely boilerplate text reused from another 2N intercom manual, so it was not included as a physical port. Not rack-mountable (wall-mount enclosure, 250x176x143mm).",
+  "ports": [
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45 on rear panel, 10/100BASE-TX with Auto-MDIX; also carries PoE IEEE 802.3af power to the unit (no separate PoE port)."
+    },
+    {
+      "name": "Speaker OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin captive screw terminal from the integrated amplifier; wired to one 8Ω loudspeaker (12W, external 12V supply) or two 8Ω loudspeakers in parallel (2x9W)."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Labeled 'DC IN 12V 2A'; a 2-pin captive screw terminal (not a barrel jack) for the external 12V DC / 1.8-2A power adapter, used when PoE is not available."
+    }
+  ]
+}

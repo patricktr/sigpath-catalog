@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Jünger Audio",
+  "model": "C8000",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 3,
+  "sourceUrl": "https://junger-audio.com/en/products/c8000-frames",
+  "confidence": "medium",
+  "notes": "The C8000 is a modular 19\" mainframe platform, not a single fixed-I/O box. Jünger Audio sells it as several frame variants — 1RU C8912 (redundant PSUs, 2 IEC inlets), 3RU C8922 (single PSU, 1 IEC inlet, 76HP, used as the base representation here, rackUnits=3), 3RU C8932 (dual PSUs, 2 IEC inlets, 76HP front/72HP rear), and 3RU C8934 (4 isolated backplane sections, redundant load-balanced PSUs) — each with its own power-inlet count (source: https://junger-audio.com/en/products/c8000-frames). All actual signal I/O (analog audio XLR, AES/EBU via D-Sub25 or BNC, MADI via 75-ohm BNC or optical SC duplex fiber, SDI embed/de-embed, Dolby metadata RS485 via 9-pin D-Sub, GPIO) is provided by user-selected plug-in modules and is not fixed to the frame, so it is not listed as device ports here — only the frame's power inlet and the control connectors on the standard C8702 Frame Controller module (LAN/RS232/CAN, confirmed via the C8702 manual PDF: https://junger-audio.com/uploads/manual/533569ab5562752df6220000/C8702_manual_EN_170622.pdf) are included. LAN grade (eth-100m) reflects the C8702's documented \"RJ45 10/100Mbit Ethernet\" spec; the CAN RJ45 port runs CAN bus protocol, not Ethernet, so it is left ungraded. Confidence is medium because no single manufacturer page enumerates all frame+controller connectors together, and full signal-I/O connector types vary by installed module rather than being fixed to the \"C8000\" model itself.",
+  "ports": [
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with mains filter; base 3RU single-PSU (C8922) frame has one, other frame variants (1RU C8912, 3RU C8932/C8934) have two redundant/dual IEC inlets instead"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "On the standard C8702 Frame Controller module; front-panel RJ45, TCP/IP control/monitoring/web GUI"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "On the C8702 Frame Controller module; front-panel D-Sub 9-pin serial service/console interface"
+    },
+    {
+      "name": "CAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "On the C8702 Frame Controller module; front-panel RJ45 CAN 1.1 bus port (125kbit/s or 1Mbit/s) extending the internal frame CAN bus to external remote panels — carries CAN protocol, not Ethernet, so no bandwidth grade applies"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "ETC (Electronic Theatre Controls)",
+  "model": "Source Four LED Series 3 Lustr X8",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.etcconnect.com/Products/Entertainment-Fixtures/Source-Four-LED-Series-3/Features.aspx",
+  "confidence": "high",
+  "notes": "Physical I/O and electrical specs were confirmed directly from ETC's own Source Four LED Series 3 Datasheet (©2024 ETC, Rev I, 2024-05) and Quick Guide (part no. 7462M1300-1.2.0, Rev A 2022-09) — both mirrored as PDFs by third-party dealers (fullcompass.com, hirewl.com) since the datasheet PDF returned 403 directly from etcconnect.com's file host; content and branding confirm ETC as sole author. The fixture is a moving-light-style ellipsoidal stage luminaire, not a conventional AV signal-chain device, so no listed `category`/`type` fits well — \"other\" was used. No rackUnits (yoke/C-clamp mounted, not rack-mountable; weight 6.8–8.9 kg depending on barrel). No bandwidth-graded connectors apply: DMX (XLR5) and powerCON have no grade scale in the schema, and USB port speed/generation is not published by ETC, so grade was omitted per instructions. An antenna for optional City Theatrical Multiverse wireless DMX and an NFC tag for the Set Light app are also present but are not physical cabled I/O connectors, so they were excluded from the ports list. This datasheet covers both the Lustr X8 and Daylight HDR color-engine variants of Series 3; all electrical/connector specs are identical between them — only color/photometric specs differ.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1 TOP; 100–240 VAC 50/60 Hz, ~307 W typ at 120 V / 305 W at 230 V (Lustr X8); TRUE1 rated 20 A at 120 V/60 Hz, 16 A at 240 V/50 Hz"
+    },
+    {
+      "name": "Power Thru",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1 TOP; daisy-chains power to up to 4 additional fixtures (5 total per circuit) via Power Thru jumper"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin XLR; DMX-512/RDM, also supports City Theatrical Multiverse wireless DMX/RDM and NFC setup"
+    },
+    {
+      "name": "DMX Thru",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR; DMX/RDM daisy-chain thru, up to 32 device loads per chain"
+    },
+    {
+      "name": "USB port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port on the control head for firmware updates, saving/loading fixture configuration, and error-log export via flash drive; USB generation/speed not specified by ETC"
+    }
+  ]
+}

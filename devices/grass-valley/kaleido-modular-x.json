@@ -1,0 +1,206 @@
+{
+  "manufacturer": "Grass Valley",
+  "model": "Kaleido-Modular-X",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.grassvalley.com/wp-content/uploads/2025/01/kaleido-modular-x_ds-pub-3-0134a-en.pdf",
+  "confidence": "medium",
+  "notes": "Kaleido-Modular-X is a modular, card-based multiviewer built from a Densité frame (1 RU \"Densité 3+ FR-1\" or 3 RU \"Densité 3\" chassis) populated with separate input cards (KMX-3901-IN-8-D / -16-D / -16-Q, 8 or 16 SDI inputs each) and output cards (KMX-3901-OUT-D dual-head or -OUT-S single-head), interconnected via proprietary \"FlexBridge\" coax links; actual I/O counts and connector complement vary by chosen cards/chassis, so no single fixed port list exists. The ports above represent one common \"16x2\" build: one KMX-3901-IN-16-D input card + one KMX-3901-OUT-D output card in a 1 RU Densité 3+ FR1 frame (rackUnits set to 1 for this config; the 3 RU Densité 3 frame is also offered, and a redundant AC PSU option exists for both). All SDI/LTC/REF/ABT-MADI/FlexBridge connectors are physically miniature DIN 1.0/2.3 coax connectors on the rear panel, not full-size BNC; mapped to \"bnc\" as the closest available connector id. 3G-SDI support requires an optional license (KMX-IN-x-OPT-3GBPS); base cards are HD/SD-SDI only. HDMI outputs are HDMI v1.3 per the datasheet — grade omitted since v1.3 is below the lowest available grade option (hdmi-1.4). GPI I/O is available only via a separate optional Densité GPI-1501 card and was not included as a port. AC inlet connector type (IEC family) is inferred, not explicitly stated. Category/type do not have an exact \"multiviewer\" match in the given taxonomy; classified as category \"other\" / type \"Other\".",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 9",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 10",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 11",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 12",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 13",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 14",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 15",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "ABT/MADI In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Audio bridge terminal / MADI connection for optional analog or AES audio breakout modules"
+    },
+    {
+      "name": "FlexBridge Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Proprietary Grass Valley coax bridging link to an output card; datasheet states 3 Gb/s format"
+    },
+    {
+      "name": "FlexBridge Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Proprietary Grass Valley coax bridging link to an output card; datasheet states 3 Gb/s format"
+    },
+    {
+      "name": "FlexBridge In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Proprietary Grass Valley coax bridging link from an input card; datasheet states 3 Gb/s format"
+    },
+    {
+      "name": "FlexBridge In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Proprietary Grass Valley coax bridging link from an input card; datasheet states 3 Gb/s format"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Datasheet specifies HDMI v1.3, which predates the available grade options; grade omitted"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Datasheet specifies HDMI v1.3, which predates the available grade options; grade omitted"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-422 (SMPTE ST 207 / EBU-3245) control protocol over an RJ45 connector, per datasheet"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Audio Monitor Out 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Datasheet specifies a WECO terminal connector; mapped to euroblock as closest available option"
+    },
+    {
+      "name": "Audio Monitor Out 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Datasheet specifies a WECO terminal connector; mapped to euroblock as closest available option"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Densité frame PSU AC inlet; exact IEC variant not specified in datasheet"
+    }
+  ]
+}

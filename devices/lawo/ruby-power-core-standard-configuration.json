@@ -1,0 +1,120 @@
+{
+  "manufacturer": "Lawo",
+  "model": "Ruby (Power Core, standard configuration)",
+  "category": "audio",
+  "type": "Audio mixer",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.lawo.com/files/71935253/71935254/1/1666039060000/ruby-standard-configuration_User_Manual_V6.4.0_2.pdf",
+  "confidence": "high",
+  "notes": "\"Lawo Ruby\" is a modular radio mixing console system with three parts: the 19\"/1RU \"Power Core\" DSP engine (all physical audio/control I/O lives here), one or more \"ruby\" control-surface fader frames (connect to Power Core via CAN bus only — no audio I/O of their own, powered by their own external 12V DC PSU), and \"DisplayDock\" GUI software running on a customer-supplied Windows PC. Ports below are the Power Core engine's physical I/O in the \"ruby standard configuration\" (Slot 1 fitted with STUDIO IO card 710/35, Slot 2 with MIC/LINE IN card 710/20; 6 further expansion slots are optional/empty by default and can add LINE IN, LINE OUT, or AES3 IO cards on further DB-25 or HD-BNC connectors — not included here since unpopulated in the base config). Connector-list gaps: DB-25 (TASCAM/AES59-wired analog & AES3 breakout) has no id in the allowed list, so it is mapped to xlr3 (analog) per this catalog's established convention (see communityCatalog.json AJA entries); the 37-pin D-type GPIO connector is mapped to rs232 as the closest D-sub shape (not actual RS-232); the RS 422 port and CAN port are physically 8-pin RJ45 females (per the manual's Connector Pin-Outs appendix) — RS422 is mapped to the rs422 connector id (protocol match) while CAN is mapped to rj45 (physical-form match, no CAN id exists). The DC power input is a 4-pin Kycon locking connector, mapped to xlr4-dc as the closest 4-pin DC connector id (not literally XLR). AC mains input is stated only as \"100-240V AC input\" with an IEC power cable; exact IEC C13/C14 inlet is inferred, not explicitly pictured in the manual excerpt reviewed. CONTROL A/B and RAVENNA/AES67 A/B are empty SFP cages — the manual's own certified-module list is all-1000BASE (SX/LX/ZX fiber or T copper), so eth-1g is used; MADI SFP ports (MADI 3/4 not available in standard config) carry no bandwidth-graded connector type in the allowed enum, so grade is omitted. Ruby is now discontinued/EOL, replaced by Lawo diamond — this manual (v6.4.0) remains the most complete authoritative connector reference found.",
+  "ports": [
+    {
+      "name": "DONGLE",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel. USB port for the WIBU CodeMeter license dongle (memory-stick style); a safety cap can be fitted. USB version not stated."
+    },
+    {
+      "name": "CAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Front panel, 8-pin RJ45 female (per Connector Pin-Outs appendix). CAN bus link to the ruby control-surface frame(s); not Ethernet."
+    },
+    {
+      "name": "RS 422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Front panel. Physically an 8-pin RJ45 female (per Connector Pin-Outs appendix), used as an RS-422 serial port for remote control (e.g. playout systems) or debugging."
+    },
+    {
+      "name": "CONTROL A",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage (module ordered separately). Connects to host PC running DisplayDock. Certified modules are 1000Base-SX/LX/ZX (fiber) or 1000Base-T (RJ45 copper)."
+    },
+    {
+      "name": "CONTROL B",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage. Unused/unconnected in the standard configuration (redundant/expansion control port)."
+    },
+    {
+      "name": "RAVENNA/AES67 A",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage. AoIP streaming (32 stereo Rx/Tx streams by default), ST2110-30/31 & AES67 compatible. Certified modules are all 1000Base variants."
+    },
+    {
+      "name": "RAVENNA/AES67 B",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage. Unused by default; used only when ST2022-7 redundant streaming is configured."
+    },
+    {
+      "name": "MADI 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage. Primary 64-channel MADI (AES10) port. Certified modules: multi-mode/single-mode fiber or HD-BNC coax. No bandwidth-grade id in the allowed enum applies to MADI."
+    },
+    {
+      "name": "MADI 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Front panel, empty SFP cage. Redundant MADI port (optional)."
+    },
+    {
+      "name": "WCLK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Front panel, 75-ohm BNC. External wordclock sync reference input."
+    },
+    {
+      "name": "WCLK OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Front panel, 75-ohm BNC. Outputs the current system reference clock."
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Front panel, 37-pin D-type (Sub-D37) female. 8x GPI (optocoupler inputs) + 8x GPO (relay outputs). No 37-pin D-sub id in the allowed list; mapped to rs232 as the closest D-sub shape (not actual RS-232 serial)."
+    },
+    {
+      "name": "STUDIO IO Mic/Line In (Slot 1)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Rear panel, Slot 1 (STUDIO IO card 710/35), 25-pin DB-25 female wired per AES59/TASCAM standard, carrying 2 mono Mic/Line inputs. DB-25 has no id in the allowed connector list; mapped to xlr3 as closest per this catalog's convention."
+    },
+    {
+      "name": "STUDIO IO Line Out (Slot 1)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear panel, Slot 1 (STUDIO IO card 710/35), same DB-25 as above, 1 stereo Line output pair."
+    },
+    {
+      "name": "STUDIO IO Headphone Out (Slot 1)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Rear panel, Slot 1 (STUDIO IO card 710/35), same DB-25 connector, 2 stereo headphone outputs — pinning differs from the AES59/TASCAM standard used for the rest of this card."
+    },
+    {
+      "name": "MIC/LINE IN (Slot 2)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Rear panel, Slot 2 (MIC/LINE IN card 710/20), 25-pin DB-25 female wired per AES59/TASCAM standard, carrying 8 mono Mic/Line inputs with variable preamp gain, switchable 48V phantom, HPF and 20dB pad."
+    },
+    {
+      "name": "AC Mains Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear panel, integrated wide-ranging 100-240V AC supply, supplied 2m IEC power cable. Exact inlet variant (C13/C14) inferred, not explicitly specified in the source manual."
+    },
+    {
+      "name": "12V DC Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Rear panel. Physically a 4-pin Kycon locking connector (per Connector Pin-Outs appendix), for the optional external 12V DC redundant power supply (955/50-80). Mapped to xlr4-dc as the closest 4-pin locking DC connector id; not a true XLR."
+    }
+  ]
+}

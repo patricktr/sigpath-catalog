@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Vaxis",
+  "model": "Atom 500 HDMI",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://vaxis.us/products/vaxis-atom-500-wireless-hdmi-video-transmitter-kit",
+  "confidence": "medium",
+  "notes": "\"Vaxis Atom 500\" is a two-piece wireless video kit (separate TX and RX units), not a single chassis, so ports are prefixed TX/RX above. This entry covers the base HDMI-only variant (VA20-500-TR01B, \"Atom 500 HDMI Wireless Video Transmission Kit / Dual HDMI\"): TX has 1x HDMI in + 1x HDMI loop-out; RX has 2x HDMI out. A separate \"Atom 500 SDI\" variant (VA20-S500-TR01B) exists with TX = 1x 3G-SDI in + 1x HDMI in, RX = 1x 3G-SDI out + 1x HDMI out — not included here since the request named \"Atom 500\" without the SDI qualifier; ask if the SDI variant is wanted instead. Both TX and RX are powered via USB-C (5V) and also accept a mounted Sony NP-F/L-series battery plate (no separate connector modeled for the battery plate, which is a mechanical mount, not a defined port type). No HDMI version (1.4/2.0/2.1) or USB power-delivery wattage is published by any source checked, so no \"grade\" was set on the HDMI or USB-C ports per instructions. Video support tops out at 1080p60 (H.265), consistent with HDMI 1.4-level bandwidth, but this is an inference, not a stated spec. Manufacturer's own product page (vaxis.us) lacked a structured spec table; B&H's spec pages returned HTTP 403 to automated fetch, so port/format details were cross-verified across vaxis.us, Amazon listings, and Newsshooter's hands-on reviews (dimensions/weight/frequency/power figures came from the Newsshooter review coverage, not vaxis.us directly) — hence \"medium\" rather than \"high\" confidence. Antenna is described as built-in (non-removable, non-standard connector) so no antenna port was modeled.",
+  "ports": [
+    {
+      "name": "TX HDMI In",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "TX HDMI Loop Out",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "TX USB-C Power",
+      "direction": "input",
+      "connector": "usb-c"
+    },
+    {
+      "name": "RX HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "RX HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "RX USB-C Power",
+      "direction": "input",
+      "connector": "usb-c"
+    }
+  ]
+}

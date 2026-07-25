@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Moxa",
+  "model": "IMC-101-M-SC",
+  "category": "network",
+  "type": "Converter",
+  "sourceUrl": "https://www.moxa.com/en/products/industrial-network-infrastructure/ethernet-media-converters/ethernet-to-fiber-media-converters/imc-101-series/imc-101-m-sc",
+  "confidence": "high",
+  "notes": "Moxa IMC-101-M-SC is a DIN-rail-mount, unmanaged 10/100BaseT(X)-to-100BaseFX Ethernet media converter (metal housing, IP30, 53.6 x 135 x 105 mm) — desktop/DIN-rail form factor, not rack-mountable, so rackUnits omitted. Only 3 physical ports total: one RJ45 Ethernet port, one multi-mode SC fiber port, and one DC power terminal block; no relay/alarm contact or console port on this base model. Fiber connector is genuinely SC (not LC); \"fiber-lc\" was used only because \"sc\" is not an available connector id in the schema — see port note. Power terminal block mapped to \"euroblock-dc\" as the closest schema id for a 2-pin DC terminal block (12-45 VDC, single non-redundant input). Ethernet port graded eth-100m since the interface is 10/100 Fast Ethernet only; fiber port left ungraded per instructions (no SDI/HDMI/DP/USB/RJ45 grade scale applies to fiber-lc). Source: official Moxa product page (fetched directly), cross-referenced against the Moxa IMC-101 series datasheet PDF filename found via search, though the PDF itself could not be text-parsed for confirmation.",
+  "ports": [
+    {
+      "name": "10/100BaseT(X)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "100BaseFX (SC)",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Physical connector on the device is multi-mode SC (duplex), not LC — 'fiber-lc' used as the closest available id since 'sc' is not in the allowed connector list. Multi-mode 100BaseFX, ~4 km typical distance."
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pin screw/terminal-block DC power input, 12-45 VDC, single (non-redundant) input on this model."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "manufacturer": "Pebble Beach Systems",
+  "model": "Marina",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.pebble.tv/wp-content/uploads/2014/06/PBS-Marina-Data-Sheet.pdf",
+  "confidence": "low",
+  "notes": "Marina is Pebble Beach Systems' playout/distribution AUTOMATION SOFTWARE, not a fixed-I/O hardware device. The official datasheet is explicit that it runs on \"standard IT hardware platforms\" and is delivered \"without reliance on bespoke hardware\" — its own tier (core servers, mirrored SQL database, client workstations) communicates purely over generic IP/Ethernet. The datasheet's architecture diagram shows SDI/IP media ports, but those belong to the separate third-party devices Marina controls (VTRs, video servers, \"Integrated Channel\" units, MCS/GFX/CC-subtitle/UPDOWN boxes) — not to Marina itself. No manufacturer-published physical connector/port list exists for a \"Marina\" product because it has no fixed hardware SKU: a deployment is sized as a cluster of generic rack servers (e.g. \"a typical 16 channel fully redundant system... in 5 servers occupying just 9RU, consuming 3500W\" per the datasheet), with network port count depending on the NIC teaming/redundancy configuration chosen by the integrator. The two ports listed here (redundant GbE network, IEC power) are inferred generically from \"standard IT hardware\" / rack-server implication in the source, not read off any spec table, hence confidence is low. Could not confirm rack unit size for a single node, network port grade/speed, or any true AV signal connectors (there are none — Marina is a control/automation layer, not an AV source/sink device). No dedicated hardware-appliance spec sheet for \"Marina\" was found on pebble.tv or via reputable AV/broadcast retailers (B&H/Sweetwater/Markertek/Crutchfield do not carry broadcast automation software; a BroadcastStore.com \"turnkey system\" listing exists but was inaccessible and would in any case reflect an integrator's server choice, not a Pebble Beach spec).",
+  "ports": [
+    {
+      "name": "Network (Control/Data)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

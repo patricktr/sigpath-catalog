@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Ayrton",
+  "model": "Huracán-X",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.showtech.com.au/product/huracan-x/",
+  "confidence": "medium",
+  "notes": "The Huracán-X is an Ayrton 1000W LED moving-head profile luminaire (50,000+ lumens), not a conventional AV rack device — closest fit in the given taxonomy is category \"other\"/type \"Other\". It is not rack-mountable (moving-head fixture on yoke, omitted rackUnits). Manufacturer's current site (ayrton.eu/produit/huracan-profile/) has since unified this model into the \"Huracán Profile\" line (S and TC variants) and no longer uses the \"-X\" designation, but connector specs match across both manufacturer-descended text and the reseller page used here (showtech.com.au, PLSN, DJDeals, SalesWL all agree verbatim: \"XLR 5 pin male and female connectors for DMX connection, etherCON RJ45 IN/OUT connectors for ArtNet, powerCON TRUE1 male connector for power connection\"). No grade fields set: DMX/XLR5, RJ45 (ArtNet/sACON control data, not a graded Ethernet uplink), and powerCON are not in the gradable connector list per the instructions' own scale definitions (powerCON isn't a gradable connector type either). Only one powerCON TRUE1 (input) was found — no power-link/out connector is documented for daisy-chaining. Weight reported inconsistently across sources (44 kg / 97 lb per showtech &amp; PLSN-style listings vs 46 kg on Ayrton's current Huracán Profile page, likely reflecting a newer/heavier S or TC variant) — omitted from output since rackUnits/weight field isn't part of the schema. Power consumption ~1400-1470W max depending on variant/source.",
+  "ports": [
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Ethernet In",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Ethernet Out",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "powercon"
+    }
+  ]
+}

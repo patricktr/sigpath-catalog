@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Atomos",
+  "model": "Shinobi 7",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.precision-camera.com/atomos-shinobi-7-7in-4k-sdi-hdmi-monitor/",
+  "confidence": "medium",
+  "notes": "The Shinobi 7 (base model, not the newer \"Shinobi 7 RX\" wireless receiver variant) is a 7\" 4K HDMI/SDI on-camera field monitor, not a rack/AV-room device, so rackUnits is omitted. Manufacturer's own tech-specs page (atomos.com/tech-specs/shinobi-7/) is JS-rendered and an automated fetch of it returned an incomplete/contradictory port list (omitting USB/RJ45 entirely), so this entry is instead built from and cross-checked against three secondary sources that agree with each other: a reseller spec table (precision-camera.com, used as sourceUrl), Dodd Camera's product page, and CineD's launch-announcement article — plus voltage/DC-jack detail pulled from the manufacturer's own spec page content. HDMI is rated 2.0 (up to 4Kp60); SDI is 3G-SDI (up to 2K60), physically on BNC connectors. USB and RJ45 ports are documented but multiple sources note they are placeholders \"for future development\" of camera-control features rather than active data ports today. The camera-control jack is a 2.5mm serial/LANC-style connector; no 2.5mm id exists in the given connector list, so trs-3.5 was used as the closest approximation — treat this as an approximation, not an exact match. Power is a locking 5.5x2.1mm DC barrel jack (6.2-16.8V) plus dual hot-swappable NP-F/L-series battery slots (battery slots omitted from the port list since they aren't a listed connector type). Confidence is medium because the truly authoritative manufacturer spec page could not be reliably scraped and some details (USB-A vs USB-C, exact camera-control connector) show minor inconsistency across sources.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out (Loop)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out (Loop)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Listed by Atomos/retailers as a control port reserved for future camera-control features; not yet functional at launch per manufacturer messaging."
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet-style control port reserved for future camera-control/networking features; no link-speed grade published."
+    },
+    {
+      "name": "Camera Control",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Physical connector is a 2.5mm serial/LANC-style jack (closest list id used: trs-3.5, not an exact match); used with an optional USB-C-to-serial cable for cameras such as Z CAM."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking DC jack, 5.5mm OD / 2.1mm ID, 6.2-16.8V input range. Also dual hot-swappable NP-F/L-series battery slots (not a fixed connector type, so not listed as a separate port)."
+    }
+  ]
+}

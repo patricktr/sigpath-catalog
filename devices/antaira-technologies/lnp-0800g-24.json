@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Antaira Technologies",
+  "model": "LNP-0800G-24",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.antaira.com/products/8-Port/LNP-0800G-24",
+  "confidence": "high",
+  "notes": "Industrial unmanaged Gigabit PoE+ switch, IP-30 rugged housing, DIN-rail/wall mount by default (rackUnits omitted; an optional DIN-RACK-2U adapter can rack-mount it but it is not natively a rack unit). All 8 LAN ports are 10/100/1000Base-T(X) PoE+ (802.3at) Power Sourcing Equipment ports, up to 30W/port, 240W total PoE budget. Power input is dual redundant wide-range 9-55VDC on a 6-pin terminal block (screw/euroblock style); exact pin numbering not published by manufacturer, so mapped to closest connector id euroblock-dc. A 24VDC/1A dry-contact relay alarm output shares the same terminal-block connector family, mapped to generic euroblock (it is a signal contact, not a DC power delivery pin). No SFP ports and no console/management port confirmed absent (fully unmanaged switch) across two separate fetches of the manufacturer page. Exact on-device silkscreen labels for LAN ports (e.g. \"P1\" vs \"LAN1\") could not be confirmed from the fetched content, so \"LAN 1\"..\"LAN 8\" is a reasonable approximation.",
+  "ports": [
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "LAN 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at) sourcing port, up to 30W"
+    },
+    {
+      "name": "Power In (V1/V2)",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Dual redundant wide-range 9-55VDC inputs on a 6-pin terminal block; exact pin layout not published"
+    },
+    {
+      "name": "Relay Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Fault/alarm dry-contact relay output, 24VDC @ 1A, on the same terminal-block connector family"
+    }
+  ]
+}

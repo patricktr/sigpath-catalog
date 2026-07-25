@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Altinex",
+  "model": "TNP327C",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.altinex.com/products/tnp327c/",
+  "confidence": "high",
+  "notes": "TNP327C is Altinex's \"Tilt 'N Plug\" tabletop interconnect/power box for conference tables — a passive pass-through unit, not an active AV switcher/converter, so it doesn't cleanly match the given type taxonomy (classified here as category \"other\" / type \"Other\"). Connector cassette is described on the manufacturer page as \"HDMI F-M (2), CAT-6 (RJ-45) F-M (2), USB Type A F-M (2)\" with 6 ft (2 m) pass-through cables, plus dual AC sockets (120VAC, 60Hz, up to 12A total) fed by a single captive 9 ft (3.0 m) power cord with a standard US NEMA plug — modeled here as one NEMA 5-15 AC input feeding two NEMA 5-15 AC output outlets. No HDMI version, USB speed, or Ethernet speed grade is published on the source page, so grade is correctly omitted for all data ports. Desktop/tabletop unit (5.7 in W x 5.2 in D, 6.4 in H when opened) — rackUnits omitted as not rack-mountable. Content verified identical across three independent fetches of the manufacturer's page (title \"TNP327C | Altinex, Inc.\"); no independent retailer spec table was found to cross-check (Markertek search returned no result), which is the only reason confidence isn't marked higher-assurance via a second source, though the manufacturer page itself is authoritative and internally consistent.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive 9 ft (3.0 m) AC power cord to wall outlet"
+    },
+    {
+      "name": "AC Out 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "One of two duplex AC outlets on the unit, 120VAC/60Hz, up to 12A shared total"
+    },
+    {
+      "name": "AC Out 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "One of two duplex AC outlets on the unit, 120VAC/60Hz, up to 12A shared total"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "manufacturer": "Portkeys",
+  "model": "BM7 II DS",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.portkeys.com/bm7iids/",
+  "confidence": "medium",
+  "notes": "Primary source: manufacturer product page https://www.portkeys.com/bm7iids/ (fetched via tool; the site returns 403 to direct scripted requests/curl, so content was retrieved through an in-tool fetch that got past that block — treat as best-effort manufacturer data, not a manually-verified render). Cross-checked against retailer ezfilmstore.com (https://ezfilmstore.com/product/portkeys-bm7-ii-ds-7-high-bright-monitor-with-wireless-camera-control/) and CVP.com listing text, which independently agree on: 2x 3G-SDI in, 1x 3G-SDI out (with HDMI cross-conversion), 1x HDMI in, 1x HDMI out, 2-pin LEMO DC input (7.4-24V) and separate 5.5x2.1mm locking DC barrel input (7.4-24V, D-Tap-to-barrel cable included), bottom USB-A port for firmware/LUT loading, and a 3.5mm headphone jack. B&H's own product page (https://www.bhphotovideo.com/c/product/1849238-REG/portkeys_bm7_ii_ds_u_7.html) could not be fetched directly (403 Forbidden on repeated attempts) so it was not used as a direct source, though it appeared in search results confirming the same model/URL exists there.\n\nCaveats:\n- Neither HDMI input nor output states an HDMI version (1.4 vs 2.0) anywhere in available source text, so grade was omitted for both per instructions.\n- SDI grade is explicitly stated as \"3G-SDI\" for all three SDI ports (2 in, 1 out).\n- The monitor also has a dedicated wired \"Focus Puller / CAMERA REMOTE\" (motor) port for TILTA Nucleus N/M wireless follow-focus control. Its physical connector type (e.g., 2.5mm jack vs. proprietary multi-pin) is not stated on the manufacturer page and could not be confirmed from any accessible source, so it was OMITTED from the ports list rather than guessed.\n- The \"2-pin LEMO\" DC input's connector id was mapped to the closest available option (dc-barrel) since a dedicated locking 2-pin LEMO id is not in the allowed connector list — this is a notable approximation, not an exact match.\n- Dual Sony NP-F battery plates (rear, hot-swap) exist but are not a signal/power \"port\" in the connector sense and were not included.\n- 2.4GHz WiFi antenna for wireless camera control is a radio, not a physical cable port, and was not included.\n- No confirmation of USB-A speed grade (likely USB 2.0 given its role as a firmware/LUT-loading port, but not stated), so grade omitted.\n- Desktop/handheld on-camera monitor — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI IN 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI IN 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DC IN (2-Pin LEMO)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Physically a locking 2-pin LEMO-style DC connector, not a barrel jack; closest available connector id used since 2-pin LEMO isn't in the allowed list. 7.4-24V input."
+    },
+    {
+      "name": "DC IN (5.5x2.1mm)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 5.5x2.1mm DC barrel input, 7.4-24V, separate from the LEMO input (D-Tap to barrel cable included)."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Bottom-mounted USB-A port for firmware updates and loading 3D LUTs from a USB drive; USB speed grade not stated by manufacturer."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    }
+  ]
+}

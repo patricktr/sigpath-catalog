@@ -1,0 +1,26 @@
+{
+  "manufacturer": "Elgato",
+  "model": "Wave:XLR",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.elgato.com/us/en/p/wave-xlr",
+  "confidence": "medium",
+  "notes": "Elgato's current product page (elgato.com/us/en/p/wave-xlr) now presents this SKU as \"Wave XLR MK.2,\" the updated revision of the original 2020 Wave:XLR; the manufacturer did not keep a separate live spec page for the original model, but the physical I/O (XLR mic in, 3.5mm stereo headphone out, USB-C host connection) is unchanged between the original and MK.2 per available documentation, so this port list should apply to the \"Wave:XLR\" as asked. USB-C is a bus-powered host/data port (powers the device, max 900 mA draw) — no separate power connector exists. No USB speed/version (2.0 vs higher) is stated on the manufacturer spec sheet, so no \"grade\" was set on the USB-C port. Desktop unit, not rack-mountable. Third-party retailer spec pages (B&H, Sweetwater, Crutchfield) returned HTTP 403 and could not be used to cross-verify; confidence is medium because of the MK.2/original naming ambiguity and inability to corroborate via a second retailer source.",
+  "ports": [
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Host I/O",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    }
+  ]
+}

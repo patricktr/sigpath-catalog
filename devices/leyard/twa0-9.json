@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Leyard",
+  "model": "TWA0.9",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.planar.com/media/436602/leyard-twa-series-brochure.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from the official Leyard/Planar TWA Series brochure (PDF, Dec 2018 revision), which includes a dedicated \"Leyard TWA Series Specifications\" table for the TWA0.9/1.2/1.8 models. Confirmed: 0.9375mm pixel pitch, 1280x720 native resolution per 54\" cabinet (1200 x 675 x 100mm, 30kg), 600 nits max brightness, 2x HDMI in / 2x HDMI out (HDCP compliant, max input 1920x1080@60Hz), control via RS232 or Ethernet, 100-240V AC autoranging power with optional dual (redundant) power supplies, 440W max power draw per display. This is a modular flat-panel LED video-wall tile (wall/frame-mounted, not rack-mounted), so rackUnits is omitted. Two things are inferred rather than confirmed, hence \"medium\" confidence: (1) HDMI version — the spec sheet gives max input resolution (1920x1080@60Hz) but never states \"HDMI 1.4/2.0\"; hdmi-1.4 is the closest reasonable inference. (2) Exact physical power-inlet connector — the spec table gives voltage/frequency/redundancy but not a connector photo/callout; \"iec\" was chosen as the closest standard AV connector but is unverified (could instead be a terminal block or region-specific inlet, especially given the \"Dual optional\" power-supply option, which may add a second physical power port not captured here). A secondary retailer listing (Blue Square Power) independently corroborates \"HDMI - Serial - Ethernet\" connectivity and 120V/230V AC input options, consistent with the manufacturer sheet. Product is co-branded \"Leyard\"/\"Planar\" (Leyard Optoelectronics Co., Ltd. / Planar Systems, Inc.) — manufacturer field set to \"Leyard\" per the model naming used in the request.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Spec sheet lists '2x HDMI in' without a stated HDMI version; hdmi-1.4 inferred from the documented max input resolution of 1920x1080@60Hz. HDCP compliant."
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Second of 2x HDMI inputs; version inferred as above."
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Loop-through output for daisy-chaining cabinets; version inferred, not explicitly stated."
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Second of 2x HDMI loop-through outputs; version inferred, not explicitly stated."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Listed as 'Control Input Type: RS232 or Ethernet' on the manufacturer spec sheet; connector style (DB9 vs terminal block) not pictured/specified."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control network input, alternative to RS232. Link speed not stated in spec sheet, so no grade assigned."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Spec sheet: Line Voltage 100-240V AC, 50/60Hz autoranging; Power Supply Single (Dual optional for redundancy). Exact physical power-inlet connector (IEC C14 vs. terminal block) is not shown in the available documentation — iec is the closest/most common choice for this class of equipment and should be verified against the unit or installation manual before use."
+    }
+  ]
+}

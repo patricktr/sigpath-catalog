@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Focal",
+  "model": "Alpha 80 Evo",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.focal.com/products/alpha-80-evo",
+  "confidence": "high",
+  "notes": "Focal Alpha 80 Evo is an active/powered 2-way studio reference monitor (8\" Slatefiber woofer + 1\" aluminum/magnesium tweeter, 80W+35W Class D bi-amp, 106dB max SPL, 38Hz-22kHz). Not rack-mountable (desktop/stand-mounted monitor), so rackUnits omitted. Sold as single unit; a pair or bundle with stands/cables is also offered but doesn't change per-unit I/O. Manufacturer's own product page (focal.com) confirms the three analog inputs (XLR/TRS/RCA, all 10 kOhm) and the 100-240V power supply with T2AL/250V fuse. The IEC inlet + detachable power cord is not spelled out verbatim on the focal.com page itself (which only lists voltage/fuse) but is corroborated independently by multiple authorized dealer spec pages (Sonic Circus, Pitbull Audio, MusicStoreLive, etc.) that mirror Focal's official spec sheet, plus the rear panel photos showing a standard IEC C13-style socket. No grade set on any port since all are analog audio (XLR/TRS/RCA) or AC power, none of which use the bandwidth-graded connector families. Rear panel also has bass/treble shelving-filter switches, input sensitivity switch (0/+6dB), and a power on/off rocker, which are controls, not signal/power ports, so not listed.",
+  "ports": [
+    {
+      "name": "XLR Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced, 10 kOhm"
+    },
+    {
+      "name": "TRS Input",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" jack, 10 kOhm"
+    },
+    {
+      "name": "RCA Input",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced, 10 kOhm, compensated sensitivity"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with detachable power cord, 100-240V~, T2AL/250V fuse"
+    }
+  ]
+}

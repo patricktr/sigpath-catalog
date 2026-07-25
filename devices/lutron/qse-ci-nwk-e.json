@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Lutron",
+  "model": "QSE-CI-NWK-E",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://assets.lutron.com/a/documents/369373_qse-ci-nwk-e_eng.pdf",
+  "confidence": "high",
+  "notes": "Wall/desktop control interface bridging RS232 or Ethernet (10/100 Mbps auto-negotiating; use one or the other, not both) to a Lutron QS wired lighting-control link. All I/O confirmed from the manufacturer's official Specification Submittal (P/N 369373h, rev 04.23.26). No separate DC power jack exists — power arrives over the QS Link terminal block itself (pins 1-2), so that single 4-pin terminal block serves as both the power input and the data link; \"euroblock\" is the closest connector-list match for this pluggable terminal block. Enclosure is 4.25 x 5.25 x 1.0 in, mounts directly to a wall or in an optional LUT-19AV-1U AV rack shelf (holds up to 4 units) or LUT-5x10-ENC enclosure — not itself a fixed rack-unit device, so rackUnits is omitted. Operating power: 24-36 VDC, 65 mA, SELV/PELV/NEC Class 2.",
+  "ports": [
+    {
+      "name": "Ethernet Link",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "QS Link",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-pin terminal block (1: Common, 2: V+, 3: MUX, 4: MUX) — also the unit's sole power inlet; powered via pins 1-2 from a QS power supply/GRAFIK Eye QS unit (do not connect pin 2 if using an external supply). Data pins 3-4 carry the proprietary QS MUX bus to other QS devices."
+    }
+  ]
+}

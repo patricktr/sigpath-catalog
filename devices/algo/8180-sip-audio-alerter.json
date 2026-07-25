@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Algo",
+  "model": "8180 SIP Audio Alerter",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.algosolutions.com/products/8180-sip-audio-alerter/",
+  "confidence": "medium",
+  "notes": "Algo now markets this unit as the \"8180 IP Audio Alerter\" (G2) on its site, though it is widely sold/known as the \"8180 SIP Audio Alerter\" — same device. Desktop/wall-mount unit (7\"x4\"x2.6\", 1.0 lb) with a snap wall-mount bracket; not rack-mountable, so rackUnits omitted. Power is delivered entirely via PoE over the single RJ45 jack — there is no separate power/DC connector. Ethernet speed (100 Mbps) confirmed via the 8180 (G2) User Guide LED description (docs.algosolutions.com), not the main product spec page, which omits port speed. The three analog I/O functions (external speaker, line output, relay in/out) are documented as living on a shared terminal-block strip, but Algo's public spec sheet never names the connector family (e.g. \"Euroblock/Phoenix\"); \"euroblock\" was chosen as the closest listed connector type for a captive-screw terminal block — verify against the physical unit or installation guide diagram if exact part number matters. Built-in omnidirectional talkback/ambient microphone is internal (not a physical connector) and so is not listed as a port. Could not access B&H's spec table directly (403 blocked) to cross-check against a retailer source.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Single RJ45 jack; carries SIP/network traffic and receives PoE (IEEE 802.3af Class 0, 48V, up to 15.4W draw at the source / 12.95W device max). User guide: 'an RJ45 jack for network connection'; amber LED confirms a successful 100 Mbps link."
+    },
+    {
+      "name": "Speaker Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Captive screw/terminal-block output for an external 8Ω horn or ceiling speaker(s), 8W; connecting it disables the internal 3\" driver. Exact connector brand/pitch not stated by Algo — modeled as euroblock (closest listed terminal-block type)."
+    },
+    {
+      "name": "Line Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "High-impedance line-level output, nominal 0dBm into 600Ω, for driving an external amplifier. Shares the same terminal-block strip as the other I/O; connector type inferred as euroblock."
+    },
+    {
+      "name": "Relay I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Dry-contact terminal that is field-configurable as EITHER a supervised NO/NC input (compatible with Algo 1202/1203/1204 accessories or an EOL resistor) OR a relay output (max 30V, 50mA) — the two functions share the same physical pins and only one is active at a time. Modeled as bidirectional because the pins themselves are user-assignable, not because signal flows both ways simultaneously."
+    }
+  ]
+}

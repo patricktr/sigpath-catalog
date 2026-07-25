@@ -1,0 +1,89 @@
+{
+  "manufacturer": "PlayBox Technology",
+  "model": "AirBox",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.manualslib.com/manual/906235/Playbox-Sd-Hd-Server-System.html",
+  "confidence": "low",
+  "notes": "IMPORTANT CAVEAT: AirBox is fundamentally broadcast playout-automation SOFTWARE (confirmed on playboxtechnology.com/airbox-1 and the official AirBox product sheet), not a device with a fixed, manufacturer-published physical I/O spec. It runs on a PC/server and uses third-party capture/output cards (Blackmagic DeckLink, AJA Corvid, etc.) or optional AJA/Blackmagic SDI I/O selected per installation. PlayBox Technology also sold a bundled rackmount hardware appliance running AirBox — documented as the \"PlayBox SD/HD Server System\" / \"Channel in a Box\" — whose Hardware Maintenance Manual (manualslib.com host of the PDF) is the only source found with concrete physical-connector detail, so the port list above reflects that hardware bundle's documented back panel rather than a spec sheet titled \"AirBox.\" Exact SDI I/O card count/configuration is build-to-order and \"may vary slightly\" per the manual's own wording — the 2-in/2-out SDI figures are for one representative I/O card; multi-card configurations add more identical SDI pairs. Could not obtain the manual's rear-panel diagram/table pages directly (PDF text extraction failed; relied on an AI-summarized excerpt of a third-party manual host), so treat exact port counts and the inferred connector types (AES/EBU as BNC, GPI as HD-15/VGA-shaped, power as IEC) as unverified. The newer \"AirBox Neo\" hardware line adds NDI, UHD/HD/SD SDI, and AJA/Blackmagic card options per pbteu.com/playboxneo.com, but no detailed rear-panel connector spec could be confirmed for it either. Given all this, treat this as a best-effort composite reconstruction, not an authoritative datasheet — recommend contacting PlayBox Technology/PBT directly for a verified spec sheet if precise port counts are needed. Rack unit height could not be confirmed and was omitted.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "2-channel unbalanced AES/EBU digital audio; manual specifies 'unbalanced' which implies 75-ohm BNC rather than XLR AES3"
+    },
+    {
+      "name": "AES/EBU Audio Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "2-channel unbalanced AES/EBU digital audio"
+    },
+    {
+      "name": "RS-232 (device control)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "GPI I/O",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "HD-15 (DE-15) breakout for optocoupled GPI inputs and relay GPI outputs — not a video port; mapped to VGA/HD-15 connector shape since no GPI-specific id exists"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit support inferred from documented LED behavior (amber = 1Gbps), not an explicit spec statement"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Same as LAN 1"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "VGA (local monitor)",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Connector type inferred from typical rackmount server PSU design; not explicitly confirmed in the source excerpts obtained"
+    }
+  ]
+}

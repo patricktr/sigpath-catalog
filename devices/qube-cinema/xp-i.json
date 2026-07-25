@@ -1,0 +1,107 @@
+{
+  "manufacturer": "Qube Cinema",
+  "model": "XP-I",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qubecinema.com/products/xi",
+  "confidence": "medium",
+  "notes": "Qube Cinema markets this as a two-part system titled \"Qube Xi with Qube XP-I | 4K Integrated Media Block\" (product page: qubecinema.com/products/xi; matching brochure PDF: qubecinema.com/sites/default/files/Qube_XP-I_Dual_0.pdf). The \"Qube Xi\" is a small Integrated Media Block (IMB) card that plugs directly into a Series-2 DLP Cinema projector; the \"Qube XP-I\" is the separate 2U rack-mount RAID storage/streaming server (3-8TB hot-swap RAID) that feeds content to one or more Xi IMBs over Gigabit Ethernet. Qube's only published detailed \"Technical Specifications\" table is explicitly titled for the Xi IMB and lists: Gigabit Ethernet RJ-45 x2, USB 2.0 x2, AES3 digital audio out (RJ-45) x2, optional Sync In/Out BNC x2, optional 3Gbps HDSDI in BNC x4, optional Linear Timecode Out BNC x1 - product photography confirms these ports are physically on the small Xi card, not the XP-I chassis. Qube does not publish a separate rear-panel port table for the XP-I server itself. The XP-I's dual redundant AC power supplies and 2U rack form factor are corroborated only by secondary trade/customs listings (\"QUBE XP-I SERVER DUAL REDUNDANT POWER SUPPLIES\", Zauba.com; \"2U RACK MOUNT COMPUTER SERVER (QUBE XP-I)\", Zauba.com) rather than Qube's own documentation, so those two AC-In ports and the rack-unit figure are lower-confidence than the rest. The XP-I server likely also has local console/KVM ports (USB, VGA/DVI) typical of rack servers, but these are unconfirmed by any source and are omitted rather than guessed. Because Qube bundles Xi+XP-I as one system without cleanly separating per-chassis I/O, the port list above should be read as \"documented for the combined Xi/XP-I system\" rather than strictly isolated to the XP-I box.",
+  "ports": [
+    {
+      "name": "AC In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant PSU inlets on the XP-I 2U server chassis; exact IEC variant (C13/C14) not published by Qube, inferred from customs/import trade records describing dual redundant PSUs."
+    },
+    {
+      "name": "AC In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second redundant PSU inlet (see AC In 1)."
+    },
+    {
+      "name": "Gigabit Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Gigabit Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant/second Gigabit Ethernet link, used to connect the XP-I server to Qube Xi Integrated Media Block(s)."
+    },
+    {
+      "name": "USB 2.0 Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "AES3 Digital Audio Out 1",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES3 digital audio carried over RJ-45 (not Ethernet data)."
+    },
+    {
+      "name": "AES3 Digital Audio Out 2",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "AES3 digital audio carried over RJ-45 (not Ethernet data)."
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Optional; for multi-IMB sync (dual/quad projector 3D)."
+    },
+    {
+      "name": "Sync Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Optional; for multi-IMB sync (dual/quad projector 3D)."
+    },
+    {
+      "name": "HD-SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Optional quad 3G-HDSDI uncompressed input for 4K/2K/HD/3D."
+    },
+    {
+      "name": "HD-SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Optional quad 3G-HDSDI uncompressed input."
+    },
+    {
+      "name": "HD-SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Optional quad 3G-HDSDI uncompressed input."
+    },
+    {
+      "name": "HD-SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Optional quad 3G-HDSDI uncompressed input."
+    },
+    {
+      "name": "Linear Timecode Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Optional LTC output."
+    }
+  ]
+}

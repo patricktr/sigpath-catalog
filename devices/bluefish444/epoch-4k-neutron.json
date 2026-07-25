@@ -1,0 +1,102 @@
+{
+  "manufacturer": "Bluefish444",
+  "model": "Epoch | 4K Neutron",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.bluefish444.com/products/professional-cards/specifications/1-epoch-neutron-range/2-epoch-4k-neutron.html",
+  "confidence": "high",
+  "notes": "Modeled on the full-height EB3006C SKU (\"Epoch | 4K Neutron with External Audio I/O and RS-422\"), the primary/most complete configuration commonly sold under this product name (e.g. B&H #EB3006C, $2,795). Two other shield variants exist with different breakout: EB3006B (full-height, dedicated auxiliary reference-input BNC only, no AES/analog/RS-422 breakout) and EB3006F (Epoch | 4K Neutron LP, low-profile, HDMI output only, no breakout cable support at all). Physical card: half-length, full-height 4-lane PCIe (Gen1, 8/16-lane slot compatible), 185mm x 120mm, ~220g — no external power connector; it is bus-powered entirely from the PCIe slot, so no power port is listed. Breakout-cable connector counts (4x BNC AES in, 4x BNC AES out, 2x RCA analog out, 1x RS-422 DB-9, 1x BNC aux genlock) are individually confirmed via the Bluefish444 End User Manual (Neutron range) breakout-cable pinout table, cross-checked against the manufacturer's official spec/feature pages and the B&H Photo product listing/spec sheet. HDMI version (1.4A) is stated on B&H's spec sheet; the manufacturer's own spec page does not give an explicit HDMI version number but confirms 4K/UHD output up to 30fps, consistent with HDMI 1.4. SDI grade (3G, Level A+B) is confirmed directly on the manufacturer spec table.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Bidirectional 3G(Level A+B)/HD/SD-SDI; independently configurable as input or output. Any of the 3 BNCs can instead be set as the primary reference/genlock input."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI Monitor Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Simultaneous 4K/UHD (up to 30fps) / 2K/HD/SD monitoring output; B&H spec sheet lists it as HDMI 1.4A."
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "DB-9 machine-control port for VTR/serial device control, supplied via the breakout cable (full-height EB3006C variant only)."
+    },
+    {
+      "name": "AES/EBU Audio In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Unbalanced AES3-id digital audio over BNC, via breakout cable; part of a 4x BNC input group (8 channels total)."
+    },
+    {
+      "name": "AES/EBU Audio In 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio In 3",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio In 4",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Unbalanced AES3-id digital audio over BNC, via breakout cable; part of a 4x BNC output group (8 channels total)."
+    },
+    {
+      "name": "AES/EBU Audio Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio Out 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Audio Out 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Analog Audio Out L",
+      "direction": "output",
+      "connector": "rca",
+      "note": "2-channel -10dBu unbalanced analog monitoring output via breakout cable (output only, no analog input)."
+    },
+    {
+      "name": "Analog Audio Out R",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Auxiliary Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Dedicated bi-level/tri-level genlock/reference input via breakout cable, frees the 3rd SDI BNC for video I/O."
+    }
+  ]
+}

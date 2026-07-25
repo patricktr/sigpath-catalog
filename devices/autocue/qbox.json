@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Autocue",
+  "model": "QBox",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://cvp.com/pdf/QBox-Datasheet(100903).pdf",
+  "confidence": "high",
+  "notes": "Sourced from Autocue's own manufacturer datasheet PDF (hosted by pro-AV dealer CVP.com), which includes a high-resolution labeled rear-panel photo confirming exact port names/layout, plus a specs table (Controller Input: Serial; Video Outputs: 3x Composite (BNC), VGA, SDI (optional); Data Inputs: Ethernet, USB, PS2 keyboard; Power Input: 12V DC via 1x 4-pin XLR). An SDI video output is available as a factory-fit option but is not present on the standard unit shown in the labeled photo, so it was not added as a physical port. A small \"WiFi\" icon appears on the rear panel next to the composite outputs; this appears to be an integrated wireless module indicator rather than a discrete external-antenna port, so it was not added as a port. No connector id in the provided list matches a PS/2 mini-DIN keyboard jack; \"midi-din\" (closest DIN-family id) was used for the \"Keyboard\" port as an approximation — flag if a more precise id should be added. Neither Ethernet speed nor USB version is stated on this datasheet, so no \"grade\" was set on LAN/USB ports per instructions. This device is not rack-mountable (compact desktop chassis with a carry handle), so rackUnits was omitted. Category/type were approximated as source/\"Media player\" — QBox is technically a dedicated teleprompter \"scroll engine\" (receives script/control data, outputs prompter video), a niche function with no exact match in the provided type enum; \"Control processor\" is a plausible alternate type if a control-oriented classification is preferred. Note: Autocue later sold a redesigned \"QBox V6\" (per Markertek/CVP-independent retailer listings) with a different port set — 2x HD-SDI out, RJ45 in + RJ45 out, 2x USB2, 12V DC barrel-style aux input, and no VGA/composite/keyboard ports — this response covers the original \"QBox Prompt Engine\" pictured/labeled in the Autocue datasheet, not the V6 variant.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR, 12V DC (Pin 1: Return, Pin 4: +12V/3A DC)"
+    },
+    {
+      "name": "Keyboard",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Purple PS/2 mini-DIN keyboard input for configuration; closest available connector id used, actual connector is 6-pin mini-DIN (PS/2), not MIDI"
+    },
+    {
+      "name": "RS-232",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Labeled 'Controller Input' on spec sheet (DB9 serial, scroll controller input)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet, wired or wireless (WiFi) per datasheet; speed not stated"
+    },
+    {
+      "name": "USB (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for loading scripts via USB data key"
+    },
+    {
+      "name": "USB 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "VGA",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Video output to prompter monitor"
+    },
+    {
+      "name": "Composite Video Output 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Panel silkscreen reads 'COMPOSIT VIDEO OUTPUTS 1'"
+    },
+    {
+      "name": "Composite Video Output 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Composite Video Output 3",
+      "direction": "output",
+      "connector": "bnc"
+    }
+  ]
+}

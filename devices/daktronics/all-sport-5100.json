@@ -1,0 +1,65 @@
+{
+  "manufacturer": "Daktronics",
+  "model": "All Sport 5100",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.manualslib.com/manual/2288208/Daktronics-All-Sport-5100.html?page=80",
+  "confidence": "medium",
+  "notes": "Daktronics All Sport 5100 is a tabletop rodeo/motorsports timing and scoring control console (part of the All Sport 5000 Series), not a typical AV signal-routing device - it has no HDMI/SDI/USB/Ethernet; instead it uses D-sub serial ports and current-loop/relay signaling to drive fixed-digit scoreboards and accept photocell/transponder timing inputs. Dimensions 4.25\"H x 16.25\"W x 9\"D, weight 7-7.5 lb, desktop unit (no rackUnits). Two official manufacturer spec sheets were found and used to corroborate dimensions/power: \"All Sport 5100 Motorsports Product Specifications\" (SL-04357, 2018, https://www.daktronics.com/web-documents/hspr-documents/sl04357.pdf) and \"All Sport 5100 Rodeo Timer Product Specifications\" (SL050906-04439, https://cdn-docs.av-iq.com/dataSheet/SL04439.pdf) - neither lists rear-panel connector detail. The definitive port list/pinout came from Daktronics' own factory engineering drawing \"REAR VIEW, A/S 5100 CONNECTOR ASSIGNMENTS\" (Dwg. 1196-R04A-124632, Rev 04), which is bundled into the All Sport 5100 Operation Manual (ED-12501) and was located as a page image on ManualsLib (page 80 of the hosted manual). The connector taxonomy provided for this task has no generic D-sub (DB9/DB15/DB25) or RJ11/RJ12 identifiers, so those physical connectors were approximated to the closest available ids (\"rs232\" for all D-sub serial ports, \"rj45\" for the two small modular switch jacks) - see per-port notes for the real connector shape. No SDI/HDMI/USB/network/audio-video grade applies to any port on this device, so \"grade\" was omitted throughout. Manufacturer part number on the reviewed nameplate is Assy 0A-1196-0002 (5100, 120V) vs 0A-1196-0006 (5120, 230V) - only the 5100 variant's ports were reported here, though J1-J8 are identical between the two SKUs (only mains voltage/plug differs).",
+  "ports": [
+    {
+      "name": "Scoreboard Output 1 (J1)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Current-loop output (Tip=CL+, Ring=CL-, Shaft=GND) to fixed-digit scoreboard; drawn as a phone-style jack, exact diameter not printed on drawing (assumed 1/4\" based on Daktronics convention)."
+    },
+    {
+      "name": "Scoreboard Output 2 (J2)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Same as J1."
+    },
+    {
+      "name": "Scoreboard Output 3 (J3)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Same as J1."
+    },
+    {
+      "name": "Main Clock Start/Stop/Horn Switch (J4)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual connector is a 6-pin modular (RJ12/6P6C-style) jack for switch inputs + relay output; taxonomy has no RJ11/RJ12 option so mapped to closest (rj45, 8P8C) - physically smaller."
+    },
+    {
+      "name": "Computer I/O Port (J5)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-sub (DB9) carrying RS-232 TX/RX plus current-loop TX/RX for 'Port 4'."
+    },
+    {
+      "name": "Main Output and Input Port (J6)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "25-pin D-sub (DB25) - carries RS-232, RS-485+/-, multiple current-loop outputs/inputs, switch input, relay output, and 10VAC/DC input; taxonomy has no DB25 option so mapped to rs232 as closest single id."
+    },
+    {
+      "name": "Shot/Play Clock Start/Stop/Reset Switch (J7)",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "6-pin modular (RJ12-style) jack, all pins are switch inputs; same connector caveat as J4."
+    },
+    {
+      "name": "Switch Inputs (J8)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "15-pin D-sub (DB15) female - 9 switch inputs, relay common/NO/NC, and a current-loop output; taxonomy has no DB15 option so mapped to rs232 as closest single id."
+    },
+    {
+      "name": "120V AC Power In (P41)",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive/hardwired AC cord (not a detachable IEC inlet) terminating in a standard US plug. Nameplate on the referenced drawing shows this 'All Sport 5100' SKU as 120VAC/5W; a separate 'All Sport 5120' SKU is 230VAC/5W via its own captive cord (J41). Current Daktronics datasheet (SL-04357, 2018) instead lists a combined 120/240VAC, 6W rating."
+    }
+  ]
+}

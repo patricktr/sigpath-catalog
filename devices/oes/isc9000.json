@@ -1,0 +1,71 @@
+{
+  "manufacturer": "OES",
+  "model": "ISC9000",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.oes-inc.com/app/uploads/sites/2/2025/09/ISC9000-UserManual_J12_1.3.pdf",
+  "confidence": "high",
+  "notes": "OES ISC9000 is a portable/tabletop \"Intelligent Scoreboard Controller\" (a sports-scoring keypad console), not a conventional AV signal device — treated here as a control processor since that is the closest category fit. It is a desktop clamshell unit (320x210x100mm, 2kg / 4.4lb), not rack-mountable, so rackUnits is omitted. Manufacturer is OES Inc. (London, Ontario, Canada; brand \"OES Scoreboards\"). Ports were taken from the \"INTERFACE DETAILS\" section of the official user manual (back panel pictured is the ISC9000-PR hardwired variant, front-panel label \"PRO\"). Several ports/connectors vary by model: ISC9000-X9 (900MHz wireless) and ISC9000-X2 (2.4GHz wireless) add an RF antenna connector (SMA-type, not in the provided connector taxonomy so omitted from the port list); ISC9000-IP adds the RJ45 Ethernet/Wi-Fi port; ISC9000-CX adds the BNC \"OES Coax\" output — the base hardwired unit does not have these two. No bandwidth-graded connectors apply: all data ports use RS232/RS485/USB-B for low-rate scoreboard telemetry and the manual states no version/speed for USB or Ethernet, so grade was omitted throughout. The 4-pin XLR \"GAME OUT\" port carries RS485 data (not audio, not DC power) — connector id \"xlr4\" was used as the closest physical match per the instructions, since it is the correct shell but not an audio or DC circuit. Power input is an IEC inlet (label reads \"100-230VAC\" / \"1A SLO-BLO\"), mapped to connector id \"iec\". Manufacturer spec sheet (https://www.oes-inc.com/app/uploads/sites/2/2025/10/Controllers-ISC9000.pdf) only lists high-level specs (weight, connection options, display, construction) with no connector detail; the full port/pinout table came from the official user manual PDF cited as sourceUrl.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Labeled \"100-230VAC\" / \"1A SLO-BLO\"; back-panel IEC power inlet, 100-230VAC 50-60Hz, 1A SLO-BLO fuse"
+    },
+    {
+      "name": "REMOTE 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Software-configurable wired remote input (footswitch/buzzer, etc.)"
+    },
+    {
+      "name": "REMOTE 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Software-configurable wired remote input"
+    },
+    {
+      "name": "9000 IN",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "RS485 2-wire controller-to-controller data bus (multi-controller MASTER/SLAVE setups)"
+    },
+    {
+      "name": "9000 OUT",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "RS485 2-wire controller-to-controller data bus, daisy-chain continuation"
+    },
+    {
+      "name": "GAME OUT (Game Port 1)",
+      "direction": "output",
+      "connector": "rs485",
+      "note": "RS485 2-wire game-data output to scoreboard; XLR shell is data, not audio or DC power"
+    },
+    {
+      "name": "GAME OUT (Game Port 2)",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "DB9 male, RS232 DTE, 9600 baud; pin 3 data out, pin 2 data-in reserved for diagnostics only"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB B connector for diagnostics and firmware upgrades"
+    },
+    {
+      "name": "Ethernet / Wi-Fi",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45; optional, only present on ISC9000-IP variant; not shown on standard back panel"
+    },
+    {
+      "name": "OES Coax",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Optional proprietary coax scoreboard-data output, only present on ISC9000-CX variant; not shown on standard back panel"
+    }
+  ]
+}

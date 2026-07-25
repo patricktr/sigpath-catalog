@@ -1,0 +1,31 @@
+{
+  "manufacturer": "Pliant Technologies",
+  "model": "CBP-24",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://plianttechnologies.com/product/crewcom-flex-four-channel-wired-beltpack/",
+  "confidence": "high",
+  "notes": "CBP-24 is Pliant Technologies' CrewCom Flex four-channel wired intercom beltpack (part of the CrewCom Flex frameless IP intercom platform, launched at InfoComm 2026). Physical I/O was read directly off manufacturer product photography on the official product page (bottom panel labeled \"Headset\", \"PGM Vol\", \"Primary (PoE) 100BT\", \"Secondary 100BT\"). \"PGM Vol\" is a rotary volume knob (control), not a connector, so it is not listed as a port. The device has built-in mic/speaker for hands-free use and a network-delivered \"auxiliary program\" audio feed — there is no physical aux audio jack. Power is PoE/PoE+ delivered over the Primary Ethernet port; the device has no separate power connector, so no standalone power port is listed. Connector-id caveats: the schema has no generic 4-pin-XLR audio id, so xlr4-dc was used as the nearest physical match for the XLR-4M headset jack (not an actual DC power use); the two Ethernet ports show a locking-collar/latch typical of etherCon, so \"ethercon\" was chosen over plain \"rj45\" — treat this specific choice as a visual inference. Grade \"eth-100m\" is directly confirmed by the \"100BT\" (100Base-T) panel labeling. No dimensions, weight, or rack info are published on the manufacturer page (this is a desktop/wearable beltpack, not rack-mountable). A companion 2-channel model, CBP-22, also exists in the same family.",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4",
+      "note": "Industry-standard XLR-4M headset jack (mic in + speaker out combined on one 4-pin XLR male)."
+    },
+    {
+      "name": "Primary (PoE) 100BT",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Ethernet port with visible metal locking collar/latch consistent with a ruggedized etherCon-style RJ45 (standard RJ45 cables also mate). This port also supplies PoE/PoE+ power to the beltpack — there is no separate power inlet on the unit."
+    },
+    {
+      "name": "Secondary 100BT",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Second Ethernet port, same ruggedized-RJ45 style, used for daisy-chaining beltpacks (up to 3 units) or downstream devices."
+    }
+  ]
+}

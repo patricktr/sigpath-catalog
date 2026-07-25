@@ -1,0 +1,108 @@
+{
+  "manufacturer": "RODE",
+  "model": "RODECaster Pro II",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://rode.com/en-us/products/rodecaster-pro-ii",
+  "confidence": "medium",
+  "notes": "Sourced primarily from RODE's own official product page (rode.com/en-us/products/rodecaster-pro-ii), which includes a full \"Specifications\" table (Acoustic & Electrical / Mechanical). Confirmed: 4x Neutrik combo (XLR/TRS) analog inputs (mic/line/instrument), 4x 1/4\" (6.35mm TRS) high-power headphone outputs, 2x balanced 1/4\" (6.35mm TRS) line outputs, Bluetooth audio (Music + Headset profile — not a physical port, omitted), WiFi 802.11g/n/ac (not a physical port, omitted), and \"3 USB Interfaces\" total. Power is supplied via USB-C PD (30W, 15V/2A) using RODE's own \"RCPII Power Adaptor\" accessory (confirmed via product image: adaptor terminates in a USB-C plug, no barrel/IEC connector) — modeled here as a dedicated USB-C power port distinct from the two USB-C data ports (USB1/USB2), consistent with the \"3 USB Interfaces\" spec count. USB1 and USB2 data modes (multichannel vs. mix-minus) are quoted verbatim from the spec table; RODE does not publish the USB generation/speed (2.0 vs 3.x) for these two ports, so grade was omitted per instructions rather than guessed. The device also has a microSD/microSDXC card slot and supports a USB-C removable drive for recording storage — omitted here as there is no matching connector id in the allowed list and it is a storage slot rather than a signal/power I/O connector. The Ethernet port is the weakest-confidence item: RODE's spec table lists \"Ethernet 100/1000\" under Network Connectivity and the product's own connectivity diagram shows a wired-network icon alongside WiFi, and a physical RJ45 jack was corroborated via a third-party spec listing (Equipboard) since RODE's own support/manual site (support.rode.com) was unreachable from this environment (DNS/navigation blocked) and web search quota was exhausted mid-task, so this could not be independently double-checked against RODE's manual. No rack-mount option — it's a desktop unit, so rackUnits is omitted. Model field \"RODECaster Pro II\" inherently contains \"RODE\" as part of the product line name (RODECaster); this is the actual registered product name, not a manufacturer-name duplication error.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack; mic/line/instrument"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack; mic/line/instrument"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack; mic/line/instrument"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Neutrik combo jack; mic/line/instrument"
+    },
+    {
+      "name": "Headphones 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "High-power 1/4-inch headphone output"
+    },
+    {
+      "name": "Headphones 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "High-power 1/4-inch headphone output"
+    },
+    {
+      "name": "Headphones 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "High-power 1/4-inch headphone output"
+    },
+    {
+      "name": "Headphones 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "High-power 1/4-inch headphone output"
+    },
+    {
+      "name": "Line Out L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4-inch line output"
+    },
+    {
+      "name": "Line Out R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4-inch line output"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Main computer connection; 2-in/16-out multichannel audio interface or 2-in/2-out with mix-minus. USB generation/speed not stated by manufacturer."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Second device connection; 2-in/2-out with mix-minus (e.g. phone call-in, second computer). USB generation/speed not stated by manufacturer."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "USB-C Power Delivery input, 30W (15V/2A), via included USB-C power adaptor — not a separate barrel/IEC jack"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Wired network (100/1000 Mbps) for RODE CallMe / RODE Connect. Physical RJ45 jack confirmed via third-party listing (Equipboard), not itemized on rode.com's own spec table; grade inferred from '100/1000' spec text."
+    }
+  ]
+}

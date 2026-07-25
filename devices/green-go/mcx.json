@@ -1,0 +1,62 @@
+{
+  "manufacturer": "Green-GO",
+  "model": "MCX",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://manual.greengoconnect.com/en/devices/mcx/",
+  "confidence": "high",
+  "notes": "Primary source: Green-GO's own official product documentation (manual.greengoconnect.com/en/devices/mcx/), cross-checked against the manufacturer product page (greengocom.com/products/mcx) and the Canford UK retailer spec page. Unit is a 1U, 19\" rack station, 110mm deep, with a built-in 2W loudspeaker and 3 TFT touchscreens (not physical connectors, omitted from port list). Two ambiguities from the manufacturer's own text are noted per-port above: (1) the headset jack is physically a 4-pin XLR, which has no exact match in the provided connector-id list — xlr5 was chosen as the closest available id, not xlr4-dc (that id is reserved for DC power, not audio signal); (2) the manual's back-panel section header labels genders opposite to its own prose for the two line I/O XLR3 jacks — resolved using the heading text plus standard pro-audio convention (female=input, male=output). The GPIO connector is a D-Sub9 but carries simple opto-isolated contact closures, not RS232 serial data; rs232 was used only as the closest DB9-shaped id in the list. No bandwidth/version grade is stated for the XLR3 audio jacks (standard balanced analog), so grade was omitted there per instructions; the two EtherCON ports are graded eth-100m since the built-in switch is explicitly 10/100 Mbps. One retailer page (Adorama) describes the mic input as \"48V phantom power,\" but the manufacturer's own manual specifies mic power up to 10V — the manufacturer figure was used.",
+  "ports": [
+    {
+      "name": "MIC",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Front-panel Neutrik XLR3-Female gooseneck mic input; optionally supplies up to 10V mic power"
+    },
+    {
+      "name": "HEADSET",
+      "direction": "bidirectional",
+      "connector": "xlr4",
+      "note": "Front-panel Neutrik XLR4-Male headset jack (mic + return audio combined on one 4-pin XLR)"
+    },
+    {
+      "name": "Line-Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Rear balanced analog line input for injecting audio into a group; manufacturer manual lists this jack as XLR3-Female in its heading but the prose description swaps the gender (says 'male') — going with the heading and standard pro-audio convention (input=female)"
+    },
+    {
+      "name": "Line-Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear balanced analog line output for extracting audio from a group; same heading/prose gender discrepancy as Line-Input, resolved the same way (output=male)"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Neutrik EtherCON, part of built-in 2-port 10/100Mbps switch; accepts PoE IEEE 802.3af and is the primary power input"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Neutrik EtherCON, second port of the built-in 10/100Mbps switch; unpowered (no PoE)"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9 connector providing 2 opto-isolated inputs and 2 outputs for external control; not actually RS232 serial data — rs232 chosen only because it is the closest DB9-shaped connector in the given list"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC barrel jack; secondary power input, used with optional external Green-GO 12V DC power supply when PoE is not used on LAN 1"
+    }
+  ]
+}

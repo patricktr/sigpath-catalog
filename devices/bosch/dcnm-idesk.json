@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Bosch",
+  "model": "DCNM-IDESK",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://resources.keenfinity.tech/public/documents/DCNM_IDESK_Data_sheet_enUS_43390663435.pdf",
+  "confidence": "high",
+  "notes": "Official Bosch Security Systems datasheet (DICENTIS conferencing line), order no. F.01U.314.659, rev V17 (Dec 2025), footer credits boschsecurity.com / © Bosch Security Systems 2025 — hosted on resources.keenfinity.tech because Bosch's Building/Communications Systems business (Bosch Building Technologies) was spun off into the independent Keenfinity Group in 2025; boschsecurity.com itself now redirects there. Desktop tabletop unit, not rack-mountable (rackUnits omitted). Power: 48 VDC via PoE+ (802.3at Class 4), 15 W consumption — delivered through either RJ45 port, no separate DC/AC power inlet exists. A video variant, DCNM-IDESKVID, adds an HDMI output for a third-party screen — not included here since this entry is for the base DCNM-IDESK. No SDI/HDMI/DP/USB-speed/Ethernet-speed values are stated in the datasheet for this base model, so no bandwidth grades were set on any port.",
+  "ports": [
+    {
+      "name": "Headphone/Headset Jack (left side)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm TRRS socket; stereo headphone/loudspeaker output plus microphone input when a headset is plugged in. TRRS is not a distinct id in the allowed list, so 4-conductor trs-3.5 was used as the closest match."
+    },
+    {
+      "name": "Headphone/Headset Jack (right side)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm TRRS socket; same function as the left-side jack."
+    },
+    {
+      "name": "Headphone/Headset Jack (bottom side)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5 mm TRRS socket; same function as the left-side jack."
+    },
+    {
+      "name": "System Network 1 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "DICENTIS system network connection; also serves as the power input via PoE+ (IEEE 802.3at Class 4, 48 VDC, 15 W). Used for loop-through cabling with DICENTIS system cables or star cabling with Cat 5e+ and a PoE+ switch. Link speed not stated in the datasheet, so no grade was set."
+    },
+    {
+      "name": "System Network 2 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ45 for loop-through DICENTIS system cabling / PoE+ power, identical function to Network port 1."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled 'USB connector (for future use)' in the datasheet, e.g. for the DCNM-IDESKINT on-air/telephone interface accessory. Exact USB connector type (A/C/Micro) and speed are not stated; usb-a assumed as the most common desk-unit USB port and grade omitted since no speed is given."
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Proprietary Bosch pluggable connector for the DCNM-MICS (short) / DCNM-MICL (long) gooseneck microphones, sold separately. Not a true XLR; xlr3 chosen as the closest listed 3-pin mic-level connector."
+    }
+  ]
+}

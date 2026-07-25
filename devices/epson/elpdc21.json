@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Epson",
+  "model": "ELPDC21",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://files.support.epson.com/pdf/elpdc21/elpdc21ug.pdf",
+  "confidence": "high",
+  "notes": "Source: official Epson ELPDC21 Document Camera User's Guide (files.support.epson.com/pdf/elpdc21/elpdc21ug.pdf), \"Interface\" (p.14) and \"Specifications\" (p.58-59) sections. Desktop unit (folded 375x122x120mm / open 270x328x502mm, ~3.0kg) — rackUnits omitted, not rack-mountable. Power: external AC adapter input 100-240VAC 50/60Hz into the adapter, adapter outputs 12VDC to the camera's DC-in barrel jack (labeled \"Power (AC adapter/DC In)\" on the unit) — modeled as a single dc-barrel input port representing that DC connection. Computer In / Display Out are both Mini D-Sub15-pin (VGA); Display Out passes through live/SD-card images up to 1080p (SXGA/XGA/WXGA/HD/1080p), no audio. HDMI port is output only (spec: \"Output: SDTV(480p)/HDTV(720p,1080p)\"), HDMI-CEC supported; the manual does not state an HDMI version number (1.4/2.0/2.1), so grade was omitted per instructions — resolution ceiling of 1080p is consistent with HDMI 1.4 but this is inferred, not confirmed. USB-B connects to a host computer for camera control and image/video transfer via bundled software; manual explicitly states \"USB 2.0 is supported\" (grade usb-2.0 confirmed); marked bidirectional per USB host-port convention even though physically a USB-B (device-side) receptacle. Not modeled: SD card slot (SD/SDHC, on-board storage/slideshow — no matching connector type in the given enum) and the built-in monaural microphone (internal, not an external port).",
+  "ports": [
+    {
+      "name": "Power (AC Adapter/DC In)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "Computer In",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Display Out",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    }
+  ]
+}

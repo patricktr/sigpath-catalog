@@ -1,0 +1,123 @@
+{
+  "manufacturer": "Tieline",
+  "model": "ViA",
+  "category": "audio",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "http://www.tieline.com/manuals/TLF5300/en/v2_16/external_connections.htm",
+  "confidence": "high",
+  "notes": "Manufacturer SKU is TLF5300, marketed as \"ViA\" / \"ViA Field Portable Audio Codec\" (Tieline: The Codec Company). Portable/desktop field unit (135mm W x 80mm H x 200mm D, ~1.62kg) — not rack mountable, so rackUnits omitted. Connector list drawn from Tieline's own online ViA v2.16 user manual (External Connections page) and cross-checked against Broadcast Supply Worldwide's ViA spec listing (bswusa.com) and B&H search-cached specs, which agree on 3x female XLR mic/line inputs, 2x male XLR outputs, 3x 6.35mm headphone jacks, dual Gigabit Ethernet, 2x USB 2.0 host ports, and 12VDC/3A external power. The current shipping manual (v5.1, PDF at tieline.com) was too large to fetch directly, so panel layout/labels are taken from the v2.16 HTML manual; core I/O counts and types match the current product page and retailer listings, so this is unlikely to have changed, but minor label/firmware differences vs. the very latest hardware revision (or the optional ViA Global dual-SIM LTE variant) cannot be fully ruled out. Omitted non-signal/power items: internal battery bay (proprietary slot, not an external connector), SD card slot (storage, no cable), and the rear expansion module slot (accepts optional ISDN or POTS module — not populated by default). DB15 Control Port has no exact match in the allowed connector list (nearest D-sub family match \"rs232\" used instead — flagged per-port). AES3/AES42 capability is layered on the Input 1 XLR jack rather than being a separate connector, so no dedicated \"aes3\" connector id was used.",
+  "ports": [
+    {
+      "name": "Input 1 (Mic/Line/AES3/AES42)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR; channel 1 also accepts AES3 stereo digital or AES42 mono digital microphone signal on the same jack"
+    },
+    {
+      "name": "Input 2 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR, analog mic/line"
+    },
+    {
+      "name": "Input 3 (Mic/Line)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR, analog mic/line"
+    },
+    {
+      "name": "Headphone 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone 3",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Stereo Line In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, balanced analog line output"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, balanced analog line output"
+    },
+    {
+      "name": "USB Audio I/O",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro-USB stereo digital audio in/out; alternate aux path to Stereo Line In / S/PDIF (only one aux input active at a time)"
+    },
+    {
+      "name": "USB 1 (Host)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For attaching a supported cellular modem or USB keyboard"
+    },
+    {
+      "name": "USB 2 (Host)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For attaching a supported cellular modem or USB keyboard"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin female D-sub (DB9); local/remote serial control"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out (Output 3 Aux)",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary network connection"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Backup/failover network connection"
+    },
+    {
+      "name": "Control Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical connector is a 15-pin D-sub (DB15) carrying 4 relay inputs + 4 opto-isolated logic outputs for machine control. DB15 is not in the provided connector list; RS232 (D-sub family) used as closest approximation — this is NOT literally an RS232 serial port."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin male XLR; external 12VDC 3A power supply. Unit also runs on an internal removable RRC2057 Li-ion battery pack (no external connector)."
+    }
+  ]
+}

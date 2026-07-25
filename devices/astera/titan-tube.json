@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Astera",
+  "model": "Titan Tube",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://astera-led.com/products/titan/specs/",
+  "confidence": "high",
+  "notes": "Astera Titan Tube (FP1) is a battery-powered LED tube light, not a traditional signal/power AV rack device — category/type set to \"other\" as the closest fit. Its only physical connector is a single DC Input jack (24VDC-2A, manufacturer-specified as 5.5mm x 2.1mm), mapped to dc-barrel. This connector carries Astera's proprietary combined power+data signal over one \"Power/Data Combination Cable\" — there is no separate DMX/XLR port on the tube itself; wired DMX is only exposed via external accessory interface boxes (FP1-PWB / FP3-DTL / PWB-2-86), which are separate products and were not included here. No grade applies to dc-barrel per spec rules. Not rack-mountable (rackUnits omitted). Wireless control (built-in CRMX/LumenRadio receiver, IR remote receiver; FP1-BTB variant adds Bluetooth/WiFi) uses no physical jack so is omitted from ports. IP65 rating only applies with the optional FP1-SP silicone sleeve accessory, not standalone.",
+  "ports": [
+    {
+      "name": "DC Input",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

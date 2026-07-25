@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Accsoon",
+  "model": "CineView HE",
+  "category": "converter",
+  "type": "Extender",
+  "sourceUrl": "https://accsoon.com/cineview-he/",
+  "confidence": "medium",
+  "notes": "Kit consists of one transmitter (TX) and one receiver (RX); ports are prefixed accordingly. Both units also have a rear Sony NP-F battery lock/mount for battery power, but this is a mechanical battery slide-mount rather than a cable connector, so it is not represented as a port. Neither HDMI nor USB-C speed/version grades are stated anywhere in manufacturer materials (only resolution/frame-rate: 1080p up to 60fps) or the user manual, so grade is omitted on all ports per instructions. DC input spec (5.5x2.1mm barrel, 7.4-16.8V) and the single dual-purpose USB-C port on the receiver (UVC out + power in) were cross-confirmed against the official CineView HE user manual (manuals.plus mirror of manualslib.com/manual/2592347) in addition to the manufacturer product page. Desktop/handheld unit, not rack-mountable, so rackUnits omitted. Category mapped to \"converter\" and type to \"Extender\" as the closest fit for a wireless HDMI transmission (TX/RX) system - no dedicated \"wireless video transmitter\" category/type exists in the given enums.",
+  "ports": [
+    {
+      "name": "TX HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Transmitter video input from camera, up to 1080p60. HDMI version not stated by manufacturer."
+    },
+    {
+      "name": "TX HDMI Out (Loop)",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Zero-latency lossless HDMI loop-out on transmitter for a local monitor."
+    },
+    {
+      "name": "TX USB-C",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "5V/2A power input only on transmitter; no data/UVC function."
+    },
+    {
+      "name": "TX DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5.5mm x 2.1mm center-positive barrel, 7.4-16.8V."
+    },
+    {
+      "name": "RX HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Receiver video output to monitor, up to 1080p60. HDMI version not stated by manufacturer."
+    },
+    {
+      "name": "RX USB-C (UVC Out)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Single physical USB-C port that both streams UVC video out to a computer/phone (webcam-style live streaming) and accepts 5V/2A power input."
+    },
+    {
+      "name": "RX DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5.5mm x 2.1mm center-positive barrel, 7.4-16.8V."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "manufacturer": "QMotion",
+  "model": "QConnect EX11059",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://fccid.io/X6P-EX11059/User-Manual/Manual-1562783",
+  "confidence": "high",
+  "notes": "Sourced from the manufacturer's original \"Qmotion Qconnect Operating Guide\" (HomeRun Holdings Corp / The Watt Stopper Inc. d/b/a Qmotion, now part of Legrand), obtained via its FCC filing (FCC ID X6P-EX11059, internal model \"Q0244\") since QMotion's own product pages now redirect to Legrand's residential shading line and no longer host this legacy 2011-era device. The QConnect EX11059 is a 433.92MHz RF bridge/gateway that translates RS232, RS485, or dry-contact commands from a third-party control system (e.g. Crestron/Control4/PC) into QMotion proprietary RF commands to operate QMotion motorized shades - it has no direct connection to shades or displays itself. It is a small wall-mountable unit, not rack-mountable. No connector in this device carries a graded protocol (no SDI/HDMI/DP/USB/Ethernet), so no \"grade\" fields apply; the two RJ45 jacks carry RS232/RS485 serial signaling only and are explicitly NOT Ethernet-compatible per the manual. The 10-pin dry-contact header has no exact match in the allowed connector list; \"euroblock\" was chosen as the closest available option but is not a literal match (it's a keyed pin header, not a screw terminal block).",
+  "ports": [
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5VDC input via supplied WRG05F-050A AC/DC wall adapter. Device can alternatively be powered over the RS232/RS485 RJ45 jacks (5-9VDC on pins 4/5 and ground on 7/8) instead of using this jack."
+    },
+    {
+      "name": "RS232/RS485 Input",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack (NOT Ethernet - manual explicitly warns not to connect to Ethernet or PoE equipment). Carries either RS232 (TX/RX/Common) or RS485 (A/B) signals to/from a third-party control system, selectable via jumper mode - not simultaneously usable as both. 9600 baud, 8N1."
+    },
+    {
+      "name": "RS485 Output",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack used to daisy-chain the RS485 bus (and optional shared DC power) to additional QConnect bridges; not an Ethernet port."
+    },
+    {
+      "name": "Dry Contact Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Actual connector is a proprietary 10-pin, 0.100\" pitch keyed male header (not a screw-terminal Euroblock) - closest available option chosen. Provides 4 dry-contact bits (bit1-bit4) for normally-open relay/switch closures plus an RS485 termination-enable pin, all on the same header."
+    }
+  ]
+}

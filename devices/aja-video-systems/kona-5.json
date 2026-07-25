@@ -1,0 +1,118 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "KONA 5",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/products/kona-5",
+  "confidence": "medium",
+  "notes": "KONA 5 is an internal PCIe 3.0 x8 capture/playback card for a host computer, not a standalone rack unit (rackUnits omitted). Data drawn from AJA's own product page (aja.com/products/kona-5), which is authoritative for connection types, counts, and versions (4x bidirectional 12G-SDI via HD-BNC; 1x full-size HDMI 2.0 out; analog reference in via HD-BNC; breakout cable with RS-422 9-pin, 2x LTC BNC, and 8ch AES/EBU via 4x BNC each direction; 6-pin ATX/PCIe power connector, Molex 45559-0002). Confidence set to medium because: (1) individual SDI port numbering (SDI1-4) and AES/EBU BNC connector labels are not explicitly printed on the spec page (inferred standard AJA convention), (2) the power connector is a 6-pin PCIe/ATX mini-fit connector with no exact match in the provided connector enum — approximated as dc-barrel, and (3) category/type (\"converter\"/\"Converter\") is the closest fit in the given taxonomy but the device is more precisely a video capture/playback I/O card used with editing/broadcast software, not a pure format converter. HDMI is output-only (no HDMI input) per AJA's spec sheet.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on card bracket; independently configurable in or out, supports 12G/6G/3G/1.5G-SDI"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on card bracket"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on card bracket"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC on card bracket"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Full-size HDMI 2.0, supports 4K/UltraHD HFR and HDR monitoring/output"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "HD-BNC at PCIe bracket; analog reference (black burst, composite sync, or HD tri-level sync), 75-ohm terminating"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "On breakout cable; card also has an additional LTC input via 2-pin internal header and via HD-BNC at the PCIe bracket"
+    },
+    {
+      "name": "LTC Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "On breakout cable"
+    },
+    {
+      "name": "RS-422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "9-pin D-connector on breakout cable, Sony 9-pin protocol machine control"
+    },
+    {
+      "name": "AES/EBU In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "One of 4x BNC on breakout cable carrying 8 channels of AES/EBU input (2 channels per BNC pair); individual connector labels not confirmed from published spec"
+    },
+    {
+      "name": "AES/EBU In 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU In 3",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU In 4",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "One of 4x BNC on breakout cable carrying 8 channels of AES/EBU output (2 channels per BNC pair)"
+    },
+    {
+      "name": "AES/EBU Out 2",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Out 3",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES/EBU Out 4",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "PCIe Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 6-pin ATX/PCIe internal power connector (Molex p/n 45559-0002, mini-fit Jr style), not a barrel jack — no exact match in the given connector list, so dc-barrel is used as the closest DC-power analog. Draws 28W typical / 35W max. Card also seats in an 8-lane PCIe 3.0 slot."
+    }
+  ]
+}
