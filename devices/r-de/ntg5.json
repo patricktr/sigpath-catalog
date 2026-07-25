@@ -1,0 +1,16 @@
+{
+  "manufacturer": "RØDE",
+  "model": "NTG5",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://rode.com/en-us/microphones/broadcast-shotgun/ntg5",
+  "confidence": "high",
+  "notes": "RØDE NTG5 broadcast-grade short shotgun microphone. Sole physical connector is a single male 3-pin XLR audio output (unlabeled on the mic body — there is only one port, so RØDE's materials just call it the \"output\"); the connector type itself is not spelled out in text on the official spec page/datasheet, but is confirmed as a standard XLR3M by the product photography, the NTG5 Quickstart Guide's wiring diagram (mic → XLR cable → P48 phantom-power source), and the \"PG2-R Pro Cable\" (an XLR-to-XLR cable) included in the box — consistent with RØDE's other shotgun mics (NTG3/NTG4+) which use the same connector. There is no separate power-input connector: the mic is powered entirely via 48V phantom power (2 mA draw) delivered over the same output XLR pins, so no additional power port is listed. Grade is omitted on the XLR output since analog audio connectors are not part of the graded (SDI/HDMI/DP/USB/RJ45) scales. Other confirmed specs from RØDE's official datasheet (https://edge.rode.com//pdf/products/90/NTG5_DS_V02.pdf): supercardioid shotgun polar pattern, 20 Hz–20 kHz frequency range, 25 Ω output impedance, 84 dB S/N ratio, 10 dB(A) equivalent noise, 130 dB SPL max input, weight 76 g, length 203 mm, diameter 19 mm. Sold as a \"Location Recording Kit\" bundling the mic with a WS10 windshield, PG2-R pistol grip/shockmount, and PG2-R Pro (XLR) cable — those are accessories, not built-in I/O on the mic itself.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

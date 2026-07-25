@@ -1,0 +1,26 @@
+{
+  "manufacturer": "Countryman",
+  "model": "Type 85 Direct Box",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://www.countryman.com/product/type-85-direct-box/",
+  "confidence": "high",
+  "notes": "IMPORTANT: \"Countryman Type 85\" is not a lavalier microphone. In Countryman's real catalog, Type 85 (SKU DT85) is the Type 85 FET Direct (DI) Box — a 1-channel active instrument direct box that converts a high-impedance instrument/pickup signal to a balanced mic-level signal. Countryman's actual lavalier microphones use different model names (B3, B6, E6, EMW, Isomax) — no lavalier called \"Type 85\" exists. Returning the real DT85 product since that is the exact name requested.\n\nPorts: front panel has two 1/4\" (6.35mm) TS jacks labeled \"INST.\" (instrument input) and \"AMP.\" (parallel unity-gain thru-output feeding the player's stage amp), confirmed from Countryman's own product photography. The balanced output is XLR-type per Countryman's own product copy (\"connects...to a balanced microphone (XLR type) input\"), corroborated by B&H's spec sheet and Sweetwater/Full Compass listings; its exact printed panel label was not independently visually confirmed (likely unlabeled or \"OUTPUT\" on the rear end-cap, standard for this DI form factor).\n\nPower: no external DC power port. Runs on 48V phantom power (0.4 mA, drawn through the XLR output pins) or an internal 9V battery (~400 hrs on alkaline) — since there's no external power connector, no power port is listed.\n\nNot included as a port: a front-panel slide switch selects PICKUP vs SPEAKER input mode (changes gain -10dB/-46dB and input impedance 10MΩ/10kΩ) — this is a mode switch, not a physical I/O connector.\n\nA 2-channel sibling product, \"Type 85S Direct Box,\" also exists in Countryman's current lineup.\n\nNo bandwidth-graded connector types are present (pure analog audio: TS + XLR3), so no \"grade\" fields apply.",
+  "ports": [
+    {
+      "name": "INST.",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "AMP.",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Output (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

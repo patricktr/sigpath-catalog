@@ -1,0 +1,68 @@
+{
+  "manufacturer": "NETGEAR",
+  "model": "M4300-96X",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/datasheet/en/M4300.pdf",
+  "confidence": "high",
+  "notes": "Source: official NETGEAR M4300 series datasheet PDF (downloads.netgear.com), doc code DS-M4300-3Apr26, cross-checked against netgear.com/support/product/m4300-96x listing. M4300-96X (sold as XSM4396K0 empty chassis or XSM4396K1 starter kit; internal model XSM4396CS) is a fully modular, stackable L2/L3 2RU switch with NO fixed front-panel data ports of its own: it has 12 empty front slots that accept any mix of four expansion-card types (APM408C 8x10G copper, APM408P 8x10G copper PoE+, APM408F 8x1G/10G SFP+, APM402XL 2x40G QSFP+), scaling to up to 96x 10G ports (copper and/or fiber, in multiples of 8) or up to 24x 40G ports (in multiples of 2), or a mix, never all three port types simultaneously to their individual max. The port list above represents the fixed management ports plus one representative entry per port-card type and both rear PSU bays; it is not a fixed, always-present port count. QSFP+ (40G) ports had to be mapped to the 'sfp' connector id since QSFP+ is not in the provided connector enum. SFP+ and QSFP+ ports are left without a 'grade' value because the task's grade-scale list only defines Ethernet speed grades (eth-100m..eth-25g) for rj45/ethercon connectors, not for sfp - actual max speeds (10G for SFP+, 40G for QSFP+) are noted in each port's name/note instead. Console Mini-USB port mapped to 'usb-micro' (closest enum value; actual connector is Mini-USB Type-B). PSU inlets differ by which power-supply module is installed (APS600W = IEC C14, APS1200W = IEC C15); both mapped to the generic 'iec' connector id since C15 has no separate enum entry. Switch supports PoE+ over 10G on up to 48 ports (first 6 of 12 slots only, APM408P cards, 30W/port), which is orthogonal to the physical connector type and not represented as a separate port.",
+  "ports": [
+    {
+      "name": "10GBASE-T RJ45 (APM408C / APM408P port card, up to 96 ports)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Auto-sensing 100M/1G/2.5G/5G/10GBASE-T. Provided by 8-port APM408C (copper) or APM408P (copper, PoE+ up to 30W/port on first 6 of 12 slots, max 48 PoE+ ports) expansion cards; up to 12 cards per chassis."
+    },
+    {
+      "name": "SFP+ (APM408F port card, up to 96 ports)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10GBASE-X SFP+ cage, 8 ports per APM408F expansion card, up to 12 cards per chassis. No 'grade' set because the schema's Ethernet grade scale (eth-*) is defined only for rj45/ethercon, not sfp; max supported speed is 10G."
+    },
+    {
+      "name": "QSFP+ 40G (APM402XL port card, up to 24 ports)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Physical connector is 40GBASE-X QSFP+, which is not in the provided connector enum; 'sfp' used as the closest cage-style match. 2 ports per APM402XL expansion card, up to 12 cards per chassis. No grade set (QSFP+ not covered by the given grade scales)."
+    },
+    {
+      "name": "Console (RS232)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial RS232 console, physically an RJ45 jack (rear); ships with an RJ45-to-DB9 rollover cable."
+    },
+    {
+      "name": "Console (Mini-USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Rear Mini-USB console port. Mapped to 'usb-micro' as the closest enum value; the physical connector is Mini-USB Type-B, not Micro-USB."
+    },
+    {
+      "name": "Service Port (Out-of-Band Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear 1x RJ45 10/100/1000BASE-T out-of-band management port."
+    },
+    {
+      "name": "USB (Storage)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear USB host port for logs, configuration/image files, or local storage."
+    },
+    {
+      "name": "PSU 1 (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear modular hot-swap PSU bay (of 2). Accepts APS600W (IEC C14 inlet, up to 600W @110/220V, non-PoE preferred) or APS1200W (IEC C15 inlet, up to 1,050W@110V/1,200W@220V, PoE preferred). Both mapped to 'iec' as closest enum match; C15 isn't separately listed. Bays 1+2 run in RPS (1+1 redundant) or EPS (shared/load-balanced) mode."
+    },
+    {
+      "name": "PSU 2 (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear modular hot-swap PSU bay (of 2), same options as PSU 1. Empty-chassis SKU (XSM4396K0) ships with 0 PSUs installed; starter kit (XSM4396K1) ships with 1x APS600W (bay 2 empty/blanked)."
+    }
+  ]
+}

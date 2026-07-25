@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Meyer Sound",
+  "model": "MM-4XP",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://docs.meyersound.com/products/en/datasheet---mm-4xp.html",
+  "confidence": "high",
+  "notes": "Compact self-powered wide-coverage point-source loudspeaker in Meyer Sound's IntelligentDC series (sealed extruded-aluminum enclosure, 103 x 103 x 145 mm, 1.9 kg). It has exactly ONE physical connector on the rear panel — a Switchcraft EN3 5-pin male — confirmed as the sole connection point by the datasheet, operating instructions, and architectural specification (all docs.meyersound.com). That connector combines two functions on one shell: 48V DC IntelligentDC power (pins 1-2) and differential balanced analog audio input (pins 3-5, 10kΩ input impedance); applying DC to the audio pins or vice versa damages the unit. There is no separate power inlet, no audio output/loop-through, and no network/RJ45/control port on this model. The speaker requires an external Meyer Sound power supply (MPS-482HP or MPS-488HP, sold separately) — it has no standalone AC mains inlet. No connector id in the provided list matches Switchcraft EN3 exactly; xlr5 (5-pin XLR-style) was chosen as the closest analog since both are 5-pin locking audio-style connectors, though EN3 is a distinct, non-XLR-compatible Switchcraft series. No bandwidth grade applies (analog audio + DC combo connector, not in any graded category) so grade was omitted per instructions. Exact rear-panel silkscreen label text for the connector was not stated in any fetched document, so \"Audio/DC In\" is a descriptive name rather than a confirmed printed label. Not rack-mountable (rackUnits omitted) — it mounts via two 3/8\"-16 side inserts or an optional U-bracket. A related dual-15° model (MM-4XPD) exists with its own separate datasheet/spec sheet.",
+  "ports": [
+    {
+      "name": "Audio/DC In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Actual connector is a Switchcraft EN3 5-pin male (not true XLR5) carrying both balanced analog audio input (pins 3-5) and 48V DC IntelligentDC power input (pins 1-2) from an external Meyer Sound power supply, on a single rear-panel jack. xlr5 is the closest listed connector id."
+    }
+  ]
+}

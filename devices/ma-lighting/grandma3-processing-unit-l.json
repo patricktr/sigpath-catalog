@@ -1,0 +1,104 @@
+{
+  "manufacturer": "MA Lighting",
+  "model": "grandMA3 processing unit L",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.malighting.com/product/grandma3-processing-unit-l-4010509/",
+  "confidence": "medium",
+  "notes": "Sourced primarily from MA Lighting's official product page (malighting.com) and its linked official datasheet PDF (Art.-No. 4010509, rev. 14.5.2024), cross-checked against the official grandMA3 online help manual. Confirmed connector inventory (14 physical ports): 1x powerCON TRUE1 (AC 100-240V, 50/60Hz, max 200VA), 2x etherCON/RJ45, 8x DMX512-A Out (5-pin XLR female), 3x USB 2.0 Type-A. Unit is 2RU, 482 x 372 x 87mm, 5kg, integrated touchscreen, expands a grandMA3 system by 8,192 parameters (or 4,096 in Mode2 for grandMA2 expansion). Caveats: (1) The etherCON/RJ45 Ethernet grade (eth-1g) is inferred, not printed on this product's own spec sheet — MA Lighting's network-design documentation states MA-Net3 requires a minimum of 1 Gbit/s, so this is a reasonable but indirect inference, hence \"medium\" confidence. (2) Exact rear-panel silkscreen labels/numbering for the two network ports, eight DMX outputs, and three USB ports were not confirmed from a legible rear-panel diagram (product photos found were too low-resolution to read printed labels); sequential generic names were assigned. (3) DMX outputs are all identical/equivalent (no separate \"universe\" labeling found) — MA describes them collectively as \"8x DMX512-A Out.\"",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "powerCON TRUE1 socket (NAC3FX-W-TOP); AC 100-240V, 50/60Hz, max. 200VA"
+    },
+    {
+      "name": "etherCON/RJ45 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "grade": "eth-1g",
+      "note": "MA-Net3 network port; combo etherCON/RJ45. Datasheet does not print a speed grade — 1 Gbit/s inferred from MA Lighting's documented MA-Net3 protocol requirement."
+    },
+    {
+      "name": "etherCON/RJ45 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "rj45"
+      ],
+      "grade": "eth-1g",
+      "note": "MA-Net3 network port; combo etherCON/RJ45. Datasheet does not print a speed grade — 1 Gbit/s inferred from MA Lighting's documented MA-Net3 protocol requirement."
+    },
+    {
+      "name": "DMX Out 1",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 2",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 3",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 4",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 5",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 6",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 7",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "DMX Out 8",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512-A Out, 5-pin XLR female"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "manufacturer": "DiGiCo",
+  "model": "SD9",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://digico.biz/wp-content/uploads/2020/03/DiGiCo-SD9-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "From the official DiGiCo SD9 Datasheet (manufacturer PDF, digico.biz). Standard config ships with a single internal PSU (product code X-SD9-WS); an optional dual redundant PSU config (X-SD9-WS-2P) adds a second AC/IEC inlet, not itemized as a separate port here. Optional expansion interfaces (Waves SoundGrid card, Optocore interface with selectable HMA/OpticalCon/ST connectivity, MultiMode or SingleMode) are omitted as discrete ports because their connector depends on order configuration. AES/EBU ports are physically 3-pin XLR (2ch per connector, \"8 x XLR Mic/Line, 2 x XLR AES/EBU In (4ch), 2 x XLR AES/EBU Out (4ch)\" per datasheet) but are tagged with connector \"aes3\" rather than \"xlr3\" to distinguish digital AES3 from analog mic/line. MADI BNC I/O and Word Clock I/O are each listed by DiGiCo as a single \"1 x ... I/O\" line item but represent separate physical IN and OUT BNC jacks (the same \"1 x\" phrasing is used for the 3-jack MIDI In/Thru/Out set, confirming it counts interfaces, not physical jacks). No SDI grade applied to MADI/BNC since MADI is an audio protocol, not video SDI; no RJ45 grade applied to the Ethernet or MADI-EtherCon D-Rack ports since no Ethernet speed is stated (D-Rack ports carry proprietary MADI, not IP traffic). GPI/GPO jack wiring (mono TS vs dual-circuit TRS) is not specified by the datasheet; TS assumed. Power inlet connector (IEC C13/14) inferred from standard practice for a 208W/232VA device — the datasheet states only voltage/current, not connector type. The SD9 is a desktop/tabletop control-surface console (878x785x262mm, 36kg), not rack-mounted, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU In 1",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "XLR3 connector, carries 2 channels (Ch 1-2)"
+    },
+    {
+      "name": "AES/EBU In 2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "XLR3 connector, carries 2 channels (Ch 3-4)"
+    },
+    {
+      "name": "AES/EBU Out 1",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "XLR3 connector, carries 2 channels (Ch 1-2)"
+    },
+    {
+      "name": "AES/EBU Out 2",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "XLR3 connector, carries 2 channels (Ch 3-4)"
+    },
+    {
+      "name": "MADI BNC In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Audio MADI coax, not video SDI - no SDI grade applies"
+    },
+    {
+      "name": "MADI BNC Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Audio MADI coax, not video SDI - no SDI grade applies"
+    },
+    {
+      "name": "D-Rack 1 (MADI EtherCon)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Proprietary MADI link to SD D-Rack stage box, RJ45 EtherCon; not IP Ethernet"
+    },
+    {
+      "name": "D-Rack 2 (MADI EtherCon)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Proprietary MADI link to SD D-Rack stage box, RJ45 EtherCon; not IP Ethernet"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "VGA",
+      "direction": "output",
+      "connector": "vga",
+      "note": "DB-15 mini-female, external monitor, 1024x768"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Console control network; speed not stated in datasheet"
+    },
+    {
+      "name": "USB 2.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Worksurface)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4 inch TRS unbalanced, 8-600 ohm"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "GPI 1",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "TS vs TRS wiring not specified by datasheet"
+    },
+    {
+      "name": "GPI 2",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "TS vs TRS wiring not specified by datasheet"
+    },
+    {
+      "name": "GPO 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "TS vs TRS wiring not specified by datasheet"
+    },
+    {
+      "name": "GPO 2",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "TS vs TRS wiring not specified by datasheet"
+    },
+    {
+      "name": "Light 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Locking XLR3 gooseneck lamp power output, 1.2-12V DC, not audio"
+    },
+    {
+      "name": "Light 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Locking XLR3 gooseneck lamp power output, 1.2-12V DC, not audio"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "90-264VAC 47-63Hz auto-sensing, 208W/232VA; optional dual redundant PSU config adds a second IEC inlet"
+    }
+  ]
+}

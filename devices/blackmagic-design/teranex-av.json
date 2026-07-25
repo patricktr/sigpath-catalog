@@ -1,0 +1,166 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Teranex AV",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/teranex/techspecs/W-TER-1",
+  "confidence": "medium",
+  "notes": "Teranex AV is Blackmagic Design's 1RU standards/format converter for live-event and AV installation use (up to 1,089 conversions among SD/HD/2K/UHD, up to 2160p60, 10-bit processing). Confirmed via the manufacturer's own techspecs page (blackmagicdesign.com/products/teranex/techspecs), cross-checked across multiple independent fetches for consistency; a DuckDuckGo-sourced summary independently corroborated dimensions (482 x 125 x 44 mm — 19\" width, 1U height, <5\" deep) matching the \"1 rack unit, less than 5 inches deep\" language Blackmagic uses for the related Teranex Express, so rackUnits is inferred as 1 rather than an explicit \"rack mountable\" label seen verbatim. Direct retailer spec tables (B&H, Sweetwater, Markertek) returned HTTP 403/blocked pages and could not be used for cross-verification; confidence is set to medium because the extraction relied on AI-summarized page fetches of the manufacturer site rather than a raw scraped spec table, though three separate fetches agreed on the connector list. No standalone analog/AES audio OUTPUT jacks are documented — audio out is only via the embedded SDI/HDMI/optical outputs (de-embed happens downstream), so none were added. The 2 SDI \"Loop\" BNCs are reclocked pass-throughs of SDI In A/B (for daisy-chaining), not independent processed outputs. Optical fiber I/O (SFP) is an optional add-on module, not standard on every unit. USB-C is present for firmware updates only; Blackmagic does not publish its USB speed class, so no grade was assigned. This is distinct from Blackmagic's \"Teranex Mini\" and \"Teranex Express\" product lines, which have different port counts (e.g., Express omits HDMI and the quad-SDI outputs, and uses USB 2.0 Mini-B + 10/100 Ethernet instead).",
+  "ports": [
+    {
+      "name": "SDI In A",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI In A Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Reclocked loop-through of SDI In A, not an independent output"
+    },
+    {
+      "name": "SDI In B",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI In B Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Reclocked loop-through of SDI In B, not an independent output"
+    },
+    {
+      "name": "SDI Out A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI Out B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "Quad SDI Out A",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Quad-split SDI output bank, 3G or 1.5G-SDI"
+    },
+    {
+      "name": "Quad SDI Out B",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Quad SDI Out C",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Quad SDI Out D",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI In Loop",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Active loop-through of HDMI In"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Optical Fiber In",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SMPTE fiber SFP module"
+    },
+    {
+      "name": "Optical Fiber Out",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Optional SMPTE fiber SFP module"
+    },
+    {
+      "name": "Analog Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Switchable analog balanced or AES/EBU digital on same jack"
+    },
+    {
+      "name": "Analog Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "Switchable analog balanced or AES/EBU digital on same jack"
+    },
+    {
+      "name": "RCA Audio In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Consumer unbalanced stereo pair"
+    },
+    {
+      "name": "RCA Audio In R",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Black burst / tri-level sync genlock reference"
+    },
+    {
+      "name": "Reference Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Internal reference generator output"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Software/firmware update port; speed not stated by manufacturer"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet for remote control"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, built-in international PSU, 100-240V 50/60Hz, 42W typical; IEC cable not included"
+    }
+  ]
+}

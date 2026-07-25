@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 9300-48UXM",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/hardware/install/b_c9300_hig/Product-overview.html",
+  "confidence": "high",
+  "notes": "C9300-48UXM is a modular-uplink Cisco Catalyst 9300 access-layer switch: 36 downlink ports top out at 2.5G Multigigabit and 12 downlink ports top out at 10G Multigigabit (all 100M/1G/2.5G/5G/10G auto-negotiating RJ-45 over Cat5e/6/6A), and all 48 ports deliver Cisco UPOE (802.3bt Type 3, up to 60W/port; total switch PoE budget cited as 490W in the PoE-availability table and 610W in the model-description table of the same Cisco doc — flagged as a source inconsistency, not resolved here). Uplinks are not fixed: the chassis has one hot-swappable network-module bay that ships empty/blanked and requires a separately purchased module (4x1G SFP up to 8x10G SFP+ or 2x40G QSFP+); represented here as one generic 'sfp' port with no grade since the real connector/speed depends on the module chosen. The USB console connector is physically a 5-pin USB Mini-Type B, not Micro-USB — 'usb-micro' was used as the closest id available in the allowed connector list. Power connector is the IEC C14 inlet built into each modular AC power-supply unit (not a captive cord), auto-ranging 100-240VAC. The switch also has proprietary rear StackWise-480 (data stacking) and StackPower (power stacking) interconnects plus a passive UHF RFID asset tag — omitted from the ports list because no matching connector id exists in the given taxonomy. Rack height (1RU) confirmed via 1.73in / 4.4cm chassis height in the same document. Primary source: Cisco's own Catalyst 9300 Series Hardware Installation Guide, Product Overview chapter (front/rear panel figures explicitly labeled for the C9300-48UXM), cross-checked against the Cisco Catalyst 9300 Series Data Sheet (cisco.com/c/en/us/products/collateral/switches/catalyst-9300-series-switches/nb-06-cat9300-ser-data-sheet-cte-en.html) for the port/PoE/power-supply summary table.",
+  "ports": [
+    {
+      "name": "Ports 1-36 (mGig 2.5G, UPOE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "36 downlink ports, auto-negotiating 100M/1G/2.5G over Cat5e+ copper, deliver Cisco UPOE (IEEE 802.3bt Type 3, up to 60W/port)."
+    },
+    {
+      "name": "Ports 37-48 (mGig 10G, UPOE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "12 downlink Multigigabit ports, auto-negotiating 100M/1G/2.5G/5G/10G over Cat5e/6/6A copper, deliver Cisco UPOE (IEEE 802.3bt Type 3, up to 60W/port)."
+    },
+    {
+      "name": "Network Module Slot (Uplink)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Modular uplink bay; ships with a blank filler unless a network module is purchased separately. Options include C9300-NM-4G (4x1G SFP), C9300-NM-4M (4x RJ45 mGig), C9300-NM-8X (8x SFP+, 1G/10G), C9300-NM-2Y (2x SFP28, 25G), C9300-NM-2Q (2x QSFP+, 40G) — connector and speed vary by module ordered, so no fixed grade is set; 'sfp' shown as the representative option."
+    },
+    {
+      "name": "MGMT (Ethernet Management Port)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dedicated out-of-band 10/100/1000 RJ-45 VRF management port, rear panel."
+    },
+    {
+      "name": "CONSOLE (RJ-45 Console Port)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "EIA/TIA-232 serial console, rear panel; uses supplied RJ-45-to-DB-9 adapter cable. Auto-disabled while the USB console is connected, or when the switch runs in cloud-managed (Meraki) mode."
+    },
+    {
+      "name": "USB Console Port (Mini-Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Front-panel 5-pin USB Mini-Type B serial console port. Actual connector is USB Mini-Type B (not Micro-USB); 'usb-micro' used as the closest id in the given list. Takes precedence over the RJ-45 console when a cable is plugged in."
+    },
+    {
+      "name": "USB Type A (Storage)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB 2.0 Type-A port for external USB flash drives (128MB-8GB) used to load system images/configs."
+    },
+    {
+      "name": "USB 3.0 SSD Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB 3.0 port dedicated to an optional pluggable 120GB/240GB SSD storage module; disabled when the switch runs in cloud-managed mode."
+    },
+    {
+      "name": "AC Power Supply Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Each of the two hot-swappable rear PSU bays takes a modular power-supply unit with an IEC C14 inlet. Default shipped PSU for C9300-48UXM is PWR-C1-1100WAC-P (1100W, auto-ranging 100-240VAC); optional upgrade to PWR-C1-1900WAC-P/PWR-C1-1900WHV-T is supported. Second bay ships with a blank filler unless a redundant PSU is ordered."
+    }
+  ]
+}

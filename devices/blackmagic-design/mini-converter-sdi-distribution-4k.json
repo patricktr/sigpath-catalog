@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Mini Converter SDI Distribution 4K",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/miniconverters/techspecs/W-CONM-21",
+  "confidence": "medium",
+  "notes": "Primary specs (SDI I/O count, 6G-SDI ceiling, power voltage/consumption) confirmed on Blackmagic's official tech-specs page and cross-checked against Focus Camera's spec table (which also supplied dimensions ~4.8 x 3.63 x 0.9 in / 11.88 oz, not itemized on the manufacturer page). No rack ears — desktop/deskbox unit, so rackUnits omitted. SDI connector physically is BNC; grade capped at 6G-SDI per official spec (not 12G, despite \"4K\" in the product name — 4K support tops out at 2160p30/DCI 2160p24 over 6G-SDI). USB port's exact connector shape (Mini-B vs Micro-B) and USB revision are not stated in any source checked and are inferred by analogy to the sibling \"Mini Converter HDMI to SDI 6G\" catalog entry from this same product family — treat as medium confidence. Power connector is Blackmagic's proprietary/locking barrel-style DC jack; mapped to the closest available id, dc-barrel. One retailer page (soundpro.com) returned contaminated spec text (mentioning audio jacks and SDI loop-through) that does not match the official manufacturer spec or any other retailer and was discarded as unreliable/likely cross-contaminated with a different product listing on the same page.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Single switchable SDI input; auto-detects SD, HD, 3G-SDI or 6G-SDI (up to UHD 4K 2160p30 / DCI 4K 2160p24)"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 7",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "SDI Out 8",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "One of 8 reclocked outputs that automatically match the input SDI format"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "For firmware updates/configuration via Blackmagic's desktop utility software; exact physical USB size (Mini-B vs Micro-B) and USB spec version not explicitly stated in official specs — inferred from this product family's typical hardware"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Included 12V universal power supply with international socket adapters and cable tie point (Blackmagic-style locking barrel connector); operational voltage range 12–31V DC; 4.80W consumption"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "manufacturer": "Matrox",
+  "model": "Maevex 6150 Quad",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "rackUnits": 1,
+  "sourceUrl": "https://charmex.net/downloads/en_maevex-6100-datasheet-_1196_18.pdf",
+  "confidence": "high",
+  "notes": "Standalone 1U half-rack (1/2R) quad-4K H.264 encoder/streamer/recorder appliance, part number MVX-E6150-4 (since superseded by the Maevex 6152/MVX-E6152-4). matrox.com blocked automated fetches (403), so specs come from Matrox's own official \"Maevex 6100 Series\" datasheet PDF (© Matrox Graphics Inc., rev. 07/2021, mirrored via an authorized distributor at the sourceUrl) cross-checked against Markertek's product spec table (an approved retailer), which agree on all ports listed. Note: an earlier (01/2018) revision of the same Matrox datasheet listed the appliance's video INPUT as \"4x Mini HDMI (Type C)\" instead of full-size HDMI Type A — that appears to be either a documentation error or an early-production difference; the newer 2021 datasheet and Markertek both independently list HDMI (Type A) for both input and pass-through output on the 6150/6120 appliances (Mini HDMI Type C is confirmed correct only for the separate Maevex 6100 PCIe card, not the 6150 appliance). No HDMI version/bandwidth number is stated anywhere in Matrox's literature, so grade was omitted on the 8 HDMI ports (capture tops out at 4Kp60 4:2:0 / 4Kp30 4:4:4 per channel). The DisplayPort monitoring output is explicitly spec'd as DisplayPort 1.1 (max resolution 1920x1200–2560x1600 depending on datasheet revision) — below the lowest offered grade option (dp-1.2), so grade was omitted rather than mis-mapped. Power: Matrox specifies \"100-240 VAC in, 12 VDC out, 60W\" via an external supply feeding the appliance through a \"DIN4 locking power connector\" — not a standard barrel jack; dc-barrel was chosen as the closest available connector id from the fixed list. Region-specific AC mains cords (US/EU/UK/Aus-NZ) are included with the external supply. Some secondary listings (Markertek's own page, a B&H-hosted Matrox literature file) reference \"RS-232\" and a \"Maevex 6150 & 6120 RS-232 API,\" but Matrox's detailed Connectivity spec table for the 6150/6120 appliance does not list a physical RS-232 port — that API item appears under Software and is a driver for third-party control systems (Crestron/Kramer/Extron) to command the unit over IP, not a physical serial jack — so no RS-232 port was included here.",
+  "ports": [
+    {
+      "name": "HDMI In 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI In 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 1 (Pass-Through)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 2 (Pass-Through)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 3 (Pass-Through)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 4 (Pass-Through)",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort Out (Confidence Monitor)",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 3",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio In 4",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN 1 (Control + Stream)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN 2 (Stream Only)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "DC In (12V, 60W)",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

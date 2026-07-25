@@ -1,0 +1,73 @@
+{
+  "manufacturer": "Williams AV",
+  "model": "DL107 NET",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://williamsav.com/wp-content/uploads/2020/05/MCAT-230G-PLA-DL107_207.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer spec sheet (MCAT 230G-0223, williamsav.com) covers a 4-model family: DL107 NET (single loop output, base model used here), DL107 NET D (adds a Dante RJ-45 input, 100Mbps/24-bit/44.1-48kHz, on the same 1RU chassis), DL207 NET and DL207 NET D (dual-output siblings with an added \"Loop Out B\" terminal block). All physical port labels above are taken from the rear-panel silkscreen photo in the spec sheet (MIC/LINE IN 1, LINE IN 2, 70-100V IN, LINE OUT BAL/UNBAL, LOOP OUT A, STATUS RELAY NC/COM/NO, USB, ETHERNET) plus the front-panel headphone jack. Terminal-block inputs/outputs (Line In 2, 70-100V In, Line Out, Loop Out, Status Relay) are pluggable 2- or 3-position spring/screw terminal blocks — mapped to \"euroblock\" as the closest connector id in the allowed list (not a barrier/DC block, so not euroblock-dc). USB grade is inferred/approximated: spec states \"USB 1.1, 2.0 or 3.0 supported\" without specifying which speed is standard, so usb-5g (USB3.0 SuperSpeed) was chosen as the ceiling — treat as medium-confidence on that one field only. Ethernet is 10/100Base-T control-only (not an audio/AV data link). This is a hearing-loop (assistive listening) amplifier, not a general PA amp — \"Loop Out\" drives an induction loop antenna, not a speaker.",
+  "ports": [
+    {
+      "name": "AC Power Inlet",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100Base-T, for DigiLoop PC App network control/configuration"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 1.1/2.0/3.0 supported (firmware updates only); grade set to highest supported spec (USB 3.0/SuperSpeed)"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Configurable Mic or Line (-10dBV/+4dBu/+8dBu), balanced or unbalanced, 24V phantom in mic mode"
+    },
+    {
+      "name": "Line In 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-position terminal block, 10k ohm, configurable level, balanced or unbalanced"
+    },
+    {
+      "name": "70-100V In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-position terminal block; accepts 25V/70V/100V high-level input from distributed speaker/paging systems"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-position terminal block, +4dBu balanced/unbalanced; loop-through mirror of loop output audio"
+    },
+    {
+      "name": "Loop Out A",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-position terminal block; 9.5 Arms/13.4 Apk continuous, 16.1 Vrms/22.8 Vpk drive to inductive hearing loop"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" stereo jack, monitors selectable input or output"
+    },
+    {
+      "name": "Status Relay (Loop Fault)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-position terminal block: NC, COM, NO dry-contact relay (2.0A @ 30VDC), triggers on loop fault"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Williams AV",
+  "model": "DL102",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://williamsav.com/wp-content/uploads/2020/05/DL_102_Specifications_C.pdf",
+  "confidence": "high",
+  "notes": "DL102 is a small counter-mount induction (hearing) loop amplifier, not a mainstream video/audio-routing device. Enclosure 3.9\"x2.3\"x1\" (100x60x25mm), 0.48lbs — desktop, not rack-mountable (rackUnits omitted). Data pulled directly from Williams AV's own \"SPECIFICATION DATA — DL102\" PDF datasheet (2-page A/E spec + connector table), which is the most authoritative source and is fully self-consistent, hence confidence=high. Product/family page (https://williamsav.com/product/dl-102/) confirms the same 3-input description and lists bundled-microphone variants (DL102-SY1 boundary mic, SY2 directional mic, SY3 desktop mic) — those are separate SKUs, not part of the base DL102's physical I/O. None of the DL102's connectors fall on a bandwidth-graded scale (no HDMI/SDI/DP/USB/Ethernet), so no \"grade\" field is set on any port, per spec. Phoenix-style screw terminals (input 1, input 2, loop out) were mapped to the closest available connector id, \"euroblock\" — physically equivalent pluggable/fixed screw-terminal blocks. The front-panel silkscreen (from the datasheet product photo) reads \"MIC / INPUT 1\", \"LINE MIC / INPUT 2\", \"LOOP\", \"POWER IN 12V DC\" alongside three rotary gain/level trim pots and two LEDs (green Power, red Loop Current) — those pots/LEDs are not physical I/O ports.",
+  "ports": [
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mono electret microphone input (dedicated); mono TS-style jack, closest listed connector id is trs-3.5"
+    },
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-pole Phoenix-style screw-terminal block, mic or line level (selectable), with front-panel rotary trim pot; Phoenix terminal mapped to closest enum id 'euroblock'"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pole Phoenix-style screw-terminal block, isolated line-level input, with front-panel rotary trim pot"
+    },
+    {
+      "name": "Loop",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pole Phoenix-style screw-terminal loop-drive output; constant-current amplifier delivering 2A RMS (2.8A pk) at 1kHz into a 0.1-1.0Ω loop antenna — not a standard line-level audio output. Has its own rotary trim pot."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC 1.5A barrel input from included external power supply (supply itself rated 100-240VAC 50/60Hz, 2.0A input, for US/international mains)"
+    }
+  ]
+}

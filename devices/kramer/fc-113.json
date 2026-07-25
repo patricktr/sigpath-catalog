@@ -1,0 +1,33 @@
+{
+  "manufacturer": "Kramer",
+  "model": "FC-113",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.kramerav.com/us/product/fc-113",
+  "confidence": "high",
+  "notes": "Manufacturer spec page (Kramer Specifications tab) confirms: 1 HDMI input; 2 identical SD/HD/3G HD-SDI outputs on BNC connectors (multi-standard SMPTE 259M/292M/424M, max data rate 3Gbps — graded sdi-3g as the top-end capability the device negotiates to, per its \"Max. Data Rate — 3Gbps\" headline spec); powered by an external 5V DC / 470mA supply via a DC barrel jack labeled \"5V DC\" on the rear panel (confirmed from product photo). No HDMI version number is published, so grade omitted on the HDMI port. Desktop DigiTOOLS-form-factor unit (12.00 x 7.15 x 2.44 cm) — not rack-mountable on its own (an optional RK-3T 19\" rack adapter tray exists as an accessory, but the unit itself has no rack ears), so rackUnits omitted. A medical-certified variant, FC-113-MD (IEC 60601-1-2), shares identical I/O. Rear-panel labels read \"HDMI IN\", \"Out 1\" / \"Out 2\" under the SD/HD-SDI group, and \"5V DC\" (confirmed via product image on the Kramer site); front-edge LEDs (SD/HD, OUT, ON) are indicators, not ports.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "5V DC",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

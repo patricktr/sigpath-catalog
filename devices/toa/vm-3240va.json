@@ -1,0 +1,196 @@
+{
+  "manufacturer": "TOA",
+  "model": "VM-3240VA",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.toa.co.in/toa-assets/VM-3240VA_CE_EN_GL.pdf",
+  "confidence": "medium",
+  "notes": "Voice Alarm System Amplifier (240W), part of TOA's VM-3000 series. Sold in region variants: VM-3240VA AMQ (North America, confirmed 120V AC/60Hz per toaelectronics.com/en-us/products/detail/vm3240vaamq) and VM-3240VA CE / CE-GB (Europe, ships with Schuko or UK mains plug per the CE datasheet's rear-view drawing). Oddly, the CE datasheet's own spec table lists \"Power Source: 120 V AC, 60 Hz\" identical to the AMQ variant, which looks like a copy/paste artifact rather than the true EU rating (~220-240V/50Hz) — flagged, not independently confirmed; port set below reflects the CE datasheet (toa.co.in), which is the most complete connector-level source found. AC inlet type is inferred as IEC (C13/C14) because a detachable \"Power cable (2 m)\" is listed as an included accessory rather than a captive cord; exact IEC sub-type not stated. RM Link, VM Link, EXT PA Link, DS Link, and Emergency Control are proprietary TOA control/audio-link buses carried over RJ45/CAT5-STP cable, not standard data Ethernet, so no bandwidth grade is set for them (only the Network I/F \"LAN\" port is graded, as 10BASE-T/100BASE-TX = eth-100m). RM Link is documented as \"Input 1-2\" in one spec row; modeled here as two physical RJ45 jacks (RM LINK 1/2) by analogy with the numbered XLR inputs, not independently confirmed via a rear-panel photo. Emergency Control is documented as three signal groups (Inputs 1-5, Input 6, Status-out relay) all listed as \"RJ45 female connector\"; modeled here as a single combined port since the datasheet doesn't unambiguously state whether these share one jack or use separate ones. DC-power terminal ports (POWER IN, PS OUT, DC24V OUT) are M4 screw-terminal blocks per the spec sheet, mapped to the closest available id \"euroblock-dc\". Speaker outputs 1-2 are rated 240W max each and 3-6 at 120W max each, but total combined output across all six is capped at 240W. Secondary corroborating sources: TOA US product page (toaelectronics.com/en-us/products/detail/vm3240vaamq) and B&H Photo listing (bhphotovideo.com, model VM-3240VA AMQ).",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Mic/Line combo jack, -50dB(MIC)/-10dB(LINE) switchable, 600Ω balanced"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Mic/Line combo jack, -50dB(MIC)/-10dB(LINE) switchable, 600Ω balanced"
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Mic/Line combo jack, -50dB(MIC)/-10dB(LINE) switchable, 600Ω balanced"
+    },
+    {
+      "name": "INPUT 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Mic/Line terminal block (14x2 pins), -50dB(MIC)/-10dB(LINE) switchable, 600Ω balanced"
+    },
+    {
+      "name": "BGM 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "-10dB, 10kΩ unbalanced background-music input"
+    },
+    {
+      "name": "BGM 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "-10dB, 10kΩ unbalanced background-music input"
+    },
+    {
+      "name": "EXT AMP INPUT",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "100V line terminal block (14 pins), for feeding an external amplifier"
+    },
+    {
+      "name": "OUTPUT 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 240W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "OUTPUT 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 240W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "OUTPUT 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 120W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "OUTPUT 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 120W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "OUTPUT 5",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 120W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "OUTPUT 6",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker output terminal block (14 pins), max 120W; total across Outputs 1-6 limited to 240W"
+    },
+    {
+      "name": "DIRECT OUTPUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Terminal block (16 pins); direct feed from internal or external amplifier"
+    },
+    {
+      "name": "REC OUT",
+      "direction": "output",
+      "connector": "rca",
+      "note": "0dB, 10kΩ unbalanced BGM/Paging recording output"
+    },
+    {
+      "name": "RM LINK 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link for RM-300MF/RM-200M remote microphones, CAT5-STP, 800m total (RJ45 treated as bidirectional per spec)"
+    },
+    {
+      "name": "RM LINK 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link for RM-300MF/RM-200M remote microphones, CAT5-STP, 800m total"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Network I/F, 10BASE-T/100BASE-TX auto-negotiate, 100m max to switching hub"
+    },
+    {
+      "name": "VM LINK OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link to VM-3240E/VM-3360E extension amps, CAT5-STP, 800m max"
+    },
+    {
+      "name": "EXT PA LINK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link to VP-2241/VP-2421 amplifiers, CAT5-STP, 5m max"
+    },
+    {
+      "name": "DS LINK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Link to VX-2000DS, CAT5-STP, 5m max"
+    },
+    {
+      "name": "EMERGENCY CONTROL",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Carries 5 no-voltage make-contact inputs, 1 isolated voltage input, and a relay status-out; exact jack count (1 vs multiple RJ45) not fully confirmed"
+    },
+    {
+      "name": "GENERAL CONTROL IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8x no-voltage make-contact inputs, terminal block (14x2 pins)"
+    },
+    {
+      "name": "GENERAL CONTROL OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8x isolated open-collector outputs, terminal block (14x2 pins)"
+    },
+    {
+      "name": "ATT CONTROL",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "6x relay contacts, 125VAC/30VDC, terminal block (16 pins)"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Mains power inlet; 2m detachable cord included as accessory, region-specific plug (Schuko/UK/NEMA depending on SKU); exact IEC sub-type not stated in datasheet"
+    },
+    {
+      "name": "POWER IN",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "M4 screw terminal, 20-40V DC, for powering the unit from a VX-2000DS only"
+    },
+    {
+      "name": "PS OUT",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "M4 screw terminal, 28V DC/18A, feeds a VX-2000DS"
+    },
+    {
+      "name": "DC24V OUT",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "24V DC auxiliary output, max 0.3A"
+    }
+  ]
+}

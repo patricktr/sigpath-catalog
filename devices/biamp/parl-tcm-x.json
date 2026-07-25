@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Biamp",
+  "model": "Parlé TCM-X",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_parle_jul22.pdf",
+  "confidence": "high",
+  "notes": "Biamp Parlé TCM-X is a two-part AVB Beamtracking ceiling-microphone system for Tesira systems: a 16-element digital-array ceiling capsule (5.9in/150mm diameter) plus a plenum/network box that mounts above the ceiling tile. All 3 physical connectors are RJ-45 on the network/plenum box (front-panel labels confirmed via Biamp's Oct-2025 Installation & Operation Guide, Figure 1: \"AVB / Control\", \"Mic 1\", \"Mic 2\"). Power is PoE only (IEEE 802.3at Type 1 Class 3, 15.4W) delivered through the AVB/Control port, so no discrete power connector exists. Mic 1/Mic 2 use a custom/proprietary digital protocol (not standard network audio) to the captive-cabled mic capsule and optional TCM-XEX expansion mic; treated as RJ-45/bidirectional per the connector-type convention. No Ethernet link speed (100M/1G/etc.) is stated in any Biamp documentation reviewed, so \"grade\" was omitted on all RJ-45 ports rather than guessed. Device is plenum/ceiling-mounted (not a rack unit), so rackUnits is omitted. This excludes the amplified sibling TCM-XA (adds 2 more RJ-45 \"Amp Out\" speaker ports) and the TCM-XEX/TTM-X/TCM-1 family members, which are separate SKUs on the same combined datasheet.",
+  "ports": [
+    {
+      "name": "AVB / Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Uplink to Tesira AVB/TSN network switch (or PoE+ injector for single-device systems); also carries PoE power in (IEEE 802.3at Type 1 Class 3, 15.4W) — no separate power connector on the unit."
+    },
+    {
+      "name": "Mic 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary digital connection to the ceiling microphone capsule (captive 2m cable terminates in RJ-45)."
+    },
+    {
+      "name": "Mic 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Optional second RJ-45; connects a second ceiling mic capsule or an expansion TCM-XEX microphone. Max 2 mic capsules per network box."
+    }
+  ]
+}

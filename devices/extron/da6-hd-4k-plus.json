@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Extron",
+  "model": "DA6 HD 4K PLUS",
+  "category": "switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://media.extron.com/public/download/files/brochure/da_hd_4k_plus_series_revA3.pdf",
+  "confidence": "high",
+  "notes": "Half-rack-width, 1U-high (1.75\"H x 8.75\"W x 6.00\"D) desktop/rack unit; rack mounting requires an optional accessory (MBU 123, RSU 126, or UTS 100 shelf kit) rather than built-in ears. Category/type: this is a 1-input-to-6-output video distribution amplifier (splitter), not a switcher/matrix in the strict sense (no input selection or crosspoint routing); \"switcher\" was chosen as the closest available category (matches this catalog's existing convention for Extron DXP/SW switching products) and no \"type\" enum value (Video switcher, Matrix router, Extender, Converter, etc.) accurately fits, so type was omitted. RS-232 port is physically a 3.5 mm 3-pole captive screw/terminal block, not a DB9 — mapped to \"euroblock\" (the only terminal-block connector id) rather than the \"rs232\" enum value. USB config port is Mini-B (not Micro-B) — mapped to \"usb-micro\" as the closest available id, per USB 2.0 spec stated by Extron. All grades (hdmi-2.0 on HDMI ports, usb-2.0 on the config port) are explicitly confirmed by Extron's own spec sheet (HDMI 2.0b/18.0 Gbps max; USB 2.0 standard). No Ethernet/network port on this model. Cross-checked against Extron's official setup guide (68-2880-51) and specifications PDF (68-3271-01 Rev A3), both fetched directly from media.extron.com.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "1 female 19-pin HDMI type A; single-link HDMI/DVI-D; HDMI 2.0b, HDCP 2.3, up to 18.0 Gbps"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Female 19-pin HDMI type A; provides +5 VDC/250 mA for peripheral power"
+    },
+    {
+      "name": "Remote RS-232",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3.5 mm, 3-pole captive screw connector (Tx/Rx/GND); 9600 baud, 8N1. Closest listed connector id to the actual Phoenix-style terminal block (not a DB9)."
+    },
+    {
+      "name": "Config",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Front panel, female, mini USB Type-B per Extron's spec; closest listed connector id since 'mini-USB' has no dedicated enum value."
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100-240 VAC 50/60 Hz universal power supply (Extron Everlast); connects via provided IEC power cord. Power consumption 10.6 W."
+    }
+  ]
+}

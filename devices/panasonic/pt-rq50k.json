@@ -1,0 +1,120 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "PT-RQ50K",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://docs.connect.panasonic.com/projector/products/rq50k/spec/",
+  "confidence": "high",
+  "notes": "Native 4K (4096x2160), 50,000-lumen 3-chip DLP laser projector, no lens included (sold separately). Ships with the ET-MDN12G10 12G-SDI interface board pre-installed in Expansion Slot 1 (2x dedicated SDI inputs + 2x switchable SDI in/out, all BNC), which is why the 4 SDI ports above are listed as standard I/O. A second Expansion Slot (Slot 2) is empty from the factory and is SLOT NX-compatible with optional interface boards not included in this listing: Interface Board for HDMI (ET-MDNHM10, 2x HDMI IN), DVI-D (ET-MDNDV10, 2x DVI-D IN), DisplayPort (ET-MDNDP10, 2x DisplayPort IN), or 12G-SDI Optical (ET-MDNFB10, 1x SFP in / 1x in-out) — none of these are physically present unless purchased and installed. Desktop/floor-or-ceiling install unit (126 kg / 278 lbs), not rack-mountable, so rackUnits is omitted. Primary source: Panasonic's official global spec page (docs.connect.panasonic.com/projector/products/rq50k/spec/) and Options page, cross-verified against the official PT-RQ50K Operating Instructions PDF (na.panasonic.com/ns/286110_rq50k_manual_en.pdf) for exact terminal labels, SDI/USB/Ethernet grade details, and AC IN electrical/mechanical specifics.",
+  "ports": [
+    {
+      "name": "SDI 1 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Supports HD-SDI/3G-SDI/6G-SDI/12G-SDI. Part of the ET-MDN12G10 12G-SDI interface board that ships pre-installed in Expansion Slot 1."
+    },
+    {
+      "name": "SDI 2 IN/1 OUT",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "As an input, limited to HD-SDI/3G-SDI only. As an output (menu-switchable), acts as an active through terminal passing whatever signal (up to 12G-SDI) was received on SDI 1 IN."
+    },
+    {
+      "name": "SDI 3 IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Supports HD-SDI/3G-SDI/6G-SDI/12G-SDI (e.g. for dual-link/quad-link 4K input)."
+    },
+    {
+      "name": "SDI 4 IN/3 OUT",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "As an input, limited to HD-SDI/3G-SDI only. As an output (menu-switchable), passes through whatever signal (up to 12G-SDI) was received on SDI 3 IN."
+    },
+    {
+      "name": "DIGITAL LINK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "HDBaseT-compliant single-cable video/audio/Ethernet/control (100Base-TX), HDCP 2.2 and Deep Color compatible."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10Base-T/100Base-TX network connection for PJLink/Art-Net/control."
+    },
+    {
+      "name": "MULTI PROJECTOR SYNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "TTL sync input (high impedance) for multi-projector brightness/color matching, not a video signal so no SDI bandwidth grade applies."
+    },
+    {
+      "name": "MULTI PROJECTOR SYNC OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "TTL sync output (max 10 mA)."
+    },
+    {
+      "name": "SERIAL IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (female), RS-232C compliant, for computer control."
+    },
+    {
+      "name": "SERIAL OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (male), RS-232C compliant, for link/daisy-chain control."
+    },
+    {
+      "name": "REMOTE 1 IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini-jack for wired remote control."
+    },
+    {
+      "name": "REMOTE 1 OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "M3 stereo mini-jack for linking multiple projectors' wired remote control."
+    },
+    {
+      "name": "REMOTE 2 IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "D-sub 9-pin (female) for external contact-closure/parallel control, not literal RS-232C signalling; mapped to the closest available D-sub connector id."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB Type-A host port for the optional AJ-WM50 wireless LAN module or a USB memory stick (USB 2.0 compatible per operating instructions)."
+    },
+    {
+      "name": "DC OUT 1",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "USB Type-A shaped connector, power supply only (DC 5V, 2A total shared with DC OUT 2), no data."
+    },
+    {
+      "name": "DC OUT 2",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "USB Type-A shaped connector, power supply only (DC 5V, 2A total shared with DC OUT 1), no data."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Single locking (quarter-turn twist-lock) AC inlet, not hot-swap capable; supports AC100-120V (11.5A, 15A outlet) or AC200-240V (20.8A, requires 30A NEMA L6-30 outlet). Closest standard connector id chosen from the allowed list; actual connector is a proprietary Panasonic locking inlet, not a plain IEC C19 socket."
+    }
+  ]
+}

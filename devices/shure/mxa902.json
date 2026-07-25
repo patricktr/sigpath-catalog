@@ -1,0 +1,18 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXA902",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.shure.com/en-US/docs/guide/MXA902",
+  "confidence": "high",
+  "notes": "Shure MXA902 (Microflex Advance) is a Ceiling Array Microphone + integrated Loudspeaker — no single enum \"type\" covers the mic+speaker combo, so \"Microphone\" was chosen as the closest fit (source calls it primarily a ceiling array microphone with an integrated 2.5-inch loudspeaker). Category set to \"audio\" for the same reason. The device has NO analog audio or separate power connectors: all audio (2 Dante inputs to loudspeaker, 1 IntelliMix automix output), control, and power (PoE+) pass through the single RJ-45 network port — there is no distinct DC/power jack, so no separate power port entry was added per the \"power via PoE over the data port\" case. PoE+ Class 4 requirement and gigabit Ethernet requirement (for Dante) are explicitly stated in the manufacturer user guide, supporting the eth-1g grade. Not rack-mountable (ceiling/pole/wire-rope mounted square array, 24\" or 60cm variants: SKUs MXA902W-S and MXA902W-S-60CM), so rackUnits omitted. Sourced directly from Shure's official MXA902 User Guide (pubs.shure.com / shure.com docs portal).",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Single RJ-45 port carries Dante/AES67 audio, Shure control data (2 logical IP addresses over 1 physical port), and PoE+ power. Requires wired gigabit Ethernet to operate; LED indicates 10/100 Mbps vs 1 Gbps link. Also functions as the power input: PoE+ (802.3at), compatible with Class 4 PoE+ sources. Without PoE+ (e.g. only PoE), device works as mic only — loudspeaker is disabled."
+    }
+  ]
+}

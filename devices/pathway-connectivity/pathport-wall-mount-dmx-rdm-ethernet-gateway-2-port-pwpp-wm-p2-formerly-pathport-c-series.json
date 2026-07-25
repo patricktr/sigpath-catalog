@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Pathway Connectivity",
+  "model": "Pathport Wall-Mount DMX/RDM Ethernet Gateway, 2-Port (PWPP WM P2, formerly \"Pathport C-Series\")",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://16500.com/wp-content/uploads/2021/10/pwpp_wm_p2.pdf",
+  "confidence": "medium",
+  "notes": "IMPORTANT NAMING CAVEAT: No product officially named \"Pathport Duo\" was found in current or historical Pathway Connectivity / Acuity Brands literature. Pathway's actual port-count naming scheme is Uno (1-port), C-Series (2-port, now sold as \"Pathport Wall-Mount/DIN-Mount/Rack-Mount 2-Port\"), Quattro (4-port), and Octo (8-port) -- the 2-port model is never branded \"Duo\" in any catalog, datasheet, or retailer listing found (checked Pathway/Acuity Brands, B&H-tier retailers Markertek/Full Compass/Musson/CityTheatrical, and distributor mirrors). The closest and almost certainly intended real product -- the original 2-port (\"duo\") Pathport gateway -- is the Pathport Wall-Mount DMX/RDM Ethernet Gateway, 2-Port, catalog PWPP WM P2 (previous part numbers 6201BL/6202BL/6203BL), described here. Confidence is set to medium primarily because of this name mismatch, not because of spec quality -- the port/electrical/mechanical data itself comes directly from Pathway's own manufacturer datasheet (PWPP_WM_P2, Rev. 07/08/21) and installation guide (Rev. 10/21/21), both hosted by Pathway/Acuity Brands and mirrored by an authorized distributor (16500.com); Pathway's own product page is https://www.acuitybrands.com/products/detail/1624178/pathway/pwpp-wall-mount-dmx-gateway/pathportr-secure-dmx-rdm-ethernet-wall-mount-gateway. Variant note: this SKU family also ships with XLR5-Male, XLR5-Female, or one-of-each port combinations (suffixes XLR5M/XLR5F/XLR5MF) -- the datasheet's pictured/default model is XLR5F. Also sold in DIN-mount, rack-mount (4- and 8-port), portable/truss-mount, and handheld form factors with different connector sets (e.g., rack-mount 8-port adds an IEC AC inlet and runs on 100-240VAC instead of PoE/DC). Desktop/flush wall unit -- not rack-mountable, so rackUnits omitted. Dimensions 4.5\"W x 4.6\"H x 2.75\"D, weight 0.7 lb.",
+  "ports": [
+    {
+      "name": "Port A",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX512/RDM port, software-configurable (via Pathscape) as either input or output; RS-485 signal on pins 1 (shield/common), 2 (data-), 3 (data+); pins 4-5 not used."
+    },
+    {
+      "name": "Port B",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX512/RDM port, software-configurable (via Pathscape) as either input or output; same pinout as Port A."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "10 Mbps Ethernet port; carries DMX-over-IP protocols (Pathway ssACN, sACN/E1.31, Art-Net, Pathport Protocol, ShowNet, ETC Net2 rx) and doubles as the primary power input via PoE (IEEE 802.3af, Class 1). Ships with an in-line female RJ45 mini-jack + male-male jumper for field termination. Grade omitted: stated speed is 10 Mbps, below the lowest defined RJ45 grade (eth-100m = 100 Mbps)."
+    },
+    {
+      "name": "Auxiliary DC Power",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Optional local power input used when PoE is unavailable; 2-pin polarized terminal block (+/-), 24VDC nominal per the electrical spec table (a separate features bullet in the same datasheet lists 24-48VDC, and the general Pathport installation guide states an 18-50VDC acceptable range across this connector family). 4W max consumption. Not shown as a distinct connector in this model's dimensional drawing (only the rear RJ45 is illustrated), so its physical exposure/accessibility on this specific wall-mount SKU could not be fully confirmed."
+    }
+  ]
+}

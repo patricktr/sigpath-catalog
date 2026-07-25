@@ -1,0 +1,24 @@
+{
+  "manufacturer": "APC by Schneider Electric",
+  "model": "AP9630",
+  "category": "network",
+  "type": "Control processor",
+  "sourceUrl": "https://www.se.com/us/en/product/AP9630/ups-network-management-card-2/",
+  "confidence": "high",
+  "notes": "AP9630 is a \"UPS Network Management Card 2\" (NMC2) — a SmartSlot accessory card that installs inside a compatible APC/MGE UPS (Smart-UPS, Symmetra, Galaxy 3500, etc.) to add SNMP/web/CLI network monitoring and control. It is an IT/power-management accessory, not a conventional AV device, so the category/type fields above (\"network\" / \"Control processor\") are the closest available mappings, not exact matches. Discontinued by Schneider Electric on 2022-06-06; official recommended replacement is the AP9640 (Network Management Card 3 / NMC3). Two closely related SKUs covered in the same user guide — AP9631 (adds 2x USB-A ports + 2x RJ45 \"Universal I/O\" ports) and AP9635 (adds an RJ11 Modem port, a Modbus RS-485 terminal-block connector, and 1x Universal I/O port) — have additional physical ports not present on the base AP9630; this entry reflects the AP9630 front panel only. The card has no standalone external power input/connector — it is bus-powered from the host UPS via an internal SmartSlot edge-card (backplane) connector, which is not modeled here as a port since it is not a user-facing cable connector and has no matching id in the connector list. Physical size (small internal card, not separately rack-mountable — rackUnits omitted): approx. 1.50\" x 4.80\" x 4.50\", 0.18 lb, per retailer (Newegg) listing corroborating the manufacturer's RJ-45 10/100 Base-T network spec. Primary source used for the port diagram/table: the official Schneider Electric \"UPS Network Management Card 2 User Guide\" (AP9630, AP9631, AP9635; doc 990-3402R-001, 07/2024), linked from the se.com product page above.",
+  "ports": [
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Small proprietary sub-mini serial jack on the faceplate (not a full-size DB9). Requires APC's dedicated serial cable, part number 940-0299, to break out to a DB9/USB serial connection on a PC for CLI/terminal setup (9600bps, 8N1). Modeled as rs232 as the closest functional match."
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Base-T Ethernet jack; faceplate silkscreen reads \"Network\" above the jack and \"10/100\" below it (next to the Link-RX/TX LED)."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Wisycom",
+  "model": "MPR50-IEM",
+  "category": "audio",
+  "type": "Wireless mic",
+  "sourceUrl": "https://wisycom.com/app/uploads/2024/06/MPR50-IEM-en-u06.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Wisycom's own MPR50-IEM User Manual (Rev.06, FW v1.7, dated 14 June 2024), hosted at wisycom.com — the dedicated wisycom.com/products/mpr50-iem/ product page itself renders no spec content client-side, so the official downloadable manual PDF was used instead. The MPR50-IEM is a battery-powered belt-pack true-diversity IEM receiver, not a rack device (no rackUnits). Two RF hardware variants exist with identical connectors, differing only in tuning range: MPR50-IEM-N (470-700MHz) and MPR50-IEM-M (566-798MHz). No connector in the given list matches the actual SMA antenna jacks, so BNC was used as the closest coax RF approximation per instructions — do not treat this as literal BNC hardware. No grade was set on any port: antenna ports are RF (not SDI video), the headphone jack is analog, and USB/IR speeds are unspecified. There is no standalone DC power jack on the unit itself; power comes from user-replaceable/rechargeable AA or proprietary lithium batteries (2xAA, MPRLBP, Ricoh DB-50, or DR9708), charged via the integrated Micro-USB-B port or an external dedicated charger cradle (not a body connector). An optional external \"ADTMPR\" 9-18VDC power adapter accessory (pigtail/XLR-4F/Hirose-4F variants) exists for the MPR30/MPR50 product family but is a separate accessory, not a connector built into the MPR50-IEM body, so it was not included as a port. Product \"type\" was set to the closest available enum value, \"Wireless mic\" — the catalog has no dedicated \"IEM receiver\" type; this device actually receives (not transmits) wireless in-ear-monitor audio.",
+  "ports": [
+    {
+      "name": "Antenna A",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF diversity antenna input; physical connector is SMA (threaded), which is not in the allowed connector list — BNC chosen as closest coax RF analog."
+    },
+    {
+      "name": "Antenna B",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "RF diversity antenna input (second diversity branch); physical connector is SMA, approximated as BNC (see Antenna A note)."
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Lockable 3.5mm stereo jack (TRS). Tip=Left(hot), Ring=Right(hot), Sleeve=Gnd. Max output power 2x100mW @ 32Ω (peak headroom +23dBm/200mW)."
+    },
+    {
+      "name": "Micro-USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Integrated port used both for onboard charging of lithium battery and for wired configuration/firmware update via Wisycom Manager PC application; USB speed not specified in manual."
+    },
+    {
+      "name": "Infrared (IR)",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Front-panel IR window used for wireless sync with a Wisycom transmitter and for setup/firmware programming via optional UPKmini IR-to-USB interface."
+    }
+  ]
+}

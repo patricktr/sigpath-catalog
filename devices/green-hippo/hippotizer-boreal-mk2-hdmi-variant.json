@@ -1,0 +1,154 @@
+{
+  "manufacturer": "Green Hippo",
+  "model": "Hippotizer Boreal+ MK2 (HDMI variant)",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.green-hippo.com/hippotizer-media-servers/boreal-mk2/",
+  "confidence": "medium",
+  "notes": "Sourced primarily from Green Hippo's own product/spec page (fetched twice, consistent results): https://www.green-hippo.com/hippotizer-media-servers/boreal-mk2/. This entry documents the \"Boreal+ MK2 HDMI\" SKU (4x HDMI 2.0 production outputs); a \"Boreal+ MK2 DP\" SKU also exists with 4x DisplayPort 1.2 production outputs (max 3840x2160@60) in place of the HDMI outputs — all other I/O is identical between variants. Two additional caveats not independently verified against a rear-panel photo/manual diagram: (1) exact physical connector for the 10Gb network ports (assumed RJ45/10GBASE-T based on secondary sources, not stated explicitly on the primary spec page — could alternatively be SFP+); (2) the XLR audio breakdown (2x XLR in + 2x XLR out) is inferred from the predecessor \"Boreal\" (non-MK2, non-Plus) datasheet's explicit \"2 x XLR / 2 x XLR\" convention, since the MK2's own spec table only states \"Balanced Stereo XLR\" as single line items for In and Out. Could not obtain a readable copy of the current official Boreal+ MK2 PDF datasheet (returned as unparseable binary); relied on the manufacturer's live spec-table webpage instead, cross-checked against reseller pages (newlighting.com, AC-ET) which reproduced matching figures. Genlock (via video outputs) and software EDID emulation are supported but have no dedicated separate physical port (no standalone BNC genlock connector found in any source, unlike the older 4x-SDI-input \"Boreal\" predecessor).",
+  "ports": [
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Production output. One of 4; DP variant (Boreal+ MK2 DP) swaps all 4 production outputs for DisplayPort 1.2, max 3840x2160@60, instead of HDMI 2.0 max 4096x2160@60."
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Production output"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Production output"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Production output"
+    },
+    {
+      "name": "Control Output (DP)",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Separate from the 4 production outputs; for local Windows GUI/monitor. Supports genlock and software EDID emulation."
+    },
+    {
+      "name": "Control Output (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Separate from the 4 production outputs; for local Windows GUI/monitor. Hardware EDID emulation supported on this HDMI control output."
+    },
+    {
+      "name": "1Gb Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1Gb Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "10Gb Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Manufacturer spec table lists '2x 10Gb' without stating physical connector; RJ45 (10GBASE-T) inferred from secondary sources, not confirmed verbatim on the primary spec page."
+    },
+    {
+      "name": "10Gb Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "See note on 10Gb Network 1"
+    },
+    {
+      "name": "Audio Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Manufacturer lists 'Audio Out: Balanced Stereo XLR' as one line item; modeled as 2x XLR3 (L/R) matching the prior-generation Boreal datasheet's explicit '2 x XLR' out. Exact MK2 rear-panel labels not independently confirmed."
+    },
+    {
+      "name": "Audio Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "See note on Audio Out L"
+    },
+    {
+      "name": "Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Manufacturer lists 'Audio In: Balanced Stereo XLR' plus 'LTC over Audio Input: Yes' (SMPTE LTC timecode is carried over this input, not a dedicated port). Modeled as 2x XLR3 (L/R); exact MK2 labels not independently confirmed."
+    },
+    {
+      "name": "Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "See note on Audio In L; also accepts LTC timecode"
+    },
+    {
+      "name": "USB3 Rear 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Manufacturer lists '4 rear USB3 Type-A ports'; 5Gb/s (USB 3.0/3.2 Gen1) inferred from 'USB3' naming, not explicitly printed as a speed for the rear ports (unlike the front ports, which are explicitly labeled 5Gb/s)."
+    },
+    {
+      "name": "USB3 Rear 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB3 Rear 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB3 Rear 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 Front 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Manufacturer explicitly states '2 front USB 3.1 (5Gb/s) Type-A ports'"
+    },
+    {
+      "name": "USB 3.1 Front 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Manufacturer specifies 'Power Input: Neutrik True1', a locking mains connector not present in the given connector list; powerCON is the closest match. Max power consumption 1000VA, 100-250V 50/60Hz auto-sensing."
+    },
+    {
+      "name": "Power Loop Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik True1 pass-through connector for daisy-chaining mains power to a downstream device; rated 1000W max load."
+    }
+  ]
+}

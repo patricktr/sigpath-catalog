@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Christie",
+  "model": "Boxer 4K30",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.christiedigital.com/products/end-of-support/projectors/boxer-4k30/",
+  "confidence": "high",
+  "notes": "Boxer 4K30 is a modular 3-chip DLP rental/staging projector (30,000 ANSI lumen class, 4096x2160 @ up to 60Hz) using swappable input cards, so its physical I/O varies by the SKU/cards purchased. The ports listed reflect the \"standard\"/flagship configuration Christie's own product page describes: the High Bandwidth Multi-Input Card (HBMIC, P/N 144-116109-XX) installed in the dedicated high-bandwidth slot (2x 12G-SDI, 1x HDMI 2.0, 1x DisplayPort 1.2, 1x Christie Link QSFP+ fiber), plus the standard built-in HDBaseT input and communications ports — this matches factory SKU 144-001012-03 (1x HBMIC + 4 blank faceplates). An alternate factory SKU (144-001012-01/-02) instead ships 2x TDPIC (Twin DisplayPort) + 2x 3GIC (Dual 3G/HD-SDI) cards in the 4 standard slots. Up to 5 card slots total (1 high-bandwidth + 4 standard) can each take a Dual 3G/HD-SDI, Dual-Link DVI (DDIC), Twin HDMI (THIC), Twin DisplayPort (TDPIC), Terra SDVoE (TSIC), Quad DisplayPort (QDPIC), or a second HBMIC card, so a fully populated unit can carry far more ports than listed here. Exact panel silkscreen labels for the two SDI ports were not independently confirmed from a photo (Christie's documentation only specifies quantities/formats, e.g. \"2x 12G-SDI\"); \"SDI 1\"/\"SDI 2\" are inferred. AC Input 1 and AC Input 2 connector approximations are called out per-port above since neither the true IEC 309 industrial inlet nor a perfect match exists in the allowed connector list. This is a floor-standing/rigging-mount unit (adjustable feet + M12 rigging points), not a rack-mount device, so rackUnits is omitted. Note: Boxer 4K30 reached end-of-production in Oct 2022 and is now listed under Christie's \"end-of-support\" product line, though full spec documentation remains published. Data cross-verified against two official Christie Boxer 4K User Guide revisions (020-101777-08, 2017 and 020-101777-16, May 2023) — power, connector, and signal-format tables were identical across both, and both are hosted on christiedigital.com.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "Christie Link (Fiber)",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Actual connector is QSFP+ (not SFP); point-to-point fiber link rated up to 40 Gbit/s. No exact QSFP+ id exists in the allowed list, so sfp was used as the closest approximation."
+    },
+    {
+      "name": "HDBaseT",
+      "direction": "input",
+      "connector": "hdbaset",
+      "note": "Standard built-in input (not a card slot); carries an HDMI 1.4-equivalent signal over Cat cable per Christie's HDBase-T video format table."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS232 In",
+      "direction": "input",
+      "connector": "rs232"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical connector is a 9-pin D-sub (DE-9 male) carrying 7 configurable GPIO pins plus +12V and ground, not RS-232 serial data. rs232 was chosen only because it is the closest D-sub connector id in the allowed list."
+    },
+    {
+      "name": "3D Sync",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "TTL 3D sync in/out; not an SDI signal so no bandwidth grade applies."
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female carrying a proprietary/custom control protocol for the wired IR remote keypad, not balanced audio."
+    },
+    {
+      "name": "AC Input 1 (Full Power)",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Real-world connector is a genuine IEC 309, 32A/250VAC industrial pin-and-sleeve inlet (200-240VAC, 19A max rated current, 30A breaker required) — a round twist-lock connector with no exact match in the allowed list. iec-c19 was chosen only as the closest higher-current IEC option; it is not a literal match."
+    },
+    {
+      "name": "AC Input 2 (Limited Power)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 320-C14 inlet, 15A/125VAC or 10A/250VAC (100-130VAC / 200-240VAC rated), used for single-lamp limited-power operation."
+    }
+  ]
+}

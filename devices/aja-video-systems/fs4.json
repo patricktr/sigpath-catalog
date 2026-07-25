@@ -1,0 +1,195 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "FS4",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.aja.com/products/fs4/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Source: official AJA \"FS4 - Spec Sheet\" PDF (linked from https://www.aja.com/products/fs4), a 4-channel 2K/HD/SD (or 1-channel 4K/UltraHD) frame synchronizer + up/down/cross-converter, 1RU, MSRP $7045. Caveats/inferences: (1) Individual connector numbering (In 1-4 / Out 1-4, SFP 5-8) is inferred from the rear-panel diagram grouping (\"4x 3G-SDI Inputs/Outputs, 4x BNC\" + \"4x SDI Fiber SFP Options and/or 12G-SDI BNC\" groups) rather than printed per-connector in the extracted text. (2) The 4 extra 12G-SDI in/out connectors per direction are optional SFP cages (ship unpopulated; accept either 12G/6G-SDI HD-BNC coax or LC/SC fiber modules) — mapped to connector id \"sfp\" with grade sdi-12g since AJA's copy states \"4x 12G-SDI inputs/outputs\". (3) AES audio I/O is on 25-pin D-sub (DB-25) connectors carrying 8 balanced AES3 pairs (16 channels) each; there is no DB-25 id in the allowed connector list, so it is mapped to \"aes3\" (closest signal-type match) — note added on each port. (4) MADI fiber ports use ST-type optical connectors (spec: \"1x ST Fiber\"); mapped to \"fiber-lc\" as the closest fiber id available (not literally an LC connector). (5) GPI/GPO is a single 25-pin D-sub carrying 4 optically-isolated inputs + 4 optically-isolated outputs; mapped to \"rs232\" as the closest D-sub-shaped connector id in the list (it is not RS-232 serial data). (6) AC power: spec states \"100-240 VAC 50/60 Hz (Dual, redundant power supplies), 55W typical, 70W max\" with two AC inlets shown on the rear panel; exact IEC receptacle sub-type (C13/C14) is not spelled out in the extracted text, assumed standard IEC C13/14 inlet based on the panel photo and typical AJA 1RU gear — mapped to \"iec\". (7) SDI embedded audio (8 channels embedded in the SDI video I/O) is not listed as a separate physical connector since it rides on the SDI ports already enumerated. Grades reflect the maximum bandwidth explicitly stated per port group in the spec sheet.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 5 (SFP, optional)",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI In 6 (SFP, optional)",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI In 7 (SFP, optional)",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI In 8 (SFP, optional)",
+      "direction": "input",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI Out 5 (SFP, optional)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI Out 6 (SFP, optional)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI Out 7 (SFP, optional)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "SDI Out 8 (SFP, optional)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Optional SFP cage, ships unpopulated; accepts 12G/6G-SDI HD-BNC coax or LC/SC fiber SFP module"
+    },
+    {
+      "name": "Monitor Out (SDI)",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Copy of main output, 3G-SDI/HD/SD, 10-bit; configurable in Enhanced Single Channel Mode"
+    },
+    {
+      "name": "Monitor Out (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "2K/HD/SD, HDMI v1.4a, with HDR InfoFrame support"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "External reference, looping/non-terminating, blackburst or tri-level sync"
+    },
+    {
+      "name": "Ref Loop Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of the reference input for daisy-chaining"
+    },
+    {
+      "name": "AES Audio In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "25-pin D-sub (DB-25); 8 balanced AES3 pairs / 16 channels, 24-bit. No DB-25 id in connector list; mapped to aes3."
+    },
+    {
+      "name": "AES Audio Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "25-pin D-sub (DB-25); 8 balanced AES3 pairs / 16 channels, 24-bit. No DB-25 id in connector list; mapped to aes3."
+    },
+    {
+      "name": "MADI In (Coax)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75-ohm BNC, MADI/AES-10, 128 channels, 24-bit"
+    },
+    {
+      "name": "MADI In (Fiber)",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "ST-type optical MADI connector; no ST id in connector list, mapped to fiber-lc as closest fiber option"
+    },
+    {
+      "name": "MADI Out (Coax)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75-ohm BNC, MADI/AES-10, 128 channels, 24-bit"
+    },
+    {
+      "name": "MADI Out (Fiber)",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "ST-type optical MADI connector; no ST id in connector list, mapped to fiber-lc as closest fiber option"
+    },
+    {
+      "name": "LAN 10/100/1000",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Embedded web server, REST interface, SNMP"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "25-pin D-sub; 4 optically-isolated GPI inputs + 4 optically-isolated GPO outputs. No generic multi-pin D-sub control id in list; mapped to rs232 as closest D-sub shape (not actual RS-232 serial)."
+    },
+    {
+      "name": "Power Supply 1 (AC In)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60 Hz; one of two redundant supplies, 55W typical / 70W max total"
+    },
+    {
+      "name": "Power Supply 2 (AC In, Redundant)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC 50/60 Hz; one of two redundant supplies, 55W typical / 70W max total"
+    }
+  ]
+}

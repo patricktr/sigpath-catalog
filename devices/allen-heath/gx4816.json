@@ -1,0 +1,359 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "GX4816",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 5,
+  "sourceUrl": "https://support.allen-heath.com/hc/en-gb/articles/40425087154705-GX4816-Getting-Started-Guide",
+  "confidence": "high",
+  "notes": "96kHz remote I/O expander for A&H dLive, Avantis, SQ/SQ+, and 96kHz Qu digital mixing systems, and AHM matrix processors — not a standalone mixer, so mapped to Audio interface as the closest fit in the type enum. Ports confirmed against the manufacturer's official product page (allen-heath.com/hardware/everything-i-o/gx4816) and the official GX4816 Getting Started Guide (support.allen-heath.com). 48x XLR mic/line inputs (labeled \"Mic/Line In N\" here; front-panel silkscreen is numeric only) and 16x XLR line outputs are analog and ungraded. GX port explicitly documented as EtherCon over \"Gigabit Ethernet\" (grade eth-1g); DX1/DX2 ports explicitly documented as EtherCon over \"Fast Ethernet\" (grade eth-100m), each carrying 32x32 96kHz channels for daisy-chaining DX32/DX168/DX164-W/DX012 expanders. On SQ/Avantis only, DX2 can alternatively host an A&H ME Personal Mixing system (not supported on dLive/AHM). All three network-style ports use locking Neutrik EtherCon connectors, mapped to the \"ethercon\" connector id rather than plain rj45. Power is an IEC inlet (universal 100-240V AC PSU). Unit can also be used free-standing/off-rack; rackUnits reflects the 5U 19\" rack-mount form factor when installed.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 17",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 18",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 19",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 20",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 21",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 22",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 23",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 24",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 25",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 26",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 27",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 28",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 29",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 30",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 31",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 32",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 33",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 34",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 35",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 36",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 37",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 38",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 39",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 40",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 41",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 42",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 43",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 44",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 45",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 46",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 47",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 48",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 9",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 11",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 12",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 13",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 14",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 15",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 16",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "GX",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Locking Neutrik EtherCon (RJ45) port to the mixer's SLink port or gigaACE card over Gigabit Ethernet; single Cat5e+ STP cable carries 96kHz multichannel audio plus control, up to 100m (Cat6a+ required for Qu SLink/gigaACE runs up to 80m)."
+    },
+    {
+      "name": "DX1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "EtherCon port over Fast Ethernet for DX Expander daisy-chain (single DX32, or up to 2x DX168/DX164-W/DX012); carries 32x32 channels of 96kHz audio + control. Not usable for redundancy."
+    },
+    {
+      "name": "DX2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "EtherCon port over Fast Ethernet for DX Expander daisy-chain, same capability as DX1. On SQ/Avantis only, can instead connect a ME Personal Mixing system (ME-U/ME-1/ME-500), self-configuring as a 40ch 48kHz output-only port; not supported on dLive/AHM. Not usable for redundancy."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC mains inlet with power switch, built-in universal PSU, 100-240V AC 50/60Hz."
+    }
+  ]
+}

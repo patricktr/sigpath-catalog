@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Luminex",
+  "model": "GigaCore 14R",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/wp-content/uploads/doccenter/gigacore_specifications_rev3-3.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Luminex's own datasheet PDF (gigacore_specifications_rev3-3.pdf) and the official GigaCore 14R User Manual (rev 2.8.4, section 2.3 \"Description\" / rear panel breakdown), both hosted on luminex.be -- authoritative and mutually consistent on physical I/O. A separate SKU \"GigaCore 14R with PoE\" exists with a built-in PoE module (its own PoE status LED); the plain GigaCore 14R modeled here uses an optional external PoE Supply Unit instead. All Ethernet/EtherCon and SFP ports are rated 10/100/1000Mbps (graded eth-1g); switch fabric throughput is 32Gbps non-blocking. Unit is 1U (482 x 204.3 x 44mm / 19\" x 8.04\" x 1.73\"), 2.5kg, metal enclosure, 2 internal redundant fans (not modeled as ports). Reset button and status LEDs also omitted as they are not signal/power connectors.",
+  "ports": [
+    {
+      "name": "EtherCon 1-10 (Front)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "10x shielded Neutrik EtherCon (RJ45) ports on the front panel, numbered 1-10, 10/100/1000Mbps."
+    },
+    {
+      "name": "EtherCon 11-12 (Rear)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "2x shielded Neutrik EtherCon (RJ45) ports on the rear panel, continuing the numbering as 11-12, 10/100/1000Mbps."
+    },
+    {
+      "name": "SFP 13-14",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x SFP cages on rear panel accepting Mini-GBIC transceivers, 10/100/1000Mbps. (Note: the manual's SFP-installation section text mentions 'four SFP cages', but this conflicts with both the manufacturer datasheet and the manual's own rear-panel diagram, which both list 2x SFP for the 14R -- that text appears to be copy/paste leftover from the 16Xt manual.)"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 serial console port on an RJ45-shaped connector, rear panel, labeled 'Console'. No Ethernet bandwidth grade applies (serial, not switched Ethernet)."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with fuse holder (3.15A 250V slow-blow), 100-240VAC 50-60Hz, rear panel."
+    },
+    {
+      "name": "Redundant Power In (PSU)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "15VDC/2A backup power input for the optional Luminex GigaCore RPSU (redundant power supply unit). Physical connector is a proprietary Molex Micro-Fit 6-pin connector, not a true barrel jack -- 'dc-barrel' chosen as closest allowed id."
+    },
+    {
+      "name": "Redundant PoE In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "48VDC/2.1A backup PoE input for the optional Luminex GigaCore RPSU. Physical connector is a proprietary Molex Micro-Fit 6-pin connector, not a true barrel jack -- 'dc-barrel' chosen as closest allowed id. Feeds the optional external PoE Supply Unit (LU 01 00051-GC14/16) that injects up to 160W PoE across the 10 front ports; this PoE capability is an add-on module, not a built-in port on the base 14R."
+    }
+  ]
+}

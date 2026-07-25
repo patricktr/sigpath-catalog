@@ -1,0 +1,190 @@
+{
+  "manufacturer": "Dataton",
+  "model": "WATCHPAX 62",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 2,
+  "sourceUrl": "https://cdn.dataton.com/Files-PDF-etc/userguides/Dataton_WATCHPAX_62_Users_Guide_3.5.pdf",
+  "confidence": "high",
+  "notes": "This documents the top-of-line WATCHPAX 62 Model C configuration (full I/O superset), per Dataton's official cutsheet (Doc 3769 Rev 6.1) and User's Guide v3.5. The series also ships as: Model S (base — only 4x DisplayPort 1.4 out + 4x USB-A + 2x 10GbE, no HDMI/SDI/audio/sync connectors); Model A (adds the 2x HDMI 1.4 capture inputs + DB-26HD/XLR audio-timecode breakout); Model B (adds Frame-Lock RJ45 sync ports + External Sync BNC for hardware GPU synchronization, same I/O as Model A plus these); Model C (adds the 8-channel bidirectional Micro-BNC SDI bank + dedicated SDI Sync BNC on top of Model B's I/O). All models share the IEC C14 power inlet, 4x USB-A, and 2x 10GbE (2nd port disabled/reserved on all models). Weight varies by model: S/A ~8.3kg, B ~8.6kg, C ~8.8kg; unit dimensions 446x88x336mm (2U) across the series. USB port-to-speed (2.0 vs 3.2) mapping is not specified by Dataton at the individual-port level. The DB-26HD \"AUDIO\" D-sub jack (not in the standard connector-id list) is represented here as 3 separate XLR-style ports matching the labels on Dataton's supplied breakout cable, since that is the practical cabling interface. SDI jacks are Micro BNC (HD-BNC) format requiring the bundled adapter cables to mate with standard BNC — represented with connector id \"bnc\" as the closest match.",
+  "ports": [
+    {
+      "name": "Power Inlet",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Cutsheet states 2x USB 2.0 + 2x USB 3.2 across the 4 USB-A ports; exact port-to-speed mapping and USB 3.2 generation not specified by Dataton, so no per-port grade assigned."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "See USB 1 note on unspecified 2.0/3.2 mapping."
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "See USB 1 note on unspecified 2.0/3.2 mapping."
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "See USB 1 note on unspecified 2.0/3.2 mapping."
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Present on chassis but currently disabled in firmware; reserved for future use per Dataton documentation."
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "Audio Out 1 (XLR breakout)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Chassis jack is physically a DB-26HD D-sub labeled 'AUDIO'; breaks out via Dataton-supplied cable into XLR leads. This is the 'Left Out' lead (balanced analog audio ch.1, or digital embedded audio). Models A/B/C only."
+    },
+    {
+      "name": "Audio Out 2 (XLR breakout)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Same DB-26HD breakout jack as Audio Out 1; 'Right Out' lead (audio ch.2). Models A/B/C only."
+    },
+    {
+      "name": "Timecode In (XLR breakout)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Same DB-26HD breakout jack; 'Left In' lead is wired for SMPTE LTC timecode input (the 'Right In' lead is reserved/unused). Models A/B/C only."
+    },
+    {
+      "name": "HDMI 1 (Capture In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Labeled 'Capture card HDMI-1 (RX1)' in Dataton's connector table; capture bandwidth spec confirmed as HDMI 1.4-class (max 297 Mpixel/s, up to 4096x2160p30). Models A/B/C only."
+    },
+    {
+      "name": "HDMI 2 (Capture In)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Labeled 'Capture card HDMI-2 (RX0)' in Dataton's connector table. Models A/B/C only."
+    },
+    {
+      "name": "Frame-Lock 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary hardware frame-lock sync between WATCHPAX units over Cat5 cable — NOT standard Ethernet data. Dataton explicitly warns not to connect to a network switch/NIC. Models B/C only."
+    },
+    {
+      "name": "Frame-Lock 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second Frame-Lock port, same function as Frame-Lock 1. Models B/C only."
+    },
+    {
+      "name": "External Sync",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock/sync-generator reference input for the GPU hardware synchronization card (bi- or tri-level sync). Models B/C only."
+    },
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Physical jack is Micro BNC (HD-BNC), not full-size BNC; Dataton ships 9x Micro BNC-to-BNC adapter cables. Channel 1 supports up to 12G/6G-SDI. Configurable per-channel as input or output. Model C only."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI 5",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Micro BNC (HD-BNC) jack; supports up to 12G/6G-SDI (the second of two 12G-capable channels). Model C only."
+    },
+    {
+      "name": "SDI 6",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI 7",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI 8",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Micro BNC (HD-BNC) jack; 3G-SDI max on this channel. Model C only."
+    },
+    {
+      "name": "SDI Sync",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Dedicated tri-level/bi-level sync reference input for the SDI board (labeled 'S' in the SDI connector bank), distinct from the main External Sync BNC. Model C only."
+    }
+  ]
+}

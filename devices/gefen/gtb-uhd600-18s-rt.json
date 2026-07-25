@@ -1,0 +1,83 @@
+{
+  "manufacturer": "Gefen",
+  "model": "GTB-UHD600-18S-RT",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://gefen.com/products/1x8-hdmi-splitter-for-4k-hdr-gtb-uhd600-18s-rt",
+  "confidence": "high",
+  "notes": "1-in/8-out 4K HDMI splitter/distribution amp. Bandwidth is stated as 600 MHz / 18 Gbps with HDCP 2.2 and 4K60 4:4:4 support (Gefen user manual spec table), which matches HDMI 2.0's max bandwidth exactly, so HDMI ports are graded hdmi-2.0. Exact rear-panel silkscreen text for the HDMI ports wasn't independently viewable (image-based diagram); conventional \"HDMI In\" / \"HDMI Out 1-8\" naming used, corroborated by manufacturer copy (\"1x HDMI\" in, \"8x HDMI\" out) and the user manual's per-model connection tables. Sibling model GTB-UHD600-28S-RT (2-input version) shares the same manual/family — do not confuse the two; 18S-RT has exactly 1 HDMI input. Desktop enclosure (4.49\" W x 10.35\" D x 0.984\" H) — not rack-mountable, so rackUnits omitted. USB control port is physically Mini-USB (not Micro-USB); mapped to the closest available connector id \"usb-micro\". Ethernet port's link speed is not published, so grade omitted per instructions. Sources: manufacturer page https://gefen.com/products/1x8-hdmi-splitter-for-4k-hdr-gtb-uhd600-18s-rt (and legacy https://gefen.com/product/4k-ultra-hd-18-splitter/), user manual via https://www.manualslib.com/manual/2607750/Gefen-Gtb-Uhd600-18s-Rt.html, retailer corroboration via https://www.kvmgalore.com/shopping/gefen-4k-ultra-hd-600-mhz-hdmi-splitter-8-ports-hdr-gtb-uhd600-18s-rt-p-52837.html.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 5",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 6",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 7",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 8",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "IP control (Telnet/UDP) and cascading; link speed not stated by manufacturer"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Physically a Mini-USB port used as a virtual serial (RS-232) port for control, EDID, and firmware updates; mapped to closest available connector id since 'mini-usb' is not in the allowed list. No data-rate grade applies (control/serial port)."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking 5.5mm barrel / 2.1mm pin DC jack; 5V/2.6A (13W) external power supply, model EXT-PS526AIP-LP-6"
+    }
+  ]
+}

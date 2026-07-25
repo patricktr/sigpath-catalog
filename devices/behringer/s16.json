@@ -1,0 +1,192 @@
+{
+  "manufacturer": "Behringer",
+  "model": "S16",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.behringer.com/en/products/0606-ABC",
+  "confidence": "medium",
+  "notes": "Digital snake / stage box for the X32 ecosystem (16 Midas-designed remote mic preamps in, 8 balanced XLR out, AES50 networking). Physical I/O and specs cross-verified against the official Behringer/Klark Teknik \"DIGITAL SNAKE S16 User Manual\" (Section 7, Specifications table) and the official Behringer product brochure — both agree with the behringer.com product page. Notes/caveats: (1) AES50 A/B and Ultranet ports are standard RJ45 (8P8C) jacks per Klark Teknik SuperMAC/AES50; manual recommends shielded Cat-5e cable with EtherCon-terminated ends for road use, but the panel jacks themselves are plain RJ45, not locking EtherCon jacks. (2) AES50 and Ultranet carry proprietary digital-audio protocols, not generic Ethernet, so no eth-* speed grade is stated or applied. (3) The two ADAT Toslink outputs are labeled together as \"ADAT OUT\" on the rear panel (carrying channels 1-8/9-16 or AES50 ch17-24/25-32 depending on mode); labeled \"ADAT Out 1\"/\"ADAT Out 2\" here for disambiguation since the manual doesn't give each an individual name. (4) USB Type-B port is for firmware updates only via PC; manual does not state a USB spec version (device predates USB 3.x; likely USB 1.1/2.0 full-speed), so grade omitted. (5) Power inlet is a standard IEC C13/C14 socket (confirmed via brochure rear-panel callout \"Standard IEC Power socket\"), switch-mode autoranging 100-240V 50/60Hz, 45W consumption. (6) Phones output is a single 1/4\" (6.35mm) mono TRS jack.",
+  "ports": [
+    {
+      "name": "IN 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Mono, 1/4\" TRS headphone output, level-adjustable, assignable to any input/output/P16 channel"
+    },
+    {
+      "name": "AES50 A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "KLARK TEKNIK SuperMAC / AES50 network port; shielded Cat-5e, EtherCon-terminated cable recommended, up to 100 m"
+    },
+    {
+      "name": "AES50 B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "KLARK TEKNIK SuperMAC / AES50 network port; used for cascading additional S16 units"
+    },
+    {
+      "name": "Ultranet",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Sends 16 channels to a Behringer P16 Personal Monitoring System; no power supplied over the cable"
+    },
+    {
+      "name": "ADAT Out 1",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical Toslink, 8 channels (local 1-8 or AES50 ch17-24 depending on mode)"
+    },
+    {
+      "name": "ADAT Out 2",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Optical Toslink, 8 channels (local 9-16 or AES50 ch25-32 depending on mode)"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Standard 5-pin MIDI DIN"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Standard 5-pin MIDI DIN"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Rear-panel USB Type-B port for firmware updates via PC only"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power inlet with switch; switch-mode autoranging 100-240V 50/60Hz, 45W"
+    }
+  ]
+}

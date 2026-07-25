@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "AT8035",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.markertek.com/product/at8035/audio-technica-at8035-line-gradient-condenser-microphone",
+  "confidence": "medium",
+  "notes": "AT8035 is a line/gradient shotgun condenser mic with a single integral (built-in, non-removable) 3-pin XLRM output — no separate power connector exists on the device. It is powered either by external phantom power (11–52V DC, 2mA typical, delivered over the same XLR output pins) or by an internal 1.5V AA/UM3 battery compartment inside the mic body; neither is a distinct physical port, so no additional power connector was added. Desktop/handheld form factor — not rack-mountable, so rackUnits omitted. Manufacturer's own audio-technica.com spec page returned HTTP 403 to automated fetch (and B&H, Crutchfield, Sweetwater also blocked fetch), so this was sourced from Markertek's spec table instead, a reputable AV retailer; values (weight 6.0oz, length 14.53in, freq response 40-20,000Hz, output connector) are consistent with widely-published AT8035 specs. No grade applies to the XLR3 analog audio connector per the grading rules.",
+  "ports": [
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Integral (fixed, non-detachable) 3-pin XLRM-type output connector"
+    }
+  ]
+}

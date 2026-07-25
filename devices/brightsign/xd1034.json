@@ -1,0 +1,71 @@
+{
+  "manufacturer": "BrightSign",
+  "model": "XD1034",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://docs.brightsign.biz/hardware/xdx34-hardware-interfaces",
+  "confidence": "high",
+  "notes": "Sourced from BrightSign's own official docs (manufacturer): overview/interfaces list at docs.brightsign.biz/hardware/xd234-xd1034 and detailed electrical spec at docs.brightsign.biz/hardware/xdx34-hardware-interfaces. HDMI grade (2.0) and Ethernet grade (1000BASE-T = eth-1g) are explicitly stated; USB grade (2.0, 480 Mbit/s) explicitly stated for both ports. Two ports (3.5mm IR in/out, 3.5mm serial) are physically 3.5mm TRS mini-jacks repurposed for non-audio signals — mapped to the logical connector ids \"ir\" and \"rs232\" respectively rather than \"trs-3.5\" since that better reflects signal compatibility; flagged per-port. GPIO is a 12-pin pluggable header, mapped to \"euroblock\" as closest available id. Power connector is a locking 2-pin DC connector, mapped to \"dc-barrel\" as closest available id (not a literal coaxial barrel jack). Omitted from the port list (not physical cable I/O in the AV signal/power sense): microSD card slot, status LEDs, SVC/Reset buttons, and two WiFi antenna connectors (RP-SMA-style, for optional WiFi/BT antennas — no connector id in the allowed list fits an RF antenna jack). Desktop/embedded form factor — not rack-mountable, so rackUnits omitted. Device is the \"Expanded I/O\" variant of the Series 4 XDx34 line (sibling model XD234 lacks the USB and serial ports); this record is XD1034-specific.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB 2.0 (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host port; DCP charging capable, up to 1.5A; 480 Mbit/s max"
+    },
+    {
+      "name": "USB 2.0 (Type C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "Dual-role (host or device) port, up to 1A; 480 Mbit/s max"
+    },
+    {
+      "name": "RJ45 LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BASE-T"
+    },
+    {
+      "name": "3.5mm Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "accepts": [
+        "toslink"
+      ],
+      "note": "Combo analog (2V RMS)/TOSLINK optical output via 3.5mm jack; analog and digital cannot be used simultaneously"
+    },
+    {
+      "name": "3.5mm IR In/Out",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "Physically a 3.5mm TRS mini-jack (tip=3.3V, ring=IR in, sleeve=IR out); NEC/Pronto Hex space-encoded IR"
+    },
+    {
+      "name": "3.5mm Serial",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physically a 3.5mm TRS mini-jack carrying RS-232 levels (not DE9); TX/RX/GND only, no RTS/CTS; default 115200 8N1; player is DCE"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "12-pin pluggable terminal-block header (Phoenix Contact/Würth style, not a screw-clamp Euroblock); switch/LED/contact-closure control, 3.3V logic, 24mA max per line"
+    },
+    {
+      "name": "Power Connector",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V@3A; physically a right-side-positive, locking 2-pin (1x2) Molex-style DC connector, not a coaxial barrel jack"
+    }
+  ]
+}

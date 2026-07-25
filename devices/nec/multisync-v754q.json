@@ -1,0 +1,134 @@
+{
+  "manufacturer": "NEC",
+  "model": "MultiSync V754Q",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.sharpnecdisplays.eu/datasheet/v754q",
+  "confidence": "high",
+  "notes": "Cross-verified against three official Sharp/NEC sources: the live manufacturer datasheet at sharpnecdisplays.eu/datasheet/v754q (fetched 2026-07-24), the identical Sharp NEC Display Solutions Europe GmbH PDF datasheet (order code 60004317), and the official English V654Q/V754Q/V864Q/V984Q User's Manual (terminal panel diagram + \"Specifications - V754Q\" table), all of which agree on port counts, dimensions, weight (52.6-53kg) and power draw. This is the standard (non-touch) MultiSync V754Q — touch variants (V754Q IGB, V754Q-TM3) and tuner/media-player SKUs (V754Q-AVT3, V754Q-MPI, V754Q-PC4) carry different port sets and are out of scope here. A microSD card slot (MediaPlayer storage) exists on the terminal panel but is omitted as it has no matching connector id in the schema (not a cable/AV signal or power connector). HDMI grade of 2.0 is inferred from the manual's confirmed 4096x2160@60Hz MODE2 support with HDCP 2.2 (requires 18Gbps bandwidth); DisplayPort grade of 1.2 and LAN grade of 100M are explicitly stated in the source. The AC IN connector form factor (IEC C13/C14 vs. other detachable-cord variants) is inferred, not explicitly spelled out in either source.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "MST not available on this input per manual"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Loop-through daisy-chain output sourced from DisplayPort 1 (also carries OPS slot-in PC video)"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack, 0.5 Vrms analogue audio input"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack line-level output to external amp/receiver; manual notes this is not a headphone jack"
+    },
+    {
+      "name": "RS-232C In",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-Sub external control port"
+    },
+    {
+      "name": "Remote In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack for optional external IR sensor extension"
+    },
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX; manual states to give priority of use to LAN1"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX secondary LAN port"
+    },
+    {
+      "name": "USB1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Downstream port for connecting USB devices (flash drive, keyboard, etc.)"
+    },
+    {
+      "name": "USB2",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Upstream port; a host computer connected here can control devices plugged into USB1"
+    },
+    {
+      "name": "USB CM1 (2A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Compute Module bay power-supply port, 5V/2A max"
+    },
+    {
+      "name": "USB CM2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Compute Module bay service port for maintenance; manual states not to connect general devices"
+    },
+    {
+      "name": "USB MP",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Downstream port dedicated to MediaPlayer content storage / firmware update"
+    },
+    {
+      "name": "External Speaker Terminal",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Actual connector is a bare-wire screw/spring-clip terminal block (+/- polarity marked), rated for 15W+15W into 8 ohms; 'euroblock' used as closest available connector id, not a literal pluggable Euroblock"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC IN connector for detachable IEC-style power cord, rated 100-240V AC 50/60Hz, 4.0-1.7A (155W shipping / 210W max); source describes a standard detachable cord (H05VV-F 3G 0.75mm2 in Europe) but does not explicitly state the C13/C14 inlet form factor"
+    }
+  ]
+}

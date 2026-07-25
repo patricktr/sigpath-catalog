@@ -1,0 +1,37 @@
+{
+  "manufacturer": "Bosch",
+  "model": "PRA-CSLD",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://software-download.keenfinity-group.com/publicaddress/praesensa/datasheets/PRA-CSLD_Desktop_LCD_call_station.pdf",
+  "confidence": "high",
+  "notes": "PRA-CSLD is a Bosch PRAESENSA desktop LCD call station (paging/intercom microphone station for PA/voice-alarm systems), not a conventional AV source/display device — category/type were mapped to the closest fit (\"control\"/\"Control processor\"); it could also reasonably be tagged \"Touch panel\" given its 4.3\" touchscreen UI. It has no discrete power connector: power arrives exclusively via PoE on the two RJ45 OMNEO network ports (IEEE 802.3af mode B, 48V, 37-57VDC tolerance, 4.2W general/5.4W alarm use). Built-in gooseneck microphone and internal monitor loudspeaker are fixed/integrated components, not externally connectorized ports, so they are not listed separately. Desktop unit (130 x 62 x 189 mm, 0.9 kg) — not rack-mountable, so rackUnits omitted. Source datasheet is Bosch-branded (© Bosch Security Systems 2020, doc 24814072843, V3, 10 Jul 2020) hosted on the current successor domain keenfinity-group.com; Bosch's building/security-systems business (including PRAESENSA) was transferred to KEENFINITY Group in 2025, but the product remains marketed under the Bosch brand on this datasheet. Company page for the product (boschsecurity.com/keenfinity-group.com product listing) redirected/404'd, so the PDF datasheet itself was used directly as the authoritative source.",
+  "ports": [
+    {
+      "name": "OMNEO 1 (PoE PD)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Network+control+audio port (100BASE-TX/1000BASE-T, OMNEO/AES128). Also accepts Power over Ethernet, IEEE 802.3af mode B, 48V nominal — this is the device's power input; there is no separate power jack."
+    },
+    {
+      "name": "OMNEO 2 (PoE PD)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant loop-through OMNEO network port, identical to OMNEO 1; also accepts PoE (802.3af mode B)."
+    },
+    {
+      "name": "Local source audio line input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm jack line-level input for background music; stereo-to-mono converted internally."
+    },
+    {
+      "name": "PRA-CSE interconnection",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Datasheet specifies an RJ12 (6P6C) modular jack, which is not in the allowed connector list; RJ45 (closest modular-jack id) is used as an approximation. Carries control data + LED status to/from up to four PRA-CSE call-station extensions."
+    }
+  ]
+}

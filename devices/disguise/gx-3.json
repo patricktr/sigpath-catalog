@@ -1,0 +1,252 @@
+{
+  "manufacturer": "Disguise",
+  "model": "GX 3+",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 4,
+  "sourceUrl": "https://s3.us-east-1.amazonaws.com/help.disguise.one/PublishedPDFs/hardware_guides/Disguise_GX3p_Hardware_Guide_A2_2025_10_02.pdf",
+  "confidence": "high",
+  "notes": "Sourced primarily from the official disguise \"GX 3+ Hardware Guide\" (Q3 2025 PDF, help.disguise.one), which includes a fully labeled rear-panel diagram — used to confirm every port name/count/connector and the explicit HDMI 2.0, DisplayPort 1.4, 10GBit/s and 100GBit/s labels. Cross-checked against the disguise.one GX 3+ product page and the GX 3 (non-plus) spec sheet, since GX 3+ shares the same 4U chassis/rear layout — the 4U rack height and the 5x-USB-3.0 total (2 front + 3 rear) were confirmed via the base GX 3 spec sheet, as the GX3+-specific guide's rear panel matches port-for-port but doesn't restate chassis dimensions. The GX 3+ upgrades networking vs base GX 3 (4x 10GbE instead of 1x1GbE+2x10GbE) per both the diagram and product page. Video I/O is modular: VFC (Video Format Conversion) card bays default to 3x HDMI 2.0 outputs but can be swapped for DisplayPort, Quad-DVI, Quad-SDI, or IP/ST2110 (ST 2110 support \"not available at launch\" per VFC card notes) — the 3 HDMI ports listed reflect as-shipped default only. The 12x HD-BNC (mini-BNC) video-input bank is dual-mode: 12 independent 3G-SDI inputs or 3 groups of 4 forming quad-link 12G-SDI; grade sdi-3g was used per physical connector (its native per-cable capacity) with a note on the 12G option. Peak power consumption for the + variant (with its NVIDIA Blackwell GPU) was not confirmed in available documents (base GX 3 lists 700W peak, but GX 3+ likely differs). QSFP28 100GbE ports were mapped to the closest available connector id \"sfp\" (not an exact form-factor match) and left ungraded since no eth-100g value exists in the provided grade scale.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1 inlet, 100–240V 50/60Hz. Closest available connector id; the actual part is specifically powerCON TRUE1 (lockable/live-mating variant), not generic powerCON."
+    },
+    {
+      "name": "HDMI Out (VFC 1)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Default VFC (Video Format Conversion) card slot; ships standard with HDMI 2.0. Slot also accepts DP 1.2/1.4, Quad-DVI, Quad-SDI, or IP/ST2110 VFC cards, which change the physical connector/grade."
+    },
+    {
+      "name": "HDMI Out (VFC 2)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Same VFC slot notes as VFC 1."
+    },
+    {
+      "name": "HDMI Out (VFC 3)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Same VFC slot notes as VFC 1. One of these outputs is typically used as the extra/control GUI output."
+    },
+    {
+      "name": "DisplayPort 1.4 (GUI)",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "Dedicated GUI/control-monitor output, fixed (not a VFC card slot)."
+    },
+    {
+      "name": "10GbE A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GbE B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GbE C",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GbE D",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "100GbE E",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Physical connector is QSFP28, not standard SFP — 'sfp' used as the closest available id. Grade omitted: port is 100Gb/s, which exceeds the eth- grade scale provided (max eth-25g), and fiber/pluggable connectors are excluded from grading per instructions."
+    },
+    {
+      "name": "100GbE F",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Same QSFP28/grade caveat as 100GbE E."
+    },
+    {
+      "name": "Management Port (MGMT)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Dedicated system-management Ethernet port; speed not stated in source documents, so grade omitted."
+    },
+    {
+      "name": "SDI In A",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-BNC (mini-BNC) connector, requires 75-ohm HD-BNC cable or adapter to standard BNC. Bank of 12 (A–L) is configurable as 12x independent 3G-SDI (grade shown, native per-cable rating) or grouped in 4s as 3x quad-link 12G-SDI."
+    },
+    {
+      "name": "SDI In B",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In C",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In D",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In E",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In F",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In G",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In H",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In I",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In J",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In K",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "SDI In L",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Same bank/quad-link notes as SDI In A."
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync (tri-level/blackburst) input, not a video-data signal — no SDI bandwidth grade applies."
+    },
+    {
+      "name": "Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog XLR audio input."
+    },
+    {
+      "name": "Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog XLR audio input."
+    },
+    {
+      "name": "Audio Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog XLR audio output."
+    },
+    {
+      "name": "Audio Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analog XLR audio output."
+    },
+    {
+      "name": "ADAT/SPDIF In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT/SPDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB 3.0 (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear, Power Panel) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear, Power Panel) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear, GUI Panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    }
+  ]
+}

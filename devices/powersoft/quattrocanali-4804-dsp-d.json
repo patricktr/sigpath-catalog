@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Powersoft",
+  "model": "Quattrocanali 4804 DSP+D",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.powersoft.com/wp-content/uploads/2018/08/powersoft_Quattrocanali-DSP_DS_EN_WEB.pdf",
+  "confidence": "high",
+  "notes": "Sourced directly from Powersoft's own documentation (manufacturer, high authority): the 2-page Quattrocanali DSP+D Series datasheet (primary sourceUrl), the Quattrocanali 4804 DSP+Dante Architect's & Engineer's Specification (https://www.powersoft.com/wp-content/uploads/AE_Specs/PS_Quattrocanali4804_DSPD_AE.pdf), and the Duecanali/Quattrocanali Series User Guide (https://www.powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf). Cross-checked against B&H/Sweetwater listings via search snippets.\n\nCaveats:\n- The 4 analog inputs and 4 speaker outputs each share a single multi-pole Phoenix pluggable terminal block (12-pole for inputs, per the datasheet's \"Phoenix MC 1,5/12-ST-3,81\"; a larger multi-pole \"Phoenix PC 5/8-STF1-7,62\" for outputs) rather than 4 separate connector bodies. They are listed here per-channel (Input 1-4 / Output 1-4) to match the datasheet's own channel-count breakdown and because each is an independently routable signal path, but physically they are pins on one or two terminal blocks, not 4 discrete jacks.\n- Powersoft's product page states the unit supports a \"remotely switchable double input (main and aux) per channel\" for input redundancy/backup, and the box ships with a second 12-pole input plug — implying a secondary AUX analog input path per channel. This was not confirmed to be a physically distinct rear-panel connector (vs. an alternate wiring position on the same block) so it was not enumerated as separate ports.\n- The Alarm (GPO) and Remote On/Off (GPI) connectors are both documented as Phoenix pluggable terminal blocks in Powersoft's A&E spec, but the exact pin/pole count and whether they are one physical block or two was not confirmed for this specific 4-channel model (a 6-pin part is documented for the 2-channel Duecanali sibling in the same shared manual).\n- AC inlet is IEC C20 (mates with an IEC C19 cord) — mapped to the \"iec-c19\" (high-current IEC) connector id per instructions, since it is not the common C13/C14 (10 A) type.\n- Dante port grade (Gigabit) comes from the A&E spec text (\"Connectors shall be gigabit RJ45 utilizing CAT6 cable\"); the separate control Ethernet port's 100 Mbit/s grade comes from the datasheet's general \"Networking\" table — these are two distinct RJ45 jacks on the rear panel (visible together in the datasheet's rear-panel photo, both under an \"ALARM\"-labeled zone alongside the GPIO terminals).\n- Rack size: 483 x 44.5 x 358 mm (1U), weight 6.8 kg (15 lb).",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input, channel 1 of 4. Physically part of a shared 12-pole Phoenix MC 1,5/12-ST-3,81 pluggable terminal block covering all 4 analog inputs (3 pins/channel)."
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input, channel 2 of 4 (shared 12-pole Phoenix terminal block, see Input 1)."
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input, channel 3 of 4 (shared 12-pole Phoenix terminal block, see Input 1)."
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog audio input, channel 4 of 4 (shared 12-pole Phoenix terminal block, see Input 1)."
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker/Hi-Z output, channel 1 of 4 (bridgeable per channel pair). Phoenix PC 5/8-STF1-7,62 pluggable terminal block."
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker/Hi-Z output, channel 2 of 4 (see Output 1)."
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker/Hi-Z output, channel 3 of 4 (see Output 1)."
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Speaker/Hi-Z output, channel 4 of 4 (see Output 1)."
+    },
+    {
+      "name": "Dante",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante/AES67 digital audio networking, 4 channel capacity. Powersoft's Architect & Engineer spec states the Dante connector is Gigabit RJ45 over CAT6."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Control/monitoring port for ArmoníaPlus software, separate from the Dante port. Auto-sensing Fast Ethernet (IEEE 802.3u, 100 Mbit/s) per datasheet."
+    },
+    {
+      "name": "Alarm",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "GPO fault/alarm relay contacts (NO+NC pair per channel) on a Phoenix pluggable terminal block, labeled ALARM on the rear panel. A 6-pin Phoenix MC 1,5/6-ST-3,81 part is documented for the 2-channel Duecanali sibling in the shared user guide; exact pole count for this 4-channel model's block was not separately confirmed."
+    },
+    {
+      "name": "Remote On/Off",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "GPI-style differential-voltage remote power on/off terminals on a Phoenix pluggable terminal block, per Powersoft's Architect & Engineer spec (\"Phoenix GPI connector\"). May share the same rear-panel block area as the Alarm/GPO connector; not independently confirmed as a physically separate connector body."
+    },
+    {
+      "name": "AC Mains",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "IEC C20 inlet (device-side male pins, mates with IEC C19 cord), 20 A max, universal 100-240 VAC PFC switch-mode supply. Region-specific power cord provided."
+    }
+  ]
+}

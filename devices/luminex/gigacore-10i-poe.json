@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Luminex",
+  "model": "GigaCore 10i-PoE++",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/wp-content/uploads/2024/08/Product-specification-sheet-GigaCore-10i-v1.0.2.pdf",
+  "confidence": "high",
+  "notes": "Source is Luminex's own PDF datasheet \"Technical specifications GigaCore 10i v1.0.2\" (product page: https://www.luminex.be/products/gigacore/gigacore-10i/). There is no product literally named \"GigaCore 10 PoE\" in Luminex's current lineup — the 10-port AV switch family branches into GigaCore 10i (compact ½-19\" installation unit, this entry), GigaCore 10t (touring unit with etherCON ports + PowerCON power, also offered with an optional PoE++ variant), and GigaCore 10t-IP (weatherproof). PoE is an ordering option on the base chassis, not a separate model line: standard SKU is \"GigaCore 10i-8x1G-2x10G(SFP+)\" (LU 01 00089-10G) and the PoE++ SKU used here is \"GigaCore 10i-8x1G-2x10G(SFP+)-PoE++\" (LU 01 00089-10G-POE). If the touring \"10t\" chassis was intended instead, its physical ports differ (8x etherCON copper + 2x ruggedized fiber, 1x PowerCON True1 power inlet). Front-panel port numbering (1–8 for copper, 9–10 for the SFP+ cages) is read off the datasheet's front-panel photo; exact silkscreen labels for the two SFP+ slots were not fully legible in text extraction. The datasheet's PoE table oddly lists \"PoE Ports ... On ports 1-24,\" which is inconsistent with this 8-copper-port unit and appears to be a copy/paste artifact from a larger-port GigaCore model's spec sheet — the applications-page text and PoE budget figures (90W/port, 180W total across 8 ports) are used instead as the reliable figures. Half-19\" chassis (220 x 296.4 x 43.2 mm) is listed as rackUnits: 1 based on its ~1U height, though it occupies only half the rack width (mounts via VESA 100x100 points or side-by-side with a second half-width GigaCore unit to fill a full 19\" 1U rack space). Ethernet grade (eth-1g) was applied only to the 8 fixed RJ45 copper ports; grade was omitted on the 2 SFP+ cages per the schema's fiber/pluggable-port exclusion, even though the datasheet states they run up to 10Gbps/1Gbps.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 BASE-T copper port; PoE++ (802.3af/at/bt) capable, up to 90W, shared 180W total budget across all 8 copper ports"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP+ cage, 10Gbps/1Gbps fixed-speed, independent from the other network ports; accepts fiber or copper SFP/SFP+ modules (grade omitted — pluggable/fiber-capable slot, not a fixed RJ45/etherCON Ethernet port)"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP+ cage, 10Gbps/1Gbps fixed-speed, independent from the other network ports; accepts fiber or copper SFP/SFP+ modules (grade omitted — pluggable/fiber-capable slot, not a fixed RJ45/etherCON Ethernet port)"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet, 100-240VAC 50/60Hz; power draw ~40W baseline up to ~350W max depending on PoE++ load"
+    }
+  ]
+}

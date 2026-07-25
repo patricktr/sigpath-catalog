@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Univox",
+  "model": "PLS-7",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://univox.eu/product/pls-7/",
+  "confidence": "high",
+  "notes": "Univox is a hearing-loop/assistive-listening brand of Bo Edin AB (Sweden). PLS-7 is a 1U/19\" induction (hearing) loop amplifier, part no. 217700 (EU/AUS/UK/US mains-plug variants). Ports listed are for the standard (non-Dante) PLS-7. An optional Dante-equipped sibling, PLS-7D (part no. 217710), adds a proprietary plug-in Dante-interface module that exposes an RJ45 Dante PoE audio input — intentionally omitted here since it is not present on the base PLS-7 chassis and no Ethernet link-speed grade is published for it. The amplifier's own power connector is a 4-pin locking DC socket labeled \"DC\"; true AC mains (90-260VAC, 50/60Hz) terminates at the separate external power-supply brick included in the box, not at the chassis, so no IEC/AC inlet is listed on the unit itself. Several rear outputs (Monitor speaker, Aux DC power, Loop Fault relay) physically share one 6-position Phoenix/Euroblock terminal block labeled \"Monitor\" / \"Loop Fault\" on the rear panel — split into three logical ports here per the manufacturer's own connections diagram. Chassis width is 430mm (rack ears/brackets included to fit standard 19\" rails). Data drawn directly from Univox's own \"7-Series\" datasheet (pls-sls-7-br-gb-2022-12-19) and Installation Guide PDFs, both hosted at univox.eu, including the labeled rear-panel connector diagram.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced mic/line XLR; dip-switch Mic/Line sensitivity (-55 dBu to +10 dBu), +12VDC phantom power on/off, switchable low-cut filter (130-170 Hz)"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced Phoenix screw terminal; switchable Line level (-15 dBu to +20.6 dBu) or 50-100V speaker-level line input, plus override/priority (evac) function"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "rca",
+      "accepts": [
+        "euroblock"
+      ],
+      "note": "Unbalanced input (-24 dBu to +16.2 dBu); fed via stereo RCA L/R jacks (summed) or an alternate unbalanced Phoenix screw terminal wired to the same input"
+    },
+    {
+      "name": "Loop",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-position rear screw terminal; complementary balanced induction-loop drive output, up to 100 Vpp / 20 Arms"
+    },
+    {
+      "name": "Monitor (Speaker Out)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Drives an 8-32 ohm external monitor speaker (pins 1+2, pin2=GND); shares a 6-position rear 'Miscellaneous outputs' Phoenix block with the Aux DC and Loop Fault ports below"
+    },
+    {
+      "name": "Aux DC Power Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Auxiliary DC output, 12-18VDC at 100mA (pins 3+2, pin2=GND), on the same shared rear terminal block; not separately silk-screened"
+    },
+    {
+      "name": "Loop Fault",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dry relay contact for remote fault/PA monitoring on the shared rear terminal block: open contact = fault, closed = OK"
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel 3.5mm headphone jack for loop monitoring; shares a level pot with the rear Monitor speaker output"
+    },
+    {
+      "name": "DC",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Rear-panel 4-pin locking DC power inlet, fed by the included external power supply (mains 90-260VAC 50/60Hz enters at that external brick, not the chassis); closest listed connector id to the round 4-pin 'DC' socket shown in the manual"
+    }
+  ]
+}

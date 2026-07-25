@@ -1,0 +1,343 @@
+{
+  "manufacturer": "Netgear",
+  "model": "GC752XP",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.netgear.com/media/GC728X_GC728XP_GC752X_GC752XP_DS_tcm148-68959.pdf",
+  "confidence": "high",
+  "notes": "Official NETGEAR datasheet covers 4 models (GC728X/GC728XP/GC752X/GC752XP); data here is filtered to GC752XP. GC752XP = \"52-Port Gigabit Ethernet PoE+ Smart Cloud Switch w/2 SFP and 2 SFP+ 10G Fiber Ports\" (the \"52 ports\" = 48x RJ45 + 2x SFP + 2x SFP+). All 48 RJ45 copper ports are PoE/PoE+ (802.3af/at) capable, sharing a 505W total PoE budget (no fixed per-port note repeated below, see port 1). Rackmount (included kit) or desktop (rubber feet included); 1U, 440x320x44mm. AC input is an internal PSU (100-240VAC~50-60Hz, 10A max) with a separate, localized IEC-style AC power cord in the box, so connector is graded \"iec\" (exact C13/14 vs C19 not explicitly stated in the datasheet, but standard IEC C13/C14 is typical for this switch class/wattage). USB-A port and Micro-USB debug port have no stated speed/version in the datasheet, so no grade was set for either (Micro-USB is explicitly \"for debugging only,\" not general data transfer). SFP/SFP+ cages are unpopulated (transceivers sold separately); connector modeled as generic \"sfp\" per catalog convention, with grade reflecting max supported line rate (SFP = dedicated 1G/100M, 1000BASE-X; SFP+ = dedicated 10G/1G, 10GBASE-X).",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1000BASE-T copper, PoE+ (802.3af/at); all 48 RJ45 ports on this switch share one 505W total PoE budget"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "25",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "26",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "27",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "28",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "29",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "30",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "31",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "32",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "33",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "34",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "35",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "36",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "37",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "38",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "39",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "40",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "41",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "42",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "43",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "44",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "46",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "47",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "SFP 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 1000BASE-X Gigabit SFP fiber port (not shared with any RJ45 port); transceiver sold separately"
+    },
+    {
+      "name": "SFP 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 1000BASE-X Gigabit SFP fiber port; transceiver sold separately"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 10GBASE-X SFP+ fiber port, supports 10G/1G; backward compatible with Gigabit fiber, transceiver/DAC sold separately"
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Dedicated 10GBASE-X SFP+ fiber port, supports 10G/1G; transceiver/DAC sold separately"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB-A port for configuration file upload/backup and firmware updates; speed/version not stated in datasheet"
+    },
+    {
+      "name": "Micro-USB (Debug)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Micro-USB debug port for use only when directed by NETGEAR customer support; speed/version not stated"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal PSU, 100-240VAC~50-60Hz, 10A max; ships with a country-localized detachable AC power cord. Exact IEC inlet variant (C13/C14 vs other) not explicitly stated in the datasheet"
+    }
+  ]
+}

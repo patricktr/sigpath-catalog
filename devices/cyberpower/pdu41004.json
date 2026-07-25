@@ -1,0 +1,95 @@
+{
+  "manufacturer": "CyberPower",
+  "model": "PDU41004",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cyberpowersystems.com/product/pdu/switched-pdu/pdu41004/",
+  "confidence": "high",
+  "notes": "Cross-verified against three CyberPower-hosted sources that all agree: the official product page (cyberpowersystems.com/product/pdu/switched-pdu/pdu41004/), the official PDU41004 datasheet PDF, and the \"Power Distribution Units 1U/2U/0U Switched/Metered/Monitored Series\" user manual (PDU41004 appears in the 1U-15A IEC-type spec table alongside PDU81004/PDU71004/PDU31004, and its rear/front panel diagram was used to enumerate ports). No Ethernet/RJ45 link speed (e.g. 10/100) is published in any of these documents, so grade was omitted on the Ethernet, Envirosensor/Daisy-Chain-In, Daisy-Chain-Out, and Serial RJ45 ports per the grading rule. The ground stud is a chassis-grounding point, not a signal/data connector — included for completeness but approximated to the closest allowed connector id (\"banana\"). The serial \"port\" is physically RJ45 on the unit; DB9 is only present on the included breakout cable, not on the chassis.",
+  "ports": [
+    {
+      "name": "AC Inlet",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-320 C14 inlet; 100-240 VAC, 50/60Hz, single phase, 15A max (12A derated), via a captive 10 ft (3.0 m) power cord."
+    },
+    {
+      "name": "AC Output 1",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC-320 C13 switched/controllable outlet, 100-240 VAC. 8 outlets total, all front-mounted in a single bank."
+    },
+    {
+      "name": "AC Output 2",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 3",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 4",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 5",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 6",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 7",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Output 8",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 network management port for CyberPower PowerPanel Business Edition, web UI, SNMP, Telnet/SSH. No link-speed spec published, so grade is omitted."
+    },
+    {
+      "name": "Envirosensor/Daisy Chain (In) Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 modular port for the optional CyberPower environmental sensor or for daisy-chaining from a previous PDU; not a data-networking uplink, so no bandwidth grade set."
+    },
+    {
+      "name": "Daisy Chain (Out) Port",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "RJ45 modular port for chaining to the next PDU in a cascade; no bandwidth grade set."
+    },
+    {
+      "name": "Serial Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 modular serial console port for local SSH/Telnet-style config; ships with an included RJ45-to-DB9 adapter cable — the DB9 connector lives on that cable, not on the unit itself."
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Used only to upgrade firmware via a USB flash drive; not a host/data link, so no USB-speed grade set."
+    },
+    {
+      "name": "Ground Stud",
+      "direction": "bidirectional",
+      "connector": "banana",
+      "note": "Rear-panel chassis grounding stud (threaded stud, not a true banana jack) — closest connector id available in the allowed list."
+    }
+  ]
+}

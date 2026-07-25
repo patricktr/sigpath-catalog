@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Danley Sound Labs",
+  "model": "TH118",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.danleysoundlabs.com/wp-content/uploads/2022/10/TH118-Spec-Sheet-v.202209231214.pdf",
+  "confidence": "high",
+  "notes": "TH118 is a fully PASSIVE tapped-horn subwoofer (per manufacturer spec sheet: \"Operating Mode: Passive single channel amplified\") with no internal amplifier and no AC mains input — it is driven entirely by an external power amplifier via its speaker-level Speakon connectors, so no power port is listed. Connector/pinout data (2x Neutrik NL4 Speakon, wired in parallel, pin 1+/- = signal, pin 2+/- = pass-through) is confirmed directly from the manufacturer's Owner's Manual wiring diagram (THDBH_User-Manual.pdf) in addition to the spec sheet. Exact panel silkscreen labels (e.g. \"IN\"/\"LINK\") were not visible in available documentation, so port names above are descriptive rather than verbatim. Rated impedance 4 ohm; power handling per spec sheet PDF is 1700 W continuous / 6800 W peak — note the manufacturer's own web product page instead states \"3,400 W program,\" which is actually the recommended companion amplifier size (spec sheet: \"Recommended Power Amplifier: 1x =3400 Watts @ 4 Ohm\"), not a peak rating; treat 6800 W peak (PDF spec sheet) as authoritative. A weatherized variant (TH118-I-EW / TH118-I-AT) ships instead with a captive 2-conductor 14 AWG lead-in wire (12 ft, sealed/waterproof) rather than Speakon jacks — not modeled as a port since it has no discrete connector matching the allowed list. No grade applies to Speakon connectors (not a bandwidth-graded connector type). Desktop/floor-standing enclosure (40 x 28.5 x 22.5 in, 160 lbs) — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Speakon 1 (NL4 Input)",
+      "direction": "input",
+      "connector": "speakon",
+      "note": "Pin 1+/- carries the 4 ohm single-channel speaker-level signal from a power amplifier. Wired electrically in parallel with the second NL4 jack."
+    },
+    {
+      "name": "Speakon 2 (NL4 Link/Pass-Through)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Pin 2+/- passes the identical input signal through, for daisy-chaining a cable onward to another cabinet's input. Physically identical NL4 jack to port 1; either jack can serve as the amp input."
+    }
+  ]
+}

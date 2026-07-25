@@ -1,0 +1,314 @@
+{
+  "manufacturer": "Midas",
+  "model": "DL32",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.sgssistemas.lv/uploads/resources/101/lv/midas-dl32-ds.pdf",
+  "confidence": "medium",
+  "notes": "Source: official Midas \"DL32 Product Information Document\" (2016, MUSIC Group IP Ltd) — the copy on midasconsoles.com 404'd during research, so this is a third-party-hosted mirror (sgssistemas.lv) of the same manufacturer PDF, cross-checked against the rear-panel photo included in that PDF and against the manualslib-hosted DL32 user manual specs page. 32 mic inputs are plain XLR3 female (Neutrik) with switchable 48V phantom, no combo/TRS option. 16 line outputs are balanced XLR3 male. Two AES50 ports (Neutrik etherCON) carry 48 bidirectional channels @48kHz for cascading to an M32-series console or a second DL-series stagebox; their eth-100m grade is inferred from AES50/SuperMAC's well-documented 100BASE-TX (100Mbps Fast Ethernet) physical layer — the DL32 datasheet itself does not state a Mbps figure, hence overall confidence is medium rather than high. ULTRANET (also Neutrik etherCON) is listed as output-only on this box (feeds Behringer P16 personal monitors / Turbosound iQ speakers with 16 channels of audio+control); it rides Cat5 wiring but is not standard-timed Ethernet, so no eth-* grade was assigned. Two ADAT optical outputs are labeled on the rear panel with a channel range (rendered ambiguously through OCR as \"17-24\"/\"25-32\"); exact channel mapping could not be fully confirmed from the source image, so port names were kept generic (\"ADAT OUT 1\"/\"ADAT OUT 2\"). Two AES3(AES/EBU) outputs are on XLR3 connectors labeled \"OUT 13-14\" and \"OUT 15-16\" (digital duplicates of analog outs 13-16). Chassis is confirmed 3U (483 x 242 x 138mm) via the bullet \"Rugged 3U rackmount chassis\" and the measured height, despite one inconsistent marketing line elsewhere in the same PDF claiming \"only takes up two rack spaces.\"",
+  "ports": [
+    {
+      "name": "IN 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 17",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 18",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 19",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 20",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 21",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 22",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 23",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 24",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 25",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 26",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 27",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 28",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 29",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 30",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 31",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "IN 32",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 9",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 11",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 12",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 13",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 14",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 15",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OUT 16",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES50 A",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Klark Teknik SuperMAC/AES50 port, 48 bidirectional channels @48kHz; grade inferred from AES50's documented 100BASE-TX Fast Ethernet PHY, not stated explicitly on this datasheet"
+    },
+    {
+      "name": "AES50 B",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Klark Teknik SuperMAC/AES50 port for cascading a second DL-series stagebox; grade inferred, see AES50 A note"
+    },
+    {
+      "name": "ULTRANET",
+      "direction": "output",
+      "connector": "ethercon",
+      "note": "Neutrik etherCON connector; ULTRANET is a proprietary Cat5 protocol (not standard Ethernet PHY timing), so no eth-* grade assigned"
+    },
+    {
+      "name": "ADAT OUT 1",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT OUT 2",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "AES/EBU OUT 13-14",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU OUT 15-16",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Type B port for firmware/system updates via PC; USB speed not stated"
+    },
+    {
+      "name": "MIDI IN",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI OUT",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "AC/POWER",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC inlet with rocker switch; auto-ranging 100-240V ~50/60Hz, 55W"
+    }
+  ]
+}

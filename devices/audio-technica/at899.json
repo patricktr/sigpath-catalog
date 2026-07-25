@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "AT899",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/803449230-USE/audio_technica_at899_condenser_lavalier.html/specs",
+  "confidence": "high",
+  "notes": "AT899 is a sub-miniature omnidirectional condenser lavalier microphone. Physical I/O per B&H's spec table (\"Output Connectors: Mic Cable: TA3F output / Power Module: Balanced 3-pin XLR\"), cross-checked against Markertek's listing and other AT899 documentation. Power: dual-powered via 11-52V DC phantom (2mA typical, through the XLR output) or an internal 1.5V AA/UM3 battery inside the AT8537 power module (~1200hr runtime) — the battery compartment is not an external cable port so it is omitted from the port list. No grade applies to any port (analog audio connectors are ungraded per spec). Not rack-mountable (wearable/handheld lav form factor), so rackUnits is omitted. The product is now discontinued by Audio-Technica (no longer sold new; manufacturer product page returned 403/unavailable, so the B&H used-equipment listing, which reproduces the full factory spec table, was used as the authoritative source instead — acceptable per instructions as a reputable AV retailer spec table). Separate AT899 \"c\" variants (AT899cW, cH, cT4, cS, cL4) exist with different direct-to-transmitter cable terminations (Lectrosonics/Sennheiser/Shure/Sony/Lemo) instead of the TA3F+XLR power-module combo — those are different SKUs and not covered by this entry.",
+  "ports": [
+    {
+      "name": "Mic Cable Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Actual connector is a 3-pin TA3F (mini-XLR) on the permanently attached 9.8ft/3m capsule cable, not a full-size XLR; TA3 is not in the allowed connector list, so xlr3 (closest 3-pin balanced-audio family) is used as an approximation. This connector mates with the included AT8537 power module's input."
+    },
+    {
+      "name": "Power Module Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced 3-pin XLRM output on the included AT8537 in-line power module; carries the mic signal (Lo-Z, pin 2 hot) and also receives 11-52V DC phantom power from the connected mixer/recorder to bias the capsule. This is the connector used to cable the mic to other gear."
+    }
+  ]
+}

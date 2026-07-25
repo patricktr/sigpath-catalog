@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "MX391/O",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/145201-REG/Shure_MX391_O_MX391_O_Omni_Directional_Condenser.html",
+  "confidence": "high",
+  "notes": "Boundary/surface-mount omnidirectional condenser microphone (Shure Microflex MX391 series; \"/O\" = omnidirectional cartridge, vs \"/C\" cardioid and \"/S\" supercardioid variants that share the same connector/preamp but different capsules). Ships as capsule + attached cable + separate inline preamplifier (Shure Preamplifier Kit RK183PK). Verified against two agreeing sources: Shure's own MX391-series Specification Sheet (Shure Incorporated, mirrored at markertek.com/Attachments/Specifications/Shure/MX391!O-Specifications.pdf) and B&H Photo's live spec table (bhphotovideo.com, MFR #MX391/O). Both give identical XLR3M balanced output and 11-52 VDC phantom power requirement. Shure's own shure.com product/spec pages are JS-rendered and could not be scraped directly in this session, so the manufacturer PDF spec sheet + B&H retailer spec table were used instead per the allowed-source list. Desktop/surface-mount unit -- not rack-mountable, so rackUnits is omitted. Mic base dimensions (capsule only): ~7.94 x 5.30 x 1.91 cm (3.13 x 2.09 x 0.75 in); weight ~126 g. No mute switch, no controls on the device. Also sold as MX391 (black) / MX391W (white) with /O, /C, /S cartridge suffixes, and as MX391LP/MX391WLP (no preamp, direct-wire to a wireless bodypack) -- this entry covers the standard MX391/O black omnidirectional model with its included preamp.",
+  "ports": [
+    {
+      "name": "XLR Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, transformerless output from the integrated inline preamplifier (XLR3 male). Phantom-powered 11-52 VDC (2.0 mA draw, per Shure's official spec sheet; B&H lists 12-48V in descriptive copy) supplied over this same connector by the downstream mixer/interface -- there is no separate power connector on this device. The mic capsule's attached ~3.7 m (12 ft) cable terminates in a proprietary Shure 4-pin mini connector that mates with the included preamplifier; this is a fixed, non-user-facing internal connection (not one of the supported connector ids) and is not modeled as a separate port here."
+    }
+  ]
+}

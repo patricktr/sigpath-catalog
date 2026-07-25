@@ -1,0 +1,100 @@
+{
+  "manufacturer": "Zero Density",
+  "model": "RealityEngine AMPERE",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://web.archive.org/web/20240223111922/https://www.zerodensity.tv/products/reality-engine-ampere/",
+  "confidence": "medium",
+  "notes": "Sourced from Zero Density's own official product page, retrieved via Wayback Machine archive (capture dated 2024-02-23, page content last-modified 2023-08-21) because the live URL (zerodensity.tv/products/reality-engine-ampere/ -> zerodensity.io/platforms/ampere/) now redirects to Zero Density's newer \"EVO\" engine series product page — RealityEngine AMPERE appears to be discontinued/superseded. Specs corroborate a 2021 Zero Density press release (via liaisonpr.com) and NAB Show 2022 coverage confirming the AMD Ryzen Threadripper PRO CPU and Nvidia RTX A6000 GPU (PCIe Gen4 x16), which is also the origin of the \"AMPERE\" name (Nvidia Ampere GPU architecture). Full official spec table: GPU Nvidia RTX A6000; CPU AMD Ryzen Threadripper PRO 3945WX 4.0GHz; 64GB DDR4 3200MHz ECC RAM; 1TB M.2 NVMe Gen4x4 SSD; Windows 10 Pro 64-bit; PSU 1000W (92% efficient) autosensing 100-240V; dimensions 446 x 460 x 165 mm (17.6 x 18.1 x 6.5 in); weight 14 kg. SDI Video I/O ships via one of three interchangeable AJA Corvid capture cards (Corvid44 = 4x 3G-SDI, Corvid88 = 8x 3G-SDI, Corvid44-12G = 4x 12G-SDI) — I represented the highest-spec Corvid44-12G option as the port list; port count/grade differs for the other two card options. Also has 4x DisplayPort 1.4 and 1x 10GbE + 4x 1GbE RJ-45 (\"Tracking Network,\" presumably for camera/talent tracking systems). Power inlet connector type was not explicitly stated on the spec sheet; IEC (assumed C14) is inferred from the standard autosensing PSU description, not confirmed. No USB ports were itemized in the official \"Connectivity\" spec table (a keyboard/mouse USB port likely exists on this Windows workstation but is unconfirmed, so omitted). Marketed as a compact \"plug-and-play\" box rather than a confirmed rack-mount chassis, so rackUnits is omitted despite dimensions that are roughly rack-width.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "AJA Corvid44-12G I/O card configuration (4x 12G-SDI); alternate factory-fit cards change this: Corvid44 = 4x 3G-SDI, Corvid88 = 8x 3G-SDI"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "AJA Corvid44-12G I/O card configuration"
+    },
+    {
+      "name": "SDI 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "AJA Corvid44-12G I/O card configuration"
+    },
+    {
+      "name": "SDI 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "AJA Corvid44-12G I/O card configuration"
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "High Speed Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Labeled '10GbE Ethernet' on spec sheet"
+    },
+    {
+      "name": "Tracking Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tracking Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tracking Network 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Tracking Network 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "1000W (92% efficient) autosensing 100-240V~/12-6A, 50/60Hz internal PSU; exact inlet type (assumed IEC C14) not stated on spec sheet"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "manufacturer": "Advantech",
+  "model": "DS-081",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://advdownload.advantech.com/productfile/PIS/DS-081/Product%20-%20Datasheet/DS-081_DS(02.12.19)20190522131124.pdf",
+  "confidence": "high",
+  "notes": "Barebone fanless digital-signage player (mini-PC), 19mm-thick chassis, sold in 4 SKUs sharing identical I/O: DS-081GB-U1A1E (Celeron 3965U), -U2A1E (Core i3 6100U), -U4A1E (Core i5 6300U), -U5A1E (Core i5 7200U, only SKU with Intel AMT on LAN1). Mounting is VESA/Desk/Wall/DIN-rail (not rack-mountable) so rackUnits is omitted. Also has an internal full-size Mini-PCIe slot (mSATA-compliant) for optional WiFi/HSDPA modules, but that is an internal expansion slot, not an external physical port, so it was not listed. Audio jack connector type (trs-3.5 vs. a dedicated mini-TOSLINK) is inferred from the \"SPDIF/Line-out/Mic-in + Jack Sense\" wording rather than an explicit connector-type callout — flagged as the one lower-certainty item; everything else (HDMI 1.4 x2, RJ-45 x2 Gigabit, USB 3.0 x4, RS-232 x1, 19V DC-in) is directly confirmed by both the spec table and the labeled front/rear panel line drawings in the official Advantech datasheet.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Intel I219-LM controller; supports Intel AMT on the Core i5-7200U (DS-081GB-U5A1E) SKU only"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Realtek RTL8111G controller"
+    },
+    {
+      "name": "USB 3.0 (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "COM",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "1x RS-232 serial port, rear panel"
+    },
+    {
+      "name": "SPDIF/Line-out/Mic-in",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "accepts": [
+        "toslink"
+      ],
+      "note": "Single combo audio jack with 'Jack Sense' auto-detect; datasheet lists it as SPDIF/Line-out/Mic-in (one physical jack, function set by driver/adapter)"
+    },
+    {
+      "name": "DC-in (19V)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "19V DC input; ships with external 19V power adapter and a region-specific 3-pin AC cord (US/EU/UK/Japan/CCC)"
+    }
+  ]
+}

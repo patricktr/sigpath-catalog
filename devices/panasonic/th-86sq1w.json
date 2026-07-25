@@ -1,0 +1,114 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "TH-86SQ1W",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2025-01/86sq1w_spec_en.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Panasonic's own official spec sheet PDF (86SQ1W_PHK_03, 17/03/2022, hosted on eu.connect.panasonic.com) — the authoritative manufacturer document, including the rear-panel \"Drawing of terminals\" diagram used to confirm exact port labels/layout. Caveats: (1) HDMI (hdmi-2.0) and DisplayPort (dp-1.2) grades are inferred, not printed verbatim as a version number in the datasheet — inferred from HDCP2.2 support and the documented plug-and-play timing table, which confirms clean 4K/60p (3840x2160 and 4096x2160) support at a 594MHz dot clock without needing 4:2:0 subsampling (that restriction applies only to the Digital Link path), consistent with HDMI2.0/DP1.2-class bandwidth rather than 1.4-class. (2) The AC inlet's exact silkscreen label and connector sub-type (assumed IEC C13/C14) were not visible in the retrieved terminal diagram, which covers only the signal/control cluster; inferred from the \"detachable ~2.0m AC cord\" included accessory and the unit's power class (480W/494VA). (3) Two USB Type-A ports are both labeled \"USB\" on the physical panel; distinguished here as Lower/Upper per Panasonic's own terminal-position table (they differ only in available bus power: 2A vs 1A). (4) The display also has an internal Intel SDM (Smart Display Module) expansion slot for optional plug-in PC/compute modules — omitted from the port list since it's an internal card slot, not an external cable connector. (5) Desktop/wall-mount unit only; not rack-mountable, so rackUnits omitted. (6) This TH-86SQ1W is the \"W\" (HDCP2.2 + Digital Link) variant of the SQ1 series; the plain TH-86SQ1 (no W) sibling differs on HDCP/Digital-Link support — confirm you have the right variant if cross-referencing other SQ1-series docs.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Display Port IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "Display Port OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "HDCP1.4 loop-out only; HDCP2.2 input cannot pass through this output"
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "PC IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin analog RGB, DDC2B"
+    },
+    {
+      "name": "SERIAL IN",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-sub 9-pin, RS-232C control"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "Stereo mini jack (M3)"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "ir",
+      "note": "Stereo mini jack (M3)"
+    },
+    {
+      "name": "AUDIO IN 1",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO IN 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Network control, PJLink compatible"
+    },
+    {
+      "name": "DIGITAL LINK LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Panasonic Digital Link (HDBaseT-like) input for extended AV/control over CAT cable, long-reach mode"
+    },
+    {
+      "name": "USB (Lower)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0, DC5V/2A"
+    },
+    {
+      "name": "USB (Upper)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0, DC5V/1A"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable ~2.0m AC cord included; rated AC 110-127V/220-240V 50/60Hz, 480W max (494 VA)"
+    }
+  ]
+}

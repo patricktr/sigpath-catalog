@@ -1,0 +1,61 @@
+{
+  "manufacturer": "DTEN",
+  "model": "D7",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.dten.com/wp-content/uploads/2022/06/DTEN-D7-55_-Specsheet_2022.pdf",
+  "confidence": "medium",
+  "notes": "Manufacturer spec sheets (DTEN D7 55\" and D7 75\", both v2.2a, checked directly) list identical Inputs & Outputs for both screen sizes: HDMI Out x1, HDMI In x1, USB 3.0 x2, 3.5-mm Audio Jack x1, Microphone x1, Ethernet LAN (RJ45) x1, plus Wi-Fi 802.11a/b/g/n/ac (not a physical port). A \"DTEN D7 Dual 55\\\"\" spec sheet also exists (dual-screen variant) but was not checked; its physical rear I/O is likely the same single-panel connector set duplicated or shared. DTEN's current site now foregrounds the successor \"D7X\" line — the original D7 spec PDFs are still hosted but not linked from primary navigation. HDMI version/generation is not stated by DTEN. USB-A form factor and the assumed 3.5mm/IEC connector types for the audio jack, mic, and power inlet are inferred (not explicitly printed) — confirmed the USB-A form factor via a secondary user-manual excerpt (manua.ls). Power input voltage range (100-240V AC, 50-60Hz, auto-switching) is confirmed directly from DTEN.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDMI version not stated on spec sheet; grade omitted."
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI version not stated on spec sheet; grade omitted."
+    },
+    {
+      "name": "USB 3.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Connector form factor (USB-A) confirmed via third-party manual excerpt, not the DTEN spec sheet itself."
+    },
+    {
+      "name": "USB 3.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Connector form factor (USB-A) confirmed via third-party manual excerpt, not the DTEN spec sheet itself."
+    },
+    {
+      "name": "3.5-mm Audio Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Listed simply as \"3.5-mm Audio Jack x 1\"; direction (line-out) inferred, not explicitly stated."
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Listed simply as \"Microphone x 1\" (external mic input, separate from the built-in 16-mic array); 3.5mm connector assumed, not explicitly confirmed."
+    },
+    {
+      "name": "Ethernet LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Spec sheet only states \"100 to 240 V AC, 50 to 60 Hz\"; physical inlet type not specified, IEC C13/C14 assumed as typical for this class of device."
+    }
+  ]
+}

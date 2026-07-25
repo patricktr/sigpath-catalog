@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Modulo Pi",
+  "model": "Modulo Player Pro",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.modulo-pi.com/wp-content/uploads/2023/10/Modulo-Player-Pro-SpecSheet-20231011.pdf",
+  "confidence": "medium",
+  "notes": "Source: manufacturer spec sheet PDF (modulo-pi.com), Hardware Revision 2024-1, dated 23/07/2024. The \"Modulo Player Pro\" family ships in 7 SKUs with two different physical video-output configurations: MP-PRO-1, MP-PRO-2 and MP-PRO-4 have 4 x full-size DisplayPort 1.4 (with 1, 2 or 4 outputs active respectively, or reconfigurable to 1 output up to 4K on MP-PRO-4); MP-PRO-6, MP-PRO-2x4K, MP-PRO-3x4K and MP-PRO-4x4K instead have 6 x mini-DisplayPort 1.4 (up to 2/3/4 of the 6 outputs runnable at 4K depending on model). This entry documents the MP-PRO-4 configuration (4 x full-size DP 1.4) as representative; swap connector/count to \"mini-dp\" x6 for the -6/-2x4K/-3x4K/-4x4K SKUs. A complimentary active DisplayPort-to-HDMI adapter (1 per output) and EU power cord ship in the box but are accessories, not native ports. No built-in audio I/O ships on the unit — the spec sheet states \"Add any USB or PCIE pro sound card,\" so audio ports were omitted rather than assumed. Optional add-on cards not included in base I/O: DELTA-series live-capture cards (2x3G-SDI up to 6x12G-SDI, or 2x4K-HDMI 2.0, or mixed SDI+HDMI) and TC-series timecode reader/generator cards (PCIe or USB). AC inlet connector sub-type is inferred (standard IEC C13/C14), not explicitly confirmed from the source document's text/imagery.",
+  "ports": [
+    {
+      "name": "DisplayPort Out 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort Out 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort Out 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort Out 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 (C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Connector sub-type (C13/C14) inferred; not explicitly pictured/specified in the spec sheet. Rated 100-240VAC, 50-60Hz, 850W max, ~450W average under high load."
+    }
+  ]
+}

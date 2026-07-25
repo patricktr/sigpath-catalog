@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Poly",
+  "model": "Studio X50",
+  "category": "other",
+  "type": "Camera",
+  "sourceUrl": "https://polycom.com.tw/file/studio-x50-ds-en.pdf",
+  "confidence": "medium",
+  "notes": "Poly Studio X50 is an all-in-one 4K video conferencing bar (camera + stereo speakers + mic array + onboard Poly Video OS codec) for small/mid-sized rooms; no separate room PC/Mac required. Poly's own product URL (poly.com/us/en/products/video-conferencing/studio/studio-x50) now 301-redirects to the newer replacement model \"Studio X52\" on hp.com, so the live manufacturer product page no longer documents the X50. I instead used the official Poly-branded PDF datasheet (\"(c)2023 Poly\", doc 1499379), mirrored on Polycom's Taiwan site (polycom.com.tw/file/studio-x50-ds-en.pdf); content is identical to the earlier 2022 edition of the same Poly datasheet, cross-checked via a second copy (av-iq.com mirror). Not included as a distinct port: \"Input for optional expansion microphone\" (p/n 2200-69631-001) — this is a real documented port but its exact connector type could not be confirmed from available sources, so it was omitted rather than guessed. HDMI version (1.4/2.0/2.1) and USB-C speed are not stated anywhere in Poly's materials, so grades were omitted per instructions rather than inferred. Physical size: 30 x 4 x 4 in (762 x 102 x 102 mm), 5.6 lb/2.54 kg — desktop/shelf/wall-mount unit, not rack-mountable (VESA mount kit and stand available as options), hence rackUnits omitted. Sold in bundles with an optional Poly TC8/TC10 touch controller.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Content/laptop input; datasheet also lists a 1x HDMI audio input which is the same physical port."
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Dual-monitor support; touch-display compatible."
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Used for BYOD/USB device mode; speed grade not stated by Poly."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Datasheet lists 1x 10/100/1G Ethernet, Auto-MDIX."
+    },
+    {
+      "name": "Line In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Ships with an external auto-sensing power supply (37 VA @ 120V/60Hz or 230V/50-60Hz). Exact device-side connector shape is not pictured in the sourced datasheet, so dc-barrel is used as the closest standard match rather than a visually confirmed connector."
+    }
+  ]
+}

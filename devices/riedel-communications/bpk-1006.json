@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Riedel Communications",
+  "model": "BPK-1006",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.markertek.com/product/bl-bpk-1006-19us/riedel-bl-bpk-1006-19-us-bolero-6-key-beltpack-with-color-display-intercom-system",
+  "confidence": "high",
+  "notes": "\"BPK-1006\" is Riedel's Bolero 6-key wireless intercom beltpack, sold under regional SKUs BL-BPK-1006-19-US/EU/BR/etc. (the \"19\" denotes the 1.9GHz license-free DECT band; other suffixes denote frequency-band/region variants). Physical I/O is identical across regional variants; only RF band/certification differs. Rack units omitted — this is a wearable beltpack (86 x 48 x 130 mm, 420g), not rack-mountable. Category/type: no exact \"wireless intercom beltpack\" option exists in the provided type enum; \"Other\" was used rather than \"Wireless mic\" because this is a two-way full-duplex intercom transceiver (6 audio paths + walkie-talkie mode with built-in mic/speaker), not a one-way mic transmitter. Also has Bluetooth v4.1 (headset/phone audio) and NFC (beltpack registration) — not physical ports, omitted. IP-65 sealed when the XLR headset connector is plugged in. Spec table cross-verified against Riedel's official Bolero Intercom System User Manual (via ManualsLib), which independently confirms the 4-pin XLR headset jack, 3.5mm line-in jack, and USB port for charging/firmware.",
+  "ports": [
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "Physically a 4-pin male XLR (mic -, mic + ~5VDC bias, earphone -, earphone +), user-replaceable. No dedicated 4-pin audio XLR id exists in the allowed connector list, so 'xlr3' (same family, audio use) was used as the closest match rather than 'xlr4-dc' (which denotes DC power wiring, not audio)."
+    },
+    {
+      "name": "Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Local audio mix input only, 40 Hz-20 kHz, max +12 dBu input level."
+    },
+    {
+      "name": "USB-C",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Used for beltpack battery charging (requires >500mA USB port) and firmware updates. No USB speed/version stated in specs, so grade omitted. Device is battery-powered (removable Li-ion pack); this is the only physical power input on the beltpack itself (a separate multi-bay charging dock accessory exists but is a different SKU, not covered here)."
+    }
+  ]
+}

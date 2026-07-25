@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "Tio1608-D2",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 2,
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/interfaces/tio1608-d2/specs.html",
+  "confidence": "high",
+  "notes": "Yamaha Tio1608-D2 is a 2U Dante I/O rack (\\\"stage box\\\") with 16 mic/line inputs and 8 line outputs; no video, USB, or word-clock connectors are present — clocking is purely via the Dante network. Unusually, the analog audio connectors (16x Combo XLR/TRS inputs, 8x XLR outputs) are on the FRONT panel, while the etherCON Dante ports, AC inlet, cooling fan, and DIP switches are on the REAR panel — confirmed directly from Yamaha's official Owner's Manual panel diagrams (data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf). Grades and exact connector part numbers (Combo = XLR-3-31 + TRS; Output = XLR-3-32; Dante = etherCON Cat5e, 1000BASE-T) were cross-verified against Yamaha's own Technical Data Sheet (markertek.com/Attachments/Specifications/Yamaha/YMH-TIO1608-D2_Specs.pdf, authored/dated by Yamaha Corporation Mar 2023), which also confirms 2U/480x88x364mm/5.7kg and 100-240V/50W power draw. The exact IEC inlet sub-type (C13/C14 vs C7/C5) is not spelled out in either source in those terms; it is inferred as a standard IEC C13/C14 (\\\"iec\\\") from the rear-panel photo and the fact that a detachable AC cord is included as an accessory (not a captive cord). No regional/voltage variants were found — the unit is universal 100-240V worldwide.",
+  "ports": [
+    {
+      "name": "Input 1–16",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "16x balanced Combo jacks (XLR-3-31 female chassis or 1/4\" TRS phone), located on the FRONT panel. Gain -6dB to +66dB, individually switchable +48V DC phantom power (per-channel [+48V] switch plus master [+48V ACTIVE])."
+    },
+    {
+      "name": "Output 1–8",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "8x balanced XLR-3-32 male chassis line outputs, located on the FRONT panel. Nominal +4dBu, +24dBu max before clip."
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON Cat5e, rear panel, 1000BASE-T. Carries up to 16ch unit-to-network and 8ch network-to-unit."
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON Cat5e, rear panel, 1000BASE-T. Rear DIP switch 4 sets it to daisy-chain (pass-through) or redundant-backup mode."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel IEC inlet with included detachable ~2.5m power cord. Universal 100-240V AC, 50/60Hz, 50W max."
+    }
+  ]
+}

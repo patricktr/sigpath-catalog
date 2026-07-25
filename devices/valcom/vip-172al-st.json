@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Valcom",
+  "model": "VIP-172AL-ST",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.valcom.com/vlc-product/ip-intercom-doorplate-speaker-with-led-stainless-steel-talkback/",
+  "confidence": "high",
+  "notes": "VIP-172AL-ST is a two-piece IP/SIP talkback door intercom system: a stainless-steel Door Plate (4.5\"x4.5\"x1.3\", 0.55 lb, indoor/outdoor rated) wired to a separate wall-mounted Network Interface unit (1.62\"x5.63\"x3.45\", 2.10 lb) that must sit within 100 m of the network switch and within 350 ft of the door plate. Sole power is 802.3af PoE Class 3 into the Network Interface's NETWORK jack — no AC/DC power port exists on the device. Ethernet speed (10/100/1000) is not published, so no grade was set on the NETWORK RJ-45; the SIGNAL OUTPUT / door-plate RJ-45 pair is a proprietary analog+control link, not Ethernet, so it is likewise ungraded (grade omitted per instructions rather than mis-assigned). Detailed connector/wiring info (jack labels, relay terminal pinout, VM-186 color codes) came from Valcom's official \"VIP-172AL IP DoorPhone/Intercom\" installation manual (doc #947822, Issue 3), which covers both the VIP-172AL-ST and VIP-172AL-VRSS (heavier, vandal-resistant) variants; Valcom's own short-link for this manual (go.valcom.com/VIP-172ALinstallationmanual) 404'd at research time, so the manual was retrieved from a third-party document mirror (alldataresource.com) — content is Valcom-branded and consistent with the manufacturer's live product page (dimensions, weight, PoE spec all match). Two other bundled/variant SKUs exist (VIP-172AL-ST-SA for Intrado OneAlert, VIP-172AL-ST-IC for InformaCast) with identical physical I/O. Not rack-mountable (door/wall mounted), so rackUnits is omitted. Category/type were mapped to the closest fit (audio / Speaker); the device is really an IP-SIP talkback intercom endpoint (mic + speaker + relay + status LEDs), which the given type enum has no exact match for.",
+  "ports": [
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 Ethernet uplink on the Network Interface unit to the LAN switch; also the sole power input via 802.3af PoE, Class 3 (no separate power connector on the device). Ethernet link speed not stated in the datasheet, so no bandwidth grade is set."
+    },
+    {
+      "name": "SIGNAL OUTPUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ-45 jack on the Network Interface unit. Proprietary point-to-point link (audio duplex, relay control, status LED, call-switch) to the door plate's RJ-45 jack — not IEEE 802.3 Ethernet, so no grade applies. Wired T568B; a standard patch cable or, for longer runs, Valcom VM-186 RJ-45 junction boxes over CAT3/5/6 UTP extend this link up to 350 ft."
+    },
+    {
+      "name": "RJ-45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Signal jack on the VIP-172AL-ST door plate itself; mates back to the Network Interface's SIGNAL OUTPUT jack (see that port's note). Not a network/Ethernet port."
+    },
+    {
+      "name": "Relay (N/O, COM, N/C)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-pin screw terminal block on the door plate providing a Form-C dry relay contact (1 A @ 24 VDC) for door strikes/gates, activated by pressing # on the answering phone. An included VIP172-RLY punch-down adapter can be wired inline for higher-security installs; when used, this terminal block on the door plate is bypassed/non-functional."
+    }
+  ]
+}

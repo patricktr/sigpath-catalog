@@ -1,0 +1,35 @@
+{
+  "manufacturer": "ClearOne",
+  "model": "Beamforming Microphone Array 2",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://cdn.adiglobaldistribution.us/pim/Original/10300/C0-10320020B_Product-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from ClearOne's own official datasheet (doc DST-0037-001 rev3.3, © 2017 ClearOne), PDF-hosted on AV distributor ADI Global Distribution's CDN, cross-checked against an earlier rev of the same ClearOne datasheet mirrored at clearone.pl (bfm2_ds.pdf, © 2016). Both are ClearOne-authored documents; content matches except the rev3.3 version adds the \"Long Distance P-Link\" accessory feature and one more supported CONVERGE Pro 2 SKU (48V). No manufacturer.com product page could be reached directly (404s on guessed URLs); the distributor-hosted PDF is the manufacturer's primary artwork, not a third-party summary. Desktop/ceiling/wall-mount bar unit (30\" x 1\" x 5.75\"), not rack-mountable, so rackUnits omitted. Sold in two cosmetic variants with identical I/O: white (P/N 910-3200-201) and black (910-3200-201-B) — connector layout is the same for both. All 24 microphone elements are internal to the array (beamformed to 5-6 logical beams depending on mount mode); there is no physical analog mic/line jack on the unit — audio, control, and (optionally) power all ride the proprietary P-Link RJ-45 bus, which is why grade was omitted on the RJ-45 ports (P-Link is not standard Ethernet, and PoE IEEE 802.3at is a power class, not a data-rate spec — neither maps to the eth-* grade scale). USB port direction was set to bidirectional per the generic USB-host convention even though the device explicitly marks it unused/\"future\".",
+  "ports": [
+    {
+      "name": "PoE In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Rear-panel PoE power input (IEEE 802.3at). Active when the Power Selection Switch is set toward PoE; powers the unit from a PoE injector or PoE switch instead of via P-Link."
+    },
+    {
+      "name": "P-Link In",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary ClearOne P-Link peripheral bus over RJ-45 (not standard Ethernet) — carries audio, control, and optionally power from an upstream CONVERGE Pro 2 unit or a daisy-chained BFM2. Cable: solid-core 24AWG Cat5e/Cat6, up to 200 ft (or up to 650 ft with the Long-Distance P-Link accessory kit over 23AWG Cat6/550MHz cable)."
+    },
+    {
+      "name": "P-Link Out",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Daisy-chain output on the same proprietary P-Link bus, feeding the next Beamforming Mic Array 2 or a DIALOG 20 Wireless Receiver unit downstream."
+    },
+    {
+      "name": "USB (future)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Labeled 'USB (future)' on the rear panel; explicitly reserved/non-functional at time of datasheet publication. Exact USB sub-connector and version are not stated in the datasheet — USB-A is inferred from the panel diagram, not confirmed."
+    }
+  ]
+}

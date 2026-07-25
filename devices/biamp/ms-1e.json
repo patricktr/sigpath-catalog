@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Biamp",
+  "model": "MS-1e",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://downloads.biamp.com/assets/docs/default-source/manuals/vocia_ms-1e_may19.pdf",
+  "confidence": "medium",
+  "notes": "The Vocia MS-1e is a 1U rack-mount \"message processor\" (networked paging/messaging server) in Biamp's Vocia PA/voice-evacuation system line — not an AV signal-routing box, so most rear ports are network/control rather than audio/video signal I/O.\n\nSources cross-checked: (1) official \"Vocia MS-1e Installation and Operation Guide\" (rev. 28JAN2025, downloads.biamp.com/assets/docs/default-source/manuals/vocia_ms-1e_may19.pdf) — used as primary source for the port list because it has an explicit numbered rear-panel legend; (2) official Data Sheet VOCDS-422-2105-EN-R1, May 2021 (https://downloads.biamp.com/assets/docs/default-source/data-sheets/biamp_data_sheet_vocia_ms-1e_may21.pdf).\n\nDiscrepancy found between the two official documents: the 2021 data sheet's rear-panel line art shows an HDMI-labeled port (two stacked HDMI jacks) between the LAN ports and the USB group; the newer (2025) installation manual's rear-panel diagram shows no HDMI at all in that location (just ventilation holes) and instead shows an unlabeled VGA-shaped D-sub connector further right. I followed the newer, more detailed/labeled manual and omitted HDMI; flagging this so it can be re-verified against a physical unit or current Biamp support if precision matters.\n\nPer Biamp's own manual text, the 4x USB-A ports and the unlabeled VGA-shaped D-sub port are explicitly called \"Inactive\" (\"these ports are inactive at this time... connection of external devices to inactive ports is not required or recommended\") — almost certainly leftover headers from the embedded-PC motherboard the appliance is built on. They are included here as physical connectors that exist on the chassis, but are non-functional per the manufacturer.\n\nRS-232 port: labeled \"RS-232/485\" in the 2021 data sheet's back-panel artwork, but only \"RS-232\" in the 2025 manual's diagram/text (both show a female DB9). Modeled as connector \"rs232\" with accepts [\"rs485\"] to reflect the fuller labeling.\n\nEthernet port link speed (Fast/Gigabit) and USB version are not stated in either document, so grade was omitted for all RJ45 and USB-A ports.\n\nTwo rotary \"Device ID\" switches (MSB/LSB, hex 00–FF) are present on the rear panel for setting a unique unit ID — these are configuration dials, not signal/power connectors, so they were excluded from the port list.\n\nPower: internal universal switching supply, 100–240VAC 50/60Hz via IEC inlet; consumption is listed as \"<300W\" in the data sheet vs. \"max 350 watts\" in the manual (minor inter-document discrepancy, not port-relevant). Dimensions: 1.75\"H x 19\"W x 17.5\"D (1RU), ~12 lbs.",
+  "ports": [
+    {
+      "name": "AC Power Entrance (IEC)",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "RS-232/485",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs485"
+      ]
+    },
+    {
+      "name": "LAN1 (Control)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "LAN2 (CobraNet)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "LAN3 (VoIP)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "LAN4 (Interworld)",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "VGA (unlabeled, inactive)",
+      "direction": "output",
+      "connector": "vga"
+    }
+  ]
+}

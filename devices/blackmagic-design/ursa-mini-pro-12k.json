@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "URSA Mini Pro 12K",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.blackmagicdesign.com/products/blackmagicursaminipro/techspecs",
+  "confidence": "high",
+  "notes": "Verified against Blackmagic's official techspecs page (a combined page covering all URSA Mini Pro variants: 12K, 12K OLPF, 4.6K G2) and cross-checked against the official URSA Mini/URSA Mini Pro user manual PDF (documents.blackmagicdesign.com/UserManuals/BlackmagicURSAMiniManual.pdf) for the physical connector legend and labels, since the techspecs page groups ports generically as \"Total Video Inputs/Outputs\". The standard URSA Mini Pro 12K and 12K OLPF variants share identical I/O (OLPF differs only by an internal optical low-pass filter); this record applies to both. Omitted from the port list as non-cable mount/accessory interfaces rather than discrete signal/power connectors: the rear Battery Mount Plate (a recessed 12-pin Molex connector under a V-mount/Gold-mount battery plate dock, regulated 12V up to 1.5A) and the 12-pin Broadcast Lens Control Connector (present only with PL/B4 lens mounts, powers/controls the lens rather than general AV gear). LANC input's physical jack is 2.5mm TRS; no 2.5mm option exists in the connector enum so it is mapped to the closest match, trs-3.5. Ships with a PL mount by default (EF, B4, F mounts available via the interchangeable lens mount system), which is not represented as a port. Desktop/handheld cinema camera, not rack-mountable.",
+  "ports": [
+    {
+      "name": "12G-SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Main program SDI output; switches between 1.5G/3G/6G/12G rates depending on format"
+    },
+    {
+      "name": "12G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Used for switcher/recorder return feed, external reference, ATEM camera control/tally/talkback, and external timecode"
+    },
+    {
+      "name": "HD Monitoring Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Down-converted 1080HD monitoring output; used with URSA Viewfinder or external monitors"
+    },
+    {
+      "name": "Reference/Timecode In (REF In)",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Auto-detecting tri-level sync/black burst/timecode reference input"
+    },
+    {
+      "name": "+12V Power Input",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin 12-20V DC XLR input for the supplied power adapter or external/portable batteries"
+    },
+    {
+      "name": "+12V Power Output",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR accessory power output (e.g. URSA Viewfinder); shares a 2A total budget with the lens connector"
+    },
+    {
+      "name": "LANC Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Physical jack is 2.5mm TRS (no 2.5mm option in connector list, mapped to closest trs-3.5); rec start/stop plus iris/focus on compatible EF lenses, or for the optional URSA Handgrip"
+    },
+    {
+      "name": "Headphone/Headset",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "3.5mm jack; headphone monitoring output, also accepts iPhone/Android headset mic input for talkback (embedded on SDI channels 15/16)"
+    },
+    {
+      "name": "USB-C (External Drive Recording)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g",
+      "note": "Locking USB-C 3.1 Gen 2 port for Blackmagic RAW recording direct to external flash disk/SSD"
+    },
+    {
+      "name": "USB-C (Software Update)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C port for Blackmagic Camera Setup software updates; generation/speed not stated in spec sheet"
+    },
+    {
+      "name": "XLR Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced input switchable between mic/line/AES3 digital audio; 48V phantom power support"
+    },
+    {
+      "name": "XLR Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced input switchable between mic/line/AES3 digital audio; 48V phantom power support"
+    }
+  ]
+}

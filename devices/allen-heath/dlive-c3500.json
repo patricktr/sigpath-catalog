@@ -1,0 +1,170 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "dLive C3500",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.allen-heath.com/content/uploads/2023/07/C3500-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Digital mixing control surface (24-fader, 6-layer dLive C Class surface). Physical I/O confirmed verbatim from Allen & Heath's official \"dLive C3500 Technical Datasheet\" PDF, cross-checked against A&H's dLive Surfaces comparison page (both list 6 mic/line in, 6 line out, 1 AES3 in, 1 AES3 out). The C3500 carries only a modest local analogue/digital I/O complement itself; full system channel count comes from a separate dLive MixRack (DM32/48/64 or CDM32/48/64) connected via the \"GigaACE\" EtherCon gigabit link, plus optional DX/GX expanders via the EtherCon \"DX link\" (up to 32x32ch @ 96kHz) — I/O living on that separate MixRack/expander hardware is not included here. An internal \"I/O Port - 128ch @ 96kHz\" expansion-card bay (for optional MADI/Dante/Waves SoundGrid/EtherSound/ACE cards) is omitted from the port list since its physical connector depends on the card fitted. Datasheet lists wordclock only as \"BNC I/O\" without an explicit in/out split; represented here as one BNC in + one BNC out (conventional arrangement) — flagged as inferred. Video output connector type is not stated in the datasheet; HDMI assumed by analogy with other current Allen & Heath consoles (Avantis/SQ) — unconfirmed. Exact USB sub-type not stated; USB-A assumed (standard for front-panel flash-drive record/playback on this class of console). No grade found/applicable for USB or video ports so grade omitted. Desktop control surface, not rack-mountable, so rackUnits omitted. No AES50 ports (that is a Behringer/Midas protocol, not used by dLive).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +48V phantom power"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, relay protected"
+    },
+    {
+      "name": "AES3 Digital In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo digital input, sample rate converted"
+    },
+    {
+      "name": "AES3 Digital Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo digital output, sample rate converted"
+    },
+    {
+      "name": "MixRack (GigaACE)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Datasheet: \"Ethercon port... for connection to the rack engine via the Allen & Heath gigaACE protocol\" (gigabit link to a separate dLive MixRack)"
+    },
+    {
+      "name": "DX Link",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Datasheet: \"Ethercon port... for I/O expansion via an audio connection carrying up to 32x32 channels of uncompressed audio at 96kHz\" (no explicit link speed stated, grade omitted)"
+    },
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Datasheet: \"RJ45 sockets... for gigabit Ethernet network connections to laptops or other control systems\""
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Datasheet: \"RJ45 sockets... for gigabit Ethernet network connections to laptops or other control systems\""
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Datasheet lists \"Wordclock BNC I/O\"; in/out split inferred"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Datasheet lists \"Wordclock BNC I/O\"; in/out split inferred"
+    },
+    {
+      "name": "Headphones 1/4\"",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "PAFL headphone output with level control"
+    },
+    {
+      "name": "Headphones 3.5mm",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "PAFL headphone output with level control"
+    },
+    {
+      "name": "USB 1 (Record/Playback)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel, dedicated stereo record/playback to USB drive; connector sub-type inferred as USB-A"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front panel general-purpose USB; connector sub-type inferred as USB-A"
+    },
+    {
+      "name": "Video Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Datasheet lists only \"Video output\" with no connector type stated; HDMI assumed by analogy with other current A&H consoles - unconfirmed"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC appliance inlet, 100-240V AC 50/60Hz, 110W max, integrated PSU"
+    }
+  ]
+}

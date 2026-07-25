@@ -1,0 +1,115 @@
+{
+  "manufacturer": "tvOne",
+  "model": "CORIOmaster mini C3-510",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://tvone.com/wp-content/uploads/spec-sheets/C3-510.pdf",
+  "confidence": "medium",
+  "notes": "Modular 1RU multi-window video-wall processor (CORIO3 engine; up to 4 canvases, up to 14 windows/canvas). The chassis has 2 fixed Universal DVI-U inputs plus 5 universal I/O slots (the C3-510 part number is rated \"up to 18 inputs\" when fully populated) that accept separately-ordered modules: HDMI (incl. 4K), DVI, 3G/HD/SD-SDI, HDBaseT, 4K streaming-media, dual-HDMI keying, and an S/PDIF + analog audio module (CM-AUD-2IN-4OUT) that is NOT included/pictured here since it did not appear in the manufacturer's own rear-panel photo. The graded video-module ports listed (2x 3G-SDI in, 2x HDMI 4K/60 out, 2x HDBaseT out, 1x streaming-media module with GbE+USB3.0) reflect the exact configuration shown in tvOne's own official rear-panel photo on the spec sheet — a real, manufacturer-illustrated example — but actual shipped units vary by which modules a customer orders; treat these as representative, not guaranteed, for any given unit. HDMI output grade (2.0) is inferred from documented 4K60 8-bit support since the sheet never states an HDMI version number. SDI grade (sdi-3g) reflects the explicitly stated SMPTE424M 2.97/2.967Gbps rating; these SDI ports are also backward-compatible to HD-SDI/SD-SDI. Control LAN link speed is not stated. The optional CM-4RPS redundant power supply applies to the larger C3-540 chassis only, not the C3-510. Non-I/O specs confirmed from the same sheet: 1RU (1.77 x 19.0 x 13.25in / 45x482x336mm), ~11 lb, 110-240V 50/60Hz auto-detecting internal PSU, 5-year warranty. Primary source used: tvOne official \"C3-510 CORIOmaster mini\" Specification Sheet v2.1 (2021), fetched from https://tvone.com/wp-content/uploads/spec-sheets/C3-510.pdf (linked from the manufacturer product page https://tvone.com/products/video-wall-processors/c3-510).",
+  "ports": [
+    {
+      "name": "DVI-U Input 1",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Fixed Universal DVI input (always present, not a module). HDMI & HDCP compatible via DVI-D; accepts analog RGBHV/RGBS/RGsB/YPbPr, composite and S-Video via optional DVI-I breakout adapters."
+    },
+    {
+      "name": "DVI-U Input 2",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Fixed Universal DVI input, same capability as DVI-U Input 1."
+    },
+    {
+      "name": "3G-SDI Input 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Populated via optional CM-3GSDI-2IN dual 3G/HD/SD-SDI input module; SMPTE424M 2.97/2.967Gbps rating stated in spec sheet. Shown in tvOne's own rear-panel photo but is a separately-ordered module, not guaranteed on every unit."
+    },
+    {
+      "name": "3G-SDI Input 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "See 3G-SDI Input 1."
+    },
+    {
+      "name": "HDMI 4K/60 Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Populated via optional CM-HDMI-4K-SC-2OUT module (dual 4K30 or single 4K60). Spec sheet does not state an HDMI version number; 2.0 is inferred from documented 4K60 8-bit output support."
+    },
+    {
+      "name": "HDMI 4K/60 Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "See HDMI 4K/60 Output 1."
+    },
+    {
+      "name": "HDBaseT Output 1",
+      "direction": "output",
+      "connector": "hdbaset",
+      "note": "Populated via optional CM-HDBT-SC-2OUT dual HDBaseT output module (with scaling)."
+    },
+    {
+      "name": "HDBaseT Output 2",
+      "direction": "output",
+      "connector": "hdbaset",
+      "note": "See HDBaseT Output 1."
+    },
+    {
+      "name": "4K Streaming Media Input – Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "AV-over-IP module (CM-AVIP-IN-1USB-1ETH), 1x GbE port per spec table for stream in/decoder and FTP media transfer."
+    },
+    {
+      "name": "4K Streaming Media Input – USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 port on the same AV-over-IP/media module, for local file playback from flash media."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Base-unit control/IP interface (RJ45) for CORIOgrapher software, REST API and HTTP(S) control. Link speed not stated in the spec sheet."
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D9 female serial control port."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front-panel USB 3.0 interface (visible in product photos); supports FAT/FAT32/ext3/ext4/NTFS flash media, works with up to 128GB internal storage."
+    },
+    {
+      "name": "Genlock",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genlock reference input, BNC."
+    },
+    {
+      "name": "Loop",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Genlock loop-through output, BNC."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100–240V 50/60Hz auto-sensing, 1.6A max, IEC inlet with rocker power switch."
+    }
+  ]
+}

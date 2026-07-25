@@ -1,0 +1,36 @@
+{
+  "manufacturer": "ETC",
+  "model": "Net3 Two-Port Gateway",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.etcconnect.com/Products/Legacy/Networking/DMX-RDM-Two-Port-Gateway/Features.aspx",
+  "confidence": "high",
+  "notes": "Data drawn from ETC's own published Spec Sheet (doc 4261L1001 Rev. C) and Installation Guide (doc 4261M2200 Rev. D), both hosted on etcconnect.com and mirrored by AV dealers (verified copies retrieved via skylinecollege.edu and musson.com mirrors). The Two-Port Gateway ships in two connector-gender variants: N32G-2F / N3T2G-2F (both DMX ports female XLR, factory-configured as outputs) and N32G-2M / N3T2G-2M (both ports male XLR, factory-configured as inputs) — the port direction and gender always match on a given unit (you can't mix one input + one output on one physical unit, though each port's data-flow role is independently software-configurable once installed). Ports listed here reflect the -2F variant; swap direction to \"input\" for the -2M variant. Desktop/wall/pipe-mount enclosure, not rack-mountable, so rackUnits omitted. Ethernet is capped at 100Mbps per the spec (no Gigabit support), hence eth-100m grade. No grade applies to the XLR5 DMX ports (DMX512/RS-485, not a graded connector class) or the DC power input.",
+  "ports": [
+    {
+      "name": "DMX/RDM Port 1",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR. This is the -2F (female/output) variant. On the -2M variant this connector is male XLR and direction is input. Software-configurable as DMX output or input via Gateway Configuration Editor regardless of physical gender. Rear-panel switch (S2) sets DMX termination for this port."
+    },
+    {
+      "name": "DMX/RDM Port 2",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "5-pin XLR. This is the -2F (female/output) variant. On the -2M variant this connector is male XLR and direction is input. Software-configurable as DMX output or input via Gateway Configuration Editor regardless of physical gender. Rear-panel switch (S1) sets DMX termination for this port."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "IEEE 802.3i (10BASE-T) / 802.3u (100BASE-TX), auto-sensing/auto-negotiation. Also accepts Power over Ethernet (IEEE 802.3af) to power the unit."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Rear-panel 2-pin pluggable header accepting 8-28VDC external supply, <5W consumption. Alternative to powering via PoE on the Ethernet port. Optional ETC PS313-F universal supply (90-240VAC to 12VDC @1.3A) mates with this connector."
+    }
+  ]
+}

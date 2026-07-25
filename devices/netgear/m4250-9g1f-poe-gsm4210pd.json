@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Netgear",
+  "model": "M4250-9G1F-PoE+ (GSM4210PD)",
+  "category": "network",
+  "type": "Network switch",
+  "sourceUrl": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Fanless desktop (wall/table-mount) unit, not rack-mountable; dimensions 210 x 140 x 40mm (WxDxH), 965g. Official Netgear \"Hardware-at-a-Glance\" table (M4250_Datasheet.pdf, p.2) lists this model's data ports as \"8 ports PoE+ (110W) / 1 additional port\" (RJ45) + \"1 port SFP 1G\", plus a separate rear \"Ethernet: 1G Out-of-band\" management port, front USB-C console, and rear USB-A storage port — confirmed against Netgear's product page and the installation guide (which independently confirms the Type-C USB console port and OOB/service port terminology). Exact front-panel port labels/numbering are inferred from product photography (not individually confirmed via a labeled panel diagram) — device may print them as \"1-8\", \"9\", \"SFP1\"/similar rather than these exact strings. The power connector is inferred as a DC barrel jack based on Netgear's \"External Power Adapter (130W)\" wording and rear-panel product photos showing a round jack; the exact barrel diameter/pin configuration (e.g., possible locking type) is not stated in the sources reviewed. SFP port left ungraded per instructions since the grade scale for RJ45/etherCON was not extended to SFP in this task's rules, even though the SFP cage is 1G-rated (1000BASE-X). A sibling model, GSM4210PX (M4250-8G2XF-PoE+), shares this same chassis/desktop form factor but has 2x SFP+ (1G/10G) instead of 1x SFP + 1x extra RJ45 — do not confuse the two.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "PoE+ (802.3at, up to 30W); ports 1-8 share a 110W total PoE budget"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Additional non-PoE 10/100/1000BASE-T port"
+    },
+    {
+      "name": "SFP1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1000BASE-X SFP slot (1G fiber uplink); transceiver not included"
+    },
+    {
+      "name": "OOB (Service)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Rear out-of-band Ethernet management/service port, separate from the 9 front data ports"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Front-panel USB Type-C console port for CLI access (requires USB driver on host computer)"
+    },
+    {
+      "name": "Storage",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel USB-A port for local storage of logs, configuration, or firmware image files"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC input jack fed by included external power adapter, 130W rated; adapter's AC-side cord not part of the unit itself"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Shure",
+  "model": "MXA310",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://pubs.shure.com/guide/MXA310",
+  "confidence": "high",
+  "notes": "Table Array Microphone (Microflex Advance line). Single RJ45 jack is the only physical I/O connector: it carries Dante/AES67 digital audio (5 channels — 4 independently steerable channels + 1 automix output, 48kHz/24-bit), Shure control data, and Power over Ethernet (PoE Class 0, 4W max) all on one cable — there is no separate power inlet, no USB, and no analog audio output on this model. Spec page states Dante audio/control \"requires a wired, gigabit Ethernet connection to operate,\" and the onboard network-speed LED (off=10/100Mbps, on=1Gbps) confirms Gigabit capability, hence grade eth-1g. Desktop tabletop unit, 3.6 x 13.4 x 13.4 cm (H x W x D), 362g — not rack-mountable (rackUnits omitted). Touch-sensitive mute buttons and a recessed reset button are physical controls, not signal/power connectors, so not listed as ports.",
+  "ports": [
+    {
+      "name": "Network Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    }
+  ]
+}

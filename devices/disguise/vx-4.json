@@ -1,0 +1,206 @@
+{
+  "manufacturer": "disguise",
+  "model": "VX 4+",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.disguise.one/media/7968/disguise_vx4plus_specsheet_q3_2022.pdf",
+  "confidence": "high",
+  "notes": "Sourced from disguise's own official \"vx 4+ Specification, Q3 2022\" spec-sheet PDF (disguise.one), which includes a labeled rear-panel diagram, cross-checked against the current disguise.one/en/products/vx-4plus product page. disguise VX 4+ is a 4U rack-mount real-time media server/graphics engine for live events and virtual production (LED walls, XR), not a traditional AV switcher — I/O is for camera/video capture, video wall output, and machine control, plus data/sync.\n\nCaveats:\n- Video inputs are 4 banks of HD-BNC (mini-BNC, not full-size BNC) connectors; each bank is either 1x 12G-SDI or 4x independent 3G-SDI (16 total in 3G mode) — modeled here as 4x 12G-capable inputs, the manufacturer's headline framing, since the two modes aren't simultaneous per bank.\n- The two 100Gb/s network ports use QSFP28 cages; mapped to the generic \"sfp\" connector id since QSFP28 isn't a distinct option in the given schema, and grade omitted (SFP is not in the gradeable-connector list and 100G exceeds the RJ45 eth-25g ceiling).\n- Connector type for the 1G/10G Ethernet ports and the management port (RJ45 vs SFP+) is inferred from typical disguise vx rear-panel construction, not stated verbatim as \"RJ45\" in the text spec.\n- Front/rear USB 3.0 split (2 front + 3 rear = 5 total) is reconstructed from the spec sheet's product photo and rear-panel diagram, not an explicit text label.\n- Headphone-jack direction is inferred (monitoring output); a secondary auto-summarized source listed it as an input, likely a scraping artifact — flagged as low-confidence on that one port only.\n- Peak power draw: 860W per the official spec-sheet PDF vs 785W shown in an auto-summary of the current product page; used the PDF figure as the more authoritative primary source.\n- Exact panel silkscreen numbering/lettering for the SDI bank (1-4 vs A-D) is a best reconstruction from the rear-panel diagram, not independently verified character-for-character.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1; 100-240V 50-60Hz, 860W peak (per official Q3 2022 spec sheet PDF)"
+    },
+    {
+      "name": "USB 3.0 (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "VFC output slot 1; ships standard with HDMI 2.0 video-format-conversion card, max 4K@60p; slot accepts other VFC card types"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "VFC output slot 2; ships standard with HDMI 2.0 card, max 4K@60p; swappable"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "VFC output slot 3; ships standard with HDMI 2.0 card, max 4K@60p; swappable"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "VFC output slot 4; ships standard with HDMI 2.0 card, max 4K@60p; swappable"
+    },
+    {
+      "name": "GUI Out (DisplayPort)",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "Local GUI monitor output"
+    },
+    {
+      "name": "Ethernet A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "General network"
+    },
+    {
+      "name": "Ethernet B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "General network"
+    },
+    {
+      "name": "Ethernet C",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "General network"
+    },
+    {
+      "name": "Management Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "System management controller; speed not stated in spec"
+    },
+    {
+      "name": "Ethernet D",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "High-speed network, 100Gb/s via QSFP28 cage (closest schema connector id used; QSFP28 not a distinct option)"
+    },
+    {
+      "name": "Ethernet E",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "High-speed network, 100Gb/s via QSFP28 cage (closest schema connector id used; QSFP28 not a distinct option)"
+    },
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC (mini-BNC) connector bank; each bank = 4 physical mini-BNC connectors, usable as 1x 12G-SDI or 4x independent 3G-SDI (mode-dependent, not simultaneous); max 4K@60p"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC (mini-BNC) connector bank; also usable as 4x independent 3G-SDI"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC (mini-BNC) connector bank; also usable as 4x independent 3G-SDI"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "HD-BNC (mini-BNC) connector bank; also usable as 4x independent 3G-SDI"
+    },
+    {
+      "name": "Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analogue audio input"
+    },
+    {
+      "name": "Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analogue audio input"
+    },
+    {
+      "name": "Audio Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analogue audio output"
+    },
+    {
+      "name": "Audio Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analogue audio output"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" headphone jack; direction inferred as monitoring output — one secondary source (disguise.one product page) listed it as an input, possibly a parsing artifact"
+    },
+    {
+      "name": "ADAT/SPDIF In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "ADAT/SPDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Genlock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync input (not a graded SDI signal)"
+    }
+  ]
+}

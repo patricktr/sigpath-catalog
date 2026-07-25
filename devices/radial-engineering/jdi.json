@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Radial Engineering",
+  "model": "JDI",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://www.radialeng.com/product/jdi/specifications/",
+  "confidence": "high",
+  "notes": "Fully passive DI box — \"no power required\" per manufacturer specs, so there is no power connector to list. Front/rear panel also carries five switches that are NOT physical connectors and were excluded from the ports list per the schema: a -15dB input pad, a MERGE switch (turns Input+Thru into a passive mixer to sum stereo to mono), a 180° polarity-reverse switch, a Ground Lift switch, and a Parallel Speaker switch (adds a -30dB band-pass pad emulating a 12\" guitar speaker for reamping via Thru). Confirmed against three Radial-authored sources: the product page (radialeng.com/product/jdi), the Specifications tab (radialeng.com/product/jdi/specifications/), and the official Smart Sheet PDF (radialeng.com/wp-content/uploads/2017/12/Radial-SmartSheetBook-JDI.pdf), which includes a labeled connector/switch diagram — all three agree. Dimensions 5\" x 3.3\" x 1.8\" (127 x 84.1 x 45.5mm), weight 1.55 lbs — a small desktop/stage-floor unit, not rack-mountable, so rackUnits is omitted. No connector on this device belongs to a bandwidth-graded family (HDMI/SDI/DP/USB/RJ45), so no \"grade\" fields apply. Type \"Converter\" was chosen as the closest fit in the given enum (the JDI converts high-Z unbalanced instrument level to balanced mic level via transformer) — no dedicated \"DI box\" type exists in the schema.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4\" instrument input; closest connector id is ts-6.35 (TS, not TRS)."
+    },
+    {
+      "name": "Thru",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4\" pass-through feeding the instrument amp; also used as the second leg of the Merge (stereo-to-mono) function."
+    },
+    {
+      "name": "XLR Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced, mic-level output to mixer/preamp."
+    }
+  ]
+}

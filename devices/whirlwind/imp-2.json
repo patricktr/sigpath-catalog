@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Whirlwind",
+  "model": "IMP 2",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://whirlwindusa.com/products/black-boxes-effects-and-dis-direct-boxes-imp2",
+  "confidence": "high",
+  "notes": "Passive, transformer-based (Whirlwind TRHL) direct box — no power input/connector exists (no battery, no phantom power required). A GND/LIFT toggle switch (not a connector) disconnects ground between input and XLR output. The two 1/4\" jacks are wired in parallel/interchangeable; labeled here as IN and THRU per the manufacturer's manual, matching how retailers (Sweetwater, B&H) list them as \"1 x 1/4\\\" input\" and \"1 x 1/4\\\" thru.\" No grade set on any port — all are analog audio connectors, outside the graded connector families (SDI/HDMI/DP/USB/RJ45). Desktop stagebox unit (2-5/8\" x 4-3/8\" x 1-3/8\" steel enclosure), not rack-mountable, so rackUnits omitted. Confirmed against manufacturer product page (whirlwindusa.com), manufacturer spec-sheet PDF, and manufacturer instruction manual PDF (hosted on Whirlwind's own CDN), which explicitly names all three physical ports. Cross-checked against Sweetwater/B&H spec tables — consistent (1x 1/4\" in, 1x XLR out, 1x 1/4\" thru).",
+  "ports": [
+    {
+      "name": "HIGH Z IN",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Parallel-wired with the THRU jack (1/4\" TS, unbalanced, high-Z instrument/line level); either 1/4\" jack can serve as input or thru-output."
+    },
+    {
+      "name": "HIGH Z THRU",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Parallel loop-through of the input signal (1/4\" TS, unbalanced)."
+    },
+    {
+      "name": "LOW Z OUT",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, 150 ohm balanced mic-level output via Whirlwind TRHL transformer."
+    }
+  ]
+}

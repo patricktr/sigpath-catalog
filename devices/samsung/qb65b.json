@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Samsung",
+  "model": "QB65B",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://image-us.samsung.com/SamsungUS/samsungbusiness/pdf/spec-sheets/Digital_Signage_QBB_QMB_QHB_4K_UHD_DisplaySeries.pdf",
+  "confidence": "high",
+  "notes": "Official Samsung datasheet \"Digital Signage QBB/QMB/QHB 4K UHD Display Series\" (DIGSIG-QBBQMBQHB-DSHT-JUL22T), cross-checked against Samsung's Latin America QB65B product page (samsung.com/latin_en/business/.../lh65qbbebgcxgo/). Full model/SKU: LH65QBBEBGCXGO (LATAM); US SKU is the equivalent LH65QBB-series unit (Samsung's US support page for \"QBB Series Digital Signage QB65B\" confirms LH65QBBEBGCXGO as the referenced model but does not surface a specs table directly). Not rack-mountable — 65\" wall/stand-mount commercial display, VESA 400x400. No DisplayPort input (DP is exclusive to the QM65B/QH65B tiers of this same series — QB65B is HDMI-only for video input). Built-in 10W x2ch speakers. Power connector style (IEC vs captive cord) and RJ45 link speed were not explicitly stated in the source and are flagged inline on the relevant ports; everything else (HDMI 2.0 x3 w/ARC, USB 2.0 x2, RS232C in/out, RJ45, IR, stereo mini-jack audio out, AC 100-240V power) is taken directly from Samsung's official spec table and connectivity diagram.",
+  "ports": [
+    {
+      "name": "HDMI 1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Datasheet lists 3x HDMI 2.0 total (1 ARC-capable); individual numbering beyond the ARC port is not itemized in the source, so ports 2/3 are inferred from the '(3)' port count."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "0.5A rated per Samsung connectivity diagram"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "1.0A rated per Samsung connectivity diagram"
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet speed (10/100 vs Gigabit) not stated in source datasheet; grade omitted"
+    },
+    {
+      "name": "RS232C In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Spec table lists 'RS232C (in/out)'; two identical RS232C ports shown in connectivity diagram (items 8 & 9). Included accessory is an 'RS232C (IN) Gender' adapter, consistent with an In/Out daisy-chain pair typical of Samsung signage."
+    },
+    {
+      "name": "RS232C Out",
+      "direction": "output",
+      "connector": "rs232"
+    },
+    {
+      "name": "IR",
+      "direction": "input",
+      "connector": "ir",
+      "note": "IR sensor/extender input, item 10 in Samsung's connectivity diagram"
+    },
+    {
+      "name": "Speaker Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Labeled 'Speaker Jack' on rear panel diagram; spec table lists this as 'Output Audio: Stereo Mini Jack'. Display also has a built-in 10W x2ch amplifier (not a separate physical port)."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Power Supply spec: AC 100-240V 50/60Hz. Exact inlet style (IEC C13/C14) not explicitly labeled in the datasheet; inferred from the included detachable 'Power Cord' accessory and standard practice for this display class/size — verify before relying on it for cable matching."
+    }
+  ]
+}

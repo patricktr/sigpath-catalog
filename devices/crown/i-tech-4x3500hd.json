@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Crown",
+  "model": "I-Tech 4x3500HD",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.crownaudio.com/en-US/products/i-tech-4x3500hd",
+  "confidence": "high",
+  "notes": "Documented configuration is the I-Tech 4x3500HDS (Speakon output variant). Crown also sells the I-Tech 4x3500HDB variant with binding-post outputs instead: 4 channel pairs of 60A color-coded binding posts (accepts banana plugs/wire/spade lugs), each pair sharing a center \"BRIDGE\" post with its neighbor for 2-channel bridged mode — same analog/AES3/network/power I/O otherwise. Speakon outputs: two 50A Neutrik NL4-style connectors (CH1/CH2 and CH3/CH4, 2-pole/4-pole) plus one NL8-style connector carrying all 4 channels (CH1-CH4) for consolidated wiring — Class 2 output wiring required on all. AES3 inputs are input-only (no AES3 thru/loop-out on this model); no grade applies since AES3 has no defined bandwidth-grade scale in this taxonomy. Network port (single EtherCon/RJ45) carries Ethernet control (HiQnet), CobraNet digital audio, and VDrive (AES3-over-Ethernet); confirmed 100Base-T (Fast Ethernet, 100Mbps) per the operation manual's CobraNet/network section. Front-panel USB is USB 2.0 Type-A, used to transfer presets/firmware to/from a USB flash drive (host-type, hence bidirectional). No GPIO/logic or RS-232 port exists on this model. Power: universal 100-240VAC 50/60Hz (±15%), 32A Neutrik powerCON inlet. Sourced from crownaudio.com product page plus its linked official datasheet (i-tech-4x3500hd-datasheet.pdf) and operation manual (i-tech-4x3500hd-manual-english.pdf, Section 6.5 \"Back Panel Controls, Indicators and Connectors\" and rear-panel diagrams), both dated 2015/2022 revisions.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon"
+    },
+    {
+      "name": "Analog Input CH1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Input CH2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Input CH3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Input CH4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Digital Input AES3 CH1/2",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "Digital Input AES3 CH3/4",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "Network (CobraNet/VDrive/HiQnet)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB (Front Panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Outputs CH1/CH2",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Outputs CH3/CH4",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Outputs CH1/CH2 CH3/CH4 (NL8, 4-way)",
+      "direction": "output",
+      "connector": "speakon"
+    }
+  ]
+}

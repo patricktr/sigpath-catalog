@@ -1,0 +1,32 @@
+{
+  "manufacturer": "Crestron",
+  "model": "TSS-770",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://docs.crestron.com/en-us/8745/Content/Topics/Specifications/Specifications-TSS-770.htm",
+  "confidence": "high",
+  "notes": "Sourced from Crestron's official TSS-70 Series manual (docs.crestron.com), authoritative and complete. The TSS-770 is a 7 in. wall/lectern-mount room-scheduling touch screen (not a rack device; rackUnits omitted — a separate rack accessory kit exists but isn't part of the base unit). It is powered exclusively via PoE/PoE+ through its single RJ-45 port, so no discrete power connector (barrel, IEC, etc.) exists to list. Ethernet is 100BASE-TX (100 Mbps), explicitly stated, not Gigabit. USB is confirmed as USB 2.0 host x2, USB Type-A, female. A separate desktop/table-stand variant \"TSS-770-T\" exists (docs.crestron.com Specifications-TSS-770-T.htm) with the same electrical/connector spec but different mechanicals; this record covers the base wall/lectern TSS-770. The device also has a rear pin-hole hardware reset (not a signal/power connector, omitted) and built-in speakers (no external audio jacks). No HDMI/video or analog audio ports exist on this model — it is a scheduling touch panel, not an AV switch/display.",
+  "ports": [
+    {
+      "name": "LAN PoE",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "8-pin RJ-45, female; 100BASE-TX Ethernet port; IEEE 802.3at Type 2 PoE+ powered-device port. This is the unit's sole power input (no separate power jack) — draws 15 W (LLDP-negotiated), up to 30 W (PoE+ Class 4) without LLDP, or 15.4 W on plain 802.3af PoE."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port for an optional room-scheduling accessory (light bar/hallway sign). The two USB ports are not individually numbered on the physical device."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port; can accept the optional RFID-USB card reader accessory if the other USB port is occupied by a light bar. Not individually numbered on the physical device."
+    }
+  ]
+}

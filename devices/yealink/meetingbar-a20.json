@@ -1,0 +1,46 @@
+{
+  "manufacturer": "Yealink",
+  "model": "MeetingBar A20",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.ipphone-warehouse.com/content/pdf/yealink/Yealink-A20-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Yealink MeetingBar A20 is an all-in-one Android video collaboration bar (camera + 8-mic MEMS array + speaker + compute + Wi-Fi/Bluetooth) for small-to-medium rooms; sold as base endpoint (A20-010) or bundled with CTP18 touch panel / VCH51 sharing kit / WPP30 wireless presentation pod (A20-020/021/025). Not rack-mountable (wall/TV-mount or desktop; 600x68x82mm), so rackUnits omitted.\n\nPort names/layout were confirmed visually from the rear-panel diagram in Yealink's own Quick Start Guide (silkscreen labels: Reset, DC48V, HDMI 1, VC Hub/Phone, Internet, HDMI 2, plus a side-panel USB-A + Kensington lock slot) — Reset pinhole and the security-lock slot are not signal/power connectors so were excluded.\n\nBoth HDMI ports are OUTPUTS only (confirmed by datasheet's \"2 x HDMI output (CEC supported)\" and the port diagram) — the unit has no native HDMI input; a second-source/content-sharing input is only available via the optional external VCH51 Sharing Kit box (its own HDMI/USB-C in), which connects to the A20 through the \"VC Hub/Phone\" RJ45 port, so no HDMI-input port is listed for the A20 itself. No HDMI version (1.4/2.0/2.1) is stated anywhere in the datasheet or manuals, so grade was omitted for both HDMI ports (the camera is separately described as supporting \"4K video output,\" but that describes capture/processing, not a confirmed HDMI link version). The \"VC Hub/Phone\" RJ45 port is a proprietary Yealink interface, not standard Ethernet, so it was left without an eth- grade.\n\nDirect WebFetch access to yealink.com and to B&H/Sweetwater/Markertek product pages returned HTTP 403 (bot protection) throughout this session, and B&H/Sweetwater no longer stock the standalone A20 (\"No Longer Available\"). Specs were instead verified from Yealink's own official PDF documents — \"MeetingBar A20 Datasheet\" and the \"MeetingBar A20 ... Quick Start Guide (V1.3)\" (both carry Yealink letterhead/branding and match the filenames referenced on support.yealink.com) — as mirrored by distributor ipphone-warehouse.com, and cross-checked against a manualslib.com excerpt referencing \"HDMI 1 port.\"",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "VC Hub/Phone",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Yealink VCH interface (not standard Ethernet) used to attach the optional VCH51 Sharing Kit, which adds an HDMI/USB-C content-sharing input; also used for VCR20/CTP18 style hub accessories."
+    },
+    {
+      "name": "Internet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DC48V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input jack fed by the included external adapter: AC 100-240V in, DC 48V/0.7A out."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Also delivers 5V/0.5A output power to attached accessories such as the WPP20/WPP30 wireless presentation pod dongle."
+    }
+  ]
+}

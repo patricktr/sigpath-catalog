@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Haivision",
+  "model": "Air Series",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www3.haivision.com/datasheet-haivision-air.pdf",
+  "confidence": "high",
+  "notes": "Source: official Haivision \"Air Series\" datasheet (HVS-DS-AIR-241201), fetched from https://www3.haivision.com/datasheet-haivision-air.pdf (redirects to storage.pardot.com host, both Haivision-controlled). \"Haivision Air\" is a product family with four variants — Air200, Air220, Air220-5G, Air320e-5G — that differ only in encoder support (H.265/HEVC on Air320e-5G only; all support H.264/AVC) and embedded cellular modem generation (5G/4G/3G on the -5G models vs. 4G/3G on Air220/Air200); the physical interface list in the datasheet is shared across all four models, so it is reported once here as \"Air Series.\" Device is a handheld/portable bonded-cellular video encoder/transmitter, not rack-mountable (rackUnits omitted). Also present but omitted from ports (no matching connector id in the schema — not AV signal/power connectors): 1x SD card slot (local recording) and 4x micro SIM slots (for the internal cellular modems). USB 3.0 Type-A ports graded usb-5g (standard USB 3.0/SuperSpeed rate); they can also host external cellular/Wi-Fi/Ethernet dongles as \"extension links.\" Ethernet is confirmed Gigabit in the Network Connections section. Power section states \"DC input 19V\" with an internal 48Wh battery (up to 3 hours) — connector style for the DC input is not specified, so dc-barrel was chosen as the closest generic match (flagged in the port note).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Audio/IFB (Headset)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Shared intercom/IFB jack: mic input + headset audio output"
+    },
+    {
+      "name": "Analog Audio In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Mini XLR (3-pin subminiature) connector, not full-size XLR3 — closest schema id chosen"
+    },
+    {
+      "name": "Analog Audio In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Mini XLR (3-pin subminiature) connector, not full-size XLR3 — closest schema id chosen"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Datasheet only states \"DC input 19V\"; exact connector style (barrel vs. locking DC) not specified — dc-barrel used as closest generic match"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Osprey Video",
+  "model": "Talon G1",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1225700-REG/osprey_96_02010_talon_g1_h_264_sff.html",
+  "confidence": "medium",
+  "notes": "This entry covers the Osprey Video \"Talon G1\" H.264 Hardware Encoder (model 96-02010) — a 2-3 channel (datasheet text is inconsistent on channel count) fanless contribution encoder that ingests SDI/HDMI/Composite and streams H.264 over IP (RTMP/RTP/UDP/.TS). Legacy/likely discontinued product: ospreyvideo.com no longer hosts a live product page for it (404s on guessed URLs), so specs were sourced from the manufacturer's official datasheet PDF (copyright Osprey Video AG) as mirrored by two Osprey channel partners/resellers (ezytech.com and advanceddigital.com), cross-checked against B&H's listing (matching dimensions 93.1x120.2x24.75mm and 9-17VDC power spec) — B&H's own page returned HTTP 403 to direct fetch so sourceUrl points to that B&H listing as the preferred-retailer reference even though full confirmation came via the manufacturer PDFs and a search-engine cache of the page. Sibling products exist under the same family with different I/O: \"Talon G1 Decoder\" (receive-side, not covered here) and \"Talon G1H\" (HDMI/CVBS-only variant, no SDI/USB-A audio difference). Power connector is inferred as dc-barrel from the included \"International Power Supply\" accessory and the \"9-17VDC\" panel label; exact connector geometry not explicitly named in the datasheet. HDMI version/bandwidth grade omitted because the datasheet only states max resolution (1080p/60), not an HDMI spec version.",
+  "ports": [
+    {
+      "name": "SDI",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "BNC connector; accepts 3G-SDI (SMPTE 424M), HD-SDI (SMPTE 292M), or SD-SDI (SMPTE 259M)"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Max resolution 1080p/60; HDMI version number not stated in datasheet, grade omitted"
+    },
+    {
+      "name": "CVBS",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Composite (CVBS) analog video input"
+    },
+    {
+      "name": "AUDIO",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo analog audio input, front panel 3.5mm jack"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "ETHERNET",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1x GigE; carries the encoded H.264/RTMP/RTP/UDP stream and HTTP configuration interface"
+    },
+    {
+      "name": "9-17VDC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External DC power input, wide-range 9-17VDC, 6W consumption; ships with an included international power supply (barrel-jack connector inferred from product photos)"
+    }
+  ]
+}

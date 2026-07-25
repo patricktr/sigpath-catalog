@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "ATND1061",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.audio-technica.com/en-us/atnd1061",
+  "confidence": "high",
+  "notes": "This is the ATND1061DAN (Dante-enabled) configuration, documented via the manufacturer's product/spec page plus the official ATND1061 User Manual (docs.audio-technica.com/all/ATND1061-UM-EN-V9.pdf) for exact rear-panel port labels (Network A/B, INPUT, OUTPUT, GPI) and Euroblock pin assignments. A second SKU variant, ATND1061LK (Audio-Technica LINK-enabled), swaps the two Dante RJ45 ports for one \"Network\" RJ45 (IP control/app only, 100 Mbps) plus two \"Audio-Technica LINK A/B\" RJ45 ports (proprietary 100 Mbps link protocol for daisy-chaining/gain-sharing multiple units), and is powered by +48V DC delivered over the A-T LINK cable rather than PoE (max 5.2W vs 7W for DAN). Both variants share identical microphone/beamforming, analog I/O, and physical specs (227.5 x 227.5 x 30mm ceiling array, PoE/LINK powered, no line-voltage AC input). Dante network speed (1 Gbps) is explicitly stated in the spec sheet, used for the eth-1g grade; no HDMI/SDI/etc. ports exist on this device — it is audio-only. GPI is a control/contact-closure port, not audio, so no bandwidth grade was set per instructions.",
+  "ports": [
+    {
+      "name": "Network A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante network port; carries PoE (IEEE 802.3af Class 0, max 7W) that powers the unit — no separate power connector exists on this model."
+    },
+    {
+      "name": "Network B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Second Dante network port (built-in 2-port switch for daisy-chain/secondary connection); not PoE-powered."
+    },
+    {
+      "name": "INPUT",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced analog mic/line input, 3-pin Euroblock terminal (+Hot/-Cold/Ground); MIC or LINE level switchable; 12V phantom power available."
+    },
+    {
+      "name": "OUTPUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced analog output, 3-pin Euroblock terminal (+Hot/-Cold/Ground); output level switchable +4dBu/-10dBV/-33dBV."
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "General-purpose contact-closure control input, 3-pin Euroblock (GPI1/GPI2/Ground); function assignable in Digital Microphone Manager software."
+    }
+  ]
+}

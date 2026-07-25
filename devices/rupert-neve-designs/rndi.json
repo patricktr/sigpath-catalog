@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Rupert Neve Designs",
+  "model": "RNDI",
+  "category": "audio",
+  "type": "Converter",
+  "sourceUrl": "https://www.rupertneve.com/products/rndi/",
+  "confidence": "high",
+  "notes": "Single-channel active/transformer DI box. Powered exclusively by +48V phantom power delivered through the OUTPUT XLR (no dedicated power connector, no battery); front-panel blue LED indicates phantom presence. Also has non-connector controls: Instrument/Speaker input-level selector switch and a Ground Lift toggle (not physical I/O ports, so not listed). Desktop/stagebox form factor (4\"W x 6.25\"D x 1.75\"H), not rack-mountable. No connector in this device qualifies for a bandwidth \"grade\" (all analog audio). Spec confirmed directly from the manufacturer's current product page (rupertneve.com/products/rndi/); this is the original single-channel RNDI, distinct from the RNDI-M (compact), RNDI-S (stereo), and RNDI-8 (8-channel rack) variants in the same product family.",
+  "ports": [
+    {
+      "name": "INPUT",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Hi-Z unbalanced 1/4\" instrument/speaker input; switchable Instrument (2.2 MΩ, +20.5 dBu max) or Speaker mode (200 kΩ, +41 dBu max) via front-panel selector"
+    },
+    {
+      "name": "THRU",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Parallel (unbuffered Y-split) 1/4\" thru jack, wired directly to INPUT, used to feed an amp (Instrument mode) or speaker (Speaker mode)"
+    },
+    {
+      "name": "OUTPUT",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Transformer-balanced mic-level XLR output; also carries +48V phantom power (4.5mA) into the unit from the connected preamp/mixer — the RNDI has no separate power inlet or battery option"
+    }
+  ]
+}

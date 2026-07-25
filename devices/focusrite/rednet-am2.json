@@ -1,0 +1,49 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "RedNet AM2",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://us.focusrite.com/products/rednet-am2",
+  "confidence": "high",
+  "notes": "Compact tabletop/desktop unit (aluminum extrusion chassis with 3/8\" BSW mic-stand thread) — not rack-mountable, so rackUnits omitted. Two locking etherCON connectors form an integrated Gigabit Dante network switch; Network 1 also carries PoE (802.3af Class 0) as an alternate to the DC barrel power input — both are listed but they are two power options for one device rather than simultaneous separate inputs. Port labels \"Network 1/2\", \"Line Out L/R\", \"Headphone\", and \"DC In\" are inferred plain-English labels consistent with the user manual's rear-panel description (manual PDF text could not be parsed directly, so exact silkscreen wording is not 100% confirmed, though connector types/counts/specs are corroborated across the manufacturer product page, manufacturer user manual, and ManualsLib mirror of the manual).",
+  "ports": [
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Locking etherCON/RJ45, integrated Gigabit switch port; also accepts PoE (IEEE 802.3af Class 0) as an alternate power source"
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Locking etherCON/RJ45, integrated Gigabit switch port for daisy-chaining"
+    },
+    {
+      "name": "Line Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analogue line output, software-switchable 0dBFS reference +18/+24dBu"
+    },
+    {
+      "name": "Line Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced analogue line output, software-switchable 0dBFS reference +18/+24dBu"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" stereo headphone jack, drives 32-600 ohm loads"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC, 1.2A via included external plugtop PSU (alternative to PoE on Network 1)"
+    }
+  ]
+}

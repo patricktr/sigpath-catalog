@@ -1,0 +1,272 @@
+{
+  "manufacturer": "DiGiCo",
+  "model": "S21",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://digico.biz/wp-content/uploads/2020/04/DiGiCo-S21-Data-Sheet-1.pdf",
+  "confidence": "high",
+  "notes": "Source: official DiGiCo S21 Datasheet (manufacturer PDF, digico.biz). Physical dims 763x586x295mm desktop console — no rackUnits set. Power: \"90-264 VAC, 47-63Hz Auto Sensing, 208 watts, 232VA\" via \"1 x PSU\"; exact IEC inlet variant (C13/C14) is not spelled out in the datasheet, so IEC is inferred (standard for this class of gear). AES/EBU In/Out are single XLR connectors each carrying a 2-channel (stereo) AES3 signal, modeled with connector \"aes3\" to distinguish from the analog mic/line XLRs. GPI/GPO are 1/4\" jacks, modeled as ts-6.35 (contact-closure, not audio TRS). The 24 Mic/Line inputs and 12 Line outputs are only given as aggregate counts on the rear panel (no individual factory labels), so they are enumerated generically as \"Mic/Line In 1-24\" / \"Line Out 1-12\". 2 x DMI expansion slots (up to 64 I/O each, accepting Dante/MADI/AES/Analog/Waves/Hydra2/etc. cards) exist on the rear panel but are omitted as fixed ports since their connector type depends entirely on the DMI card installed. Ethernet port speed (100M/1G) is not stated in the datasheet, so grade is omitted. The \"UB MADI\" USB-B port is very likely USB 2.0 (same generation as the console's other explicitly-labeled \"USB 2.0\" slots) but the datasheet does not state a version for this specific port, so grade is omitted there too. Front worksurface also has a USB 2.0 slot plus 1/4\" and 3.5mm headphone jacks, included alongside the rear I/O.",
+  "ports": [
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 17",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 18",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 19",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 20",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 21",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 22",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 23",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 24",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 9",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 11",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 12",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Single XLR carrying 2 channels (stereo AES3 pair)"
+    },
+    {
+      "name": "AES/EBU Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Single XLR carrying 2 channels (stereo AES3 pair)"
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "GPO",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "UB MADI",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B MADI audio interface for recording/playback of up to 48 channels"
+    },
+    {
+      "name": "Word Clock I/O",
+      "direction": "bidirectional",
+      "connector": "bnc"
+    },
+    {
+      "name": "DVI",
+      "direction": "output",
+      "connector": "dvi"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB 2.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Headphone Out (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out (3.5mm)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 2.0 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    }
+  ]
+}

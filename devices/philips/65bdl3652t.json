@@ -1,0 +1,169 @@
+{
+  "manufacturer": "Philips",
+  "model": "65BDL3652T",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.documents.philips.com/assets/20240207/d628c01f9071428a9308b10f00b3b96c.pdf",
+  "confidence": "high",
+  "notes": "Sourced primarily from Philips's own official 65BDL3652T/75BDL3652T/86BDL3652T user manual (documents.philips.com/assets/20240207/d628c01f9071428a9308b10f00b3b96c.pdf), which contains a numbered terminal-panel diagram (Section 3.2) and a detailed Technical Specifications table (Section 14) for the 65\" model specifically. Cross-checked against the official 1-page Philips product datasheet (documents.philips.com/assets/20230607/3346518c364a4676b4c7b01a00c6c7f5.pdf) and the PPDS product page. Product is branded \"Philips\" though manufactured/sold by PPDS (a TP Vision/MMD joint venture under Philips license).\n\nOmitted from the port list (not cable/AV connectors): a Micro SD card slot (supports up to 128GB) and a physical \"Main Power Switch\" rocker, both present on the unit.\n\n\"AC OUT\" is an auxiliary AC pass-through outlet for powering an external media player; Philips documentation doesn't specify the exact IEC sub-type, so \"iec\" (C13/C14 family) was used as the closest match — treat this as inferred.\n\nPower input rated 100-240V~, 50/60Hz, max consumption 350W (typical 175W). This model is part of a 3-size family (65\"/75\"/86\" BDL3652T) sharing one manual and an identical I/O terminal set per the manual's own tables; only the 65\" back panel/diagram was used to confirm exact physical layout here.\n\nUSB-C (labeled \"USB 3.0 C\" on the panel, supports display + touch) has no stated USB speed/version in Philips documentation, so grade was omitted rather than guessed. The two USB-B touch-return ports' USB 2.0 grade is inferred by cross-referencing the datasheet rather than being explicitly stated against those specific ports.",
+  "ports": [
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "AC OUT",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "HDMI LOOP",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB 3.0 C",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    },
+    {
+      "name": "DisplayPort IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort OUT",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI-I IN",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I also carries analog RGB per Philips spec (VGA-compatible via adapter); no separate VGA connector on the unit"
+    },
+    {
+      "name": "DVI-D OUT",
+      "direction": "output",
+      "connector": "dvi"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI3 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI4 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB2.0 Type-A storage playback port (one of two identical ports on the panel)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB2.0 Type-A storage playback port (one of two identical ports on the panel)"
+    },
+    {
+      "name": "USB-B",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Touch/HID return to external PC; USB2.0 grade inferred from datasheet's 'Video output: USB 2.0 (x2)' line, not explicitly versioned in the manual's port legend (one of two identical ports)"
+    },
+    {
+      "name": "USB-B",
+      "direction": "output",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Touch/HID return to external PC; USB2.0 grade inferred (one of two identical ports)"
+    },
+    {
+      "name": "RJ-45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "RS232 IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Jack size stated as 2.5mm in the one-page datasheet but 3.5mm phone jack in the full user manual's Technical Specifications table"
+    },
+    {
+      "name": "RS232 OUT",
+      "direction": "output",
+      "connector": "rs232"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "IR OUT",
+      "direction": "output",
+      "connector": "ir"
+    },
+    {
+      "name": "Android USB 3.0 In",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "One of two identical 3.5mm audio-out jacks; confirmed by both the terminal-panel diagram and the datasheet, though the manual's own Section 14 summary table lists only x1 (likely a documentation inconsistency)"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "One of two identical 3.5mm audio-out jacks (see note above)"
+    }
+  ]
+}

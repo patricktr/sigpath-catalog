@@ -1,0 +1,68 @@
+{
+  "manufacturer": "LG",
+  "model": "55UL3G-B",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://solutions.lg.com/us/digital-signage/lg-55ul3g-b",
+  "confidence": "high",
+  "notes": "55\" IPS UHD (3840x2160) commercial/digital-signage display, webOS 4.0, VESA 300x300 wall/arm mount only (not rack-mountable, so rackUnits omitted). Source is LG's own US product page (solutions.lg.com/us/digital-signage/lg-55ul3g-b), cross-checked against the equivalent LG UK page and a dealer spec sheet (commercialdisplayworks.com), all consistent. Caveats: (1) HDMI version not stated by LG — only HDCP 2.2/1.4 support is listed, so no HDMI grade was set (could be HDMI 1.4 or 2.0-class silicon; unconfirmed). (2) RJ45/LAN speed not stated, so no Ethernet grade was set. (3) RS232C In/Out are physically 4-pin phone-jacks per LG/dealer text, not DE-9 connectors — mapped to the generic \"rs232\" id since no closer id exists in the allowed list. (4) Audio-out jack shape and AC power inlet shape are not explicitly stated on LG's spec table; both were inferred from typical LG signage-display design (3.5mm audio out, IEC power inlet) and should be treated as unconfirmed. (5) An IR-in port is listed on LG's page under \"Interface\" but omitted from some of LG's own summarized spec tables — confirmed present via a direct page re-check.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Two USB 2.0 Type-A ports"
+    },
+    {
+      "name": "RS232C In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Physically a 4-pin phone jack (mini-DIN/RJ-style mini-jack), not a DE-9; mapped to generic RS232 id"
+    },
+    {
+      "name": "RS232C Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Physically a 4-pin phone jack (mini-DIN/RJ-style mini-jack), not a DE-9; mapped to generic RS232 id"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Labeled 'RJ45 (LAN) In' by LG; LAN speed not stated so no grade set"
+    },
+    {
+      "name": "IR In",
+      "direction": "input",
+      "connector": "ir"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "LG lists only 'Audio' output with no stated connector shape; mapped to 3.5mm stereo mini-jack as the typical connector for this LG signage class — unconfirmed"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in power supply, AC 100-240V~ 50/60Hz; exact inlet shape not stated by LG, mapped to IEC C13/C14 as typical for this display class — unconfirmed"
+    }
+  ]
+}

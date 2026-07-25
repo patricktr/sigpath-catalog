@@ -1,0 +1,34 @@
+{
+  "manufacturer": "Listen Technologies",
+  "model": "CLD1 Induction Loop Driver",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.listentech.com/product/cld1/",
+  "confidence": "high",
+  "notes": "CLD1 is a compact induction (hearing) loop amplifier/driver for counter and small perimeter loop systems, not a video/AV switching device. All specs confirmed via the manufacturer's own product page (listentech.com/product/cld1/) and cross-checked against the official Listen Technologies datasheet for SKU CLD001CX (\"CLD1 Induction Loop Driver, Loop Coil, No Mic\"), created 2024-09-27, distributed via ADI Global's CDN (cdn.adiglobaldistribution.us/pim/Original/10313/LM-CLD001CX_Product-Data-Sheet.pdf). That datasheet's front-panel product photo shows the labels used above: MLC (a gain/metal-loss-correction control knob, not a connector), INPUT 1, INPUT 2 (with an \"Input 2 Select: Line-Mic\" switch), DC IN 12V/1.0A, and LOOP OUTPUT — all on a single face of the unit. The panel also bears \"Ampetronic\" branding above the CLD1 model designation (Ampetronic is a UK hearing-loop specialist; this unit appears to be an Ampetronic-engineered design sold under the Listen Technologies CLD1 name/SKU — could not fully confirm the OEM relationship). No connector on this device is a bandwidth-graded type (no HDMI/SDI/DP/USB/Ethernet), so no \"grade\" values apply. Desktop/freestanding unit (5.0 x 2.9 x 1.4 in, wall-mountable) — not rack-mountable, so rackUnits is omitted. Power: 12VDC, 1.0A, 18W via included external power supply (North America version); other regional power-supply variants may differ but the DC-in jack on the unit itself is unchanged.",
+  "ports": [
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced 3.5mm mono (TS) microphone input for electret mic, 6VDC bias. List has no dedicated mono-TS-3.5mm id, so the closest listed connector (trs-3.5) was used; the physical jack is mono, not stereo/TRS."
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Switchable Mic/Line input, unbalanced 3.5mm mono (TS) connector, selected via the rear 'Input 2 Select: Line-Mic' switch. Same connector-type caveat as Input 1 applies."
+    },
+    {
+      "name": "DC IN 12V",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "LOOP OUTPUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Datasheet lists this as a 'Level Cable Clamp' — a fixed screw-type bare-wire terminal for the induction loop cable, not a pluggable Euroblock/terminal-block connector. Euroblock was chosen as the closest listed id."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "manufacturer": "ARRI",
+  "model": "ALEXA Mini LF",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.arri.com/en/camera-systems/cameras/alexa-mini-lf",
+  "confidence": "high",
+  "notes": "Source: ARRI's official ALEXA Mini LF product page (arri.com), connector/spec text quoted verbatim. ARRI's connector panel is built almost entirely on proprietary LEMO (and one Fischer) circular connectors; only SDI 1, SDI 2, and Sync In are genuine BNC. None of the given connector-taxonomy IDs include \"LEMO,\" so every LEMO/Fischer port above was mapped to the closest functional/standard equivalent (BNC for coax-style video/TC signals, XLR5 for the multi-pin balanced-stereo audio in, RS-232/RS-485 for the two control buses, RJ45 for the Ethernet-over-LEMO port, dc-barrel for all three round DC power connectors) — actual connector noted per port. Ethernet link speed is not published by ARRI, so grade is omitted (do not assume gigabit). Camera body: ~2.6 kg / 140x143x188mm with LPL mount — desktop/handheld cine camera, not rack-mountable, so rackUnits is omitted. Also has built-in Wi-Fi (802.11b/g) and ARRI \"White Radio\" wireless lens/camera control, which are wireless interfaces, not physical ports, so excluded from the port list. Some ARRI documentation/panel silkscreens may abbreviate port names slightly differently (e.g., \"VIDEO 1/2\" vs \"SDI 1/2\"); names here follow ARRI's own spec-sheet headings.",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Real, genuine BNC. HD only: 1.5G 422 (SMPTE ST292-1) or 3G 422/444 (SMPTE ST425-1/-3), processed or clean, up to 60fps at 3G 422."
+    },
+    {
+      "name": "SDI 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Real, genuine BNC. HD or UHD, clean only (or SDI 1 clone): 1.5G/3G 422/444 HD plus 6G 422 UHD (SMPTE ST2081-10)."
+    },
+    {
+      "name": "VF (Viewfinder, MVF-2)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "ARRI lists this as a proprietary 'VF CoaXPress connector,' not a standard BNC — mapped to closest listed type. Carries EVF video plus viewfinder button/joystick control data back to camera."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Actual connector is LEMO 6-pin balanced stereo line in with 12V power output — no LEMO option exists in the connector taxonomy; mapped to the closest multi-pin balanced-stereo analog connector (XLR5)."
+    },
+    {
+      "name": "Headphones (on MVF-2)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo headphone jack located on the MVF-2 viewfinder unit, not the camera body itself."
+    },
+    {
+      "name": "TC In/Out",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Actual connector is LEMO 5-pin LTC Timecode In/Out; mapped to BNC (common analog for TC I/O) as the closest listed type."
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Genuine BNC genlock/sync input, as labeled by ARRI."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Actual connector is LEMO 10-pin carrying Ethernet for remote control/service; mapped to RJ45. Link speed (100M/1G) is not stated in ARRI's public spec, so grade is omitted."
+    },
+    {
+      "name": "EXT",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is LEMO 7-pin 'EXT' multi-purpose accessory interface carrying an RS control signal plus a 24V accessory power output; mapped to RS-232 for the control function since no LEMO/combo option exists."
+    },
+    {
+      "name": "LBUS (on lens mount)",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Actual connector is LEMO 4-pin on the lens mount for lens motor control; LBUS is RS-485-based, so mapped to RS-485 as the closest listed type."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is LEMO 8-pin, 11-34V DC; mapped to dc-barrel as the closest generic round DC power-input type (not a literal barrel jack)."
+    },
+    {
+      "name": "RS (24V Power Out)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is Fischer 3-pin, 24V DC output (powers wireless RF accessories such as follow-focus/lens motor systems); mapped to dc-barrel as closest DC-power-out type."
+    },
+    {
+      "name": "12V Power Out",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is LEMO 2-pin, 12V DC accessory power output; mapped to dc-barrel as closest DC-power-out type."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 port located in the media bay, used for firmware/LUT loading etc.; treated as a host port (bidirectional) per instructions."
+    }
+  ]
+}

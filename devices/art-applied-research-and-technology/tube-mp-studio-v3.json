@@ -1,0 +1,40 @@
+{
+  "manufacturer": "ART (Applied Research and Technology)",
+  "model": "Tube MP Studio V3",
+  "category": "audio",
+  "sourceUrl": "https://artproaudio.com/images/products/ownersman/TUBEMPSTV3-U-Users-Manual-2-3-22.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer is ART (Applied Research and Technology). The current shipping product is the \"Tube MP Studio V3\" (V3 = Variable Valve Voicing preset feature); ART's site no longer lists a plain non-V3 \"Tube MP Studio,\" so this V3 spec is used to answer \"ART Tube MP Studio.\" Data cross-verified from the manufacturer product page (https://artproaudio.com/microphone-preamps/product/811311/tubempstudiov3) and the official Owner's Manual PDF (linked above), both current as of 2026. All four audio I/O jacks are on the rear panel per the manual's \"CONNECTIONS\" section (\"All inputs and outputs are located on the rear panel\"), even though front-panel product photography shows the two 1/4\" jacks along the top edge of the control face — front and rear are effectively the same panel in this compact enclosure. No physical port carries a bandwidth \"grade\" (all are analog audio or DC power), so grade is omitted throughout. Power is delivered via an external \"universal\" wall-wart adapter (100-240V AC, 4 swappable regional mains clips) feeding a DC jack on the unit labeled \"Pwr\"; connector style is a coaxial DC barrel jack (closest match in the allowed list to the actual small-barrel plug ART ships, exact barrel size not published). Desktop unit, not rack-mountable (2\" x 5.5\" x 5\", 1.5 lbs) — rackUnits omitted. No enumerated \"type\" value cleanly fits a tube mic preamp/DI (not an \"Audio Interface,\" \"Amplifier,\" or \"Audio mixer\" in the conventional sense), so type is omitted; category \"audio\" is used instead.",
+  "ports": [
+    {
+      "name": "1/4\" Input",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Unbalanced instrument/line-level input, high impedance (840K ohms), max +22dBu"
+    },
+    {
+      "name": "XLR Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced mic input, switchable +48V phantom power, max +14dBu, input impedance 3K ohms"
+    },
+    {
+      "name": "XLR Output",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Active balanced output, usable unbalanced, max +28dBu, 600 ohm output impedance"
+    },
+    {
+      "name": "1/4\" Output",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced output, max +22dBu, 300 ohm output impedance"
+    },
+    {
+      "name": "Pwr",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC input for included universal external power adapter (100-240V AC ~50/60Hz in, 12V DC @ >=800mA out)"
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "manufacturer": "Vizrt (NewTek)",
+  "model": "3Play 4800",
+  "category": "recorder",
+  "type": "Recorder",
+  "rackUnits": 4,
+  "sourceUrl": "https://cdn-docs.av-iq.com/dataSheet/3Play_4800_onesheet_us.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from NewTek's own 2014 \"3Play 4800\" one-sheet/datasheet (branded NewTek, mirrored via AV-iQ's document CDN) for feature/spec text, cross-verified against the official NewTek 3Play family User Manual (rev. April 12, 2013, covers 3Play 4800/820/330 sharing this backplate) which includes a labeled, photographed rear-panel diagram (Figure 7) that was used to confirm exact connector counts/shapes, and against NewTek Knowledge Base articles and B&H/Adorama/HighwayAV listings (all consistent). The current live manufacturer page (https://www.newtek.com/3play/4800/) confirms the product listing but its tech-specs subpage returned 404 at fetch time; the German tech-specs URL surfaced in search (de.newtek.com) did not resolve. Video In/Out are physically multi-format BNC groups (1 SDI BNC + 3 analog BNC for Y/Pb/Pr, reused for Component/Y-C/Composite) - modeled here as 8 input + 3 output combo ports (connector \"sdi\", accepts \"bnc\") rather than exploding into 44 individual BNC jacks. AES3/EBU digital audio rides on 75-ohm BNC (not XLR) per the actual panel. Two connectors have no exact match in the provided connector-id list: the \"Tally\" port is a 2-row DB-15 D-sub (mapped to \"vga\" as the closest shape, but it is not a VGA video signal and this pin is documented as reserved/inactive) and the \"eSATA\" storage port (mapped to \"usb-a\" as the closest bidirectional data connector). HDMI version and USB version are not stated anywhere in NewTek's documentation and were inferred (medium/low confidence) from the product's ~2012-2014 hardware generation. Video/SDI grade (sdi-hd) is high-confidence, explicitly sourced from the manual's \"HD-SDI video conforms to SMPTE 292M\" statement. A Multi-Standard model variant additionally supports PAL/NTSC-J session formats but has identical physical I/O to the NTSC-only model. Ethernet is a single physical Gigabit RJ45 port serving both network A/V output (to TriCaster) and Gigabit overlay network inputs.",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Tracks the active playout channel delegate (A or B). HDMI version not stated in NewTek docs; 1.4 inferred from ~2012-2014 hardware era and stated max output of 1920x1080."
+    },
+    {
+      "name": "Display Out (HDMI)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "One of two supplemental 'Display' outputs; video-only HDMI with independent color control, used for auxiliary monitoring. Panel silkscreen labels it '(5) DISPLAY'. HDMI version inferred, not stated."
+    },
+    {
+      "name": "Multiview Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Panel-labeled 'MULTIVIEW'. Manual confirms DVI-D (digital only); cannot drive analog/VGA-only displays."
+    },
+    {
+      "name": "Display Out (VGA)",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Second supplemental 'Display' output (panel labels it '(6) DISPLAY'), blue HD15/VGA connector, for auxiliary monitoring with independent color control."
+    },
+    {
+      "name": "Interface Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Drives the external Windows GUI monitor for the built-in PC. Manual says 'use an adapter if necessary' for analog monitors, implying DVI-I; NewTek does not explicitly state DVI-I vs DVI-D."
+    },
+    {
+      "name": "Tally",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Panel-labeled DB-15 connector; physically a 2-row D-sub, not a true 3-row VGA/HD15 - mapped to 'vga' as the closest available connector id. Manual states this pin was reserved/inactive; NewTek's tally feature is instead delivered over Ethernet from a companion TriCaster."
+    },
+    {
+      "name": "eSATA",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Physical connector is eSATA (for external storage/backup drives); no eSATA id exists in the supplied connector list, so 'usb-a' is used as the closest approximation - the real connector shape differs."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Used for network output of Channel A/B to a NewTek TriCaster and for Gigabit network overlay inputs (iVGA, AirPlay, LiveText, etc.)."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "One of 4 USB ports (keyboard/mouse/peripherals). Version not stated in specs; 2.0 inferred from port color/era."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo 1/4-inch headphone monitoring output."
+    },
+    {
+      "name": "AC In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two independent IEC (C13/C14-style) inlets feeding the 550W redundant, hot-swappable/removable power-supply modules; each has its own rocker switch."
+    },
+    {
+      "name": "AC In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second redundant IEC power inlet, mirrors AC In 1."
+    },
+    {
+      "name": "Audio In 1a",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog XLR mic/line input (8 groups x 2 = 16 total), software-configurable as Mic w/wo phantom power or Line."
+    },
+    {
+      "name": "Audio In 1b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 2a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 2b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 3a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 3b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 4a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 4b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 5a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 5b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 6a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 6b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 7a",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Group 7 also accepts external LTC timecode input per the manual."
+    },
+    {
+      "name": "Audio In 7b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 8a",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In 8b",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 1a",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Channel A balanced analog output group (4 XLR: 1a-1d)."
+    },
+    {
+      "name": "Audio Out 1b",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 1c",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 1d",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 2a",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Channel B balanced analog output group (4 XLR: 2a-2d)."
+    },
+    {
+      "name": "Audio Out 2b",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 2c",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out 2d",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75-ohm BNC AES3/EBU digital audio input, one per video input group (8 total)."
+    },
+    {
+      "name": "AES In 2",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 3",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 4",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 5",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 6",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 7",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES In 8",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AES Out 1ab",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75-ohm BNC AES3/EBU digital audio output."
+    },
+    {
+      "name": "AES Out 1cd",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "Video In 1",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd",
+      "note": "Multi-format BNC input group (1 of 8): primary HD/SD-SDI BNC (SMPTE 292M, i.e. sdi-hd) plus 3 additional BNC jacks (Y, Pb, Pr) in the same column for HD/SD Component, Y/C (S-Video via adapter), or Composite - modeled as one combo port rather than 4 separate jacks."
+    },
+    {
+      "name": "Video In 2",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 3",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 4",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 5",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 6",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 7",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video In 8",
+      "direction": "input",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "Video Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd",
+      "note": "Channel A primary output group: SDI BNC plus Y/Pb/Pr BNCs (Component, Y/C, or Composite) in the same column."
+    },
+    {
+      "name": "Video Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd",
+      "note": "Channel B primary output group, same multi-format layout as Video Out 1."
+    },
+    {
+      "name": "Video Out 3",
+      "direction": "output",
+      "connector": "sdi",
+      "accepts": [
+        "bnc"
+      ],
+      "grade": "sdi-hd",
+      "note": "Aux output group - follows whichever of Channel A/B is currently delegated; same multi-format BNC layout."
+    },
+    {
+      "name": "Gen Lock",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "House-sync/reference (black burst) input; locks to HD or SD analog tri-level or bi-level sync. No SDI bandwidth grade applies."
+    }
+  ]
+}

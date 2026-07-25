@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Room Navigator",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.ipphone-warehouse.com/content/pdf/Cisco/Cisco-Room-Navigator-for-Table-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Source is Cisco's own official data sheet (doc #C78-744227-04, printed 09/23, \"Cisco Room Navigator for Table\"), retrieved via a third-party mirror (ipphone-warehouse.com) because direct fetches to cisco.com and webex.com returned HTTP 403 in this session. Content matches Cisco/Webex's published Table-stand Room Navigator datasheet.\n\nPhysical Interfaces section of the datasheet lists exactly three items: \"1x Ethernet (RJ-45) 100/1000 Mbps for LAN (external network) or direct pairing\", \"1x microUSB (service port)\", and \"1x factory reset pinhole.\" The reset pinhole is a mechanical recessed button, not a signal/power connector, so it is excluded from the ports list above.\n\nThe device is a 10.1\" touch-panel room/booking controller (part number CS-T10-TS-L-K9=, \"First Light\" table-stand SKU) — it has no HDMI, video, or analog audio I/O; it is not a video source or sink, only a control/UI surface that pairs with a Cisco Room Kit/Room/Board-series codec over Ethernet.\n\nPower is PoE-only (802.3af Class 0, delivered over the RJ-45 jack); no local AC/DC power port exists on the unit itself.\n\nCisco also sells a \"Room Navigator for Wall\" variant (same product family, CM-1262 wall-mount data sheet) which differs primarily in mounting hardware (wall bracket vs. detachable table foot stand). I could not independently fetch/confirm the wall-mount datasheet in this session (blocked/404 on the sources tried), so this spec reflects the table-stand variant; treat the wall variant's I/O as very likely identical (same internal board) but unconfirmed. Desktop/wall-mounted accessory device — no rack units.",
+  "ports": [
+    {
+      "name": "Ethernet (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100/1000 Mbps LAN port for direct or remote pairing to a Cisco video codec; also delivers power via PoE 802.3af Class 0. This is the device's only power connection — there is no separate AC or DC power input."
+    },
+    {
+      "name": "microUSB (service port)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Service/debug port; no USB speed grade published in the datasheet."
+    }
+  ]
+}

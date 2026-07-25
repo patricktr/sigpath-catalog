@@ -1,0 +1,92 @@
+{
+  "manufacturer": "K-array",
+  "model": "Kommander-KA02",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.k-array.com/en/product/kommander-ka02/",
+  "confidence": "high",
+  "notes": "Sourced from K-array's official datasheet (KA02_Datasheet_1.1.pdf) and user guide (KA02_uguide_1.1.pdf), both linked from the manufacturer product page. The user guide includes a numbered rear-panel connector diagram and a parts list of exact connector part numbers, giving high confidence on connector types and pin counts. Caveats: (1) The rear panel has an additional labeled port, \"Remote control connector\" (a wired-remote inlet, separate from the GPIO terminal), visible in the panel diagram but its physical connector type/pinout is not specified anywhere in the documentation, so it was omitted from the port list rather than guessed. (2) RJ45 Ethernet port speed/grade is not stated in either document, so grade was omitted (not assumed to be eth-1g). (3) TOSLINK, 3.5mm, Euroblock and DC-barrel connectors correctly have no grade set per the grading rules (analog/power/optical connectors aren't on the graded scales). (4) USB-A grade (usb-2.0) is explicitly stated in the datasheet (\"4x USB-A 2.0\"). (5) Device is a compact desktop unit (144 x 46 x 144 mm, 0.5kg); it is not inherently rack-mountable — an optional K-RACK2 accessory fits three KA02 units into 1U — so rackUnits was omitted per instructions for desktop units. (6) Datasheet v1.1 lists frequency response DSP as \"96 kHz/32-bit\" while the user guide's tech-spec table (also v1.1 wording in intro text) says \"192 kHz/32-bit\" for DSP processing; this discrepancy doesn't affect any port/connector data reported here.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Optical In",
+      "direction": "input",
+      "connector": "toslink"
+    },
+    {
+      "name": "Analog In (3.5mm Jack, unbalanced stereo)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Balanced In A",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix MC 1.5/3-ST-3.81 pluggable terminal block"
+    },
+    {
+      "name": "Balanced In B",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-pin Phoenix MC 1.5/3-ST-3.81 pluggable terminal block"
+    },
+    {
+      "name": "GPIO",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pin Phoenix MC 1.5/5-ST-3.81 terminal; supports up to 4 external normally-open switches + common ground, not general bidirectional GPIO"
+    },
+    {
+      "name": "Speaker Output CH1/CH2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pin Phoenix MSTB 2.5/4-ST-5.08 terminal carrying both channel 1 and channel 2 (SE 4Ω or PBTL 2Ω configurable)"
+    },
+    {
+      "name": "Speaker Output CH3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix MSTB 2.5/2-ST-5.08 terminal"
+    },
+    {
+      "name": "Speaker Output CH4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-pin Phoenix MSTB 2.5/2-ST-5.08 terminal"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by dedicated external AC/DC adapter: 100-240V AC 50-60Hz input, 24V 4A DC output"
+    }
+  ]
+}

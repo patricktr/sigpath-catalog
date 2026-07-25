@@ -1,0 +1,104 @@
+{
+  "manufacturer": "Lectrosonics",
+  "model": "M2T",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://lectrosonics.com/wp-content/uploads/filr/3422/M2T_td_ALL.pdf",
+  "confidence": "high",
+  "notes": "Digital half-rack (1/2 RU) wireless IEM/monitor transmitter, not a microphone transmitter — \"Wireless mic\" was chosen as the closest available type in the fixed enum since no \"Wireless IEM\" option exists. Two BNC antenna outputs, two Dante RJ45 ports, and one separate control Ethernet RJ45 are confirmed from Lectrosonics' official M2T Technical Data sheet (24 May 2024) rear-panel photo and spec table. Power input has no explicit connector-type spec line — a DC-polarity glyph plus \"9-18 VDC, 2A max\" silkscreen on the rear panel was used to model it as dc-barrel; unit ships with an external DCR15/4AU DC supply. eth-1g grade on the Dante ports is inferred from a \"1G\" link-speed LED label visible on the rear panel photo, not from an explicit written spec line; the separate control-Ethernet RJ45 has no stated speed so its grade was omitted. Exact individual labels for the two Dante RJ45 jacks (e.g. Primary/Secondary) were not legible in the source image, so they are generically numbered Dante 1/Dante 2. Variants M2T/E01, M2T/E02, M2T/E06, and M2TND differ only in RF frequency band/power (e.g. /E06 supports up to 100mW EIRP), not in physical I/O.",
+  "ports": [
+    {
+      "name": "ANT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna output, up to 50mW per carrier (100mW EIRP on /E06 variant)"
+    },
+    {
+      "name": "ANT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "RF antenna output; both antennas labeled ANT on rear panel"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "9-18 VDC, 2A max, 11W typical consumption; ships with DCR15/4AU external supply, exact barrel size not published"
+    },
+    {
+      "name": "Dante 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Dante Ultimo, daisy-chainable via CAT6; part of 2x RJ45 carrying up to 4 Dante RX audio channels; 1G grade inferred from rear-panel link-speed LED label"
+    },
+    {
+      "name": "Dante 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "second Dante RJ45, daisy-chain port; exact Primary/Secondary labeling not confirmed from source image"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "control/programming port for Wireless Designer software; no speed grade stated in spec"
+    },
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "locking combo XLR/TRS, balanced line level, -10dBV/+4dBu w/ trim, individually configurable as analog or Dante-routed"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "locking combo XLR/TRS, balanced line level"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "locking combo XLR/TRS, balanced line level"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "locking combo XLR/TRS, balanced line level"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "front panel Micro-B USB, firmware updates only; no data-rate grade stated"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "front panel 3.5mm stereo monitor jack"
+    },
+    {
+      "name": "IR Port",
+      "direction": "bidirectional",
+      "connector": "ir",
+      "note": "front panel IR transceiver for fast sync with receivers"
+    }
+  ]
+}

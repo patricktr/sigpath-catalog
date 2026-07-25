@@ -1,0 +1,17 @@
+{
+  "manufacturer": "DPA Microphones",
+  "model": "4061",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1870904-REG/dpa_microphones_4061_op_c_b90_4061_core_low_sensitivity_omni.html/specs",
+  "confidence": "medium",
+  "notes": "DPA 4061 is a subminiature omnidirectional lavalier microphone capsule (electret condenser, current production = \"4061 CORE+ / Low-Sensitivity (Loud SPL)\" variant; the original non-CORE 4061 is discontinued). It is a single-connector device with no fixed cable termination: buyers choose MicroDot, MicroLock, TA4F, 3-pin LEMO, locking 3.5mm (Sennheiser), or Mini-XLR at purchase, depending on the target wireless transmitter (confirmed on DPA's own product page, https://www.dpamicrophones.com/microphones/lavalier/4060). Spec figures here (frequency response 20 Hz–20 kHz, max SPL 134 dB RMS/137 dB peak at 1% THD, sensitivity 6 mV/Pa, dynamic range 111 dB, cable 5.9 ft/1.8 m, IP58, weight 7.5 g with cable, plug-in power 5–10 V) are from B&H's spec table for the MicroLock-terminated Black CORE+ SKU (4061-OP-C-B90); DPA's own site confirmed connector options and pricing but did not render a full spec table for this fetch. No bandwidth-graded connectors apply (analog mic output only), so no \"grade\" field was set. Not rack-mountable (rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Audio Output (MicroDot / MicroLock)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Actual connector is DPA's proprietary MicroDot/MicroLock subminiature locking mic connector (2-conductor/unbalanced, screw-on, ~3mm), not present in the given connector list; trs-3.5 chosen as closest small analog-audio connector. This single connector carries both the mic's analog audio output and incoming 5–10V plug-in power/bias from the wireless bodypack or preamp adapter — there is no separate power port. The 4061 is also sold factory-terminated in TA4F, 3-pin LEMO, or locking 3.5mm (Sennheiser-style) mini-jack instead of MicroDot/MicroLock, selected at time of purchase."
+    }
+  ]
+}

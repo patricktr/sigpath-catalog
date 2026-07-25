@@ -1,0 +1,74 @@
+{
+  "manufacturer": "Sony",
+  "model": "FX6",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1592066-REG/sony_pxw_fx6_cinema_camera_body.html/specs",
+  "confidence": "medium",
+  "notes": "Marketed simply as \"FX6\" (part of Sony's Cinema Line); official SKU is ILME-FX6V (kit kit kit also sold as PXW-FX6/ILME-FX6VK/ILME-FX6T/ILME-FX6TK variants by region/bundle). Sony's own product/spec pages (sony.com, pro.sony) returned 403/blocked errors during research, so data is drawn from B&H's detailed spec table, cross-checked against Sony's own FX6 service manual (mirrored on manualslib.com) and other manual excerpts. Confirmed the FX6 has NO genlock connector (unlike the FX9) — omitted intentionally, not missed. B&H's spec table also lists two more minor connectors — a separate 1/8\"(3.5mm) \"Control\" jack and a \"Proprietary\" connector (almost certainly the handle/grip-unit interface) — that could not be reliably identified/labeled from available documentation, so they were left out rather than guessed; only the more clearly LANC-style \"Remote\" 2.5mm jack is included. HDMI/SDI/USB-C grades are stated explicitly by the source; the Multi/Micro USB terminal's speed is not stated (commonly USB 2.0 on Sony camera Multi terminals) so no grade was assigned. Body is a handheld/shoulder cinema camera, not rack-mountable.",
+  "ports": [
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "BNC, auto-switching 12G/6G/3G-SDI"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type-A HDMI; also carries 16-bit RAW output"
+    },
+    {
+      "name": "Mic/Line In 1 (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "On the included XLR handle unit; Line/Mic/Mic+48V phantom switchable"
+    },
+    {
+      "name": "Mic/Line In 2 (XLR)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "On the included XLR handle unit; Line/Mic/Mic+48V phantom switchable"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo monitor output on side of camera body"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "EIAJ-type barrel, 18-20.5V DC (commonly quoted nominal 19.5V); camera also runs off BP-U series battery via the supplied AC adapter/power cord"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.2 Gen 1 / USB 3.1 Gen 1 (5Gbps)"
+    },
+    {
+      "name": "Multi/Micro USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Sony Multi/Micro-USB terminal for wired remote commander and data; speed/version not stated by source"
+    },
+    {
+      "name": "TC In/Out",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Single BNC terminal, switchable via menu between timecode input and output"
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "LANC-style sub-mini remote/control jack; actual connector is 2.5mm (no exact id in the allowed list — trs-3.5 used as closest match)"
+    }
+  ]
+}

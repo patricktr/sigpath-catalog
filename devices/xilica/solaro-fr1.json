@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Xilica",
+  "model": "Solaro FR1",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn.xilica.com/datasheet/X21_Spec_SolaroFR1_XBrand.pdf",
+  "confidence": "medium",
+  "notes": "Solaro FR1 is an open-architecture, 19\"/1U, 16-card-slot modular DSP frame. The bare chassis itself has almost no fixed signal I/O — analog audio, USB audio, GPIO/relay, and AES/EBU digital audio all come from optional plug-in \"Solaro Series\" I/O cards chosen per deployment (e.g. XC-SML analog audio card with +48VDC/75mA phantom power; XC-SUB USB-B audio card, 2x2 ch, 16-bit, 48kHz), so none of those are listed as fixed ports here since they are not present on an unpopulated unit. The networked \"FR1-D\" variant (P/N 2200-001-0105) ships with the XC-CTODN Dante card pre-installed, giving 3x RJ45 total: 2 dedicated Dante primary/secondary ports at 1000Mbps (would grade as eth-1g, AES67-compliant, 64x64 channels) plus a separate control-only Ethernet port — not modeled here since the request was for the base FR1. Exact rear-panel silkscreen text could not be visually confirmed; only a mechanical dimension/layout drawing (Technical_Drawing-FR1.pdf) was available showing connector icon positions (power switch+IEC inlet, recessed reset+micro-USB cluster, one RJ45, then 16 card-slot bays) with no printed labels, so port names are descriptive, taken from the datasheet's spec-table wording rather than device silkscreen. RJ45 control-port link speed and the optional XC-SUB card's USB version are not stated anywhere in Xilica's materials, so grade is omitted per instructions. The recessed IP-reset button and front-panel OLED display/Up-Select-Down buttons are not physical signal connectors and are omitted. Source used: Xilica's official Solaro FR1 datasheet (X21_Spec_SolaroFR1_XBrand.pdf, © 2021 Xilica Corp.) and its accompanying technical mechanical drawing, both linked from the official product page https://www.xilica.com/solaro/.",
+  "ports": [
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "90–240VAC 50/60Hz via internal supply, IEC inlet with rocker switch (confirmed via Xilica mechanical drawing); C13/C14-style socket."
+    },
+    {
+      "name": "Ethernet (Control)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Base FR1 (P/N 2200-001-0104) has a single RJ45, ≥Cat5e, for control only. Link speed not stated in datasheet, so no grade is set."
+    },
+    {
+      "name": "Service USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Recessed 'Factory service micro-USB' port next to the recessed IP-reset button; not a general audio/data port."
+    }
+  ]
+}

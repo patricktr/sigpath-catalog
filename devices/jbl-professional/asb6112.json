@@ -1,0 +1,23 @@
+{
+  "manufacturer": "JBL Professional",
+  "model": "ASB6112",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://jblpro.com/en-US/products/asb6112",
+  "confidence": "high",
+  "notes": "Passive (unpowered) 12-inch subwoofer — driven by an external amplifier via speaker-level cable, so it has no AC/DC power inlet of its own; no power port is listed. Enclosure is a freestanding ground-stack/suspended cabinet (16 suspension points, M10 hardware), not rack-mountable, so rackUnits is omitted. Available in Black (standard) or White (on request); weatherized WRC/WRX variants have different cabinet dimensions per JBL (contact CustomAudio@harman.com) — none of this affects the I/O. Neither connector (Speakon speaker-level audio, barrier strip) belongs to any graded connector scale (SDI/HDMI/DP/USB/RJ45), so no \"grade\" field was set on either port, per instructions. Part of JBL's AE Series / Cinema Sound - Immersive Rooms lineup.",
+  "ports": [
+    {
+      "name": "Speakon",
+      "direction": "input",
+      "connector": "speakon",
+      "note": "NL4 Neutrik Speakon; wired electrically in parallel with the barrier strip terminal for loop-through daisy-chaining to another cabinet."
+    },
+    {
+      "name": "Barrier Strip",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "CE-compliant covered barrier strip terminal block (accepts up to 10 AWG wire or 9mm spade lugs); 'euroblock' is the closest available connector id in the schema — this is a screw/barrier terminal strip, not a literal Euroblock. Wired in parallel with the Speakon jack for loop-through."
+    }
+  ]
+}

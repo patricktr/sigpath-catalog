@@ -1,0 +1,348 @@
+{
+  "manufacturer": "Microchip",
+  "model": "PD-9624GC/AC-US",
+  "category": "power",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://ww1.microchip.com/downloads/aemDocuments/documents/POE/ProductDocuments/DataSheets/PD-96XXGC-Data-Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Manufacturer: Microchip Technology (formerly Microsemi/PowerDsine). Part of the PD-96xxGC 90W/port IEEE 802.3bt PoE midspan family (PD-9606GC/PD-9612GC/PD-9624GC = 6/12/24 ports respectively, otherwise identical). \"/AC-US\" denotes the US AC power-cord variant only; EU/UK/AU/JP-cord SKUs are electrically/physically identical. Verified via official Microchip datasheet DS00003231E (Rev E, 5/23) and the live product page https://www.microchip.com/en-us/product/pd-9624gc (both fetched through Internet Archive mirrors since the live microchip.com host returned 403 to automated fetches; content is current as of Oct/Nov 2025 crawls). Data rate, connector types, AC/DC input specs and dimensions are stated explicitly in the datasheet (high confidence). However, the datasheet only states \"Number of Ports: 24\" and generically describes \"Ports: 6-Port Gang-Shielded RJ-45\" without an explicit front-panel port diagram. The 24 unpowered \"Data In\" + 24 powered \"PoE Out\" split (48 total Ethernet jacks) reflects the standard architecture of this Microsemi/PowerDsine midspan family (a midspan requires a separate pass-through input jack per channel since it does not integrate a switch), and the same 438x272x44mm 1U chassis has been reused across this product's generations that are documented with this in/out layout — but it is inferred, not itemized in this datasheet, hence medium overall confidence. Management/console RJ-45 and USB Type-A \"Communication Port\" speed/version are not stated, so grade is omitted for those. DC input is a screw terminal block (2 positive + 2 negative terminals, nominal 55V per the prior-gen 2019 datasheet DS00003231A) mapped to the closest enum value \"euroblock-dc\"; it is used for external battery backup / current-sharing power and applies to the 9612GC/9624GC models (not the 6-port 9606GC). AC inlet is IEC 60320 C14 (datasheet has an apparent typo \"IEC 69320\"), mapped to \"iec\" per the C13/14 convention.",
+  "ports": [
+    {
+      "name": "Data In 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Data In 24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "PoE Out 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "PoE Out 24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "90W IEEE 802.3bt PoE output, 54Vdc nominal"
+    },
+    {
+      "name": "Management",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Shielded RJ-45 communication/management port for PowerView Pro SNMPv3 web management; speed not stated separately in datasheet"
+    },
+    {
+      "name": "Communication (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type A communication/console port; version not stated in datasheet"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet, 100-240Vac 50/60Hz (datasheet lists as \"IEC 69320 Type C14\", apparent typo for IEC 60320)"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Terminal block with two (+) and two (-) terminals; external DC/battery-backup or current-sharing input, ~55Vdc nominal (per prior-gen datasheet); applicable to 9612GC/9624GC only"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "manufacturer": "tvONE",
+  "model": "1T-DA-672",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.manualslib.com/manual/883059/Tvone-1t-Da-672.html",
+  "confidence": "medium",
+  "notes": "1T-DA-672 is a 1x2 HDMI v1.4 distribution amplifier (300MHz/9Gbps, HDCP 1.1, DVI 1.0 compliant via HDMI-to-DVI adapter cable — not a separate physical port), discontinued/EOL (tvONE lists MG-DA-612 as successor), so it is absent from tvONE's current live site. Desktop enclosure (1.0 x 4.0 x 5.7 in) — not rack-mountable, rackUnits omitted. Power: single external DC adapter with a locking screw-on barrel connector, closest match \"dc-barrel\"; exact rear-panel silkscreen for the power jack and I/O labels (e.g. whether outputs read \"OUT 1/OUT 2\" vs \"A/B\") could not be confirmed from a panel photo, so port names are inferred standard convention. Power-supply voltage conflicts across sources: the mirrored tvONE instruction manual (used as primary source here) and several AV-distributor catalog pages (Midtown Video, InfoCor, Allen Visual) state 5VDC@2.6A, while Markertek's listing states 12V — sided with the manual's verbatim spec (5VDC@2.6A) as the more authoritative figure, but flagging the discrepancy.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "manufacturer": "L-Acoustics",
+  "model": "LA12X",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/ELECTRONICS/LA12X/EN/Product%20Spec%20Sheet/LA12X_SP_EN_2.5.pdf",
+  "confidence": "high",
+  "notes": "LA12X is a 4-channel, 2U \"amplified controller\" (12,000W class-D amp + DSP) for L-Acoustics loudspeakers. Data pulled from the manufacturer's official Product Spec Sheet PDF (LA12X_SPS_EN_2.5, footer print date 2.4/01-2024) and its rear-panel product photo. Rear panel: 8x XLR3 (4 shared AES/EBU-digital-or-analog inputs on channels A/C, plus B/D pure analog inputs, each paired with an active XLR link/thru output with bypass relay), 2x 4-pole speakON outputs (OUT1/2, OUT3/4), 1x proprietary 8-point circular \"CA-COM\" connector carrying all 4 outputs combined (not a real speakON — closest available id used, flagged in its port note), 2x etherCON Gigabit Ethernet ports (Milan-AVB audio + control, labeled \"L-NET Link/Act\"), and 1x round twist-lock powerCON mains inlet (100-240V, universal SMPS w/ PFC). No physical connectors on the front panel (display/knob/buttons only). Grade omitted on all XLR/AES3 ports since AES3/analog audio isn't part of the given grade taxonomy; eth-1g set on the two network ports per the spec sheet's explicit \"Dual-port Ethernet Gigabit interface.\" Output power: 3300W/2.7Ω, 2600W/4Ω, 1400W/8Ω (4ch driven).",
+  "ports": [
+    {
+      "name": "AES/EBU In A&B / Analog In A",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Shared XLR jack: 2ch AES/EBU digital (44.1-192kHz) carrying channels A&B, or analog input A; active link output with bypass relay"
+    },
+    {
+      "name": "Link A&B / Link A",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Active XLR thru/link output (AES/EBU or analog pass-through)"
+    },
+    {
+      "name": "Analog In B",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Link B",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog XLR link/thru output"
+    },
+    {
+      "name": "AES/EBU In C&D / Analog In C",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Shared XLR jack: 2ch AES/EBU digital carrying channels C&D, or analog input C; active link output with bypass relay"
+    },
+    {
+      "name": "Link C&D / Link C",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Active XLR thru/link output (AES/EBU or analog pass-through)"
+    },
+    {
+      "name": "Analog In D",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Link D",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analog XLR link/thru output"
+    },
+    {
+      "name": "Out 1/2",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pole speakON carrying amplifier channels 1 (1+/1-) and 2 (2+/2-)"
+    },
+    {
+      "name": "Out 3/4",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pole speakON carrying amplifier channels 3 (1+/1-) and 4 (2+/2-)"
+    },
+    {
+      "name": "Out 1-4 (CA-COM)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Proprietary L-Acoustics 8-point circular CA-COM connector combining all 4 output channels (A-H); no exact match in connector list, mapped to speakon as closest loudspeaker-output analog"
+    },
+    {
+      "name": "L-NET 1 (Link/Act)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Dual-port Gigabit Ethernet (Neutrik etherCON) for Milan-AVB audio networking and third-party control (Q-SYS/Crestron/Control4/Savant/HTTP API)"
+    },
+    {
+      "name": "L-NET 2 (Link/Act)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Second port of the dual-port Gigabit interface, for daisy-chain/redundancy"
+    },
+    {
+      "name": "Mains",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Universal SMPS with PFC, 100-240V~ 50-60Hz, 1900W; round twist-lock powerCON confirmed from product photography"
+    }
+  ]
+}

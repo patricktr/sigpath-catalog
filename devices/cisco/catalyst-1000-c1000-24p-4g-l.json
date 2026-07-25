@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 1000 C1000-24P-4G-L",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-1000-series-switches/nb-06-cat1k-ser-switch-ds-cte-en.html",
+  "confidence": "high",
+  "notes": "Sourced from Cisco's official Catalyst 1000 Series Switches Data Sheet (manufacturer authoritative source) plus the Catalyst 1000 24-Port and 48-Port Switch Hardware Installation Guide (product overview + technical specifications chapters) for port/connector confirmation. C1000-24P-4G-L specifics confirmed: 24x 10/100/1000 RJ-45 PoE+ ports, 4x 1G SFP uplinks, 195W PoE+ budget, fanless, 1RU (17.48 x 11.76 x 1.73 in), 3.53 kg / 7.78 lbs, 19-inch rack ears included. One caveat: the AC power inlet connector family (IEC C13/C14-style) is inferred from the described rear-panel \"AC power connector\" with power-cord retainer loop and standard detachable AC cord — Cisco's docs do not spell out \"IEC C14\" verbatim, so treat that one port's exact connector as a well-supported inference rather than a verbatim spec quote. All other port counts/types/grades are stated directly in the source documents.",
+  "ports": [
+    {
+      "name": "1-24 (10/100/1000 PoE+)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "24x auto-negotiating 10/100/1000 RJ-45 downlink ports. IEEE 802.3af/at PoE+, up to 30W/port, 195W total PoE+ power budget (perpetual PoE)."
+    },
+    {
+      "name": "SFP 1-4 (Uplink)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x fixed 1-Gigabit Ethernet SFP uplink slots (transceiver modules sold separately). Line rate is 1G, but no grade is set because SFP/fiber slots are excluded from the eth- grading scale (reserved for RJ45/etherCON) per the grading rules."
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 EIA/TIA-232 asynchronous serial console port (management CLI access), not a switched Ethernet data port. Requires RJ-45-to-DB-9 cable (Cisco CAB-CONSOLE-RJ45). No bandwidth grade applies."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A host port for external USB flash drive (config/image backup, auto-upgrade) or an optional external Bluetooth dongle for wireless console access. USB speed/version not stated in the spec, so grade is omitted."
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal auto-ranging power supply, 100-240V AC, 50/60Hz (this is the fixed-internal-PSU model, distinct from the external-PS '-E-' variants in the family). Rear-panel AC inlet has a power-cord retainer loop consistent with a standard IEC C13/C14-style connector; Cisco's datasheet does not explicitly name the IEC pin/current rating, so the exact connector is inferred from documentation/photos rather than stated outright."
+    }
+  ]
+}

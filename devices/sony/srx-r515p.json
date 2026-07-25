@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Sony",
+  "model": "SRX-R515P",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://web.archive.org/web/20130717060447/http://pro.sony.com/bbsccms/assets/files/mkt/digicinema/brochures/J1236_UK_SRX-R515P_4pp_Datasheet_v6.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Sony's own official datasheet PDF (\"HCT_SRX-R151P_Datasheet_J1236_UK\", Sony Professional Solutions Europe, © 2012 Sony Corporation), retrieved via the Wayback Machine archive of pro.sony.com since Sony's live sites (sony.com/pro.sony) blocked automated/tool fetches during this research session; content is identical to the original manufacturer PDF. The SRX-R515P is the projector head of a three-piece 4K digital cinema system that also includes a separate Digital Cinema Server (model XCT-S10, its own IEC power inlet + PCIe/Ethernet interconnect to the projector) and a Touch Panel Monitor (model LKRA-007, DC12V via AC adapter, VGA, USB) — only the SRX-R515P projector's own physical I/O is listed here since those are different model numbers. A \"CRU Data Port Slot x1\" (swappable SATA drive canister bay for high-speed DCP ingest) is also present but is a drive bay rather than a cable port and has no match in the provided connector enum, so it was omitted from the ports list. Several connector *types* (audio output, GPI/GPO, AC inlet, USB gender) are not explicitly stated in Sony's datasheet and were inferred to the closest match in the given enum — flagged individually above. Weight ~145kg (projector only, excluding lamps/lens/monitor), dimensions 548 x 634 x 1119mm; this is a floor-standing cabinet unit, not rack-mountable, so rackUnits is omitted. Uses 6x replaceable high-pressure mercury lamps (450W or 330W variants) rather than xenon.",
+  "ports": [
+    {
+      "name": "HDMI Input 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Sony datasheet lists 'Video Input: HDMI x 2' with no per-port label or HDMI version, so numbering/labeling is inferred and HDMI generation is omitted (unconfirmed)."
+    },
+    {
+      "name": "HDMI Input 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "See HDMI Input 1 note."
+    },
+    {
+      "name": "Audio Output (Unbalanced 8ch / AES-EBU 16ch)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Datasheet specifies unbalanced 8ch 24-bit 48/96kHz LPCM plus AES/EBU 16ch 24-bit 48/96kHz LPCM, but does not state the physical connector. Digital cinema gear of this era typically carries this on a multi-pin (DB25-style) cinema audio connector, which is not in the provided connector list; 'aes3' chosen as closest match for the digital audio portion. Unconfirmed."
+    },
+    {
+      "name": "Ingest (USB 3.0) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Datasheet: 'Ingest USB 3.0 x 2'. Connector form (USB-A) inferred/typical for host ingest ports; not explicitly stated."
+    },
+    {
+      "name": "Ingest (USB 3.0) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "See Ingest (USB 3.0) 1 note."
+    },
+    {
+      "name": "GPI (x8)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Datasheet: 'GPIs x 8'. Physical connector type not stated; terminal block assumed (common for GPIO on cinema projectors) and unconfirmed."
+    },
+    {
+      "name": "GPO (x16)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Datasheet: 'GPOs x 16'. Physical connector type not stated; terminal block assumed and unconfirmed."
+    },
+    {
+      "name": "USB 2.0 (UPS Control)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Datasheet: 'USB 2.0 x 1 (for UPS control)'. Exact connector gender/type (USB-A vs USB-B) not specified."
+    },
+    {
+      "name": "RS-232C (Audio Processor Control)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Datasheet: 'RS-232C x 1 (for Audio Processor Control)', tested with Dolby CP650/CP750 and QSC DCP300."
+    },
+    {
+      "name": "Network 1 (Gigabit Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Network 2 (Gigabit Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Datasheet: 'AC 200 to 240V, 50-60Hz, Single-phase, 21.5A to 18A' (up to ~4.3kW with 450W-lamp config). Physical inlet type is not stated by Sony; the rated current (21.5A) exceeds a typical 16A/20A IEC C19 inlet in some regions, so the real connection may be a hardwired terminal or locking connector rather than a standard IEC inlet. 'iec-c19' used as the closest listed match; unconfirmed."
+    }
+  ]
+}

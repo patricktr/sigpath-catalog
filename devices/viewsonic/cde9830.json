@@ -1,0 +1,84 @@
+{
+  "manufacturer": "ViewSonic",
+  "model": "CDE9830",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.viewsonic.com/ap/products/sheet/CDE9830",
+  "confidence": "high",
+  "notes": "98\" 4K (3840x2160) Android 11 all-in-one commercial presentation display (ViewSonic CDE30 series), wall/mobile-mount only — not rack-mountable (VESA 800x600mm, M8 screws). Rear I/O and labels per ViewSonic's own Asia-Pacific datasheet PDF (numbered rear-panel diagram: 1.Speaker 2.Control Panel 3.OPS Slot 4.USB2.0 5.RS-232 6.USB3.0 7.USB-C 8.HDMI1(ARC) 9.HDMI2 10.HDMI OUT 11.HDMI3 12.WiFi Slot 13.VESA mount 14.AC IN 15.Power Switch 16.LAN 17.SPDIF), cross-checked against the US product page (viewsonic.com/us/cde9830.html), which lists identical port counts and versions. The unit also has an internal OPS slot (pluggable PC/compute module bay) and a WiFi/Bluetooth module slot (optional VB-WIFI-001 add-on) — both omitted from the ports list since neither is a standard external cable connector in the given taxonomy. Built-in 10W x2 speakers are not a physical I/O port and are omitted. Some regional/date-stamped datasheets differ slightly on typical power consumption (318W vs 190W) — flagged as a minor source discrepancy, not affecting the I/O list.",
+  "ports": [
+    {
+      "name": "HDMI 1 (ARC)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "Supports HDMI ARC audio return; port remains primarily an HDMI input (3840x2160@60Hz, HDCP 2.2)"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "3840x2160@60Hz, HDCP 2.2"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.1",
+      "note": "3840x2160@60Hz, HDCP 2.2"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "3840x2160@60Hz pass-through, used for tiling up to 9 screens"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Labeled 'Smart USB' (supports device charging in addition to data)"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "'Smart USB' port; datasheet states USB2.0 data mode, plus DisplayPort 1.2 alt-mode video in, 65W USB Power Delivery, and 100M Ethernet pass-through over the same connector"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port; RS232 adapter/cable included in box"
+    },
+    {
+      "name": "LAN (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Mbps"
+    },
+    {
+      "name": "SPDIF Audio Out",
+      "direction": "output",
+      "connector": "toslink",
+      "note": "Connector style not explicitly confirmed as optical Toslink vs coax RCA in source diagrams; Toslink assumed as typical for this ViewSonic display class"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable IEC power inlet; power cord included in box. Exact IEC variant (C13/C14) not explicitly stated by ViewSonic. Rated 100-240 VAC, 50/60Hz, max consumption 507W (some regional datasheets list 190W typical instead of 318W — likely a firmware/region revision difference)"
+    }
+  ]
+}

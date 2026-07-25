@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Z CAM",
+  "model": "E2-F6",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.z-cam.com/e2-f6/",
+  "confidence": "high",
+  "notes": "Base E2-F6 (EF/PL mount, MFR #E1901/E2-F6 PL) has NO SDI output and no genlock — those were added later in the \"E2-F6 Mark II\" variant (confirmed via B&H's key-feature comparison, where \"HDMI, SDI, and Genlock Connectivity\" is listed as a differentiator specific to Mark II models and absent from the base E2-F6). Do not confuse this record with E2-F6 Mark II/Pro/S6 variants, which have different I/O.\n\nSeveral ports use Z CAM's proprietary LEMO connectors, which have no dedicated id in the provided connector taxonomy; each such port is mapped to the closest listed connector and flagged in its own note (5-pin LEMO mic input -> xlr5; 2-pin LEMO DC in/out -> dc-barrel; 4-pin LEMO x2 serial/control -> rs232; 2.5mm LANC -> trs-3.5).\n\nAlso present but not listed as ports (no matching connector type / not a signal-or-power port): external Wi-Fi antenna connector (Wi-Fi 4 / 802.11n, likely RP-SMA — no RF-antenna id in the taxonomy) and a single CFast 2.0 media card slot (storage, not I/O). Built-in stereo microphone is not an external port.\n\nNot rack-mountable (compact cinema-camera body, ~99 x 91 x 89mm without protrusions, ~1090g) — rackUnits omitted.\n\nSources cross-checked: manufacturer product page (primary, used for exact wording/voltages) and B&H Photo's structured \"Specs\" tab for the EF-mount SKU (used to confirm exact port counts/directions, notably the \"2x LEMO 4-Pin (Camera Interface) Control Input/Output\" serial ports and \"1x 5-Pin LEMO Input\" audio detail): https://www.bhphotovideo.com/c/product/1496581-REG/z_cam_e2_f6_professional_full_frame_6k.html/specs",
+  "ports": [
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0 Type A; outputs up to C4K/UHD 4K @59.94-60fps, 10-bit 4:2:2."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.0 Type-C; camera control & data transfer only (not a card-reader passthrough)."
+    },
+    {
+      "name": "LAN (Ethernet)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit Ethernet; used for live view/monitor, control, file transfer, and IP streaming."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) stereo TRS mic/line input."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) stereo TRS line output."
+    },
+    {
+      "name": "Mic In (5-Pin)",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Manufacturer labels this a 5-pin LEMO port for dual-channel XLR microphone input; requires a separately available LEMO-to-dual-XLR3 breakout cable. LEMO is not in the connector list, so xlr5 (nearest 5-pin audio connector) is used as an approximation."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2-pin LEMO power input, 6.8V–16.8V DC (bundled LEMO power cable included). LEMO is not in the connector list; dc-barrel used as nearest external-DC-input analog — actual connector is a 2-pin LEMO, not a coaxial barrel jack."
+    },
+    {
+      "name": "DC Out (Aux Power)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "2-pin LEMO auxiliary power output, 12V DC, for powering accessories. Same LEMO-vs-barrel approximation as DC In."
+    },
+    {
+      "name": "LANC Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "2.5mm sub-mini jack, Sony LANC-compatible remote control (incl. power on/off). 2.5mm is not in the connector list; trs-3.5 used as nearest TRS-jack analog — actual jack is smaller (2.5mm, not 3.5mm)."
+    },
+    {
+      "name": "Serial Port 1",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "One of two 4-pin LEMO \"Camera Interface\" control ports (per B&H spec table) for accessory/camera control. Physical connector is a 4-pin LEMO, not a DB9/RS232 jack; rs232 used as nearest serial-control connector id since no LEMO option exists."
+    },
+    {
+      "name": "Serial Port 2",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Second of two identical 4-pin LEMO camera-control serial ports; same approximation as Serial Port 1."
+    }
+  ]
+}

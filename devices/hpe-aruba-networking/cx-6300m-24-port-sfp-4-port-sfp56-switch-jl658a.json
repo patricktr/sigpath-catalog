@@ -1,0 +1,211 @@
+{
+  "manufacturer": "HPE Aruba Networking",
+  "model": "CX 6300M 24-Port SFP+ 4-Port SFP56 Switch (JL658A)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.hpe.com/psnow/doc/a00073540enw.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: official HPE Aruba Networking \"CX 6300 Switch Series\" data sheet for JL658A (doc PSN1012183959WWEN, dated April 2025), fetched via a verified mirror after the live hpe.com/psnow URL repeatedly timed out. Its \"Technical specifications\" table gives the authoritative, complete physical port list: 24x 1G/10G SFP+ ports, 4x 1G/10G/25G*/50G SFP56 ports (*25G/50G need matching DACs; 50G not supported on the S0E91A/S0X44A variants), 1x USB-C Console Port, 1x OOBM port, 1x USB Type-A Host port, plus \"JL085A PSU: 100V-240V\" for power. Unit is 1U (4.4 x 44.2 x 38.5 cm), 5.11 kg.\n\nConnector-id caveats: the schema has no distinct id for SFP+/SFP56 cages, so all 28 network ports use the generic \"sfp\" id (per-port note records the actual supported speeds). Per the grading rules given, bandwidth grade was omitted on those SFP/SFP56 ports (fiber/optical-class connector, not in the graded RJ45/HDMI/DP/USB/SDI list) even though the spec states speeds up to 50G.\n\nPower caveats (medium confidence): the HPE data sheet confirms only the removable JL085A 100-240VAC PSU module, not its physical AC inlet connector or how many PSU bays the chassis has. IEC C13/C14 (\"iec\") is used here because it's standard across the entire compact hot-swap PSU family HPE uses on CX switches of this size/wattage, but wasn't explicitly stated. The 2-PSU-bay redundant configuration comes from a secondary reseller aggregator (securewirelessworks.com), reinforced by the PSU's own \"Redundant Power Supply\" product type, but I could not verify it against HPE's own QuickSpecs (a00073540enw), which timed out on every fetch attempt during this research.\n\nOOBM port speed (1GbE) is the standard spec for this switch family, inferred by convention rather than explicitly restated as a number in the data sheet's port list. Exact printed front-panel numbering for the SFP56 ports (assumed continuous 25-28) follows Aruba's standard interface-numbering convention and was not confirmed from a legible panel photo.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G SFP+ port"
+    },
+    {
+      "name": "25",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G/25G/50G SFP56 port (25G/50G requires matching DAC/transceiver; 50G DAC also usable for VSF stacking)"
+    },
+    {
+      "name": "26",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G/25G/50G SFP56 port (25G/50G requires matching DAC/transceiver; 50G DAC also usable for VSF stacking)"
+    },
+    {
+      "name": "27",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G/25G/50G SFP56 port (25G/50G requires matching DAC/transceiver; 50G DAC also usable for VSF stacking)"
+    },
+    {
+      "name": "28",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "1G/10G/25G/50G SFP56 port (25G/50G requires matching DAC/transceiver; 50G DAC also usable for VSF stacking)"
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "USB-C serial console/management port"
+    },
+    {
+      "name": "OOBM",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Out-of-band management port; 1GbE speed is standard for the CX 6300 family but wasn't restated as a number in the fetched data sheet table (which just lists '1x OOBM port')"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB Type-A host port (e.g. firmware/config file transfer); USB generation not stated by HPE"
+    },
+    {
+      "name": "Power Supply 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "JL085A 250W hot-swap AC PSU module, 100-240VAC. IEC C13/C14 inlet inferred (standard for this compact modular PSU class across the whole Aruba CX line); exact connector not spelled out in either the switch or PSU datasheets."
+    },
+    {
+      "name": "Power Supply 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second hot-swap PSU bay. Dual-bay redundant power is stated by a secondary retailer (Secure Wireless Works) and implied by the PSU's 'Redundant Power Supply' product type, but was not independently confirmed on HPE's own QuickSpecs page (unreachable during research)."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "manufacturer": "Panasonic",
+  "model": "VariCam LT",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro-av.panasonic.net/manual/html/VARICAM_LT(VQT5M58A-8(E))/chapter13_01_02.htm",
+  "confidence": "high",
+  "notes": "Body-only digital cinema camera; official model number AU-V35LT1G. Data pulled from Panasonic's own VariCam LT Operating Guide specification pages (pro-av.panasonic.net manual, \"Video output\" / \"Audio input-output\" / \"Other input-output\" tables, cross-checked against the panel-diagram page chapter02_01_02.htm), which give exact connector pin-counts/voltages beyond what the marketing spec page (pro-av.panasonic.net/en/cinema_camera_varicam_eva/products/varicam_lt/spec/index.html) lists. No HDMI is fitted — SDI OUT 1/2 (BNC, dual-rate HD 1.5G/3G-SDI) are the only monitor outs, and the EVF gets its own VF SDI BNC out. DC IN / DC OUT / DC OUT-RS are Hirose-brand 4-pin circular connectors (DC IN explicitly documented as Hirose HA16RA-4P); mapped to the closest catalog id \"xlr4-dc\" since Hirose isn't a listed connector type — same 4-pin DC-power convention as XLR4-DC but not a locking XLR shell. Two proprietary multi-pin accessory terminals were omitted (no catalog connector fits): <LENS/GRIP> (12-pin, lens cable / AU-VGRP1G grip module) and <CONTROL PANEL> (20-pin, external control-panel accessory). The built-in 20mm round speaker and the 8-pin EF lens-mount electrical contacts were also omitted as neither is a general-purpose I/O jack.",
+  "ports": [
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "VF SDI",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Feeds the removable EVF, not a general-purpose monitor output."
+    },
+    {
+      "name": "GENLOCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Panasonic specifies electrical compatibility as HD(1.5G)/3G-SDI reference; grade inferred from that spec, not an explicit SDI-grade label."
+    },
+    {
+      "name": "TC IN/OUT",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Single BNC jack, menu-switchable between timecode input and output."
+    },
+    {
+      "name": "INPUT 1/2",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Single 5-pin XLR carries both mic/line channels 1 and 2 (stereo)."
+    },
+    {
+      "name": "INPUT 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "INPUT 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB DEVICE",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB HOST",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rated 5V/0.5A; intended for Panasonic AJ-WM30/AJ-WM50 wireless module."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Hirose HA16RA-4P 4-pin connector (closest catalog match). DC 12V, 11.0-17.0V range; main camera power input."
+    },
+    {
+      "name": "DC OUT/RS",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "4-pin Hirose-type connector; supplies DC 12V/1A max to accessories (e.g. on-camera light) and doubles as REC start/stop trigger input."
+    },
+    {
+      "name": "DC OUT",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "4-pin Hirose-type connector dedicated to powering the viewfinder, DC 12V/1A max."
+    }
+  ]
+}

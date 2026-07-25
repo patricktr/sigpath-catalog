@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Shure",
+  "model": "MX418/C",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.shure.com/en-US/docs/guide/MX400",
+  "confidence": "high",
+  "notes": "Shure Microflex MX412/MX418/MX424 series gooseneck electret condenser microphone; the /C suffix denotes the cardioid cartridge (18-inch gooseneck length for MX418). Single physical I/O: an integrated 3-pin male XLR connector on the base of the preamplifier that carries BOTH the active-balanced mic-level audio output and the phantom power feed (11-52 VDC, 2.0 mA per official spec) — there is no separate power inlet, so no distinct power port is listed. Connector grade omitted: analog XLR mic-level audio is not one of the bandwidth-graded connector types. Desktop/podium/lectern-mount device (flange or shock-mount installed), not rack-mountable, so rackUnits is omitted. Official Shure user-guide confirms: Type = Electret Condenser, Frequency Response 50-17,000 Hz, Output Impedance 180 ohms, Output Configuration = Active Balanced, polarity spec explicitly references \"pin 2 relative to pin 3 of output XLR connector\" confirming the 3-pin XLR male output. Secondary retailer (Markertek) corroborates \"Attached XLR Preamp\" and the same 11-52 Vdc/2.0mA phantom spec.",
+  "ports": [
+    {
+      "name": "Output",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Kramer",
+  "model": "VM-4H2",
+  "category": "switcher",
+  "type": "Video switcher",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bhphotovideo.com/lit_files/923192.pdf",
+  "confidence": "medium",
+  "notes": "Kramer VM-4H2 is a 1:4 4K HDR HDMI distribution amplifier (one HDMI input equalized/re-clocked and mirrored to four identical HDMI outputs), not a selectable switcher — \"Video switcher\"/\"switcher\" was chosen because the fixed enum has no \"Distribution Amplifier\"/\"Splitter\" type. Primary source is Kramer's own official user manual (P/N 2900-300565 Rev 4, www.kramerAV.com branding), PDF hosted via B&H's lit_files CDN since Kramer's own kramerav.com domain returned HTTP 403 to automated fetches; cross-checked against conferenceroomav.com's spec table (power 5V/730mA, RS-232 3-pin terminal block) which matched exactly. Unit is a compact desktop \"MegaTOOLS\" enclosure (18.75 x 11.5 x 2.54 cm); the manual lists it as \"½ 19\" 1U\" and ships with a table/shelf bracket — true rack mounting (2 units side-by-side in 1U) requires an optional RK-T2B rack adapter sold separately, not included. HDMI ports are unlabeled with an explicit \"HDMI 2.0\" version number per port, but the manual's compliance table states the unit is built to the HDMI 2.0 spec (17.82Gbps / 4K@60Hz 4:4:4, HDCP2.2) so hdmi-2.0 grade is used for all five HDMI ports.",
+  "ports": [
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Single HDMI input; equalized and re-clocked internally. Supports up to 4K@60Hz (4:4:4), HDR10, HDCP 2.2, deep color, 7.1 PCM, Dolby TrueHD, DTS-HD, 3D."
+    },
+    {
+      "name": "OUT 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored copy of HDMI IN. Only OUT 1 passes CEC."
+    },
+    {
+      "name": "OUT 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored copy of HDMI IN."
+    },
+    {
+      "name": "OUT 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored copy of HDMI IN."
+    },
+    {
+      "name": "OUT 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Mirrored copy of HDMI IN."
+    },
+    {
+      "name": "RS-232 (PROG.)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin captive-screw terminal block (pins G / Rx / Tx), not a DB9 — used for firmware upgrades, 57600 baud. 'euroblock' chosen as closest connector id in the allowed list."
+    },
+    {
+      "name": "5V DC",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 5V DC, 730mA power supply (included); barrel/coaxial DC jack, center positive per rear-panel polarity marking."
+    }
+  ]
+}

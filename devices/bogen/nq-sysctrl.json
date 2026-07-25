@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Bogen",
+  "model": "NQ-SYSCTRL",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bogen.com/sites/default/files/2021-02/750-00023_NQ-SYSCTRL%20Spec%20Sheet_E7K.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Bogen's official spec sheet PDF (doc 750-00023B, rev 02/2021), hosted on bogen.com. Chassis is half-rack-width x 1RU; optional 19\" rack mount kit (NQ-RMK03) sold separately — rackUnits set to 1 (height). HDMI/DVI-D outputs have no stated version/bandwidth in the spec, so grade omitted. The 3.5mm Line Out/Mic In pair and the \"dual NIC\" note are both explicitly marked \"reserved for future use\" by Bogen on the spec sheet, though physically present. USB connector style (USB-A) and quantity (4x USB 3.0) confirmed by spec table; exact USB-A vs other form factor inferred from the product photo rather than stated in text. Second serial port is a single combo jack selectable among RS232/RS422/RS485.",
+  "ports": [
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Local console/status video output; bandwidth version not stated by Bogen"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Digital-only DVI-D console output"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Listed by Bogen as 'RESERVED FOR FUTURE USE' on spec sheet"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Listed by Bogen as 'RESERVED FOR FUTURE USE' on spec sheet"
+    },
+    {
+      "name": "Network 1 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Network 2 (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Spec sheet lists the dual-NIC row as 'reserved for future use'"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port (music library import); connector style inferred from product photo"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port; connector style inferred from product photo"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port; connector style inferred from product photo"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.0 host port; connector style inferred from product photo"
+    },
+    {
+      "name": "Serial 1 (RS232)",
+      "direction": "bidirectional",
+      "connector": "rs232"
+    },
+    {
+      "name": "Serial 2 (RS232/422/485)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "accepts": [
+        "rs422",
+        "rs485"
+      ],
+      "note": "Selectable combo serial port"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/C14 inlet, 10A line cord, 100-240VAC 50/60Hz, 1.5A max draw"
+    }
+  ]
+}

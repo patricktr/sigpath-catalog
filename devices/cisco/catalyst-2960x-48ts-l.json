@@ -1,0 +1,57 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Catalyst 2960X-48TS-L",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-2960-x-series-switches/data_sheet_c78-728232.html",
+  "confidence": "high",
+  "notes": "Ordering PID: WS-C2960X-48TS-L (LAN Base software image). Confirmed via Cisco's official Catalyst 2960-X/2960-XR data sheet (model-specific port table: 48x 10/100/1000 + 4 SFP, LAN Base, no PoE budget) and cross-checked against Cisco's Catalyst 2960-X Hardware Installation Guide (front/rear panel port inventory: management port, dual console ports, dual USB-A, AC inlet, RPS receptacle, FlexStack slot). Mechanical spec table confirms 1.75in H x 11.0in D x 17.5in W, 9.4 lb (1RU, rack-mountable). The rear panel also has a FlexStack module slot (optional, hot-swappable FlexStack-Plus stacking module, sold separately) using a Cisco-proprietary stacking connector — omitted from the port list since it has no matching connector id and is not populated/present on a base unit. This -L (non-XR) model has a single fixed (non-redundant, non-hot-swappable) internal power supply; the 2960-XR series instead uses a field-replaceable/dual-capable PSU. End-of-sale/end-of-life has been announced by Cisco (successor: Catalyst 9200 series), but the data sheet remains the authoritative spec source for this legacy model.",
+  "ports": [
+    {
+      "name": "10/100/1000 1-48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x fixed RJ-45 downlink ports (Cat5/5e UTP, 1000BASE-T). This is the '-L' (LAN Base, non-PoE) SKU, so no PoE is supplied on these ports, unlike the 48FPS-L/48LPS-L PoE+ variants."
+    },
+    {
+      "name": "SFP 1-4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4 fixed 1-Gigabit SFP uplink module slots; ship empty and require separately purchased SFP transceivers. These are 1G-only SFP cages, not SFP+ (no 10G uplink option on this model, unlike the 48TD-L/48FPD-L variants)."
+    },
+    {
+      "name": "Ethernet management port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Dedicated out-of-band 10/100 Mbps RJ-45 management port, separate from the 48 downlink ports and from the console ports (per Cisco Catalyst 2960-X Hardware Installation Guide)."
+    },
+    {
+      "name": "RJ-45 console port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 (EIA/TIA-232) serial console, uses supplied RJ-45-to-DB-9 cable. Not Ethernet data despite the RJ-45 connector, so no eth-* grade applies. Becomes inactive whenever the USB console port has an active cable connected."
+    },
+    {
+      "name": "USB mini-Type B console port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "5-pin USB mini-Type B serial console port. 'usb-micro' used as the closest available connector id in the allowed list; the physical connector is USB mini-Type B, not micro-USB. Takes priority over the RJ-45 console port when connected."
+    },
+    {
+      "name": "USB Type-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Two identical front-panel USB Type-A ports for external USB flash drives (128MB-8GB supported), used for config/image backup and USB auto-upgrade/emergency recovery. USB 2.0 speed inferred from the product's era/spec class; Cisco documentation does not explicitly state the USB version."
+    },
+    {
+      "name": "AC power connector",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel inlet for the single fixed, auto-ranging (100-240V AC) internal power supply, used with the supplied AC power cord. Cisco's documentation only calls it the 'AC power connector' without specifying the exact IEC sub-type, so it is mapped to the closest generic 'iec' id. A separate proprietary RPS receptacle on the rear panel accepts an optional external Cisco RPS 2300 redundant power supply; omitted from this port list because it uses a Cisco-proprietary connector with no matching id in the allowed connector list."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Lenovo",
+  "model": "ThinkSmart Core",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://psref.lenovo.com/syspool/Sys/PDF/ThinkSmart/ThinkSmart_Core_for_Microsoft_Team_Rooms/ThinkSmart_Core_for_Microsoft_Team_Rooms_Spec.pdf",
+  "confidence": "high",
+  "notes": "Source is Lenovo's own PSREF (Product Specifications Reference) datasheet for \"ThinkSmart Core for Microsoft Team Rooms\" (dated Oct 16 2024), the base compute-puck SKU behind the ThinkSmart Core conferencing bundle. PSREF currently flags this line \"(Withdrawn)\" — it has been succeeded by ThinkSmart Core Gen 2, a different product with a different port layout (2x USB-C 10Gbps w/ DP 1.4, 3x USB-A 5Gbps, HDMI 2.1, etc.) — do not conflate the two. The 11 ports listed are the \"Rear Ports\" table explicitly scoped to \"Compute System (ThinkSmart Core) only\" (separate from the ThinkSmart Controller / Audio Bar / Cam accessory ports, which are not part of this device). USB generation-to-speed mapping (Gen1=5Gbps, Gen2=10Gbps, Thunderbolt 4=40Gbps) and Gigabit Ethernet (Intel I219-LM) are explicitly confirmed in the datasheet's connectivity notes. HDMI-in's version and the power connector's exact physical geometry are not stated by Lenovo (see per-port notes). Desktop/tabletop unit (226 x 200 x 37.5 mm, 1.1 kg) — no rack mounting, so rackUnits omitted. Same physical compute unit (with identical I/O) is also sold in \"ThinkSmart Core for Zoom\" and \"ThinkSmart Core for Logitech\" bundles per Lenovo's parallel PSREF sheets.",
+  "ports": [
+    {
+      "name": "Thunderbolt 4",
+      "direction": "bidirectional",
+      "connector": "thunderbolt",
+      "grade": "usb-40g"
+    },
+    {
+      "name": "USB-C 3.2 Gen 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C 3.2 Gen 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "HDMI-out 1.4 (1)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI-out 1.4 (2)",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI-in",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Only present on selected models per Lenovo footnote; HDMI version not separately stated in the datasheet (unlike the two versioned HDMI-out 1.4 ports), so grade omitted rather than assumed."
+    },
+    {
+      "name": "Ethernet (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Power connector",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Datasheet only labels this 'Power connector', powered by an external 90W autosensing adapter; exact barrel/pin geometry not specified by Lenovo, mapped to closest available connector id."
+    }
+  ]
+}

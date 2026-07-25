@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Canon",
+  "model": "EOS C300 Mark III",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.usa.canon.com/shop/p/eos-c300-mark-iii",
+  "confidence": "high",
+  "notes": "Ports listed are for the base EOS C300 Mark III camera body only. Optional Expansion Units (EU-V1, EU-V2, EU-V3) add further ports not included here: Ethernet, Genlock/Sync Out, RS422 Remote B, two additional XLR audio inputs (4 total), a Lens port, 24V DC output/D-Tap, and V-mount battery power, plus broadcast tally/return connectors on EU-V3. Base-body specs (SDI, HDMI, XLR audio, mic, headphone, timecode, remote, DC IN) were confirmed directly from Canon USA's official product/specifications page and cross-checked against Markertek's retailer listing, which agreed on all details. The USB terminal's connector type/version is not stated by Canon in the spec table and is a best-effort inference (marked with lower confidence). Region variants (e.g. Canon Europe/Japan listings) were not checked but Cinema EOS specs are typically identical worldwide aside from AC plug/voltage labeling, which does not apply here (DC-only power input).",
+  "ports": [
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Single BNC, output only; supports HD (SMPTE 292) through 12G-SDI (SMPTE ST 2082), enabling 4K up to 60p over one cable"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Full-size Type A, output only, up to 4096x2160; Canon's spec sheet does not state an HDMI version number so no grade is set"
+    },
+    {
+      "name": "INPUT 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR; Mic level, Mic level with +48V phantom power, or Line level selectable"
+    },
+    {
+      "name": "INPUT 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR; Mic level, Mic level with +48V phantom power, or Line level selectable"
+    },
+    {
+      "name": "MIC",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm external microphone input terminal"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini-jack, 16 volume settings"
+    },
+    {
+      "name": "TC (Time Code)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Single BNC terminal, menu-switchable between timecode input and output (not simultaneous)"
+    },
+    {
+      "name": "REMOTE A",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "LANC-compatible / RC-V100 remote terminal. Actual connector is a 2.5mm sub-mini stereo jack; trs-3.5 chosen as closest listed connector"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC IN 12V coaxial power jack, accepts 11.5-20V DC"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Canon's spec sheet lists a USB terminal without stating type/version; USB-C is inferred from the camera's generation/design and is unconfirmed"
+    }
+  ]
+}

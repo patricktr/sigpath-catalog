@@ -1,0 +1,31 @@
+{
+  "manufacturer": "Microchip Technology",
+  "model": "PD-9501GC/AC-US",
+  "category": "network",
+  "type": "Other",
+  "sourceUrl": "https://ww1.microchip.com/downloads/aemDocuments/documents/POE/ProductDocuments/DataSheets/PD-9501GC-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Microchip PD-9501GC/AC-US is a single-port IEEE 802.3bt Type 3 Gigabit PoE midspan injector (compact desktop/wall-wart enclosure, 151x62x38mm, not rack-mountable - rackUnits omitted). Category/type: it doesn't cleanly fit any predefined AV \"type\" (it's not a switch/router, just an inline PoE inserter), so type is set to \"Other\" under category \"network\". Confirmed via Microchip's own datasheet DS00004045 (rev A, English, and rev B, the Japanese \"AC-JP\" sell sheet with product photography) plus the live Microchip product page (microchip.com/en-us/product/PD-9501GC) and DigiKey's distributor spec table for the exact PD-9501GC-AC-US SKU - all agree on specs. The two front-panel RJ45 ports are physically labeled \"DATA IN\" and \"DATA PWR OUT\" (confirmed from a manufacturer product photo); per task convention both are marked bidirectional as RJ45 ports even though functionally one is data-only in and the other is data+PoE out. Net weight is listed inconsistently across Microchip's own literature: 500g in the English datasheet vs 340g \"body only\" in the Japanese sell sheet (likely cord/packaging inclusion difference) - not port-relevant but flagged for completeness. Microchip's website (microchip.com and ww1.microchip.com) blocks generic automated fetches (Akamai bot protection returned 403 on direct requests); the datasheet content was verified via an official-document mirror hosted by an authorized Japanese distributor (Tachibana Eletech) carrying the identical Microchip DS00004045 document, cross-checked against DigiKey's own transcription of Microchip's spec sheet for the AC-US part.",
+  "ports": [
+    {
+      "name": "DATA IN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Uplink RJ45 from the network switch/router; passes 10/100/1000BASE-T data only, no PoE."
+    },
+    {
+      "name": "DATA PWR OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Downlink RJ45 to the powered device; carries data plus injected PoE (IEEE 802.3bt Type 3, up to 60W guaranteed user-port power, 55VDC nominal, delivered over all 4 pairs; data pairs 1/2(-),3/6(+), spare pairs 7/8(-),4/5(+)). Backward-compatible with 802.3af/at."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec-c5",
+      "note": "AC mains inlet, 100-240VAC 50/60Hz, 1.5A. Ships with a detachable, region-specific power cord (the /AC-US suffix denotes the US cord; /AC-EU, /AC-UK, /AC-JP variants exist, plus a cordless 'PD-9501GC/AC' body-only SKU) - the detachable, interchangeable-cord design and product photography indicate an IEC C5/C6 'cloverleaf' 3-pin appliance inlet on the unit; the datasheet text itself only states the input voltage/current and does not name the connector explicitly."
+    }
+  ]
+}

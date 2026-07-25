@@ -1,0 +1,70 @@
+{
+  "manufacturer": "MIPRO",
+  "model": "MI-909T",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.mipro.com.tw/en/product/iem-systems/mi-909-series/mi-909t",
+  "confidence": "high",
+  "notes": "The MI-909 is a two-piece UHF digital stereo in-ear-monitoring (IEM) system: the MI-909T half-rack transmitter (documented above, all physical I/O sourced from MIPRO's official product page and official MI-909T User Guide PDF rear-panel diagram) and the MI-909R bodypack receiver. The MI-909R has only ONE physical port — a 3.5mm stereo TRS earphone output — confirmed via its official User Guide; it uses two fixed (permanently attached) whip antennas and is powered by 2x AA batteries with no external DC/USB/charging port, so it contributes no further connectors. \"Wireless mic\" was chosen as the closest available `type` value; the MI-909T is technically a UHF digital IEM transmitter (its two combo inputs accept mic- or line-level signal, per MIPRO's spec of selectable Line/Mic gain modes up to +26dBu), not a microphone transmitter. Chassis is a half-rack (9.5\" W x ~1.73\"/44mm H x ~8.1\"/206mm D, ~1.1kg) unit — natively 1U-height but requires the optional MIPRO FB-71 rack-ear kit to mount in a standard 19\" rack (typically pairing two half-rack units side by side into 1U); rackUnits set to 1 to reflect its native 1U-height chassis. No bandwidth \"grade\" applies to any port: audio I/O is analog, the antenna port is RF, and the REMOTE ports are a proprietary low-speed control bus, not a graded connector type. No power/frequency-plan/regional variant issues were found that affect the physical I/O count.",
+  "ports": [
+    {
+      "name": "AF IN (L) MONO",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/6.3mm TRS jack; when used alone (mono) also acts as the primary line/mic input."
+    },
+    {
+      "name": "AF IN (R)",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/6.3mm TRS jack."
+    },
+    {
+      "name": "LOOP OUT (L)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "LOOP OUT (R)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone monitoring jack."
+    },
+    {
+      "name": "Antenna",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Physical connector is a 50-ohm TNC (threaded BNC-family) female jack; TNC is not in the allowed connector list, so BNC (closest match) was chosen."
+    },
+    {
+      "name": "REMOTE OUT",
+      "direction": "output",
+      "connector": "rj45",
+      "note": "Small modular RJ-style jack for MIPRO's proprietary ACT Bus (daisy-chain link/sync between MI-909T units) — not a standard Ethernet port; likely RJ-11/RJ-9 sized in reality. rj45 chosen as closest allowed connector; no network grade applies."
+    },
+    {
+      "name": "REMOTE IN",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "See REMOTE OUT — ACT Bus link jack, not Ethernet."
+    },
+    {
+      "name": "DC IN (12-15V)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by supplied external 12–15VDC / 0.5A switching power adapter (100-240V AC input)."
+    }
+  ]
+}

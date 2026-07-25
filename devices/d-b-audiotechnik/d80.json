@@ -1,0 +1,140 @@
+{
+  "manufacturer": "d&b audiotechnik",
+  "model": "D80",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.dbaudio.com/global/en/products/amplifiers/d80/",
+  "confidence": "high",
+  "notes": "Sourced from d&b audiotechnik's official D80 product page technical-data table (manufacturer's own site, fetched directly — no separate PDF datasheet link was surfaced by the fetch, but the page's own spec table is complete and internally consistent across repeated fetches). Confirmed rear-panel layout: 4x analog XLR3 inputs (A1-A4) each with an analog XLR3 Link output for daisy-chaining, 2x AES3 digital input pairs (D1/2, D3/4) with one shared AES3 Digital Link output, 4x NL4 (4-pole Speakon) per-channel speaker outputs plus 1x NL8 (8-pole Speakon) combined output for all 4 channels, 2x RJ45 CAN-Bus ports (parallel, no stated data-rate so left ungraded), 2x etherCON ports for 10/100 Mbit Ethernet (graded eth-100m, the higher of the two supported speeds), and a powerCON-HC mains inlet (mapped to the generic \"powercon\" id since the taxonomy has no HC-current variant). Format is 2 RU x 19\"/530 mm, weight ~19 kg/42 lb, no GPIO/USB ports found on the rear panel per the manufacturer page. Power output rated 4x 2600 W (2/4Ω) or 4x 4000 W depending on load/voltage settings.",
+  "ports": [
+    {
+      "name": "Input A1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, analog audio input, channel A1"
+    },
+    {
+      "name": "Input A2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, analog audio input, channel A2"
+    },
+    {
+      "name": "Input A3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, analog audio input, channel A3"
+    },
+    {
+      "name": "Input A4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR female, analog audio input, channel A4"
+    },
+    {
+      "name": "Link A1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR male, analog loop-through output of Input A1 for daisy-chaining to the next amplifier"
+    },
+    {
+      "name": "Link A2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR male, analog loop-through output of Input A2"
+    },
+    {
+      "name": "Link A3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR male, analog loop-through output of Input A3"
+    },
+    {
+      "name": "Link A4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR male, analog loop-through output of Input A4"
+    },
+    {
+      "name": "Input D1/2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "3-pin XLR female, AES3 digital audio input, channel pair D1/D2"
+    },
+    {
+      "name": "Input D3/4",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "3-pin XLR female, AES3 digital audio input, channel pair D3/D4"
+    },
+    {
+      "name": "Digital Link",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "3-pin XLR male, AES3 digital loop-through output for daisy-chaining"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4 (4-pole Speakon) speaker output, channel A"
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4 (4-pole Speakon) speaker output, channel B"
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4 (4-pole Speakon) speaker output, channel C"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4 (4-pole Speakon) speaker output, channel D"
+    },
+    {
+      "name": "Output Main",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL8 (8-pole Speakon), combined speaker output carrying all 4 amplifier channels"
+    },
+    {
+      "name": "CAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45, d&b CAN-Bus remote control network (parallel with CAN 2); no bandwidth spec stated, so no grade assigned"
+    },
+    {
+      "name": "CAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45, d&b CAN-Bus remote control network (parallel with CAN 1); no bandwidth spec stated, so no grade assigned"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "etherCON, 10/100 Mbit Ethernet for OCA/AES70 remote network (parallel with Ethernet 2)"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "etherCON, 10/100 Mbit Ethernet for OCA/AES70 remote network (parallel with Ethernet 1)"
+    },
+    {
+      "name": "Mains",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "powerCON-HC (high-current) mains inlet; taxonomy has no HC-specific id, closest match is generic powerCON"
+    }
+  ]
+}

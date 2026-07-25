@@ -1,0 +1,29 @@
+{
+  "manufacturer": "EAW",
+  "model": "MK2394i",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://eaw.com/product/mk2394i/",
+  "confidence": "high",
+  "notes": "Passive 2-way full-range install loudspeaker (90°x45° nominal beamwidth), part of EAW's MK2300i Series (siblings: MK2326i, MK2364i, MK2366i, MK2396i, MK2399i differ only in horn/coverage pattern). No AC or DC power connector — it is fully passive and draws power via speaker cable from an external power amplifier (EAW recommends UXA4403 or UXA4807D). Physical input is a screw-terminal barrier/terminal strip, not a true \"Euroblock\" brand connector — modeled here as connector \"euroblock\" as the closest listed match; EAW's own spec table literally calls it a \"6-Pin Terminal Strip In + Out.\" Per the manufacturer's input-panel wiring diagram, the two 6-position terminal blocks (Bi-Amp Input and Passive Input LF/HF) are jumper-configurable between single-amp (passive crossover) and bi-amp (external LF/HF processing) modes; no grade applies since euroblock/terminal-strip connectors are not on any of the specified bandwidth scales. Dimensions 30 x 15.54 x 14.75 in (762 x 394.7 x 374.7 mm), net weight 60 lb (27.2 kg) — not rack-mountable, so rackUnits omitted. Verified against the official EAW MK2300i Series spec sheet PDF (dated 250724), which explicitly tabulates MK2394i alongside the rest of the series.",
+  "ports": [
+    {
+      "name": "Bi-Amp Input – LF",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "LF +/- pair on the 6-position \"Bi-Amp Input\" terminal strip; used for external active crossover/DSP bi-amp operation. Nominal impedance 8Ω, rated 600W (Accelerated Life Test 69.3V)."
+    },
+    {
+      "name": "Bi-Amp Input – HF",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "HF +/- pair on the 6-position \"Bi-Amp Input\" terminal strip; used for external active crossover/DSP bi-amp operation. Nominal impedance 8Ω, rated 150W (Accelerated Life Test 34.6V)."
+    },
+    {
+      "name": "Passive Input LF/HF",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-position \"Passive Input LF/HF\" terminal strip; single-amp operation through the internal passive crossover (LF/HF combined, 8Ω, 600W). Jumpered to the Bi-Amp Input block; also serves as a loop-through output to daisy-chain additional MK2394i units off the same amplifier channel (spec sheet lists connector as \"6-Pin Terminal Strip In + Out\")."
+    }
+  ]
+}

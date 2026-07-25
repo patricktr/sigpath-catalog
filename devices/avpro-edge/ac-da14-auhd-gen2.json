@@ -1,0 +1,53 @@
+{
+  "manufacturer": "AVPro Edge",
+  "model": "AC-DA14-AUHD-GEN2",
+  "category": "switcher",
+  "type": "Video switcher",
+  "sourceUrl": "https://www.avproglobal.com/products/ac-da14-auhd-gen2",
+  "confidence": "high",
+  "notes": "1x4 HDMI distribution amplifier (18Gbps / HDMI 2.0a, HDCP 2.2, up to 4K60 4:4:4). Manufacturer AVPro Edge's product site (avproedge.com) now redirects to avproglobal.com, which was used as the primary source; cross-checked against AV-iQ.com and Markertek.com, which agree on power specs and dimensions. The 5V DC input uses AVPro's proprietary locking connector (included external power supply, AC 100-240V in, DC 5V/2A out, 4W max) — mapped to \"dc-barrel\" as the closest listed option, but note it locks and is not a generic barrel jack. The firmware/service port is labeled Mini-USB on the unit; since \"usb-micro\" (Micro-USB) is the nearest option in the allowed connector list, it was used instead of the exact Mini-USB type. Ultra-low-profile desktop/shelf unit (0.66\" x 3.375\" x 5.69\") with included mounting ears — not a standard 19\" rack-width unit, so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 3",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI Out 4",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Firmware",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Labeled as a Mini-USB service/firmware-update port on the unit; Mini-USB is not in the allowed connector list so the closest match, Micro-USB, was used."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary locking 5V DC connector (external AC-to-DC power supply included), not a plain barrel jack."
+    }
+  ]
+}

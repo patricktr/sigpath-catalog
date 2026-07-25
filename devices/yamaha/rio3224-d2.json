@@ -1,0 +1,289 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "Rio3224-D2",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 5,
+  "sourceUrl": "https://data.yamaha.com/files/download/other_assets/9/1128889/rio3224d2_en_om_e0.pdf",
+  "confidence": "high",
+  "notes": "Yamaha Rio3224-D2 is a Dante I/O rack (stage box) for use with RIVAGE PM / CL / QL / TF series digital mixing consoles. Source: official Yamaha Owner's Manual PDF (rio3224d2_en_om_e0.pdf, hosted on data.yamaha.com), cross-checked against usa.yamaha.com/products/proaudio/interfaces/r_series_adda_2/specs.html. Port details: 32x front-panel [INPUT] XLR-3-31 analog balanced mic/line inputs (switchable +48V phantom per channel, controlled from front panel or connected console — not a separate port); 16x front-panel [OUTPUT +4dBu] XLR-3-32 analog balanced outputs; 4x front-panel [AES/EBU OUT] XLR-3-32 connectors (physically XLR shells wired for AES/EBU digital, each carrying 2 channels = 8 ch total) — mapped to connector id \"aes3\" rather than \"xlr3\" since these carry AES/EBU digital audio, not analog. Rear panel: [PRIMARY]/[SECONDARY] etherCON (RJ45) Dante network ports — redundant or daisy-chain configurable; manual states these operate \"within a Gigabit Ethernet (GbE)\" and the rear panel has dedicated [1G] link-speed indicators, so grade eth-1g is used (exact 10/100/1000 auto-negotiation table not explicitly published, so this grade is inferred from the GbE/1G-indicator language — treat as medium-confidence on the grade specifically even though the rest of the spec is high-confidence). Single [AC IN] power inlet using Yamaha's proprietary V-LOCK locking power cord; the connector shell itself is a standard IEC C13/C14-style inlet with an added mechanical latch clip, so it is mapped to the closest listed connector id \"iec\" (not a distinct connector type in the given list). A third-party listing (getdante.com) mentions \"dual power supply units are built in,\" but the manual's rear-panel diagram and text show only one AC IN connector — this refers to internal redundant PSU modules behind a single mains inlet, not two power connectors. No word clock, USB, or GPI ports are present on this unit. Rack size: 5U (480 x 220 x 367.5mm per the manual's General Specifications table).",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 17",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 18",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 19",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 20",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 21",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 22",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 23",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 24",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 25",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 26",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 27",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 28",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 29",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 30",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 31",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 32",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 9",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 11",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 12",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 13",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 14",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 15",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 16",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU Out 1/2",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 3/4",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 5/6",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES/EBU Out 7/8",
+      "direction": "output",
+      "connector": "aes3"
+    },
+    {
+      "name": "Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

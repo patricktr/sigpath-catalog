@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Luminex",
+  "model": "LumiNode 4",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.luminex.be/products/luminode/luminode-4/",
+  "confidence": "high",
+  "notes": "Manufacturer product page (luminex.be) confirms: 2x Neutrik shielded EtherCON (10/100/1000Mbps Gigabit) network ports, 4x Neutrik 5-pin XLR female DMX/RDM ports (each independently configurable as input or output, optically & galvanically isolated), and a single Neutrik powerCON TRUE1 AC power inlet (100-240VAC, max 13W) with PoE IEEE 802.3af Class 0 available as an alternate power source over the Ethernet ports (no separate PoE connector). Product code LU 01 00071. Housed in a robust metal half-19in enclosure, 220 x 175.3 x 44mm (44mm ≈ 1U height, half-rack width — two units mount side-by-side to fill a full 19in rack space); rack, truss (M10 insert), or wall mounting supported. Weight 1.42kg unpackaged. This spec covers the base rack/truss-mount \"LumiNode 4\"; sibling variants LumiNode 4 DIN (DIN-rail, terminal-block DMX outputs) and LumiNode 4 Wall (wall-mount) have different physical connectors and were not used here. Ethernet grade (eth-1g) confirmed explicitly by spec (\"10/100/1000Mbps\"); DMX/XLR5 and powerCON ports are correctly left ungraded per the grading rules.",
+  "ports": [
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik shielded EtherCON, 10/100/1000Mbps"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik shielded EtherCON, 10/100/1000Mbps; also accepts PoE IEEE 802.3af (Class 0) as an alternate power source"
+    },
+    {
+      "name": "DMX 1",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Neutrik 5-pin XLR female, shielded & gold-plated; optically/galvanically isolated; software-configurable as DMX/RDM input or output"
+    },
+    {
+      "name": "DMX 2",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Neutrik 5-pin XLR female, shielded & gold-plated; optically/galvanically isolated; software-configurable as DMX/RDM input or output"
+    },
+    {
+      "name": "DMX 3",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Neutrik 5-pin XLR female, shielded & gold-plated; optically/galvanically isolated; software-configurable as DMX/RDM input or output"
+    },
+    {
+      "name": "DMX 4",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "Neutrik 5-pin XLR female, shielded & gold-plated; optically/galvanically isolated; software-configurable as DMX/RDM input or output"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON TRUE1; 100-240VAC 50/60Hz, max 13W. Alternatively powered via PoE 802.3af (Class 0) over either EtherCON port, no separate connector."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Ampetronic",
+  "model": "C14-2",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.ampetronic.com/products/c14-2-multiloop-hearing-loop-driver/",
+  "confidence": "high",
+  "notes": "C14-2 is a 1U MultiLoop (dual-channel) hearing-loop / induction-loop driver, 14A_RMS / 48.1V_RMS per channel, 180W max (mains-voltage switchable 120/230V). Sold as two SKU variants that share the same chassis but differ only in the network RJ45 port's function: C14-2N (Networked — RJ45 is control/monitoring only: hosted web server, Telnet, SNMP) and C14-2D (Dante — the RJ45 becomes \"Input 3\", an AES67-compliant Dante audio input, 2ch mono-summed, 44.1/48kHz, plus control); only one variant/port-function is fitted per physical unit, modeled here as a single RJ45 port. All signal/control connectors are supplied pluggable Euroblock/Phoenix-style screw terminals at two pitches (3.5mm for inputs/DC/relay/line-out, 5mm for the 100V-line input and loop outputs) — connector id \"euroblock\" is used generically for both since the port list has no pitch distinction. Input 2's mic/line Euroblock and its separate 100V-line Euroblock are mutually exclusive (manual: do not use both at once). Status relay output and DC output are present on C10/C14 models. AC mains inlet connector type is not explicitly named in the datasheet text; inferred as a standard IEC appliance inlet (e.g. C14) from the rear-panel photo (socket beside a manual voltage-select switch) and box contents (\"1 x Power cable, region specific\" — i.e. a detachable IEC cord), which is standard practice for this class of rack gear but not spec-sheet-confirmed. USB port version/speed not stated in spec, so grade omitted. Sources used: manufacturer product page, official PDF Datasheet (UP39801-8) and Installation Handbook (UP19801-13), all from ampetronic.com.",
+  "ports": [
+    {
+      "name": "Input 1 (Mic/Line)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-way 3.5mm Euroblock screw terminal (supplied); balanced mic or line level, selectable via rear-panel switch. Mic spec 200-600Ω, sensitivity -67dBu, selectable 24V phantom power (mic mode only). Line sensitivity -42dBu. Switchable 250Hz low-cut filter. Input impedance 8700Ω."
+    },
+    {
+      "name": "Input 2 (Mic/Line)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Second 3-way 3.5mm Euroblock mic/line input, same spec as Input 1. Mutually exclusive with the Input 2 (100V Line) connector below — do not use both simultaneously."
+    },
+    {
+      "name": "Input 2 (100V Line)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2-way 5mm Euroblock screw terminal (supplied); 100V distributed-line audio input, sensitivity +7dBu, input impedance 121kΩ. Shares the Input 2 slot with the mic/line connector above."
+    },
+    {
+      "name": "Network / Dante (Input 3)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "On C14-2N: RJ45 Ethernet for control/monitoring only (hosted web server, Telnet, SNMP). On C14-2D: RJ45 acts as AES67-compliant Dante audio Input 3 (2 channels mono-summed, 44.1/48kHz, 100Mb/s) plus control. Only one variant is fitted per unit."
+    },
+    {
+      "name": "Loop Output A",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-way 5mm Euroblock screw terminal (supplied) for twisted-pair or star-quad configured loop feed cable, channel A."
+    },
+    {
+      "name": "Loop Output B",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-way 5mm Euroblock screw terminal (supplied), channel B — dual-channel MultiLoop output."
+    },
+    {
+      "name": "DC Output",
+      "direction": "output",
+      "connector": "euroblock-dc",
+      "note": "2-way 3.5mm Euroblock screw terminal (supplied); re-settable fuse-protected 12V, 0.1A max. Controllable to reflect amplifier status on network models. Not for simultaneous use with the USB power output (shared power headroom)."
+    },
+    {
+      "name": "Status Relay",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-way 3.5mm Euroblock screw terminal (supplied); normally-closed isolated dry relay contact, opens on fault condition. Rated 0.5A at 125VAC or 2A at 30VDC. Present on C10 and C14 models."
+    },
+    {
+      "name": "Line Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "3-way 3.5mm Euroblock screw terminal (supplied); balanced audio output, post-AGC."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for firmware updates via USB drive, or to power an external wireless router/dongle (200mA max). USB version/speed not stated in the spec sheet."
+    },
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel mains inlet next to a manual 120V/230V voltage-select switch; 45-65Hz, up to 180W. Detachable region-specific IEC power cord supplied. Exact inlet variant (e.g. C14) is inferred from product photography and the accessory list, not explicitly named in the datasheet text."
+    }
+  ]
+}

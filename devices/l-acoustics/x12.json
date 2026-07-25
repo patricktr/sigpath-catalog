@@ -1,0 +1,23 @@
+{
+  "manufacturer": "L-Acoustics",
+  "model": "X12",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.l-acoustics.com/products/x12/",
+  "confidence": "high",
+  "notes": "X12 is a fully passive 2-way coaxial loudspeaker (12\" LF cone + 3\" neodymium HF compression driver, 8 ohm nominal, 136 dB max SPL, 59 Hz-20 kHz usable bandwidth) requiring an external L-Acoustics amplified controller (LA2Xi/LA4X/LA8/LA12X) — it has no AC/mains power inlet of its own, so no power connector is listed. Both I/O connectors are 4-point speakON (NL4-type); connector id 'speakon' used as the closest match in the allowed list. No bandwidth 'grade' applies to speakON per the spec (grade scale only covers SDI/HDMI/DP/USB/RJ45/etherCON). Not rack-mountable (portable/install cabinet with pole mount, handles, threaded inserts) so rackUnits omitted. Dimensions 430 x 496 x 375 mm, weight 20 kg. Data extracted via WebFetch from the official L-Acoustics product page (l-acoustics.com/products/x12/), which lists connectors as \"IN: 1 x 4-point speakON\" and \"LINK: 1 x 4-point speakON\".",
+  "ports": [
+    {
+      "name": "IN",
+      "direction": "input",
+      "connector": "speakon",
+      "note": "4-point speakON; passive coaxial input, +1/-1 signal pair"
+    },
+    {
+      "name": "LINK",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-point speakON loop-through to daisy-chain additional cabinets"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "manufacturer": "Soundcraft",
+  "model": "Vi3000",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.soundcraft.com/en/products/vi3000",
+  "confidence": "high",
+  "notes": "Sourced primarily from Soundcraft's own official Vi3000 documentation (all hosted on soundcraft.com / Harman's adn.harmanpro.com asset server, linked from the product page): the Vi3000 User Guide v1.4 (rear-panel connector descriptions, text confirming Monitor A = LCR, Monitor B = LR, headphone impedance, AES/MADI/Dante behavior, GPIO-card-is-optional) and the official product brochure (high-res labeled rear-panel photograph used to verify exact port counts/labels: LINE OUT 1-16 / 17-24, MNTR.A L/R/C, MNTR.B L/R, MASTERS L/R/C, MIC/LINE IN 1-16 / 17-32, AES OUT/IN 1-2 & 3-4, MADI OUT/IN, Dante PRIMARY/SECONDARY, WORD CLOCK IN/OUT, MIDI IN/OUT, USB, HiQ, DVI OUT, dual MAINS INPUT with POWER switches).\n\nPorts listed reflect the console's standard/most-commonly-shown configuration (32 local Mic/Line inputs + 32 total analogue outputs, i.e. 24 numbered Line Outs plus the fixed Monitor A/Monitor B/Master section). The two main local I/O card bays are factory-configurable to alternate layouts per the User Guide (e.g. 48 mic in/16 line out, or 16 mic in/16-in-16-out AES/16 line out), so a specific shipped unit's populated ports can differ from this list. Two D21m expansion slots are unpopulated as standard and accept optional cards (MADI Cat5/optical, ADAT, Blu Link, Aviom, EtherSound, CobraNet, AES/EBU, mic/line, or a GPIO D-sub card) — not included in the port list since nothing is fitted by default. An optional remote 64-channel analogue Stagebox (64 mic/line in, 32 line out) is sold separately and is not part of the console's own rear panel.\n\nMADI connectors are multimode SC fiber per the User Guide text (\"Connections are via multimode SC connectors\"); \"fiber-lc\" was used as the closest available connector id since SC is not in the allowed list. No bandwidth/link-speed grade is published for the Dante or HiQnet EtherCon (RJ45) ports, so grade was omitted rather than guessed. The console is a large-format desktop control surface (~54kg per the User Guide specs page), not rack-mountable, so rackUnits was omitted.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1-16",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR, individual 48V phantom per channel; part of factory-configurable local I/O card bay"
+    },
+    {
+      "name": "Mic/Line In 17-32",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Female XLR, individual 48V phantom per channel; part of factory-configurable local I/O card bay"
+    },
+    {
+      "name": "Talkback Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "On console top panel/armrest area, not rear panel; switchable 48V phantom"
+    },
+    {
+      "name": "AES In 1-2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "3-pin XLR AES/EBU, 2 channels, green lock/confidence LED"
+    },
+    {
+      "name": "AES In 3-4",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "3-pin XLR AES/EBU, 2 channels, green lock/confidence LED"
+    },
+    {
+      "name": "MADI In",
+      "direction": "input",
+      "connector": "fiber-lc",
+      "note": "Actual connector is multimode SC fiber (closest available id used); shares active-input selection with Dante (only one of MADI/Dante input active at a time)"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "Mains Input 1 (PSU1)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/14-style inlet, 100-240V auto-ranging; dual redundant PSU, either supplies full console"
+    },
+    {
+      "name": "Mains Input 2 (PSU2)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C13/14-style inlet, 100-240V auto-ranging; dual redundant PSU, either supplies full console"
+    },
+    {
+      "name": "Line Out 1-16",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR; feeds any of the console's 24 configurable output busses"
+    },
+    {
+      "name": "Line Out 17-24",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR; feeds any of the console's 24 configurable output busses"
+    },
+    {
+      "name": "Monitor A (L/R/C)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Fixed-routing LCR monitor output, 3x male XLR"
+    },
+    {
+      "name": "Monitor B (L/R)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Fixed-routing stereo monitor output, 2x male XLR"
+    },
+    {
+      "name": "Master (L/R/C)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Fixed-routing LCR master output, 3x male XLR"
+    },
+    {
+      "name": "AES Out 1-2",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "3-pin XLR AES/EBU, 2 channels"
+    },
+    {
+      "name": "AES Out 3-4",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "3-pin XLR AES/EBU, 2 channels"
+    },
+    {
+      "name": "MADI Out",
+      "direction": "output",
+      "connector": "fiber-lc",
+      "note": "Actual connector is multimode SC fiber (closest available id used); runs in parallel with Dante output"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Outputs console wordclock at 48kHz"
+    },
+    {
+      "name": "DVI Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Listed by Soundcraft as \"for future use\""
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Socket under console armrest, 50-600 ohm"
+    },
+    {
+      "name": "Lamp Power Out (12V DC)",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "x2 (left and right console corners), for gooseneck work lamps, 12V DC 1A"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Built-in Dante interface, 64x64ch; shares active input selection with local MADI"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Built-in Dante interface redundant port"
+    },
+    {
+      "name": "HiQnet",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "XLR-housed EtherCon connector for HiQnet control network"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "5-pin DIN"
+    },
+    {
+      "name": "USB (Rear Panel)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "x2, for external keyboard or USB storage"
+    },
+    {
+      "name": "USB (Control Surface)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "x2, on top control surface, separate from rear panel USB ports"
+    }
+  ]
+}

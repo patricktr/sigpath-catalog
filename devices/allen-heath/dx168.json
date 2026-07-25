@@ -1,0 +1,150 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "DX168",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 4,
+  "sourceUrl": "https://warehousesound.com/r/allenheathDX168manual.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Allen & Heath's official \"DX168 Getting Started Guide\" (AP11129 Issue 2, © Allen & Heath 2018) — a manufacturer-authored document also linked from support.allen-heath.com; the manufacturer's own allen-heath.com/support.allen-heath.com pages returned HTTP 403 to automated fetches, so the identical guide was retrieved from a third-party PDF mirror (warehousesound.com) and cross-checked for port counts against B&H Photo's product listing. DX168 is primarily a portable/floor stage box; the 4U rack size applies only when using the optional AB1608-RK19 19\" rack-mount kit (not required for normal operation). \"DX A\" and \"DX B\" are Neutrik EtherCon (locking RJ45) ports carrying Allen & Heath's proprietary \"DX Link\" protocol (audio + preamp control + system status) over Cat5e/Cat6 STP, max 100m; DX B can be switched between Cascade (daisy-chain to a second DX168/DX164-W) and Redundant (dual-cable link to compatible mixer hardware) modes. No Ethernet link-speed (e.g. 1G) is published for DX Link, so \"grade\" is omitted on these ports rather than inferred. The 16 mic/line inputs and 8 line outputs are not individually numbered/labeled in the source text (front panel diagram callouts only say \"Input sockets\" / \"Output sockets\"); numbering 1-16 and 1-8 here follows the physical layout and industry-standard convention for this device, not an explicit per-socket label in the text.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "DX A",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Neutrik EtherCon (locking RJ45). Proprietary DX Link connection to mixer (dLive/SQ/Avantis) carrying audio, preamp control, and status data over Cat5e/6 STP, max 100m. No published Ethernet link-speed rating, so grade is omitted."
+    },
+    {
+      "name": "DX B",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Neutrik EtherCon (locking RJ45). Switchable: Redundant mode (second cable to compatible mixer hardware) or Cascade mode (daisy-chain a second DX168/DX164-W). No published Ethernet link-speed rating, so grade is omitted."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC inlet with fuse, universal PSU accepting 100-240V AC 50/60Hz, 20W max consumption."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "Eclipse HX-Median",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 6,
+  "sourceUrl": "https://clearcom.com/DownloadCenter/datasheets/EclipseHX/EclipseHX-Median_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Clear-Com's own current datasheet (Rev. Dec 2025), which has an explicit \"Connectors\" spec section plus a labeled rear-panel photo/legend confirming on-device silkscreen text: LAN2, LAN1, GP-IN, GP-OUT, ALARM I/O, GPI/RLY, RS-232, plus two IEC power inlets. Frame is 6RU (19 x 10.6 x 16 in), not the 3RU figure a secondary web summary suggested — the manufacturer PDF explicitly states \"six rack unit (6RU)\" and dimensions confirm it.\n\nThis spec covers only the fixed rear-panel I/O of the base Eclipse HX-Median frame (CPU/PSU/housekeeper section). Actual audio/signal ports (analog, Dante, MADI, fiber, AES, telephone hybrid, contact-closure, etc.) come from up to 7 modular Interface Cards (MVX-16A-HX, E-IPA-HX, E-DANTE64-HX, E-MADI64-HX, E-FIB-HX, E-QUE-HX*, IVC-32-HX*, LMC-64-HX*) and 8 Interface Modules (CCI-22, FOR-22, RLY-6, GPI-6*, TEL-14*, AES-6*) that are ordered separately and vary per customer configuration (frame ships as 0P/16P/32P/48P/64P SKUs, expandable to 448 ports) — these were intentionally excluded since they are not fixed/guaranteed I/O of the base unit.\n\nNo connector in the allowed id list matches DB25 or non-RS232 DB9 exactly; those (GP-IN, GP-OUT, ALARM I/O) were mapped to \"rs232\" as the closest D-sub-family id available, each flagged in its own port note. LAN ports are explicitly specified as \"Fast Ethernet,\" hence graded eth-100m. GPI/RLY RJ45 jacks carry control signaling for optional GPI-6/RLY-6 modules, not networked Ethernet data, so left ungraded. Power: dual redundant internal AC PSUs, IEC-C14 inlets, 100-240V/50-60Hz, 300W max combined, 1025 BTU/h max.",
+  "ports": [
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "GP-IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Actual connector is DB25F (8 GPI, incl. 12V supply for non-isolated inputs). DB25 is not in the allowed connector list; RS-232 (the only D-sub id available) used as closest match — shell size differs (DB25 vs DB9)."
+    },
+    {
+      "name": "GP-OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Actual connector is DB25M (8 GPO/relay outputs, DPDT power relay, 30V/1A max). Mapped to RS-232 as closest D-sub id since DB25 isn't in the allowed list."
+    },
+    {
+      "name": "ALARM I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9F carrying 1 GPI + 1 GPO; not an actual RS-232 serial signal, but DB9 shell matches the RS-232 connector id, the closest available."
+    },
+    {
+      "name": "GPI/RLY 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack for connecting an optional GPI-6 or RLY-6 interface module. Control signaling, not Ethernet data, so no bandwidth grade applies."
+    },
+    {
+      "name": "GPI/RLY 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second RJ45 jack, same purpose as GPI/RLY 1 (datasheet lists qty (2) but doesn't distinguish numbering; ours is inferred)."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9F serial control port."
+    },
+    {
+      "name": "AC Power 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-C14 inlet feeding redundant internal PSU 1 (100-240V AC, 50/60Hz, shared 300W max across both)."
+    },
+    {
+      "name": "AC Power 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-C14 inlet feeding redundant internal PSU 2."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Server Technology",
+  "model": "CW-24VD-L30M",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://datasheets.servertech.com/datasheets/CW-24VD-L30M.pdf",
+  "confidence": "high",
+  "notes": "Server Technology (a Legrand brand) 0U vertical 'Switched' cabinet PDU, the \"Primary\" half of a Primary/Link pair (companion expansion unit is CX-24VD-L30M). Sourced from the official Server Technology datasheet PDF (datasheets.servertech.com), which fully confirms inputs, outlets, and communications ports, including the stated 10/100 Mbps Ethernet grade. Input connector is a locking 3-phase NEMA L15-30P (30A cord, 24A rated) plug; the given taxonomy has no locking/3-phase NEMA id, so it is mapped to nema-5-15 as the closest available option — this is an approximation, flagged on the port. The RS-232 serial, two temperature/humidity sensor inputs, and Link port are all modular jacks (RJ-45-shaped for serial/link info not confirmed exactly; T/H sensors explicitly spec'd as smaller 4P4C, and Link port as RJ-12/6P6C) that are not Ethernet — all mapped to the rj45 connector id as the closest match and explicitly noted as non-Ethernet per port. No grade is set on these since they are not bandwidth-graded network links. Unit is 0U (vertical, mounts along the rack rails, dimensions 69.0in x 1.75in x 2.25in) so rackUnits is omitted rather than set to 0.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Actual plug is a NEMA L15-30P (30A cord/24A rated, 208V, 3-phase, locking twist-lock, 4-pole 5-wire). No exact match exists in the connector taxonomy; nema-5-15 is the closest available 'US captive cord' id but does not reflect the locking mechanism, pole count, or 30A rating."
+    },
+    {
+      "name": "Outlets 1-24",
+      "direction": "output",
+      "connector": "iec",
+      "note": "(24) individually switched IEC 60320/C13 receptacles, rated <=12A @ 208V L-L (15A peak) each; outlet #1 is positioned opposite the power input. Represented as one aggregated port entry for the 24 identical outlets."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbps management network port."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-232 serial console, physically an RJ-45 jack (not an Ethernet PHY; different pinout from the network port)."
+    },
+    {
+      "name": "T/H Sensor 1",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "4P4C (RJ9-style) modular jack for optional EMTH-2-10 temperature/humidity probe; smaller than 8P8C RJ45, closest available id."
+    },
+    {
+      "name": "T/H Sensor 2",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "4P4C (RJ9-style) modular jack for optional EMTH-2-10 temperature/humidity probe; smaller than 8P8C RJ45, closest available id."
+    },
+    {
+      "name": "Link",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-12 (6P6C) modular jack connecting to the companion CX-24VD-L30M 'Link' (expansion) unit to extend network access to the redundant/secondary power feed; also present on the Link unit."
+    }
+  ]
+}

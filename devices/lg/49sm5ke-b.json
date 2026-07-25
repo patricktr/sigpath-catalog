@@ -1,0 +1,89 @@
+{
+  "manufacturer": "LG",
+  "model": "49SM5KE-B",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.lg.com/us/business/download/resources/BT00001837/LG_SPEC-SHEET_SM5KE_061823_PR.pdf",
+  "confidence": "medium",
+  "notes": "49\" FHD (1920x1080) IPS commercial signage display, part of LG's SM5KE series (also sold as 32/43/55SM5KE). Discontinued model. All signal I/O taken from LG's official US spec-sheet PDF (SPEC_SM5KE_061823_PR, rev. 2018/06-2023), which includes a numbered rear-panel connectivity diagram. Caveats: (1) HDMI and DisplayPort input/output version (1.4/2.0 etc.) is not published by LG for this model, so grade is omitted on those ports per instructions rather than guessed. (2) The two RS232C ports are physically 3.5mm TRS \"phone\" mini-jacks, not full-size DE-9 connectors — LG ships a \"Phone to RS232C Gender\" adapter cable in the box; mapped to connector \"rs232\" (closest logical match) with a note. (3) LAN (RJ45) is used for network/control; no Ethernet speed grade is published, so omitted. (4) AC power inlet connector type is not shown on the signal-connectivity diagram in the spec sheet (power specs only state \"Built-In Power, 100-240V~ 50/60Hz\" with a power cord included accessory) — connector \"iec\" is an inference based on LG's standard practice for this commercial-display class, not an explicit spec-sheet statement; treat with lower confidence than the signal ports. Not rack-mountable (wall/stand-mount signage panel, VESA 300x300mm, optional stand ST-492T).",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "DP OUT",
+      "direction": "output",
+      "connector": "dp",
+      "note": "SST (single-stream transport) daisy-chain output only"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Network/control port; labeled 'RJ45 In' on spec sheet but treated as bidirectional per Ethernet convention"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "RS232C IN",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Physically a 3.5mm TRS mini-jack; LG includes a phone-to-RS232C (DB9) adapter cable"
+    },
+    {
+      "name": "RS232C OUT",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Physically a 3.5mm TRS mini-jack; LG includes a phone-to-RS232C (DB9) adapter cable"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Off/Fixed/Variable output modes"
+    },
+    {
+      "name": "IR & LIGHT SENSOR",
+      "direction": "input",
+      "connector": "ir",
+      "note": "Combined external IR receiver + ambient light sensor input, 3.5mm mini-jack"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in 100-240V~ 50/60Hz power supply; exact inlet connector not explicitly pictured in spec sheet, inferred as IEC C13/C14 (power cord included in box)"
+    }
+  ]
+}

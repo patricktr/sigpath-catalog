@@ -1,0 +1,48 @@
+{
+  "manufacturer": "LiveU",
+  "model": "Solo Pro",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://cdn-liveutv.pressidium.com/wp-content/uploads/2021/07/Solo-Pro-brochure_Nov23.pdf",
+  "confidence": "high",
+  "notes": "Source: LiveU's official \"Solo PRO Technical Specifications\" brochure (PDF on LiveU's own CDN, linked from liveu.tv/products/create/liveu-solo). Important caveat: the Solo PRO ships as two distinct hardware configurations — an HDMI-input unit (912g) and an SDI-input unit (936g) — each equipped with only ONE of the two video inputs, not both simultaneously. This entry lists both inputs together since the manufacturer's own spec table groups them under a single \"Video Interfaces\" line; treat SDI-in and HDMI-in as mutually exclusive on any single physical unit. SDI grade set to the highest supported tier (sdi-12g) since the sheet states \"12G/3G/HD/SD-SDI\" as one auto-sensing input rather than per-resolution. RJ-45 Ethernet port speed is not stated in the spec sheet, so grade was omitted (not inferred). The 2x USB 2.0 Type-A ports are specifically for attaching external 4G/5G cellular modems (each port splittable to 2 modems via an optional Y-cable, per the brochure's footnote) — exact printed silkscreen labels on the chassis (e.g. \"USB1\"/\"USB2\") were not independently confirmed, so generic naming was used. The USB-C port is explicitly documented as power-input only (min. 45W USB-C PD), not a data port. No dedicated analog or digital audio connector exists — audio is embedded within the HDMI/SDI input signal. Device is a portable pack-worn/handheld encoder (112.5 x 188 x 54.5mm, ~912-936g) with no rack-mount option.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For external 4G/5G cellular modem; splittable to 2 modems via optional Y-cable"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For external 4G/5G cellular modem; splittable to 2 modems via optional Y-cable"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "USB-C Power In",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Power only (no data) — requires USB-C PD source rated at least 45W; also charges 3-hour internal battery"
+    }
+  ]
+}

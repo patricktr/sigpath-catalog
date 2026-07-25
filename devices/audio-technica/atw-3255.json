@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Audio-Technica",
+  "model": "ATW-3255",
+  "category": "audio",
+  "rackUnits": 1,
+  "sourceUrl": "https://docs.audio-technica.com/all/IEM_UM_232700590_V1_EN_web_2205011.pdf",
+  "confidence": "high",
+  "notes": "The ATW-3255 is Audio-Technica's 3000 Series Wireless In-Ear Monitor (IEM) system, not a microphone: it bundles a half-rack ATW-T3205 stereo transmitter, a bodypack ATW-R3250 stereo/mono receiver, and ATH-E40 in-ear headphones, linked by RF (no cable between transmitter and receiver). Ports above combine both enclosures; each port's note flags which unit it belongs to. Because no enum \"type\" value fits a wireless IEM (the closest, \"Wireless mic,\" describes the opposite signal direction — carrying a monitor mix TO a performer rather than capturing audio FROM one), \"type\" was left omitted per the \"omit if none fits\" instruction. The transmitter (ATW-T3205) is a half-rack-width, 1U-height chassis; it ships with rack-mount hardware but needs the optional AT8631 joining plate to fill a full 19in 1U space alongside a second half-rack unit — rackUnits:1 refers only to this transmitter, the receiver is a wearable bodypack, not rack- or desktop-mounted. The receiver's antenna connector is spec'd as SMA-type (50 ohm), which has no id in the allowed connector list; it was mapped to the closest available id \"bnc\" — treat that one port's connector as approximate. The receiver also has a physical pogo-pin charging terminal for the optional ATW-CHG3/ATW-CHG3N charging cradle; it was not modeled as a port since it isn't a standard cable jack and has no corresponding connector id. Two operating-frequency band variants are documented (DF2: 470.125-607.875 MHz; EG2: 580.000-713.850 MHz, plus other region-specific bands) — physical I/O is identical across all bands, only RF tuning range differs. Panel jack names above are based on the official user manual's descriptive part-names callouts (e.g. \"Balanced input jack (XLR 3-pin male)\", \"Balanced output jack (TRS female)\") rather than a confirmed photo of exact silkscreen text, though connector types, directions, and the 100BASE-T network grade are taken verbatim from Audio-Technica's own specifications table in that manual. Source used: Audio-Technica's official 3000 Series IEM user manual (docs.audio-technica.com), which includes the full \"Specifications\" section for both ATW-T3205 and ATW-R3250; a Sweetwater retail listing (sweetwater.com/store/detail/ATW3255DF2) was used to cross-confirm the ATW-3255 = ATW-T3205 + ATW-R3250 + ATH-E40 bundle composition.",
+  "ports": [
+    {
+      "name": "Input L/1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F line input on ATW-T3205 half-rack transmitter (Pin1 GND, Pin2 Hot, Pin3 Cold); used alone for mono-mode sources"
+    },
+    {
+      "name": "Input R/2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR-F line input on ATW-T3205 transmitter, second channel"
+    },
+    {
+      "name": "Output L/1 (Loop Out)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4in) balanced TRS loop-through output on ATW-T3205 transmitter, for daisy-chaining another transmitter, mixer, or recorder"
+    },
+    {
+      "name": "Output R/2 (Loop Out)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4in) balanced TRS loop-through output on ATW-T3205 transmitter, second channel"
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-T/100Base-TX port on ATW-T3205 transmitter for Wireless Manager PC monitoring/control and multi-unit channel planning"
+    },
+    {
+      "name": "RF Output (Antenna)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "BNC, 50 ohm, on ATW-T3205 transmitter; connects the included flexible UHF antenna"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input jack on ATW-T3205 transmitter for included external switched-mode supply: 100-240V AC (50/60Hz) to 12V DC 1A, center positive"
+    },
+    {
+      "name": "Antenna",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Receiving antenna input on ATW-R3250 bodypack receiver is SMA-type, 50 ohm per Audio-Technica's spec table; 'sma' is not in the allowed connector list so it is mapped to the closest available id 'bnc' — the actual physical connector is SMA, not BNC"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm (1/8in) TRS stereo mini-jack on ATW-R3250 bodypack receiver, 40mW at 12 ohm, drives the included ATH-E40 in-ear headphones"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Bosch",
+  "model": "PRA-AD604",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://software-download.keenfinity-group.com/publicaddress/praesensa/datasheets/PRA-AD604_Amplifier,_600W_4-channel.pdf",
+  "confidence": "high",
+  "notes": "Official Bosch datasheet (24813835275, en, V9, 14 Dec 2020), now hosted on Bosch's successor commercial-security/communications entity Keenfinity Group after Bosch divested that business in 2025; content and Bosch copyright are unchanged from the original manufacturer PDF. Confirmed via boschbuildingtechnologies.com asset catalog mirror as well. Part of the Bosch PRAESENSA public-address/voice-alarm system; DC-powered (no AC mains input — it is fed 44-60VDC from a separate PRAESENSA power supply/PSU unit, hence two DC input ports rather than an AC inlet). Each of the 4 amplifier channels also has a small dedicated \"End-of-line device\" screw terminal (rear panel) for connecting a supervision end-of-line resistor per loudspeaker line; omitted here as a separate port since it is a supervision tap on the same loudspeaker circuit rather than an independent signal path — noted for completeness. A rear-panel safety-ground stud is also present but has no matching connector type in the provided list, so it was omitted. All screw-terminal connectors ship as pluggable Euroblock-style blocks per the datasheet's \"Parts included\" (Set of screw connectors and cables). No HDMI/video connectors — this is an audio-only PA/VA amplifier.",
+  "ports": [
+    {
+      "name": "48 VDC Input A",
+      "direction": "input",
+      "connector": "euroblock-dc"
+    },
+    {
+      "name": "48 VDC Input B",
+      "direction": "input",
+      "connector": "euroblock-dc"
+    },
+    {
+      "name": "Lifeline Interface",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Combined pluggable screw terminal carrying the analog backup 'lifeline' audio input (0 dBV) plus control-interface signaling for the spare channel; counted as the unit's sole analog input."
+    },
+    {
+      "name": "Network Port 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "OMNEO (Dante/AES67-compatible) audio+control, 100BASE-TX/1000BASE-T, dual redundant with RSTP loop-through."
+    },
+    {
+      "name": "Network Port 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "OMNEO (Dante/AES67-compatible) audio+control, 100BASE-TX/1000BASE-T, dual redundant with RSTP loop-through."
+    },
+    {
+      "name": "Loudspeaker Output 1 (A/B)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Transformerless 70V/100V output, galvanically isolated; pluggable screw terminal with A and B taps for redundant/Class-A loop wiring."
+    },
+    {
+      "name": "Loudspeaker Output 2 (A/B)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Transformerless 70V/100V output, galvanically isolated; pluggable screw terminal with A and B taps for redundant/Class-A loop wiring."
+    },
+    {
+      "name": "Loudspeaker Output 3 (A/B)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Transformerless 70V/100V output, galvanically isolated; pluggable screw terminal with A and B taps for redundant/Class-A loop wiring."
+    },
+    {
+      "name": "Loudspeaker Output 4 (A/B)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Transformerless 70V/100V output, galvanically isolated; pluggable screw terminal with A and B taps for redundant/Class-A loop wiring."
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "manufacturer": "Ubiquiti",
+  "model": "USW-Pro-48-PoE",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://store.ui.com/us/en/products/usw-pro-48-poe",
+  "confidence": "high",
+  "notes": "Verified live on the manufacturer's own product page (store.ui.com), which shows a labeled front/rear panel diagram: \"(40) GbE, PoE+ RJ45 ports\", \"(8) GbE, PoE++ RJ45 ports\", \"(4) 10G SFP+ Ports\", \"600W total PoE supply\", \"1.3in touchscreen with AR switch management\", \"Layer 3 switching features\", \"Near-silent cooling\", \"Power input\", and a separate \"DC power backup\" port (requires the optional UniFi Power Backup accessory). Individual RJ45 ports are numbered sequentially on the physical panel (1-48); exact printed numbering for the 4 SFP+ slots was not independently confirmed, so \"SFP+ 1-4\" naming is inferred (medium confidence on that specific label text only). The rear AC inlet is a standard small IEC-style socket (mapped to \"iec\"/C13-C14); the \"DC power backup\" port is actually a proprietary wide multi-pin connector for the UniFi Power Backup unit, not a true barrel jack — \"dc-barrel\" was chosen as the closest available connector id in the taxonomy. Per-port PoE wattage (up to 30W on the 802.3at PoE+ ports, up to ~90-95W on the 802.3bt PoE++ ports, shared from a 600W total budget) reflects standard Ubiquiti PoE class specs for this switch generation and was not re-verified digit-by-digit on this page. 1U rackmount is standard for the Pro-48 switch family. All Ethernet ports (RJ45 and SFP+) are graded eth-1g / eth-10g for link speed only; PoE class is not a \"grade\" per the taxonomy and is noted in each port's note field instead.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "25",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "26",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "27",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "28",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "29",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "30",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "31",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "32",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "33",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "34",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "35",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "36",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "37",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "38",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "39",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "40",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3at PoE+, up to 30W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "41",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "42",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "43",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "44",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "46",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "47",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "802.3bt PoE++, up to ~90-95W, part of 600W shared PoE budget"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G SFP+ uplink slot; accepts DAC or fiber optical transceiver modules"
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G SFP+ uplink slot; accepts DAC or fiber optical transceiver modules"
+    },
+    {
+      "name": "SFP+ 3",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G SFP+ uplink slot; accepts DAC or fiber optical transceiver modules"
+    },
+    {
+      "name": "SFP+ 4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10G SFP+ uplink slot; accepts DAC or fiber optical transceiver modules"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear IEC (C13/C14-style) AC power inlet, 100-240V; main power for the switch and its 600W PoE budget"
+    },
+    {
+      "name": "DC Power Backup",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary multi-pin DC backup power connector; requires the optional UniFi Power Backup accessory. Not a true barrel jack -- closest available connector id used since no proprietary multi-pin option exists in the taxonomy."
+    }
+  ]
+}

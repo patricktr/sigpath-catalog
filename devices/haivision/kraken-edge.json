@@ -1,0 +1,38 @@
+{
+  "manufacturer": "Haivision",
+  "model": "Kraken Edge",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www3.haivision.com/kraken-datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Haivision \"Kraken\" is now sold as a product family/software platform (v4.3) spanning several hardware and virtual form factors: Kraken VM (VM-KR-BASE, virtual machine), Kraken Edge (S-KR-SFF-XC-B, compact fanless appliance), Kraken X1 Rugged (S-KR-KX1R, MIL-STD ruggedized), Kraken Server \"Premium\"/\"Ultra\" (S-KR-PREMIUM-KLV / S-KR-ULTRA-KLV, 1RU rackmount server), and Kraken on Azure/AWS (cloud BYOL). No SKU is branded simply \"Kraken\" alone. This entry documents the Kraken Edge variant, chosen because it is the only hardware SKU with a fully specified physical I/O list (SDI video in + dual 2.5GbE + DC power) in the current manufacturer datasheet; it is a small form-factor appliance (5.75 x 6.22 x 1.67 in, 3.1 lb / 1.4 kg), not rack-mountable, so rackUnits is omitted.\n\nOther hardware variants differ significantly: (1) Kraken Server (S-KR-PREMIUM-KLV/ULTRA-KLV) is a 1RU rackmount, dual redundant 100-240VAC PSUs, 2x GigE Base-T + 2x SFP28 (up to 25Gbps) — no physical video port is listed for it in the datasheet (video ingest appears to be IP/NDI/GigE-Vision/ST2110-based rather than local SDI capture). (2) Kraken X1 Rugged has \"SDI In, up to 12G\" but the datasheet flags 12G and 1080p60 SDI capture as \"coming soon\" (not yet shipping), power is 28VDC per MIL-STD-704 (9-60VDC nominal) — likely an XLR4-DC or mil-spec connector, not confirmed. No Kraken variant lists an HDMI port anywhere in the current datasheet.\n\nNo physical video/audio outputs are documented on any hardware variant — all \"outputs\" are IP/network streams (SRT, RTMP, RTSP, HLS, UDP Transport Stream). Source: official Haivision datasheet HVS-DS-KRAK-260301 (copyright 2026, software v4.3), linked from the current product page https://www.haivision.com/products/kraken-video-transcoder/ as \"kraken-datasheet.pdf\" (redirects via Pardot to the hosted PDF). Confidence set to medium because: the connector types for the SDI BNC count and the DC power jack style are inferred rather than explicitly named/pictured, and because \"Kraken\" spans multiple physical variants so this single-device representation necessarily picks one (Edge) over the others.",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Encoding input; supports SD-SDI (SMPTE 259M), HD-SDI (SMPTE 292M/274M/296M), and 3G-SDI (SMPTE 424M, Level A only) with embedded audio (SMPTE 272M/299M). Datasheet lists this as a single 'SDI In' interface; physical port count not stated."
+    },
+    {
+      "name": "IP Interface 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "One of 2x 2.5GigE Base-T NICs. Panel label inferred; datasheet only states '2 x 2.5GigE Base-T NICs' without individual port names."
+    },
+    {
+      "name": "IP Interface 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "Second of 2x 2.5GigE Base-T NICs. Panel label inferred."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input rated 12-19V, 90W. Datasheet gives voltage/wattage only, not the physical connector style; dc-barrel used as the closest listed match — actual connector may be a locking DC or mil-style connector."
+    }
+  ]
+}

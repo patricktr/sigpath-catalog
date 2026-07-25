@@ -1,0 +1,55 @@
+{
+  "manufacturer": "IAdea",
+  "model": "XMP-7300",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.iadea.com/products/xmp-7300/",
+  "confidence": "high",
+  "notes": "Manufacturer product page (includes a labeled rear/side I/O diagram \"Universal-IO-1.png\" confirming physical port layout) — page currently carries an \"end of life, superseded by XMP-8552/8550\" banner but the full spec table and port diagram remain published. Kiosk-processor/4K media player, desktop/embedded form factor (143.6 x 128.13 x 33.65 mm) — no rack mounting, rackUnits omitted. Also has built-in 802.11 b/g/n (2.4GHz) Wi-Fi (no physical connector) and a Micro SD card slot + Kensington lock, which aren't included as ports since no matching connector id exists in the given list. Power is supplied by an external 100-240V AC adapter brick (12V/1.5A output) — the unit itself only exposes the DC barrel input (\"DC in\" on the diagram); no AC inlet is on the device itself. The rear Micro-USB port is labeled \"ADB\" (Android Debug Bridge) on the diagram — direction set bidirectional like other USB, but its USB speed/version is not stated in the spec so grade was omitted (the two front USB-A ports are explicitly \"USB 2.0 x 2\", so those got grade usb-2.0). S/PDIF port shape in the diagram matches an optical Toslink port (grouped with \"S/PDIF out\" in the spec, no coax/RCA shown). HDMI is output-only (media player, no video-in capability listed).",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "ADB",
+      "direction": "bidirectional",
+      "connector": "usb-micro"
+    }
+  ]
+}

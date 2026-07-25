@@ -1,0 +1,188 @@
+{
+  "manufacturer": "Aruba",
+  "model": "Instant On 1960 24G 20p Class4 4p Class6 PoE 2XGT 2SFP+ 370W (JL807A)",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://download.axilogi.com/HPE/Datasheet/JL807A.pdf",
+  "confidence": "high",
+  "notes": "Verified against HPE's official \"HPE Networking Instant On Switch 1960\" data sheet (product no. JL807A; also issued under the earlier \"Aruba Instant On 1960 24G 20p Class4 4p Class6 PoE 2XGT 2SFP+ 370W Switch\" branding, doc PSN1014132933WWEN/CZEN) and the official \"Aruba Instant On 1960 Installation and Getting Started Guide\" (Sept 2023, Ed. 4). Direct hpe.com fetches timed out repeatedly, so content was pulled from two independent reseller-hosted mirrors of the identical HPE PDF (promisegulf.com and axilogi.com) whose text matches verbatim, plus a googleapis.com-hosted mirror of the official Aruba installation guide for physical panel confirmation.\n\nPort count/type: 24x RJ-45 10/100/1000 PoE ports (auto-MDI/MDI-X), 2x dedicated 10GBASE-T ports, 2x dedicated SFP+ 10GbE slots — confirmed as 4 separate uplink ports (not a shared/combo dual-personality pair) per the data sheet's port line \"24 RJ-45 10/100/1000 PoE (CL4 and CL6) ports, 2 SFP+ 10GbE ports, 2 10GBASE-T ports.\"\n\nPoE: total shared PoE budget is 370W. Per the installation guide's PoE delivery table, ports 1-4 are Class 6 (up to 60W each) and ports 5-24 are Class 4 (up to 30W each) — this Class4/Class6 split isn't represented in the port schema (no PoE-class field) so it's noted here instead.\n\nNo console/CLI port and no USB port exist on this model — confirmed absent from all front-panel diagrams in the installation guide (only RJ-45/SFP+ data ports, LED Mode pushbutton, and a recessed Reset pushbutton are shown); the Instant On 1960 series is managed only via local web GUI, the Instant On mobile app, or the cloud portal.\n\nRack: 1U (35.05 x 44.25 x 4.4cm; the fanless-clearance note in the install guide explicitly cites \"1U (44.45mm/1.75-inch)\" confirming a 1U chassis height). Desktop/table-top and wall mounting are also supported.\n\nExact printed port-number labels for the two 10GBASE-T and two SFP+ uplink ports were not legible in the diagrams reviewed; they are named generically (\"25/26 (10GBASE-T)\", \"SFP+ 1/2\") rather than confirmed silkscreen text.",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "25 (10GBASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Dedicated 10GBASE-T uplink port (copper, up to 100m)"
+    },
+    {
+      "name": "26 (10GBASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "Dedicated 10GBASE-T uplink port (copper, up to 100m)"
+    },
+    {
+      "name": "SFP+ 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10GbE SFP+ uplink slot, fiber or DAC via Aruba-supported transceivers"
+    },
+    {
+      "name": "SFP+ 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "10GbE SFP+ uplink slot, fiber or DAC via Aruba-supported transceivers"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable AC power cord to rear inlet; auto-ranging 100-240VAC, 50/60Hz. No power switch. Exact IEC pin variant (C13/C14) not explicitly stated in HPE literature; inferred from installation-guide photography of a standard detachable IEC power cord."
+    }
+  ]
+}

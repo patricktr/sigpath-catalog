@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Extreme Networks",
+  "model": "5420F-48P-4XE",
+  "category": "network",
+  "type": "Network switch",
+  "rackUnits": 1,
+  "sourceUrl": "https://extr-p-001.sitecorecontenthub.cloud/api/public/content/5420-Series-Data-Sheet?v=cf246124",
+  "confidence": "medium",
+  "notes": "Sourced from Extreme Networks' own official \"5420 Series Data Sheet\" PDF (updated 02Jul26, fetched via the product page at extremenetworks.com/products/switches/universal-switches/5420) and cross-checked against the official \"5420 Series Installation Guide\" PDF (documentation.extremenetworks.com), which independently confirms the identical front/rear panel port list for the 5420F-48P-4XE. PoE budget is power-supply dependent: 380W total with the single internal 860W PSU, up to 1440W with the optional secondary XN-ACPWR-1200W-FB PSU installed. All uplink/stacking ports (SFP+ and SFP-DD) ship unpopulated — no transceivers or stacking cables included. MACsec licensing on hardware revision \"AC\" of this exact model requires contacting Extreme GTAC per a note in the installation guide. The only real caveat is the AC inlet pin type on the internal fixed PSU (C14 vs C16) — not explicitly stated for that specific internal unit in either document, though strongly implied to be C14 by the wattage-bracket pattern used for the family's external/optional PSUs.",
+  "ports": [
+    {
+      "name": "1-48",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "48x 10/100/1000BASE-T RJ45 access ports, full/half-duplex autosensing (half-duplex not supported at 1Gbps), IEEE 802.3at Type 2 PoE+ (30W per port), MACsec-capable."
+    },
+    {
+      "name": "SFP+ Uplink 1-4",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "4x 1/10Gb SFP+ built-in uplink ports, unpopulated (transceivers sold separately), MACsec-capable. Grade omitted: 'sfp' is not one of the connector types the RJ45/etherCON eth-grade scale applies to; effective max is 10Gb/port per the datasheet."
+    },
+    {
+      "name": "SFP-DD 1-2 (Stacking/Uplink)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "2x SFP-DD 'Universal' ports, unpopulated. Under Switch Engine OS used for stacking (up to 8 units; 20Gb/port with SFP-DD cables/optics, 10Gb with SFP+) or, when not stacking, as a single 10Gb Ethernet uplink channel per port. Under Fabric Engine usable as Ethernet uplinks in non-Fabric mode; stacking not supported on Fabric Engine. SFP-DD is a denser/dual-lane form factor with no exact match in the allowed connector list; 'sfp' used as closest id. Grade omitted for the same reason as the SFP+ uplinks."
+    },
+    {
+      "name": "Console",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Serial console port, physically an RJ-45 jack carrying RS-232 signaling. RJ45-to-DB9/USB-A/USB-C adapter cables are sold separately (not included)."
+    },
+    {
+      "name": "MGMT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000BASE-T dedicated out-of-band management port."
+    },
+    {
+      "name": "USB Micro-B Console",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Micro-B console/management port; USB signaling version not stated in the spec, so grade omitted."
+    },
+    {
+      "name": "USB A (x2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "2x USB Type-A ports for local management or external USB flash storage; USB version not stated in the spec, so grade omitted."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal fixed 860W AC power supply (factory pre-installed, non-orderable). Rear-panel figure in the Installation Guide labels this only 'AC power inlet connector' without stating the exact pin type for this internal PSU. Inferred as IEC/EN 60320 C14 (with C13 cord) by analogy to the documented external PSU bracket immediately below the family's C16 threshold (the 920W external option is C14; only the 1200W/2000W options step up to C16) — not directly confirmed in the source documents. Power cords are sold separately."
+    },
+    {
+      "name": "Secondary PSU Slot (optional)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Unpopulated field-replaceable secondary PSU bay for power redundancy / higher PoE budget. Documented compatible option is XN-ACPWR-1200W-FB, which has a confirmed IEC/EN 60320 C14 inlet (C13 cord). Sold separately, not included."
+    }
+  ]
+}

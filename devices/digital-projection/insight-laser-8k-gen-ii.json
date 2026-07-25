@@ -1,0 +1,214 @@
+{
+  "manufacturer": "Digital Projection",
+  "model": "INSIGHT Laser 8K (Gen II)",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.digitalprojection.com/projector-spec-new.php?id=10001",
+  "confidence": "medium",
+  "notes": "Manufacturer spec table (digitalprojection.com \"Data Sheet\" for the current INSIGHT LASER 8K (Gen II) product, reached via https://www.digitalprojection.com/en/projectors/insight-laser-8k-gen-ii/) lists: Video & Computer — 3G-SDI x16 (BNC), 12G-SDI x8 (BNC), HDMI x4, DisplayPort x2; Communication & Control — LAN x1 (RJ45), RS-232 x1 (9-pin D-Sub), Wired Remote x1 (3.5mm stereo jack), Sync x1 (BNC, marked \"TBC\"). That page is itself titled \"INSIGHT LASER 37000 8K (Preliminary)\" and shows Part No. 120-782, while the live Gen II product page lists \"Gen II Part Number: 120-783\" — a minor inconsistency in Digital Projection's own catalog (the 120-782 number matches the CAD drawing files linked from the same Gen II page, so the spec content is very likely correct for this model despite the label mismatch). Direction (all video inputs; SDI/HDMI/DP are receive-only on a projector) and individual port numbering (e.g. HDMI 1-4, 3G-SDI 1-16) are inferred from the stated connector-type quantities, not from a confirmed rear-panel photo/silkscreen. HDMI and DisplayPort input versions are not stated in the spec sheet, so grade is omitted for them, even though the datasheet notes the projector can accept 7680x4320 @ 60Hz via DisplayPort, SDI, or HDMI (and 7680x4320 @ 120Hz via 12G-SDI), which implies high-bandwidth revisions. An older official Digital Projection installation manual (Rev A, Oct 2018, https://digitalprojection.co.uk/dpdownloads/User%20Guides/Insight-laser-8k/INSIGHT%20Laser%208K%20User%20Guides%20Rev%20A.pdf) for an apparent predecessor \"INSIGHT Laser 8K Series\" model shows a different, SDI-only I/O (1x 12G-SDI + 4x switchable 3G/12G-SDI + 16x 3G-SDI = 21 BNC only, no HDMI/DisplayPort) — likely an earlier hardware generation; that document is not used here since it does not match the currently marketed Gen II product. Weight 132kg / 291lbs, dimensions 113.0 x 75.0 x 49.3cm — not rack-mountable (large freestanding/ceiling-mount housing), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "3G-SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 9",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 10",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 11",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 12",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 13",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 14",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 15",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "3G-SDI 16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "12G-SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "12G-SDI 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 3",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI 4",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "9-pin D-Sub PC control terminal"
+    },
+    {
+      "name": "Wired Remote",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack (TRS) wired remote control input"
+    },
+    {
+      "name": "Sync",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Listed as 'Sync (TBC)' on manufacturer spec sheet; per user manual functions as a Sync Out terminal driving IR/RF emitters for active-shutter 3D glasses"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Actual connector is 32A Ceeform (Europe) or NEMA L6-30P (USA) locking mains inlet, 200-240VAC 50/60Hz single phase, 3800W @ 240VAC — neither exact connector is in the allowed list; 'powercon' (locking, high-current AC) chosen as closest analog"
+    }
+  ]
+}

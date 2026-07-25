@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "TeamConnect Ceiling Medium",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://docs.cloud.sennheiser.com/en-us/tc-ceiling-medium/tc-ceiling-medium__02_2026_en.pdf",
+  "confidence": "high",
+  "notes": "Source: official Sennheiser \"TeamConnect Ceiling Medium\" PDF manual v1.3 (02/2026), docs.cloud.sennheiser.com — \"Connectors and controls\" (p.8) and \"Specifications\" (p.44) sections. Product page: sennheiser.com/en-us/catalog/products/meeting-and-conference-systems/teamconnect-ceiling-medium/teamconnect-ceiling-medium-f-w-700170. Device is a 15-capsule Dante-networked beamforming ceiling microphone array, sold in Flush Mount (TCC M-F), Ceiling Tile (tc-ceiling-medium CT-W), and Design/Surface (TCC M-S) housing variants — all share the same electronics/I-O described here. Powered entirely via PoE through the PoE IN/CTRL RJ-45 port (~8 W consumption); there is no separate AC/DC power inlet, so no dedicated power connector is listed beyond that RJ-45 port. Ethernet/Dante link speed (e.g. 100 Mb vs Gigabit) is not stated anywhere in the manual — only a \"Cat5e (F/STP) or better\" cable requirement is given — so grade was omitted for both RJ45 ports per instructions rather than inferred. Desktop/ceiling-mounted device, not rack-mountable (rackUnits omitted). No control (RS-232/IR) or USB ports exist on the device.",
+  "ports": [
+    {
+      "name": "Analog OUT",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced analog audio output on a 3-pin pluggable Phoenix Contact terminal block (3.81mm pitch, mates with Phoenix Contact MCVW 1.5-3-ST-3.81) — not a true XLR, so mapped to the closest connector id (euroblock)."
+    },
+    {
+      "name": "PoE IN/CTRL",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Primary Dante (Dante I) network audio, PoE power input (IEEE 802.3af Class 3, or IEEE 802.3at/Type 2/Class 4 if daisy-chained), and device configuration/control via Sennheiser Control Cockpit or a media control system. Ethernet link speed is not stated in the manual (only a Cat5e/F-STP cable minimum is specified), so no bandwidth grade is set."
+    },
+    {
+      "name": "PoE OUT",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Secondary Dante (Dante II) port used for daisy-chaining additional TeamConnect Ceiling devices; passes PoE through to the next device. Ethernet link speed not stated in the manual, so no bandwidth grade is set."
+    }
+  ]
+}

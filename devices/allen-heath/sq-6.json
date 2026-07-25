@@ -1,0 +1,298 @@
+{
+  "manufacturer": "Allen & Heath",
+  "model": "SQ-6",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.allen-heath.com/content/uploads/2023/06/SQ-6-Technical-Datasheet_G.pdf",
+  "confidence": "high",
+  "notes": "Original SQ-6 (not the newer \"SQ-6+\" variant, which has a 9\" touchscreen and RackUltra FX). Desktop control-surface mixer, not rack-mountable (rackUnits omitted); dimensions 638x514.9x198mm. 24 local mic preamps (0-60dB gain, switchable -20dB pad, +48V phantom, +30dBu max input, fully recallable). 14 XLR + 2 TRS local line outputs, +4dBu nominal/+22dBu max, source fully patchable to any bus (outputs 11/12 are additionally silkscreened \"L\"/\"R\" as the default Main assignment). SLink is a Neutrik locking EtherCON (RJ45-based) port carrying dSnake (48kHz, 40 in/20+40 ME out), DX (96kHz, 32x32) or GigaACE/GX (96kHz, 128x128) protocols to Allen & Heath DX/AudioRack expanders and ME personal-mixing systems; the datasheet does not state a numeric link speed so no \"grade\" was set (industry material elsewhere describes SLink/GigaACE as Gigabit Ethernet-based, but that is not confirmed in this source). The \"I/O Port\" is a 64x64 option-card expansion slot (Dante, Waves, MADI or A&H SLink/ACE cards, sold separately); the base unit ships with no card fitted, so its true connector depends on the card installed — represented here as a single RJ45-type bidirectional port per the rear-panel diagram, with low confidence on that specific connector choice. Footswitch connector type (1/4\" TRS) is inferred from the rear-panel line drawing and standard A&H footswitch accessories; the datasheet text itself only says \"footswitch connection,\" not an explicit connector type. USB-A \"SQ-Drive\" is on the top control surface (not the rear panel); USB-B, AES out, SLink, I/O Port, Network, Footswitch and AC power are rear-panel; ST3 (3.5mm) and Phones are on the top surface.",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 9",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 10",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 11",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 12",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 13",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 14",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 15",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 16",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 17",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 18",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 19",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 20",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 21",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 22",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 23",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 24",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR, digitally-controlled recallable preamp: 0 to +60dB gain (1dB steps), switchable -20dB pad, +48V phantom power, +30dBu max input with pad."
+    },
+    {
+      "name": "Talkback Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Dedicated talkback microphone input with gain, pad and 48V; assignable to any output mix."
+    },
+    {
+      "name": "ST1 In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS. Forms a stereo pair with ST2 (ST1 = Left)."
+    },
+    {
+      "name": "ST2 In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS. Forms a stereo pair with ST1 (ST2 = Right)."
+    },
+    {
+      "name": "ST3 In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Unbalanced stereo 3.5mm mini-jack on the top control surface (e.g. phone/tablet playback)."
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 9",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 10",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 11",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear panel additionally prints a default \"L\" (Main Left) designation; source is fully patchable to any bus."
+    },
+    {
+      "name": "Line Out 12",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Rear panel additionally prints a default \"R\" (Main Right) designation; source is fully patchable to any bus."
+    },
+    {
+      "name": "Line Out 13",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +4dBu nominal/+22dBu max output, source fully patchable."
+    },
+    {
+      "name": "Line Out 14",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR, +4dBu nominal/+22dBu max output, source fully patchable."
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS line output; source fully patchable."
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS line output; source fully patchable."
+    },
+    {
+      "name": "AES Out",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Balanced XLR, 2-channel AES/EBU digital output, switchable sample rate 44.1/48/88.2/96kHz."
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS headphone output with dedicated level control, on the control surface."
+    },
+    {
+      "name": "Footswitch",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Accepts single or dual footswitch, momentary or latching, assignable function. Connector type inferred from the rear-panel line drawing; datasheet text only says \"footswitch connection\" without naming the connector."
+    },
+    {
+      "name": "SLink",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Neutrik locking EtherCON (RJ45-based) AoIP expansion port. Carries dSnake (48kHz: 40 in / 20+40(ME) out), DX (96kHz: 32x32) or GigaACE/GX (96kHz: 128x128) protocols to Allen & Heath DX/AudioRack expanders and ME personal-mixing systems. No numeric link speed stated in the datasheet, so grade is omitted."
+    },
+    {
+      "name": "I/O Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "64x64-channel option-card expansion slot for 3rd-party AoIP cards (e.g. Dante, Waves) or A&H SLink/ACE cards, sold separately; base unit ships without a card fitted. Connector shown here per the rear-panel diagram — actual connector depends on the installed card (low confidence on this specific field)."
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Fast Ethernet (100Mbit/s) control port over Cat5, for MIDI-over-TCP/IP mixer control and SQ MixPad/SQ4You/SQ Control remote apps via a wireless router."
+    },
+    {
+      "name": "USB-A (SQ-Drive)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front/top-surface port for direct USB-drive stereo (96kHz/24-bit) or multitrack (up to 32ch@48kHz / 16ch@96kHz) record/playback, library/scene transfer, and firmware updates."
+    },
+    {
+      "name": "USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rear-panel USB 2.0 port for 32x32-channel, 24-bit/48-96kHz bidirectional Core Audio/ASIO/WDM streaming to a computer, plus USB MIDI DAW control."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Earthed 3-pin IEC C14 inlet; 100-240V AC, 50/60Hz, 90W max; adjacent two-pole push-button mains switch."
+    }
+  ]
+}

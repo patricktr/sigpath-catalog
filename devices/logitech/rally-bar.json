@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Logitech",
+  "model": "Rally Bar",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.logitech.com/content/dam/logitech/en_us/video-collaboration/pdf/rallybar.pdf",
+  "confidence": "medium",
+  "notes": "Source: official Logitech \"Rally Bar\" datasheet (PDF, published July 2025), cross-checked against logitech.com/en-us/shop/p/rallybar.html and logitech.com/en-us/products/video-conferencing/rallybar.html — all consistent. All-in-one video bar (camera + speaker + mic array + compute), desktop/table/wall/cart mounted, not rack-mountable, so rackUnits omitted. Interfaces per datasheet: \"HDMI Out: 2 (up to 1080p)\", \"HDMI In: 1\", \"USB 3.0: 3x Type A, 1x Type C\", \"Network: 10/100/1G Ethernet\", \"External Mic Input: Yes (proprietary input)\". Caveats/inferences: (1) HDMI grade set to hdmi-1.4 by inference — the datasheet does not print a version on the HDMI In/Out spec lines themselves, but lists the bundled cable as \"HDMI 1.4 Cable\" and caps HDMI Out at 1080p, consistent with HDMI 1.4; a higher-bandwidth HDMI chipset is not indicated anywhere. (2) The External Mic Input (for Rally Mic Pod / Mic Pod Hub / extension cable) is described only as \"proprietary input\" with no connector type given in the datasheet; connector is set to rj45 as the closest standard id based on the RJ45-style 8P8C jack commonly pictured on Rally Mic Pod cables, but this is not confirmed by the source document and the wiring/signaling is proprietary, not Ethernet. (3) The DC power inlet on the bar itself is not diagrammed in this datasheet (only \"DC Cable: 1.5m/4.9 ft\" from the external auto-sensing power brick is listed, plus a separate \"AC Cable\" from brick to wall); connector is set to dc-barrel per standard Logitech video-bar convention, but the exact port label/type was not visually confirmed. (4) Exact rear-panel silkscreen labels (e.g. whether it reads \"HDMI IN\" vs \"CONTENT\") could not be confirmed — port names use the datasheet's own field terminology. (5) Rally Bar ships in several SKUs (Graphite 960-001308, White 960-001320, regional variants, TAA-compliant 960-001564) with identical I/O, plus a \"Rally Bar No-Radio (USB mode certified only)\" SKU (960-001669) that omits WiFi, Bluetooth remote control, and appliance-mode radios — wired I/O ports listed here are unaffected. USB 3.0 and 10/100/1G Ethernet ratings are explicitly stated in the source and are high-confidence; the two inferences above are why overall confidence is medium rather than high.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Content-sharing input; bundled cable is rated HDMI 1.4 (2m). Input resolution ceiling not explicitly stated by Logitech."
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Datasheet: \"HDMI Out: 2 (up to 1080p)\"."
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Datasheet: \"HDMI Out: 2 (up to 1080p)\"."
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Datasheet: \"USB 3.0: 3x Type A, 1x Type C\" — used for Tap/Tap IP, Mic Pod Hub, peripherals."
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "USB 3.0; ships with a USB-A to USB-C 3.0 cable (2.2m) for BYOD laptop connection."
+    },
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Datasheet: \"Network: 10/100/1G Ethernet\"."
+    },
+    {
+      "name": "External Mic Input",
+      "direction": "input",
+      "connector": "rj45",
+      "note": "Proprietary expansion input for Rally Mic Pod / Mic Pod Hub / Mic Pod Extension Cable (supports up to 4 additional pods); Logitech states only \"proprietary input\", connector id inferred as closest match (RJ45-style jack), not confirmed by source."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powered by an external auto-sensing brick (100-240V AC in via detachable AC cord) delivering 19V/4.74A to the bar over a 1.5m captive DC cable; exact device-side connector not diagrammed in the source datasheet, dc-barrel used as the standard convention for this product line."
+    }
+  ]
+}

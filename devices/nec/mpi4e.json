@@ -1,0 +1,38 @@
+{
+  "manufacturer": "NEC",
+  "model": "MPI4E",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://proav.sharpusa.com/products/computing/mpi4e",
+  "confidence": "medium",
+  "notes": "The MPI4E (NEC/Sharp lists it as \"MPi4e\") is not a standalone box — it is a small internal \"Interface Board\" (55 x 40 x 4.7 mm) hosting a Raspberry Pi Compute Module 4 that slides into an internal card slot on compatible NEC MultiSync ME, M, MA, and 5th-generation P-series displays, replacing the display's standard connector board. Per NEC: \"internal connection for power, video, audio, data and all control interfaces\" — meaning power and video/audio come from the display's internal slot (a card-edge connector), NOT from any external connector, so there is no separate power port to list. The only externally accessible connectors, visible on the card's outward-facing bracket once installed, are Ethernet + 2x USB-A (\"The Ethernet and USB interfaces of the display interface board allow easy integration into a network or connection with external devices such as mouse, keyboard, and touch\" per NEC) plus one additional unlabeled USB-C-shaped connector seen in official product photography that NEC's text does not document (possibly a service/OTG port). No official spec sheet/PDF with a connector table could be located — NEC's installation-guide PDF link on the product page returns 404 — so port list and grades were derived from the manufacturer's own product photos (rear-bracket shots) plus well-established Raspberry Pi CM4 platform specs (Gigabit Ethernet PHY, USB 2.0-only host ports), not from an explicit written spec. A WiFi variant exists with built-in WiFi and external antenna (antenna connector not modeled here). Confidence set to medium because the source page and photos are authoritative/official but incomplete, and grades are inferred rather than stated.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Grade inferred from the underlying Raspberry Pi Compute Module 4 platform (Gigabit PHY); NEC's page only says 'Ethernet interface,' no speed stated."
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For mouse/keyboard/touch per NEC copy. Grade inferred from CM4 platform (USB 2.0 only); not stated by NEC."
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Grade inferred from CM4 platform (USB 2.0 only); not stated by NEC."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Third, unlabeled connector visible on the card's rear bracket in official product photos; shape matches USB-C. Purpose (service/OTG) not documented on NEC's product page — low confidence on function, grade omitted."
+    }
+  ]
+}

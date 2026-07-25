@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "EW IEM G4",
+  "category": "audio",
+  "type": "Wireless mic",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1385684-REG/sennheiser_ew_iem_g4_a1_ew_iem_g4_wireless.html/specs",
+  "confidence": "medium",
+  "notes": "EW IEM G4 is a bundled system: an SR IEM G4 half-rack stereo transmitter (1U-ish, 1.7\" tall, needs the included GA 3 kit for standard 19\" rack mounting or pairs with a second half-rack unit) + an EK IEM G4 bodypack receiver + IE 4 earphones. Ports above are drawn from both units: Audio In 1/2, AF Out/Phones, Ethernet, Antenna Output, and DC In belong to the rack-mountable SR IEM G4 transmitter; Earphone Out belongs to the body-worn EK IEM G4 receiver. The EK receiver itself has no external DC/charging port — it runs on 2x AA batteries or a Sennheiser BA 2015 rechargeable accupack (charged in a separate external charger, not modeled here). No \"type\" enum value matches \"wireless in-ear monitor\" exactly; \"Wireless mic\" was chosen as the closest fit since it's the same evolution-wireless G4 RF hardware family, even though signal direction is opposite (feeds IEMs rather than capturing a mic signal). Antenna Output and Ethernet intentionally carry no \"grade\" — BNC here is RF antenna feed (not SDI), and the source does not state an Ethernet link speed. Specs confirmed on the A1 (470–516 MHz) SKU; other regional frequency variants (A: 516–558 MHz, G: 566–608 MHz, etc.) share identical physical I/O — only tunable RF range differs. Sennheiser's own product/spec pages (sennheiser.com, sennheiser-hearing.com) returned 404/redirect errors during this research session, so B&H's detailed spec table (which mirrors Sennheiser's published data sheet organization by System/Receiver/Transmitter/Earphones) was used as the authoritative source instead.",
+  "ports": [
+    {
+      "name": "Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Electronically balanced XLR/TRS combo input, max +22 dBu"
+    },
+    {
+      "name": "Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Electronically balanced XLR/TRS combo input, max +22 dBu"
+    },
+    {
+      "name": "AF Out / Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" (6.3mm) balanced stereo jack with headphone volume control, for monitoring the transmitted signal"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ-45 for Sennheiser WSM remote network-based monitoring/control; link speed not stated by source"
+    },
+    {
+      "name": "Antenna Output",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "50-ohm BNC RF output feeding the transmit antenna"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12 VDC input from external power supply; exact barrel-jack connector geometry inferred, not explicitly pictured in source"
+    },
+    {
+      "name": "Earphone Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "On the EK IEM G4 bodypack receiver; 3.5mm stereo jack driving the IE 4 earphones"
+    }
+  ]
+}

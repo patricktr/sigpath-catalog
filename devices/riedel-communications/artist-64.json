@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Riedel Communications",
+  "model": "Artist 64",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.riedel.net/fileadmin/user_upload/800-downloads/06.0-Manuals-Intercom/Artist_Installation-Guide_v6_1.pdf",
+  "confidence": "medium",
+  "notes": "Riedel Artist-64 (mainframe part no. MFR-064 G2) is a modular, 3RU (132mm) digital matrix intercom frame — the core of Riedel's Artist matrix intercom platform, not a fixed-I/O box. It provides 2 controller-card bays (A/B, redundant) and 8 client-card bays (any client-card slot can also host a GPI card). Because signal I/O is entirely determined by which hot-swappable interface cards a customer installs, the port list above covers only the frame's fixed/always-relevant connectors (CPU network/HDLC/alarm, optional fiber-ring SFPs, optional external-sync module, redundant AC power) and NOT the 8 client-card slots, whose connectors vary by card purchased: AIO-108/109 G2 (8x mono analog in/out, RJ45 or Sub-D25, transformer or electronically balanced), CAT5-108/AES-108 G2 (8x mono AES3 digital, RJ45), COAX-108 G2 (8x bidirectional digital, 75-ohm BNC), MADI G2 (56/64-ch MADI, optical or coax), VoIP-108 G2 (8x SIP/EBU Tech 3347 ports, RJ45 10/100), AVB-108 G2 (8-ch AES3-over-AVB, RJ45 + BNC word-clock out), GPI-116 G2 (16 opto-isolated inputs + 16 relay outputs on two Sub-D37 connectors, 5-48VDC in / 60VDC 300mA out). Rack dimensions: 19in x 380mm deep x 132mm (3HE); weight 3.85kg empty, 5.60kg with 2 PSUs and fan module; power consumption up to 250W across 90-264VAC. Matrix scales to 1,024x1,024 non-blocking ports by ringing multiple frames over dual fiber (up to 500m standard, up to 20km optional per node link). One third-party retailer listing (ES Broadcast) states 2RU/88mm for the Artist-64, which conflicts with Riedel's own installation guide (3HE/132mm); the manufacturer manual was treated as authoritative. The AC mains inlet connector (mapped here to \"iec\") was not explicitly pictured in available documentation and is inferred from standard hot-swap-PSU practice, not confirmed. Category set to \"matrix\" and type to \"Matrix router\" as the closest fits — Artist is specifically a broadcast intercom/audio matrix, not a video router.",
+  "ports": [
+    {
+      "name": "Network (CPU-A)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "CPU card Ethernet control port, 10BaseT half-duplex — below the lowest gradable tier, so no grade set."
+    },
+    {
+      "name": "HDLC (CPU-A)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Inter-CPU redundancy bus; must be linked to the CPU in Bay B when a redundant controller is fitted."
+    },
+    {
+      "name": "Alarm (CPU-A)",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "9-pin D-Sub dry-contact relay alarm outputs + 24V aux supply, not RS-232 serial data — rs232 chosen only as the closest listed D-Sub9-style connector."
+    },
+    {
+      "name": "Fiber Upstream (CPU-A)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP cage for a Riedel FOM (LC-terminated) fiber optic module; only present on the CPU-128F 'fiber-prepared' controller variant, used to link this frame into the redundant dual fiber ring with other Artist nodes."
+    },
+    {
+      "name": "Fiber Downstream (CPU-A)",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Same as Fiber Upstream; the pair forms the ring connection to adjacent nodes."
+    },
+    {
+      "name": "AES Sync In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "On the optional ASM G2 external-sync module (not present on a base frame). Accepts an AES3 reference signal; takes priority over the 48kHz BNC input if both are connected."
+    },
+    {
+      "name": "48kHz Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "On the optional ASM G2 external-sync module; 75-ohm TTL square-wave word-clock reference input."
+    },
+    {
+      "name": "PSU Alarm",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "9-pin D-Sub hardware alarm connector mounted directly to the frame chassis (dry 'normal open' contacts for AC-fail/DC-fail/fan-fail per PSU)."
+    },
+    {
+      "name": "AC In 1 (PSU 1)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Redundant hot-swap power supply, 90-264VAC 47-63Hz. Exact inlet style (C13/C14) is not pictured in Riedel's documentation; inferred from standard practice for this class of hot-swap PSU."
+    },
+    {
+      "name": "AC In 2 (PSU 2)",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second, redundant PSU input — Riedel recommends feeding each from a separate circuit/fuse."
+    }
+  ]
+}

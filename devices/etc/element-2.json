@@ -1,0 +1,115 @@
+{
+  "manufacturer": "ETC",
+  "model": "Element 2",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.etcconnect.com/Products/Consoles/Eos-Consoles/Element/Tech-Specs.aspx",
+  "confidence": "medium",
+  "notes": "ETC Element 2 is a theatrical/architectural lighting control console (Eos Family), not a conventional AV device, so the closest-fit category/type in the provided enums (\"control\" / \"Control processor\") is an approximation. Desktop console, not rack-mountable (rackUnits omitted); dimensions 868x362x111mm, 7.26kg. Data drawn from ETC's own Tech Specs page (etcconnect.com) and cross-checked against ETC's official \"Element 2\" datasheet PDF (Rev B, 2022-01, hosted at media.musson.com and fullcompass.com — identical manufacturer-authored content) plus ETC's Eos Family Online Help page for the Element 2 (Littlite pinout) and community pinout data for the Remote Trigger D-Sub. Ships with (not listed as ports): 2x active DisplayPort-to-DVI adapters, USB keyboard, mouse. Also present but not physical wired I/O so omitted from ports: 802.11ac WiFi adapter and Bluetooth 5.1 (wireless, \"to be enabled with future software\"), and a Kensington lock slot (mechanical, not a signal/power connector). ETC's spec sheet explicitly states MIDI, SMPTE timecode, and Analog/Serial I/O are available \"through network interface or Response Gateways\" — i.e. via external accessory hardware or over Ethernet/OSC, not via dedicated physical ports on the Element 2 console itself — so none of those were listed as ports. USB port total (5x USB-A + 2x USB-C) is the console-wide count per ETC's datasheet; the split between front-panel and rear-panel USB ports is not detailed in the source, so individual ports are not labeled front/rear. Power cable is \"locking regionalized\" (Edison/Schuko-UK13A/Australasian variants depending on order code) — the console-side inlet itself is a standard IEC C13/14, which is what was recorded. Region/variant SKUs (-US/-EU/-AZ) and output-count tiers (1K/5K/6K) do not change the physical I/O.",
+  "ports": [
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DMX 1",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX-512/RDM port, 5-pin XLR. Console primarily outputs DMX; RDM adds bidirectional device-management data on the same line."
+    },
+    {
+      "name": "DMX 2",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX 3",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX 4",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Spec states 'USB 3.1' without a Gen1/Gen2 qualifier; grade assumed as USB 3.1 Gen 1 (5Gbps)."
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 5",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Display Out 1",
+      "direction": "output",
+      "connector": "dp",
+      "note": "Drives an external monitor, up to 3840x2160; ships with 2x active DisplayPort-to-DVI adapters. ETC does not state a DP version (1.2/1.4/2.0), so grade is omitted; full-size DisplayPort connector assumed (not explicitly confirmed as full-size vs mini-DP in source docs)."
+    },
+    {
+      "name": "Display Out 2",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Remote Trigger",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Actual connector is a 15-pin D-Sub wired for dry contact-closure triggers (Go/Pause/Go Back inputs) plus a +12V/status output — not an RS-232 serial interface. Mapped to 'rs232' as the closest connector shape available in the allowed connector list."
+    },
+    {
+      "name": "Lamp (Littlite)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR wired as a 12VDC / 1W max power output for an accessory Littlite gooseneck lamp (pin1 chassis ground, pin2 0V, pin3 +12V) — a power connector, not an audio/DMX signal path."
+    }
+  ]
+}

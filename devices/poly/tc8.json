@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Poly",
+  "model": "TC8",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://media.flixcar.com/webp/synd-asset/hp-303529523-c09126660.pdf",
+  "confidence": "high",
+  "notes": "Official HP/Poly manufacturer datasheet (Feb 2025, HP Development Company copyright) states \"External I/O ports: 1 RJ-45\" — this is the device's only physical connector. Power is delivered via Power over Ethernet, IEEE 802.3af Class 3, over that same RJ-45 port (single-cable design) — there is no separate/dedicated power connector, so no additional power port was added. No HDMI, USB, or audio jacks are present per the datasheet. Ethernet link speed (e.g. 100M vs 1G) is not stated, so no bandwidth grade was set on the RJ-45 port. Device also has a Kensington lock slot (security feature, not a signal/power port, so not listed). Desktop tabletop unit (205 x 123 x 79 mm, 812 g) — not rack-mountable, so rackUnits omitted. Cross-checked dimensions/weight against the HP Ireland product page (hp.com/ie-en/products/accessories/product-details/2101769208), which matched.",
+  "ports": [
+    {
+      "name": "RJ-45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Sole physical I/O port; carries both control/data link to paired Poly Video OS system (e.g. Studio X30/X50, G7500) and PoE power. Data rate/link speed not specified in manufacturer datasheet."
+    }
+  ]
+}

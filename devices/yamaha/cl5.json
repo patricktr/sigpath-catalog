@@ -1,0 +1,188 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "CL5",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://usa.yamaha.com/products/proaudio/mixers/cl_series/specs.html",
+  "confidence": "high",
+  "notes": "Digital mixing console (72 mono + 8 stereo input channels processed, 24 mix buses, 8 matrices) — desktop/console form factor, not rack-mountable, so rackUnits omitted. Most channel inputs are delivered via Dante from external Rio input racks, not on the console itself; only the fixed rear-panel connectors below are physically on the CL5 chassis. GPI (5in/5out) is a real D-Sub 15-pin control connector; no matching id exists in the allowed connector list, so it was mapped to the closest physical shape, \"vga\" (DE-15) — it is NOT a video port. The 3 gooseneck LAMP connectors are XLR-4-31 DC power outputs, mapped to \"xlr4-dc\" as the closest match. AC IN is Yamaha's proprietary \"V-Lock\" connector — a locking variant that is mechanically IEC C13/C14-compatible — mapped to \"iec\". Also present but not itemized as fixed ports: 3x Mini-YGDAI expansion card slots (I/O depends on installed card) and an optional external PW800W redundant power supply link (accessory cable). Dante Primary/Secondary confirmed as 1000BASE-T (Gigabit); console NETWORK control port confirmed as 10/100BASE-TX; USB Host confirmed as USB 2.0 Type-A.",
+  "ports": [
+    {
+      "name": "OMNI IN 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI IN 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "OMNI OUT 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "TALKBACK",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Dedicated talkback mic input, +64dB max gain"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone output, up to 150mW"
+    },
+    {
+      "name": "DANTE PRIMARY",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "1000BASE-T Dante audio network, 64in/64out @48kHz"
+    },
+    {
+      "name": "DANTE SECONDARY",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "1000BASE-T Dante audio network (redundant)"
+    },
+    {
+      "name": "DIGITAL OUT",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "AES/EBU digital stereo out, XLR-3-32"
+    },
+    {
+      "name": "MIDI IN",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI OUT",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "WORD CLOCK IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "TTL/75ohm terminated"
+    },
+    {
+      "name": "WORD CLOCK OUT",
+      "direction": "output",
+      "connector": "bnc"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "vga",
+      "note": "Actual connector is D-Sub 15-pin female (5 in / 5 out general purpose interface); mapped to closest listed connector shape (DE-15), not a video port"
+    },
+    {
+      "name": "NETWORK",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Console control network (10BASE-T/100BASE-TX), for StageMix/Editor/DAW control"
+    },
+    {
+      "name": "LAMP 1",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "XLR-4-31 gooseneck lamp DC power output"
+    },
+    {
+      "name": "LAMP 2",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "XLR-4-31 gooseneck lamp DC power output"
+    },
+    {
+      "name": "LAMP 3",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "XLR-4-31 gooseneck lamp DC power output"
+    },
+    {
+      "name": "USB HOST",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "For scene/session data backup to USB storage"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Yamaha 'V-Lock' locking connector, mechanically IEC C13/C14-compatible"
+    }
+  ]
+}

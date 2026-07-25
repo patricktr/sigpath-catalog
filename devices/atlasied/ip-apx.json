@@ -1,0 +1,66 @@
+{
+  "manufacturer": "AtlasIED",
+  "model": "IP-APX",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.atlasied.com/vcd/ATS006631-IP-APX-Datasheet_RevF.pdf",
+  "confidence": "medium",
+  "notes": "AtlasIED IP-APX is a PoE+ weather-resistant (IP-56) constant-directivity IP horn/paging endpoint with rotating bell and wall/pole mount — a desktop/field device, not rack-mountable (rackUnits omitted). Sourced from AtlasIED's own Technical Data Sheet (ATS006631 Rev F, 5/26) at https://www.atlasied.com/vcd/ATS006631-IP-APX-Datasheet_RevF.pdf, cross-checked against the AtlasIED Installation Sheet (ATS006632 Rev E, 7/23) at https://www.atlasied.com/vcd/ATS006632-RevE-IP-APX-Installation-Sheet.pdf and the product page https://www.atlasied.com/ip-apx. All auxiliary I/O (aux audio in/out, primary+secondary speaker out, 2x GPI, 1x relay out, and likely the external 24VDC power option) land on a single multi-pin Phoenix-style screw terminal block on the internal PCB, accessed by removing the enclosure lid and routing wires through gasketed cable-gland ports — the connector list's closest match for all of these is \"euroblock.\" Ethernet is confirmed explicitly as 10/100Base-T only (not gigabit), so grade is set to eth-100m; no grade is set on any of the euroblock/terminal-block ports since bandwidth grading doesn't apply to them. Confidence set to medium rather than high because one port (external 24VDC power input) has its physical connector type inferred rather than explicitly documented — everything else (RJ-45 network port, aux audio in/out, speaker outs, GPIO) is explicitly confirmed in the manufacturer's own spec table and installation photos/diagrams.",
+  "ports": [
+    {
+      "name": "Network (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "IEEE 802.3 10/100Base-T; female water-resistant RJ-45 mounted on side of enclosure; carries PoE+ (IEEE 802.3at, 25W max) to power the unit"
+    },
+    {
+      "name": "External DC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Datasheet lists 'AC Power Input: PoE+ and External 24VDC' as an alternative to PoE+ ('External Power Supply Option'). Exact physical connector is not explicitly documented; inferred as a screw-terminal DC input consistent with the unit's other terminal-block wiring — lower confidence on this specific port."
+    },
+    {
+      "name": "Aux Audio Line-In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced, 2.8Vpp, 10K ohm; auto-mutes on active broadcast; lands on PCB-mounted secured screw terminal block (Phoenix-style) inside enclosure, wired through a cable-gland port"
+    },
+    {
+      "name": "Aux Audio Line-Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Balanced, 2.8Vpp, 10K ohm; secured screw terminal block"
+    },
+    {
+      "name": "Speaker Out (Primary)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 ohm, 25W max (802.3at); single-channel Class-D amplifier primary output; secured screw terminal block"
+    },
+    {
+      "name": "Speaker Out (Secondary/Slave)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8 ohm; shares primary output's factory EQ/crossover for an optional passive slave speaker of the same type. Installation sheet confirms this lands on a Phoenix-style PCB terminal block, pins 13 (-) and 14 (+)."
+    },
+    {
+      "name": "GPI 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "One of two general-purpose logic/trigger inputs; screw terminal block. Individual on-device silkscreen label not confirmed from available docs."
+    },
+    {
+      "name": "GPI 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "One of two general-purpose logic/trigger inputs; screw terminal block. Individual on-device silkscreen label not confirmed from available docs."
+    },
+    {
+      "name": "Relay Output (GPO)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "1 relay output, 2A @ 30VDC; screw terminal block"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "manufacturer": "ZeeVee",
+  "model": "ZyPer4K-XS Encoder - Copper (Z4KENCC3XS)",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.zeevee.com/zyper4k-xs-z4kencc3xs-data-sheet/",
+  "confidence": "high",
+  "notes": "Sourced from ZeeVee's official product datasheet for this exact SKU (Z4KENCC3XS), pulled from zeevee.com/zyper4k-xs-z4kencc3xs-data-sheet/, including the labeled rear-panel diagram and spec table. This is a compact desktop \"puck\" enclosure (7.8 x 4.6 x 1.9 in / 199 x 116 x 47 mm, 850g) — rackUnits omitted since it isn't natively rack-mountable; ZeeVee sells an optional Z4KRACKXS kit that holds 8 units in 6RU (~0.75RU/unit) if rack mounting is needed. It is the encoder half of the ZyPer4K-XS line and requires a matching ZyPer4K-XS/XR decoder to function; a sibling fiber-network variant (Z4KENCF3XS, SFP+ instead of RJ45 10G) exists but was not used for this record. Video: HDMI 2.0 with HDCP 2.2 pass-through, up to 4K/4096x2160, embedded/analog audio in. USB port is technically Mini-USB 2.0 Type B (approximated to usb-micro, see port note). Power connector is a locking DC connector (approximated to dc-barrel, see port note).",
+  "ports": [
+    {
+      "name": "HDMI 2.0 In (Media Input)",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "Datasheet specifies a single Mini USB 2.0 Type B port (for USB pass-through between paired ZyPer4K-XS/XR encoder/decoder units); Mini-B isn't in the connector enum, approximated as usb-micro. Included cable is USB Type-A on the host end."
+    },
+    {
+      "name": "Utility (10/100/1Gb)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1Gb management/utility port, separate from the media-transport network port."
+    },
+    {
+      "name": "10Gb Ethernet (Media Transport, PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gbit copper (Cat6a, 100m) port carrying video/audio/control; PoE-enabled per rear-panel silkscreen."
+    },
+    {
+      "name": "Power (12V DC)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Rear panel shows a locking 12V DC, 1.2A power connector (not a plain barrel jack); dc-barrel is the closest enum match. External power supply included in box."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Countryman",
+  "model": "B6 Omnidirectional Lavalier",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://countryman.com/product/b6-omnidirectional-lavalier/",
+  "confidence": "medium",
+  "notes": "The B6 is a tiny (0.1\" diameter) omnidirectional lavalier microphone capsule, not a rack/box device — it has no fixed, self-contained \"physical I/O\" panel in the usual AV-gear sense, so this listing is an approximation. Manufacturer data (countryman.com product page + official datasheet PDF, countryman.com/wp-content/uploads/2017/07/b6_lavalier_datasheet.pdf): freq response 20Hz-20kHz, omnidirectional pattern, operating current 500µA, operating voltage 1-2V, bias/power supply options +3V@2.7kΩ / +5V@6.8kΩ / +9V@15kΩ load, 5 ft Aramid-reinforced cable, sold in 3 sensitivities (W4 standard/W5 low/W6 very low) and 5 colors. Crucially, the B6's only physical connection is its single cable termination, and Countryman sells it two ways: (1) permanently attached to one of dozens of brand-specific wireless-transmitter connectors (e.g. TA4F for Shure, TA5F for Lectrosonics, LEMO 3-pin for Sennheiser, Microdot, and many others — none of which exist in the given connector-id list), or (2) a screw-on \"Detachable Connector\" system where the same mic accepts swappable adapters for those same brands, confirmed via countryman.com/product/b6-detachable-connector/, whose brand/model dropdown includes a \"Hardwired/XLR\" option for direct, standard 3-pin XLR wiring into a phantom-powered mixer input (marketing copy also cites \"140 dB SPL on 48V Phantom Power\" for this mode). Because most real-world B6 units ship terminated in one of the small proprietary wireless connectors rather than XLR, I represented the port using the \"Hardwired/XLR\" configuration as the closest standard match in the allowed connector list — treat the exact connector as configurable/order-dependent rather than fixed. No grade applies (analog audio). There is no separate power-input port: the capsule is bus-powered over this same signal line via bias voltage from the host transmitter or via standard phantom power in the XLR configuration, so no power port is listed.",
+  "ports": [
+    {
+      "name": "Audio Output (Hardwired/XLR termination)",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}

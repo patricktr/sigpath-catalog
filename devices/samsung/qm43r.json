@@ -1,0 +1,96 @@
+{
+  "manufacturer": "Samsung",
+  "model": "QM43R",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.samsung.com/us/business/support/owners/product/qmr-series-digital-signage-qm43r/",
+  "confidence": "high",
+  "notes": "Data cross-confirmed from two independent official Samsung documents: the Samsung US support/spec page (samsung.com/us/business/support/owners/product/qmr-series-digital-signage-qm43r/) and Samsung's official German technical datasheet PDF (\"Technische Daten QM43R\", Samsung Electronics GmbH, model LH43QMREPGCXEN, Mar 2021) — both agree on 2x HDMI IN + 1x HDMI OUT (all HDMI 2.0/HDCP2.2), DP 1.2 IN, DVI-D IN, 2x USB 2.0, RS232C IN/OUT via 3.5mm mini-jack, RJ45, and stereo mini-jack audio I/O. RJ45 speed (10/100 Mbps, i.e. eth-100m) confirmed via the Samsung/B&H-hosted user manual text. Built-in stereo speakers (10W+10W) are internal, not an external port. Note a later regional running-change SKU, QM43R-A (per its Distrelec/Swiss datasheet), simplifies connectivity — no DVI-D input and no HDMI loop-out are listed for that variant — so verify against the exact SKU/region before purchasing cables if targeting that revision. No rack-mount option; this is a wall/stand-mount flat panel (VESA 200x200mm), so rackUnits is omitted.",
+  "ports": [
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Loop-out for daisy-chaining multiple displays (HDCP2.2: up to 4 units, HDCP1.4: up to 7 units)"
+    },
+    {
+      "name": "DP IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DVI-D IN",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini-jack; provides analog audio for the DVI-D input (DVI carries no embedded audio)"
+    },
+    {
+      "name": "AUDIO OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host-type service/media-playback port"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host-type service/media-playback port"
+    },
+    {
+      "name": "RS232C IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Physically a 3.5mm stereo mini-jack carrying RS-232 serial control signal, not audio; needs a mini-jack-to-DE9 adapter cable to reach standard RS232 gear"
+    },
+    {
+      "name": "RS232C OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm mini-jack RS-232 loop-through for daisy-chaining MDC control to additional displays"
+    },
+    {
+      "name": "RJ45 (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "IR IN",
+      "direction": "input",
+      "connector": "ir",
+      "note": "External IR receiver/extender input jack"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply, 100-240V AC 50/60Hz; exact inlet shape (IEC C13/C14 vs captive cord) was not explicitly pictured in the spec sheets reviewed and is inferred from the QMR series norm (Samsung lists a detachable 'power cord' as an in-box accessory)"
+    }
+  ]
+}

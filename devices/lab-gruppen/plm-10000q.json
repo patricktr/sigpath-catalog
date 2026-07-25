@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Lab.gruppen",
+  "model": "PLM 10000Q",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://web.archive.org/web/20090124163903/http://labgruppen.com/downloads/product/PLM_Series_Technical_Data_Sheet_TDS_PLM10000Q_V11.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Lab.gruppen's own official Technical Data Sheet (item no. TDS-PLM10000Q_V11, Copyright 2009 Lab.gruppen AB) — an older/legacy product no longer listed on the current labgruppen.com site (current site shows only newer PLM 8K44 BP / 12K44 SP models), so the datasheet PDF was retrieved via the Wayback Machine archive of the original manufacturer URL (labgruppen.com/downloads/product/...). Content and completeness are fully authoritative manufacturer data despite the archival retrieval method, hence \"high\" confidence.\n\nSpeaker output connectors are a factory-order-time choice: \"Neutrik Speakon (1 x NLT8, 2 x NLT4) or 4 Binding Posts (pairs) (must be specified upon order).\" This entry documents the Speakon variant (as pictured in the datasheet); the binding-post variant instead has 4 binding-post pairs (banana-compatible), one pair per output channel (CH1-CH4), in place of the 3 Speakon ports listed here.\n\nTwo separate hardware/mains variants exist: 230 V nominal (140-265 V, 2500 W, shown on the rear-panel silkscreen \"200-240V 2500W 50-60Hz\" in the datasheet) and 115 V nominal (70-135 V) — not user-selectable, ordered as distinct SKUs. Both use the same Neutrik PowerCon 32A mains connector.\n\nNo ports in this unit fall on a graded connector scale except the two EtherCon network ports (rated \"Auto 10/100\" = eth-100m per manufacturer spec); all XLR (analog and AES3) and Speakon/PowerCon connectors have grade intentionally omitted per the ungraded-connector-type rule. Unit also includes a 2.5\" front-panel LCD and soft-button/rotary-encoder control interface (not physical signal/power I/O, so not listed as a port).",
+  "ports": [
+    {
+      "name": "Input 1 (Analog)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Electronically balanced analog input, channel 1, with switchable Iso-Float ground isolation"
+    },
+    {
+      "name": "Link 1 (Analog)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Buffered loop-through/daisy-chain output of Analog Input 1"
+    },
+    {
+      "name": "Input 2 (Analog)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Electronically balanced analog input, channel 2, with switchable Iso-Float ground isolation"
+    },
+    {
+      "name": "Link 2 (Analog)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Buffered loop-through/daisy-chain output of Analog Input 2"
+    },
+    {
+      "name": "Input 1-2 (AES/EBU)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "2-channel AES/EBU digital input; supports up to 24-bit, 44.1-192 kHz"
+    },
+    {
+      "name": "Link 1-2 (AES/EBU)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Loop-through/daisy-chain output of the AES/EBU input"
+    },
+    {
+      "name": "Primary Link",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Auto 10/100, Auto-Uplink Neutrik EtherCon; carries Dante audio + Ethernet control/Lake Controller, primary network connection"
+    },
+    {
+      "name": "Secondary Link",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-100m",
+      "note": "Auto 10/100, Auto-Uplink Neutrik EtherCon; secondary network connection for daisy-chaining or redundancy"
+    },
+    {
+      "name": "Speaker Outputs CH1-4 (NLT8)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik 8-pole Speakon carrying all 4 amplifier channels; Speakon-connector hardware variant"
+    },
+    {
+      "name": "Speaker Outputs CH1-2 (NLT4)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik 4-pole Speakon carrying channels 1 and 2; Speakon-connector hardware variant"
+    },
+    {
+      "name": "Speaker Outputs CH3-4 (NLT4)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Neutrik 4-pole Speakon carrying channels 3 and 4; Speakon-connector hardware variant"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Detachable Neutrik PowerCon 32A mains inlet"
+    }
+  ]
+}

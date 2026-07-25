@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Visionect",
+  "model": "Joan 6",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://getjoan.com/shop/joan-6-re/",
+  "confidence": "high",
+  "notes": "Visionect's Joan-branded room-scheduling e-paper touch panel. \"Joan 6\" is the family name; getjoan.com/shop/joan-6/ redirects to the \"Joan 6 RE\" (bestseller/base variant) spec page used here. A \"Joan 6 Pro\" variant also exists (longer 6-month battery life, adds WPA2-Enterprise) but has the identical physical port set. Both variants have exactly one physical connector: a single USB-C port used for both charging and wired configuration (spec sheet does not state USB speed/version, so grade is omitted). The device is otherwise wireless-only: Wi-Fi 802.11a/b/g/n (2.4/5 GHz) and Bluetooth 5 — not physical ports. No built-in Ethernet/PoE; wired LAN/PoE is only available via a separate optional wall-mount accessory (not part of the device itself), so it is not listed as a device port. Desktop/wall unit, not rack-mountable (rackUnits omitted). Manufacturer legal name is \"Visionect d.o.o.\" (Slovenia); \"Visionect\" used per naming convention.",
+  "ports": [
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "manufacturer": "NEC",
+  "model": "NP-PX2000UL",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://sharp-displays.jp.sharp/support/webdl/dl_service/data/projector/manual/PX2000UL_manual_ENG.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from NEC's official English user's manual for the PX2000UL (hosted on Sharp's manual-download domain, sharp-displays.jp.sharp) — terminal panel diagram/labels on p.8 and full technical spec table on p.78-79 — cross-checked against Sharp NEC Display Solutions of America's own 2-page product spec sheet (PDF, Cat.No. 25.NEC.80.GL.UN.359, Rev 09.24.21). Both are manufacturer-authored. Notes/caveats: (1) This projector ships lens-less; a separate NP45ZL/NP46ZL/NP47ZL/NP48ZL/NP49ZL zoom lens must be purchased. (2) Power spec is 200-240V AC only — there is no 100-120V North American variant, so a step-up/step-down consideration applies for some markets. (3) Variant \"NP-PX2000UL-47ZL\" bundles the NP47ZL lens preinstalled but is otherwise the same electronics/I-O as the base NP-PX2000UL modeled here. (4) The AC IN connector sub-type (assumed IEC C19) is an inference, not a literal manual label — see port note. (5) DisplayPort grade (1.2) is likewise inferred from the stated 5.4Gbps/4-lane data rate rather than an explicit \"DP 1.2\" label. (6) No USB port exists on this unit (confirmed absent from both the manual and datasheet). (7) Unit is a large floor/ceiling-mount installation projector (112.4 lbs / 51 kg body only), not a rack-mountable chassis, so rackUnits is omitted. (8) Branded \"NEC\" on the physical unit; the corporate/legal seller is Sharp NEC Display Solutions of America, Inc. — reflecting the \"Sharp/NEC\" naming in the request.",
+  "ports": [
+    {
+      "name": "COMPUTER IN",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin analog RGB input; datasheet lists it as 'RGB1 (analog)' and notes it also accepts component video via NEC's optional ADP-CV1E adapter cable."
+    },
+    {
+      "name": "MONITOR OUT",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Mini D-Sub 15-pin analog RGB loop-through output."
+    },
+    {
+      "name": "BNC IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Group of 5 BNC jacks (R/Cr/Cv, G/Y/Y, B/Cb/C, H, V) forming one switchable analog RGBHV / component / composite input; datasheet calls it 'RGB2 (analog) 5BNC'."
+    },
+    {
+      "name": "HDMI 1 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A, HDCP 1.4/2.2, deep color 8/10/12-bit."
+    },
+    {
+      "name": "HDMI 2 IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Type A, HDCP 1.4/2.2, deep color 8/10/12-bit."
+    },
+    {
+      "name": "DisplayPort IN",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "20-pin DisplayPort, HDCP 1.3/1.4. Grade inferred (not stated by name) from the manual's listed data rate of 5.4/2.7/1.62 Gbps over 1/2/4 lanes, i.e. HBR2 = DisplayPort 1.2 signaling."
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "Digital video input, HDCP 1.4/2.2. No bandwidth grade scale applies to DVI in this schema."
+    },
+    {
+      "name": "HDBaseT/LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Single RJ-45 jack; manual specifies 100BASE-TX. Carries HDBaseT video/control extension (input) plus LAN-based control, monitoring and remote-control passthrough on the same physical port."
+    },
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Labeled '3G/HD/SD-SDI IN Terminal (BNC)'; supports SD-SDI, HD-SDI and 3G-SDI up to 1080p50/60."
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Labeled '3G/HD/SD-SDI OUT Terminal (BNC)'; loop-through of the SDI input signal."
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo mini jack for wired remote control (disables IR sensor when connected)."
+    },
+    {
+      "name": "PC CONTROL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "D-Sub 9-pin serial control port (RS-232C, full duplex, 9600bps)."
+    },
+    {
+      "name": "TRIGGER 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "One of two 3.5mm stereo mini screen-trigger outputs (panel is labeled 'TRIGGER 1/2')."
+    },
+    {
+      "name": "TRIGGER 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Second of two 3.5mm stereo mini screen-trigger outputs (panel is labeled 'TRIGGER 1/2')."
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Power inlet. Rated 200-240V AC 50/60Hz only (no 100-120V support), 9.7A, up to ~1922W (Boost mode). The manual does not print the exact IEC inlet sub-type; C19 (high-current) is inferred because NEC specifies a power cord 'rated 15A or higher' against the 9.7A nameplate draw, which exceeds the typical 10A headroom of a standard C13/C14 inlet. Treat this one connector pick as a medium-confidence inference within an otherwise fully-confirmed source."
+    }
+  ]
+}

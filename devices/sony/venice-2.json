@@ -1,0 +1,127 @@
+{
+  "manufacturer": "Sony",
+  "model": "VENICE 2",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://pro.sony/en_GB/products/digital-cinema-cameras/venice2",
+  "confidence": "high",
+  "notes": "Source: Sony's official professional product site, Specifications tab (Inputs/Outputs section), for the current-generation VENICE 2 full-frame digital cinema camera (interchangeable 8.6K sensor MPC-3628 / 6K sensor MPC-3626). The en_US URL kept looping to a country-selector page during retrieval, so the identical-content en_GB mirror (pro.sony/en_GB/...) was used and cited as sourceUrl.\n\nSeveral physical connectors on VENICE 2 are proprietary Sony/LEMO/Fischer types with no exact match in the allowed connector-id list; these were mapped to the closest available id (dc-barrel) and flagged per-port above — treat those as approximate connector shapes, not literal barrel jacks.\n\nExcluded from the ports list as non-signal/power accessory interfaces rather than external AV cabling: VF (LEMO 26-pin viewfinder interface, carries video+power+control to the EVF), Lens (12-pin) and Lens Mount Hot Shoe (4-pin x2, Cooke/i and ZEISS eXtended Data lens-metadata contacts), built-in monaural camera speaker output, and the AXS Memory (x2) / SD (x1) card slots (storage media, not cable ports).\n\nConfirmed-from-photo device labels (matching the official product image's visible side connector panel, top-to-bottom): 12V OUT, MONITOR OUT, GENLOCK, TC IN, AUX, LAN, REMOTE. DC IN, the SDI outputs, HDMI, audio input, USB, headphone jack and the battery/24V outputs are on the opposite (unphotographed in this pass) panel, so their exact on-body silkscreen text is assumed from Sony's spec wording rather than visually confirmed.",
+  "ports": [
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr4-dc"
+    },
+    {
+      "name": "BATT DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Sony spec lists this as a proprietary square-shaped 5-pin battery/DC input connector; dc-barrel is the closest available id, not a literal barrel jack."
+    },
+    {
+      "name": "12V OUT",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 2-pin LEMO; dc-barrel used as closest available id in the allowed connector list."
+    },
+    {
+      "name": "24V OUT 1",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a 3-pin Fischer connector (camera has two of these, x2); dc-barrel used as closest available id."
+    },
+    {
+      "name": "24V OUT 2",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Second of two 3-pin Fischer 24V DC outputs; dc-barrel used as closest available id."
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Sony spec states the SDI Output bank is BNC x4 supporting 12G/6G/3G/1.5G-SDI collectively; assignment of the 12G grade to this specific labeled output is a common-convention inference, not an explicitly numbered spec line."
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Grade-to-port-number assignment inferred (see SDI Out 1 note)."
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Grade-to-port-number assignment inferred (see SDI Out 1 note)."
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Grade-to-port-number assignment inferred (see SDI Out 1 note); 1.5G-SDI = HD-SDI."
+    },
+    {
+      "name": "MONITOR OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Listed by Sony as \"HD MONI Output\", BNC x1, supporting up to 3G/1.5G-SDI; device panel label confirmed as MONITOR OUT from official product photography."
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "hdmi"
+    },
+    {
+      "name": "AUDIO IN",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "5-pin XLR (female), selectable LINE/AES-EBU/MIC/MIC+48V."
+    },
+    {
+      "name": "TC IN",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "GENLOCK",
+      "direction": "input",
+      "connector": "bnc"
+    },
+    {
+      "name": "AUX",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Sony spec lists this BNC connector's function as Timecode Output."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45, 10BASE-T/100BASE-TX per spec."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Listed as \"USB host, type-A x1\"; no USB version/speed stated in spec."
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack headphone output; exact on-body silkscreen label not visually confirmed."
+    },
+    {
+      "name": "REMOTE",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Sony spec lists an 8-pin Remote connector with no protocol stated; RS-422 chosen as the closest listed id based on typical Sony broadcast-camera remote-control interfaces (unconfirmed)."
+    }
+  ]
+}

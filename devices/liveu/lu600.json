@@ -1,0 +1,69 @@
+{
+  "manufacturer": "LiveU",
+  "model": "LU600",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://cdn-liveutv.pressidium.com/wp-content/uploads/2021/07/LU600_HEVC_Datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Portable backpack \"bonded cellular\" video encoder, not rack-mountable (rackUnits omitted). Specs taken from LiveU's official LU600 HEVC datasheet PDF, cross-checked against the official 104-page \"LiveU LU600 User Guide\" v7.5.3 (uploads-ssl.webflow.com/.../liveu-lu600-user-guide-v75x--7may2019.pdf) for port photos/labels (DC IN, HDMI IN/OUT, SDI IN, USB port, 2x RJ-45). Ports listed reflect the BASE configuration, which ships with the HEVC-HD video interface card (3G/HD/SD-SDI + HDMI 1.4 input, Micro HDMI output). Two optional video-card variants exist and change the video I/O: \"4K-HDMI\" card upgrades the HDMI input to HDMI 2.0 (adds 4K support, same SDI-in spec); \"4K-SDI\" card instead exposes FOUR BNC/SDI inputs (labeled 1-3G/12G, 2-3G, 3-3G, 4-3G, supporting up to 4x3G-SDI or a single 12G-SDI feed) and has NO HDMI input at all. An optional \"LU600-SMA\" hardware variant adds external SMA antenna connectors for the cellular modules (not present on the base unit, so not listed as a port here). A Micro SD card slot (internal 16GB + user-installable card, used for Store & Forward and local file transfer) exists on the unit but is omitted from the port list since removable-storage slots aren't a signal/power connector type in this schema. No link-speed/version is stated anywhere for the two Ethernet ports, the Type-A USB port, or the Micro HDMI output, so grade was omitted on those (only SDI IN and HDMI IN have a stated version). Confidence is medium rather than high because of two open items: the exact physical form of the \"Audio jack (in + out)\" (single combo jack vs. two separate 3.5mm jacks) and the undocumented \"mini USB\" interface listed only in the marketing datasheet.",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI IN",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "HDMI OUT",
+      "direction": "output",
+      "connector": "micro-hdmi",
+      "note": "Micro HDMI jack on the video card, used for Video Return / external monitor output; HDMI version not specified by the manufacturer for this port."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Datasheet lists 'Audio jack (in + out)' as a single interface line; represented as two 3.5mm TRS jacks since exact combo/split jack configuration could not be confirmed from a labeled photo."
+    },
+    {
+      "name": "Audio Out (Headphone/IFB)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Headphone jack on the video card; used to monitor IFB or Video Return audio (user guide 'IFB Headphone Detection & Control')."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Powers the unit and charges the battery. Bundled 90W/16V AC-DC adapter (100-240VAC input) or an optional 12VDC vehicle-lighter adapter both feed this same jack; neither the adapter's AC inlet nor the vehicle plug is a separate connector on the LU600 itself."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Single Type-A port located above the DC IN connector; shared/reused for an optional 9th cellular modem, USB flash-drive file transfer, and connecting the wired remote control."
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45"
+    },
+    {
+      "name": "Mini USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Listed in LiveU's official datasheet interfaces row ('Type-A USB, mini USB, ...'), but the connector-id list has no mini-USB option so usb-micro is used as the closest match. Its physical location/purpose is not documented anywhere in the 104-page LU600 User Guide, which only shows a single Type-A USB port for all USB functions — low-confidence placeholder."
+    }
+  ]
+}

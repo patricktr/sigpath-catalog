@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Yealink",
+  "model": "RoomPanel",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://www.yealink.com/upfiles/products/datasheet/Yealink-RoomPanel-Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Official Yealink datasheet for the original RoomPanel (8-inch, Android 9, 10-point touch meeting-room scheduling panel), fetched directly from www.yealink.com (yealink.com blocks generic WebFetch bot UAs with 403, so it was retrieved via curl with a browser user-agent; content is the authentic manufacturer PDF, not a mirror). This is a scheduling/control touch panel, not a video source or display — it has no HDMI/video I/O; its only physical connectors are Ethernet, USB-C, and 12V DC power, all confirmed in the \"Connectivity\" and \"Power Supply\" spec sections. A \"1 x Reset pinhole\" recessed button also exists but is not a signal/power connector and is omitted. Ethernet is graded eth-100m per the explicitly stated \"10/100Mbps Fast Ethernet\" spec. Not rack-mountable (wall/box/glass-mounted device), so rackUnits is omitted. Note: Yealink also sells newer variants \"RoomPanel Plus\" and \"RoomPanel E2\" (Android 13) with near-identical connectivity specs (1x Fast Ethernet, 1x USB-C, PoE 802.3af + 12V adapter) — this entry is specifically the original \"RoomPanel\" model per the user's request, confirmed via its own dedicated datasheet PDF.",
+  "ports": [
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Also carries Power-over-Ethernet (IEEE 802.3af) — this is the same physical port, not a separate power connector."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Datasheet lists only '1 x USB-C port' with no version/speed spec, so no bandwidth grade is set."
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Datasheet specifies '12V Power Adapter' but does not name the physical connector; dc-barrel is inferred as the standard form factor for this class of device (closest match in the allowed connector list)."
+    }
+  ]
+}

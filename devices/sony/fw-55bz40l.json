@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Sony",
+  "model": "FW-55BZ40L",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://pro.sony/ue_US/products/pro-displays/fw-55bz40l",
+  "confidence": "high",
+  "notes": "55\" 4K HDR professional/commercial display (Android TV-based BRAVIA Pro BZ40L series), 700 nits, VESA 300x300mm, no rack mounting (wall/tabletop mount only). Port list drawn from Sony's official FW-55BZ40L Reference Manual \"Input/Output Jacks\" specification section (mirrored at manualowl.com, page 18/68 of the EN PDF: manualowl.com/m/Sony/FW-55BZ40L/Manual/703569?page=18) plus the official pro.sony spec/overview page, cross-checked against B&H Photo's published spec table (bhphotovideo.com, product 1774438-REG). HDMI grade (2.0) is inferred from Sony's documented max supported timings (4096x2160p/3840x2160p up to 60Hz only; no 4K120 or 8K, which are exclusive to the larger 98\" FW-98BZ50L/98BZ30L variants of this same manual) rather than an explicit \"HDMI 2.0\" label; HDCP 2.3 is supported on all four HDMI inputs. This 55\" model does NOT have the S-CENTER SPEAKER IN jack that appears on the 98\" BZ50L/BZ30L variants covered in the same shared manual. Power inlet connector type is inferred (Sony's manual only states electrical ratings, 110-240VAC 50/60Hz, 201W typical/0.5W standby; B&H separately lists \"Power Adapter Type: Internal\" and a \"Power Cord\" as an included accessory, consistent with a detachable IEC inlet, but the exact IEC variant was not visually confirmed). Also includes Wi-Fi 5 (802.11ac) and Bluetooth 4.2 wireless (not modeled as physical ports).",
+  "ports": [
+    {
+      "name": "AV IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Video/Audio input mini-jack; carries composite video + stereo audio via breakout cable"
+    },
+    {
+      "name": "HDMI IN 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI IN 3",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Also supports eARC/ARC audio return (Dolby Atmos/DTS:X/Dolby TrueHD/DTS-HD MA passthrough)"
+    },
+    {
+      "name": "HDMI IN 4",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Can double as a DVI input via DVI-HDMI adapter; pairs with HDMI 4 AUDIO IN for analog sound in DVI mode"
+    },
+    {
+      "name": "HDMI 4 AUDIO IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo audio input used only when HDMI IN 4 is fed via a DVI-HDMI adapter"
+    },
+    {
+      "name": "DIGITAL AUDIO OUT (OPTICAL)",
+      "direction": "output",
+      "connector": "toslink"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "High Speed USB (USB 2.0), 500 mA output"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "SuperSpeed USB (USB 3.2 Gen 1), 900 mA output"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX only"
+    },
+    {
+      "name": "REMOTE",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "RS-232C external control input, physically a 3.5mm mini-jack; Sony includes a 1/8\" to DB-9 adapter cable in the box"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal power supply with detachable power cord included; exact IEC inlet variant (C13/C14) not explicitly stated by Sony, inferred from included cord + 'internal' adapter type"
+    }
+  ]
+}

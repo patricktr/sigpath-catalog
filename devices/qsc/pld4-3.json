@@ -1,0 +1,104 @@
+{
+  "manufacturer": "QSC",
+  "model": "PLD4.3",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.qscaudio.com/resource-files/productresources/amp/pld/q_amp_pld_usermanual.pdf",
+  "confidence": "high",
+  "notes": "Sources used: QSC's official PLD Series spec sheet PDF (https://www.qscaudio.com/resource-files/productresources/amp/pld/q_amp_pld_specs.pdf, \"PLD Spec Sheet 09/19/16\") and the official QSC PLD user manual PDF (https://www.qscaudio.com/resource-files/productresources/amp/pld/q_amp_pld_usermanual.pdf, TD-000368-00-A), both linked from QSC's current discontinued-products page (https://www.qscaudio.com/live-sound/support/discontinued-products/amplifiers) — PLD4.3 is now End-of-Service/discontinued but the documentation is complete and unambiguous.\n\nPhysical I/O confirmed from the manual's rear-panel diagram/legend: \"1. USB Type B, 4-Pin; 2. Four XLR-F Female Line Input Connectors; 3. Four XLR-M Male Line Output Connectors; 4. Four NL4 Output Connectors (Individual and Parallel); 5. Two NL4 Output Connectors (Bridged Outputs); ... 8. Locking IEC Power Connection (100-240 VAC, 50-60 Hz).\" Input channels are labeled 1-4 (\"Four XLR jacks labeled 1 to 4... audio inputs\"); output/speaker channels are labeled A, B, C, D (\"Output channels are labeled A, B, C, and D\"; default routing \"Input 1 to Output A, 2 to B, 3 to C, and 4 to D\"); the two bridged NL4 jacks are labeled X and Y on the rear-panel silkscreen diagram (A+B bridge → X, C+D bridge → Y).\n\nNo Ethernet/network port exists on the PLD series (unlike QSC's higher-tier CXD/Q-SYS amplifiers) — control is local front panel or via the USB port and QSC's Amplifier Navigator desktop app.\n\nNo connector grades apply: XLR/Speakon/IEC are not in the graded connector families, and the manual does not state a USB spec version for the USB-B port, so grade is omitted everywhere per instructions.\n\nDimensions 3.5\" x 19\" x 16\" confirm 2 rack units (RU); QSC's own marketing copy states \"just 2RU.\" Weight 21.0 lb (9.5 kg) net. AC input is a universal 100-240 VAC 50-60 Hz switchmode supply with PFC; the \"locking IEC\" inlet uses a proprietary retention collar over a standard IEC C13/C14-shaped connector (ships with a locking IEC cable) — mapped to the closest taxonomy id \"iec\" since no dedicated locking-IEC id exists.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Output 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, wired in parallel with Input 1 for daisy-chaining to another amplifier's input"
+    },
+    {
+      "name": "Line Output 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, wired in parallel with Input 2 for daisy-chaining to another amplifier's input"
+    },
+    {
+      "name": "Line Output 3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, wired in parallel with Input 3 for daisy-chaining to another amplifier's input"
+    },
+    {
+      "name": "Line Output 4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Male XLR, wired in parallel with Input 4 for daisy-chaining to another amplifier's input"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4 (Neutrik Speakon 4-pole), individual/parallel speaker output for channel A"
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4, individual/parallel speaker output for channel B"
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4, individual/parallel speaker output for channel C"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4, individual/parallel speaker output for channel D"
+    },
+    {
+      "name": "Output X",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4, bridged speaker output (A+B bridge)"
+    },
+    {
+      "name": "Output Y",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "NL4, bridged speaker output (C+D bridge)"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B, 4-pin; connects to Mac/PC for Amplifier Navigator software (firmware updates, preset management); spec sheet does not state a USB version"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel locking IEC power inlet, 100-240 VAC 50-60 Hz universal supply; physically a locking variant of a standard IEC C13/C14 inlet (no exact match in taxonomy, mapped to closest: iec)"
+    }
+  ]
+}

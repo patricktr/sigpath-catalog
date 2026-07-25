@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Contacta",
+  "model": "HLD9",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://contactainc.com/wp-content/uploads/2021/04/HLD9_productsheet.pdf",
+  "confidence": "high",
+  "notes": "Source is Contacta's own US product sheet (contactainc.com), which mirrors the UK contacta.co.uk HLD9 datasheet; both show the same rear-panel photo and technical-data table (cross-checked against thunderhearing.com's loop-driver manual page, which independently lists 10A RMS / 36V RMS / single-channel). Rear panel, left to right: POWER (IEC inlet) / STATUS (terminal block) / a PHANTOM-POWER status LED (not a port) / MIC (XLR) / LINE (XLR) / EXPANSION (RJ-style jack) / FEATURE (RJ-style jack) / LOOP (speakON). Mic and Line are combo jacks accepting either XLR or 1/4\" TRS. Expansion and Feature are proprietary Contacta interconnect/communications-processor links; the datasheet never names their connector type in text, only the rear-panel photo, so \"rj45\" is an inferred best-fit and no Ethernet grade is applied (this is not standard Ethernet). No bandwidth-graded connectors (HDMI/SDI/DP/USB/Ethernet-speed) are documented on this device, so no \"grade\" fields are set anywhere. Unit is a compact desktop chassis (7.87\"W x 2.48\"H x 10.47\"D, 5.51 lbs); Contacta lists an optional Single/Dual Rackmount Kit accessory, but the bare unit isn't inherently rack-mount and its height doesn't cleanly map to a standard U, so rackUnits is omitted. AC mains voltage/current for the built-in PSU is not stated in this datasheet.",
+  "ports": [
+    {
+      "name": "Mic",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Input 1 (Microphone): balanced XLR with switchable phantom power, or 1/4\" TRS jack for electret mic with 3.3VDC bias via 680Ω load."
+    },
+    {
+      "name": "Line",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Input 2 (Line): balanced XLR or 1/4\" TRS jack to an ohmically isolated input."
+    },
+    {
+      "name": "Loop",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pole speakON loop output; 10A RMS compliance current @1kHz sine, 36V RMS compliance voltage."
+    },
+    {
+      "name": "Expansion",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary Contacta interconnect for linking additional HLD9/Contacta units in perimeter or phased-array configurations (90° phase shift selectable). Datasheet does not name the connector type; rear-panel photo shows an RJ-style modular jack, mapped here as the closest listed connector. Not standard Ethernet, so no grade is set."
+    },
+    {
+      "name": "Feature",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "External monitor & control interface to the Contacta communications processor for remote setup/level control and system interrogation. Rear-panel photo shows an RJ-style modular jack (connector type not explicitly named in the datasheet); not standard Ethernet, so no grade is set."
+    },
+    {
+      "name": "Status",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Volt-free (dry) relay contacts, SPCO, on a small pluggable screw-terminal block."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power inlet for the built-in internal power supply; AC voltage/current rating not stated on the datasheet."
+    }
+  ]
+}

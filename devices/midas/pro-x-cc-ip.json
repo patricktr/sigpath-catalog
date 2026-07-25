@@ -1,0 +1,357 @@
+{
+  "manufacturer": "Midas",
+  "model": "PRO X-CC-IP",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://files.bzbexpress.com/files/attachments/1437685/midas-mixers-pro-x-cc-ip-spec.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Midas's official \"PRO SERIES / PRO X-CC-IP\" datasheet (Midas-branded PDF, mirrored by AV retailer BZB Express; midasconsoles.com no longer hosts a live PRO X product page for this discontinued/legacy Pro Series line). \"PRO X-CC-IP\" is the current designation for the control-centre/control-surface half of the system marketed as \"Midas PRO X\" — a separate DL251 audio engine/stage box (rack-mounted, sold separately) provides most of the actual stage-side mic/line I/O and is NOT covered by this datasheet or port list. The console itself is a large console/desk unit (1365 x 940 x 434 mm), not rack-mountable, so rackUnits is omitted. Individual numbered port names (Mic/Line In 1-8, AES50 1-3, AES3 In/Out 1-4, Line Out 1-8, etc.) reflect quantities given in the spec sheet; exact printed rear-panel labels (e.g. \"A/B\" vs \"1/2/3\" for AES50, \"X/Y\" redundancy pairing) could not be independently confirmed from this document. Snake (Fibre) ports use Neutrik opticalCON DUO connectors, mapped to the closest available id \"fiber-lc\". KVM Input (qty 3) is modeled as a VGA video-in port paired with a USB-A port for keyboard/mouse pass-through, per the spec's \"Analogue VGA, USB keyboard & mouse\" description — exact USB connector gender/count per KVM input is not stated. No bandwidth grade was set on AES50/etherCON digital-audio links, the HyperMAC copper snake, or the \"Ethernet Control Data\"/\"External Ethernet Tunnel\" ports because the spec states audio channel count/format rather than a stated Ethernet PHY speed. USB Interface ports are graded usb-2.0 per the stated \"USB 2.0 full speed (12.0 Mbit/s)\" spec. Three hot-swappable, N+1-redundant power-supply modules (MKT-PSU-2) each have their own IEC mains inlet (100-240 VAC).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR balanced mic/line input with +48V phantom power, 24-bit/96kHz A/D"
+    },
+    {
+      "name": "Talk Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "600 ohm, +48V phantom power"
+    },
+    {
+      "name": "Talkback In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Line Out 8",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR balanced line output, 24-bit/96kHz D/A"
+    },
+    {
+      "name": "Monitor Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Monitor Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Assignable Out 1",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Assignable Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Talk Out",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Headphone Out 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" stereo jack"
+    },
+    {
+      "name": "Headphone Out 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" stereo jack"
+    },
+    {
+      "name": "AES3 In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "AES3-2009, 2ch, 32-96kHz"
+    },
+    {
+      "name": "AES3 In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "AES3-2009, 2ch, 48/96kHz or auto-tracking"
+    },
+    {
+      "name": "AES3 Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES50 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "AES50-2011, 24ch bidirectional digital audio @96kHz; N+1 cable redundancy (X&Y)"
+    },
+    {
+      "name": "AES50 2",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "AES50 3",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "HyperMAC Snake (Copper) 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "KLARK TEKNIK HyperMAC, 192ch bidirectional @96kHz, dual cable redundancy X&Y"
+    },
+    {
+      "name": "HyperMAC Snake (Copper) 2",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "HyperMAC Snake (Fibre) 1",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Actual connector is Neutrik opticalCON DUO (not in allowed list, mapped to closest fiber id); 1.25Gb/s 1000BASE-SX on 50/125 multimode fibre, HyperMAC 192ch @96kHz"
+    },
+    {
+      "name": "HyperMAC Snake (Fibre) 2",
+      "direction": "bidirectional",
+      "connector": "fiber-lc",
+      "note": "Actual connector is Neutrik opticalCON DUO"
+    },
+    {
+      "name": "Ethernet Control 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Dual cable redundancy (1&2); PHY speed not stated in spec"
+    },
+    {
+      "name": "Ethernet Control 2",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Word Clock In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "75 ohm, TTL level 96kHz square wave"
+    },
+    {
+      "name": "Word Clock Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "75 ohm, TTL level 96kHz square wave"
+    },
+    {
+      "name": "AES3 Sync In",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES3 Sync Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Outputs 96kHz Grade II reference clock"
+    },
+    {
+      "name": "External Ethernet Tunnel",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Screen Out 1",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Analogue VGA to 15\" console displays"
+    },
+    {
+      "name": "Screen Out 2",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "KVM Input 1 (Video)",
+      "direction": "input",
+      "connector": "vga",
+      "note": "Part of KVM Input group; paired with USB keyboard/mouse port"
+    },
+    {
+      "name": "KVM Input 1 (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "KVM Input 2 (Video)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "KVM Input 2 (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "KVM Input 3 (Video)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "KVM Input 3 (USB)",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 full speed (12.0 Mbit/s), 5V 1A max load"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "PSU 1 AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC mains inlet, 100-240VAC 50-60Hz; PRO Series PSU module MKT-PSU-2, N+1 redundant"
+    },
+    {
+      "name": "PSU 2 AC In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "PSU 3 AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

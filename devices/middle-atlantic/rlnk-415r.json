@@ -1,0 +1,43 @@
+{
+  "manufacturer": "Middle Atlantic",
+  "model": "RLNK-415R",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://legrandav.mcoutput.com/pdu-rls-um/MAP-Power-RLS-UM-I-00768.pdf",
+  "confidence": "high",
+  "notes": "Half-rack-width unit: 8.76\"W x 9.67\"D x 1.735\"H (1U tall, half of 19\" rack width — typically paired with a second half-rack device or joiner bracket to fill a full rack space). All 4 NEMA 5-15R outlets are individually IP-controllable (RackLink), 12A rated/15A max total load at 120V nominal. Power is supplied via a detachable 9-10 ft cord (IEC C13 female to NEMA 5-15P male, included) into the unit's IEC C14 inlet, which has a cord-retainer clip — not a captive/hardwired cord. Ethernet port is explicitly documented as 10/100 Mbps (Cat5e or better, not provided); no USB port on this model. A recessed factory-reset button is present on the rear panel but is a control button, not a cable/signal connector, so it was not listed as a port. Sourced from Legrand's official \"Select Series PDU with RackLink\" User Manual (doc I-00768, current/2026 edition), cross-checked against Middle Atlantic's own \"Select Series\" datasheet (doc 96-01237, distributed via Markertek) which independently confirms 4 total/4 controlled outlets, IEC C14 inlet, and dimensions. Manufacturer's own middleatlantic.com/legrandav.com product pages did not serve full spec content to automated fetch (nav-only), so the manual/datasheet PDFs were used as the authoritative sources instead.",
+  "ports": [
+    {
+      "name": "Outlet 1 (Front)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 2 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 3 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Outlet 4 (Rear)",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Ethernet Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "IEC C14 Power Input",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "manufacturer": "BSS Audio",
+  "model": "BLU-100",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://adn.harmanpro.com/product_documents/documents/1448_1506524707/BLU-100_Data_Sheet_18-0717-B_original.pdf",
+  "confidence": "high",
+  "notes": "Sourced from BSS Audio's own product page (bssaudio.com/en-US/products/blu-100) and its linked official datasheet (Cut Sheet 18-0717-B) and Install Guide (rear-panel diagram), both served from bssaudio.com's document host (adn.harmanpro.com — BSS Audio's parent, Harman Professional). The datasheet's technical-specifications table explicitly confirms all analog I/O as \"Phoenix/Combicon removable screw connectors,\" control I/O and watchdog as Phoenix/Combicon, BLU link and control network as RJ45, and mains as 100–240V AC/50–60Hz. Grades were omitted for the RJ45 Ethernet control port and both BLU link ports because the datasheet states cable type/length and latency but never an explicit Ethernet speed (BLU link is BSS's proprietary digital-audio-bus protocol over Cat5e, not standard graded Ethernet). The AC inlet's exact IEC sub-type (C13/C14) is inferred from the rear-panel photo rather than stated in text. Physical I/O is grouped by the physical connector blocks silkscreened on the rear panel (INPUTS split into blocks A/B/C of 4 channels each; OUTPUTS split into blocks D/E of 4 channels each) rather than broken out per individual channel, since each lettered block is one pluggable terminal-block connector.",
+  "ports": [
+    {
+      "name": "Input A",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Analog mic/line inputs 1–4 of 12, on Phoenix/Combicon removable screw terminal block; software gain to +48dB in 6dB steps, 48V phantom power switchable per channel"
+    },
+    {
+      "name": "Input B",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Analog mic/line inputs 5–8 of 12"
+    },
+    {
+      "name": "Input C",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Analog mic/line inputs 9–12 of 12"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Analog outputs 1–4 of 8, on Phoenix/Combicon removable screw terminal block"
+    },
+    {
+      "name": "Output E",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Analog outputs 5–8 of 8"
+    },
+    {
+      "name": "Control",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "GPIO terminal block: 12 control inputs (0–4.5V) plus 6 logic outputs (0/+5V, 10mA source/60mA sink) for third-party control system integration"
+    },
+    {
+      "name": "Watchdog",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Dedicated Phoenix/Combicon opto-relay output for failsafe/rack-controller integration"
+    },
+    {
+      "name": "RS232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port (DE9 per rear-panel diagram)"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "HiQnet control network port for HiQnet London Architect; Cat5 cabling, 100m max, no link speed stated in datasheet so grade omitted"
+    },
+    {
+      "name": "BLU link In",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "One of two ports for the proprietary 48-channel, low-latency, fault-tolerant digital audio bus (daisy-chain up to 60 nodes), Cat5e, 100m between devices; proprietary protocol, not standard graded Ethernet, so grade omitted"
+    },
+    {
+      "name": "BLU link Out",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Second BLU link port for daisy-chaining to the next device"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100–240V AC, 50/60Hz, <55VA (<188 BTU/hr); standard IEC inlet visible in rear-panel photo — exact connector sub-type (C13/C14) not spelled out in the text spec table, so inferred from imagery"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "manufacturer": "Sharp",
+  "model": "PN-HB751",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://global.sharp/products/img/professional-monitors/products/pn-hb851_hb751_hb651/PN-HB851_HB751_HB651_BRO_S.pdf",
+  "confidence": "medium",
+  "notes": "Sharp PN-HB751 is a 75-inch (190.5cm), 3840x2160 4K LCD large-format signage/meeting-room display from the PN-HB851 (85\")/PN-HB751 (75\")/PN-HB651 (65\") family, with a built-in Android 7.1 SoC digital-signage player (SHARP e-Signage S). It is discontinued (listed \"Obsolete\" on Sharp's EU site). Desktop/wall-mount panel, VESA 600x400mm 4-point M6 mount — not rack-mountable, so rackUnits is omitted. Power consumption max 320W at 100-240VAC 50/60Hz; weight ~37kg without stand.\n\nPrimary source used: Sharp's own global product brochure PDF (PN-HB851_HB751_HB651_BRO_S.pdf), which contains a per-model specifications table and terminal diagrams. Cross-checked against Sharp's US operation manual (PNHxx51_Operation_Manual.pdf, business.sharpusa.com) which includes exact terminal pin-out diagrams (confirms RS-232C In = DE-9, RS-232C Out = DE-9 pinout reached via the supplied 3.5mm-jack conversion cable), and Sharp EU's datasheet/product page (sharp.eu/sharp-pn-hb751), which corroborates the same port counts.\n\nConfidence caveats:\n- HDMI grade (2.0) is inferred, not explicitly printed: Sharp's own spec sheet just lists \"HDMI x2\" with no version number. The AV signal-timing compatibility table confirms 3840x2160@60Hz and 4096x2160@60Hz support (which requires HDMI 2.0-class 18Gbps bandwidth), and the OSD has an \"HDMI MODES\" MODE1/MODE2 toggle that gates full-bandwidth 4:2:0 vs limited legacy timings — consistent with HDMI 2.0, but not a confirmed \"2.0\" label from Sharp.\n- AC input connector type (mapped to \"iec\") is inferred from context (detachable \"AC power cord\" accessory plugging into an \"AC input terminal\", with a cable-clamp strain relief) — no manufacturer diagram/photo explicitly names the inlet as IEC C13/C14.\n- USB port labeling: Sharp's spec table states 3 total USB ports (2x USB 3.0-compliant + 1x USB 2.0-compliant, all Type-A), but does not give individual port numbers/labels, so \"USB (3.0) 1/2\" and \"USB (2.0)\" names here are generic, not printed silkscreen labels.\n\nNot modeled as ports (out of scope for AV signal/power I/O): 2x external Wi-Fi antenna (SMA-style) terminals for the built-in IEEE802.11ac/n/a/g/b + Bluetooth 4.1 radio; a microSD card slot (media playback, not a cable-routed signal path); and a Mini-OPS-style internal expansion slot (12V/2.5A) for optional add-on boards (PN-ZB03H HDBaseT 2.0 receiver board or PN-ZB03W wireless-collaboration board), which are separate optional accessories rather than standard I/O on the base unit.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort Out",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Used to daisy-chain up to 4 monitors; output is disabled when the unit is off/standby and does not pass HDR."
+    },
+    {
+      "name": "D-Sub (VGA)",
+      "direction": "input",
+      "connector": "vga"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Line/headphone output; not controllable from the on-screen audio menu."
+    },
+    {
+      "name": "RS-232C In",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Physically a standard DE-9 (D-sub 9-pin) female connector on the unit."
+    },
+    {
+      "name": "RS-232C Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Physically a 3.5mm mini stereo jack on the unit; Sharp ships a bundled RS-232C conversion cable (3.5mm-to-DE-9) to present it as a standard RS232 port. No distinct connector id exists for this jack variant in the taxonomy, so it is mapped to rs232."
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB (3.0) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB (3.0) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB (2.0)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Connector shell type inferred (standard detachable IEC C13/C14 inlet, cable-clamp retained); the exact IEC variant is not explicitly stated/photographed in the documentation reviewed."
+    }
+  ]
+}

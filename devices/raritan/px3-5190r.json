@@ -1,0 +1,115 @@
+{
+  "manufacturer": "Raritan",
+  "model": "PX3-5190R",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 1,
+  "sourceUrl": "https://cdn.raritan.com/product-selector/pdus/PX3-5190R/PX3-5190R-spec.pdf",
+  "confidence": "high",
+  "notes": "Source is Raritan's own auto-generated \"Technical Specifications / Engineering Submittals\" PDF (rev20250625) from their product-selector CDN — authoritative and complete for physical I/O, including a control-panel port diagram and electrical one-line diagram. AC input is a captive cord ending in an IEC 60309 2P+E 6h 16A pin-and-sleeve plug (IP44); no exact match exists in the allowed connector list, so nema-5-15 was used as the closest \"captive-cord/plug\" placeholder (same convention already used in this catalog for other PDUs with non-listed plug types, e.g. Tripp Lite PDUMH30HVAT). All 8 outlets are IEC 60320 C13, 10A, individually metered/switched. Sensor/Expansion/Feature/Console-Modem ports are physically RJ45 8P8C jacks but carry proprietary Raritan bus or RS-232 signaling rather than graded Ethernet, so no bandwidth grade was set on them; only the two ETH ports (Gigabit primary, Fast-Ethernet redundant secondary) got grades, per the spec's \"Networking\" line. Optional 802.11a/b/g/n Wi-Fi is via a USB dongle, not a fixed physical port, and is omitted from the port list. Unit is 1U (17.3\" x 7.2\" x 1.7\"), mounts via RACK-KIT-DPX-1U.",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Captive ~3m (9.84 ft) rear-feed power cord terminating in an IEC 60309 2P+E 6h, 16A, 230V (200-240V rated) pin-and-sleeve 'Commando'-style plug, IP44. IEC 60309 is not in the connector list; nema-5-15 used only as the closest 'captive-cord/plug' placeholder category — the actual plug is round IEC 60309, not NEMA 5-15."
+    },
+    {
+      "name": "Outlet 1",
+      "direction": "output",
+      "connector": "iec",
+      "note": "IEC 60320 C13, 10A; individually metered and remote-switchable; SecureLok-compatible."
+    },
+    {
+      "name": "Outlet 2",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 3",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 4",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 5",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 6",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 7",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "Outlet 8",
+      "direction": "output",
+      "connector": "iec"
+    },
+    {
+      "name": "ETH1 (10/100/1000)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Primary Gigabit Ethernet management port."
+    },
+    {
+      "name": "ETH2 (10/100)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Secondary, redundant Fast Ethernet management port."
+    },
+    {
+      "name": "Sensor",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 port for daisy-chaining Raritan environmental sensors (temperature, humidity, air flow, differential pressure, water leak, contact closure); proprietary sensor bus, not graded Ethernet, so no bandwidth grade set."
+    },
+    {
+      "name": "Expansion",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 expansion port for Raritan accessory modules; proprietary bus, not graded Ethernet, so no bandwidth grade set."
+    },
+    {
+      "name": "Feature",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 feature port for Raritan accessories (e.g. asset-management strips); proprietary bus, not graded Ethernet, so no bandwidth grade set."
+    },
+    {
+      "name": "Console / Modem",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 jack carrying RS-232 for local serial console access or an external modem; not a data-networking Ethernet port, so no bandwidth grade set."
+    },
+    {
+      "name": "USB-B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Front-panel port; used for local configuration/firmware. USB speed not stated in the spec, so no grade set."
+    },
+    {
+      "name": "USB-A (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel host port; used for USB daisy-chain cascading (up to 32 PDUs) or an optional Wi-Fi dongle. USB speed not stated in the spec, so no grade set."
+    },
+    {
+      "name": "USB-A (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Second front-panel USB-A host port, same function as USB-A (1). USB speed not stated in the spec, so no grade set."
+    }
+  ]
+}

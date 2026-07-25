@@ -1,0 +1,112 @@
+{
+  "manufacturer": "ETC",
+  "model": "Ion Xe 20",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.etcconnect.com/Products/Consoles/Eos-Consoles/Ion-Xe/Tech-Specs.aspx",
+  "confidence": "high",
+  "notes": "Lighting control console (ETC Eos family), not a traditional AV switcher/display — mapped to category \"control\" / type \"Control processor\" as closest fit. Sourced from ETC's own Tech-Specs page (etcconnect.com) cross-verified against two versions of ETC's official Ion Xe 20 datasheet PDF (Rev C 02/2018 and Rev D 2022-01, both ETC-authored, mirrored on musson.com and storm.rent CDNs) — content matches exactly. Desktop unit, not rack-mountable (rackUnits omitted); the rack-mount \"Ion Xe RPU\" is a separate product/model. Four DMX-512/RDM ports use 5-pin XLR (xlr5); primary function is DMX output, but RDM adds bidirectional device-discovery/data return over the same connector. Two Gigabit Ethernet RJ45 ports (individually configurable, sACN/Art-Net output). USB is spec'd only as \"USB 3.1 ports (5 USB-A, 2 USB-C)\" without Gen1/Gen2 distinction — grade usb-5g (5Gbps) is inferred/medium-confidence since plain \"USB 3.1\" most commonly denotes Gen1; could actually be usb-10g if Gen2. Two DisplayPort video outputs support 1920x1080–3840x2160 external monitors, but ETC does not state a DP version, so grade is omitted (resolution alone doesn't confirm DP 1.2/1.4/2.0). Console also has internal 802.11ac WiFi and Bluetooth 5.1 radios (future-software-enabled) and a Kensington lock slot — omitted as neither is a physical signal/power connector. Not confirmed: exact front-vs-rear physical placement of individual USB ports (spec states one USB-A is front-panel, remainder rear/keyboard-tray) — port list reflects total counts only, not per-port location.",
+  "ports": [
+    {
+      "name": "DMX/RDM 1",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX/RDM 2",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX/RDM 3",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX/RDM 4",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 5",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Contact Closure (D-Sub)",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Closest taxonomy match; physically a D-Sub connector for basic contact-closure triggers (not literal RS-232 serial data). Fuller MIDI/SMPTE/analog-serial I/O requires an external ETC Response/I/O Gateway and is not a native port on this console, so it is excluded here."
+    },
+    {
+      "name": "Littlite",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "3-pin XLR-shaped accessory power port supplying 12V DC to the included gooseneck task light, not an audio connector; xlr3 chosen as closest shape match."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

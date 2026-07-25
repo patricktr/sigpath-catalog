@@ -1,0 +1,105 @@
+{
+  "manufacturer": "AV Stumpfl",
+  "model": "PIXERA one Gen 2",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 1,
+  "sourceUrl": "https://pixera.one/fileadmin/user_upload/downloads/en/pixera/Technical_Specifications/2024-04-03%20PIXERA%20one%20Gen.%202%20Technical%20Specifications.pdf",
+  "confidence": "medium",
+  "notes": "Source: AV Stumpfl's official \"PIXERA one Gen. 2 - Basic technical specifications\" PDF (rev. 2024-04-03), cross-checked against the AV Stumpfl/PIXERA \"NEXT GENERATION MEDIA SERVER\" server manual's rear-panel item descriptions (avstumpfl.com) for exact connector wording. Ports listed above are the fixed/standard chassis I/O only. PIXERA one Gen 2 is a heavily modular real-time media server (\"à la carte hardware options\") with two SKUs, PX1-2-G2 (Dual) and PX1-4-G2 (Quad) — both have the same 4 physical DisplayPort 1.4a outputs, differing only in how many are software-licensed active. Not included as fixed ports because they are optional plug-in cards and \"not all configs possible\" simultaneously per AV Stumpfl: video-capture inputs (HDMI 2.0 via PXO-IH2, combined 12G-SDI/3G-SDI + HDMI via PXO-CT1H1, 3G-SDI via PXO-IS1/IS2/IS4 or PXO-CS4/CS8 in/out, 12G-SDI/3G-SDI via PXO-CT4 in/out — all BNC for SDI, HDMI-A for HDMI); an optional GUI output card (2x Mini DisplayPort 1.4a, up to 4096x2160, for local editing/3D visualization monitor); and optional additional audio I/O (SPDIF, AES/EBU, ADAT optical, MIDI) beyond the standard analog stereo TRS output. USB grade (usb-5g) is inferred — AV Stumpfl's spec only says \"USB3\" without stating generation/speed. Power inlet connector type is inferred as IEC (not explicitly named \"IEC C13/C14\" in either source). No dedicated video/audio inputs, HDMI, or SDI ports ship standard — this is fundamentally an output/playback media server, with capture being an add-on capability. Case is 1U (44.4mm height), 444 x 441mm footprint, 8.3kg.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "DP1.4a, up to 5120x2880@60Hz; part of the 4 fixed physical outputs (active count is license-gated: Director/2/4)"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4"
+    },
+    {
+      "name": "USB 3.0 (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "LAN1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gbps LAN, fixed IP by default (per serial number label)"
+    },
+    {
+      "name": "LAN2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10Gbps LAN, DHCP by default"
+    },
+    {
+      "name": "IPMI LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "dedicated remote-management LAN port; speed not stated in spec"
+    },
+    {
+      "name": "Stereo Audio Output",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "analog balanced stereo line output"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "single (non-redundant) mains socket, 100-240VAC 50-60Hz, 500W peak; manual calls it 'socket for mains connection' and lists a detachable 'Power Cable' in the box, which is why it's classified as an IEC inlet rather than a captive cord — exact C13/C14 rating not stated"
+    }
+  ]
+}

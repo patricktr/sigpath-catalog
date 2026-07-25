@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Osprey Video",
+  "model": "Raptor 925",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://www.ospreyvideo.com/_files/ugd/2c643c_5d5a0ac6c6874042951c70fd72e1f087.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer SKU 95-00498; sold under the \"RAPTOR SDI\" family name on ospreyvideo.com but the datasheet itself titles it \"Osprey® 925.\" This is a half-height PCI Express Gen2 x4 capture/frame-grabber card (fits x4/x8/x16 slots), not a standalone rack or desktop unit, so rackUnits is omitted. It is entirely bus-powered via the PCIe edge connector (~5W draw, well under the slot budget) — there is no discrete power connector, so no power port is listed. Audio is embedded in the SDI signal (16 channels / 8 stereo pairs per BNC input); there is no separate analog/digital audio connector. Video connectors support SD/HD/3G-SDI (SMPTE-259/292/296/424/425, 3G Level A) — 3G is the highest tier, hence grade sdi-3g on both BNCs. A \"Rugged\" variant (extended -20 to 60°C range, conformal coating, 3-yr warranty) is available with identical I/O. Not to be confused with the sibling Raptor 927 model, which instead pairs 1x SDI with 1x HDMI input plus a Mini-XLR analog audio input.",
+  "ports": [
+    {
+      "name": "Input A",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Input B",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Firmware-programmable as a second independent SDI input or as a reclocked loop-through output of Input A"
+    }
+  ]
+}

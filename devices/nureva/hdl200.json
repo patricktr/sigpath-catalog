@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Nureva",
+  "model": "HDL200",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://www.nureva.com/products/hdl-series/hdl200",
+  "confidence": "high",
+  "notes": "Verified directly against Nureva's own product/spec page (nureva.com/products/hdl-series/hdl200), which lists a complete \"INTERFACES\" section containing exactly two physical connectors: a USB 2.0 Type-B port to the host computer and a DC power input jack. There is no HDMI, video, network/Ethernet, or analog audio I/O on this unit — it is a self-contained wall/display-mounted mic+speaker bar that is entirely USB-driven for audio and relies on the host computer/UC platform for video. USB grade (2.0) and connector type (Type B) are stated verbatim in the spec sheet, giving high confidence there. The power jack's physical connector style (barrel vs. other) is not spelled out in the spec table — dc-barrel was chosen as the closest match for a wall-wart/external-adapter power input; no grade applies to it per the connector-grade rules. Two SKUs exist for color only (HDL200-B black, HDL200-W white) with identical I/O. Larger/related products (HDL300, HDX series) have different port sets and were not used here.",
+  "ports": [
+    {
+      "name": "USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Labeled in spec as \"USB 2.0 interface to computer, type B\"; ships with a USB Type A-B cable. Carries both mic pickup and speaker audio to/from the host computer as a class-compliant USB audio device."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Spec sheet only says \"Input jack for power supply\" fed by an included universal switching AC adapter (100-240V AC, 50-60Hz, <25W, country-specific AC cable). Exact jack style not explicitly named on the spec page; classified as the closest listed connector (dc-barrel) based on standard external-adapter design for this product class."
+    }
+  ]
+}

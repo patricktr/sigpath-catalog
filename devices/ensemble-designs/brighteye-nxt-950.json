@@ -1,0 +1,96 @@
+{
+  "manufacturer": "Ensemble Designs",
+  "model": "BrightEye NXT 950",
+  "category": "converter",
+  "type": "Converter",
+  "rackUnits": 1,
+  "sourceUrl": "https://plurainc.com/products/be950/",
+  "confidence": "high",
+  "notes": "Sourced from Plura Inc.'s current official product/spec page for the BrightEye NXT 950 (Ensemble Designs was acquired by Plura Broadcast; plurainc.com/products/be950/ is now the manufacturer's live spec source and superseded the old ensembledesigns.com URL, which 404s). Specs cross-checked against the AV-iQ catalog listing (av-iq.com) and confirmed against a photographed rear-panel diagram (be_nxt_950_rear.webp on plurainc.com) that labels every physical port. SDI/BNC channels top out at 2.97 Gb/s (3G-SDI, SMPTE 424M/425M) — no 6G/12G-SDI support, so grade sdi-3g. Ethernet is stated as 10/100 Mb/s only (eth-100m). The unit also supports 4K as a quad-link signal, but this reuses the same four Ch In / Ch Out BNCs (no separate \"4K\" connector exists on the rear panel). This is a compact 1/3-rack-width module (5.63\"W x 1.65\"H x 6.75\"D); the datasheet states \"rackmount up to three NXT 950s in 1RU\" via an accessory shelf/frame — rackUnits is set to 1 as the minimum mounting increment, not a literal per-unit RU claim. Manufacturer field kept as \"Ensemble Designs\" (the brand printed on the unit itself) even though the parent company is now Plura Inc.",
+  "ports": [
+    {
+      "name": "Ch 1 In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 2 In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 3 In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 4 In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 1 Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 2 Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 3 Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ch 4 Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "1V p-p composite/tri-level reference sync input, analog — not a digital SDI signal, so no bandwidth grade applies"
+    },
+    {
+      "name": "SFP I/O A/B",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Pluggable module cage assignable to input or output; accepts SDI/fiber, HDMI, or IP (SMPTE 2022) modules depending on which SFP is inserted — no single fixed grade"
+    },
+    {
+      "name": "SFP I/O C/D",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "Pluggable module cage assignable to input or output; accepts SDI/fiber, HDMI, or IP (SMPTE 2022) modules depending on which SFP is inserted — no single fixed grade"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Rear panel silkscreened 'GND / +12VDC / 5A' — a locking coaxial DC connector (not a plain unlocked barrel jack), closest listed id is dc-barrel. Powered by an included external 100-230VAC modular power supply (12V, 35W typical draw)."
+    }
+  ]
+}

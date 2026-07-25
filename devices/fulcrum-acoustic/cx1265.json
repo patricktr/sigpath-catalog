@@ -1,0 +1,21 @@
+{
+  "manufacturer": "Fulcrum Acoustic",
+  "model": "CX1265",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://pa-pro.ru/fileadmin/pdf/fulcrum/Prod-Spec-CX1265-v17.pdf",
+  "confidence": "high",
+  "notes": "Passive, single-amplified 2-way coaxial loudspeaker (12\" woofer + 3\" titanium compression driver on a rotatable 60°x45° horn) — has no onboard amplifier, DSP, or AC power connector. It requires an external amplifier (400-800 W @ 8 Ω recommended) and external DSP running Fulcrum's TQ processing, fed via speaker cable, so no power port is listed. Physical connections per the spec sheet: \"(2) Neutrik NL4 Speakon, Pin 1+/-: Full Range, Pin 2+/-: NC\" — two identical 4-pole Speakon jacks wired in parallel (only pins 1+/- carry signal), the standard input+loop-through/link pair used to daisy-chain multiple enclosures from one amp channel. The datasheet's connection diagram doesn't show actual panel silkscreen text, so the two port names above are a reasonable generic rendering (input + link), not confirmed exact labels. An optional \"Terminal strip input\" (screw/Euroblock-style) is offered as a factory option in place of the Speakon pair but is not modeled here. Sourced from Fulcrum Acoustic's own product specification sheet \"Prod-Spec-CX1265\" (v17), retrieved via a distributor mirror (pa-pro.ru) because fulcrum-acoustic.com now serves its catalog through a JS-rendered product browser with no static per-model URL (a v7 copy of the same official document is also mirrored at cdn-docs.av-iq.com/dataSheet/Prod-Spec-CX1265-v7.pdf for cross-check). No grade applies — Speakon/NL4 speaker-level connectors are not one of the graded connector families.",
+  "ports": [
+    {
+      "name": "Speaker Input 1 (NL4)",
+      "direction": "input",
+      "connector": "speakon"
+    },
+    {
+      "name": "Speaker Input 2 / Link (NL4)",
+      "direction": "input",
+      "connector": "speakon"
+    }
+  ]
+}

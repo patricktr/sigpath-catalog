@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "RM-CG",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://europe.yamaha.com/en/business/audio/products/microphones/rm-cg/specs.html",
+  "confidence": "high",
+  "notes": "RM-CG is a ceiling array microphone for Yamaha's ADECIA unified-communications line (not a speaker despite similarly-named ADECIA speaker units). It has exactly one physical connector: an RJ45 jack that simultaneously carries Dante audio, PoE power (802.3af class, DC 48V, max 7.2W draw), remote control, and Web UI traffic — confirmed across Yamaha's official EU specs page and the official Yamaha PDF datasheet/brochure (BR-RM-CG-20210112-EN). No Ethernet link-speed (e.g. 100M/1G) is stated anywhere in Yamaha's documentation, so no \"grade\" was set on the RJ45 port per the instructions (omit when unstated) — for a low-bandwidth Dante mic on 802.3af PoE it is almost certainly Fast Ethernet (100Base-TX), but this is inference, not confirmed spec. Physically desktop/ceiling-mounted (ceiling, wire, or VESA mount) — not rack-mountable, so rackUnits omitted. Dimensions 560×90×560mm, weight 5.6kg, IP5X dust rating with terminal cover, UL2043 plenum-rated.",
+  "ports": [
+    {
+      "name": "Network/Dante (Ether)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single RJ45 carries Dante audio (1 in / 2 out: AEC reference in, beam-mix outs), Remote Control, Web UI, and PoE power (IEEE 802.3af, DC48V, max 7.2W). Cat5e or higher STP required. No separate power or audio connector exists on the unit."
+    }
+  ]
+}

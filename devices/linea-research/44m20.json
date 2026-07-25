@@ -1,0 +1,117 @@
+{
+  "manufacturer": "Linea Research",
+  "model": "44M20",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://linea-research.co.uk/wp-content/uploads/LR%20Download%20Assets/Datasheets%20and%20Brochures/44M%20Brochure.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Linea Research's own official \"44M Brochure\" datasheet PDF (E&OE, August 2019 V1.6), which includes a labeled rear-panel diagram plus full physical/general spec tables — cross-checked against the manufacturer's live product page (linea-research.co.uk/products/touring-amplifiers/44m-series/). The 44M20 is the 5,000W/ch (2Ω) flagship of the 44M series (siblings: 44M10, 44M06); this record covers only the 44M20 variant. Dante/AES67 (2x RJ45, Primary/Secondary) is an optional factory-fitted card, not guaranteed present on every unit — confirm before assuming a given unit has it. No RJ45 port (Dante or control Ethernet) has a stated link speed in the datasheet, so grade was omitted per instructions rather than inferred (Dante audio devices commonly run 100Mb Fast Ethernet, but this is not confirmed in the source). The relay/contact-closure I/O is documented as a single Phoenix pluggable terminal block combining an output (volt-free relay) and inputs (contact closure) — modeled here as one bidirectional euroblock port rather than split into two, since the source describes one physical connector. Rear-panel silkscreen shows nominal mains marking \"100-230V ~50-60Hz\"; the general-specs table gives the fuller operating range 85-240V/47-63Hz auto-sensing — both refer to the same single Neutrik 32A powerCON inlet, not two separate power connectors.",
+  "ports": [
+    {
+      "name": "Analogue In 1",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Link 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Passive/active loop-through carrying Input 1 signal to next unit"
+    },
+    {
+      "name": "Analogue In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Link 2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Loop-through of Input 2"
+    },
+    {
+      "name": "Analogue In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Link 3",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Loop-through of Input 3"
+    },
+    {
+      "name": "Analogue In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analogue Link 4",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Loop-through of Input 4"
+    },
+    {
+      "name": "AES3 In",
+      "direction": "input",
+      "connector": "aes3"
+    },
+    {
+      "name": "AES3 Link",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Actively regenerated AES3 loop-through with automatic bypass when unit is powered down"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Factory-fitted option, not standard on every unit; speed not stated by manufacturer so no grade set"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Factory-fitted option, redundant secondary Dante network port"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control/monitoring network port, standard equipment; speed not stated by manufacturer so no grade set"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "speakon"
+    },
+    {
+      "name": "Aux Port / Relay",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Phoenix pluggable terminal block combining volt-free relay output and contact-closure inputs (mating plug supplied)"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik 32A powerCON, 85-240V auto-sensing, 47-63Hz"
+    }
+  ]
+}

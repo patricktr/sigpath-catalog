@@ -1,0 +1,68 @@
+{
+  "manufacturer": "Crestron",
+  "model": "UC-B140-T",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.crestron.com/getmedia/2781635f-7622-401f-a9aa-17858a0a8ec0/ss_UC-B140-T",
+  "confidence": "medium",
+  "notes": "UC-B140-T is a discontinued (listed under Crestron's Inactive/Discontinued catalog) 3-piece \"Crestron Flex\" kit for Microsoft Teams Rooms, not a single chassis: (1) UC-SB1-CAM-FLEX smart soundbar+camera (wall/surface mount), (2) TSW-1060-B-S 10.1\" PoE touch screen (with TSW-1060-TTK-B-S tabletop dock), and (3) UC-BRKT-100-SD-ASSY \"UC Engine\" bracket combining an Intel NUC8i5BEK mini-PC (UC-ENGINE-SD), an HDMI-to-USB3 content-ingest converter (HD-CONV-USB-200), and a USB-C-to-HDMI EDID-emulator output cable (UC-CONN-HD). The 9 ports listed are pooled across all three physical enclosures, not one box - each note states which sub-component the port is on. The touch screen's mechanical drawing in the datasheet shows what appear to be additional small connectors (micro-USB, USB-A, 3.5mm jack) on its side edge, but they are not itemized in the UC-B140-T system datasheet's text spec table (only \"Ethernet 10/100 + PoE\" is given), so they were omitted rather than guessed - consult the standalone TSW-1060-B-S datasheet if exact service-port detail is needed. No rack mounting (wall/tabletop/behind-display mount only). Category/type were forced into \"other/Other\" since the enum has no \"video conferencing bar/kit\" option; the product functions as a combined camera + speakerphone soundbar + touch controller + UC PC endpoint.",
+  "ports": [
+    {
+      "name": "USB (Type-B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "On the UC-SB1-CAM-FLEX soundbar/camera. Carries 2-ch stereo far-end/content audio in, mono mic audio out, and camera video to the UC Engine over USB 3.0 (UAC 1.0/UVC 1.1/HID)."
+    },
+    {
+      "name": "Analog Audio Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo TRS mini-phone jack on the soundbar, fixed level (bypasses DSP), for in-room amplification of an external audio source."
+    },
+    {
+      "name": "Analog Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo TRS mini-phone jack on the soundbar, fixed level, feeds an assistive listening system."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC 60320 C14 inlet on the soundbar, 100-240VAC 50/60Hz, 500mA max; power cord included."
+    },
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "On the TSW-1060-B-S touch screen. 10/100 Mbps, IEEE 802.3at PoE/PoE+ powered device; PoE injector (PWE-4803RU) included if no network PoE available."
+    },
+    {
+      "name": "HDMI In (Content Ingest)",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Physically on the HD-CONV-USB-200 HDMI-to-USB3 converter dongle inside the UC Engine bracket assembly; laptop/AV source input, up to 1080p60. HDMI version not stated in datasheet."
+    },
+    {
+      "name": "Display Output (USB-C / DP 1.2)",
+      "direction": "output",
+      "connector": "usb-c",
+      "note": "Native DisplayPort 1.2 over the Intel NUC's USB-C port (grade omitted: USB-C grades in this schema are USB data-rate, not DP version). The bundled UC-CONN-HD adapter cable converts this to an HDMI plug for the room display, output up to 1080p60."
+    },
+    {
+      "name": "USB 3.0 Host",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "On the UC Engine (Intel NUC8i5BEK inside UC-BRKT-100-SD-ASSY); connects the soundbar, the HDMI content-ingest converter, and keyboard/mouse. Exact port count not itemized in this datasheet (NUC8i5BEK nominally has multiple Type-A ports)."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "UC Engine powered via an external 19VDC power adapter (100-240VAC 50/60Hz on the brick's own AC input; adapter included)."
+    }
+  ]
+}

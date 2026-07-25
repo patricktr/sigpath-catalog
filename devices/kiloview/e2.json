@@ -1,0 +1,58 @@
+{
+  "manufacturer": "Kiloview",
+  "model": "E2",
+  "category": "converter",
+  "type": "Encoder/Decoder",
+  "sourceUrl": "https://web.archive.org/web/20230610212251/https://www.kiloview.com/downloads/Datasheet/NDI%20Products/NDI%7CHX/E1E2%20NDI%20Video%20Encoder%20datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Kiloview markets this as the \"E2 NDI\" — the HDMI-input member of the E1 (SDI) / E2 (HDMI) wired NDI|HX encoder pair; both share one datasheet and an identical enclosure/port layout except SDI vs HDMI on the video-in/loop ports. The product has been discontinued/removed from Kiloview's current site (kiloview.com now lists E3, N-series, D-series instead); specs were sourced from the manufacturer's own datasheet PDF (originally hosted at kiloview.com/downloads/Datasheet/NDI Products/NDI|HX/E1E2 NDI Video Encoder datasheet.pdf) retrieved via the Wayback Machine, and cross-checked against the Markertek retail spec table (markertek.com, item KV-E2) and the product's own panel photography embedded in the datasheet. High-res zoom of the datasheet's product photo confirmed the \"OUT\"/\"IN\" audio-jack labeling and the \"IN\"/\"LOOP\" video-jack labeling (verified on the E1/SDI unit shown; E2/HDMI unit shares the same silkscreen pattern per the spec table). Discrepancy: the datasheet's spec table states \"2× USB 2.0 Type-A\" but only a single USB-A port is visible on the photographed connector edge — the second port could not be visually confirmed, so treat the USB count with caution. Also present but omitted from the ports list because no matching connector id exists in the given taxonomy: a Micro SD/TF card slot for local recording. Max input resolution is 1080p60 but no HDMI version (1.4/2.0) is stated anywhere in the source material, so no HDMI grade was assigned (per instructions, omitted rather than inferred). Dimensions 125×89×28 mm / weight 380 g — a small desktop/pocket unit, not rack-mountable, so rackUnits is omitted. Power: DC 12V 1A (4 W).",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi"
+    },
+    {
+      "name": "HDMI Loop",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Loop-through of the HDMI input for local monitoring"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Datasheet lists qty 2 (USB 2.0 Type-A, used for PTZ/Tally expansion); only one port is visible on the photographed connector panel"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Second USB 2.0 Type-A port per datasheet table; physical placement not independently confirmed"
+    },
+    {
+      "name": "12V",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking/twist-lock DC power connector (closest listed id used); DC 12V 1A / 4W external adapter"
+    }
+  ]
+}

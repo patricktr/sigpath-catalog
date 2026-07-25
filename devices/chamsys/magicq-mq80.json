@@ -1,0 +1,124 @@
+{
+  "manufacturer": "ChamSys",
+  "model": "MagicQ MQ80",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://chamsyslighting.com/product/magicq-mq80-compact-console/",
+  "confidence": "medium",
+  "notes": "Manufacturer: ChamSys Ltd (Southampton, UK). The MQ80 is a compact 24-universe MagicQ lighting console (12,288 channels, 10 playback faders, 12\" central touchscreen), not a rack-mount unit, so rackUnits is omitted (dims 570x405x110mm desktop worksurface).\n\nSources used: manufacturer product page (chamsyslighting.com/product/magicq-mq80-compact-console/), manufacturer spec-sheet PDF (chamsys.at/downloads/MQ80.pdf), and the official ChamSys \"MagicQ MQ50/MQ70/MQ80 Console Installation & Software Manual / Quick Start\" (via FCC filing 2AQWRMQCOMP, fcc.report/FCC-ID/2aqwrmqcomp/4738330.pdf) which contains the labeled rear-panel connection diagram for the MQ80 (page 7) used to enumerate individual ports; corroborated with B&H Photo's listing (bhphotovideo.com, confirms 5-pin XLR DMX outputs and 110-240V AC powerCON) and ChamSys's own documentation on the Remote Input port (4-pin mini-DIN, opto-isolated, 5V pin 3) found via search snippet since secure.chamsys.co.uk pages return 403 to automated fetches.\n\nCaveats / lower-confidence items:\n- Power input voltage: the official ChamSys spec PDF text says \"90V to 240V DC\" for the inbuilt PSU/UPS - this is almost certainly a typo for AC (B&H independently lists 110-240V AC; powerCON is a mains-AC connector family), but the discrepancy could not be resolved against a second ChamSys-authored source.\n- Audio In and LTC In physical connector sizes (1/4in TRS vs 3.5mm, vs possible DIN/XLR) are not stated in any prose source found; connector types here were inferred from the rear-panel diagram and a documentation snippet recommending a \"balanced input\" for LTC, not confirmed by an explicit spec line - treat these two rows as best-guess.\n- Remote trigger port is documented as a 4-pin mini-DIN (not full 5-pin MIDI DIN); mapped to \"midi-din\" as the closest available connector id in the fixed list.\n- 6 total USB-A ports confirmed by the official spec sheet; the exact front-panel-vs-rear-panel split (search snippets suggest 1 front + 5 rear) and any individual numbering on the chassis could not be confirmed against the rear-panel diagram alone, so the 6 USB rows are undifferentiated placeholders.\n- The console also has a locking gooseneck-lamp power-output connector on the rear panel (labeled \"Console lamp\" in the manual diagram); omitted from the ports list since it's a proprietary accessory-lamp power socket, not a standard AV/signal connector in the given taxonomy.\n- No bandwidth/version is stated anywhere for the Ethernet (etherCon), USB, or HDMI ports, so no \"grade\" was set on any of them per the grading rule.",
+  "ports": [
+    {
+      "name": "DMX 1",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "RDM-capable (device-management traffic is bidirectional; signal flow is output)"
+    },
+    {
+      "name": "DMX 2",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX 3",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX 4",
+      "direction": "output",
+      "connector": "xlr5"
+    },
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Neutrik etherCon locking RJ45; internal 4-port switch (UPS-backed); carries Art-Net/sACN/Pathport DMX plus console/MagicVis/MagicHD networking"
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Network 3",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "Network 4",
+      "direction": "bidirectional",
+      "connector": "ethercon"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "6 USB-A host ports total across the panel (exact front/rear split not confirmed); no speed/version stated"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 5",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 6",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "Monitor",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "External monitor output, up to 1920x1200; monitor can be touch-enabled. No HDMI version stated in sources."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Sound-to-light audio input with 7-band analysis. Exact jack size (1/4in vs 3.5mm) not explicitly stated in any source; inferred from rear-panel diagram, so treat with caution."
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "LTC In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "LTC timecode input; ChamSys documentation recommends a balanced input for timecode on MQ80. Exact connector (TRS vs XLR3 vs DIN) not explicitly confirmed - inferred as closest balanced-audio option."
+    },
+    {
+      "name": "Remote",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "Actually a 4-pin mini-DIN opto-isolated remote-trigger input (external GO switch/contact closure, 5V on pin 3, per ChamSys documentation) - mapped to the closest listed connector (5-pin DIN family) since mini-DIN is not a separate option."
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON locking AC inlet, labelled LINE INPUT; inbuilt PSU + UPS runs ~15 min on battery. ChamSys's own spec PDF lists '90V to 240V DC', almost certainly a typo for AC - B&H lists 110-240V AC, consistent with a powerCON mains connector."
+    }
+  ]
+}

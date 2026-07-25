@@ -1,0 +1,53 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "Hi5-4K-Plus",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://www.aja.com/products/hi5-4k-plus",
+  "confidence": "medium",
+  "notes": "Source: AJA's own product/spec page (https://www.aja.com/products/hi5-4k-plus), which is authoritative for the core video I/O and power spec. Device is a 3G-SDI-to-HDMI 2.0b converter (SD/HD/3G up to 4K/UHD): 4x 3G-SDI BNC inputs (SMPTE-259/292/424) feed a single HDMI Type A output (HDMI v2.0b, up to 4:4:4/36-bit, HDR InfoFrame support) — there is no SDI output/loop-through on this model, video only exits via HDMI. Embedded audio: SDI in up to 24-bit/16-channel, HDMI out 24-bit/8-channel (no discrete/analog audio connectors). No Ethernet, RS-422, or genlock/reference BNC on this model per AJA's spec sheet. Desktop/deskbox form factor (5.76 x 4.02 x 0.90 in, 0.6 lb) — not rack-mountable, so rackUnits omitted. Overall confidence set to medium rather than high solely because the USB connector's physical style/speed and the exact locking-power-connector geometry are not stated on the manufacturer page and had to be inferred/approximated to the closest catalog connector id; the video/audio I/O itself is high-confidence and directly sourced from AJA.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "USB (Mini-Config)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Used only for device configuration via AJA Mini-Config software. AJA's spec page confirms a USB port but does not state the physical connector style (Micro-B vs Type-C) or USB speed — connector id inferred from typical AJA Mini-Converter generation design; verify before relying on it."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "AJA specifies a proprietary 'locking power connector' (not a generic 2.1mm barrel) accepting 5-20VDC regulated, 12W, supplied with an included universal 100-240VAC/50-60Hz external adapter. Mapped to the closest available connector id (dc-barrel)."
+    }
+  ]
+}

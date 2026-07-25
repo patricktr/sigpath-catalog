@@ -1,0 +1,184 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "XPression 1RU 12G Engine (XPN-1RU-12G-M9)",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.markertek.com/product/ross-xpn1ru12gm9/ross-xpn-1ru-12g-m9-xpression-1ru-real-time-motion-graphics-engine-hd-sdi-chassis-12g-sdi",
+  "confidence": "medium",
+  "notes": "XPression is a real-time broadcast motion-graphics/CG platform sold as a family of rackmount server \"Engines\" (1RU/2RU/4RU, in SDI, IP, NDI and 12G variants) plus design-only \"Workflow Tools\" servers with no video I/O. This entry documents the flagship 1RU 12G-SDI rendering engine, SKU XPN-1RU-12G-M9 — the configuration most commonly sold at AV retailers as \"the XPression\" hardware unit. Primary source: Markertek's product/spec page (a retailer explicitly acceptable per sourcing guidance), whose spec table's wording, categories, and figures (chassis, PSU, CPU/GPU, Ethernet, RS-232, USB, PS/2) match Ross Video's own manufacturer cut sheet for the related XPN-HW-CORE-V3 \"XPression Workflow Tools Core Server\" (fetched directly from documentation.rossvideo.com), which shares the same physical platform/control I/O. Ross Video's own cut sheet specifically for the XPN-1RU-12G-M9 engine (titled \"XPression 1RU Engine Hardware Specs\") could not be fetched directly (404s on current and archived URLs), so confidence is medium rather than high. Caveats: (1) SDI grade is labeled \"12G-SDI\" in the product title/model name but the line-card description itself just says \"HD-SDI or Quad-link SDI (Matrox DSXLE4/44/100)\" without an explicit per-port line-rate table, so the sdi-12g grade on the BNC ports is inferred from the model designation. (2) The 8 video BNCs are physically the compact \"HD-BNC\" (mini-BNC) connector style, not full-size BNC — they break out to standard BNC via supplied adapter cables; \"bnc\" is the closest available connector id. (3) The 4 \"bidirectional\" video BNCs are user-configurable per-port as input or output (used for up to 4 channels of 1080p Video/Key pairs, or 1 channel of quad-link UHD); the other 4 are fixed outputs only. (4) \"USB 3.1 (Type A)\" ports' generation (5Gbps Gen1 vs 10Gbps Gen2) isn't specified by the manufacturer; usb-5g (Gen1) is assumed as the common default for bare \"USB 3.1\" labeling. (5) Front-panel USB-C ports' speed/mode is not stated, so no grade was set. (6) The 2x \"P/S2\" (PS/2) legacy keyboard/mouse ports have no good match in the allowed connector list; \"midi-din\" was used as the closest available circular DIN-family connector — the real connector is a 6-pin mini-DIN (PS/2). (7) Audio is embedded-only in the SDI signal (no discrete analog/AES audio jacks). (8) GPI is delivered only via RossTalk over the existing Ethernet ports (no discrete physical GPI connector). (9) Other XPression chassis (2RU, 4RU, IP/NDI variants, and the Core/Core-Plus/Workstation \"Workflow Tools\" servers) have different port counts/types not covered here.",
+  "ports": [
+    {
+      "name": "AC Power In 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant 675W hot-swap PSUs, 100-240VAC, 3.7-7.4A. Exact IEC variant (C13/C14) not explicitly labeled in the spec sheet; inferred from standard rackmount redundant-PSU design shown in the rear-panel photo of the related XPN-HW-CORE-V3 platform."
+    },
+    {
+      "name": "AC Power In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second of two redundant 675W hot-swap PSUs; see AC Power In 1 note."
+    },
+    {
+      "name": "HD-BNC Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Fixed video/key output. Physical connector is the compact 'HD-BNC' style (breaks out to standard BNC via supplied cable). Grade inferred from the '-12G' model designation; card is described generically as 'HD-SDI or Quad-link SDI'."
+    },
+    {
+      "name": "HD-BNC Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Fixed video/key output; see HD-BNC Out 1 note."
+    },
+    {
+      "name": "HD-BNC Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Fixed video/key output; see HD-BNC Out 1 note."
+    },
+    {
+      "name": "HD-BNC Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Fixed video/key output; see HD-BNC Out 1 note."
+    },
+    {
+      "name": "HD-BNC I/O 1",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Manufacturer-described as 'bi-directional', user-configurable per port as input or output; together the 4 ports support up to 4 channels of 1080p Video/Key pairs or 1 channel of quad-link UHD output. Physical connector is the compact 'HD-BNC' style."
+    },
+    {
+      "name": "HD-BNC I/O 2",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "See HD-BNC I/O 1 note."
+    },
+    {
+      "name": "HD-BNC I/O 3",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "See HD-BNC I/O 1 note."
+    },
+    {
+      "name": "HD-BNC I/O 4",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "See HD-BNC I/O 1 note."
+    },
+    {
+      "name": "Reference In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Analog black burst (bi-level sync) or tri-level sync genlock reference input."
+    },
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "GPU (NVIDIA RTX 4000 Ada) output, typically used for UI/preview monitors rather than SDI program video."
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "GPU output; see DisplayPort 1 note."
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "GPU output; see DisplayPort 1 note."
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "GPU output; see DisplayPort 1 note."
+    },
+    {
+      "name": "Ethernet 1G",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Ethernet 10G",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port."
+    },
+    {
+      "name": "PS/2 1",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "Legacy 6-pin mini-DIN PS/2 keyboard/mouse port; not offered in the connector list, 'midi-din' used as the closest available DIN-family id."
+    },
+    {
+      "name": "PS/2 2",
+      "direction": "bidirectional",
+      "connector": "midi-din",
+      "note": "See PS/2 1 note."
+    },
+    {
+      "name": "USB 3.1 Type-A (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Generation (Gen1 5Gbps vs Gen2 10Gbps) not specified by manufacturer; Gen1/5Gbps assumed as the common default for bare 'USB 3.1' labeling."
+    },
+    {
+      "name": "USB 3.1 Type-A (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "See USB 3.1 Type-A (Front) 1 note."
+    },
+    {
+      "name": "USB Type-C (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Speed/alt-mode not specified by manufacturer."
+    },
+    {
+      "name": "USB Type-C (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Speed/alt-mode not specified by manufacturer."
+    },
+    {
+      "name": "USB 3.1 Type-A (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Generation not specified; Gen1/5Gbps assumed. See USB 3.1 Type-A (Front) 1 note."
+    },
+    {
+      "name": "USB 3.1 Type-A (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "See USB 3.1 Type-A (Rear) 1 note."
+    }
+  ]
+}

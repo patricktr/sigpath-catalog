@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Neat",
+  "model": "Pad",
+  "category": "control",
+  "type": "Touch panel",
+  "sourceUrl": "https://cdn-stories.neat.no/1/2022/08/Neat_Pad_Device_Sheet.pdf",
+  "confidence": "medium",
+  "notes": "Source: Neat's official \"Neat Pad\" device sheet (cdn-stories.neat.no PDF, © 2025 Neat) plus the matching product page at neat.no/pad/ — both manufacturer-authoritative and mutually consistent. This is the original 8-inch \"Neat Pad\" (touch controller for Zoom Rooms / Microsoft Teams Rooms on Android, doubling as a room-scheduling display), not the newer \"Neat Pad Pro\" variant Neat has since introduced (separate product with its own manual, not covered here). Physical I/O per the spec is limited to three items under \"Networking & ports\": Ethernet (PoE), USB-C (reserved/inactive), and an optional AC power adapter — WiFi is also listed there but is wireless, not a physical port, so it is omitted. No connector diagram/photo of the ports was found in any manufacturer document, so the AC-adapter connector type (set to dc-barrel) is an educated inference rather than a confirmed spec — hence \"medium\" confidence rather than \"high.\" Ethernet link speed is likewise never stated, so no eth-* grade was applied. Dimensions: 7.8 x 1.7 x 5.0 in (198 x 42 x 127 mm), 1.15 lb (520 g); ships with wall mount and side mount; not rack-mountable (desktop/wall unit, so rackUnits omitted).",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Primary data + power connection. Supports Power over Ethernet: 802.3af PoE (Class 0 / mode A), 56V DC, 0.275A. Ethernet link speed (10/100/1000) is not stated by the manufacturer, so no bandwidth grade is set."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Listed by Neat as \"reserved for future use\" — physically present but not functional in current firmware. No speed/version stated."
+    },
+    {
+      "name": "Power adapter (AC, optional)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Neat's spec sheet lists only \"Power adapter for AC (optional)\" as an alternate to PoE power; the exact device-side connector is not pictured or specified in any manufacturer document found. DC barrel is the closest/most likely match and is an inference, not a confirmed spec."
+    }
+  ]
+}

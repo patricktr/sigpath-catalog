@@ -1,0 +1,23 @@
+{
+  "manufacturer": "d&b audiotechnik",
+  "model": "Y10P",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://www.dbaudio.com/global/en/products/series/y-series/y10p/",
+  "confidence": "medium",
+  "notes": "Passive 2-way point-source loudspeaker (no internal amplification, no mains power input) — it is driven by an external d&b amplifier (D40/D80/D90/D25/40D/25D/10D per the manufacturer). Manufacturer's official Technical data table lists \"Connections: 2 x NLT4 F/M, optional 2 x NL4\" but does not print individual per-connector panel labels or pin assignments (I could not retrieve the Y7P/Y10P manual PDF to confirm exact silkscreen text); \"Input\" and \"Link Out\" reflect the standard input/loop-through convention for this connector pair (female panel half = input, male panel half = link to next cabinet), consistent with d&b's typical labeling on other passive Series products. No grade applies — speakON/NL4 is not a bandwidth-graded connector type in the given scale. Not rack-mountable (flown/ground-stacked point-source cabinet), so rackUnits omitted. Other specs confirmed on the source page: 8Ω nominal, 400W RMS/1600W peak power handling, 110°x40° dispersion, 59Hz-18kHz (-5dB), max SPL 136dB (with D40/D80/D90/40D), weight 18kg/40lb, dimensions 580x257x341mm.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "speakon",
+      "note": "Standard connector is Neutrik NLT4 (weatherproof True speakON), female chassis half; accepts an NL4/NLT4 male cable from the amplifier. An optional variant uses standard NL4 speakON instead of NLT4."
+    },
+    {
+      "name": "Link Out",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "Loop-through link connector (NLT4 male chassis half, standard) for daisy-chaining signal to the next cabinet in a run. Optional variant uses standard NL4 speakON instead of NLT4."
+    }
+  ]
+}

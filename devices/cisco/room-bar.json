@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Cisco",
+  "model": "Room Bar",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.cisco.com/c/en/us/products/collateral/collaboration-endpoints/webex-room-series/webex-room-bar-ds.html",
+  "confidence": "medium",
+  "notes": "Cisco Room Bar is an all-in-one video-conferencing bar (12MP camera, 4-element beamforming mic array, stereo speakers, RoomOS/MTR codec) for huddle rooms and small meeting spaces — not a rack device (rackUnits omitted; wall/display-mounted). Sourced from Cisco's official data sheet (updated Apr 28, 2026), Video Inputs/Outputs, Audio Inputs/Outputs, Network interfaces, Other interfaces, and Power sections. Caveats: (1) Exact chassis silkscreen labels were not confirmed against a labeled back-panel photo/installation guide — port names here are functional descriptions taken from the data sheet's section headers, not verified printed labels. (2) HDMI version grades (1.4 input / 2.0 outputs) are inferred from the stated max resolution/refresh (4K30 in vs 4K60 out) since Cisco does not name an HDMI spec version anywhere in the data sheet. (3) The USB-C port's underlying USB data-transfer speed is never stated (only its DisplayPort Alt-Mode video resolution), so no usb-* grade was set for it. (4) The mic input's 3.5mm jack size was confirmed via secondary sources (Ingram Micro listing, Cisco community/Reddit), not Cisco's own data sheet text. (5) The \"PoE\" RJ45 port is a single shared port for either a Room Navigator touch panel or one Cisco IP microphone, not two separate ports. (6) A related but distinct SKU, \"Room Bar Pro,\" has materially different I/O (3 HDMI outputs, dual cameras, Ethernet-based mic) and should not be conflated with this standard Room Bar model. Given these inferences, overall confidence is medium.",
+  "ports": [
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "Max 3840x2160@30fps (incl. 1080p60), CEC 2.0. HDMI version not explicitly stated by Cisco; grade inferred from max stated resolution/refresh."
+    },
+    {
+      "name": "HDMI Out 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "One of 2x HDMI outputs, max 3840x2160@60fps, CEC 2.0. HDMI version inferred from stated resolution/refresh, not explicitly named by Cisco."
+    },
+    {
+      "name": "HDMI Out 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "Second of 2x HDMI outputs; touchscreen-compatible when paired with the USB-A port for touch signaling. Grade inferred as with HDMI Out 1."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Single USB-C port used for BYOD passthrough: DisplayPort Alt-Mode video in/out up to 3840x2160@30fps plus USB audio/data passthrough to a connected laptop. Underlying USB signaling speed not stated by Cisco, so no usb-* grade set."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Datasheet: '1 USB 2.0 port type A (for USB microphone or other USB peripherals)'; also used for touchscreen touch-signaling and doubles as an audio in/out path per the datasheet's Audio Inputs/Outputs tables."
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Datasheet lists '1 analog microphone input' without stating jack size; 3.5mm mini-jack confirmed via secondary sources (Ingram Micro product copy, Cisco community/Reddit threads), not the primary datasheet."
+    },
+    {
+      "name": "Network (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1x Ethernet RJ-45, 100/1000 Mbps, for external network/LAN."
+    },
+    {
+      "name": "Network (PoE, Room Navigator)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1x Ethernet RJ-45, 100/1000 Mbps, PoE-enabled, for direct pairing with a Cisco Room Navigator touch panel; datasheet also notes this PoE port supports audio-over-IP for one Cisco IP microphone."
+    },
+    {
+      "name": "Service Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "'1 micro-USB port (service port)' per datasheet; no USB speed stated, used for factory/service purposes."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Device is powered via an external power supply (PSU-12VDC-86W: 100-240VAC 50/60Hz in, 12V DC / peak 86W out). The AC inlet is on the external brick, not the Room Bar chassis; dc-barrel is the closest listed connector for the unit-side 12V DC input jack, which may actually be a Cisco proprietary/locking barrel variant."
+    }
+  ]
+}

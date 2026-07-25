@@ -1,0 +1,65 @@
+{
+  "manufacturer": "SpinetiX",
+  "model": "iBX410",
+  "category": "source",
+  "type": "Media player",
+  "sourceUrl": "https://www.spinetix.com/sites/default/files/SpinetiX-iBX410-tech-specs-web-EN.pdf",
+  "confidence": "high",
+  "notes": "Primary source: SpinetiX official \"Technical Specifications - iBX410 & iBX410W\" PDF datasheet (v3, March 2026), cross-checked against the live manufacturer product page at spinetix.com/digital-signage-products/players/ibx410 and the panel photos in both documents (including SpinetiX's \"How To Get Started with iBX410\" guide). Fanless, ultra-flat digital signage media player (Intel Atom x6211E, 8GB RAM, 128GB internal SSD), IP40, dimensions 181 x 21.5 x 123 mm (7.13 x 0.85 x 4.84 in), 840g, mounting brackets included — not a 19\" rack unit, so rackUnits is omitted. Panel (left to right, confirmed visually): locking DC power in, PWR button, SSD activity LED, 1x HDMI 2.0b out, 3x USB 3.1 Type-A, 2x RJ45-shaped jacks (one RS-232 serial via special accessory cable not included, one 2.5GbE Ethernet), 2x 3.5mm audio jacks (out confirmed by datasheet; a second jack for stereo analog input is visible on the panel and mentioned on the live product page, but that page notes input is currently disabled in DSOS software — flagged as a caveat). USB port speed grade (Gen1 5Gbps vs Gen2 10Gbps) is not stated by SpinetiX in any source found, so it was left ungraded rather than guessed. This spec sheet also covers the iBX410W variant, which is identical except it adds an internal Wi-Fi module with two external antennas (802.11a/b/g/n/ac Wave 2, 2x2 MIMO) — not modeled here since the requested device is the base iBX410. A 3-year hardware warranty (extendable to 5) is included.",
+  "ports": [
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Locking barrel-style DC connector, 12V DC / 60W; external power delivery unit (PDU) included"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "HDMI 2.0b, up to DCI 4K/4K UHD, HDR capable, up to 8-channel digital audio embedded"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "3x identical USB 3.1 Type-A host ports; SpinetiX datasheet does not specify Gen 1 (5Gbps) vs Gen 2 (10Gbps), so speed grade is omitted"
+    },
+    {
+      "name": "Serial (RS-232)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically an RJ45 jack; carries RS-232 signaling and requires a special SpinetiX RJ45-to-serial accessory cable (not included) to use"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g",
+      "note": "2.5GbE, IEEE 802.3bz/802.3ab/802.3u/802.3az"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo analog line output"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Second 3.5mm jack visible on front panel; SpinetiX's product page lists a stereo analog input but states it is 'not currently available in DSOS versions' (software-disabled at time of research)"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Symetrix",
+  "model": "Edge",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.symetrix.co/edge-ip-dsp",
+  "confidence": "medium",
+  "notes": "Symetrix Edge is a modular, open-architecture DSP \"frame\" (1U, 19\" rack) sold in two base configurations: \"Edge with Dante\" (P/N 80-0048, has the two Dante RJ45 ports) and \"Edge\" non-Dante (P/N 80-0204, lacks them) — otherwise the fixed rear-panel I/O (power, Logic Outputs, External Control Inputs, Aux Power, ARC, dual Ethernet, RS-232) is identical on both, confirmed directly from the manufacturer's labeled rear-panel photography and official Quick Start Guide (PN 53-0057-F). Ports list reflects the Dante-equipped variant shown in Symetrix's own product photo.\n\nEdge additionally has 4 user-installable I/O expansion card slots (A-D) that are NOT included as fixed ports here because they are separately sold, swappable modules and the base frame ships with the slots empty: 4-ch Analog Mic/Line In card (P/N 80-0062, terminal block), 4-ch Analog Line Out card (P/N 80-0063, terminal block), 4-ch AEC Input card (P/N 80-0064, terminal block), 2-line VoIP Interface card (P/N 80-0065, RJ45), 2-line Analog Telephone card (P/N 80-0066, RJ11), and a USB Audio card (P/N 80-0132, USB Type-B). All of the fixed terminal-block connectors (Logic Outputs, External Control Inputs, RS-232, and the optional cards' analog terminals) are Symetrix's 3.81 mm pluggable \"Euroblock\"-style blocks; 9 of these ship in the box per the Quick Start Guide.\n\nNo bandwidth/speed grade is published by Symetrix for the RJ45 Ethernet/Dante ports, so grade was intentionally omitted per instructions rather than guessed. Power: universal 100-240 VAC 50/60 Hz, 45 W max, confirmed via rear-panel silkscreen and the Quick Start Guide (ships with both NEMA and Euro IEC line cords).\n\nSources used: manufacturer product page https://www.symetrix.co/edge-ip-dsp (rear-panel photo, key features, part numbers); official Quick Start Guide PDF https://d3b79pswu7f4ma.cloudfront.net/products/dsp/Edge-QSG-53-0057-F.pdf (power spec, ARC RJ45 pinout, terminal block count); DSP I/O Expansion Cards page https://www.symetrix.co/dsp-io-expansion-cards (optional card connector types, for context only, not included as base-unit ports).",
+  "ports": [
+    {
+      "name": "AC Input",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Logic Outputs",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "8x Class-2 logic outputs, 24 VDC / 0.5 A max, on a 3.81 mm pluggable terminal block"
+    },
+    {
+      "name": "External Control Inputs",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8x external control/GPI inputs (CTRL 1-4, each A/B), 3.81 mm pluggable terminal block"
+    },
+    {
+      "name": "Aux Power",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Locking round DC power output jack, +24 VDC / 2.5 A max, for powering accessories"
+    },
+    {
+      "name": "ARC",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary port for Symetrix ARC-series remotes carrying RS-485 control data, balanced analog audio, and 24 VDC/0.75A Class-2 power over standard CAT5/6 cable; not standard Ethernet — must not be connected to network equipment"
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Present only on the Dante-equipped 'Edge with Dante' frame (P/N 80-0048); omitted on the base non-Dante frame (P/N 80-0204). Link speed not published by Symetrix, grade omitted"
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Present only on the Dante-equipped 'Edge with Dante' frame (P/N 80-0048); omitted on the base non-Dante frame (P/N 80-0204). Link speed not published by Symetrix, grade omitted"
+    },
+    {
+      "name": "Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control/general network port; unit has a built-in switch for control networking. Link speed not published, grade omitted"
+    },
+    {
+      "name": "Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Control/general network port; link speed not published, grade omitted"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "3-position (Gnd/Rx/Tx) pluggable terminal block for accessory serial control"
+    }
+  ]
+}

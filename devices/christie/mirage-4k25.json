@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Christie",
+  "model": "Mirage 4K25",
+  "category": "display",
+  "type": "Projector",
+  "sourceUrl": "https://www.christiedigital.com/globalassets/resources/public/mirage-4k-datasheet.pdf",
+  "confidence": "medium",
+  "notes": "Christie Mirage 4K25 is a large-venue 3-chip DLP digital cinema/simulation projector (2013, now EOL/discontinued), part of the Mirage 4K25/4K35 family sharing one datasheet. Three lamp variants exist (CDXL-20 2.0kW, CDXL-30 3.0kW, CDXL-30SD 3.0kW) affecting brightness only, not I/O. Ports listed reflect the STANDARD out-of-box configuration (2x Twin DisplayPort input cards). The chassis has 4 modular input-card slots; optional alternate/additional cards not included in the port list because they are not standard equipment: Twin HDMI input card (4 needed for full 4K/120Hz), Dual Link DVI-D card (4 needed), and 4x 3G HD-SDI card (grade would be sdi-3g if installed). No audio I/O (projector has no built-in audio). Not conventionally rack-mounted (floor/ceiling-mounted cinema chassis, ~114-124kg); an optional \"rack mount pedestal\" accessory exists but is not standard 19\" rack sizing, so rackUnits omitted. Physical DisplayPort connector count (4) is inferred from the \"Twin DisplayPort\" card naming and the 8-signal/4-card full-population math, not from an explicit rear-panel photo/diagram — could not locate a public rear-panel labeling diagram to confirm exact silkscreen port names.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "input",
+      "connector": "dp",
+      "note": "1 of 4 standard DP inputs (2x 'Twin DisplayPort' input cards, 2 ports/card). Spec states DisplayPort 1.1a, below the dp-1.2 grade floor, so grade omitted."
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "input",
+      "connector": "dp",
+      "note": "1 of 4 standard DP inputs (2x 'Twin DisplayPort' input cards, 2 ports/card). Spec states DisplayPort 1.1a, below the dp-1.2 grade floor, so grade omitted."
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "input",
+      "connector": "dp",
+      "note": "1 of 4 standard DP inputs (2x 'Twin DisplayPort' input cards, 2 ports/card). Spec states DisplayPort 1.1a, below the dp-1.2 grade floor, so grade omitted."
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "input",
+      "connector": "dp",
+      "note": "1 of 4 standard DP inputs (2x 'Twin DisplayPort' input cards, 2 ports/card). Spec states DisplayPort 1.1a, below the dp-1.2 grade floor, so grade omitted."
+    },
+    {
+      "name": "DisplayPort Loop-Out",
+      "direction": "output",
+      "connector": "dp",
+      "note": "Loop-through output for daisy-chaining multiple projectors; standard on the Twin DisplayPort input card. Exact physical port count/label not published."
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Serial control port."
+    },
+    {
+      "name": "RJ45",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Ethernet with ChristieNET connectivity for control/networking."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec-c19",
+      "note": "Connector type not explicitly named in datasheet (listed only as 'AC line cord for projector head'). Single-phase 200-240 VAC, up to 23A max @ 200V — exceeds standard IEC C19/C20 16A rating, so the real connector is likely a higher-current locking type. iec-c19 used as closest listed enum option; low confidence on this specific port."
+    }
+  ]
+}

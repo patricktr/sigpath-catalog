@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Lab.gruppen",
+  "model": "PLM 12K44",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.labgruppen.com/en/products/0107-AAA",
+  "confidence": "high",
+  "notes": "Researched the SP (speakON) output variant, which Lab.gruppen sells as SKU \"PLM 12K44 SP\" (a \"PLM 12K44 BP\" variant also exists, identical except its 3 speakON connectors are replaced by 4 pairs of binding posts). Data combined from the manufacturer's own product Specs tab (labgruppen.com) and the official PLM+ Series Quick Start Guide PDF, which includes a labeled rear-panel diagram explicitly showing \"PLM 12K44\" on the chassis silkscreen — used to confirm exact port names/counts/connector types. Ethernet ports: the rear-panel silkscreen and manual read \"SWITCHED 100/1000 Base-TX\" with 1Gbps activity LEDs, so graded eth-1g; note the website's separate online spec table text states \"Auto 10/100, Auto Uplink\" for the same 2xRJ45 entry, which looks like a stale/inconsistent listing — the printed panel and manual (more specific to this SKU) were trusted over it. Dante audio (8 in x 8 out) rides over the same two etherCON connectors as the Lake Controller/DLM control connection, not a separate port. No USB, RS232, or GPIO ports are present on this model. Rack size 2U (88mm), weight 16.5 kg (36 lbs), depth 424mm rail-to-rear (498mm including front support).",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio in, electronically balanced with Lake Iso-Float; 20 kOhm, +26 dBu max"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio in, electronically balanced with Lake Iso-Float"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio in, electronically balanced with Lake Iso-Float"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analog audio in, electronically balanced with Lake Iso-Float"
+    },
+    {
+      "name": "Input 1-2 (AES/EBU)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Latching XLR3; carries 2 channels of AES3 digital audio (ch 1-2), 110 ohm"
+    },
+    {
+      "name": "Input 3-4 (AES/EBU)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Latching XLR3; carries 2 channels of AES3 digital audio (ch 3-4), 110 ohm"
+    },
+    {
+      "name": "Network Primary (PRIM)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Neutrik etherCON RJ45, silkscreened \"SWITCHED 100/1000 Base-TX\" with 1Gbps link LED; carries Lake Controller/DLM control plus Dante audio (8x8)"
+    },
+    {
+      "name": "Network Secondary (SEC)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "grade": "eth-1g",
+      "note": "Second etherCON port for daisy-chain or dual-redundant Dante network"
+    },
+    {
+      "name": "Speaker Output 1-2 (NLT4)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pole Neutrik NLT4 twist-lock; carries channels 1 & 2 (supports bridge mode)"
+    },
+    {
+      "name": "Speaker Output 1-4 (NLT8)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "8-pole Neutrik NLT8 twist-lock; carries all four channels simultaneously"
+    },
+    {
+      "name": "Speaker Output 3-4 (NLT4)",
+      "direction": "output",
+      "connector": "speakon",
+      "note": "4-pole Neutrik NLT4 twist-lock; carries channels 3 & 4 (supports bridge mode)"
+    },
+    {
+      "name": "AC Mains In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik powerCON chassis inlet, 100-240V AC 50/60Hz, 2400-2950W, rated 32A; detachable twist-lock mains cord"
+    }
+  ]
+}

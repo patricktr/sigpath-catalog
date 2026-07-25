@@ -1,0 +1,202 @@
+{
+  "manufacturer": "RTS",
+  "model": "ODIN",
+  "category": "matrix",
+  "type": "Matrix router",
+  "rackUnits": 1,
+  "sourceUrl": "https://products.rtsintercoms.com/binary/F01U345089.pdf",
+  "confidence": "high",
+  "notes": "Source: official Bosch/RTS Technical Data Sheet, Form No. F.01U.345.089 Rev 08 (Sept 2023), fetched directly as PDF from products.rtsintercoms.com and read in full (includes rear-panel line drawing plus complete electrical spec tables). ODIN ships as port-count-licensed SKUs (ODIN16/32/64/128NOCORD) but all tiers share the identical 1RU hardware frame and physical I/O described here (up to 128 ports/frame, up to 1024 across 8 chained frames) - licensing only gates how many are active, not what's physically present. Two power inlets (PS1/PS2) inferred from the front-panel PS1/PS2 power-button silkscreen paired with \"2 connectors, fully redundant load-sharing power supplies\" in the spec; exact rear-inlet silkscreen text wasn't independently legible in the source line drawing. The 24-pin General Purpose I/O terminal block is modeled as a single bidirectional euroblock port (physically one connector housing 4 relay outputs + 4 opto inputs) rather than split into two connector entries. OMNEO ports and the Inter-Frame Link both also support optional SFP fiber modules (Finisar FTLF8519P3BNL multimode 500m/2.125Gbps, or FTLF1421P1BTL single-mode 15km/2.67Gbps); Inter-Frame Link SFP cages are itemized (x4, fixed fiber-only), OMNEO fiber is an alternate/optional module on the same two ports rather than a separate physical connector. No HDMI/SDI/video connectors exist on this unit - it is a pure audio intercom matrix.",
+  "ports": [
+    {
+      "name": "PS1 AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC 320 C14 inlet; 100-240VAC 50/60Hz, one of two redundant load-sharing power supplies (0.5A/0.35A, 47W total typ.)."
+    },
+    {
+      "name": "PS2 AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Locking IEC 320 C14 inlet; second of two redundant load-sharing power supplies."
+    },
+    {
+      "name": "PORT1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port (x16, PORT1-PORT16): differential RX/TX audio + RS-485 control data over RJ-45 - analog audio, not Ethernet. 568B/USOC wiring, 24-bit A/D-D/A."
+    },
+    {
+      "name": "PORT2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT9",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT10",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT11",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT12",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT13",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT14",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT15",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "PORT16",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "AIO 4-wire analog intercom port."
+    },
+    {
+      "name": "2W Party Line 1",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "2-wire analog partyline; software-selectable RTS CH1/CH2, Audiocom (balanced, 300 ohm), or Clear-Com (unbalanced, 200 ohm)."
+    },
+    {
+      "name": "2W Party Line 2",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "2-wire analog partyline; software-selectable RTS CH1/CH2, Audiocom, or Clear-Com."
+    },
+    {
+      "name": "General Purpose I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "24-pin locking terminal block: 4x SPDT relay outputs (1A @ 30VDC, C/NC/NO) + 4x optically-coupled inputs (5-12VDC on A+, K to chassis ground activates)."
+    },
+    {
+      "name": "PAP/LCP/GPIO Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RS-485 control data only - no audio, no Ethernet."
+    },
+    {
+      "name": "Inter-Frame Link Uplink 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP fiber, 2Gbps proprietary link for chaining up to 8 ODIN frames into a single up-to-1024-port matrix. Multimode (500m/2.125Gbps) or single-mode (15km/2.67Gbps) modules."
+    },
+    {
+      "name": "Inter-Frame Link Uplink 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP fiber, 2Gbps Inter-Frame Link (redundant path)."
+    },
+    {
+      "name": "Inter-Frame Link Downlink 1",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP fiber, 2Gbps Inter-Frame Link."
+    },
+    {
+      "name": "Inter-Frame Link Downlink 2",
+      "direction": "bidirectional",
+      "connector": "sfp",
+      "note": "SFP fiber, 2Gbps Inter-Frame Link (redundant path)."
+    },
+    {
+      "name": "Control",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "IEEE 802.3 compliant control-network port, 10/100/1000Mbps."
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Word Clock sync input, 75 ohm termination, 48kHz +/-25ppm, 5V TTL compatible - not an SDI video signal, so no SDI grade applies."
+    },
+    {
+      "name": "OMNEO Primary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "OMNEO audio-network port, copper 100/1000Mbps, IEEE 802.3. Optional SFP fiber module available in place of copper (not separately itemized)."
+    },
+    {
+      "name": "OMNEO Secondary",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Redundant OMNEO audio-network link, copper 100/1000Mbps."
+    },
+    {
+      "name": "Management Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Front-panel dedicated management/configuration port, IEEE 802.3, 10/100/1000Mbps."
+    }
+  ]
+}

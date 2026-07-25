@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Clear-Com",
+  "model": "HXII-BP-X4",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://clearcom.com/DownloadCenter/datasheets/HelixNet/HXII-BP_Beltpack_Datasheet.pdf",
+  "confidence": "high",
+  "notes": "Handheld/belt-worn beltpack (99 x 135 x 43mm, 0.35kg / IP53) — not rack-mountable, so rackUnits omitted. Sourced from Clear-Com's own official HXII-BP Beltpack datasheet (Rev. Sept/2022), which lists exactly 4 physical connectors on the bottom panel: 3-pin XLR-F Powerline, RJ45 etherCON (LAN/PoE), Micro-AB USB (flasher), and the 4-pin XLR-M headset jack (X4 variant). There is no dedicated power-only inlet — power arrives either via PoE on the Ethernet port or via the XLR Powerline connection, so both are marked bidirectional rather than a separate \"power in\" port. All connectors here are analog/legacy or unspecified-speed digital, so no bandwidth \"grade\" was set on any port (per instructions, omitted whenever the spec doesn't state a version/speed). Retailer listings (Markertek, Full Compass, Sweetwater, BSW) corroborate the same connector set. Device is a 2-channel HelixNet digital partyline intercom beltpack, not a match for any of the provided \"type\" enum values, so type is set to \"Other\" (category \"audio\" fits well).",
+  "ports": [
+    {
+      "name": "XLR Powerline",
+      "direction": "bidirectional",
+      "connector": "xlr3",
+      "note": "3-pin XLR-F. Legacy analog partyline connection to an HMS-4X main station: carries 2-way intercom audio plus DC power (input voltage ±29.5V DC, 0.13A max). Not available when hosted by Arcadia."
+    },
+    {
+      "name": "Ethernet Connector",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "RJ45 etherCON. Network audio/control link to Arcadia or HMS-4X (via optional HLI-ET2 module) and PoE power input (IEEE 802.3af-2003 Class 1, 3.84W DC max draw). Port's own link speed not stated in datasheet (only recommended switch ports listed as 100/1000 Base-T), so no eth-* grade set."
+    },
+    {
+      "name": "USB",
+      "direction": "output",
+      "connector": "usb-micro",
+      "note": "Micro AB connector, documented specifically as the \"USB call signal flasher connection to a third-party USB light\" — a call-indicator output, not a general data/host port. No data-rate stated."
+    },
+    {
+      "name": "Headset",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR-M headset jack (X4 variant only — the X5 variant uses a 5-pin XLR-F for binaural). Carries analog headset mic input and headphone output, NOT DC power — \"xlr4-dc\" was chosen only because it is the closest 4-pin XLR id in the allowed connector list; there is no generic 4-pin audio XLR option."
+    }
+  ]
+}

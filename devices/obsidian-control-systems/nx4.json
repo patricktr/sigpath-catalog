@@ -1,0 +1,172 @@
+{
+  "manufacturer": "Obsidian Control Systems",
+  "model": "NX4",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.obsidiancontrol.com/products/nx4",
+  "confidence": "high",
+  "notes": "The NX4 is a lighting control console (DMX/RDM/Art-Net/sACN/ONYX X-Net), not a general-purpose AV room control processor; \"control / Control processor\" is the closest fit in the given taxonomy. Full port-level detail was taken from Obsidian's own official \"NX4 Installation Guide\" PDF (specifications + labeled rear-panel photos), cross-checked against the product page and other retailer listings (Full Compass, Stage Lighting Store) — all agree. Not rack-mountable (large desktop control surface, 928x431x149mm), so rackUnits omitted. Caveats: (1) The rear-panel photo/diagram in the official manual shows a 5th \"DMX IN\" XLR5 port plus two \"WING 1\"/\"WING 2\" RJ45 (EtherCon-style) ports for daisy-chaining external NX Wing expansion surfaces — both are visible on the physical unit but are NOT itemized in the manufacturer's own summarized \"Connections\" spec block (which counts only \"4x DMX/RDM Universe In/Out\" and \"2x Gigabit EtherCon\" network ports); link speed for the WING ports is not stated so no grade was assigned. (2) DisplayPort version (1.2/1.4/2.0) is never stated anywhere in official docs — only \"up to 4K\" — so grade was omitted per instructions rather than guessed. (3) The two \"External Screen Power\" outputs are actually 8-pin Molex connectors (12V DC, for powering the optional external touch displays); mapped to the closest available connector id \"dc-barrel\" since Molex isn't in the allowed list. (4) The 6.3mm (1/4\") audio jacks' TRS vs TS wiring isn't specified; mapped to trs-6.35 as the closest common convention. (5) Mains input is a PowerCON True1-compatible \"Seetronic\" locking AC connector, rated 100-240V 50/60Hz 140W; mapped to \"powercon\". (6) USB ports (3x USB 3.0, 3x USB 2.0) are unlabeled/unnumbered on the chassis, so they are listed by type/count rather than unique names.",
+  "ports": [
+    {
+      "name": "DMX 1",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX/RDM Universe In/Out, 5-pin locking XLR"
+    },
+    {
+      "name": "DMX 2",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX/RDM Universe In/Out, 5-pin locking XLR"
+    },
+    {
+      "name": "DMX 3",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX/RDM Universe In/Out, 5-pin locking XLR"
+    },
+    {
+      "name": "DMX 4",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "DMX/RDM Universe In/Out, 5-pin locking XLR"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "Dedicated remote/merge DMX input shown on rear-panel diagram; not one of the 4 numbered universes and not itemized in the manufacturer's summarized Connections list"
+    },
+    {
+      "name": "Wing 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link for daisy-chaining an external NX Wing expansion control surface; blue EtherCon-style jack, link speed not published"
+    },
+    {
+      "name": "Wing 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary link for daisy-chaining an external NX Wing expansion control surface; blue EtherCon-style jack, link speed not published"
+    },
+    {
+      "name": "Ether DMX",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "One of 2x Gigabit EtherCon network ports for Art-Net, sACN and ONYX X-Net"
+    },
+    {
+      "name": "Remote Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "One of 2x Gigabit EtherCon network ports for Art-Net, sACN and ONYX X-Net"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "SMPTE In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "SMPTE timecode input, 3-pin XLR"
+    },
+    {
+      "name": "SMPTE Out",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "SMPTE timecode output, 3-pin XLR"
+    },
+    {
+      "name": "DP",
+      "direction": "output",
+      "connector": "dp",
+      "note": "External display output, up to 4K; DisplayPort version not stated by manufacturer"
+    },
+    {
+      "name": "DP",
+      "direction": "output",
+      "connector": "dp",
+      "note": "External display output, up to 4K; DisplayPort version not stated by manufacturer"
+    },
+    {
+      "name": "External Screen Power",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "12V DC output for powering an external touch display; actual connector is an 8-pin Molex, mapped to closest listed id"
+    },
+    {
+      "name": "External Screen Power",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "12V DC output for powering an external touch display; actual connector is an 8-pin Molex, mapped to closest listed id"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Line Output",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4\") audio output jack"
+    },
+    {
+      "name": "Mic/Line Input",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "6.3mm (1/4\") mic/line audio input jack"
+    },
+    {
+      "name": "Mains Input",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Seetronic/PowerCON True1-compatible locking AC inlet; 100-240V nominal (90-264V accepted), 50/60Hz, 140W; NEMA 5-15P cord supplied for North America"
+    }
+  ]
+}

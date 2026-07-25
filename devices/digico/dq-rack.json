@@ -1,0 +1,64 @@
+{
+  "manufacturer": "DiGiCo",
+  "model": "DQ-Rack",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 6,
+  "sourceUrl": "https://digico.biz/wp-content/uploads/2021/02/DiGiCo-DQ-Rack-Data-Sheet.pdf",
+  "confidence": "high",
+  "notes": "Sourced from DiGiCo's official DQ-Rack Datasheet PDF (digico.biz), which includes an explicit \"Connections\" list and A&E spec text. Confirmed I/O: 48 x XLR mic inputs, 20 x XLR line outputs, 4 x XLR switchable AES/Line outputs (2 stereo AES pairs, up to 8 AES channels), 2 x Dante EtherCON ports (labeled Primary/Secondary), 1 x USB 2.0 Type B, and 2 redundant PSUs. Datasheet does not state Dante EtherCON link speed (100Mb vs Gigabit), so grade was omitted per instructions rather than guessed. The rear-panel line drawing shows two square IEC-style power inlet modules with rocker switches for the redundant PSUs; exact IEC sub-variant (C13/C14) is not labeled in text, only inferred visually from the technical drawing, so this is the one moderately-inferred detail. 48 identical mic inputs and 20 identical line outputs were collapsed into single grouped port entries (e.g. \"Mic In 1-48\") since the schema has no quantity field — exact counts are given in each entry's name/note. Also has a TFT LCD menu screen and 4 menu buttons on the rear panel (system status/config, not signal/power connectors, so omitted from ports). Internal oscillator, no external word-clock/BNC sync port found on rear panel. Product code per datasheet: X-DQ-RACK. Dimensions 482.7 x 253 x 265.9 mm, weight 11 kg.",
+  "ports": [
+    {
+      "name": "Mic In 1-48",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "48 x female XLR mic/line inputs with remote-controlled Gain Tracking preamps."
+    },
+    {
+      "name": "Line Out 1-20",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "20 x male XLR fixed analogue line outputs."
+    },
+    {
+      "name": "Out 21-24 (AES/Line)",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "aes3"
+      ],
+      "note": "4 x male XLR outputs, switchable per stereo pair between analogue line level and AES3 digital (rear panel labels AES 1-2 and AES 3-4); up to 8 AES/EBU channels total across the 2 pairs."
+    },
+    {
+      "name": "Dante Primary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Primary Dante network port. Link speed (100M/Gigabit) not stated in the datasheet, so grade omitted."
+    },
+    {
+      "name": "Dante Secondary",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Secondary/redundant Dante network port, used for redundant Dante or for a second stream at 96kHz."
+    },
+    {
+      "name": "USB 2.0 Type B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Rear-panel USB 2.0 Type B port."
+    },
+    {
+      "name": "AC Mains Input 1",
+      "direction": "input",
+      "connector": "iec",
+      "note": "One of two redundant PSU inlets (rear panel shows two IEC-style inlet modules with individual switches). Combined rating 100-240V~, 50-60Hz, 2.0A."
+    },
+    {
+      "name": "AC Mains Input 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Second redundant PSU inlet, mirrors AC Mains Input 1."
+    }
+  ]
+}

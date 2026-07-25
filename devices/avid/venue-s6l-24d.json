@@ -1,0 +1,274 @@
+{
+  "manufacturer": "Avid",
+  "model": "VENUE S6L-24D",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://resources.avid.com/SupportFiles/VENUE/VENUE_S6L_System_Guide.pdf",
+  "confidence": "medium",
+  "notes": "Documented as the S6L-24D control surface (the current 24-fader flagship in Avid's VENUE | S6L line; the original un-suffixed \"S6L-24\" was superseded by S6L-24D when the D-series launched). Port list, counts and connector types are essentially identical on the lower-cost S6L-24C sibling (same 8 XLR mic/line in, 8 XLR out, 4 AES3 in, 4 AES3 out, network, USB, MIDI, GPI, LTC, footswitch layout, per Avid's official spec sheet and System Guide) — 24C additionally adds two 3-pin XLR \"console lamp\" power ports on its top panel (24D instead has a built-in light bar), which are not included here since this profile targets 24D. All connector types/counts/labels were cross-verified against the numbered, labeled rear-panel photo in the official VENUE S6L System Guide (v8.0, 2026) chapter \"S6L Control Surface Connections\" (pp.89-92), and against Avid's official \"VENUE S6L System Specifications\" datasheet (AS6LDS0725). Caveats: (1) USB versions differ slightly between Avid's two current official docs — the 2025 datasheet states \"5 USB 2.0 (2 front, 2 rear, 1 internal)\" while the more recent System Guide specifies the 2 front + 2 rear ports as USB 3.0 and only the 1 internal secure port as USB 2.0; the System Guide's more granular wording was used here. (2) GPI Input/Output are physically 25-pin D-Sub (DB25) male/female connectors; no DB25/D-sub id exists in the allowed connector list, so \"rs232\" was used as the closest approximation (not an actual RS-232 serial signal — it's parallel logic/relay GPI), consistent with prior entries in this catalog. (3) Network A/B/C/D are AVB Ethernet ports; Avid's AVB/Milan ecosystem is Gigabit-class and Avid explicitly calls the companion Stage 16 I/O rack's AVB ports \"Gigabit Ethernet,\" but the S6L control-surface spec sheet itself never restates a numeric line rate for these ports, so no grade was set (omitted per instructions rather than guessed). (4) LTC Input's XLR3 connector type was confirmed from the labeled rear-panel photo (not spelled out in the guide's prose). (5) Rack unit height omitted — the control surface is a desktop/furniture-style console, not rack-mounted (only the companion E6L engine and Stage I/O racks are rack-mountable).",
+  "ports": [
+    {
+      "name": "Mic/Line In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "48V phantom-switchable, signal-present LED"
+    },
+    {
+      "name": "Mic/Line In 2",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 3",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 4",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 5",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 6",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 7",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Mic/Line In 8",
+      "direction": "input",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Mute + signal-present LED; auto-mutes at power-on"
+    },
+    {
+      "name": "Analog Out 2",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 3",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 4",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 5",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 6",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 7",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Analog Out 8",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "AES/EBU In 1",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3; sample-rate converted"
+    },
+    {
+      "name": "AES/EBU In 2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3; sample-rate converted"
+    },
+    {
+      "name": "AES/EBU In 3",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3; sample-rate converted"
+    },
+    {
+      "name": "AES/EBU In 4",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3; sample-rate converted"
+    },
+    {
+      "name": "AES/EBU Out 1",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3"
+    },
+    {
+      "name": "AES/EBU Out 2",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3"
+    },
+    {
+      "name": "AES/EBU Out 3",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3"
+    },
+    {
+      "name": "AES/EBU Out 4",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Stereo AES3 pair (2 ch) on one XLR3"
+    },
+    {
+      "name": "Network A",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "sfp"
+      ],
+      "note": "Selectable etherCON copper or SFP fiber (only one active at a time); AVB link to E6L engine/Stage I/O"
+    },
+    {
+      "name": "Network B",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "accepts": [
+        "sfp"
+      ],
+      "note": "Selectable etherCON copper or SFP fiber (only one active at a time); AVB link to E6L engine/Stage I/O"
+    },
+    {
+      "name": "Network C (Pro Tools)",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Fixed copper etherCON AVB port; up to 128 ch simultaneous record/playback with Pro Tools"
+    },
+    {
+      "name": "Network D",
+      "direction": "bidirectional",
+      "connector": "ethercon",
+      "note": "Fixed copper etherCON AVB port; secondary Pro Tools system"
+    },
+    {
+      "name": "ECx",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Standard (non-AVB) Ethernet for ECx wireless/wired remote control apps and internet access during setup"
+    },
+    {
+      "name": "USB 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "DVI-D Video Out",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "DVI-D (digital-only); drives external touchscreen/monitor mirroring the VENUE software screen"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Footswitch 1",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Footswitch 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "GPI Input",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Physically a 25-pin D-Sub (DB25) male connector, 8 logic/contact-closure inputs. No DB25 id exists in the allowed connector list; rs232 used as closest approximation."
+    },
+    {
+      "name": "GPI Output",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Physically a 25-pin D-Sub (DB25) female connector, 8 isolated relay-contact outputs plus +12V aux. No DB25 id exists in the allowed connector list; rs232 used as closest approximation."
+    },
+    {
+      "name": "LTC Input",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "SMPTE Linear Time Code input; connector type confirmed from labeled rear-panel photo"
+    },
+    {
+      "name": "AC Power Inlet A",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Power Inlet B",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "USB 3 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 4 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 5 (Internal, Secure iLok)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Inside the chassis; back cover must be removed to access"
+    },
+    {
+      "name": "Phones A",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Independent headphone output with volume knob, fed from Monitor Bus A"
+    },
+    {
+      "name": "Phones B",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Independent headphone output with volume knob, fed from Monitor Bus B"
+    }
+  ]
+}

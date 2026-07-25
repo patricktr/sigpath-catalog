@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Christie",
+  "model": "Pandoras Box Player R4",
+  "category": "source",
+  "type": "Media player",
+  "rackUnits": 4,
+  "sourceUrl": "https://www.christiedigital.com/globalassets/resources/public/pandorasbox/r4_player_hardware_technical_specs.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Christie's official PDF \"TECHNICAL SPECS - PANDORAS BOX PLAYER R4\" (dated July 2, 2020), hosted at christiedigital.com/globalassets — this is the full-size rackmount \"Pandoras Box Player,\" distinct from the smaller \"Pandoras Box Compact Player\" (which has different I/O: external DC-barrel PSU, D-Sub RS-232, fewer USB ports) and from the higher-end \"Pandoras Box Server\" line. Christie's own product page for this SKU now 404s and the device is listed under \"Discontinued Products\"; Christie Digital Systems Germany GmbH sold the entire Pandoras Box product line to twoloox GmbH in October 2025.\n\nChassis: 422 x 177 x 646mm (WxHxD, no handles) / 482 x 177 x 686mm (with handles) — 482mm width and 177mm height correspond to a 19\", ~4U rackmount chassis; weight ~30kg. Server-grade Xeon workstation with up to 8x RAID hard drives (RAID1/5 depending on Performance Kit PK1-PK4).\n\nOptional accessories mentioned in the datasheet but NOT modeled as ports here (connector specifics not given, or not standard-fit): ASIO audio card (8ch ADAT output / 32ch ADAT output / 64ch MADI output — physical connector unspecified), DMX Link In, DMX Link Out, SMPTE Link, NET Link (I/O Links). RS-232/RS-422 control is listed only as a software capability (\"via Widget Designer/Spark\"); unlike the Compact Player R4 (which explicitly has a rear D-Sub DE-9 RS-232 port), this Player R4 datasheet's hardware table does not itemize a dedicated physical RS-232 port, so none is included here.\n\nVideo render engine outputs (0/1/2/4 of the 4 DisplayPorts active) and video-layer/effects counts are software capabilities, not physical ports, and are omitted.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "1 of 4 DisplayPort 1.2 outputs on the onboard Nvidia Quadro P4000; max 4096x2160@60Hz. Christie ships 4x DisplayPort-to-single-link-DVI adapters so any/all of these outputs can instead run as DVI-D (not modeled as a separate port)."
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "1GbE Ethernet 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1GbE Ethernet 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Optional dual 10GbE Ethernet expansion card available; not included standard and physical connector detail not confirmed."
+    },
+    {
+      "name": "USB 3.0 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "x2 front-panel ports, per datasheet ('USB 3.0: 2 front + 9 back')."
+    },
+    {
+      "name": "USB 3.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "x9 rear-panel ports, as literally stated in Christie's spec sheet."
+    },
+    {
+      "name": "SDI In (Optional Card)",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Field-installable optional video input card, max 1 per unit. Christie offers Single, Dual, or Quad 3G HD-SDI, or Single/Dual DVI as mutually exclusive alternatives; this entry represents the top-spec Quad 3G HD-SDI configuration (up to 4x BNC inputs). Not installed standard."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC, 47-63Hz, ~850W (rated current listed as 12-6A across the voltage range). Datasheet does not picture/name the exact inlet shell (standard IEC C13/C14 assumed given the wattage) or confirm whether the supply is single or redundant/hot-swap."
+    }
+  ]
+}

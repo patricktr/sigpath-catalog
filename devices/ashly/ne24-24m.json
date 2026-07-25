@@ -1,0 +1,103 @@
+{
+  "manufacturer": "Ashly",
+  "model": "ne24.24M",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 2,
+  "sourceUrl": "https://ashly.com/wp-content/uploads/2015/08/ne2424m-r06.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Ashly's official ne24.24M Operating Manual (ashly.com), which includes rear-panel connector diagrams and a full specifications table (section 13). The ne24.24M is a modular base unit: as documented, the chassis ships fixed with 4 balanced analog inputs and 4 balanced analog outputs (all Euroblock/terminal-block, both audio-in-a-box), and is field-expandable with up to 4 plug-in cards (4 channels each, input or output) for up to 24 total audio channels combined — sold under many I/O-configuration SKUs (e.g. NE24.24M-4x12, -12x4, -12x8, -12x12, -20x4, etc., per B&H/Sweetwater/Full Compass listings). One expansion slot can instead hold an optional 8-channel GPO (General Purpose Output) logic card (+12VDC logic out, 10mA source/1A sink per channel) in place of an audio card; this option is not itemized above since it is not part of the base configuration and only one may be installed. This listing documents the fixed base-unit physical I/O (4 in / 4 out + control/power ports); expansion-card audio channels are not separately itemized because the exact channel count/connector labeling depends on which SKU/configuration is purchased. Shipping weight 13 lbs (5.9kg); dimensions 19\"L x 3.5\"H x 8.5\"D.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, 18k ohm, +20dBu max; preamp gain 0/+20/+40/+60dB, switchable +48V phantom power"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, 18k ohm, +20dBu max; preamp gain 0/+20/+40/+60dB, switchable +48V phantom power"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, 18k ohm, +20dBu max; preamp gain 0/+20/+40/+60dB, switchable +48V phantom power"
+    },
+    {
+      "name": "Input 4",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced mic/line input, 18k ohm, +20dBu max; preamp gain 0/+20/+40/+60dB, switchable +48V phantom power"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Active servo-balanced output, 112 ohm, +20dBu max"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Active servo-balanced output, 112 ohm, +20dBu max"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Active servo-balanced output, 112 ohm, +20dBu max"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Active servo-balanced output, 112 ohm, +20dBu max"
+    },
+    {
+      "name": "Logic Inputs 1-8 (Preset Recall)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "One 9-position terminal block: 8 contact-closure logic inputs + ground, for preset recall / mic push-to-talk"
+    },
+    {
+      "name": "0-5V Remote Level Control",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "One 10-position terminal block: 8 DC control pins (0-5V) + 5V reference + ground, for external pot/relay remote level/mute control"
+    },
+    {
+      "name": "Data In/Out (WR-5 Remote)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "4-position terminal block: Data In, Data Out, GND, +18V — proprietary link to Ashly WR-5 programmable remote or RD-8C remote level controller"
+    },
+    {
+      "name": "RS-232 Dataport (Front)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 female; for non-Ethernet control (e.g. AMX/Crestron); 9600/38400 bps; Protea NE software requires Ethernet, not this port"
+    },
+    {
+      "name": "RS-232 Dataport (Rear)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "DB9 female; wired in parallel with the front-panel RS-232 port"
+    },
+    {
+      "name": "10/100 Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ45; used for Protea NE software control/monitoring over 10/100BASE-T"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-320 detachable AC inlet; universal power supply 90-240VAC, 50-60Hz, 40W; rear-panel power switch"
+    }
+  ]
+}

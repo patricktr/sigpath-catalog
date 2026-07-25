@@ -1,0 +1,66 @@
+{
+  "manufacturer": "AJA Video Systems",
+  "model": "12GDA",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.aja.com/products/12gda/spec-sheet.pdf",
+  "confidence": "high",
+  "notes": "Specs pulled from AJA's own spec sheet PDF (aja.com/products/12gda/spec-sheet.pdf), cross-checked against the product page (aja.com/products/12gda). Miniature desktop unit (5.8 x 3.1 x 1 in / 147 x 79 x 25 mm, 0.7 lb) — not rack-mountable as sold, so rackUnits omitted (an optional third-party/AJA rack shelf can hold multiple mini-converters but that's not native rack-mount). It is a 1x6 12G-SDI reclocking distribution amplifier: 1 SDI input fanned out to 6 separately buffered/reclocked SDI outputs identical to the recovered input. Connector type on all video ports is BNC carrying SDI (SMPTE-259/292/424/2081/2082); grade set to sdi-12g since the device supports up to 12G-SDI (auto-reclocks 270Mbps-11.88Gbps rates, passes other rates 100Mbps-12Gbps through unreclocked) — actual per-cable/per-signal rate will vary with source. Power port labeled simply \"POWER\" on the unit, rated +5-20VDC/3W; ships with an included universal 100-240VAC external AC adapter. The physical DC input connector is AJA's proprietary locking barrel-style jack (visible in the product photo) — \"dc-barrel\" is the closest match in the allowed connector list, not an exact vendor-spec match. No Ethernet, USB, or other control/data ports are present on this model (note: a separate related product, the OG-12GDA-2x4 openGear card, exists with different I/O and is NOT this device).",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "1x 12G-SDI BNC input, SMPTE-259/292/424/2081/2082; format/rate agnostic 100Mbps-12Gbps"
+    },
+    {
+      "name": "SDI OUT 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input, SMPTE-259/292/424/2081/2082"
+    },
+    {
+      "name": "SDI OUT 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input"
+    },
+    {
+      "name": "SDI OUT 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input"
+    },
+    {
+      "name": "SDI OUT 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input"
+    },
+    {
+      "name": "SDI OUT 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input"
+    },
+    {
+      "name": "SDI OUT 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Buffered/reclocked copy of input"
+    },
+    {
+      "name": "POWER",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "5-20VDC regulated, 3W; AJA locking barrel-style DC jack, powered via included universal 100-240VAC AC adapter"
+    }
+  ]
+}

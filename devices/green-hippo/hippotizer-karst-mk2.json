@@ -1,0 +1,116 @@
+{
+  "manufacturer": "Green Hippo",
+  "model": "Hippotizer Karst+ MK2",
+  "category": "source",
+  "type": "Media source",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.green-hippo.com/hippotizer-media-servers/karst-mk2/",
+  "confidence": "high",
+  "notes": "Documented the Karst+ MK2 (HDMI 2.0) SKU. A second SKU, Karst+ MK2 (DP 1.2), is identical except its 2 Production Outputs are DP 1.2 instead of HDMI 2.0 (Control Outputs stay 1x DP1.2 + 1x HDMI2.0 on both). No video-capture inputs are standard: the unit has a single optional capture-card slot (choices: AV-SDI, Dual DVI-SL, Dual 3G-SDI, Quad 3G-SDI, or Dual HDMI 2.0), all marked \"Optional\" in Green Hippo's own comparison table, so none are listed as ports here. Also optional (not included): dedicated LTC timecode input and an additional 10GbE network port. No DMX512 port exists; show control is via the dual 1GbE ports (Art-Net/sACN/MANet), USB (MIDI/Stream Deck), the ZooKeeper software UI, or REST API. Front-panel \"USB 3.1\" port speed (Gen1 vs Gen2) is not specified by the manufacturer, so 5Gbps was assumed. Physical size: 2U, 600mm deep (630mm w/ ears), 425mm wide (480mm w/ ears), 16kg.",
+  "ports": [
+    {
+      "name": "Production Output 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Production Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0"
+    },
+    {
+      "name": "Control Output 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "ZooKeeper monitor/control output, fixed DP 1.2 on both SKUs"
+    },
+    {
+      "name": "Control Output 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "ZooKeeper monitor/control output, fixed HDMI 2.0 on both SKUs"
+    },
+    {
+      "name": "Network 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Network 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "USB3 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB3 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB3 (Rear) 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB3 (Rear) 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 (Front) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Spec sheet lists only 'USB 3.1' without Gen1/Gen2; assumed 5Gbps"
+    },
+    {
+      "name": "USB 3.1 (Front) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Spec sheet lists only 'USB 3.1' without Gen1/Gen2; assumed 5Gbps"
+    },
+    {
+      "name": "Audio Out L",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio Out R",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo 1/8\" TRS; also carries LTC-over-audio timecode input"
+    },
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "powercon",
+      "note": "Neutrik True1 (powerCON TRUE1), 100-250V 50/60Hz, 650VA max"
+    },
+    {
+      "name": "Power Loop Out",
+      "direction": "output",
+      "connector": "powercon",
+      "note": "Neutrik True1 power loop-through to daisy-chain another unit, 1000W max"
+    }
+  ]
+}

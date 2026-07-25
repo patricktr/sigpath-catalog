@@ -1,0 +1,42 @@
+{
+  "manufacturer": "RED Digital Cinema",
+  "model": "KOMODO 6K",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://docs.reddigitalcinema.com/955-0196/955-0196_V2.1%20Rev-A%20RED%20PS,%20KOMODO%20Operation%20Guide%20HTML_Barlow/Content/3_Components/01_KOMODO_Body.htm",
+  "confidence": "high",
+  "notes": "Specs are for the original RED KOMODO 6K (S35 sensor, RF mount, global shutter) — distinct from the newer KOMODO-X. Sourced from RED's official KOMODO Operation Guide (V2.1 Rev-A), hosted on RED's own docs.reddigitalcinema.com subdomain, cross-checked against the guide's \"Technical Specifications\" page (.../Content/C_TechSpecs/Specs_KOMODO_6K.htm). Ports intentionally omitted because no listed connector id fits and they are not standard signal/power connectors: (1) top \"Accessory Port\" — a proprietary spring-pin/pogo interface for the optional KOMODO Link Adaptor accessory, which itself breaks out to USB-C and Gigabit Ethernet — these are NOT native ports on the camera body, only available via that separate paid accessory; (2) Wi-Fi antenna — female RP-SMA connector; (3) CFast 2.0 media bay — storage card slot, not a cable connector; (4) bottom \"Service Port\" — RED-service-only, not user I/O; (5) built-in dual digital microphones (Mic 1/Mic 2) — internal elements, not external jacks. The 9-pin EXT and 2-pin DC-In ports use RED's proprietary \"0B ODU\" circular connector series (not literal DE-9 RS-232 or cylindrical DC barrel connectors); mapped to the closest available connector ids per instructions. Grade sdi-12g reflects the SDI port's maximum rated mode (12G-SDI); it also supports 6G/3G/1.5G-SDI fallback modes.",
+  "ports": [
+    {
+      "name": "External Mic Jack",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo external microphone input (left side of body)."
+    },
+    {
+      "name": "Headphone Jack",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm stereo headphone monitor output (left side of body)."
+    },
+    {
+      "name": "9-pin Extension Port (EXT)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Proprietary 9-pin '0B ODU' circular connector combining Genlock In, Timecode In, GPIO, and RS-232 camera control (Ctrl) in one port; no exact match in the given connector list, approximated as rs232 since that is the named control signal."
+    },
+    {
+      "name": "12G-SDI",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Full-size BNC SDI monitor output; supports 12G/6G/3G/1.5G-SDI modes with SMPTE timecode, HANC metadata, and embedded 24-bit/48kHz audio. Output only (not genlock/timecode in)."
+    },
+    {
+      "name": "DC-In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Proprietary 2-pin '0B ODU' circular DC power connector, wide input 7-17V DC. Not a literal cylindrical barrel jack, but the closest id in the given connector list."
+    }
+  ]
+}

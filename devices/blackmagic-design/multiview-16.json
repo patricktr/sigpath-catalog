@@ -1,0 +1,285 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "MultiView 16",
+  "category": "converter",
+  "type": "Scaler",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/multiview/techspecs",
+  "confidence": "high",
+  "notes": "Source: Blackmagic Design's own official Product Technical Specifications sheet (verified verbatim via a hosted PDF mirror at cpl.tech, content and layout identical to blackmagicdesign.com/products/multiview/techspecs) plus the Blackmagic MultiView installation/operation manual for connector confirmation. Connections per the official rear-panel diagram: 16x SDI In (SD/HD/3G/6G-SDI, auto-switching), 16x SDI Loop Out (reclocked loop-through of each input, same auto-switching rate), 2x HD-SDI multiview out, 2x 6G-SDI multiview out, 1x HDMI type A multiview out, REF In (Black Burst/Tri-Sync), RS-422 Remote, RJ45 Ethernet, USB (2.0, 480Mb/s), and an IEC AC power inlet (90-240V, 45W). 1RU, less than 6in deep, 2.3kg. Caveats: (1) the RS-422 port's physical connector is called \"RJ9\" on Blackmagic's own spec-sheet diagram but \"RJ11\" in the full manual text — neither exists in the allowed connector list, so it is mapped to the closest id, rs422; (2) the USB port's physical shape (Type B vs Micro-USB) is not stated in any Blackmagic document found; Type B was assumed and should be verified against the physical unit if precision matters; (3) HDMI version (1.4/2.0) is never stated by Blackmagic, so grade is omitted on that port; (4) Ethernet link speed is never stated (control/config only, no video), so grade is omitted; (5) this is the original/discontinued HDL-MULTIP6G/16 model — Blackmagic has since released newer multiview products, so verify part number if sourcing a currently-shipping unit.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 5",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 6",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 7",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 8",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 9",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 10",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 11",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 12",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 13",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 14",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 15",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI In 16",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-6g"
+    },
+    {
+      "name": "SDI Loop Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 1"
+    },
+    {
+      "name": "SDI Loop Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 2"
+    },
+    {
+      "name": "SDI Loop Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 3"
+    },
+    {
+      "name": "SDI Loop Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 4"
+    },
+    {
+      "name": "SDI Loop Out 5",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 5"
+    },
+    {
+      "name": "SDI Loop Out 6",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 6"
+    },
+    {
+      "name": "SDI Loop Out 7",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 7"
+    },
+    {
+      "name": "SDI Loop Out 8",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 8"
+    },
+    {
+      "name": "SDI Loop Out 9",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 9"
+    },
+    {
+      "name": "SDI Loop Out 10",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 10"
+    },
+    {
+      "name": "SDI Loop Out 11",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 11"
+    },
+    {
+      "name": "SDI Loop Out 12",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 12"
+    },
+    {
+      "name": "SDI Loop Out 13",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 13"
+    },
+    {
+      "name": "SDI Loop Out 14",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 14"
+    },
+    {
+      "name": "SDI Loop Out 15",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 15"
+    },
+    {
+      "name": "SDI Loop Out 16",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Reclocked loop-through of SDI In 16"
+    },
+    {
+      "name": "HD-SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Multiview (mosaic) output"
+    },
+    {
+      "name": "HD-SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Multiview (mosaic) output"
+    },
+    {
+      "name": "6G-SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Multiview (mosaic) output, supports 4K UHD"
+    },
+    {
+      "name": "6G-SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-6g",
+      "note": "Multiview (mosaic) output, supports 4K UHD"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "HDMI type A multiview (mosaic) output; auto-detects monitor EDID and switches between HD/Ultra HD. Blackmagic does not publish an HDMI version number for this port, so no grade is set."
+    },
+    {
+      "name": "REF In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Reference sync input, Black Burst or Tri-level sync for SD/HD/4K; not a data-bearing SDI grade so no grade is set."
+    },
+    {
+      "name": "RS-422 Remote",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "For third-party router/automation control. Blackmagic's own marketing spec sheet diagram labels this connector \"RJ9\" while the full installation manual describes it as an RJ11 (6P4C phone-style) jack; neither RJ9 nor RJ11 exists in the connector list, so it is mapped to the closest available id, rs422."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "For IP configuration, firmware updates, and Blackmagic Videohub Ethernet control protocol. Used for control only, not video transport; Blackmagic does not publish a link speed for this port so no grade is set."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 High Speed (480Mb/s), used with Blackmagic MultiView Setup software for firmware updates and IP address configuration. Blackmagic's documentation does not show the physical USB connector shape (Type B vs Micro-USB); Type B is assumed based on typical Blackmagic hardware of this generation and is unconfirmed."
+    },
+    {
+      "name": "Power Connector",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC power cable required, 90-240V AC input, 45W consumption."
+    }
+  ]
+}

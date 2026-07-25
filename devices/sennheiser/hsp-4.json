@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Sennheiser",
+  "model": "HSP 4",
+  "category": "audio",
+  "type": "Microphone",
+  "sourceUrl": "https://www.sennheiser.com/en-us/catalog/products/wireless-systems/hsp-4/hsp-4-black-3-pin-009864",
+  "confidence": "medium",
+  "notes": "HSP 4 is a cardioid, pre-polarised condenser headworn microphone (headmic), not a device with a chassis full of labeled jacks — its only physical I/O is the terminating connector on its permanently-attached 1.6 m cable, which plugs into a Sennheiser wireless bodypack transmitter (or wired mixer input) to supply bias power (4.5–15 V) and carry the mic signal on the same connector; there is no separate power inlet. Sennheiser sells the HSP 4 in multiple cable-end variants for different transmitter families: the base \"-3\" SKU (used here) terminates in Sennheiser's proprietary 3-pin locking connector (for 2000/3000/5000-series and evolution wireless bodypacks); an \"-EW\" variant instead terminates in a locking 3.5 mm mini-jack; a \"-5\" variant ships with bare/tinned lead ends and no connector at all. None of the allowed connector ids exactly matches Sennheiser's proprietary 3-pin locking connector, so \"xlr3\" was chosen as the closest available id (3-pin locking analog mic connector) — physically it is a smaller proprietary Sennheiser shell, not a full-size XLR3. No bandwidth grade applies (analog mic-level audio). Other specs corroborated via B&H product listing and Sennheiser documentation: sensitivity 4 mV/Pa, max SPL 150 dB, impedance 1 kΩ nominal, weight 9.2 g (capsule) / 455 g (as shipped w/ full assembly), frequency response 40 Hz–20 kHz.",
+  "ports": [
+    {
+      "name": "Output (3-pin cable connector)",
+      "direction": "output",
+      "connector": "xlr3"
+    }
+  ]
+}
