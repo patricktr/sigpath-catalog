@@ -290,7 +290,7 @@
     {
       "name": "Lamp",
       "direction": "output",
-      "connector": "xlr3",
+      "connector": "xlr4-dc",
       "note": "12V gooseneck lamp socket (XLR4-style lamp connector on rear panel)"
     },
     {

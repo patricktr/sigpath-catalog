@@ -10,8 +10,8 @@
     {
       "name": "Headset",
       "direction": "bidirectional",
-      "connector": "xlr3",
-      "note": "Physically a 4-pin male XLR (mic -, mic + ~5VDC bias, earphone -, earphone +), user-replaceable. No dedicated 4-pin audio XLR id exists in the allowed connector list, so 'xlr3' (same family, audio use) was used as the closest match rather than 'xlr4-dc' (which denotes DC power wiring, not audio)."
+      "connector": "xlr4",
+      "note": "Physically a 4-pin male XLR (mic -, mic + ~5VDC bias, earphone -, earphone +), user-replaceable."
     },
     {
       "name": "Line In",

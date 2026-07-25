@@ -47,7 +47,7 @@
     {
       "name": "Headset",
       "direction": "bidirectional",
-      "connector": "xlr4-dc",
+      "connector": "xlr4",
       "note": "Front panel 4-pin XLR connector for combined dynamic/electret headset mic input and headphone output. Mapped to xlr4-dc as the closest 4-pin XLR id in the allowed list (not DC power related in this application)."
     },
     {

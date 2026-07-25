@@ -9,8 +9,8 @@
     {
       "name": "Headset",
       "direction": "bidirectional",
-      "connector": "xlr4-dc",
-      "note": "4-pin male, Clear-Com standard headset/intercom connector (mic in + audio out + PTT); the -X4 in the model name denotes this connector. No dedicated 4-pin-XLR-audio id exists in the allowed connector list, so xlr4-dc (closest pin-count match) was used — this is NOT a DC power port."
+      "connector": "xlr4",
+      "note": "4-pin male, Clear-Com standard headset/intercom connector (mic in + audio out + PTT); the -X4 in the model name denotes this connector."
     },
     {
       "name": "USB",

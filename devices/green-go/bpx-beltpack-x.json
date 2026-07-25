@@ -20,8 +20,8 @@
     {
       "name": "Headset",
       "direction": "bidirectional",
-      "connector": "xlr4-dc",
-      "note": "Neutrik XLR4-Male headset connector combining mic input (pins 1&2, unbalanced, up to 2.5V bias, +30 to +60 dB gain) and headset audio output (pins 3&4, 0 dBu nominal / +20 dBu max, 120 ohm output driving 32-600 ohm headsets). The permitted connector list has no generic signal XLR4 id; xlr4-dc (normally DC-power-coded) is the closest available match for a 4-pin XLR - it is NOT used for DC power on this device."
+      "connector": "xlr4",
+      "note": "Neutrik XLR4-Male headset connector combining mic input (pins 1&2, unbalanced, up to 2.5V bias, +30 to +60 dB gain) and headset audio output (pins 3&4, 0 dBu nominal / +20 dBu max, 120 ohm output driving 32-600 ohm headsets)."
     }
   ]
 }

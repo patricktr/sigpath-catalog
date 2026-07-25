@@ -89,7 +89,7 @@
     {
       "name": "Local Headset Connector",
       "direction": "bidirectional",
-      "connector": "xlr3",
+      "connector": "xlr4",
       "accepts": [
         "xlr3"
       ],

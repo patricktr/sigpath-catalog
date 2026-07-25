@@ -11,7 +11,7 @@
     {
       "name": "Headset (Front Panel, X4)",
       "direction": "bidirectional",
-      "connector": "xlr3",
+      "connector": "xlr4",
       "note": "4-pin XLR-M headset jack, Arcadia-X4 variant; mic auto-detect"
     },
     {

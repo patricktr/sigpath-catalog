@@ -11,8 +11,8 @@
     {
       "name": "Headset",
       "direction": "input",
-      "connector": "xlr4-dc",
-      "note": "4-pin XLR-M mic/headset jack (Arcadia-X4 variant); not a DC power connector - closest available connector id to a 4-pin XLR"
+      "connector": "xlr4",
+      "note": "4-pin XLR-M mic/headset jack (Arcadia-X4 variant); the X5 variant uses a 5-pin XLR-F"
     },
     {
       "name": "USB A",

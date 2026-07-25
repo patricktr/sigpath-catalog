@@ -10,7 +10,7 @@
     {
       "name": "Headset",
       "direction": "bidirectional",
-      "connector": "xlr4-dc",
+      "connector": "xlr4",
       "note": "4-pin male XLR headset connector combining mic input and speaker output (Pin1 Mic-, Pin2 Mic+, Pin3 Speaker-, Pin4 Speaker+); not a DC power pin despite connector id name, closest match in allowed list for 4-pin XLR"
     },
     {
