@@ -1,0 +1,142 @@
+{
+  "manufacturer": "TSL Products",
+  "model": "PAM1-MK2",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://tslproducts.com/wp-content/uploads/Manuals/Audio/pam1-mk2-handbook-issue-3.pdf",
+  "confidence": "medium",
+  "notes": "Primary source: TSL's own PAM1 MK2 Operating Manual (Issue 3 handbook PDF), which is more complete than TSL's marketing product page. Several taxonomy/documentation ambiguities are flagged inline on individual ports: (1) no DB25 connector id exists in the given taxonomy, so the unit's two 25-way D-type audio connectors are tagged with the closest available D-sub id (rs232) purely for shape - they are audio breakout connectors, not RS232 data ports; (2) the \"dual 12V DC input\" redundant-power claim in the feature list could not be fully visually confirmed against the rear-panel photo (only one DC barrel jack was clearly legible); (3) the manual's \"Metadata\" D9 pinout (RS422 master) and the panel-printed \"GPI\" D9 could not be definitively confirmed as the same physical connector - they were merged as one port entry; (4) the manual also contains a D25 \"Analogue Input\" pinout table (channels 3-6) referenced from the spec section, but this connector does not appear on the actual PAM1 MK2 rear-panel photo/hookup schematic and was treated as leftover documentation shared across TSL's PAM product family rather than a real port on this SKU - it was NOT included in the port list. Unit is 1U, 483x280mm, 3.1kg, available in Dolby-decoding and non-Dolby versions (Dolby E/Dolby Digital/Dolby Digital Plus support is a firmware/licensing variant, not a physical port difference).",
+  "ports": [
+    {
+      "name": "SDI 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD/SD-SDI input, auto-sensing 1080p (60/59.94/50), SMPTE 259M/292M/424M, 75 ohm"
+    },
+    {
+      "name": "SDI 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD/SD-SDI input, auto-sensing 1080p (60/59.94/50), SMPTE 259M/292M/424M, 75 ohm"
+    },
+    {
+      "name": "AES 1",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "AES3 (1994) balanced digital audio input, XLR3 female, 110 ohm, 32/44.1/48kHz"
+    },
+    {
+      "name": "AES 2",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "AES3 (1994) balanced digital audio input, XLR3 female, 110 ohm, 32/44.1/48kHz"
+    },
+    {
+      "name": "IP1 A1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analogue balanced line input, stereo pair 1 channel 1"
+    },
+    {
+      "name": "IP1 A2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analogue balanced line input, stereo pair 1 channel 2"
+    },
+    {
+      "name": "IP2 A1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analogue balanced line input, stereo pair 2 channel 1"
+    },
+    {
+      "name": "IP2 A2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Analogue balanced line input, stereo pair 2 channel 2"
+    },
+    {
+      "name": "AES I/O",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "25-way D-type (DB25) connector, 4 pairs/8ch AES3 in + 4 pairs/8ch AES3 out, 110 ohm, Yamaha-style pinout; optional CAB-D25-BNC breaks out to unbalanced 75-ohm BNC. No DB25 id exists in the connector taxonomy - rs232 used only as the closest D-sub shape match; this is NOT an RS232 data port."
+    },
+    {
+      "name": "Analogue Out",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "25-way D-type (DB25) connector, fixed/variable analogue multichannel output, 8 mono channels (4 stereo pairs, for 5.1/7.1 loudspeaker feeds), Yamaha-style pinout. No DB25 id exists in the connector taxonomy - rs232 used only as the closest D-sub shape match; this is NOT an RS232 data port."
+    },
+    {
+      "name": "O/P A1",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analogue stereo line output, channel 1 (50 ohm, through level control)"
+    },
+    {
+      "name": "O/P A2",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Analogue stereo line output, channel 2 (50 ohm, through level control)"
+    },
+    {
+      "name": "Video Out",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "User-selectable Composite video (SD PAL/NTSC) or SDI output, selected via rear DIP switch 8; grade omitted because mode is switchable between analogue composite and digital SDI"
+    },
+    {
+      "name": "Re-clocked Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Re-clocked serial digital output of the selected HD/SDI input, 75 ohm"
+    },
+    {
+      "name": "Ext Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "HD-SDI output for external monitor-wall display (feature unique to MK2); can drive a 3rd-party SDI-to-HDMI/DVI converter"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel stereo headphone jack ('Stereo Jack socket type A'), 50 ohm, with loudspeaker mute on insertion"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel USB port for firmware/system updates and preset save/recall"
+    },
+    {
+      "name": "RS 422",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Rear-panel D9 remote-control connector, wired for RS422 slave operation"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "Rear-panel D9. Manual's separate 'Metadata' D9 pinout table (RS422 master, TX+/TX-/RX+/RX-) appears to correspond to this physical connector, but the panel-vs-manual labeling is ambiguous in the source document."
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "12V DC power input, powered from the supplied external 90-250VAC to 12VDC converter"
+    },
+    {
+      "name": "DC IN 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Datasheet's feature list states 'Dual 12V DC inputs' for redundant power; a second DC input is claimed by the spec text but its exact physical position could not be confirmed at the resolution of the sourced rear-panel photo/schematic."
+    }
+  ]
+}

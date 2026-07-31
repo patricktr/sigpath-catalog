@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Preston Cinema Systems",
+  "model": "Hand Unit 3 (HU3)",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://firebasestorage.googleapis.com/v0/b/preston-42629.appspot.com/o/documents%2FHU3%2FHU3_Manual.pdf?alt=media&token=ea7db00a-103d-48fe-b661-87110cc8264c",
+  "confidence": "medium",
+  "notes": "Legacy/discontinued product: Preston's current site (prestoncinema.com) now features \"Hand Unit 4\" as its flagship handheld controller and no longer surfaces an HU3 page in live navigation, though HU3 firmware/manuals remain hosted on Preston's own servers. Spec data was retrieved directly from Preston Cinema Systems' own product database (public Firebase Realtime Database, project preston-42629, which powered/powers prestoncinema.com's product pages) plus Preston's official HU3 Quick-Start Guide PDF (hosted on Preston's own Firebase Storage, used as sourceUrl). The full connector pin-out table (Command/Serial/Zoom/Remote Iris) came from Preston's complete \"FI+Z HU3\" technical manual (Rev 2.31, authored by Preston Cinema Systems, Santa Monica CA), accessed via a third-party mirror at cinematography.net since the current live site only hosts the abbreviated quick-start guide. All four physical connectors are proprietary push-pull LEMO connectors (5-pin Command, 4-pin Serial, 6-pin Zoom, 3-pin Remote Iris); none map exactly to any id in the required connector list, so each was mapped to its closest functional analog (rs422/rs232/xlr3) - treat these as approximations, not literal RS-232/RS-422/XLR hardware (see per-port notes for actual pin-outs). No bandwidth-graded connector types (HDMI/SDI/DP/USB/Ethernet) are present, so no port carries a grade. The HU3 is primarily powered by a removable Sony NP-FM50-type 7.4V (1.5-1.8Ah) Li-Ion battery, ~6hr runtime - not modeled as a port since it's a battery bay, not an external cable connector; external 10-30VDC power is instead available via the Command LEMO when hardwired to the MDR-2. It's a handheld wireless (2.4GHz \"G4\" RF, 30 channels, 300m line-of-sight) lens/camera remote control, not a typical rack/AV signal-chain device - \"control\"/\"Control processor\" is the closest fit among the given category/type enums. Desktop/handheld unit, not rack-mountable (rackUnits omitted). Dimensions 7.2in x 7.6in x 3.3in, weight 40.2oz (1.14kg).",
+  "ports": [
+    {
+      "name": "Command",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "5-pin LEMO (proprietary push-pull connector, not a literal RS422 D-sub). Supplies 10-30VDC power to the Hand Unit and carries the RS422 serial command link to/from the MDR-2 motor driver for hardwired (non-wireless) operation. Pins: 1-GND, 2-+12-24VDC, 3-Serial, 4-Serial, 5-n/c."
+    },
+    {
+      "name": "Serial",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "4-pin LEMO (not a DE-9). Used with adapter cable p/n 4651 to connect a PC for firmware updates. Pins: 1-+12V, 2-GND, 3-Serial In, 4-Serial Out."
+    },
+    {
+      "name": "Zoom",
+      "direction": "output",
+      "connector": "rs422",
+      "note": "6-pin LEMO (proprietary hybrid power/analog/digital connector, not literal RS422). Connects the Micro Force zoom control accessory via cable 4440/4445/4540/4545. Pins: 1-+PWR, 2-GND, 3-Run, 4-Run momentary, 5-Vref, 6-Zoom Cmd."
+    },
+    {
+      "name": "Remote Iris",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin LEMO (not literal XLR). Accepts the external Remote Iris Box accessory (p/n 4020) - a potentiometer input. Pins: 1-+Pot, 2-Wiper, 3-GND. Automatically disables the on-unit iris slider when connected."
+    }
+  ]
+}

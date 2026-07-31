@@ -1,0 +1,91 @@
+{
+  "manufacturer": "Hanwha Vision",
+  "model": "XRN-3220B2",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.hanwhavision.com/us/products/product-details/xrn-3220b2",
+  "confidence": "high",
+  "notes": "32-channel NVR (Hanwha WiseNet series), Intel 12th-gen based, 8 SATA HDD bays (up to 10TB each, max 80TB), up to 32MP camera recording. Interface data pulled from the manufacturer's official Specifications tab (Interface/Electrical/Mechanical sections). Caveats: (1) HDMI version/generation is not stated in the spec — only max resolution/refresh per port — so no HDMI grade was set; (2) Alarm In/Out and AC power inlet connector *styles* are not explicitly named in the spec (only counts/voltage given) — euroblock (terminal block) and IEC were used as the closest/most typical connector match and should be verified against the datasheet PDF or product photos if precise connector shape matters; (3) chassis dimensions (438.0 x 86.0 x 434.9 mm) are close to a 2U rack pitch but the manufacturer page never states \"rack mountable\" or gives a rack-unit figure, so rackUnits was left unset rather than assumed; (4) This is the base \"B2\" (non-redundant-PSU) variant; a \"-RB2\" variant with dual PSU/failover also exists — do not conflate specs. Storage-capacity SKU variants (10TB-60TB preinstalled HDD, sold via retailers like B&H) do not change the physical I/O described here.",
+  "ports": [
+    {
+      "name": "HDMI 1",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Playback/Setup display; max 3840x2160 @30Hz. HDMI version not stated by manufacturer (only resolution/refresh given), so grade omitted."
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "output",
+      "connector": "hdmi",
+      "note": "Secondary display; max 1920x1080 @60Hz. HDMI version not stated by manufacturer, so grade omitted."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm audio jack, 1EA"
+    },
+    {
+      "name": "LAN/WAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN/WAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN/WAN 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Alarm In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "8 circuits. Manufacturer spec lists only 'In 8EA'; exact connector style not stated, euroblock/terminal block inferred as the industry-standard connector for NVR alarm I/O."
+    },
+    {
+      "name": "Alarm Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4 circuits. Connector style inferred (terminal block), not explicitly stated by manufacturer."
+    },
+    {
+      "name": "USB 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear USB 3.0 port"
+    },
+    {
+      "name": "USB 4 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Rear USB 3.0 port"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "1EA AC inlet, 100-240VAC ±10% 50/60Hz, 1.5A (single SMPS). Exact inlet style (IEC C13/C14) inferred as typical for this chassis class; manufacturer spec only states 'AC 1EA'."
+    }
+  ]
+}

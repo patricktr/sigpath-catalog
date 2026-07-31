@@ -1,0 +1,15 @@
+{
+  "manufacturer": "IDX System Technology",
+  "model": "E-HL9 (ENDURA-HL9)",
+  "category": "power",
+  "sourceUrl": "https://www.idx.tv/dcms_media/other/E-HL9_1202.pdf",
+  "confidence": "medium",
+  "notes": "This is a V-Mount lithium-ion camera battery (14.4V nominal, 16.8V max charge, 6.0Ah / 87Wh, max discharge 10A / 120W, charge time ~120min), not a signal-routing device. Its only physical power interface is the proprietary V-Mount spade/blade-contact plate, which is used both to output DC power to a camera/accessory (discharge) and to receive charge when docked directly onto an IDX charger cradle (e.g. VL-PVC1) — there is no separate charging cable/jack. Because \"V-Mount\" is not in the provided connector taxonomy, dc-barrel was chosen as the nearest listed analog for this multi-pin DC power/data contact block; treat this as an approximation, not a literal barrel connector. \"PowerLink\" is a mechanical stacking feature (two E-HL9 units docked together) that combines capacity to 174Wh while capping combined discharge at 120W — it is not a separate cable port, so no additional connector entry was added for it. Product dimensions 85(W)x140(H)x58(D)mm, weight ~740g; desktop/handheld form factor, not rack-mountable (rackUnits omitted). No \"type\" value in the allowed enum accurately fits a camera battery pack, so type was omitted. Official manufacturer page (idx.tv) notes this model's sales were discontinued in July 2021, though it remains documented and sold by some AV retailers (Markertek, B&H-adjacent resellers) as legacy stock/reference. Also marketed under the \"ENDURA-HL9\" name on the datasheet itself.",
+  "ports": [
+    {
+      "name": "V-Mount Terminal",
+      "direction": "bidirectional",
+      "connector": "dc-barrel"
+    }
+  ]
+}

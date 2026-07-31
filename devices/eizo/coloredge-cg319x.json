@@ -1,0 +1,69 @@
+{
+  "manufacturer": "Eizo",
+  "model": "ColorEdge CG319X",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.eizo.com/products/coloredge/cg319x/",
+  "confidence": "high",
+  "notes": "Verified against EIZO's own product page (eizo.com) and EIZO's official \"Technical Data\" datasheet PDF (authored/copyrighted by EIZO Europe GmbH, mirrored by reseller dpsb.co.uk after the primary eizo.es/eizo.de PDF links returned 404 and eizoglobal.com failed TLS verification). No DVI, SDI, audio, or LAN ports exist on this model — it is video-input-only (DisplayPort x2, HDMI x2) plus a USB 3.1 Gen1/5Gbps hub (1x Type-B upstream, 3x Type-A downstream, one with 10.5W charging). DisplayPort version (1.2) is explicitly stated in EIZO's own datasheet feature bullets (\"Two 1.2 DisplayPorts\"); HDMI version is NOT explicitly stated by EIZO on any page checked (only HDCP 1.4/2.2 and Deep Color are specified), so no HDMI grade was set even though third-party retailer aggregations commonly list it as HDMI 2.0 — that figure could not be confirmed on an authoritative EIZO page. Power consumption: 52W typical, 140W max, 1.2W standby. Desktop monitor — no rack units. No physical port labels/numbers appear on the rear panel photo (just grouped \"USB\" / \"HDMI\" / \"DisplayPort\" silkscreen), so the \"1\"/\"2\"/\"3\" suffixes above are for disambiguation only, not printed labels.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "HDCP 1.3; supports DCI 4K 60p, up to 10-bit 4:4:4 at 50/60p"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "HDCP 1.3; supports DCI 4K 60p, up to 10-bit 4:4:4 at 50/60p"
+    },
+    {
+      "name": "HDMI 1",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Deep Color, HDCP 1.4/2.2; supports DCI 4K 60p, 12-bit 4:2:2 at 50/60p. HDMI protocol version (widely reported elsewhere as 2.0) is not stated by EIZO, so no grade is set."
+    },
+    {
+      "name": "HDMI 2",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Deep Color, HDCP 1.4/2.2; supports DCI 4K 60p, 12-bit 4:2:2 at 50/60p. HDMI protocol version not stated by EIZO, so no grade is set."
+    },
+    {
+      "name": "USB Upstream (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "Connects to host PC to feed the built-in 3-port USB hub; USB 3.1 Gen 1 / 5Gbps per EIZO technical data sheet"
+    },
+    {
+      "name": "USB Downstream (Type A) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "One of 3 downstream Type-A hub ports; USB 3.1 Gen 1 / 5Gbps. One of the three supports Battery Charging up to 10.5W."
+    },
+    {
+      "name": "USB Downstream (Type A) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB Downstream (Type A) 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "AC 100-120V/200-240V, 50/60Hz; ships with a detachable power cord (listed in box contents), so treated as a standard IEC inlet — EIZO's own spec sheet does not print the exact IEC connector letter (e.g. C13/C14)."
+    }
+  ]
+}

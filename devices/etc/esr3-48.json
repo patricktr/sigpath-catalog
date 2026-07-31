@@ -1,0 +1,53 @@
+{
+  "manufacturer": "ETC",
+  "model": "ESR3-48",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://www.etcconnect.com/workarea/DownloadAsset.aspx?id=10737461334",
+  "confidence": "high",
+  "notes": "ESR3-48 is the 48-slot, floor-standing member of ETC's Sensor3 CE Rack family (the European/international 3-phase 230/415V version of ETC's Sensor3 theatrical dimming system; \"CE\" = Conformite Europeenne). It houses up to 48 dual-density dimmer/relay modules (96 circuits max) controlled by a Control Electronics Module (CEM3) backplane. Dimensions (incl. door): 217 x 37.5 x 58.1 cm; empty weight ~113 kg, typical installed weight ~247 kg. It is a desktop/floor-standing lighting-industry cabinet, not a standard 19\" rack-mount chassis, so rackUnits is omitted. This is fundamentally a theatrical AC phase-control dimming rack, not a generic PDU — \"PDU\" was chosen only because none of the allowed `type` values describe a dimming rack; treat it as an approximation. All power and control connections (mains feed, per-circuit loads, DMX, station bus, panic contact) are permanently wired screw/stud terminals inside the cabinet rather than discrete panel plugs — connector IDs above (mostly \"euroblock\") represent the closest match in the given taxonomy, not literal Euroblock parts. Not covered as separate ports here (present only on specific configurations, so omitted from the main list): a 4-pin J12 pluggable header for an optional Dual Tracking Remote Select Switch (dual-backplane/Redundant-Tracking racks only), and an IEC power inlet that appears on the backplane diagram only when the optional Network Electronics Filler Module (NEFM) network switch is fitted. Source: ETC \"Sensor3 CE Rack (ESR3 Series) Installation Manual,\" Part# 7144M2100, Rev H, released October 2016 (manufacturer's own installation manual, fetched via etcconnect.com over verified HTTPS) — the current authoritative document for this rack family, confirmed as the top result when searching ETC's own site for \"ESR3-48.\"",
+  "ports": [
+    {
+      "name": "Line Power Input (L1/L2/L3/N/E)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Permanently hardwired 3-phase 230/415V AC (or single-phase 230V, 3-wire) mains feed via bus-bar stud/lug terminals inside the cabinet, not a plug-and-socket connector. \"euroblock\" is the closest listed connector family (large screw/stud terminal block). Rated up to 800A per phase for ESR3-48."
+    },
+    {
+      "name": "Dimmer/Switched Circuit Load Outputs (x96)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Up to 96 dimmed or switched load circuits (48 dual-density dimmer module slots x 2 circuits/module). Each circuit terminates on phase/neutral/earth screw lugs (6/10/15/25A single, paired 15/25A, or double-height 50A lugs; 16 mm² max wire) rather than a discrete plug — downstream connector type depends entirely on field wiring/patch panels, not the rack itself."
+    },
+    {
+      "name": "DMX512 A (In/Thru)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "One of two DMX512 (RS-485) universe inputs on the CEM3 control backplane. Physically a pluggable screw-terminal header (or optional IDC punchdown), not a 5-pin XLR; includes a \"Thru\" pass-through for daisy-chaining to the next rack/device, plus a termination DIP switch."
+    },
+    {
+      "name": "DMX512 B (In/Thru)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Second DMX512 (RS-485) universe input, same screw-terminal/IDC header style and pass-through/termination behavior as DMX A."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Single Ethernet control/network connection on the CEM3 backplane for console and inter-rack communication (directly, via an optional Network Electronics Filler Module switch, or an external hub/switch). Manual does not state link speed, so no grade is set; this generation of Sensor3/CEM3 gear is typically 10/100 Mb."
+    },
+    {
+      "name": "Panic Circuit I/O",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Optional screw-terminal header on the CEM3 backplane: PANIC RTN/PANIC IN accepts an external NO or NC dry-contact trigger, and PANIC OUT/COM supplies +24VDC (25mA max) to drive an external panic-indicator lamp."
+    },
+    {
+      "name": "Station Bus (Station +/-)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Optional 2-wire screw-terminal bus on the CEM3 backplane for ETC remote wall stations, wired with Belden 8471 (or equivalent) in bus/star/loop/home-run topology."
+    }
+  ]
+}

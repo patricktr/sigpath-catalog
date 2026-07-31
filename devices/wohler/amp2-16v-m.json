@@ -1,0 +1,77 @@
+{
+  "manufacturer": "Wohler",
+  "model": "AMP2-16V-M",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.wohler.com/wp-content/uploads/2016/11/AMP2-16V-M_m.pdf",
+  "confidence": "high",
+  "notes": "AMP2-16V-M is a modular, 2RU 16-channel audio/video monitor. Ports listed reflect the unit's STANDARD/base configuration (Wohler part 8130-0200) confirmed by the manual's \"Table 6-2: Relationship Between Model Name and Included I/O Modules\": only the single dual-input 3G/HD/SD-SDI card ships standard (2x SDI in, 1x re-embedded/reclocked SDI out, 8x de-embedded AES output channels on 2 DB-9 connectors). The chassis has up to 5 additional optional card slots (extra 3G/HD/SD-SDI cards, AES Input Card, AES Output Card, Analog I/O + TOSLINK Card, AVB Listener Card, Dante/AES67 or Ravenna/AES67 AoIP card, plus an internal Dolby D/E/DD+ daughter card) that are field-upgradable but NOT part of the base model and are therefore omitted here. SDI grade set to sdi-3g since the card auto-detects/supports 3G/HD/SD-SDI (3G is the ceiling). No connector id exists in the allowed list for a DB-9 multi-pin AES breakout, so both AES output connectors were mapped to \"aes3\" as the closest match — physically they are female DB-9 sub-D jacks (Tascam DB-25-to-XLR style breakout cables are referenced elsewhere in the manual for the optional Analog I/O card's DB-25 jacks, not these DB-9s). Built-in front-panel stereo speakers exist but were not listed as they are not external ports. Height is listed inconsistently across Wohler's own materials (89mm confirmed = 2RU/3.5\", though one datasheet prints \"4.5\"\"); treated as 2RU per the 89mm figure and the product page's own \"2RU\" label. Primary source: Wohler's own AMP2-16V Series manual/spec PDF hosted on wohler.com (rear-panel connector list, standard-model table, and card descriptions). Cross-checked against Wohler's official AMP2-16V-M/AMP2-E16V-M datasheet (part 830001 Rev L, mirrored by UK retailer canford.co.uk) for dimensions, power, and order part numbers, and against wohler.com's live (End-of-Life) product page for the 2RU rack-size label and IEC power description.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out (Re-embedded)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AES Out 1-4",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Actual connector is a female DB-9 (D-sub) breakout carrying 4 de-embedded AES pairs, not a standard XLR/BNC AES3 jack; mapped to closest available connector id."
+    },
+    {
+      "name": "AES Out 5-8",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "Actual connector is a female DB-9 (D-sub) breakout carrying 4 de-embedded AES pairs, not a standard XLR/BNC AES3 jack; mapped to closest available connector id."
+    },
+    {
+      "name": "Genlock Ref In",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Accepts composite/blackburst sync reference; not an SDI signal path, so no SDI grade applies."
+    },
+    {
+      "name": "Genlock Ref Pass-Through",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Loop-through of the Genlock Ref In signal for daisy-chaining units; last unit in chain requires a 75Ω terminator."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Used for firmware upgrades and preset save/copy to PC; speed not specified in manual."
+    },
+    {
+      "name": "Serial (Console)",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Female DB-9; manual states this is for factory diagnostics, while marketing copy also references serial-to-PC preset transfer."
+    },
+    {
+      "name": "AC Power (IEC)",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" stereo jack."
+    }
+  ]
+}

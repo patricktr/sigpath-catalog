@@ -1,0 +1,79 @@
+{
+  "manufacturer": "10ZiG",
+  "model": "7000q",
+  "category": "other",
+  "type": "Media player",
+  "sourceUrl": "https://www.10zig.com/product/solutions/thin-clients/7000q-series/",
+  "confidence": "high",
+  "notes": "The 7000q is a thin-client endpoint (Intel J6412 quad-core), not a traditional AV rack device; closest taxonomy category/type available is \"other\"/\"Media player\". Desktop unit, not rack-mountable (rackUnits omitted). Ports confirmed directly from the 10ZiG manufacturer product page, which is shared identically across the 7000q sub-models (7010q, 7011q, 7072q). DisplayPort outputs support 2x 4K/UHD (3840x2160) @ 60Hz but the exact DP version (1.2/1.4) is not explicitly stated on the page, so grade is omitted for those ports (would otherwise infer dp-1.4 given 4K60 dual-head, but leaving ungraded per instruction to omit unconfirmed grades). USB 3.2 ports' exact generation (Gen1/5Gbps vs Gen2/10Gbps) is not specified on the page, so graded conservatively as usb-5g (baseline USB 3.2 Gen1 speed); this is an inference. Ethernet speed stated as \"10/100/1000 Base-T\" confirming eth-1g. Audio jack is a single 3.5mm 4-pole (TRRS) combo headset jack (mic+headphone), not separate connectors. Power is a DC barrel jack from an external power brick; exact voltage not listed on the page. An optional Fiber LAN (SFP) module is available in place of copper RJ45 on some configurations; not included as a separate port since it is an either/or option rather than a fixed physical port on the base unit. No serial/RS232 port, card reader, or separate mic/line jacks were found on the page.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "USB 3.2 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (1)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (3)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-C (Data Only)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Headset Jack",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

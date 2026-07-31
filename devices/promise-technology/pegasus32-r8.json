@@ -1,0 +1,44 @@
+{
+  "manufacturer": "Promise Technology",
+  "model": "Pegasus32 R8",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.promise.com/products/pegasus/pegasus32/",
+  "confidence": "medium",
+  "notes": "8-bay Thunderbolt 3 / USB 3.2 Gen 2 hardware-RAID direct-attached storage tower (desktop, not rack-mountable). Data I/O confirmed from Promise's own product page (https://www.promise.com/products/pegasus/pegasus32/) and official Pegasus32 Series Data Sheet (P/N G6130P2R4000000, © 2019 PROMISE Technology, PDF mirrored at storage.googleapis.com/static-shops/products/document/c2869f70f05829024772b06960e217043903.pdf) — both agree exactly: \"2x USB-C ports either Thunderbolt 3 (40Gbps) or USB 3.2 Gen 2 (10Gbps)\" plus a full-size 4-lane DP 1.4 pass-through port, 85W host power delivery over Thunderbolt 3, Kensington lock. AC mains input exists (internal PSU) but neither source publishes its connector type or wattage, so that port's connector value (\"iec\") is an inference, not a confirmed spec — flagged accordingly. B&H, Adorama, Markertek, and Provantage retailer pages all returned HTTP 403 to automated fetch and could not be used to cross-check. No Ethernet, audio, or other I/O is present on this model. Capacity ships in several configurations (32/64/80/96/144TB HDD or 16TB SSD per the current page; the 2019 data sheet lists \"up to 112TB\").",
+  "ports": [
+    {
+      "name": "Thunderbolt 3 / USB-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "grade": "usb-40g",
+      "note": "Combo port: Thunderbolt 3 at 40Gbps or USB 3.2 Gen 2 at 10Gbps. Only one of the two USB-C ports can be an active host connection at a time; the other is used for daisy-chaining."
+    },
+    {
+      "name": "Thunderbolt 3 / USB-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "accepts": [
+        "thunderbolt"
+      ],
+      "grade": "usb-40g",
+      "note": "Combo port: Thunderbolt 3 at 40Gbps or USB 3.2 Gen 2 at 10Gbps. Only one of the two USB-C ports can be an active host connection at a time; the other is used for daisy-chaining."
+    },
+    {
+      "name": "DisplayPort 1.4",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.4",
+      "note": "Full-size, 4-lane DP 1.4 pass-through; supports up to 8K monitor output via the Thunderbolt 3 connection."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal PSU; exact inlet type (C13/C14) and wattage are not published on the manufacturer's marketing page or data sheet — connector is inferred as standard IEC based on typical construction for this class of external RAID tower. Could not confirm."
+    }
+  ]
+}

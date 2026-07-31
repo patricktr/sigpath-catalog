@@ -1,0 +1,56 @@
+{
+  "manufacturer": "Strymon",
+  "model": "Iridium",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://www.strymon.net/faq/what-are-the-hardware-specifications-on-iridium/",
+  "confidence": "medium",
+  "notes": "Strymon Iridium is a guitar-pedal-format amp/cab modeler (analog JFET preamp + 24-bit/96kHz IR-based cab simulation), not a traditional rack/room AV device — no rackUnits (desktop/floorboard footprint, 4.5\"D x 4\"W x 1.75\"-2.4\"T depending on source). Category/type were mapped to the closest available options (audio/DSP); \"Other\" would also be defensible. Primary specs (I/O jack types, impedances, power) confirmed on Strymon's own hardware-specs FAQ and product page (strymon.net). USB connector is physically USB Mini-B per Strymon documentation/retailers — \"usb-micro\" used as the closest id in the allowed connector list, not an exact match. The EXP/MIDI jack is a single multi-function 1/4\" TRS jack (expression pedal or MIDI-over-TRS accessory); marked as input since its primary function is accepting external control, though MIDI automation could be considered bidirectional in some setups. No ports on this device fall on a graded connector scale (no HDMI/SDI/DisplayPort/USB-speed/Ethernet), so no \"grade\" values were set.",
+  "ports": [
+    {
+      "name": "IN",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "accepts": [
+        "ts-6.35"
+      ],
+      "note": "Single combo jack; accepts mono TS (instrument/line, default) or stereo TRS (requires TRS adapter cable). Input impedance 1M ohm, max input level +8dBu."
+    },
+    {
+      "name": "OUT L",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4\" output. Used alone for mono output. Output impedance 100 ohm."
+    },
+    {
+      "name": "OUT R",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4\" output, right channel of stereo pair."
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" stereo headphone output, discrete transistor headphone amp, level set by front-panel LEVEL knob."
+    },
+    {
+      "name": "EXP/MIDI",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Multi-function 1/4\" TRS jack for a standard expression pedal, or a Strymon MiniSwitch / MultiSwitch Plus / MIDI EXP cable for remote preset selection and MIDI automation."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Physical connector is USB Mini-B (5-pin), not exactly in the provided connector list; closest available id used. Used for loading custom IRs via Strymon Impulse Manager and for firmware updates, not for audio."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "9VDC center-negative, 2.1 x 5.5mm barrel, 500mA minimum (300mA minimum if headphone output unused). Power supply not included."
+    }
+  ]
+}

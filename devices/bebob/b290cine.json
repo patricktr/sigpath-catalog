@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Bebob",
+  "model": "B290CINE",
+  "category": "power",
+  "type": "Other",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1477513-REG/bebob_factory_gmbh_b290cine_b_mount_high_load_battery.html/specs",
+  "confidence": "medium",
+  "notes": "Source is B&H Photo (Authorized Dealer for bebob), not the manufacturer directly: bebob.com currently redirects to an unrelated parked/loading page (895535.seahorizonviewtop.com) rather than a real product page, so it could not be used. Two of three ports (B-Mount contacts and D-Tap/P-Tap) are approximated as 'dc-barrel' since neither a battery-mount spring-contact interface nor a P-Tap/D-Tap connector exists in the required connector enum — treat as best-fit, not literal barrel jacks. B&H's spec table lists 'Battery Capacity: 294 mAh', which is very likely a units typo for 294Wh / 20.4Ah (consistent with the product name and description text elsewhere on the same page). Dual voltage output (14.4V / 28.8V) is auto-selected by the mating device's B-Mount plate — the battery does not have separate physical ports per voltage. No SDI/HDMI/DisplayPort/USB/Ethernet bandwidth-graded connectors are present on this device.",
+  "ports": [
+    {
+      "name": "B-Mount Output",
+      "direction": "bidirectional",
+      "connector": "dc-barrel",
+      "note": "Proprietary bebob B-Mount dual-rail spring-contact battery interface (auto-sensing 14.4V or 28.8V DC, up to 20A) that mates with a camera/light's B-Mount plate. Not a discrete cable connector, so no exact match exists in the allowed connector list; 'dc-barrel' was chosen as the closest generic DC power connector. Marked bidirectional because the same contacts act as the charge input when the battery is docked in a bebob BS2/BS4 charger."
+    },
+    {
+      "name": "D-Tap / P-Tap Output",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Twist D-Tap (P-Tap) 2-pin accessory power output, rainproof, reversible cable-trail direction without polarity change. D-Tap is a 2-pin power connector not present in the allowed connector list; 'dc-barrel' was chosen as the closest available match."
+    },
+    {
+      "name": "USB Output",
+      "direction": "output",
+      "connector": "usb-a",
+      "note": "5V USB-A port for charging mobile devices/accessories on location. Described only in marketing copy, not in B&H's formal spec table. No data capability or USB speed stated, so no grade was assigned."
+    }
+  ]
+}

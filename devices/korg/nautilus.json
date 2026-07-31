@@ -1,0 +1,112 @@
+{
+  "manufacturer": "Korg",
+  "model": "Nautilus",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.korg.com/us/products/synthesizers/nautilus/specifications.php",
+  "confidence": "medium",
+  "notes": "Sourced from Korg's official US spec page (korg.com/us/products/synthesizers/nautilus/specifications.php), cross-checked against the Korg Nautilus-61 Quick Start Manual (rear-panel diagram, via ManualsLib) and Sound on Sound's review. Nautilus is a desktop/stage keyboard workstation, not rack-mountable, so rackUnits is omitted. Available in 61/73/88-key variants; I/O is identical across variants. USB \"480Mbps\" Hi-Speed spec applies to both the USB-A host port and USB-B device port, so both are graded usb-2.0. The official spec sheet lists MIDI In/Out/Thru and the three pedal jacks (Damper, Assignable Switch, Assignable Pedal) without stating TS vs. TRS connector style for the pedal jacks or the exact AC inlet variant (captive vs. IEC C13/C14) — these were inferred from typical Korg workstation design (similar to Kronos/Pa series) and marked accordingly; treat those specific fields as medium/low confidence even though the rest of the spec (audio I/O levels/impedance, MIDI, USB channel counts, dimensions/weight) is directly and explicitly confirmed on the manufacturer page. No SDI/HDMI/network ports exist on this device — it is audio/MIDI/USB only, matching a music workstation with no video I/O.",
+  "ports": [
+    {
+      "name": "Main Output L/MONO",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Main Output R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Individual Output 1",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Individual Output 2",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Individual Output 3",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Individual Output 4",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo 1/4\" headphone jack"
+    },
+    {
+      "name": "Audio Input 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced TRS; switchable mic or line level"
+    },
+    {
+      "name": "Audio Input 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced TRS; switchable mic or line level"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Host port for USB storage/controllers/QWERTY keyboard/ethernet adaptor; Hi-Speed 480Mbps"
+    },
+    {
+      "name": "USB B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "MIDI/audio interface to computer: 16-ch MIDI in/out, 2-ch audio in/out; Hi-Speed 480Mbps"
+    },
+    {
+      "name": "Damper Pedal",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Half-damper supported; connector style inferred (spec text does not state TS/TRS explicitly)"
+    },
+    {
+      "name": "Assignable Switch",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Connector style inferred (spec text does not state TS/TRS explicitly)"
+    },
+    {
+      "name": "Assignable Pedal",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Continuous/expression pedal; connector style inferred (spec text does not state TS/TRS explicitly)"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Manual says \"connect the included power cord here,\" implying a detachable IEC-style inlet rather than a captive cord; exact IEC variant (C13/C14) not explicitly confirmed"
+    }
+  ]
+}

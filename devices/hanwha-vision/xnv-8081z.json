@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Hanwha Vision",
+  "model": "XNV-8081Z",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://hvsgmpprdstorage.blob.core.windows.net/pim/XNV-8081Z/DataSheet_XNV-8081Z_20251226_EN_161329.pdf",
+  "confidence": "medium",
+  "notes": "Official Hanwha Vision datasheet (X series, Ver. 202409, 6 pages) confirms: 5MP 1/1.8\" CMOS vandal-resistant PTRZ dome, motorized 3.6-9.4mm/2.6x zoom lens, IP66/IP67/IK10+/NEMA4X, aluminum housing, Ø180x125mm, 1.75kg. Desktop/wall/pendant mount accessory camera — not rack-mountable (rackUnits omitted). Two internal Micro SD/SDHC/SDXC slots (max 256GB each, 512GB total) exist but were omitted from ports since they are storage slots, not signal/power connectors. Confidence set to medium because the Ethernet (RJ-45, 10/100BASE-T -> eth-100m) and USB Micro-B \"Video Out\" connectors are explicitly confirmed, but the datasheet does not name the actual physical connector hardware for the 12VDC/24VAC power input, alarm I/O, or audio I/O (it only describes them functionally) — these four ports were approximated as \"euroblock\" (screw-terminal block), which is standard for this camera family's pigtail cable but not verified against an installation manual or photo. No HDMI/SDI/display outputs exist on this device — \"Video Out\" is a maintenance/setup port only, not a program video output.",
+  "ports": [
+    {
+      "name": "Ethernet (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "RJ-45 10/100BASE-T network port; also delivers power via PoE (IEEE 802.3af, Class 3)."
+    },
+    {
+      "name": "Power In (12VDC/24VAC)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Datasheet lists Input Voltage as PoE(IEEE802.3af Class3), 24VAC, 12VDC. Physical hardware for the 12VDC/24VAC input is not explicitly named in the datasheet; Hanwha X-series domes use a bare-wire screw-terminal block on the internal pigtail, approximated here as 'euroblock'."
+    },
+    {
+      "name": "Alarm In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Alarm Interface: Input 1ea. Screw-terminal contact on pigtail; exact connector part not named in datasheet (inferred)."
+    },
+    {
+      "name": "Alarm Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Alarm Interface: Output 1ea (relay). Screw-terminal contact on pigtail; exact connector part not named in datasheet (inferred)."
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Selectable mic in / line in. Physical connector type not stated in datasheet; approximated as terminal block, consistent with this camera's pigtail-cable design (inferred)."
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Line out. Physical connector type not stated in datasheet; approximated as terminal block (inferred)."
+    },
+    {
+      "name": "Video Out",
+      "direction": "output",
+      "connector": "usb-micro",
+      "note": "Micro USB Type-B port used for local video monitoring during installation/setup (per datasheet 'Video Out: USB: Micro USB Type B'). No USB data-rate stated, so no grade set."
+    }
+  ]
+}

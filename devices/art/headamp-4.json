@@ -1,0 +1,71 @@
+{
+  "manufacturer": "ART",
+  "model": "HeadAmp 4",
+  "category": "audio",
+  "type": "Amplifier",
+  "sourceUrl": "https://artproaudio.com/headphoneamplifiers/product/260296/headamp4",
+  "confidence": "high",
+  "notes": "Manufacturer product page (artproaudio.com) confirms: 4 independent stereo headphone-out channels, each with a 1/4\" (TRS) and a 1/8\" (3.5mm TRS) jack usable simultaneously (up to 8 pairs of headphones total); a single stereo line input with matching 1/4\" and 1/8\" jacks (also usable simultaneously) feeding all 4 channels; 12V DC external adapter power (included). Spec numbers (90.9k ohm input impedance, 47 ohm output impedance, +14 dBV max input, +14 dBu max output, 20 dB max gain, >90 dB SNR, <0.01% THD, 20Hz-20kHz response, 4.1\"x4.6\"x1.85\", 1.3 lbs) were cross-confirmed against Sweetwater's mirrored spec table for this SKU. Exact silkscreen wording on the front/rear panel (e.g. whether jacks are labeled \"INPUT\"/\"1\"-\"4\" or similar) could not be independently verified since the ART manual PDF (om_headamp4.pdf) is served through a JS-gated viewer that resisted both WebFetch and direct HTTPS download (returned an HTML wrapper page, not the PDF itself); port presence/connector types are solid, but exact printed names are inferred from spec-sheet prose. Desktop/stackable unit — no rack-mount kit is standard, so rackUnits omitted. All fetches used normal verified HTTPS; no TLS bypass was used, and Sweetwater's own page 403'd a direct fetch so it was used only indirectly via search-result corroboration, not as the sourceUrl.",
+  "ports": [
+    {
+      "name": "Input 1/4\"",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo line input; can be used simultaneously with the 1/8\" input jack, feeding all 4 output channels."
+    },
+    {
+      "name": "Input 1/8\"",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Stereo mini line input, parallel with the 1/4\" input jack."
+    },
+    {
+      "name": "Output 1 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Channel 1 headphone output; independent volume control. Usable simultaneously with Output 1 (1/8\")."
+    },
+    {
+      "name": "Output 1 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Channel 1 headphone mini output, parallel with Output 1 (1/4\")."
+    },
+    {
+      "name": "Output 2 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Output 2 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Output 3 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Output 3 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Output 4 (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Output 4 (1/8\")",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC In (12V)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 12V DC wall adapter, included with unit."
+    }
+  ]
+}

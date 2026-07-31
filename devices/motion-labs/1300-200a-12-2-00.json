@@ -1,0 +1,132 @@
+{
+  "manufacturer": "Motion Labs",
+  "model": "1300-200A-12-2-00",
+  "category": "power",
+  "type": "PDU",
+  "rackUnits": 12,
+  "sourceUrl": "https://www.motionlabs.com/wp-content/uploads/1300-200A-12-2-00.pdf",
+  "confidence": "high",
+  "notes": "Model 1300-200A-12-2-00 is a Motion Labs \"Rolling Rack PDU\" — a portable power distribution system built into a 12RU, two-sided NEMA-1 steel rack liner inside a shock-mounted, 31\"-deep ATA road case on casters (not a fixed building-in rack panel). Front panel (top to bottom): a 200A digital volt/amp meter (PNL1, part B-01-156-0052, display only — not a cable port), a 200A 4-pole main breaker/disconnect switch (PNL2, part B-01-251-1029 — a switch, not a connector), 6x Edison duplex outlets (PNL3, part B-01-258-0102 \"DP66\"), and a 5-wire (Ground/Neutral/L1/L2/L3) Cam-Lok \"RGN\" power-in + power-thru pass-through pair, 200A each set (PNL4, part B-01-352-2001 \"CAM10 RGN 1T\"). Rear panel: 12x NEMA L21-30R 3-phase 30A twist-lock outlets across four 3-gang sub-panels (PNL5–PNL8, parts B-01-256-4004 through -4007). ETL Listed. Source is the manufacturer's own dimensioned engineering drawing (drawing number matches the model exactly, dated 2/15/07, checked/approved), retrieved via Motion Labs' own site search and product-variation page (https://www.motionlabs.com/product-variation/product-variation-1148/), which links this exact PDF — about as authoritative as a source gets. Caveat: the allowed connector-id list has no entries for Cam-Lok single-pole power connectors or for NEMA L21-series twist-lock connectors, so both were mapped to the nearest available ids (banana, nema-5-15 respectively) per the task's fallback rule; the per-port notes flag this explicitly. The front duplex outlets' exact NEMA sub-type (5-15R vs 5-20R) is not stated on the drawing.",
+  "ports": [
+    {
+      "name": "Power In",
+      "direction": "input",
+      "connector": "banana",
+      "note": "Actual connector is a 5-wire Cam-Lok (Series 16 'RGN' gray-body) single-pole twist-lock connector set (Ground/Neutral/L1/L2/L3), 200A rated per manufacturer drawing (part B-01-352-2001, 'CAM10 RGN 1T'). No Cam-Lok id exists in the allowed connector list; 'banana' (single exposed-pin conductor) was chosen as the closest available approximation, but the real connector is far higher current and twist-locking, unlike a banana plug."
+    },
+    {
+      "name": "Power Thru",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Loop-through/daisy-chain output using the same 5-wire Cam-Lok (Ground/Neutral/L1/L2/L3) connector set as Power In, for feeding an additional downstream distro at the same 200A. Mapped to 'banana' as the closest available id; see Power In note."
+    },
+    {
+      "name": "AC Duplex 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Front-panel Edison duplex outlet (Motion Labs part B-01-258-0102, 'DP66 1-6'). Spec drawing does not state 15A vs 20A rating for the duplex receptacles (whole unit fed at 200A/3-phase upstream); nema-5-15 used as the closest available NEMA id in the allowed list — actual may be a 5-20R duplex."
+    },
+    {
+      "name": "AC Duplex 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "See AC Duplex 1 note."
+    },
+    {
+      "name": "AC Duplex 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "See AC Duplex 1 note."
+    },
+    {
+      "name": "AC Duplex 4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "See AC Duplex 1 note."
+    },
+    {
+      "name": "AC Duplex 5",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "See AC Duplex 1 note."
+    },
+    {
+      "name": "AC Duplex 6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "See AC Duplex 1 note."
+    },
+    {
+      "name": "L21-30 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle (3-phase + neutral + ground, 30A), Motion Labs part B-01-256-4004, panel PNL5. No twist-lock NEMA id exists in the allowed connector list; nema-5-15 used as the closest available NEMA-family id, but the real connector is a locking 4-pole 5-wire 30A device, not a straight-blade 15A single-phase duplex."
+    },
+    {
+      "name": "L21-30 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL5. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL5. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 4",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, Motion Labs part B-01-256-4005, panel PNL6. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 5",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL6. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 6",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL6. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 7",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, Motion Labs part B-01-256-4006, panel PNL7. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 8",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL7. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 9",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL7. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 10",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, Motion Labs part B-01-256-4007, panel PNL8. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 11",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL8. See L21-30 1 note."
+    },
+    {
+      "name": "L21-30 12",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Rear-panel NEMA L21-30R twist-lock receptacle, panel PNL8. See L21-30 1 note."
+    }
+  ]
+}

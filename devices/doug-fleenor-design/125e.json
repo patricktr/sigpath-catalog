@@ -1,0 +1,54 @@
+{
+  "manufacturer": "Doug Fleenor Design",
+  "model": "125E",
+  "category": "control",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.dfd.com/pdf/125e-data.pdf",
+  "confidence": "high",
+  "notes": "Manufacturer's own site/data sheet file names this product \"125e\" (page 125e.html, data sheet pdf/125e-data.pdf) but the data sheet's printed model designation is \"125EE\" — the current \"Enhanced²\" revision of what was originally the 125E; DFD's Splitter Selection Matrix also lists \"125 Enhanced\" as a distinct line from the base 123/125/1211 splitters. Treated here as the same product the query refers to as \"125E.\" It is a 1-input/5-output DMX512 optically-isolated splitter/amplifier (not an AV signal device); category/type fields are approximations since no lighting-control-specific category exists in the schema. Physical size is 1.74\"H x 11.25\"D x 8.25\"W (not full 19\" rack width); it mounts via an accessory rack kit (RK 8-1 for one unit, RK 8-2 for two units side by side), hence rackUnits set to 1. No bandwidth \"grade\" applies to any port (DMX512/EIA-485 is not one of the graded connector families). Power connector is described only as \"IEC-320 (international) input connector\" with no C13/C14 distinction stated, mapped to the generic \"iec\" id.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "xlr5",
+      "note": "DMX512 input, male 5-pin XLR (gold-plated Neutrik D-1 series)"
+    },
+    {
+      "name": "Output A",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 output, female 5-pin XLR, optically isolated with own power supply/line driver"
+    },
+    {
+      "name": "Output B",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 output, female 5-pin XLR, optically isolated with own power supply/line driver"
+    },
+    {
+      "name": "Output C",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 output, female 5-pin XLR, optically isolated with own power supply/line driver"
+    },
+    {
+      "name": "Output D",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 output, female 5-pin XLR, optically isolated with own power supply/line driver"
+    },
+    {
+      "name": "Output E",
+      "direction": "output",
+      "connector": "xlr5",
+      "note": "DMX512 output, female 5-pin XLR, optically isolated with own power supply/line driver"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC-320 international AC inlet, 90-240V 50/60Hz, 24W"
+    }
+  ]
+}

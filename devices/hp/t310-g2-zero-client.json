@@ -1,0 +1,84 @@
+{
+  "manufacturer": "HP",
+  "model": "t310 G2 Zero Client",
+  "category": "other",
+  "type": "Computer",
+  "sourceUrl": "https://h20195.www2.hp.com/v2/getpdf.aspx/c05477268.pdf?ver=1",
+  "confidence": "medium",
+  "notes": "PCoIP zero client (Teradici Tera2321 processor) — a network-attached virtual-desktop endpoint, not a conventional computer; 'Computer' was the closest available type option. No rack-mount ears (desktop/VESA-mount unit, 100x100mm VESA), so rackUnits omitted. Source is HP's official QuickSpecs PDF (document c05477268, Version 1, June 7 2017), fetched directly from h20195.www2.hp.com over verified HTTPS (cert subject CN=h20195.www2.hp.com, O=HP Inc; curl's default TLS verification succeeded, no --insecure used). Front-panel USB/audio and rear-panel USB/NIC/DVI-I/DisplayPort/power layout confirmed from the labeled product photos on QuickSpecs page 1; electrical/connector details from the Technical Specifications table on page 3. DisplayPort and DVI signal versions are not stated in the source, so no bandwidth grade was assigned to either. The Ethernet port ships as either copper RJ-45 or an SFP fiber module depending on SKU — this entry reflects the copper RJ-45 variant, which is the base/default configuration.",
+  "ports": [
+    {
+      "name": "USB 2.0 (Front, port 1 of 4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Front, port 2 of 4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Front, port 3 of 4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Front, port 4 of 4)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear, port 1 of 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear, port 2 of 2)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Microphone",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8-inch mini-jack, stereo, up to 96 kHz sample rate"
+    },
+    {
+      "name": "Headphone/Speaker",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8-inch mini-jack, stereo, 8-96 kHz sample rate"
+    },
+    {
+      "name": "RJ-45 NIC",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10/100/1000 Gigabit Ethernet. HP QuickSpecs list this as 'RJ-45 NIC or SFP slot' — some SKUs substitute a 100Mbps/1Gbps fiber NIC (SFP) in place of the copper RJ-45; this entry reflects the standard copper variant."
+    },
+    {
+      "name": "DVI-I",
+      "direction": "output",
+      "connector": "dvi",
+      "note": "Supports up to 1920x1200@60Hz when used alongside the DisplayPort output, or up to 2560x1600 as the sole display connection. DVI version/dual-link status not stated in source; grade omitted because DVI has no defined grade scale in this taxonomy."
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "output",
+      "connector": "dp",
+      "note": "Supports up to 1920x1200@60Hz with DVI-I also connected, or up to 2560x1600 as sole display. DisplayPort version (likely 1.1/1.2 given the Tera2321 chipset) is not stated in the source document, so grade is omitted per instructions."
+    },
+    {
+      "name": "12V DC Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 36W AC adapter, 12V DC output, worldwide auto-sensing 100-240VAC 50-60Hz input."
+    }
+  ]
+}

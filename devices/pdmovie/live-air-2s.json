@@ -1,0 +1,16 @@
+{
+  "manufacturer": "PDMOVIE",
+  "model": "LIVE AIR 2S",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.pdmovie.com/pages/liveair2s",
+  "confidence": "medium",
+  "notes": "PDMOVIE LIVE AIR 2S (sold/marketed as \"Air 2S\") is a two-piece wireless follow-focus system: a coin-sized handwheel Controller (model PDL-TC-AFX, 32x32x31mm, 28g) and a Bluetooth 5.0 lens Motor (model PD-BTMP, 93x50.7x19.8mm, 132g, 0.8Mod gear, ~100m range). Physical I/O is minimal by design — the manufacturer's official product manual (reproduced at manualslib.com/manual/2619087/Pdmovie-Live-Air-2s.html) labels the controller's side panel with a single \"Micro USB\" charge port next to the CALIBRATION/RESET button and antenna; this was independently confirmed by LensVid's hands-on review (\"the controller battery is charged through the micro USB port on the side of the controller... charge-while-in-use is supported\"). The motor unit has NO physical port at all: it uses a swappable proprietary battery pack (LI-42Bx2, 600mAh) that is charged externally via a separate included \"Micro USB double motor battery charger\" dock accessory — not a connector on the motor housing itself — so it is not listed as a device port. The controller's own battery is a separate replaceable LIR2477 cell (10-12h life); the micro-USB port charges it in place. No SDI/HDMI/analog/data ports of any kind exist on this product — it is a pure RF (Bluetooth) wireless control link between controller and motor, with mechanical (0.8Mod gear, 1/4\"-20 thread) rather than electrical connections to the camera/lens rig. No connector carries a graded signal (e.g., no USB data-rate spec is published for the charge port), so \"grade\" is omitted. Confidence is medium because the manufacturer's own marketing page (pdmovie.com/pages/liveair2s, used as sourceUrl) presents specs as un-OCRable images rather than a text/table spec sheet; the port detail above was cross-verified via the official manual (third-party-hosted copy) and an independent professional review (CineD spec table: cined.com/pdmovie-live-air-2s-worlds-smallest-wireless-follow-focus-handwheel/; LensVid review: lensvid.com/lensvid-exclusive-reviews-and-previews/pdmovie-live-air-2s-follow-focus-review/), both of which agree with each other and the manual's on-device labeling.",
+  "ports": [
+    {
+      "name": "Micro USB (charging port, on controller/handwheel)",
+      "direction": "input",
+      "connector": "usb-micro"
+    }
+  ]
+}

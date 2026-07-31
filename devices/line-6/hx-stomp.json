@@ -1,0 +1,85 @@
+{
+  "manufacturer": "Line 6",
+  "model": "HX Stomp",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://line6.com/data/6/0a00051afdda673cccdb61c9c/application/pdf/HX%20Stomp%203.80%20Owner's%20Manual%20-%20English%20.pdf",
+  "confidence": "high",
+  "notes": "HX Stomp is primarily a guitar amp/effects modeler floor pedal that also functions as a USB audio/MIDI interface; \"Audio interface\" was the closest fit in the provided type enum, not a full description of the product. Desktop/floor unit — not rack-mountable, rackUnits omitted. Port list and labels taken verbatim from the official Line 6 HX Stomp 3.80 Owner's Manual (rear/side panel diagram, items 10-18): INPUT L/MONO & RIGHT (1/4\" instrument ins), OUTPUT L/MONO & RIGHT (1/4\" \"BAL/UNBAL\" — same jack accepts both unbalanced TS or balanced TRS cable), SEND STEREO (single 1/4\" TRS jack carrying stereo send, tip=L/ring=R), RETURN/AUX IN L/MONO & RIGHT (separate 1/4\" mono return/aux-in jacks — can double as an always-on stereo aux input), EXP 1/2 | FS 4/5 (1/4\" TRS jack for expression pedal(s) or up to two external footswitches via Y-cable), MIDI IN and MIDI OUT/THRU (5-pin DIN; OUT/THRU is one physical jack, software-switchable between MIDI Out and MIDI Thru function), Phones Out (1/4\" stereo headphone), USB, and DC IN 9VDC 3A. USB is confirmed by the manual as \"USB 2.0, multichannel, 24-bit/96kHz\" (grade usb-2.0), but the manual's panel diagram doesn't spell out the physical USB sub-connector; it is a Micro-USB (usb-micro) receptacle per widely-documented product photography/teardowns, not verified in this text source directly — flagged as the one inferred detail. Power is an external 9VDC/3A DC adapter (center-negative barrel), not an internal AC inlet, so it's modeled as dc-barrel. This is the base HX Stomp; the larger HX Stomp XL variant has additional footswitches/expression pedal but the same rear I/O set.",
+  "ports": [
+    {
+      "name": "INPUT L/MONO",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "INPUT RIGHT",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "OUTPUT L/MONO (BAL/UNBAL)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Accommodates unbalanced TS (to amp/pedals) or balanced TRS (to mixer/monitors) cables"
+    },
+    {
+      "name": "OUTPUT RIGHT (BAL/UNBAL)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Accommodates unbalanced TS or balanced TRS cables"
+    },
+    {
+      "name": "SEND STEREO",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Single 1/4\" TRS jack carrying stereo FX-loop send (tip=L, ring=R)"
+    },
+    {
+      "name": "RETURN/AUX IN L/MONO",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "FX-loop return or always-on aux input"
+    },
+    {
+      "name": "RETURN/AUX IN RIGHT",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "FX-loop return or always-on aux input"
+    },
+    {
+      "name": "EXP 1/2 | FS 4/5",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Expression pedal input(s), or up to two external footswitches via Y-cable"
+    },
+    {
+      "name": "MIDI IN",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI OUT/THRU",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "Single 5-pin DIN jack, software-selectable as MIDI Out or MIDI Thru"
+    },
+    {
+      "name": "Phones Out",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "grade": "usb-2.0",
+      "note": "24-bit/96kHz multichannel USB audio/MIDI interface; physical sub-connector (Micro-B) confirmed via product photography rather than manual text"
+    },
+    {
+      "name": "DC IN 9VDC 3A",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

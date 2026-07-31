@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Blueshape",
+  "model": "Granite Two BV090",
+  "category": "power",
+  "sourceUrl": "https://www.blueshape.net/product/gr-two/bv090two",
+  "confidence": "high",
+  "notes": "Blueshape GRANITE TWO BV090 (MFR# BLS-BV090 TWO) is a 14.8V V-Lock/V-mount Li-Ion camera/broadcast battery, not a rack device — rackUnits omitted, and no \"type\" enum value fits a battery so it was left unset (category \"power\" applies). Manufacturer's main corporate domain blueshape.com is expired/parked (GoDaddy auction); the live manufacturer product page is at blueshape.net (confirmed reachable over verified HTTPS), which was used as the primary source and corroborated against B&H Photo's spec listing (bhphotovideo.com, BH#BLBLSBV090). Physical I/O consists only of DC power connectors (V-Lock mount + 2x D-Tap/P-Tap) — none of the SDI/HDMI/DP/USB/Ethernet grade categories apply, so no \"grade\" was set on any port. Connector ids for V-mount and D-Tap are not present in the allowed connector list; \"dc-barrel\" was used as the closest available generic DC power id for all three ports (see per-port notes) — this is an approximation, not a literal barrel-jack connector. Nameplate/model capacity is 90Wh, but the manufacturer's own spec sheet lists nominal capacity as 6.6Ah / 95Wh (voltage range 10.8–16.8V); this is a normal nameplate-vs-nominal discrepancy, not a data error. Max total discharge current is 7A across the whole unit (V-mount output + both D-Taps combined), with each D-Tap individually rated up to 5A. Unit also has Wi-Fi (GRANITE LINK) for app-based monitoring, which is not a physical cable port and was not included.",
+  "ports": [
+    {
+      "name": "V-Lock Mount",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Main power output via the V-Lock/V-mount spring-blade battery plate that mates directly to a camera/accessory baseplate. No V-mount connector id exists in the allowed list; approximated as dc-barrel as the closest generic DC power connector."
+    },
+    {
+      "name": "D-Tap (Left)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "2-pin D-Tap/P-Tap auxiliary output, nominal 14.8V, max 5A, independent overload protection, output-only. No D-Tap connector id exists in the allowed list; approximated as dc-barrel."
+    },
+    {
+      "name": "D-Tap (Right)",
+      "direction": "bidirectional",
+      "connector": "dc-barrel",
+      "note": "2-pin D-Tap/P-Tap auxiliary port, nominal 14.8V, max 5A; per manufacturer this side is a direct (non-protected) tap and can also be used as a charging inlet with a D-Tap charger (e.g. Blueshape CDT-45). Approximated as dc-barrel — no D-Tap connector id exists in the allowed list."
+    }
+  ]
+}

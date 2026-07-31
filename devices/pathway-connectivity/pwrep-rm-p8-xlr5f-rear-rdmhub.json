@@ -1,0 +1,62 @@
+{
+  "manufacturer": "Pathway Connectivity",
+  "model": "PWREP RM P8 XLR5F REAR RDMHUB",
+  "category": "control",
+  "type": "Control processor",
+  "rackUnits": 1,
+  "sourceUrl": "https://newlighting.com/7478/new-pathway-pwrep-rack-mount-8-port-dmx-repeater-rear-terminal-rdm-hub-opto-splitter/download/product-specs/47343",
+  "confidence": "medium",
+  "notes": "Sourced from Pathway Connectivity's (an Acuity Brands company) official \"REPEATER RACK-MOUNT DMX/RDM OPTO-SPLITTER\" spec sheet (doc PWREP_RM, Rev. 07/27/21), obtained via a retailer's product-specs download link since pathwayconnect.com and acuitybrands.com return HTTP 403 (Cloudflare bot protection) to automated fetches. This is a DMX512/RDM signal repeater/opto-splitter/hub, not a video/audio device — \"control\" category and \"Control processor\" type are the closest fits among the allowed enums (it does act as a front-panel RDM controller). Physical ports per the manufacturer's rear-panel diagram for the \"XLR5F REAR RDMHUB\" variant: one MASTER INPUT plus 8 bi-directional DMX512 ports (PORT A–H), all 5-pin female XLR (connector id \"xlr5\", carrying DMX512/RDM data — not audio, so not xlr4/xlr5 audio use). No bandwidth grade applies to DMX512/RDM so none was set. Power input is a rear IEC inlet rated 100–240VAC 50/60Hz, 0.08A max, shown in the manufacturer's rear-panel drawing as a standard IEC C13/C14-style receptacle (exact IEC sub-type not printed on the panel legend, so mapped to the general \"iec\" id); no explicit on-panel text label for this connector was visible in the source diagram, so it was named descriptively as \"AC Power Input.\" Unit is 17\"W x 1.7\"H x 7\"D (1U rack-mount, ears included), 5.2 lbs. Master Input is physically fixed as an input in the silkscreen, though in Hub/Merge mode the unit can dynamically treat any of Ports A–H as the active input (they are wired bi-directionally per the datasheet's explicit \"8 bi-directional DMX512 Ports\" spec).",
+  "ports": [
+    {
+      "name": "MASTER INPUT",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT A",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT B",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT C",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT D",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT E",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT F",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT G",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "PORT H",
+      "direction": "bidirectional",
+      "connector": "xlr5"
+    },
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

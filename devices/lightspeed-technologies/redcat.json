@@ -1,0 +1,26 @@
+{
+  "manufacturer": "Lightspeed Technologies",
+  "model": "Redcat",
+  "category": "audio",
+  "type": "Amplifier",
+  "sourceUrl": "https://lightspeed-tek.com/products/redcat/",
+  "confidence": "high",
+  "notes": "Redcat is an all-in-one classroom instructional audio system: integrated 1.9GHz wireless mic receiver + amplifier + flat-panel exciter speaker, tabletop or wall-mount (not rack-mountable, so rackUnits omitted). Verified live on manufacturer's product page (lightspeed-tek.com/products/redcat/, Specifications tab), cross-checked against the manufacturer's PDF datasheet (RCN_Datasheet_DS0603US01-3.pdf, via archived copy) and B&H Photo's listing for the matching power supply. The manufacturer currently sells two Redcat SKU variants — \"Redcat (RCT)\" with Clearmike (current default shown on site: 15W RMS, 110Hz-18kHz, adds a bass/treble tone control) and the older \"Redcat (RCN)\" with Flexmike (20W RMS, 120Hz-13kHz) — but both share the identical physical I/O reported here: one 3.5mm audio input, one 3.5mm audio output, and a 24VDC/1.75A power input. The power brick's DC output connector is B&H-labeled \"3.5mm Barrel\" (a small coaxial DC barrel jack), mapped here to the \"dc-barrel\" connector id since no closer id exists in the allowed list. No grade set on any port: the 3.5mm jacks are unbalanced analog audio (not in the graded-connector scale) and DC power is never graded. No USB port exists on the Redcat unit itself — the 2-way USB digital audio feature advertised for distance learning belongs to the separate Media Connector (MCT/MCN) accessory, not the Redcat unit, so it is not listed as a Redcat port. Direct automated fetches (WebFetch tool) to lightspeed-tek.com and its PDF returned HTTP 403 (likely bot-detection), so verification was done via live interactive browser navigation over normal HTTPS (valid TLS, no certificate bypass) plus a web.archive.org mirror of the same manufacturer page/PDF for cross-checking; no insecure/unverified connections were used.",
+  "ports": [
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "Audio Input",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5"
+    }
+  ]
+}

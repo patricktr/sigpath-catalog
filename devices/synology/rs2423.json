@@ -1,0 +1,60 @@
+{
+  "manufacturer": "Synology",
+  "model": "RS2423+",
+  "category": "network",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.synology.com/en-us/products/RS2423+",
+  "confidence": "medium",
+  "notes": "Synology RS2423+ is a 12-bay, 2U rack-mount NAS (not a traditional AV device). Core specs (bay count, LAN port counts/speeds, USB count/version, PCIe slot, Mini-SAS HD expansion port, single 500W non-redundant PSU, 2U form factor) are confirmed on Synology's official product/specs page. Two items are inferred rather than explicitly confirmed by the source: (1) the console port's physical connector type (assumed RS-232, common on Synology RS-series rack units), and (2) the AC inlet connector (assumed IEC C13/C14, standard for this PSU wattage class) — the spec page states electrical ratings but not the literal connector name. The Mini-SAS HD (SFF-8644) expansion port has no matching id in the allowed connector enum; \"sfp\" was used as the closest available placeholder and is flagged in that port's note — treat it as SAS, not fiber. A single internal PCIe Gen3 x8 (x4 link) expansion slot exists on the board but was omitted from the port list since it is an internal card slot, not an external cabled I/O connector. Redundant-PSU variants (e.g. RS2423RP+) differ and were not used as the source.",
+  "ports": [
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN 3 (10GbE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "Expansion Port (Mini-SAS HD, for RX1223RP)",
+      "direction": "output",
+      "connector": "sfp",
+      "note": "Actual connector is Mini-SAS HD / SFF-8644, not a fiber SFP cage — no matching id exists in the allowed connector list; SFP chosen as the closest small high-speed pluggable analog."
+    },
+    {
+      "name": "Console Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Synology's spec page confirms a console port is present but does not state its physical connector (DB9 vs RJ45-serial); assumed RS-232 based on typical Synology rack-series design."
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Spec page states 100-240V AC single-phase, 500W single (non-redundant) PSU, but does not explicitly name the inlet connector; IEC C13/C14 assumed as the industry-standard connector for this PSU class."
+    }
+  ]
+}

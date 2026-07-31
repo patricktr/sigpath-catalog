@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Lightspeed Technologies",
+  "model": "Topcat",
+  "category": "audio",
+  "type": "Speaker",
+  "sourceUrl": "https://lightspeed-tek.com/products/topcat",
+  "confidence": "medium",
+  "notes": "Sourced from Lightspeed Technologies' official Topcat (TCT) product page, its Specifications tab, the official TCT_Datasheet_DS0789US01-1.pdf, and the TCT_Installation_Guide_IG0792US01-1.pdf (all served over verified HTTPS from lightspeed-tek.com). Topcat is a ceiling-mounted, all-in-one instructional audio system (hybrid flat-panel + cone speaker, 20W RMS built-in amp, 1.9GHz Access wireless mic receiver); dimensions 23.75\"x11.73\"x4.19\" (603x298x106mm), weight 21.2 lbs (9.2kg), no rack mounting (in-ceiling or wall-bracket mount only). No grade fields apply — none of its connectors (3.5mm TRS analog, RCA/S-PDIF coax, NEMA 5-15 AC, Euroblock control terminals) fall on a graded bandwidth scale (SDI/HDMI/DP/USB/Ethernet). This TCT model is the flagship/current Topcat variant (sold new via B&H as \"Topcat Ceiling Mounted Instructional Audio System with Power Supply-No Mics\", MFR#TCT, $1,861); B&H's own product page had no populated Overview/Specs tabs, so it was used only to confirm current market availability and SKU, not as the spec source. Two older/discontinued Topcat SKUs exist (TCN, TCN-F) which may have differed slightly in I/O; this entry covers the current TCT. A companion \"Wallplate\" accessory (Audio I/O options) and \"Media Connector\" (wireless multimedia bridge) are optional separate SKUs, not built into the Topcat unit itself, so their ports are excluded here.",
+  "ports": [
+    {
+      "name": "AC Power Input",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Standard config: factory-installed internal 24VDC/2.5A power supply with captive AC cord terminating in a NEMA 5-15 plug for a nearby wall outlet. Alternatively, a licensed electrician can hardwire the unit directly to building AC mains (100-240V~50/60Hz, 1.5A) via an internal N/L/Ground screw-terminal block for permanent installs — no external connector in that case."
+    },
+    {
+      "name": "Audio Input 1",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Input 2",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Input 3",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Digital Audio Input (S/PDIF Coax)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Datasheet lists this as an S/PDIF coaxial digital input; S/PDIF-coax standard connector is RCA (closest match in the allowed connector list)."
+    },
+    {
+      "name": "Audio Output",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "PageFirst Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "25V/70V page-mute sense input via a screw-terminal (Euroblock-style) block; mutes the instructional audio when the building paging speaker line is active."
+    },
+    {
+      "name": "Relay Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Fire-alarm/life-safety mute trigger via screw-terminal block; accepts 0.5-24VDC from a powered relay or a resistive-short (dry contact) from a fire alarm system."
+    },
+    {
+      "name": "Contact Closure Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Normally-open relay output via screw-terminal block, closed for 3 seconds when the teacher's microphone Emergency Alert button is pressed, for interfacing with building alert-notification systems."
+    }
+  ]
+}

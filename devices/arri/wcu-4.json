@@ -1,0 +1,16 @@
+{
+  "manufacturer": "ARRI",
+  "model": "WCU-4",
+  "category": "control",
+  "sourceUrl": "https://www.arri.com/resource/blob/42880/6193aefe25dc3062fd61221c5c0faf35/wcu-4-manual-data.pdf",
+  "confidence": "high",
+  "notes": "ARRI WCU-4 \"Wireless Compact Unit\" is a handheld wireless lens-control unit (focus/iris/zoom hand controller) for ALEXA/AMIRA/ARRI film cameras, not a conventional room-AV control processor — \"Control processor\" was judged the closest fit but is a loose analogy, so type was left unset; category \"control\" fits well. Source: ARRI's own WCU-4 User Manual (rev. 08, 12 Dec 2018), which is the authoritative technical document (pinouts, electrical data, dimensions/weight all confirmed directly from it). The unit's only external cabled port is the single 5-pin LCS connector (pinout: 1 GND, 2 n.c., 3 CAN-L, 4 CAN-H, 5 +V-BAT); it accepts 10.4–34 V DC and draws 220 mA@7.2V / 70 mA@24V. Internal battery is a user-swappable 7.2 V Li-Ion 11.8 Wh pack charged externally (not a WCU-4 port, so not listed). An SD card slot exists for lens-data storage but is a memory-card slot, not a cabling I/O port, so it was omitted. The antenna is integrated/non-connectorized (radio: 14 channels, 2.410–2.475 GHz band) and likewise omitted. Weight (without straps/battery): 730 g / 25.8 oz; desktop/handheld unit, no rack units apply.",
+  "ports": [
+    {
+      "name": "LCS Connector",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "ARRI's proprietary 5-pin LCS (Lens Control System) push-pull circular connector — closest available enum match, not a true locking XLR5. Carries CAN-L/CAN-H control-bus data plus DC power (pin 5 = +V-BAT, pin 1 = GND) for wired operation, power supply from camera/UMC-3A, and lens-motor control. No grade applies (proprietary control/power bus, not a graded video/data interface)."
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "manufacturer": "Behringer",
+  "model": "Ultrapatch Pro PX3000",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.behringer.com/en/products/0804-AAC",
+  "confidence": "high",
+  "notes": "The PX3000 (Ultrapatch Pro) is NOT the well-known EPX3000 power amplifier — it is a fully passive 1U, 19\" rackmount 48-point balanced 1/4\" (6.35mm) TRS patchbay with 24 channels x 2 rear jacks (A/B), each rear pair independently switchable (top-mounted per-channel switch) between Normal, Half-Normal, and Thru modes. It requires no external power and has no power connector or inlet (confirmed passive: no power spec listed on manufacturer page or in manual specifications; safety-notice boilerplate re: mains voltage is generic Behringer manual text, not applicable to this unit). Direction is set to \"bidirectional\" for all points because a patchbay jack carries whatever signal direction the connected external gear defines — the patchbay itself has no fixed input/output role. Only the 48 REAR jacks (which wire to external equipment) are listed as physical I/O; the device also has 48 FRONT panel 1/4\" TRS jacks (mirroring the same 24 channels, 2 per channel) used for inserting patch cords to break normal/half-normal routing — these are omitted since they are patch-access points on the same signal paths rather than distinct external connections, though they are physically the same trs-6.35 connector type. Dimensions/weight (483 x 45 x 93mm, 1.8kg, 1U/19\") and full connector spec were cross-confirmed via Thomann's spec table and a ManualsLib-hosted copy of the official Behringer specifications page, since the manufacturer's own product page only listed connector type/count and omitted a full spec table. No connector in this device qualifies for a bandwidth \"grade\" (all analog balanced audio jacks), so grade is omitted throughout. Category/type were mapped to the closest available enum values (audio / Other) since \"patchbay\" is not a listed type.",
+  "ports": [
+    {
+      "name": "Channel 1 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 1 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 2 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 2 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 3 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 3 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 4 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 4 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 5 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 5 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 6 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 6 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 7 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 7 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 8 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 8 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 9 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 9 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 10 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 10 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 11 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 11 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 12 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 12 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 13 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 13 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 14 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 14 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 15 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 15 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 16 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 16 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 17 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 17 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 18 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 18 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 19 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 19 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 20 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 20 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 21 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 21 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 22 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 22 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 23 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 23 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 24 A (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Channel 24 B (Rear)",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    }
+  ]
+}

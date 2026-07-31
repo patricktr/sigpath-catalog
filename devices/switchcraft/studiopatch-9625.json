@@ -1,0 +1,36 @@
+{
+  "manufacturer": "Switchcraft",
+  "model": "StudioPatch 9625",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.switchcraft.com/studiopatch-9625-96-patch-points-to-db25-with-programmable-grounds-comes-with-1-1-foot-black-tt-patch-cord-/9625/",
+  "confidence": "high",
+  "notes": "Passive analog/AES-EBU audio patchbay — no AC power input; it only passes phantom power through from connected mixing consoles (grounds internally bussed, does not generate power itself), so no power port is listed. 96 total TT/Bantam patch points on the front (2 rows of 48; normalling per channel is field-configurable to full/half/non-normal via a front screwdriver cam). Rear has 12 female DB25/DSUB connectors total — 6 top-row (input) + 6 bottom-row (output) — each carrying 8 balanced analog channels in Tascam/DA-88 pinout, or alternatively 16 AES/EBU digital channels, for 48 audio channels total (Switchcraft markets the 9625 as a \"48-channel\" patchbay). Sibling model StudioPatch 96DL uses 4× Cannon DL connectors instead of DB25 — not applicable here. Connector-id caveats: the allowed connector enum has no dedicated TT/Bantam or DB25/D-Sub id, so trs-6.35 (front jacks) and rs232 (rear DB25 shells) were used as closest physical matches per-port note; treat those two ids as placeholders, not literal TRS/RS-232 signaling. Port-count and pinout details (12 DB25, 6 in/6 out, 8ch or 16ch AES per connector) were confirmed directly from Switchcraft's official \"StudioPatch Series 6425/9625 Operation Manual\" hosted at https://www.switchcraft.com/file.aspx?DocumentId=493 — the most authoritative primary source found. Front-panel layout (2×48 TT) and 1RU rack size were confirmed on the manufacturer product page (sourceUrl).",
+  "ports": [
+    {
+      "name": "TT/Bantam Patch Points – Top Row (Source/Input 1–48)",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "48 front-panel miniature TT (Bantam) jacks. No dedicated TT/Bantam id exists in the allowed connector list; trs-6.35 chosen as the closest match — physically a smaller mini-jack, not a full-size 1/4\" TRS plug. Top row carries the source-side signal appearance, normalled to the bottom row (full/half/non-normal, screwdriver-adjustable per channel)."
+    },
+    {
+      "name": "TT/Bantam Patch Points – Bottom Row (Destination/Output 1–48)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "48 front-panel miniature TT (Bantam) jacks; same connector caveat as the top row. Bottom row carries the destination-side signal appearance."
+    },
+    {
+      "name": "DB25 Input Bank (rear, 6× DSUB, channels 1–48)",
+      "direction": "input",
+      "connector": "rs232",
+      "note": "Six female 25-pin D-Sub (DB25/DSUB) connectors, top row, wired as inputs. No dedicated DB25/D-Sub audio connector id exists in the allowed list; rs232 chosen only as the closest same-shell D-sub placeholder — these carry balanced analog audio (Tascam/DA-88 pinout, 8 channels each) or AES/EBU digital audio (16 channels each), NOT RS-232 serial data."
+    },
+    {
+      "name": "DB25 Output Bank (rear, 6× DSUB, channels 1–48)",
+      "direction": "output",
+      "connector": "rs232",
+      "note": "Six female 25-pin D-Sub (DB25/DSUB) connectors, bottom row, wired as outputs. Same connector-id caveat as the input bank — carries balanced analog (8 ch/connector) or AES/EBU digital (16 ch/connector) audio, not RS-232 serial."
+    }
+  ]
+}

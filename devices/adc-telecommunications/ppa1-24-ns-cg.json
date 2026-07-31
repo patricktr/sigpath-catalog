@@ -1,0 +1,252 @@
+{
+  "manufacturer": "ADC Telecommunications",
+  "model": "PPA1-24-NS-CG",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://datasheet.octopart.com/PPA1-14MKIVNS-ADC-Telecommunications-datasheet-13201724.pdf",
+  "confidence": "medium",
+  "notes": "Passive, unpowered 1RU analog audio patchbay from ADC's Pro Patch (ProPatch Lite) longframe series — a 2x24 array of WECO-standard longframe (full-size 1/4\"/6.35mm) audio patch jacks, wired point-to-point per circuit (top jack N normalled/paired with bottom jack N+24). No connector in the required enum is an exact match for WECO \"longframe\" jacks; trs-6.35 (standard 1/4\" phone/TRS) is the closest physical/electrical equivalent and is used for all 48 jacks. Jacks are pass-through patch points, so direction is modeled as bidirectional for every jack (this is not a powered/electronic device — front jacks don't have inherent \"source vs. sink\" behavior the way an amplifier port does). Model-code decoding is inferred: primary source found (ADC's own \"Pro Patch Professional Audio Patchbays\" datasheet, 3/06 edition, www.adc.com) documents the ordering scheme for the modern MK-series (e.g. PPA1-14MKIVNS) where A=longframe regular-spaced jacks, 1=1RU height, NS=normals strapped (fully normalled). The exact SKU \"PPA1-24-NS-CG\" does not appear in that datasheet verbatim — it matches an older/simplified pre-MK naming convention (no explicit chassis-depth or MK-generation code), confirmed to exist and described as \"1RU Longframe 2x24 audio Panel\" by two independent retailer listings (BS Broadcast, Broadcast Store). \"CG\" is not documented in the datasheet I could access; it most likely denotes a common/bussed-ground normalling variant (the datasheet's newer catalog uses \"BG\" for bussed grounds, and BS Broadcast's description of related normalling options references \"common ground\") — this is an inference, not confirmed. Rear termination type (solder tail vs. QCP punchdown vs. connectorized backplane) could not be confirmed for this specific SKU/vintage; the datasheet shows both wire-wrap/solder-tail and QCP II/IV punchdown as period options, but since no rear-termination code (E/A/3E/E8/E56/M/E90/E120) appears in the model number, this is very likely a solderless punchdown or wire-wrap rear (not separately modeled as a connector here since it's an internal termination, not a device \"port\"). No AC/DC power input exists — this is a fully passive panel. Secondary source for the exact SKU: https://www.bsbroadcast.com/adc-ppa1-24-ns-cg-1-ru-longframe-2x24-audio-panel.html",
+  "ports": [
+    {
+      "name": "1",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "2",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "3",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "4",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "5",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "6",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "7",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "8",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "9",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "10",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "11",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "12",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "13",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "14",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "15",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "16",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "17",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "18",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "19",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "20",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "21",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "22",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "23",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "24",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "25",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "26",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "27",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "28",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "29",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "30",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "31",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "32",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "33",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "34",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "35",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "36",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "37",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "38",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "39",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "40",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "41",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "42",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "43",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "44",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "45",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "46",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "47",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "48",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    }
+  ]
+}

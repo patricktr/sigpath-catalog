@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Behringer",
+  "model": "Powerplay P16-M",
+  "category": "audio",
+  "type": "Audio mixer",
+  "sourceUrl": "https://www.markertek.com/Attachments/Manuals/Behringer/P16-M-Manual.pdf",
+  "confidence": "high",
+  "notes": "Desktop personal monitor mixer (part of the Behringer Powerplay 16 system, alongside the separate 1U-rack P16-I input module and P16-D Ultranet distributor, which are different SKUs). Dimensions approx. 63 x 257 x 134 mm (H x W x D), 0.8 kg — not rack-mountable itself, so rackUnits omitted. Ultranet In/Thru are physical RJ45 jacks carrying Behringer's proprietary Ultranet digital-audio protocol over shielded CAT5, not standard Ethernet, so no eth-x grade was assigned (spec sheet gives no Ethernet bandwidth class). Line Out is 2x unbalanced 1/4\" TS jacks (labeled L/MONO and R) — separate from the stereo 1/4\" TRS Phones jack. MIDI In accepts standard 5-pin DIN MIDI cables for external controller/remote parameter control. Data cross-verified against two independent hostings of Behringer's own Powerplay 16 Quick Start Guide/manual (identical official spec table): Markertek (used as sourceUrl, on the approved retailer list) and manuals.plus. Could not reach behringer.com directly (product page 404s, likely delisted since the P16-M appears end-of-life/out of production) or Sweetwater/B&H/Crutchfield (403s on automated fetch), so used the Markertek-hosted copy of Behringer's own manual/spec sheet instead — content is the manufacturer's, confidence kept high since the full official specifications table (Audio Connections, Power Supply, Dimensions/Weight) was directly read.",
+  "ports": [
+    {
+      "name": "Ultranet In",
+      "direction": "input",
+      "connector": "rj45"
+    },
+    {
+      "name": "Ultranet Thru",
+      "direction": "output",
+      "connector": "rj45"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Line Out L/MONO",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Line Out R",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Phones",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Power input for included external power-supply adaptor; barrel connector inferred from rear-panel photography (official spec sheet lists only 'external power supply adaptor', max 5W, without stating jack diameter). Unit can alternatively be bus-powered over the Ultranet RJ45 link from a P16-I or P16-D."
+    }
+  ]
+}

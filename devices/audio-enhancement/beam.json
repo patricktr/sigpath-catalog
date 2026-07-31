@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Audio Enhancement",
+  "model": "BEAM",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://audioenhancement.com/wp-content/uploads/2018/12/BEAM-Spec-Sheet-Available-in-2019.pdf",
+  "confidence": "medium",
+  "notes": "Sourced from Audio Enhancement's own manufacturer PDF spec sheet (hosted on audioenhancement.com, fetched over HTTPS), titled \"BEAM-Spec-Sheet-Available-in-2019.pdf\" (doc# DC-40547.01 XD PRELIMINARY). The sheet is explicitly marked \"*Preliminary specifications - subject to change\" and shows an \"Available January 2019!\" launch banner, so final shipped units may differ slightly (hence medium confidence rather than high). Two additional inputs exist but are wireless, not physical connectors, so were omitted from the port list: two XD wireless microphone channels (1.9 GHz proprietary RF) and a Bluetooth input, both selected via front-panel pairing buttons rather than physical jacks. The device also has front-panel/side-panel Bluetooth and microphone pairing buttons and tone/volume controls (Bass/Mid/Treble EQ, line/media volume, ALD volume) which are controls, not I/O connectors, and were excluded. No bandwidth-graded connectors are present (no HDMI/SDI/USB/DisplayPort/network-Ethernet), consistent with omitting \"grade\" on every port. Physical dimensions: 6.83\"(H) x 36.00\"(W) x 3.30\"(D), ~9.35 lbs — a desktop/cart-mount soundbar-style unit, not rack-mountable, so rackUnits is omitted. 50W integrated amplifier, 70Hz-15kHz (-10dB) speaker response, powered by an external 24VDC supply.",
+  "ports": [
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24 VDC external power supply; exact connector style (barrel vs. locking DC) not confirmed by spec sheet"
+    },
+    {
+      "name": "WPA-03",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Accessory RJ45 jack for optional WPA-03 remote wallplate; carries a 3.5mm-equivalent line input and line output to/from the wallplate, not network Ethernet"
+    },
+    {
+      "name": "RS-232 Serial Port",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Control terminal: TxD, RxD, Gnd, 9600 baud"
+    },
+    {
+      "name": "PA Mute Terminal/External Speaker Out",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Single screw-terminal block combining PA-system sense mute input (4-74V RMS trigger) and external speaker output"
+    },
+    {
+      "name": "Line Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Rear panel (Line 1), unbalanced stereo mixed to mono"
+    },
+    {
+      "name": "Line Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Side panel (Line 2), unbalanced stereo mixed to mono"
+    },
+    {
+      "name": "ALD Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Side panel; unbalanced stereo line-level output for assistive listening devices, with dedicated side-panel volume control"
+    },
+    {
+      "name": "TOSLINK Input",
+      "direction": "input",
+      "connector": "toslink",
+      "note": "Optical digital input; called out in spec table and marketing copy but not individually labeled in the back-panel diagram, so exact panel text is unconfirmed"
+    }
+  ]
+}

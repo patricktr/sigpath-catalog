@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Axis Communications",
+  "model": "S3008 Recorder",
+  "category": "recorder",
+  "type": "Recorder",
+  "sourceUrl": "https://www.axis.com/dam/public/93/28/17/datasheet-axis-s3008-recorder-en-US-506821.pdf",
+  "confidence": "high",
+  "notes": "Authoritative source: Axis Communications official datasheet (T10151035/EN/M37.2/202511), cross-checked against the official installation guide's rear-panel diagrams. Datasheet's \"Connectors\" section explicitly lists: Rear side - 8x RJ45 10BASE-T/100BASE-TX PoE, 1x RJ45 10BASE-T/100BASE-TX/1000BASE-T, DC input; Side - 1x USB 3.0. Individual PoE port numbers (1-8) are not printed as text labels in the datasheet/guide (no per-port silkscreen callouts shown), so \"PoE 1\"-\"PoE 8\" naming is inferred from the 8-port grid shown in the installation guide's rear-panel illustration, not verbatim device silkscreen. USB connector shape (Type-A) is inferred from product photography in the datasheet/guide, not stated as text; USB 3.0 mapped to usb-5g (SuperSpeed 5Gbps) grade per standard USB naming. Sold in three storage variants (2TB/4TB/8TB) with identical I/O; PoE power budget differs slightly by variant (65W for 2TB/4TB models, 60W for the 8TB model) due to internal power allocation to the larger drive - this does not change the port list. Device is a compact desktop unit (180x180x53mm); rack-mounting is only possible via the optional AXIS TW8100 Rack Mount accessory, so rackUnits was omitted. Power input section is slightly ambiguous in the datasheet (states \"Power supply: max 90W\" separately from \"Recorder: 1.88A, 48V DC, max 90W\" while the included adapter is rated 180W) - the DC Input port on the recorder itself is 48V DC, max 90W, fed from the external AC/DC brick, which is the correct physical-port characterization.",
+  "ports": [
+    {
+      "name": "PoE 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Camera-facing PoE port, part of 8-port rear PoE switch (IEEE 802.3af/at)"
+    },
+    {
+      "name": "PoE 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 5",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 6",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 7",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "PoE 8",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m"
+    },
+    {
+      "name": "Network (Uplink)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Gigabit uplink to LAN/router, non-PoE"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Side-panel USB 3.0 port for exporting recorded video"
+    },
+    {
+      "name": "DC Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "48 V DC, 1.88 A, max 90 W; powered via included AXIS Mains Adapter 48 V DC 180 W (100-240 V AC mains brick)"
+    }
+  ]
+}

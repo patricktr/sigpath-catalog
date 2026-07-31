@@ -1,0 +1,138 @@
+{
+  "manufacturer": "Kemper",
+  "model": "Profiler Stage",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://www.kemper-amps.com/profiler/technical-specifications",
+  "confidence": "high",
+  "notes": "Floor/desktop unit (47 x 26 x 8.5 cm, ~4.6 kg) — not rack-mountable, so rackUnits omitted. Cross-verified against the manufacturer's technical-specifications page (kemper-amps.com/profiler/technical-specifications) and Kemper's own full PROFILER manual (rear-panel chapter \"Back Panel Overview Stage\"), which agree. Main Output is 4 separate physical jacks (2x XLR balanced + 2x 1/4\" TS unbalanced for L/R), confirmed as discrete connectors (not combo) via an independent press teardown (Sound On Sound review) — not stated as combo in the manual. Return 1 and 2 can double as a stereo Aux/mp3 input via a 3.5mm-TRS-to-dual-1/4\"-TS cable, but the physical device jacks remain 1/4\" TRS. Unlike the Head/Rack/PowerHead/PowerRack variants, the Stage has NO Ethernet/RJ45 port (manufacturer manual explicitly states \"Network: RJ45 connector (not applicable on PROFILER Stage)\"). USB is specified by Kemper as \"USB 2.0 (FS)\"; mapped to grade usb-2.0. Currently-sold unit is the \"PROFILER Stage (MK 2)\" — Kemper states the MK2 refresh is a DSP/firmware/feature upgrade (more onboard effects, Liquid Profiling, faster boot) with no reported change to the physical connector panel versus the original Stage. A Kensington lock slot exists on the rear panel but is a physical security fitting, not a signal/power connector, so it is omitted from the port list.",
+  "ports": [
+    {
+      "name": "Input",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Return 1",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return 3",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return 4",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Send 1",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Send 2",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Main Output L (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Main Output R (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Main Output L (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Main Output R (1/4\")",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Monitor Output L",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Monitor Output R",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "S/PDIF In",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "Switch/Pedal 1",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Switch/Pedal 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Switch/Pedal 3",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Switch/Pedal 4",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB (Type A)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB (Type B)",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

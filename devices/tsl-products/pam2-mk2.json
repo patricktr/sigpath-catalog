@@ -1,0 +1,118 @@
+{
+  "manufacturer": "TSL Products",
+  "model": "PAM2-MK2",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://tslproducts.com/product/pam2-mk2/",
+  "confidence": "medium",
+  "notes": "Primary source: TSL Products' own PAM2-MK2 product page (https://tslproducts.com/product/pam2-mk2/), fetched directly and repeatedly — confirms port QUANTITIES/features reliably: 2x auto-sensing 1080p HD/SDI inputs, re-clocked HD/SDI + downconverted SDI/composite outputs, 2 analogue stereo inputs, 4-pair/8ch AES in and out (110Ω balanced or 75Ω unbalanced via optional CAB-D25-BNC cable), dual 12V DC inputs, 1x USB, 1x SD card slot (SD slot omitted from ports — no matching connector id in the allowed list), serial remote control, headphone output, and GPI-triggerable presets.\n\nCould NOT reach a full rear-panel pinout diagram/datasheet: the linked live-production.tv datasheet PDF, and third-party manual hosts (Yumpu, Manualzz, B&H, Full Compass), all returned HTTP 403 or bot-verification walls under normal verified-TLS fetches — none were bypassed. Connector SHAPES for the analogue/AES/GPI/remote ports above are therefore inferred, partly cross-referenced against a secondary \"PAM2 MK2 and PAM2-3G16 Combined Handbook\" (which covers two related-but-different TSL products, so its D25/D15/D9 connector details may not map 1:1 onto the MK2 specifically).\n\nOther caveats:\n- The manufacturer page itself is internally inconsistent about form factor: the overview text calls it a \"2U Precision Audio Monitor\" while the specifications list says \"Compact, lightweight 1U case, 250mm deep.\" Reported rackUnits=1 based on the explicit spec line, but this contradiction is unresolved.\n- SDI grade (3G) is inferred from the stated 1080p50/59.94/60 formats, which exceed 1.5G HD-SDI bandwidth; marketing copy only ever says \"HD/SDI.\"\n- No AC mains/IEC inlet is listed for the MK2 (power is stated as dual 12V DC only) — an \"IEC mains inlet\" mentioned in the combined handbook is believed to belong to the companion PAM2-3G16 product, not the MK2, and was excluded here.\n- Given the number of inferred connector shapes, overall confidence is medium rather than high despite the manufacturer page being an unambiguous, authoritative source for feature/quantity claims.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Dual auto-sensing 1080p HD/SDI inputs (60/59.94/50Hz); marketing copy says 'HD/SDI' but 1080p50/59.94/60 exceeds 1.5G HD-SDI bandwidth and requires 3G-SDI, so grade is inferred."
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "See SDI In 1 — same auto-sensing pair; grade inferred."
+    },
+    {
+      "name": "SDI Out (re-clocked)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Re-clocked HD/SDI loop output per manufacturer copy; grade inferred to match inputs."
+    },
+    {
+      "name": "Monitor Out (downconverted SDI/Composite)",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Switchable down-converted SD-SDI or composite (PAL/NTSC) output per manufacturer copy; not graded since exact SD-SDI level unstated and composite has no SDI grade."
+    },
+    {
+      "name": "External Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "MK2-specific external-display HD-SDI feed, sourced from a third-party operating handbook (not on the current manufacturer product page) — lower confidence this exact port persists as described."
+    },
+    {
+      "name": "Analogue In 1 (Stereo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "One of '2 Analogue Stereo Inputs' per manufacturer spec. Physical connector shape (discrete XLR3 vs multi-pin D-sub breakout) not explicitly confirmed by an accessible pinout diagram — inferred."
+    },
+    {
+      "name": "Analogue In 2 (Stereo)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Second stereo analogue input; same caveat as Analogue In 1."
+    },
+    {
+      "name": "AES In (4 pairs / 8ch)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "'4 AES (4 Pairs/8 Channel) Inputs – 110Ω balanced or 75Ω unbalanced via optional CAB-D25-BNC cable' per manufacturer page. The breakout-cable requirement implies the base connector is a multi-pin D-sub (DB25) carrying multiple AES3 pairs, which is not in the allowed connector list — 'aes3' chosen as closest id."
+    },
+    {
+      "name": "AES Out (4 pairs / 8ch)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "'Fixed or variable AES multichannel outputs (4 pairs/8 channels)' per manufacturer page. Same D-sub-breakout caveat as AES In."
+    },
+    {
+      "name": "Analogue Out (8 mono)",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "'Fixed or variable analogue multichannel outputs (8 mono)' per manufacturer page; connector shape inferred/uncertain (likely a multi-pin D-sub breakout rather than 8 discrete XLRs given 1U chassis depth)."
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "'Headphone output with LS muting' listed as a feature; connector size/type not explicitly stated — standard 1/4in TRS assumed."
+    },
+    {
+      "name": "GPI",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Manufacturer page confirms GPI-triggered presets ('5 hardware buttons, GPI, 24 internal'). A secondary TSL operating handbook (covering related PAM2 models) describes a 15-pin D-sub GPI connector, which is not in the allowed connector list — 'euroblock' used as a functional stand-in. Low confidence on exact connector shape."
+    },
+    {
+      "name": "Remote Control (RS422)",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "'Serial remote control' listed as a manufacturer feature; RS422/D-sub detail drawn from a secondary TSL handbook covering related PAM2 models, not confirmed specifically for MK2."
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Reported in a secondary operating handbook as fitted to the rear panel but 'not active in the initial product release'. Not mentioned at all on the current manufacturer product page — low confidence this port is present/active on current production units."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For system updates and preset save/recall, per manufacturer page. Port type (USB-A) assumed for a flash-drive-style utility port; not explicitly stated."
+    },
+    {
+      "name": "DC In 1",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "One of the manufacturer-stated 'Dual 12V DC inputs' (redundant power). Exact connector style (simple barrel vs locking multi-pin) not confirmed by an accessible source."
+    },
+    {
+      "name": "DC In 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Second of the dual redundant 12V DC inputs; same caveat as DC In 1."
+    }
+  ]
+}

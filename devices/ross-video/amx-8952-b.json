@@ -1,0 +1,92 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "AMX-8952-B",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://documentation.rossvideo.com/files/Manuals/Signal%20Processing/openGear/AMX_8952.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Ross Video's own \"AMX-8952-A, AMX-8952-B, and AMX-8952-C User Guide\" (v6-rev5, official PDF over verified HTTPS from documentation.rossvideo.com), cross-checked against the Ross Video product page (rossvideo.com/products/signal-processing/opengear/timing-synchronization/amx-8952/) and Markertek's retail listing. The AMX-8952 family has three audio-interface variants sharing identical SDI/control architecture: -A (8x unbalanced 75ohm AES on HD-BNC), -B (this model: 8x balanced 110ohm AES on 3-pin WECO), -C (8x balanced analog audio on 3-pin WECO). Two interchangeable rear modules exist for -B — 8322R-330 (round screw-terminal AES footprint) and 8322AR-330-02 (WECO block-style footprint) — electrically identical, differing only in AES connector shape. SDI ports use HD-BNC (mini/DIN 1.0/2.3), not full-size BNC; the schema's closest id \"sdi\" was used. AES ports use proprietary 3-pin WECO(TM) balanced terminals, not a true captive-screw Euroblock; \"euroblock\" was chosen as the closest available connector id and flagged per-port. GPI/Tally ports are likewise 3-pin pluggable terminals, mapped to \"euroblock\" as the closest id even though they carry control contact-closures, not audio. This is an openGear rack-frame card (occupies 2 card slots) powered via the frame's card-edge/backplane connection — there is no standalone AC/DC power connector on the card itself, so no power port and no rackUnits value were set (max power draw is 20W per the manual's Power table). 12G-SDI/2160p UHD support requires the separately licensed AMX-8952-UHD-LICENSE key; base hardware is electrically rated up to SMPTE ST-2082 (11.88Gbps).",
+  "ports": [
+    {
+      "name": "SDI IN",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "Physical connector is HD-BNC (mini/high-density BNC), not full-size BNC. Base hardware supports up to ST-2082 (11.88Gbps/12G); 2160p UHD formats require the AMX-8952-UHD-LICENSE key."
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "HD-BNC connector; primary processed SDI output (dedicated)."
+    },
+    {
+      "name": "SDI BI-DIR",
+      "direction": "bidirectional",
+      "connector": "sdi",
+      "grade": "sdi-12g",
+      "note": "HD-BNC connector; user-configurable as a second monitor output or an additional embed input."
+    },
+    {
+      "name": "AES 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Physical connector is a 3-pin WECO(TM) balanced-audio terminal (110ohm, AES-3id/AES3), not a true Euroblock; closest available connector id chosen. Carries one AES3 stereo pair (2 of 16 total channels); configurable per-port as embed input or de-embed/monitor output."
+    },
+    {
+      "name": "AES 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 3",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 4",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 5",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 6",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 7",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "AES 8",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin WECO(TM) balanced AES3 connector (110ohm), approximated as euroblock. One stereo pair, embed-in or monitor-out configurable."
+    },
+    {
+      "name": "GPIO 1",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin contact-closure GPI/Tally control port (not audio); user-programmable in DashBoard as a GPI input or a Tally output. Closest available connector id chosen for this small pluggable terminal."
+    },
+    {
+      "name": "GPIO 2",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin contact-closure GPI/Tally control port (not audio); user-programmable in DashBoard as a GPI input or a Tally output. Closest available connector id chosen for this small pluggable terminal."
+    }
+  ]
+}

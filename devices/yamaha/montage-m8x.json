@@ -1,0 +1,110 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "Montage M8x",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://usa.yamaha.com/products/music_production/synthesizers/montagem/specs.html",
+  "confidence": "high",
+  "notes": "88-key flagship synthesizer/music workstation (GEX wooden keyboard action); no \"Synthesizer\" or \"Keyboard\" category/type exists in the allowed enums, so category=audio/type=Other was chosen as closest fit — it also functions as a class-compliant USB audio/MIDI interface over USB TO HOST (6 in / 32 out ch @44.1kHz, or 6 in / 8 out @44.1-192kHz). Desktop instrument, not rack-mountable (omit rackUnits). No USB version (2.0/3.0) or MIDI-DIN pin count is stated in Yamaha's spec table, so no USB grade is set; MIDI IN/OUT/THRU assumed standard 5-pin DIN (industry-universal, not stated explicitly). Power inlet is described in Yamaha's manual as an \"AC IN\" terminal accepting the supplied AC power cord; third-party retailer (Kraft Music) accessory listing specifies an IEC C13 cord, confirming an IEC (C14) inlet — mapped to connector \"iec\". All audio I/O (main OUTPUT, ASSIGNABLE OUTPUT, A/D INPUT, PHONES, foot controller/switch jacks) are 6.3mm (1/4\") TRS jacks per Yamaha; OUTPUT and ASSIGNABLE OUTPUT are specified as balanced. Connector counts/names cross-checked against a second web summary of the same spec sheet and against YamahaSynth.com's Montage M connection guide (confirms USB TO HOST uses a \"type A to type B\" cable, i.e. USB-B on the instrument). Specs are identical across M6/M7/M8x except keyboard size/weight/dimensions.",
+  "ports": [
+    {
+      "name": "OUTPUT L/MONO",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced main output"
+    },
+    {
+      "name": "OUTPUT R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced main output"
+    },
+    {
+      "name": "ASSIGNABLE OUTPUT L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced assignable output"
+    },
+    {
+      "name": "ASSIGNABLE OUTPUT R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Balanced assignable output"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone jack"
+    },
+    {
+      "name": "A/D INPUT L/MONO",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "A/D INPUT R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "FOOT CONTROLLER 1",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "FOOT CONTROLLER 2",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "FOOT SWITCH SUSTAIN",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "FOOT SWITCH ASSIGNABLE",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "MIDI IN",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI OUT",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI THRU",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB TO DEVICE 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for USB flash drives etc."
+    },
+    {
+      "name": "USB TO DEVICE 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Host port for USB flash drives etc."
+    },
+    {
+      "name": "USB TO HOST",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Connects to computer for audio/MIDI over USB; Type A-to-B cable"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel AC inlet for supplied power cord; retailer accessory listing specifies IEC C13 cord"
+    }
+  ]
+}

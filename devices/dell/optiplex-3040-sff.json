@@ -1,0 +1,78 @@
+{
+  "manufacturer": "Dell",
+  "model": "OptiPlex 3040 SFF",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://i.dell.com/sites/doccontent/shared-content/data-sheets/ja/Documents/OptiPlex_3040_v3.pdf",
+  "confidence": "medium",
+  "notes": "Dell OptiPlex 3040 ships in three chassis: Mini Tower (MT), Small Form Factor (SFF), and Micro. This entry documents the SFF/MT I/O configuration (identical port sets per Dell's official spec sheet); dimensions/bays differ but connectors do not. The Micro variant differs meaningfully: only 6 external USB ports (4x USB 3.0, 2x USB 2.0, no front USB 2.0), is powered by a 65W external AC adapter feeding a DC barrel input instead of an internal PSU/IEC inlet, and offers a factory-optional add-in serial+PS/2 adapter or a second DisplayPort 1.2 (mutually exclusive choice) — not modeled here. An internal-only USB 2.0 header (used for an optional internal wireless/Bluetooth card) was omitted as it is not an externally accessible port. Source is Dell's official Japanese-language OptiPlex 3040 data sheet hosted on i.dell.com (Dell's own asset CDN); content/specs are identical to the English data sheet, only the marketing copy is localized. Not rack-mountable (desktop/SFF form factor), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "USB-A 3.0 (Front) x2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3.0 (Rear) x2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "one rear USB 3.0 port supports Smart Power On (charge/wake attached devices while system is off)"
+    },
+    {
+      "name": "USB-A 2.0 (Front) x2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 2.0 (Rear) x2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "rear USB 2.0 ports support Smart Power On"
+    },
+    {
+      "name": "Ethernet (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "DisplayPort",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "HDMI",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "VGA (optional)",
+      "direction": "output",
+      "connector": "vga",
+      "note": "factory-optional port, not present on every configuration"
+    },
+    {
+      "name": "Universal Audio Jack (Front)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "combo headset jack (mic in + headphone out on one 3.5mm connector)"
+    },
+    {
+      "name": "Line-Out (Rear)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "internal 240W PSU (standard/Bronze/Platinum efficiency options), IEC C13/C14 style inlet"
+    }
+  ]
+}

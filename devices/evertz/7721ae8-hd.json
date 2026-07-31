@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Evertz",
+  "model": "7721AE8-HD",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://evertz.com/products/7721AE8-HD",
+  "confidence": "high",
+  "notes": "This is a 1-slot frame card, not a standalone box: it mounts in an Evertz 7700FR-C (3RU, up to 15 modules), 7701FR (1RU, up to 3 modules), or the S7701FR standalone enclosure — rackUnits omitted because the card itself has no independent rack height. It has no external power connector; it draws +12VDC / 6.75W from the host frame's backplane, so no power port is listed. The AES audio inputs (8x unbalanced, SMPTE 276M) and Dolby E metadata input physically share one female high-density DB-15 connector on the rear plate; Evertz ships a WPAES8-BNCM-6F breakout cable that fans the 8 AES channels out to individual male BNC connectors (modeled here as 8 separate AES In ports) and brings the 2 metadata wires + ground out as bare leads (modeled as a single RS-422-style metadata input, the closest available connector type — not a literal D-sub RS-422 port). Video I/O is HD/SD-SDI only, auto-detecting up to SMPTE 292M (1.5Gb/s) or SMPTE 259M-C (270Mb/s) — no 3G-SDI support, hence grade sdi-hd on all SDI BNCs. A balanced variant, 7721AE8-B-HD, replaces the DB-15 AES connector with a 2x12-pin terminal strip; that variant is not covered by this entry. Primary source: Evertz official product page (evertz.com/products/7721AE8-HD) plus the manufacturer's \"7700 MultiFrame Manual — 7721AE8-(B)-HD HD Audio Embedder\" (Revision 1.7 PDF, linked from evertz.com/resources/manuals/?id=65), cross-checked against the independent AV-iQ spec table (av-iq.com/avcat/ctl1642/index.cfm?manufacturer=evertz&product=7721ae8-hd), all consistent.",
+  "ports": [
+    {
+      "name": "HD/SDI Input",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "HD/SDI Output (Bypass)",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd",
+      "note": "Bypass-relay protected; passes input through unembedded if the module loses power"
+    },
+    {
+      "name": "HD/SDI Output",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-hd"
+    },
+    {
+      "name": "AES In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Delivered via the card's single female high-density DB-15 rear connector; Evertz-supplied WPAES8-BNCM-6F breakout cable fans out 8 unbalanced AES pairs to individual male BNC connectors"
+    },
+    {
+      "name": "AES In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 5",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 6",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 7",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "AES In 8",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Via DB-15 + breakout cable (see AES In 1)"
+    },
+    {
+      "name": "Metadata In (Dolby E)",
+      "direction": "input",
+      "connector": "rs422",
+      "note": "2-pin differential + ground metadata input (SMPTE RDD6, 115,200 baud) carried on the same shared DB-15 connector/breakout cable as bare wire leads, not a dedicated D-sub RS-422 jack; 'rs422' is the closest taxonomy match"
+    }
+  ]
+}

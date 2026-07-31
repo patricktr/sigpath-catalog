@@ -1,0 +1,63 @@
+{
+  "manufacturer": "EIZO",
+  "model": "ColorEdge CG279X",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.eizo.com/products/coloredge/cg279x/",
+  "confidence": "medium",
+  "notes": "Physical I/O confirmed via EIZO's own product page (eizo.com/products/coloredge/cg279x/, valid TLS), cross-checked against B&H Photo listing content surfaced via search (B&H page itself returned HTTP 403 on direct fetch, so not used as the primary sourceUrl). One port of each type (DisplayPort, HDMI, DVI-D, USB-C) except USB-A downstream (2x USB 3.1 Gen1 + 2x USB 2.0) and one USB-B upstream. HDMI version (1.4 vs 2.0) is not stated anywhere I could confirm — only HDCP 1.4 support is documented — so no bandwidth grade was assigned to the HDMI port; treat it as unconfirmed. The AC inlet connector was inferred as generic IEC (built-in PSU, detachable standard AC cord, no external power brick) since EIZO's spec text does not name the exact IEC sub-type (C13/C14 vs C7/C5); a monitor manual/rear-panel photo would be needed to confirm. eizoglobal.com (the .com site's underlying global CMS) was attempted as a secondary source but its certificate failed verification (\"unable to verify the first certificate\"), so per instructions it was treated as unusable and not fetched. No audio connectors are listed for this model. Desktop monitor — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "DisplayPort",
+      "direction": "input",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "HDCP 1.4, Deep Color supported; HDMI version number not stated by manufacturer"
+    },
+    {
+      "name": "DVI-D",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "HDCP 1.4"
+    },
+    {
+      "name": "USB Type-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "DisplayPort Alt Mode video input (HDCP 1.3), USB 3.1 Gen 1 upstream data, Power Delivery source up to 15W"
+    },
+    {
+      "name": "USB Upstream",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1 Type-B upstream"
+    },
+    {
+      "name": "USB Downstream",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "USB 3.1 Gen 1 Type-A, qty 2, 0.9A charging"
+    },
+    {
+      "name": "USB Downstream",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Type-A, qty 2, 0.5A charging"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Built-in power supply, AC 100-240V 50/60Hz; manufacturer page confirms standard AC power cord but does not explicitly state IEC C13/C14 inlet designation"
+    }
+  ]
+}

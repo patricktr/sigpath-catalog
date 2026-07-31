@@ -1,0 +1,40 @@
+{
+  "manufacturer": "Bittree",
+  "model": "S64T-1MWNBK",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.markertek.com/product/bit-s64t-1mwnbk/bittree-s64t-1mwnbk-64-point-12ghz-4k-8k-mini-weco-mid-size-video-patchbay-2x32-2ru",
+  "confidence": "high",
+  "notes": "Fully passive, unpowered mechanical video patchbay — no power connector/port exists on this unit (confirmed absent across all sources checked). 64 total circuit points (2 rows x 32), each a straight-through, non-normalled connection between one front Mini-WECO (midsize) jack and one rear BNC jack; represented above as 4 grouped port entries (32 identical points each) rather than 128 individual rows since the connector schema has no per-entry quantity field. True 75-ohm impedance, rated for SD/HD/UHD/4K/8K/HDR-SDI signals; compliant with SMPTE ST292M, ST424M, ST2081-1 (6G-SDI) and ST2082-1 (12G-SDI) — grade set to sdi-12g reflecting the highest confirmed SMPTE-SDI standard supported (marketing also cites \"12G+\"/\"24GHz\" bandwidth headroom beyond the 12G-SDI spec, but no higher SMPTE-SDI standard, e.g. 24G-SDI/ST2083, is explicitly claimed). Manufacturer's own product page (bittree.com) was rate-limited (HTTP 429) on every fetch attempt during research, so this entry is sourced from Markertek's spec table, cross-confirmed against AV-iQ and Full Compass listing titles/snippets, which is an explicitly acceptable retailer source per task instructions. Mini-WECO is not present in the given connector-id taxonomy; \"bnc\" was used as the closest match for the front jacks since Mini-WECO is mechanically/functionally a compact 75-ohm broadcast video patch connector in the same family as BNC (SDI cross-connect), though it is a push-on (non-bayonet) connector distinct from true BNC — flagged per-port above. Dimensions/weight were not found on any source checked.",
+  "ports": [
+    {
+      "name": "Front Jacks 1-32 (Row A)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Physical connector is Mini-WECO (midsize push-on video jack), not true BNC; 'bnc' used as closest available connector id in taxonomy. Entry represents 32 identical, individually numbered patch points (1-32), each a passive straight (non-normalled) through-connection to its corresponding rear BNC point."
+    },
+    {
+      "name": "Front Jacks 1-32 (Row B)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Physical connector is Mini-WECO (midsize push-on video jack); 'bnc' used as closest available connector id. Entry represents 32 identical, individually numbered patch points (1-32), passive straight through-connection to its corresponding rear BNC point."
+    },
+    {
+      "name": "Rear BNC 1-32 (Row A)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Staggered rear BNC interface. Entry represents 32 identical, individually numbered rear connections (1-32), each wired straight (non-normalled) to its corresponding Row A front Mini-WECO jack."
+    },
+    {
+      "name": "Rear BNC 1-32 (Row B)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Staggered rear BNC interface. Entry represents 32 identical, individually numbered rear connections (1-32), each wired straight (non-normalled) to its corresponding Row B front Mini-WECO jack."
+    }
+  ]
+}

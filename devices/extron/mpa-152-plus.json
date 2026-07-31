@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Extron",
+  "model": "MPA 152 Plus",
+  "category": "audio",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.manualslib.com/manual/719631/Extron-Electronics-Mpa-152-Plus.html",
+  "confidence": "medium",
+  "notes": "Extron's own product/spec page (extron.com/product/mpa152plus) is blocked to automated fetch tools by an F5 Bot Defense WAF challenge (\"Request Rejected\" / no CAPTCHA to solve, just a hard block), so it could not be used directly despite being the preferred source. Direct retailer spec pages (B&H, Sweetwater, Markertek, Crutchfield, Full Compass) were also unreachable in this session (403s, no exact SKU match, or tooling access issues). Data was instead extracted from the verbatim Extron MPA 152 Plus User Guide as hosted/mirrored on ManualsLib (manualslib.com/manual/719631/Extron-Electronics-Mpa-152-Plus.html), page-by-page (rear panel/cabling, audio input, audio output, remote control, mounting sections) - the content is Extron's own documentation text, just not manufacturer-hosted, hence confidence is \"medium\" rather than \"high\". \n\nQuarter-rack-width compact chassis; not a standard 19\" rack-panel unit (no rackUnits set) - it mounts via 2 threaded holes to a furniture bracket, ZipClip rail, tabletop, under-desk/podium, or pole mount; UL 2043 plenum rated for the amplifier chassis (the bundled PS 1220 power supply is not plenum rated and must stay outside the plenum space). Class D stereo mini power amplifier, 15 W RMS/channel (4 ohm), 90 dB SNR at 0.1% THD+N, auto standby after 25 min idle, can daisy-chain multiple units off one remote volume controller. Could not confirm exact physical dimensions/weight or the precise printed panel silkscreen labels (e.g. whether inputs are numbered \"1/2/3\" on the rear panel) from the available source excerpts - connector identity, pole counts, and electrical ratings are confirmed, but literal on-panel text for each input is inferred from the manual's descriptive prose rather than a transcribed panel diagram.",
+  "ports": [
+    {
+      "name": "Audio Input (RCA, Stereo)",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Stereo pair, 2x RCA jacks (L/R); unbalanced line level; mono operation via L jack only; auto-terminates when unused."
+    },
+    {
+      "name": "Audio Input (3.5 mm Mini Jack)",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Single TRS mini jack carrying unbalanced stereo line-level audio; auto-terminates when unused."
+    },
+    {
+      "name": "Audio Input (Captive Screw)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "5-pole, 3.5 mm captive-screw receptacle; accepts balanced or unbalanced, mono or stereo line-level audio."
+    },
+    {
+      "name": "Speaker Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "4-pole, 5 mm screw-lock captive-screw receptacle; stereo or dual-mono (front-panel switch); up to 15 W/ch into 4 ohm or 8 W/ch into 8 ohm."
+    },
+    {
+      "name": "Remote Volume/Mute (V C G)",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin, 3.5 mm captive-screw remote control port; V = 10 VDC reference out, C = 0-10 VDC volume control in (short to ground = mute), G = ground; Class 2 wiring, 10 V 50 mA. Compatible with Extron VC 50, VCM 100/200 series, MLA VC10 Plus, or third-party 10k-ohm potentiometer."
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-pole, 3.5 mm captive-screw DC input; 12 VDC, 0.7 A max; powered by the included external Extron PS 1220 (24 W) power supply, which is not plenum-rated even though the amplifier chassis itself is."
+    }
+  ]
+}

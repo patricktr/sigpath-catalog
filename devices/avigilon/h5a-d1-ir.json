@@ -1,0 +1,55 @@
+{
+  "manufacturer": "Avigilon",
+  "model": "H5A-D1-IR",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.avigilon.com/fs/documents/avigilon-h5a-line-camera-datasheet-en.pdf",
+  "confidence": "medium",
+  "notes": "H5A-D1-IR is the indoor surface-mount dome, IR-illuminator variant of Avigilon's H5A camera line (Motorola Solutions). It ships in multiple resolution SKUs — 2.0C-H5A-D1-IR, 4.0C-H5A-D1-IR, 6.0C-H5A-D1-IR, 8.0C-H5A-D1-IR — all sharing the same physical I/O per the official datasheet's line-wide \"AUXILIARY I/O\", \"NETWORK\", \"PERIPHERALS\", and \"ELECTRICAL\" tables. Not rack-mountable (dome form factor), so rackUnits omitted. A microSD/microSDHC/microSDXC onboard-storage slot exists but was omitted from ports since card slots aren't in the connector taxonomy. RS-485 terminal exists only on the Box variant (H5A-B), not this Dome model, so it was excluded. Audio and alarm I/O, and the local (non-PoE) power input, are delivered on the camera's own pigtail as flying/screw-terminal leads rather than as molded jacks — connector ids (trs-3.5, euroblock, euroblock-dc) are the closest catalog matches, which is why confidence is medium despite the core network/power specs coming directly from Avigilon's own PDF datasheet (avigilon-h5a-line-camera-datasheet-en.pdf, Rev 17, Oct 2023).",
+  "ports": [
+    {
+      "name": "Network (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "100BASE-TX, RJ45, CAT5e cabling. Also delivers power to the camera via IEEE 802.3af Class 3 compliant PoE."
+    },
+    {
+      "name": "DC/AC Power In",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Alternate to PoE: accepts 12 VDC ±10% (12 W min) or 24 VAC ±10% (13 VA min). Terminates as flying leads on the camera pigtail rather than a fixed connector body; closest catalog match is a DC terminal block."
+    },
+    {
+      "name": "Alarm In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "External I/O terminal on the camera pigtail leads."
+    },
+    {
+      "name": "Alarm Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "External I/O terminal on the camera pigtail leads."
+    },
+    {
+      "name": "Audio Line In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Line-level audio input (G.711 PCM 8kHz, Opus). Native pigtail is flying leads; optional CM-AC-AVIO1 accessory (3.5 mm jack with 1.8 m fly wire) provides a standard 3.5 mm jack."
+    },
+    {
+      "name": "Audio Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Line-level audio output. Same fly-wire/adapter caveat as Audio Line In."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 host port, used e.g. for the optional USB-AC56 Wi-Fi adapter accessory."
+    }
+  ]
+}

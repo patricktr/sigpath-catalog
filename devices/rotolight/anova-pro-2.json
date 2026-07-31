@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Rotolight",
+  "model": "Anova Pro 2",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.streamingvalley.nl/wp-content/uploads/2023/02/AP2-Manual-v5.49.pdf",
+  "confidence": "high",
+  "notes": "Rotolight Anova Pro 2 is a continuous LED + High-Speed-Sync flash studio/location light (not a standard AV signal-chain device), so category/type were forced into the closest generic buckets (\"other\"/\"Other\") — none of the provided enums represent lighting fixtures. It appears discontinued/superseded by the Anova Pro 3 (rotolight.com/products/anova-pro-2 now 404s; B&H lists it \"No Longer Available\"), so this is a historical spec record.\n\nVariants exist: beam angle Standard 50° vs Wide/Ultrawide 110°; color as Bi-Colour (3150-6300K, CRI 96/TLCI 97) or Fixed 5600K (CRI 94/TLCI 91). Ports/I-O are identical across variants. Power draw is 72W at 100% output. Body weighs ~2.6kg (without yoke/barn doors).\n\nTwo additional physical items on the rear panel were deliberately left out of the ports list because they don't correspond to a standard AV cable connector in the allowed id set: (1) a \"Firmware programming socket\" explicitly marked \"not intended for use by users\" (service-only, manufacturer/distributor use), and (2) a V-Lock battery plate (mounts standard 14.4V V-Lock or Anton Bauer Goldmount-via-adapter batteries as an alternative to the DC-in AC adapter).\n\nPrimary source used: the official Rotolight Anova Pro 2 User Manual (v5.49 PDF), mirrored by AV reseller streamingvalley.nl since the manufacturer's own product page for this discontinued model no longer resolves; content and layout match the manual also hosted (paginated) on manualslib.com/manual/1593293/Rotolight-Anova-Pro-2.html. Cross-checked against the B&H Photo Video retailer listing (bhphotovideo.com, \"No Longer Available\") and the Newsshooter hands-on review (newsshooter.com/2019/01/04/rotolight-anova-pro-2-led-review/), both of which corroborate the 5-pin DMX/RJ45, V-Lock plate, and AC/DC power description. All sources fetched over normal verified HTTPS.",
+  "ports": [
+    {
+      "name": "DMX In/Out (XLR)",
+      "direction": "bidirectional",
+      "connector": "xlr5",
+      "note": "5-pin XLR DMX512 in/out socket, used for daisy-chaining in structured studio cabling."
+    },
+    {
+      "name": "DMX In/Out (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Carries DMX512 signal over RJ45 (not Ethernet/Art-Net); manual gives no data-rate grade."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Manual only says 'USB port', reserved for future firmware updates; exact USB connector size/type (e.g. Micro-USB) is not stated and is inferred as the closest common port for this class/era of device."
+    },
+    {
+      "name": "Flash Sync / Trigger Input",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Manual specifies a 3.5mm MONO jack (TS, not TRS) for third-party PC-sync/flash trigger input; trs-3.5 is the closest id in the allowed connector list."
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1mm DC barrel socket, 13-17V DC (nominal 15V); powered by supplied 15V/90W AC-DC adapter, or usable with a 14.4V D-Tap source through the same socket."
+    }
+  ]
+}

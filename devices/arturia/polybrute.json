@@ -1,0 +1,86 @@
+{
+  "manufacturer": "Arturia",
+  "model": "PolyBrute",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://downloads.arturia.net/products/polybrute/manual/polybrute_Manual_1_0_EN.pdf",
+  "confidence": "medium",
+  "notes": "Sourced directly from the official Arturia PolyBrute User Manual (v1.0, downloads.arturia.net), which includes a labeled rear-panel diagram, a connections table, and a Specifications chapter confirming exact jack types (Master Out and Sustain = TS/unbalanced, Expression pedals and Sync = TRS) and AC input ratings. This is the original 6-voice PolyBrute (2020); the newer PolyBrute 12 variant has different/additional I/O and is not covered here. Memory Protection is a rear-panel On/Off switch, not a signal or power connector, so it is omitted from the port list. USB grade omitted because the manual does not state a USB speed/version (port is used for MIDI + editor/firmware data only, not audio). Master Out and Sustain jacks are confirmed as 1/4\" TS (mono/unbalanced) rather than TRS per the Specifications table's \"Jack: Mono TS\" entry.",
+  "ports": [
+    {
+      "name": "Master Out Right",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced +4dBu line-level output; used alone for mono summing."
+    },
+    {
+      "name": "Master Out Left",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced +4dBu line-level output; carries mono sum when only this output is used."
+    },
+    {
+      "name": "Sync In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog clock/gate input, 0-5V, for syncing non-MIDI modular/eurorack gear."
+    },
+    {
+      "name": "Sync Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5mm analog clock/gate output, 0-5V."
+    },
+    {
+      "name": "Expression 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS expression pedal input (tip = pot wiper, ring = 3.3V, sleeve = ground); pedal sold separately."
+    },
+    {
+      "name": "Expression 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS expression pedal input; pedal sold separately."
+    },
+    {
+      "name": "Sustain",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "1/4\" normally-open sustain pedal input, selectable polarity; pedal sold separately."
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB Type B; carries MIDI and PolyBrute Editor/firmware traffic only, no audio streaming. Cable recommended ≤10m/3m."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC AC inlet with on/off switch; auto-switching 100-240V AC, 50-60Hz, 85W, internal PSU (no external adapter)."
+    },
+    {
+      "name": "Headphone",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel stereo headphone jack with independent level control."
+    }
+  ]
+}

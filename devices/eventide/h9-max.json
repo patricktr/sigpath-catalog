@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Eventide",
+  "model": "H9 Max",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://downloads.eventideaudio.com/manuals/h9/H9-UserGuide.pdf",
+  "confidence": "medium",
+  "notes": "Sourced directly from Eventide's official \"H9 Harmonizer User Guide\" (downloads.eventideaudio.com/manuals/h9/H9-UserGuide.pdf, (c)2022 Eventide Inc., part #159035 Rev F), fetched over verified HTTPS. This single manual covers the whole H9 hardware family (H9 Core, H9, H9 Max) — the H9 Max is the same physical stompbox as the standard H9, differing only in which algorithm bundle is licensed/unlocked in software; all physical connectors and specs are identical across the family and are confirmed for H9 Max explicitly in the manual's \"Key Features\" (99 Presets for H9 and H9MAX). Desktop stompbox/pedal form factor — not rack-mountable, so rackUnits omitted. Dimensions: 5.25\"(H) x 4.65\"(W) x 1.96\"(D), weight 1.53 lbs. USB port is physically a Mini-B receptacle per the manual; \"usb-b\" was chosen as the closest id in the allowed connector list since \"mini-usb\" is not an available option. No manufacturer product/spec web page could be reached (eventideaudio.com product URLs 404'd during this session and B&H returned 403), so the manufacturer's own PDF user guide was used as the authoritative source instead of a retailer spec table.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Mono 1/4\" phone jack; instrument level, accepts line-level up to +4dBU"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Mono 1/4\" phone jack"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Mono 1/4\" phone jack"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Mono 1/4\" phone jack"
+    },
+    {
+      "name": "EXP (Expression Pedal / Aux Switch)",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo 1/4\" jack; accepts expression pedal or dual/single auxiliary footswitch"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Manual specifies Mini-B receptacle, USB 2.0 cables only; usb-b chosen as closest listed connector to Mini-B"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN, female"
+    },
+    {
+      "name": "MIDI Out/Thru",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "5-pin DIN, female; switchable function (Out, Thru, Thru+C, or Merge) via System Mode menu"
+    },
+    {
+      "name": "Power Input (DC Adaptor Jack)",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.5mm x 5mm barrel, center pin positive. Spec sheet lists supplied adapter as 9VDC 500mA; rear-panel silkscreen shown in the manual's connection diagram reads 9-12VDC / 4.3W acceptable input range"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "manufacturer": "Nord (Clavia)",
+  "model": "Stage 4",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://www.nordkeyboards.com/products/nord-stage-4/specifications/",
+  "confidence": "medium",
+  "notes": "Stage keyboard/synthesizer (organ/piano/synth layers), not a traditional AV signal-chain device — closest category/type mapping is \"audio\"/\"Other\" since no \"Keyboard/Instrument\" type exists in the taxonomy. Available in three physical variants (88-key, 73-key, Compact 73-key semi-weighted) with identical rear-panel I/O; dimensions/weight differ but connections do not, so rackUnits is omitted (desktop/stage keyboard, not rack-mountable). The 4 main audio outputs are stated by Nord as \"unbalanced\" 1/4\" jacks, which was interpreted as TS (ts-6.35) rather than TRS since the spec explicitly calls them unbalanced (mono) — Nord's own text does not use the word \"TRS\" for these, unlike the Organ Swell and Control Pedal jacks which are explicitly stated as TRS stereo. The Triple Pedal jack is a 5-pin DIN connector but carries proprietary continuous-pedal data, not MIDI — connector id \"midi-din\" was used as the closest physical match (same connector shell), noted here since it is not actually a MIDI port. No grade could be confirmed for the USB Type-B port (Nord does not state USB spec/speed) or for any other connector, so grade was omitted throughout per instructions. Source verified over HTTPS with a valid certificate (nordkeyboards.com official specifications page); output-numbering (Output 1-4) cross-confirmed via Nord User Forum threads discussing the rear panel.",
+  "ports": [
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Monitor In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Sustain Pedal",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Compatible with Nord Sustain Pedal 2 (continuous sensor), Nord Triple Pedal 1, and switch-type pedals"
+    },
+    {
+      "name": "Triple Pedal",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "5-pin DIN connector for Nord Triple Pedal 2; carries proprietary pedal data, not MIDI, but uses the same 5-pin DIN shell"
+    },
+    {
+      "name": "Rotor Pedal",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Momentary or switch-type pedal for rotary speaker speed control"
+    },
+    {
+      "name": "Organ Swell Pedal",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Control Pedal",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Foot Switch",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Accepts a momentary two-button pedal or a single switch-type pedal"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Type B connector for USB MIDI, software update, and Sound Manager (patch/sample) transfer; USB spec/speed not stated by manufacturer"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC C14 inlet; Nord specifies the included power cord's connector as IEC C14"
+    }
+  ]
+}

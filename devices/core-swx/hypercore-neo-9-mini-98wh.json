@@ -1,0 +1,28 @@
+{
+  "manufacturer": "Core SWX",
+  "model": "Hypercore NEO 9 Mini 98Wh",
+  "category": "power",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1505986-REG/core_swx_neo_9ag_98wh_hop_3_stud_mount.html",
+  "confidence": "medium",
+  "notes": "Source is B&H Photo's product/spec page for the Gold Mount version (Core SWX NEO-9AG); B&H's structured Specs tab gives \"Battery Type: 1x Gold Mount\", \"Output Voltage: 14.8 VDC\", \"Power I/O: 1x D-Tap/P-Tap Female Output\", plus the product description confirms an additional 5V USB port. A matching V-Mount SKU (NEO-9AV) exists with identical electrical specs and the same D-Tap/USB ports, differing only in the mount plate. The manufacturer's own coreswx.com product page for this exact SKU could not be located (it 404s / the line appears to have been superseded by newer Core SWX battery series such as NEO-150S and HC9 Mini), so the B&H retailer spec table was used as the authoritative source instead, cross-checked against Newsshooter's hands-on review (newsshooter.com) which independently confirms the USB (5V, firmware-update capable) and P-Tap (12VDC, \"Smart\") ports on top of the unit. Two caveats drove the medium confidence: (1) none of the allowed connector ids represents a V-mount/Gold-mount spring-pin battery plate or a true D-Tap/P-Tap 2-pin connector, so \"dc-barrel\" was used as the closest analog for both the mount output and the D-Tap output — treat those as approximations, not literal barrel jacks; (2) the USB port's exact connector style (USB-A vs USB-C) and version are not explicitly stated by either source and were inferred from the product's era/photos.",
+  "ports": [
+    {
+      "name": "Battery Mount (Gold Mount / V-Mount)",
+      "direction": "bidirectional",
+      "connector": "dc-barrel",
+      "note": "Spring-loaded pin mount plate that delivers 14.8V DC to the camera/device and also receives charge current when docked on a compatible mount charger. This is a mechanical spring-pin power interface (3-stud Gold Mount or V-Mount), not a cabled barrel jack — 'dc-barrel' was chosen only as the closest listed analog; no connector id in the provided list represents a battery mount plate."
+    },
+    {
+      "name": "D-Tap/P-Tap Output (SmartTap)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "B&H spec table lists '1x D-Tap/P-Tap Female Output', 12VDC, with battery-data ('SmartTap') communication to compatible accessories. Physically a flat 2-pin D-Tap/P-Tap connector; no exact id exists in the provided connector list, so 'dc-barrel' was used as the closest analog."
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "5V USB port for powering/charging USB accessories and mobile devices, also used for firmware updates. Source text confirms only that it is 'a USB port' (5V) without stating USB-A vs USB-C; USB-A is inferred from the product's 2019-era design and photos. Marked bidirectional per the USB-host-port convention; no data-rate grade is stated by the source so none was set."
+    }
+  ]
+}

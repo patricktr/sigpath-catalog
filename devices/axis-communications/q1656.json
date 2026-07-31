@@ -1,0 +1,51 @@
+{
+  "manufacturer": "Axis Communications",
+  "model": "Q1656",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.axis.com/dam/public/2f/ad/1a/datasheet-axis-q1656-box-camera-en-US-506838.pdf",
+  "confidence": "high",
+  "notes": "Box-style network camera (4 MP, ARTPEC-8 SoC). Dimensions 214 x 80 x 68 mm; desktop/pole/wall-mount device, not rack-mountable, so rackUnits omitted. Category set to \"source\" (closest fit for a video-producing device; the schema has no dedicated \"camera\" category) with type \"Camera\". Two additional physical connectors on the unit were intentionally omitted from the port list because they don't map to any signal/power connector in the allowed list: (1) an \"i-CS connector\" for electronic lens iris/zoom/focus control (P-Iris/DC-iris compatible), and (2) an \"AXIS T92G20 connector\" plus a mechanical security-lock slot for mount/anti-tamper hardware — neither carries general AV signal or power. Source is the official Axis datasheet PDF (T10170085/EN/M27.2/202511), fetched directly from axis.com over HTTPS with valid TLS; all specs including the full \"Connectors\" section were read verbatim from the PDF, so confidence is high.",
+  "ports": [
+    {
+      "name": "Network (RJ45 PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "10BASE-T/100BASE-TX/1000BASE-T with PoE IEEE 802.3af/802.3at Type 1 Class 3 (typical 5.1 W, max 8.2 W)"
+    },
+    {
+      "name": "I/O terminal block",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Two supervised and two unsupervised configurable digital inputs/outputs; 12 VDC output, max load 50 mA"
+    },
+    {
+      "name": "RS485/RS422",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "accepts": [
+        "rs422"
+      ],
+      "note": "2 pcs, 2 pos, full duplex terminal block (e.g. for PTZ head/Pelco control)"
+    },
+    {
+      "name": "DC input",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Terminal block, 10-28 VDC, typical 4.6 W, max 7.7 W; provides power redundancy alongside PoE"
+    },
+    {
+      "name": "Mic/line in",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "3.5 mm external microphone or line input"
+    },
+    {
+      "name": "Line out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "3.5 mm line output"
+    }
+  ]
+}

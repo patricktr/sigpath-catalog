@@ -1,0 +1,123 @@
+{
+  "manufacturer": "Flanders Scientific",
+  "model": "DM250",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://flandersscientific.com/support/DMSeriesManual.pdf",
+  "confidence": "high",
+  "notes": "DM250 is a discontinued 24.5\" 10-bit OLED production/reference monitor (part of FSI's DM series alongside DM170/DM240 etc.). Its dedicated product/spec page has been removed from the current flandersscientific.com site (redirects to 404), but the model is still documented in FSI's currently-live, official \"Monitor User Manual\" PDF (https://flandersscientific.com/support/DMSeriesManual.pdf, fetched directly over verified HTTPS from the manufacturer's own domain, updated 2.3.2026, still lists DM250 in its covered models and gives the full back-panel connector inventory used here). Power-connector types and the precise SDI/DVI/DP input-output counts were cross-verified against Flanders Scientific's original DM250 tech-specs page, preserved by the Internet Archive Wayback Machine (https://web.archive.org/web/20190801000000/http://flandersscientific.com/DM250/tech-specs.php, a snapshot of the manufacturer's own now-removed page) — both sources agree. No rack-mount units were set since the DM250 ships standard with a desktop stand; a rack mount kit is listed only as an optional accessory. The GPI port's exact connector pinout isn't published — it was mapped to rj45 as the closest visual/physical match from the panel photo (same jack style as LAN/RS-485), not confirmed as true 8P8C Ethernet wiring. Grades were omitted for DisplayPort (version unstated) and for the two MON/2nd-monitor BNC outputs (spec table does not explicitly grade them, though they follow whatever input — up to 3G-SDI equivalent — is actively selected). One AI-generated third-party summary (av-iq.com via automated fetch) additionally claimed Component/Composite analog inputs; this was not corroborated by the manufacturer's own tech-specs table or manual and was treated as unreliable/omitted.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Autosensing, autoswitching, multi-format 3G/HD/SD-SDI"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Autosensing, autoswitching, multi-format 3G/HD/SD-SDI"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Looped 3G/HD/SD-SDI output"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Looped 3G/HD/SD-SDI output"
+    },
+    {
+      "name": "MON Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "2nd-screen/processed monitor output; mirrors the actively selected input (SDI, DisplayPort, or DVI cross-converted); LUT/flip can be applied. Spec sheet does not state an explicit SDI grade for this pair."
+    },
+    {
+      "name": "MON Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "2nd-screen/processed monitor output; mirrors the actively selected input; see MON Out 1 note."
+    },
+    {
+      "name": "DVI",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-D digital input (accepts VGA/NTSC/SVGA/XGA/SXGA analog-equivalent timings and 720p/1440x900/1080p digital per manufacturer format table)"
+    },
+    {
+      "name": "DP",
+      "direction": "input",
+      "connector": "dp",
+      "note": "DisplayPort input; version not specified by manufacturer, grade omitted"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo mini-phono, unbalanced"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog stereo mini-phono, unbalanced; delayed to match video processing latency"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "IP control (FSI IP Remote Utility, Pomfort LiveGrade Pro, etc.)"
+    },
+    {
+      "name": "GPI",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "General Purpose Interface for contact-closure remote control, assignable via GPI menu. Physically an RJ45-style modular jack on the panel (matches adjacent LAN/RS-485 jacks) but is NOT an Ethernet port — connector chosen as closest physical match; exact pinout not published."
+    },
+    {
+      "name": "RS-485 In",
+      "direction": "input",
+      "connector": "rs485",
+      "note": "RS-485 loop-through remote control interface"
+    },
+    {
+      "name": "RS-485 Out",
+      "direction": "output",
+      "connector": "rs485",
+      "note": "RS-485 loop-through remote control interface, loops to next device"
+    },
+    {
+      "name": "USB Type A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "USB host port for direct-connect probe alignment; can also power MediaLight bias lights"
+    },
+    {
+      "name": "USB Type B",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB device port; connects to computer for firmware updates and LUT loading"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC/C14 inlet, 100-240 VAC"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin XLR DC input, 12-24 VDC, ~50W power consumption"
+    }
+  ]
+}

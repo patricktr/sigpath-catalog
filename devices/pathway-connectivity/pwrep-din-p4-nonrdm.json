@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Pathway Connectivity",
+  "model": "PWREP-DIN-P4-NONRDM",
+  "category": "control",
+  "type": "Extender",
+  "sourceUrl": "https://img.acuitybrands.com/public-assets/catalog/1602919/pwrep-din-p4-manual.pdf",
+  "confidence": "high",
+  "notes": "Official Pathway Connectivity (Acuity Brands) user manual, dated 08/27/21, obtained via the Wayback Machine archive of img.acuitybrands.com (the live acuitybrands.com/pathwayconnect.com domains return HTTP 403 via Cloudflare bot protection to non-browser fetches; content is the manufacturer's original PDF, unaltered). All device I/O is via removable screw/terminal-block connectors (no true XLR or circular connectors are fitted, though the DMX terminal maps 1:1 to standard XLR5 pinout: 1=Common/Shield, 2=Data-, 3=Data+, 4/5=unused). No connector in the provided list is an exact match for a DMX screw terminal, so \"euroblock\" was used for the signal (DMX) terminals and \"euroblock-dc\" for the power terminal, per the closest-match instruction. No bandwidth grade applies (DMX512 terminals and DC power are not in the graded connector list). This is a DIN-rail mounted module (0.5 lb, 4.5\"x4\"x1.85\"), not rack-mountable, so rackUnits is omitted. Device is a passive DMX512 signal repeater/isolator/splitter (1 input, optional daisy-chain thru, 4 isolated outputs) rather than a classic AV extender; \"Extender\" was chosen as the closest fit in the given type enum, and \"control\" as the closest category (lighting control signal distribution). A companion \"RDM\" variant of this product exists (PWREP-DIN-P4 without NONRDM suffix) which supports RDM pass-through — not covered here.",
+  "ports": [
+    {
+      "name": "DMX IN",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "6-position screw terminal: SHLD/COM, D1-, D1+, D2- (unused), D2+ (unused). Corresponds to XLR5 pins 1-3 (D2 pins unused/spare)."
+    },
+    {
+      "name": "DMX THRU",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Screw-terminal daisy-chain feed carrying the DMX IN signal onward to the next module's DMX IN; DMX Terminate switch must be OFF if used."
+    },
+    {
+      "name": "DMX OUT 1",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Isolated (1500V) repeated DMX output, screw terminal."
+    },
+    {
+      "name": "DMX OUT 2",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Isolated (1500V) repeated DMX output, screw terminal."
+    },
+    {
+      "name": "DMX OUT 3",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Isolated (1500V) repeated DMX output, screw terminal."
+    },
+    {
+      "name": "DMX OUT 4",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "Isolated (1500V) repeated DMX output, screw terminal."
+    },
+    {
+      "name": "POWER IN",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "Removable screw-terminal block: V+, V-, GND, EARTH GROUND, 9-30VDC @ 500mA (6W). A second V+/V- pair on the same terminal block allows power daisy-chaining to other DIN modules."
+    }
+  ]
+}

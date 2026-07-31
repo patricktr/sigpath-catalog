@@ -1,0 +1,29 @@
+{
+  "manufacturer": "Crestron",
+  "model": "FT2-202-ELEC-B",
+  "category": "other",
+  "type": "Other",
+  "sourceUrl": "https://www.crestron.com/Products/Catalog/Inactive/Discontinued/F/FT2-202-ELEC-B",
+  "confidence": "high",
+  "notes": "The FT2-202-ELEC-B is a discontinued Crestron FlipTop FT2 Series flush tabletop cable-management/connectivity box, not a fixed-I/O AV device. It has NO built-in HDMI/USB/audio/video signal connectors of its own — it provides a metal chassis with a retracting lid and six module slots (arranged in one row) plus a built-in 24VDC electrical power bus; actual AV connector modules (pass-through plates, active HDMI/USB/etc. plates, power outlet modules, cable retractors) are separate SKUs purchased and installed individually, so I/O varies by configuration. The two ports listed above (dual 2.1x5.5mm 24VDC DC inputs and one 3-pin 3.5mm Cresnet terminal block, slave/data-only) are the unit's own fixed connectors as documented on Crestron's official product catalog page. Ships with 4 cable pass-through plate modules and 2 blank plate modules (per Full Compass/av-iq listings), but these pass-through plates carry no active signal connectors of their own (they're cable-routing grommet plates), so they are not listed as ports. A chassis ground lug (6-32 screw) also exists but has no matching connector id in the allowed list and is not an AV signal/power port, so it was omitted. Not rack-mountable (flush tabletop mount, cutout 3-1/4in x 7in, max 1-3/4in surface thickness). Minor dimension discrepancy observed between the Crestron catalog page (6.82in closed / 7.49in open height) and a secondary listing (7.26in/7.73in) — likely a revision or rounding difference, does not affect port data. Product status: discontinued. Optional companion power supply model FT2A-UTK-PWS: 100-240VAC 50/60Hz input, 1.5A, outputs 24VDC 2.5A (not part of this SKU's own I/O, sold separately). A secondary AV-iQ datasheet PDF could not be fetched due to a TLS certificate verification failure and was not used.",
+  "ports": [
+    {
+      "name": "DC Power In 1",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm barrel connector, 24 VDC; powers the internal Cresnet bus and module slots"
+    },
+    {
+      "name": "DC Power In 2",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "2.1 x 5.5 mm barrel connector, 24 VDC; second/redundant DC input"
+    },
+    {
+      "name": "Cresnet",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "3-pin, 3.5 mm detachable terminal block; Cresnet slave port, data-only (no power passed)"
+    }
+  ]
+}

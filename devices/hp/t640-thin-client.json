@@ -1,0 +1,92 @@
+{
+  "manufacturer": "HP",
+  "model": "t640 Thin Client",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://objects.icecat.biz/objects/mmo_78775681_1590476840_0694_16420.pdf",
+  "confidence": "medium",
+  "notes": "Source: official HP QuickSpecs for the HP t640 Thin Client (doc c06392258, DA-16510, Version 1, Aug 19 2019) — content verified as the manufacturer's own spec sheet, but the certificate on HP's own hosting domains (h20195.www2.hp.com, support.hp.com) failed TLS verification during retrieval, so the identical PDF was instead fetched from a third-party document mirror (icecat.biz); no data was altered, only the retrieval host differs from HP's own domain. Desktop/vertical-stand unit, not rack-mountable. Powered by an external 45W non-PFC AC/DC adapter (100-240VAC in, 19V/45W DC out) feeding the unit's \"19V DC power input\" jack — modeled here as dc-barrel per the connector taxonomy. Ports listed are the STANDARD/base configuration only. The rear panel also has a factory-configurable \"Option Port\" that ships blank by default and can instead be ordered as: 2x USB-A 3.1 Gen1, DisplayPort-over-USB-C w/ USB Power Delivery, HDMI digital video out, VGA analog video out, external Wi-Fi antenna connector, Fiber Optic NIC (SC or LC), a serial port with configurable power, or dual serial ports (via included cable adapter) — not included in the port list above since it varies by SKU/order configuration. The rear 3.5mm audio jack is configurable as line-in or line-out (headphones/speakers/mic), hence marked bidirectional. All video outputs (3x DisplayPort 1.2) support up to 3840x2160@60Hz; adding the optional Option-Port video output does not increase total displays supported (max 3).",
+  "ports": [
+    {
+      "name": "USB-A 3.1 Gen 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3.1 Gen 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB-C 3.1 Gen 2 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "Combo Headset/Audio Jack (Front)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-A 3.1 Gen 1 (Rear) 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB-A 3.1 Gen 1 (Rear) 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "DisplayPort 1.2 Out 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 1.2 Out 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 1.2 Out 3",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "19V DC Power Input",
+      "direction": "input",
+      "connector": "dc-barrel"
+    },
+    {
+      "name": "Audio Jack (Rear, line in/out configurable)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB-A 2.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB-A 2.0 (Rear, Power-on w/ Keyboard)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "RJ45 GbE Network Connector",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    }
+  ]
+}

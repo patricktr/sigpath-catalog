@@ -1,0 +1,25 @@
+{
+  "manufacturer": "i-PRO",
+  "model": "WV-S71300-F3",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://i-pro.com/products_and_solutions/sites/default/files/2023-12/WV-S71300-F3%20_%20i-PRO%20US_R2_231204.pdf",
+  "confidence": "high",
+  "notes": "Compact indoor mini box network camera (2MP/1080p), not rack-mountable — rackUnits omitted. Two independent power paths exist: PoE via the RJ45 jack, or 5V/1.5A via USB-C; only one is needed. Official manufacturer spec sheet lists no separate video output, alarm I/O, or analog audio jacks — audio in is via two built-in omnidirectional microphones (not an external port) and there is no audio output. A microSD card slot (up to 512GB) is present for onboard storage but is not a signal/power connector type covered by the requested connector list, so it was omitted. Product page indicates this exact model (WV-S71300-F3) is discontinued, superseded by WV-S71300A-F3; specs above are for the originally requested F3 model per its own manufacturer datasheet (rev. 231204). Datasheet PDF filename: \"WV-S71300-F3 _ i-PRO US_R2_231204.pdf\", confirming this is the authoritative US spec sheet from i-pro.com.",
+  "ports": [
+    {
+      "name": "Network (RJ45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10Base-T/100Base-TX; also carries PoE (IEEE 802.3af, Class 0 device, DC48V 170mA ~8.2W) to power the camera."
+    },
+    {
+      "name": "DC IN (USB Type-C)",
+      "direction": "input",
+      "connector": "usb-c",
+      "grade": "usb-2.0",
+      "note": "DC5V/1.5A (~7.5W) power input; USB Power Delivery not supported. Datasheet separately lists a USB2.0 (480Mbps theoretical) serial interface, believed to be this same connector."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "manufacturer": "EditShare",
+  "model": "EFS 200",
+  "category": "network",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "https://go.editshare.com/hubfs/%5BPDF%5D%20Datasheets/ds-EFS-200-HPE-APR-2021.pdf",
+  "confidence": "low",
+  "notes": "IMPORTANT CAVEAT: exhaustive research (EditShare's own site search, Google/Bing/DuckDuckGo, B&H) found zero evidence that a product literally named \"EFS 200Nx\" exists. EditShare's real, currently/formerly sold shared-storage line uses names like EFS 200, EFS 210 (current successor), EFS 300/310, EFS 410, EFS 40NL/60NL (nearline), and the Ultimate EFS series — none use an \"Nx\" suffix. What is returned here is the closest verified real EditShare product, EFS 200 (predecessor to today's EFS 210), sourced from EditShare's official datasheet at https://editshare.com/ds-efs200/ (redirects to the PDF above). Treat \"model\" as a best-effort substitution, not a confirmed match to \"200Nx\" — please double-check the exact model name with the requester.\n\nEFS 200 is a 2U rack-mount scale-out shared-storage server for media production (24TB per node, up to 360TB in a 3-node cluster), built on an HPE ProLiant DL380 Gen10 chassis. Datasheet-confirmed physical I/O: 4x included 1GbE RJ45 ports, plus redundant hot-swappable AC power supplies (100-240VAC, 500W typical). Optional add-in NICs (10GBASE-T, 10GbE SFP+, 10/25G SFP28, 40/50/100G QSFP28) and an optional SAS HBA (for direct LTO tape library connection) are available but not part of the base physical port set, so they were omitted from the ports list. The PSU connector is listed as \"iec\" (C13/C14) by inference from the standard HPE DL380 Gen10 500W hot-plug supply — EditShare's datasheet doesn't spell out the exact IEC variant, so this is not fully confirmed. The chassis (being a standard HPE DL380 Gen10) almost certainly also has a dedicated iLO management RJ45 port, rear USB 3.0 ports, and possibly a VGA port, visible in the datasheet's rear-panel photo but not itemized in the spec text, so they were left out rather than guessed. No \"grade\" was set on the power ports per instructions. Category/type: EditShare storage servers don't map cleanly onto the given category/type enums (no \"storage\" option exists); category was set to \"network\" and type to \"Other\" as the closest fits — flag this to the requester if a better-fitting taxonomy exists.",
+  "ports": [
+    {
+      "name": "1GbE LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1GbE LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1GbE LAN 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "1GbE LAN 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Power Supply 1 (AC In)",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Power Supply 2 (AC In)",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

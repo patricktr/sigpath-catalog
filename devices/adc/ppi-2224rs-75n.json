@@ -1,0 +1,36 @@
+{
+  "manufacturer": "ADC",
+  "model": "PPI-2224RS-75N",
+  "category": "other",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "http://www.misterpatchbay.com/patchbays/adc-2ru-ppi2224rs-video-patchbay.html",
+  "confidence": "medium",
+  "notes": "Legacy ADC (later TE Connectivity/CommScope) 19\", 2RU passive video patch bay: two rows of 24 = 48 points (96 physical jacks total: 48 front + 48 rear), all 75Ω coax for analog composite/component or SDI signals. No manufacturer/current CommScope product page could be located (line is discontinued); best available spec source is the specialist patchbay reseller Mr. Patchbay, cross-checked against several other secondary listings (eBay, GRCC Online Store, eRecycler) that consistently describe: 19\" 2RU steel chassis, 48-point, SJ2000N-75 front jacks, BNC rear, 75Ω termination, and Normal-through wiring (the trailing \"N\" in the part number; the same chassis without \"N\" — \"PPI-2224RS\" — ships Non-Normal/isolated). This is a fully passive component with no power connector. Ports are summarized as 4 representative 24-jack groups (front row A/B, rear row A/B) rather than 96 near-identical individual entries; each physical jack is a plain bidirectional 75Ω BNC-type coax path with no bandwidth grade published (sources variously cite suitability from analog baseband up through 292M HD-SDI, but no single authoritative bandwidth spec was found, so \"grade\" was left unset rather than guessed). Front jacks are ADC's proprietary reduced-size \"Superjack\" (SJ2000N-75), which is physically smaller than a standard BNC and needs matching mini/midsize patch cords — connector id \"bnc\" was used as the closest match since no dedicated midsize-video-jack id exists in the allowed list.",
+  "ports": [
+    {
+      "name": "Front Jacks 1-24 (Row A)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Represents 24 identical front-panel ADC SJ2000N-75 'Super Video Jacks' — a proprietary reduced-size (RS/midsize) 75Ω coax video jack, not a literal full-size BNC; mapped to the closest listed connector id. Normal-through (the '-75N' suffix) wiring internally bridges each front jack to its corresponding rear BNC jack until a patch cord is inserted."
+    },
+    {
+      "name": "Front Jacks 25-48 (Row B)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Represents 24 identical front-panel ADC SJ2000N-75 'Super Video Jacks' (reduced-size midsize jack, closest connector id used); normalled to rear BNC row B."
+    },
+    {
+      "name": "Rear Jacks 1-24 (Row A)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Represents 24 identical rear-panel BNC field-wiring connectors (75Ω), permanently normalled to front Row A."
+    },
+    {
+      "name": "Rear Jacks 25-48 (Row B)",
+      "direction": "bidirectional",
+      "connector": "bnc",
+      "note": "Represents 24 identical rear-panel BNC field-wiring connectors (75Ω), permanently normalled to front Row B."
+    }
+  ]
+}

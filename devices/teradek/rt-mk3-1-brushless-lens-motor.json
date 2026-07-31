@@ -1,0 +1,16 @@
+{
+  "manufacturer": "Teradek",
+  "model": "RT MK3.1 Brushless Lens Motor",
+  "category": "control",
+  "sourceUrl": "https://web.archive.org/web/20220629092845/https://teradek.com/collections/all/products/mk3-1-lens-motor",
+  "confidence": "medium",
+  "notes": "Product is discontinued and no longer listed on Teradek's live site (superseded by the MOTR-S / MOTR-S Max line); sourced via Wayback Machine capture of Teradek's own product page (SKU 15-0025, techSpecs2 JSON block), so it is authoritative manufacturer data even though not currently live — hence \"medium\" rather than \"high\" confidence. The motor has exactly one physical connector (no separate power jack); the motor cable itself is sold separately and not included. Other specs from the same source: operating voltage 7-17V DC, power draw <1W idle / 40W peak, operating temp -20C to 50C, max speed 3.0 rev/s, standard gear 0.8 Mod (0.4/0.5/0.6/0.8-wide also available), all-aluminum construction, dimensions 4.5 x 1.6 x 1 in (115 x 40 x 26 mm), weight 7.5 oz (212 g), mounts to 15/19mm rods. No bandwidth-graded ports present (not SDI/HDMI/DP/USB/Ethernet), so no grade was set. B&H Photo (bhphotovideo.com) confirms the same \"4-Pin Hirose\" connector convention on the related MK3.1 accessory cables (e.g. \"RT MK3.1 Motor Cable,\" \"4-Pin Hirose to D-Tap\"), corroborating the connector type, though B&H no longer sells the motor itself as a standalone SKU (accessories only).",
+  "ports": [
+    {
+      "name": "Motor Connector (Power/Data)",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "Real connector is a locking 4-pin Hirose (0B series, \"1x 0B.4\" per Teradek's own spec sheet), not a true XLR shell — chosen as the closest available connector id. Carries DC power (7–17V, <1W idle / 40W peak) from, and motor control/position data to and from, the MK3.1 Receiver via the separately-sold Motor Cable (11-1391)."
+    }
+  ]
+}

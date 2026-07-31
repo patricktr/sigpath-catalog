@@ -1,0 +1,170 @@
+{
+  "manufacturer": "Roland",
+  "model": "FANTOM-8",
+  "category": "audio",
+  "sourceUrl": "https://www.roland.com/us/products/fantom_8/specifications/",
+  "confidence": "medium",
+  "notes": "88-key hammer-action synthesizer/sampler workstation with built-in 16x3 audio/MIDI USB interface; no single category/type in the provided enum fits \"synthesizer workstation\" so category was set to \"audio\" and type omitted. Source is Roland's own current FANTOM-8 specifications page; the currently-shipping \"FANTOM-8 EX\" is confirmed (via Roland's fantom_8_ex product/spec pages and third-party coverage) to share identical rear-panel hardware I/O with the original FANTOM-8 — EX is a content/engine upgrade only. Caveats/inferences: (1) Roland's spec table does not state balanced vs. unbalanced for the 1/4\" phone jacks (Main/Sub/Analog Filter Out); a MusicRadar review states these are \"standard unbalanced connections,\" so they were mapped to ts-6.35 rather than trs-6.35. (2) CV Out / Gate Out jack size is not stated on Roland's page; these are commonly documented elsewhere as 1/8\" mini jacks, mapped to the nearest available enum value trs-3.5, though electrically they are unbalanced mono TS control-voltage jacks, not stereo TRS audio — treat this port's connector as a low-confidence best fit. (3) Foot Pedal jacks (Hold, Ctrl1-3) are assumed 1/4\" TRS per standard Roland convention for assignable pedal jacks; not explicitly typed in the spec table. (4) AC inlet type: Roland lists \"Power Cord\" as a separate included accessory (implying a detachable IEC cord rather than captive), but does not specify C13/C14; mapped to \"iec\". (5) No grade set on USB Computer port — Roland does not state USB 2.0 vs. higher speed. (6) No Ethernet/LAN port exists on this model. Mic/Line Input 1-2 are combo XLR/TRS jacks.",
+  "ports": [
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Main Out L/MONO",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Main Out R",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Main Out L (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Main Out R (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Sub Out 1 L",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Sub Out 1 R",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Sub Out 2 L",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Sub Out 2 R",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Analog Filter Out 1",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Analog Filter Out 2",
+      "direction": "output",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Mic/Line Input 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "Mic/Line Input 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ]
+    },
+    {
+      "name": "CV Out 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "control-voltage out; exact jack size not stated by manufacturer, inferred 1/8\" mini jack; electrically unbalanced (TS), not TRS audio"
+    },
+    {
+      "name": "CV Out 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "control-voltage out; exact jack size not stated by manufacturer, inferred 1/8\" mini jack; electrically unbalanced (TS), not TRS audio"
+    },
+    {
+      "name": "Gate Out 1",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "exact jack size not stated by manufacturer, inferred 1/8\" mini jack; electrically unbalanced (TS)"
+    },
+    {
+      "name": "Gate Out 2",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "exact jack size not stated by manufacturer, inferred 1/8\" mini jack; electrically unbalanced (TS)"
+    },
+    {
+      "name": "Foot Pedal (Hold)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Foot Pedal (Ctrl 1)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Foot Pedal (Ctrl 2)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Foot Pedal (Ctrl 3)",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out 1",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out 2/Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB Memory",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "USB Computer (Audio/MIDI)",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    },
+    {
+      "name": "External Device 1",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "External Device 2",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "External Device 3",
+      "direction": "bidirectional",
+      "connector": "usb-a"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

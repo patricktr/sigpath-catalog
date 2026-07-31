@@ -1,0 +1,89 @@
+{
+  "manufacturer": "QNAP",
+  "model": "TVS-h1288X",
+  "category": "other",
+  "type": "Computer",
+  "sourceUrl": "https://www.qnap.com/en-us/product/tvs-h1288x/specs/hardware",
+  "confidence": "high",
+  "notes": "This is a desktop-tower NAS/server (Xeon W-1250, ZFS-based QuTS hero OS), not a traditional AV device — category/type mapped to the closest available enum values (\"other\" / \"Computer\"). Desktop tower form factor, not rack-mountable, so rackUnits omitted. Audio input/output jacks (mic in, line/speaker out) are listed in the spec sheet but explicitly marked \"No longer available on units manufactured on or after 2021/1/1\" — since current-production units lack them, they are omitted from the port list (flag if an older/refurb unit is in hand). Thunderbolt 3 (up to 4 ports) is available only via optional QXP-T32P PCIe add-in cards (sold separately, occupying the PCIe x4 slots) — not built-in, so omitted here. 5GbE and 25GbE are likewise optional via adapter cards and omitted. The AC power inlet connector type is not explicitly spelled out on the spec sheet (just \"550W PSU, 100~240V\"); connector is inferred as a standard IEC C13/C14 (kettle-cord) inlet, typical of this class of internal ATX-style desktop PSU — flagged as inferred, hence not \"high\" on that one item. PCIe slots (3x) and M.2 NVMe slots (2x) are internal expansion, not exterior I/O, so excluded from the port list per the physical-I/O scope of this task.",
+  "ports": [
+    {
+      "name": "10GBASE-T LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "10GBASE-T LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "2.5GbE LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g"
+    },
+    {
+      "name": "2.5GbE LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g"
+    },
+    {
+      "name": "2.5GbE LAN 3",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g"
+    },
+    {
+      "name": "2.5GbE LAN 4",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-2.5g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 Type-C 1",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 Type-C 2",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 Type-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 Type-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.2 Gen 2 Type-A 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "HDMI Output",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "550W internal PSU, 100-240V; exact inlet connector (C13/C14) inferred, not explicitly stated on QNAP spec sheet"
+    }
+  ]
+}

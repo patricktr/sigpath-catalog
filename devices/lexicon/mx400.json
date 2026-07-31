@@ -1,0 +1,98 @@
+{
+  "manufacturer": "Lexicon",
+  "model": "MX400",
+  "category": "audio",
+  "type": "DSP",
+  "rackUnits": 1,
+  "sourceUrl": "https://lexiconpro.com/en-US/product_documents/mx400_datasheetpdf",
+  "confidence": "high",
+  "notes": "Sourced from the official Lexicon (Harman) MX400 datasheet PDF (P/N 18-0459/18-0336), linked from lexiconpro.com — the manufacturer's own product-documents page. All four analog inputs and outputs are 1/4\" TRS, individually switchable balanced/unbalanced (labeled Input/Output A Left, A Right, B Left, B Right on the rear panel). Digital I/O is \"Dual S/PDIF\" — 2 RCA inputs (A/B) and 2 RCA outputs (A/B) — no grade applies since S/PDIF isn't in the gradable connector families. USB is USB 1.0 Full Speed; the grade enum has no sub-2.0 value so grade was omitted rather than mis-tagged. Rear-panel USB connector type wasn't explicitly stated as \"Type B\" in the datasheet text — inferred from the photo/typical era hardware; treat as medium-confidence on that one field only. A balanced-I/O variant, the MX400XL, exists with XLR inputs/outputs instead of TRS — this record covers the base MX400. Rack size 19\" x 1.75\" x 7.25\" (1U) confirmed. Footswitch jack is a plain 1/4\" TS control jack, not graded audio.",
+  "ports": [
+    {
+      "name": "Analog Input A Left",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Input A Right",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Input B Left",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Input B Right",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Output A Left",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Output A Right",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Output B Left",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Analog Output B Right",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "S/PDIF In A",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF In B",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out A",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "S/PDIF Out B",
+      "direction": "output",
+      "connector": "rca"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "USB 1.0 (device/hardware-plug-in port for MX-Edit and VST/AU control); not covered by any grade in the allowed enum, so grade omitted"
+    },
+    {
+      "name": "Footswitch",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "AC Power",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

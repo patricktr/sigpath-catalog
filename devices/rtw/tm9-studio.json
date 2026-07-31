@@ -1,0 +1,64 @@
+{
+  "manufacturer": "RTW",
+  "model": "TM9-Studio",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://www.rtw.com/touchmonitor-tm7-and-tm9",
+  "confidence": "medium",
+  "notes": "Manufacturer's combined TM7/TM9 product page (RTW GmbH & Co. KG, rtw.com) is the authoritative source, fetched over verified HTTPS. The TM9 (\"TouchMonitor TM9\") is a 9\" 16:9 touchscreen audio meter/analyzer (loudness, PPM, TruePeak, surround, RTA, etc.) for post-production/broadcast, sold as several fixed I/O-panel variants rather than one config: TM9-RAV (32ch Ravenna/AES67/ST2110 via dual RJ-45), TM9-Dante (32ch Dante via dual RJ-45), TM9-Studio (HW20911: 8 balanced analog in + 8ch AES3 I/O, both via 25p D-Sub), TM9-AES16 / TM9-BNC (16ch AES3(id) I/O via D-Sub or BNC), plus a Custom option; a raw OEM chassis and separate rack-mount kit also exist. I selected TM9-Studio (the \"Studio\" application model, hardware code HW20911) as the representative configuration since it is RTW's baseline audio-production variant; the RAV/Dante/AES16/BNC variants swap only the audio-panel ports and were not modeled here. Common ports across all variants (VGA out, RJ-45 Ethernet, 2x USB 2.0, GPIO, 12-24V DC in via locking Binder 710 connector) were confirmed directly from the source. The connector enum provided has no generic 25-pin D-Sub audio entry, so D-Sub analog/AES3 breakout ports were mapped to their nearest connector family (xlr3 for analog, aes3 for AES3) with explanatory notes; the exact GPIO connector shape is not published by RTW and was guessed at low confidence. No rack-unit size applies - this is a desktop unit (a separate rack-mount kit, TM7-MA3U class, is sold as an accessory but its own dimensions were not on this page). Power is via an external 100-240V AC to 12-24V DC supply (accessory 1178-R); the TM9 itself only exposes the DC input jack, no AC inlet.",
+  "ports": [
+    {
+      "name": "VGA Out",
+      "direction": "output",
+      "connector": "vga"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "LAN/control; speed not stated by manufacturer, grade omitted"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "euroblock",
+      "note": "Manufacturer lists a 'GPIO port' but does not specify its physical connector; euroblock/terminal-block chosen as a low-confidence closest guess"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "Actual connector is a locking Binder series 710 12-24V DC connector, not a plain barrel jack; dc-barrel is the closest listed category. Powered via external supply (accessory 1178-R, 100-240V AC to 24V DC) - unit has no internal AC inlet"
+    },
+    {
+      "name": "Analog In 1-8 (25p D-Sub)",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "8 balanced analog inputs on one 25-pin female D-Sub connector, breaks out to 8x XLR-F via optional snake cable; the connector list has no generic D-Sub audio entry so xlr3 (the balanced-audio connector family it breaks out to) was chosen as closest"
+    },
+    {
+      "name": "AES3 Digital In (25p D-Sub)",
+      "direction": "input",
+      "connector": "aes3",
+      "note": "4 AES3 pairs (8 channels) on one 25-pin female D-Sub, breaks out to 4x XLR-F via optional snake cable"
+    },
+    {
+      "name": "AES3 Digital Out (25p D-Sub)",
+      "direction": "output",
+      "connector": "aes3",
+      "note": "4 AES3 pairs (8 channels) on the same D-Sub shell, breaks out to 4x XLR-M via optional snake cable"
+    }
+  ]
+}

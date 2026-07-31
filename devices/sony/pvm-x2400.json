@@ -1,0 +1,125 @@
+{
+  "manufacturer": "Sony",
+  "model": "PVM-X2400",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://www.markertek.com/product/sny-pvm-x2400/sony-pvm-x2400-trimaster-24-inch-4k-hdr-professional-lcd-video-monitor-with-quad-view-support",
+  "confidence": "medium",
+  "notes": "Sony's own manufacturer pages (pro.sony, all regional variants tried) returned HTTP 403 to automated fetch and could not be used directly. Data was compiled primarily from the Markertek spec table (used as sourceUrl) and cross-checked against AbelCine, CBM-Cine, and AlteredImages retailer listings plus the official PVM-X2400 Operating Instructions manual (via ManualsLib), all of which agree on the core I/O. Key caveats: (1) SDI I/O is 4 in / 4 out, with only 2 of the 4 in each direction rated to 12G-SDI (the other 2 are 3G/HD-SDI only) — modeled accordingly. (2) A separate 1x BNC \"Enhanced Monitor Output\" exists for a processed/LUT-baked or down-converted feed (some optional features require a paid firmware license: PVML-HSX1, PVML-SCX1, PVML-TDX1). (3) AC IN connector type (IEC) is inferred from the included AC cord + plug-retention-clip accessory rather than an explicit \"IEC C13/C14\" spec string — treat as medium confidence. (4) DC IN is confirmed by 3+ independent sources as a 3-pin XLR (not the more common 4-pin XLR seen on other Sony broadcast monitors) — mapped to the \"xlr3\" connector id since no DC-specific 3-pin XLR id exists in the allowed list. (5) Confirmed absent on this model across all sources: HDMI output, genlock/reference input, RS-232C.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/6G/3G/HD-SDI capable"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/6G/3G/HD-SDI capable"
+    },
+    {
+      "name": "SDI In 3",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI only"
+    },
+    {
+      "name": "SDI In 4",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI only"
+    },
+    {
+      "name": "SDI Out 1",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/6G/3G/HD-SDI capable"
+    },
+    {
+      "name": "SDI Out 2",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "12G/6G/3G/HD-SDI capable"
+    },
+    {
+      "name": "SDI Out 3",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI only"
+    },
+    {
+      "name": "SDI Out 4",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "3G/HD-SDI only"
+    },
+    {
+      "name": "Enhanced Monitor Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Processed/LUT-baked SDI output (12G/6G/3G/HD-SDI); down-convert/color-convert output requires optional firmware license"
+    },
+    {
+      "name": "HDMI In",
+      "direction": "input",
+      "connector": "hdmi",
+      "grade": "hdmi-1.4",
+      "note": "HDCP 2.3/1.4 capable; no HDMI output on this model"
+    },
+    {
+      "name": "Parallel Remote",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "8-pin RJ-45 shell carrying fixed parallel tally/channel-select contacts, not Ethernet data — grade omitted"
+    },
+    {
+      "name": "Serial Remote (LAN)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10BASE-T/100BASE-TX"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front-panel USB 2.0 host port for loading 3D LUT files and monitor setup data"
+    },
+    {
+      "name": "Audio Monitor Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack"
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Stereo mini jack"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240 VAC, 50/60 Hz, 2.6-1.0 A (approx. 225 W max); connector type inferred as standard IEC inlet from included AC cord + plug-retention clip accessory, exact C13/C14 variant not explicitly stated in sources found"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "3-pin XLR (male), DC 22-32 V, for field/battery power — carries DC power, not audio; no xlr3-dc id exists in the connector list so xlr3 is the closest match"
+    }
+  ]
+}

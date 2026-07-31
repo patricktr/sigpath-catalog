@@ -1,0 +1,96 @@
+{
+  "manufacturer": "TVLogic",
+  "model": "LVM-171A",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://tvlogic.tv/New/M_Spec.asp?sidx=81",
+  "confidence": "medium",
+  "notes": "Primary spec data (video I/O, power rating, display specs) confirmed on TVLogic's own site (tvlogic.tv/New/M_Spec.asp?sidx=81) and cross-checked against TVLogic's own product brochure PDF (hosted by UK distributor thameside.tv), both agreeing: Input = 1x DVI-I, 1x BNC composite, 2x BNC 3G/HD/SD-SDI (A/B), 1x HDMI; Output = 1x BNC composite, 1x BNC 3G/HD/SD-SDI. Power: DC 12V (or 24V) / AC 100-240V 50/60Hz, 60W. Desktop unit with stand (445 x 264 x 78.4mm body); rack mount is an optional accessory, not native, so rackUnits omitted. Details for RS-422, LAN, Audio, USB, and the DC-input pinout (pins 1/2 GND, 3/4 +12/+24V) come from a third-party AI-generated extraction of the TVLogic operation manual hosted on ManualsLib (manualslib.com/manual/3843720/Tvlogic-Lvm-171a.html) — not one of the preferred authoritative sources, and its extraction was internally inconsistent (one pass omitted the DVI-I port that the manufacturer's own materials confirm exists), so treat those specific connector labels/types as medium-to-low confidence pending direct manual verification. B&H's product page (a preferred retailer source) returned HTTP 403 and could not be used; bis-tv.com's spec PDF failed TLS certificate verification and was not fetched per policy. No dedicated physical TALLY connector was found — tally appears to be controlled via the RS-422/LAN control ports rather than a discrete jack. HDMI and LAN bandwidth grades were not stated by the manufacturer and are therefore omitted rather than inferred.",
+  "ports": [
+    {
+      "name": "CVBS IN",
+      "direction": "input",
+      "connector": "bnc",
+      "note": "Composite analog video input"
+    },
+    {
+      "name": "CVBS OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "note": "Composite analog video loop-through output"
+    },
+    {
+      "name": "SDI-A IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI-B IN",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI OUT",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Active through-out of SDI A/B"
+    },
+    {
+      "name": "HDMI",
+      "direction": "input",
+      "connector": "hdmi",
+      "note": "Version/bandwidth not stated by manufacturer; supports up to 1080p"
+    },
+    {
+      "name": "DVI-I",
+      "direction": "input",
+      "connector": "dvi",
+      "note": "DVI-I combo input; confirmed on manufacturer spec page and brochure, not independently confirmed in third-party manual excerpt"
+    },
+    {
+      "name": "RS-422 IN/OUT",
+      "direction": "bidirectional",
+      "connector": "rs422",
+      "note": "RJ-45 shell; TVLogic proprietary or TSL protocol for UMD/tally control"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Ethernet control (TVLogic Observer software); speed grade not stated"
+    },
+    {
+      "name": "Audio IN",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Analog stereo; connector size inferred from \"phone jack\" description"
+    },
+    {
+      "name": "Audio OUT",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Analog stereo phone jack"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Front-panel port for firmware update via USB memory stick"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "100-240V AC 50/60Hz; exact IEC inlet variant (C13/C14) not explicitly documented"
+    },
+    {
+      "name": "DC 12V/24V IN",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "Manual states 4-pin DC socket, pins 1/2 = GND, pins 3/4 = +12V/+24V, consistent with a 4-pin XLR-style DC connector; exact shell type not photographed in sources reviewed"
+    }
+  ]
+}

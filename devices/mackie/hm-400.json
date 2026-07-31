@@ -1,0 +1,146 @@
+{
+  "manufacturer": "Mackie",
+  "model": "HM-400",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://mackie.com/en/products/audio-tools/hm-series/HM_400.html",
+  "confidence": "high",
+  "notes": "Sourced from Mackie's official product page (mackie.com) and the official HM Series Headphone Amplifiers Owner's Manual PDF (linked from that page: https://mackie.com/img/file_resources/HM%20Series%20Headphone%20Amplifiers_OM.pdf, Part No. SWI227 Rev. B, ©2025 LOUD Audio). 19\" 1U rackmount 4-channel headphone amp with 12 total headphone outputs (4 front, 1 per channel; 8 rear, 2 per channel — all 1/4\" TRS). Rear Main In L/R and Main Out L/R are combo XLR3/TRS jacks (choose one connector type, not both at once); Main In XLR is female, Main Out XLR is male. Front panel also has one extra 1/4\" main input jack per the manual's body text (pages 5 and 9), though it is not one of the manual's explicitly numbered front-panel callouts — flagged here as a minor ambiguity. Aux inputs are 1 per channel (front panel only), 1/4\", spec'd as unbalanced. No graded connectors present (pure analog audio + power), so no \"grade\" fields were set. Sibling products in the same family: HM-4 (4 headphone outs, no aux, 1/4\" TS main I/O only) and HM-800 (8-channel, 16 headphone outs, dual main ins/outs, no XLR — 1/4\" only).",
+  "ports": [
+    {
+      "name": "Main In L",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Rear panel; combo jack — balanced XLR3 (female) or balanced/unbalanced 1/4\" TRS. Use one or the other, not both simultaneously."
+    },
+    {
+      "name": "Main In R",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Rear panel; combo jack — balanced XLR3 (female) or balanced/unbalanced 1/4\" TRS."
+    },
+    {
+      "name": "Main In (Front Panel)",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Additional 1/4\" main input jack on far-left of front panel, per Owner's Manual text (not a separately numbered front-panel callout in the manual's diagram)."
+    },
+    {
+      "name": "Main Out L",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Rear panel; combo jack — balanced XLR3 (male, for sending to another unit) or balanced/unbalanced 1/4\" TRS."
+    },
+    {
+      "name": "Main Out R",
+      "direction": "output",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Rear panel; combo jack — balanced XLR3 (male) or balanced/unbalanced 1/4\" TRS."
+    },
+    {
+      "name": "Aux In 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Front panel, channel 1. Spec sheet lists Aux Input Impedance as unbalanced; jack carries stereo aux-send signal blended with Main via the channel Balance knob."
+    },
+    {
+      "name": "Aux In 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Front panel, channel 2."
+    },
+    {
+      "name": "Aux In 3",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Front panel, channel 3."
+    },
+    {
+      "name": "Aux In 4",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Front panel, channel 4."
+    },
+    {
+      "name": "Headphone Out 1 (Front)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front panel, channel 1. Tip=Left, Ring=Right, Sleeve=common ground."
+    },
+    {
+      "name": "Headphone Out 2 (Front)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 3 (Front)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 4 (Front)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 1 (Rear A)",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear panel; two jacks per channel (parallel), channel 1."
+    },
+    {
+      "name": "Headphone Out 1 (Rear B)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 2 (Rear A)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 2 (Rear B)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 3 (Rear A)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 3 (Rear B)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 4 (Rear A)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Headphone Out 4 (Rear B)",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "3-pin IEC power inlet, 10A. Rear-panel voltage-selector switch for 100-120V or 220-240V, 50/60Hz, 24W."
+    }
+  ]
+}

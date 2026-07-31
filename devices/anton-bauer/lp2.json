@@ -1,0 +1,35 @@
+{
+  "manufacturer": "Anton/Bauer",
+  "model": "LP2",
+  "category": "power",
+  "type": "Other",
+  "sourceUrl": "https://www.antonbauer.com/wp-content/uploads/2023/07/ab_lp_performancecharger_manual-4.pdf",
+  "confidence": "medium",
+  "notes": "The LP2 (Anton/Bauer part 8475-0125, \"LP2 Dual Gold Mount Charger\") is the 2-position Gold Mount member of the LP Performance Series; a V-Mount variant (LP2 VM, 8475-0127) and 4-position siblings (LP4 GM 8475-0126, LP4 VM 8475-0128) also exist and share this manual/spec sheet. Desktop/tabletop unit — not rack-mountable (7.2 x 9 x 3.6 in / 18.3 x 22.9 x 9.1 cm, 3 lb / 1.36 kg), so rackUnits is omitted. It is WiFi-enabled for fleet management (no wired network port). No SDI/HDMI/DisplayPort/Ethernet/graded-USB ports exist on this device, so no \"grade\" fields apply. Listed as a discontinued product in some catalogs, but the manufacturer's product page, one-sheet PDF, and user-guide PDF remain live on antonbauer.com as of research date. Confidence set to medium because (a) the AC inlet's exact IEC sub-type is inferred from a diagram icon rather than stated in text, and (b) the two Gold Mount battery bays are a proprietary mechanical/electrical interface with no exact match in the given connector taxonomy — approximated as dc-barrel per the \"choose the closest and note it\" instruction.",
+  "ports": [
+    {
+      "name": "AC Mains Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Rear-panel AC inlet, wide-range 100-240VAC 50/60Hz per manual's Technical Specifications page; exact IEC sub-type (C13/C14) inferred from the inlet's illustrated shape, not stated as text in the manual."
+    },
+    {
+      "name": "Mini USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Rear-panel port used solely for firmware updates. Manual explicitly calls it 'Mini USB' (Mini-USB Type-B), a physically different connector from Micro-USB; the provided connector taxonomy has no mini-USB id, so usb-micro was chosen as the closest available match."
+    },
+    {
+      "name": "Gold Mount Battery Bay 1",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "One of two Gold Mount charging bays on the LP2 (Dual). This is Anton/Bauer's proprietary spring-loaded Gold Mount interface (DC power + comms contacts for battery fuel-gauge/priority-charging data), not a literal DC barrel jack; mapped to the closest listed connector id since no dedicated battery-mount id exists in the taxonomy."
+    },
+    {
+      "name": "Gold Mount Battery Bay 2",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Second of two Gold Mount charging bays; same proprietary Gold Mount spring-contact interface as Bay 1, mapped to dc-barrel as the closest available connector id."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "manufacturer": "Focusrite",
+  "model": "Vocaster Two",
+  "category": "audio",
+  "type": "Audio interface",
+  "sourceUrl": "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/vocaster_two_user_guide_v2_en_0.pdf",
+  "confidence": "high",
+  "notes": "Sourced from Focusrite's own Vocaster Two User Guide v2.0 (official PDF), which includes a dedicated \"Vocaster Two specifications\" section (Performance specifications + Physical and electrical characteristics) — this is the most authoritative source available. The unit is entirely USB-C bus-powered; there is no separate AC/DC power port. It also has Bluetooth 5.0 (omitted here — not a physical port). The phone jack is a true 3.5mm TRRS (bidirectional) and the camera jack is a 3.5mm TRS (output only); both were mapped to the catalog's \"trs-3.5\" id since no TRRS id exists. USB grade (usb-5g) is taken directly from the manufacturer's stated \"USB 3.0\" version field, though real-world bandwidth needs of this class-compliant audio device are far below 5Gbps. Desktop unit — not rack-mountable, so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Host",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Rear-panel microphone input, balanced female XLR, 48V phantom power switchable"
+    },
+    {
+      "name": "Guest",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Rear-panel microphone input, balanced female XLR, 48V phantom power switchable"
+    },
+    {
+      "name": "Host",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone output, 1/4\" TRS"
+    },
+    {
+      "name": "Guest",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel headphone output, 1/4\" TRS"
+    },
+    {
+      "name": "Outputs L",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear-panel balanced monitor speaker output, 1/4\" TRS"
+    },
+    {
+      "name": "Outputs R",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Rear-panel balanced monitor speaker output, 1/4\" TRS"
+    },
+    {
+      "name": "Camera Output",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Rear-panel 3.5mm TRS jack (camera-icon symbol, not text-labeled) for feeding a video camera's external audio input"
+    },
+    {
+      "name": "Phone In/Out",
+      "direction": "bidirectional",
+      "connector": "trs-3.5",
+      "note": "Rear-panel 3.5mm TRRS jack (phone-icon symbol) carrying both send and return audio to a wired phone; no TRRS id exists in the catalog so mapped to the closest 3.5mm connector, trs-3.5"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-5g",
+      "note": "Connection to computer/iPad; also sole power source (bus-powered, max 0.9A/5V/4.5W) — no separate power input exists. Manufacturer spec table lists 'USB 3.0' which is graded here as usb-5g (SuperSpeed)."
+    }
+  ]
+}

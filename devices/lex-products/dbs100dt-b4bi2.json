@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Lex Products",
+  "model": "DBS100DT-B4BI2",
+  "category": "power",
+  "type": "PDU",
+  "sourceUrl": "https://lexproducts.com/powerhouse_detail?part=DBS100DT-B4BI2",
+  "confidence": "high",
+  "notes": "Source: Lex Products' own product detail page (powerhouse_detail?part=DBS100DT-B4BI2), titled \"300 Amp Pagoda Jr.™ Motion Picture Box\" — the \"300A\" in the marketing name reflects combined output capacity across the 3 stage-pin legs (3 x 100A), while the unit's actual branch/service rating is 100A, 120/208Y VAC, 3-phase, 60Hz, NEMA Type 1 (indoor only), cULus listed. Portable molded-rubber \"Pagoda Jr.\" lunchbox enclosure (11.38\"L x 11.38\"W x 11.32\"H, 24.0 lbs) — not rack-mountable, so rackUnits is omitted. Overcurrent protection: 3x 100A hydraulic-magnetic breakers (stage pin legs) + 3x 20A hydraulic-magnetic breakers (Edison legs), all under a hinged lid. None of the device's actual connectors (16-Series Cam-type/Camlok input pins, Stage Pin/Bates outputs, NEMA 5-20 Edison outputs) have an exact id in the allowed connector enum, so each was mapped to its closest listed proxy (see per-port notes) — this is the main source of residual uncertainty, not the underlying spec data itself, which came directly from the manufacturer.",
+  "ports": [
+    {
+      "name": "Input (3-Phase Cam)",
+      "direction": "input",
+      "connector": "banana",
+      "note": "Real connector: (1) set of 5x 16-Series single-pole Cam-type (Camlok) pins on 1.5ft pigtails, 400A/600V-rated pins, wired L1/L2/L3/N/G for 100A/120-208Y VAC 3-phase service. No cam-lock id exists in the allowed list; 'banana' chosen as the closest single-pole friction-pin proxy, not a literal banana plug."
+    },
+    {
+      "name": "Stage Pin Out 1",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Real connector: Stage Pin (Bates) receptacle, 2-pole+ground, 100A/250VAC, individual round twist/friction pins. No matching id in the allowed list; 'banana' used as closest single round-pin proxy."
+    },
+    {
+      "name": "Stage Pin Out 2",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Real connector: Stage Pin (Bates) receptacle, 2-pole+ground, 100A/250VAC. Proxied to 'banana' (closest single round-pin connector in the allowed list)."
+    },
+    {
+      "name": "Stage Pin Out 3",
+      "direction": "output",
+      "connector": "banana",
+      "note": "Real connector: Stage Pin (Bates) receptacle, 2-pole+ground, 100A/250VAC. Proxied to 'banana' (closest single round-pin connector in the allowed list)."
+    },
+    {
+      "name": "Edison Out 1",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Real connector: NEMA 5-20 (Edison) straight-blade receptacle, 20A/125VAC. The allowed list has no 5-20 id; mapped to the closest household blade-connector id, 'nema-5-15'."
+    },
+    {
+      "name": "Edison Out 2",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Real connector: NEMA 5-20 (Edison) straight-blade receptacle, 20A/125VAC. Proxied to 'nema-5-15' (closest enum id; actual is 5-20)."
+    },
+    {
+      "name": "Edison Out 3",
+      "direction": "output",
+      "connector": "nema-5-15",
+      "note": "Real connector: NEMA 5-20 (Edison) straight-blade receptacle, 20A/125VAC. Proxied to 'nema-5-15' (closest enum id; actual is 5-20)."
+    }
+  ]
+}

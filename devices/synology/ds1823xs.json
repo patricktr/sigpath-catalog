@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Synology",
+  "model": "DS1823xs+",
+  "category": "network",
+  "sourceUrl": "https://www.synology.com/en-us/products/DS1823xs+",
+  "confidence": "medium",
+  "notes": "Desktop 8-bay NAS (166 x 343 x 243 mm, 6.2 kg) — not rack-mountable, so rackUnits omitted. Data drawn from Synology's official product/spec page (fetched via WebFetch, HTTPS verified). Two items omitted from physical I/O as they are internal expansion slots rather than external ports: 1x PCIe Gen3 x8 slot (x4 link) for optional add-in cards, and 2x internal M.2 2280 NVMe SSD slots for cache/storage. A Kensington security slot and reset button are also present but are not signal/power connectors. The eSATA ports (x2) have no matching connector id in the allowed list; mapped to usb-a as the closest analog per instructions, with no speed grade applied since eSATA does not follow the USB grade scale — flagged for reviewer attention. Management LAN port speed (1GbE) is inferred/typical rather than explicitly stated on the spec page, so treat as medium-confidence on that single sub-detail even though overall source confidence is high.",
+  "ports": [
+    {
+      "name": "LAN 1",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN 2",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "LAN 3 (10GBASE-T)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g"
+    },
+    {
+      "name": "Management Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "Out-of-band management LAN port; Synology's spec page does not state its link speed explicitly — 1GbE assumed based on typical out-of-band management port speed on this chassis."
+    },
+    {
+      "name": "USB 3.2 Gen 1 - 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 - 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.2 Gen 1 - 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "eSATA Expansion Port 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Actual connector is eSATA (for DX517 expansion units), which is not in the allowed connector list; usb-a chosen as the closest-shaped rectangular data connector. No bandwidth grade set since the usb-* grade scale does not apply to eSATA."
+    },
+    {
+      "name": "eSATA Expansion Port 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Same approximation as Expansion Port 1 — true connector is eSATA, not USB-A."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "250W internal power supply, non-redundant (single PSU); 100–240V AC, 50/60Hz. Standard IEC inlet (C13/C14 style) per manufacturer chassis convention for this desktop series."
+    }
+  ]
+}

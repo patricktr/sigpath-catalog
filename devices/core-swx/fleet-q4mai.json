@@ -1,0 +1,53 @@
+{
+  "manufacturer": "Core SWX",
+  "model": "FLEET-Q4MAi",
+  "category": "power",
+  "type": "Other",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1475089-REG/core_swx_fleet_q4ai_four_position_3_stud_fast.html/specs",
+  "confidence": "medium",
+  "notes": "Core SWX FLEET-Q4MAi is a 4-position, 3-stud Gold Mount Li-Ion battery charger with Voltbridge Bluetooth wireless management (charge status, SafeFly mode). Simultaneous 3A charging, ~2.5hr for four 98Wh packs; up to 2A/channel discharge. Aluminum housing, 9.1 x 3.4 x 12.2in, 5lb — desktop unit, not rack-mountable (rackUnits omitted).\n\nSourcing: the manufacturer's current site (coreswx.com, now on Shopify) no longer lists this exact SKU — searches for \"fleet-q4mai\" and \"fleet\" return only current-generation products (Fleet Mini, Fleet Micro, Mach4 Micro Quad), and the legacy coreswx.com/product/... WordPress URLs 404, so this model appears discontinued/superseded by the manufacturer but is still sold by multiple authorized retailers. Used B&H Photo's dedicated \"Specs\" tab (explicit Input/Output Connectors table) as the primary source for connector data — cross-checked against Markertek's page, which is titled exactly \"FLEET-Q4MAi\" and gives matching dimensions (9.1 x 3.35 x 12.17in), weight (5lb), input voltage (90-240VAC), charge current (3A simultaneous) and discharge current (up to 2A/channel), confirming both pages describe the same physical product. One naming wrinkle: B&H's page (same 4-bay, Gold-Mount, Voltbridge-wireless variant) lists MFR# \"FLEET-Q4AI\" rather than \"FLEET-Q4MAi\" — treated as the same SKU given identical specs across sources, but flagged here since it wasn't a byte-for-byte model-number match.\n\nCaveats:\n- The 4 Gold Mount battery bays have no matching connector type in the allowed enum (nearest available option, dc-barrel, was used purely as a generic DC-power placeholder — physically these are spring-contact plate connectors, not barrel jacks).\n- AC input connector type (captive cord vs. IEC inlet) is inferred, not explicitly stated by any source checked.\n- An optional \"Hypercine module\" adds a second output (unregulated 12-16.8V 4-pin XLR plus regulated 28V 3-pin XLR) per Markertek's product description; this is an add-on accessory, not confirmed as a standard built-in port on the base unit, so it was not included in the ports list.\n- \"type\" field was set to \"Other\" since none of the provided device-type options (charger/battery-management device) fit well.",
+  "ports": [
+    {
+      "name": "Battery Bay 1 (Gold Mount)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "3-stud spring-contact Gold Mount battery charging interface. No connector in the allowed list matches a Gold Mount plate; 'dc-barrel' chosen only as the nearest generic DC-power catch-all. Bay also draws from the seated battery when the unit is used in Hypercine power-bank mode."
+    },
+    {
+      "name": "Battery Bay 2 (Gold Mount)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Same Gold Mount interface as Bay 1; connector mapping is an approximation (see Bay 1 note)."
+    },
+    {
+      "name": "Battery Bay 3 (Gold Mount)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Same Gold Mount interface as Bay 1; connector mapping is an approximation (see Bay 1 note)."
+    },
+    {
+      "name": "Battery Bay 4 (Gold Mount)",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Same Gold Mount interface as Bay 1; connector mapping is an approximation (see Bay 1 note)."
+    },
+    {
+      "name": "Power Output (Hypercine Mode)",
+      "direction": "output",
+      "connector": "xlr4-dc",
+      "note": "90W DC output, 12–16.8VDC unregulated, sourced from the installed Gold Mount batteries to power cameras/equipment directly."
+    },
+    {
+      "name": "Management (Micro-USB)",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "Rear-panel port for computer-based battery/unit management and firmware updates. USB signaling version not stated by source, so no grade set."
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Universal 90–240VAC 50/60Hz input. Source did not explicitly state cord/inlet type; B&H's connector spec list omits an AC entry entirely (only Micro-USB and 4-Pin XLR are listed as 'Input/Output Connectors'), and product copy mentions needing a separate plug adapter for other regions rather than a swappable IEC cord — both point to a captive AC cord, so nema-5-15 (captive-cord category) was chosen as the closest match. Treat as inferred/low-confidence for this specific port."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Telos Alliance",
+  "model": "VX Prime+",
+  "category": "audio",
+  "type": "Audio interface",
+  "rackUnits": 1,
+  "sourceUrl": "https://telosalliance-uat.s3.amazonaws.com/public/Telos+Products/VX+Enterprise/Manual/Telos+VX+PrimePLUS_Enterprise_Manual_C24217050.pdf",
+  "confidence": "high",
+  "notes": "VX Prime+ is Telos Alliance's entry-tier (8-hybrid) VoIP \"talkshow\" telephone-hybrid engine for broadcast studios; it shares an identical 1U rear-panel hardware platform with the VX Enterprise (differing only in licensed hybrid/fader capacity: 8 vs up to 120). Specs and rear-panel port list (page 18) and Specifications appendix (pages 71-73) were taken from Telos Alliance's own official \"VX Enterprise and VX Prime+ User's Manual,\" v1.4, July 2024 (hosted on a Telos Alliance-owned S3 bucket, fetched over verified HTTPS). Official product landing page: https://www.telosalliance.com/Telos/VX-Prime-Plus (marked \"legacy\" but still the current listing; lacks a full port-level spec table, hence the manual PDF was used as the primary source).\n\nImportant: the VX Engine itself carries NO direct analog or AES3 audio I/O — all studio audio is Livewire+/AES67 over the LAN Ethernet port. Physical analog/AES3 audio breakout is done via separate Telos Alliance \"xNode\" appliances (not part of this device), so no analog/AES audio ports are listed here. Dimensions confirmed as 1.75\"H x 19\"W x 15.5\"D (1RU). RS-232, IPMI, USB, and VGA ports are all explicitly documented by Telos as development/diagnostic/factory-only, not for end-user use, but are physically present per the manual's rear-panel diagram — their connector types beyond RS-232's obvious DB9-style serial and VGA's DB15 are reasonably standard assumptions; IPMI and USB connector types are inferred (flagged individually) since the manual's rear-panel photo is too low-resolution to positively confirm each labeled point (A-G) against its numbered description.",
+  "ports": [
+    {
+      "name": "AC Power In 1",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "AC Power In 2",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Dual hot-swappable, redundant, internal auto-ranging supplies, 90-132/187-264 VAC 50/60Hz, IEC receptacle with internal fuse; system power consumption 150W (rear-panel silkscreen references 400W OEM supply modules, but rated system draw per Specifications is 150W)"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100/1000BASE-T; carries Livewire+/AES67 AoIP studio audio, PoE-fed VSet controllers, and system control traffic"
+    },
+    {
+      "name": "WAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "100/1000BASE-T; connects to SIP/ISP telephony network or local PBX, isolated from LAN multicast, disabled by default"
+    },
+    {
+      "name": "RS-232",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Manual states 'for development and diagnostic purposes only'"
+    },
+    {
+      "name": "IPMI Control Port",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Manual states 'a connection for development purposes only'; connector type inferred as RJ-45 (standard dedicated IPMI management LAN on this 1U server platform) since the manual does not explicitly state the connector"
+    },
+    {
+      "name": "USB Ports",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Rear-panel legend labels these 'USB Ports' but the accompanying text unusually calls them 'serial ports used for development and factory production only'; exact port count and USB revision are not stated, so connector type/count are a best-effort inference from the low-resolution rear-panel diagram"
+    },
+    {
+      "name": "VGA",
+      "direction": "output",
+      "connector": "vga",
+      "note": "Manual states 'used for development and diagnostic purposes only'"
+    }
+  ]
+}

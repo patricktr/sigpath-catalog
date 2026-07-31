@@ -1,0 +1,17 @@
+{
+  "manufacturer": "Anton/Bauer",
+  "model": "Dionic HC",
+  "category": "power",
+  "type": "Other",
+  "sourceUrl": "https://xinetix.de/sites/default/files/antonbauer_dionichc_manual_13-03-25.pdf",
+  "confidence": "medium",
+  "notes": "Discontinued Li-Ion camera battery (Gold Mount format), superseded by the Dionic 26V / Dionic XT lines — no longer listed on antonbauer.com. Specs pulled from Anton/Bauer's own Owner's Manual (doc # A7595-0365 Rev B), mirrored on a third-party site since the manufacturer's live product page no longer exists; cross-verified against B&H Photo's cached listing (BH# ANDHC, MFR# DIONIC HC), which independently confirms 91Wh Peak (83Wh typical), 14.4 VDC, 10A. Manual specs: Output voltage 14.4V nominal (12.4–16.8V operating range); Capacity 91Wh typical; Internal fuse 10A; Recommended continuous draw 50–100W (150W max/peak discharge rate); Weight 1.75 lbs; Size 5.46 x 4.06 x 2.34 in. Only physical I/O is the single Gold Mount output interface — this battery predates Anton/Bauer's later D-Tap/USB-equipped models, so no auxiliary power-out ports are present. No grade applies (analog/proprietary DC power, not a graded connector class).",
+  "ports": [
+    {
+      "name": "Gold Mount Output",
+      "direction": "output",
+      "connector": "dc-barrel",
+      "note": "Actual connector is Anton/Bauer's proprietary Gold Mount spring-contact power interface (14.4V nominal DC to camera/accessories) — not a literal coaxial DC barrel jack. Chosen as closest id from the allowed connector list since no proprietary battery-mount option exists."
+    }
+  ]
+}

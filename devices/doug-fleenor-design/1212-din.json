@@ -1,0 +1,84 @@
+{
+  "manufacturer": "Doug Fleenor Design",
+  "model": "1212-DIN",
+  "category": "control",
+  "type": "Other",
+  "sourceUrl": "https://www.dfd.com/pdf/1212-data.pdf",
+  "confidence": "high",
+  "notes": "1212-DIN is a 1-input, 12-output DMX512/RDM isolated splitter/distribution amplifier for DIN-rail mounting (2\"H x 4.25\"D x 6\"W, 10 oz). Two other SKUs exist with identical electronics but different enclosures: 1212-DIN-JBOX (installed in a NEMA 1 junction box) and 1212-DIN-JBOX-PS (junction box plus bundled PSDIN-30W-24V power supply) — this spec reflects the base bare 1212-DIN DIN-rail unit. All signal and power connectors are pluggable screw-type Phoenix terminal blocks (modeled here as \"euroblock\"/\"euroblock-dc\"), not XLR — this is a permanent-install/rack-room device, not a stage-cabled unit. No connector on this device carries a versioned bandwidth grade (DMX512 is a fixed-rate protocol), so no \"grade\" values were set. Exact per-terminal silkscreen numbering for the 12 outputs could not be confirmed from the extracted datasheet text (only that they total 12 across three 12-position terminal blocks); everything else (input isolation, power range/wattage, connector style, LED indicators, environmental/mounting specs) is directly quoted from Doug Fleenor Design's official technical data sheet.",
+  "ports": [
+    {
+      "name": "DMX/RDM Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "3-position pluggable Phoenix terminal block; fully opto-isolated to 1500V. The splitter is RDM-capable and bi-directional overall, so RDM responses from fixtures return to the console over this same terminal block; primary signal flow is console-to-splitter."
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 7",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 8",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 9",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 10",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 11",
+      "direction": "output",
+      "connector": "euroblock"
+    },
+    {
+      "name": "Output 12",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "The 12 outputs are wired across three 12-position pluggable Phoenix terminal blocks (4 output circuits x 3 pins per block, DMX+/DMX-/common); each is separately driven but not isolated from one another. Datasheet text does not confirm the exact silkscreen numbering scheme, so 1-12 labeling here is inferred from the '12 output' product description."
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "2-position pluggable Phoenix terminal block. Accepts 9-24 VDC, 10W low-voltage DC. Panel is silkscreened '24 VDC 10W' near the terminal in product photos. DFD's optional matched external supply is model PSDIN-30W-24V (24VDC output); user-supplied DC power is also acceptable."
+    }
+  ]
+}

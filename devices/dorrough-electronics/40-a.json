@@ -1,0 +1,30 @@
+{
+  "manufacturer": "Dorrough Electronics",
+  "model": "40-A",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "https://www.manualslib.com/manual/825902/Dorrough-40-A.html",
+  "confidence": "medium",
+  "notes": "Manufacturer site (dorrough.com) presented an invalid TLS certificate (matches *.bizland.com, not dorrough.com) and was unusable per HTTPS-verification requirement. No modern retailer (B&H, Sweetwater, Markertek, Full Compass) spec page for this exact legacy model was fetchable (403s / no matching product). Specs instead come from the original Dorrough Electronics \"Model 40-A\" Instruction Manual, hosted on ManualsLib (a legitimate manual-archive host) and cross-checked against a matching scan on SteamPoweredRadio.com. Per that manual: rear panel has only a single \"terminal strip\" per channel with L+/L-, R+/R- screw terminals (mapped here to the closest allowed id, \"euroblock\" — it is a fixed barrier-strip terminal block, not a pluggable Euroblock/Phoenix connector, but functionally the same screw-terminal style) and a recessed captive AC cord (mapped to nema-5-15 per the \"US captive cord/inlet\" rule). No audio output connector is documented — the 40-A is a passive bridging input meter only, with no loop-through or output jack. No RJ45/DIN/relay connector exists on this base 40-A (that mini 8-pin DIN alarm/relay port and XLR inputs belong to the later, distinct \"40-A2\" model — do not conflate the two). rackUnits (2 / \"2U\") reflects the optional single-meter rack adapter panel (part 40A-S, 19in x 3.5in); the base 40-A ships panel-mount/caseless in several body configurations, not inherently rack-eared. Power line voltage is stated as 110VAC in this manual revision; later units/export variants may differ. No bandwidth-graded connectors are present, so no \"grade\" values were set.",
+  "ports": [
+    {
+      "name": "L Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced bridging L+/L- audio input on rear barrier terminal strip (20kΩ balanced / 10kΩ unbalanced); also doubles as the mono input"
+    },
+    {
+      "name": "R Input",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "Balanced bridging R+/R- audio input on rear barrier terminal strip (20kΩ balanced / 10kΩ unbalanced)"
+    },
+    {
+      "name": "AC Cord",
+      "direction": "input",
+      "connector": "nema-5-15",
+      "note": "Recessed, non-detachable (captive) AC line cord; 110VAC nominal per this manual revision"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Amulet Hotkey",
+  "model": "DXZC",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://www.amulethotkey.com/resources/library/dxzc-datasheet/",
+  "confidence": "high",
+  "notes": "Amulet Hotkey DXZC is a Teradici Tera2321 PCoIP zero client (remote-desktop endpoint, not a general-purpose PC) — closest catalog fit used is category \"source\" / type \"Computer\"; treat as approximate classification since no dedicated \"zero client\" type exists in the taxonomy. Specs drawn from the manufacturer's own datasheet content (Datasheet DS-DXZC-0001 v2.8, Apr 2018, published by Amulet Hotkey Ltd, mirrored by a distributor as the manufacturer's live datasheet PDF was not directly retrievable over plain HTTPS fetch) and cross-verified against Amulet Hotkey's own current product photography (files DXZC_front*.png / DXZC_rear*.png, uploaded Dec 2025 to www.amulethotkey.com/wp-content/uploads/2025/12/), which show identical, clearly silkscreen-labeled ports: NETWORK, VIDEO (x2), USB (x2 rear + x2 front), LINE OUT, POWER on the rear, and MIC, HEADSET (H/PHONES), USB (x2) on the front. Port count/labels match the datasheet's stated \"2 x DisplayPort (dual mode)\", \"4 x USB 2.0\", \"Stereo headset/headphones, stereo line out, stereo mic (3.5mm)\", and \"Single RJ45: 10/100/1000BaseT\" for the base DXZC model. DisplayPort version/generation is not stated in the source, so no grade was set (omitted per instructions). This spec is for the base \"DXZC\" model with RJ45; sibling variants DXZC-M and DXZC-AM replace the RJ45 network port with an SFP cage (copper or fiber module, 1Gbit/s or 1Mbit/s) — not modeled here since the user asked specifically about \"DXZC\". Device is a small desktop unit (30 x 176 x 133 mm, 0.6 kg) — not rack-mountable, so rackUnits is omitted. Power connector is visually a small locking multi-pin DIN-style circular jack (confirmed via close-up of the manufacturer photo) rather than a plain cylindrical barrel jack; \"dc-barrel\" was used as the closest available connector id in the given list.",
+  "ports": [
+    {
+      "name": "Network",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "Video 1",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "Video 2",
+      "direction": "output",
+      "connector": "dp"
+    },
+    {
+      "name": "USB 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel"
+    },
+    {
+      "name": "USB 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Rear panel; stereo line-level output"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "DC power inlet; physically a locking multi-pin DIN-style circular connector, not a plain barrel jack — dc-barrel chosen as closest listed id. Supplied with external PSU + cord."
+    },
+    {
+      "name": "Mic",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Front panel"
+    },
+    {
+      "name": "Headset (H/Phones)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front panel stereo headphone output"
+    },
+    {
+      "name": "USB 3",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel"
+    },
+    {
+      "name": "USB 4",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Front panel"
+    }
+  ]
+}

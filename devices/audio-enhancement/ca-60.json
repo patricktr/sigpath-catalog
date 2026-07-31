@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Audio Enhancement",
+  "model": "CA-60",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://audioenhancement.com/wp-content/uploads/2018/06/2017-CA-60-Spec-Sheet-print-XD.pdf",
+  "confidence": "medium",
+  "notes": "Manufacturer spec sheet (PDF, DC-40547.01 XD, dated 2017/2018) for the Audio Enhancement CA-60 classroom mixer/amplifier. 50W Class-D output, 3-band EQ (Bass/Mid/Treble), Eco Mode, PA voice override. Compact non-rack unit: 7.5(H) x 4(W) x 1.5(D) in, 1.65 lbs — rackUnits omitted as it is not rack-mountable (mounts on media carts, behind whiteboards, in cabinetry/ceiling). No bandwidth-graded connectors are present (all analog audio/power/proprietary), so no 'grade' fields were set. Connector physical types for the three line inputs and two line outputs were inferred from the spec-sheet diagrams (small circular 1/8in jacks) rather than stated explicitly as '3.5mm/TRS' in the text — this is the main source of medium (not high) confidence. The RJ45 'XD Receiver' port is a proprietary audio+power link to Audio Enhancement's wireless mic receiver, not a standard data/Ethernet port, so it carries no eth-* grade. The speaker output and DC power input are green pluggable terminal blocks; euroblock/euroblock-dc are the closest connector-list matches. This CA-60 appears to be a discontinued/legacy model (Audio Enhancement's current lineup markets its successor, the CA-70, with an integrated XD receiver) — the PDF is still hosted live on the manufacturer's own site.",
+  "ports": [
+    {
+      "name": "Input 1",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Variable-gain line input (top/rear panel)"
+    },
+    {
+      "name": "Input 2",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Variable-gain line input (top/rear panel)"
+    },
+    {
+      "name": "Input 3",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Variable-gain line input; also exposed as a front-panel 'Line Input' jack, auto-switching between front and top-panel connector"
+    },
+    {
+      "name": "Line Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Front-panel variable-level line output; doubles as the assistive-listening-device (ALD) output jack"
+    },
+    {
+      "name": "Line Out (rear)",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "Rear/top-panel line-level output with its own level control, for daisy-chaining to another amp"
+    },
+    {
+      "name": "XD Receiver Input",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Proprietary RJ45 port for the XD wireless mic receiver; carries both audio and 24V DC power, not standard Ethernet data"
+    },
+    {
+      "name": "Speaker Output",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "2-channel pluggable screw-terminal block for direct speaker wire; closest catalog match to the green terminal connector shown, not a locking Speakon"
+    },
+    {
+      "name": "DC Power Input",
+      "direction": "input",
+      "connector": "euroblock-dc",
+      "note": "24 VDC input via 2-pin pluggable terminal block from an external 24VDC power supply"
+    }
+  ]
+}

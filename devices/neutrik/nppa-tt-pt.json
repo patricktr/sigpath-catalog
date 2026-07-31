@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Neutrik",
+  "model": "NPPA-TT-PT",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.neutrik.com/en/product/nppa-tt-pt",
+  "confidence": "high",
+  "notes": "Passive 1U 19in rack patch panel — the \"Easy Patch\" TT (Bantam) audio patch bay, front-loaded with 96 NJ3TTA gold-plated Bantam/TT jacks (2 rows x 48), no power input (fully passive). Rear termination is NOT a standard connector: it uses 288 spring-loaded solderless push-terminals (screwdriver-actuated, gas-tight, accepts 18-20AWG wire) for tip/ring/sleeve per channel — this doesn't map to any connector id in the provided list, so it is omitted as a \"port\" rather than misassigned; described here instead. Bantam/TT jacks are physically smaller than standard 1/4in (6.35mm) TRS phone jacks but share the same 2-pole tip/ring/sleeve wiring topology, so trs-6.35 was used as the closest available connector id for the two jack rows (represented as aggregate 48-jack rows rather than 96 individual port entries, matching how the manual itself labels the panel by row). Ships in one of five normalling configurations (half-normalled top, half-normalled bottom [this \"-PT\" push-terminal variant's default], full-normalled, parallel, isolated); individual jack pairs can be reconfigured in the field. Electrical spec: DC to >50MHz, AES/EBU digital audio compatible, >100dB channel separation @10kHz/600ohm. No grade fields apply since Bantam/TRS analog/AES3 audio has no bandwidth-tier scale in the provided grading list. Confidence is high for physical I/O (manufacturer product page + official PDF instruction manual both consulted), but note the connector-id approximation for Bantam/TT and the omission of the non-standard rear push-terminal interface.",
+  "ports": [
+    {
+      "name": "Top Row Bantam (TT) Jacks 1-48",
+      "direction": "bidirectional",
+      "connector": "trs-6.35",
+      "note": "96 total jacks (2x48 rows) of miniature Bantam/TT 2-pole (tip-ring) patch jacks — smaller than a standard 1/4in TRS but not in the connector list, so trs-6.35 used as the closest match. Passive patch points, half-normalled by default; no bandwidth grade applies (analog/AES3 digital audio, DC to >50MHz per spec, not USB/HDMI-style graded)."
+    },
+    {
+      "name": "Bottom Row Bantam (TT) Jacks 1-48",
+      "direction": "bidirectional",
+      "connector": "trs-6.35",
+      "note": "96 total jacks (2x48 rows); same Bantam/TT jack type as top row, mapped to trs-6.35 as closest listed connector."
+    }
+  ]
+}

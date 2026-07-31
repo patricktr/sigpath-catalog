@@ -1,0 +1,48 @@
+{
+  "manufacturer": "Bosch",
+  "model": "NDP-7512-Z30",
+  "category": "source",
+  "type": "Camera",
+  "sourceUrl": "https://www.alldataresource.com/assets/pdf_bosch/Bosch-NDP-7512-Z30CT-IP-Indoor-PTZ-Dome-Camera-Data-Sheet.pdf",
+  "confidence": "medium",
+  "notes": "This is the AUTODOME IP starlight 7000i series, a 30x optical zoom PTZ dome IP camera (2MP/1080p HD, H.265/H.264/M-JPEG, IVA analytics). Sourced from the official Bosch datasheet (© Bosch Security Systems 2022, doc 202203071642 V14, Bosch is now operating as Keenfinity Group for security/video products) as mirrored by alldataresource.com — Bosch's own site (boschsecurity.com/keenfinity-group.com) 404'd on direct product-page and PDF fetch attempts during this research, so the manufacturer PDF was retrieved via a reseller mirror instead; content is verified authentic Bosch datasheet text/tables, not third-party paraphrase. Ordering Information section on page 10 confirms NDP-7512-Z30 = \"PTZ 2MP HDR 30x clear IP66 pendant\" (base outdoor pendant variant, order number F.01U.352.678) — distinct from the -Z30C (in-ceiling), -Z30CT (in-ceiling tinted), and -Z30K (IK10-rated) SKUs also covered in the same datasheet. No on-device port labels/photos of the terminal strip were available, so audio/alarm/24VAC connector types are inferred as generic screw-terminal (euroblock) rather than confirmed — flagged per-port above. Network grade (100BASE-T, no Gigabit) is explicitly confirmed. A user-supplied full-size SD card slot exists for local recording but was omitted since no connector id in the allowed list represents an SD card slot. An optional fiber-optic SFP media-converter kit (VG4-SFPSCKT, LC/SC) is available as a separately-ordered accessory installed inside the power-supply box, not standard I/O, so it was excluded from the port list. Not rack-mountable (pendant/in-ceiling dome form factor), so rackUnits omitted.",
+  "ports": [
+    {
+      "name": "Network (PoE)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "Single RJ45 carries 10/100BASE-T Ethernet and PoE (IEEE 802.3at class 4, 30 W) simultaneously; can also power the camera without heaters."
+    },
+    {
+      "name": "24 VAC Power In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "24 VAC ±10%, 50/60 Hz terminal input inside the pendant power-supply box; used instead of, or redundantly alongside, PoE/midspan. Datasheet does not specify a discrete connector housing — closest match is a screw-terminal block."
+    },
+    {
+      "name": "Audio Line In",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "1x mono line-level input, 20 kOhm typical, 0.707 Vrms nominal. Connector style not explicitly pictured in the datasheet; approximated as terminal block since it shares the power-supply box wiring."
+    },
+    {
+      "name": "Audio Line Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "1x mono line-level output, 0.707 Vrms @ 16 Ohm typical. Connector style approximated as terminal block."
+    },
+    {
+      "name": "Alarm Inputs (7)",
+      "direction": "input",
+      "connector": "euroblock",
+      "note": "2 supervised + 5 non-supervised alarm inputs, terminal block."
+    },
+    {
+      "name": "Alarm Outputs (4)",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "1 dry-contact relay + 3 open-collector/transistor outputs, 32 VDC @ 150 mA max, terminal block."
+    }
+  ]
+}

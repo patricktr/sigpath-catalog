@@ -1,0 +1,91 @@
+{
+  "manufacturer": "HeadRush",
+  "model": "Pedalboard",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://cdn.inmusicbrands.com/HeadRush/pedalboard/v2_1_2-0520/Pedalboard-User-Guide-v2_1_2.pdf",
+  "confidence": "high",
+  "notes": "Sourced from the official HeadRush (inMusic Brands) Pedalboard User Guide v2.1.2, whose \"Rear Panel\" (p.5) and \"Technical Specifications\" (p.40) sections were read directly (PDF fetched via verified HTTPS from cdn.inmusicbrands.com, the manufacturer's own CDN; linked from headrushfx.com/support). Floor/desktop guitar & bass amp-and-effects modeling processor — not rack-mountable, so rackUnits omitted; no \"type\" enum value fits an amp/effects modeler precisely, \"DSP\" chosen as closest. Power input is a universal IEC C13/14 inlet (internal PSU, 100–240V 50/60Hz 1.2A) — no external adapter. USB port is Type-B and per headrushfx.com also functions as a 4-in/4-out USB audio interface at 24-bit/96kHz, but no USB spec version (2.0/etc.) is stated anywhere in official docs, so no \"grade\" was set. No connectors in this device are on a graded scale (no HDMI/SDI/DisplayPort/Ethernet), so no ports carry a grade field. Note: the manual's own Technical Specifications summary table (p.40) mislabels the FX-loop connectors' direction (calls the \"sends\" inputs and the \"returns\" outputs), which contradicts its own more detailed Rear Panel description (p.5, item 12–13) stating Send = pedalboard outputs and Return = pedalboard inputs; the detailed, internally-consistent description was used for direction. Two XLR outputs, two 1/4\" TRS outputs, and two 1/4\" TRS send/return pairs are stereo (L/Mono + R) pairs as labeled on the actual unit.",
+  "ports": [
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "Guitar Input",
+      "direction": "input",
+      "connector": "ts-6.35"
+    },
+    {
+      "name": "Expression Pedal Input",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Aux Input",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Output L/Mono (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output R (XLR)",
+      "direction": "output",
+      "connector": "xlr3"
+    },
+    {
+      "name": "Output L/Mono (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Output R (1/4\")",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Phones Output",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Send L/Mono",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Send R",
+      "direction": "output",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return L/Mono",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Return R",
+      "direction": "input",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "MIDI Input",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Output/Throughput",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB Port",
+      "direction": "bidirectional",
+      "connector": "usb-b"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "manufacturer": "Sequential",
+  "model": "Prophet-6",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://sequential.com/wp-content/uploads/2021/02/Prophet-6-Operation-Manual-2.1.pdf",
+  "confidence": "high",
+  "notes": "Researched the original Sequential Prophet-6 (49-key analog synthesizer, first released 2015 as Dave Smith Instruments, now sold under Sequential). Primary source: manufacturer's official Prophet-6 Operation Manual v2.1 (Feb 2021), \"Connections\" section pp.10-12, which numbers and describes each rear-panel jack (https://sequential.com/wp-content/uploads/2021/02/Prophet-6-Operation-Manual-2.1.pdf). Cross-checked against the manufacturer product page (https://sequential.com/product/prophet-6/). No HDMI/SDI/DisplayPort/USB-speed/Ethernet ports are present, so no \"grade\" fields apply per the connector table. The Prophet-6 Desktop module (DSI-1600) shares an identical I/O set per Sequential's own product copy, so this data applies to both the keyboard and desktop variants. Not rack-mountable (desktop/keyboard chassis), so rackUnits omitted. No connector type in the official taxonomy maps cleanly to \"musical instrument/synthesizer,\" so category was set to \"audio\" and type to \"Other\" as the closest fits. The two main outputs are unbalanced 1/4\" TS jacks per the manual's explicit \"Unbalanced, 1/4 inch audio outputs\" language; the two footswitch jacks are not explicitly labeled TS vs TRS in the manual text, but footswitch jacks of this kind are standard mono/TS — flagged here as a minor inference. USB physical connector shape (Type B) is inferred from typical rear-panel photos of this era of Sequential/DSI product, not stated verbatim in the manual text.",
+  "ports": [
+    {
+      "name": "AC Power Connector",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Grounded IEC inlet, 100-240V 50/60Hz, 30W max"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Bidirectional USB MIDI, class-compliant; physical connector shape (Type B) inferred from rear-panel photos, not explicitly stated as text in manual"
+    },
+    {
+      "name": "MIDI In",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Out",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI Thru",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "Footswitch-Sequence",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Momentary footswitch input to start/stop sequencer/arpeggiator, or accepts an audio signal for tempo sync/gating"
+    },
+    {
+      "name": "Footswitch-Sustain",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "Momentary footswitch input for sustain"
+    },
+    {
+      "name": "Expression Pedal-Volume",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "TRS expression pedal with variable resistor"
+    },
+    {
+      "name": "Expression Pedal-LP Filter",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "TRS expression pedal with variable resistor, controls LP filter cutoff"
+    },
+    {
+      "name": "Audio Out (Left/Mono)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4 in output"
+    },
+    {
+      "name": "Audio Out (Right)",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced 1/4 in output"
+    },
+    {
+      "name": "Headphones",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo headphone jack, level from front-panel Master Vol knob"
+    }
+  ]
+}

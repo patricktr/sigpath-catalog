@@ -1,0 +1,252 @@
+{
+  "manufacturer": "Whirlwind",
+  "model": "WLF482",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 2,
+  "sourceUrl": "https://cdn.prod.website-files.com/613104abac7808ea202ed3bb/695434c00ac1a30235b6badb_wlf482manual.pdf",
+  "confidence": "medium",
+  "notes": "WLF482 is a passive, unterminated 2RU \"longframe\" (full-size 1/4\") TRS patch bay with 48 jacks arranged in two rows of 24 (front-panel positions 1-24 top, 25-48 bottom), per the manufacturer's official installation drawing (whirlwindusa.com Support/Downloads page for WLF482, hosted on their Webflow CDN). The drawing's reference schematic labels each jack circuit S/R/T with normal contacts RN/TN, confirming standard half-normalled 1/4\" TRS wiring - hence connector trs-6.35 for all 48 front jacks (modeled as bidirectional, as is standard for patch-bay jacks). Being \"unterminated,\" the rear of the unit ships with no connectors at all - solder lugs/wire-wrap posts for the installer's own cabling - so no standard connector id applies there and rear terminals are omitted from the ports list. No power input; this is a fully passive panel. The drawing itself is an ADC Telecommunications OEM drawing (catalog # P-KIT-3-WW) supplied by Whirlwind for this rebadged product, which is why confidence is medium rather than high - it confirms mechanical/jack layout precisely but is not a marketing spec sheet with a jack-type sentence spelled out in prose. Retailer listings (Full Compass, Adorama, ProAudioSolutions) corroborate: \"Patch bay - longframe, 2 x 24, unterminated, 2 RU.\"",
+  "ports": [
+    {
+      "name": "Jack 1",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 2",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 3",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 4",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 5",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 6",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 7",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 8",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 9",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 10",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 11",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 12",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 13",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 14",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 15",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 16",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 17",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 18",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 19",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 20",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 21",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 22",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 23",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 24",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 25",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 26",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 27",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 28",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 29",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 30",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 31",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 32",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 33",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 34",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 35",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 36",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 37",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 38",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 39",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 40",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 41",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 42",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 43",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 44",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 45",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 46",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 47",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    },
+    {
+      "name": "Jack 48",
+      "direction": "bidirectional",
+      "connector": "trs-6.35"
+    }
+  ]
+}

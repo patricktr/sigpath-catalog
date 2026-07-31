@@ -1,0 +1,62 @@
+{
+  "manufacturer": "ClearCube",
+  "model": "CD5024",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://images.clearcube.com/wp-content/uploads/2025/05/07214243/DS-Zero-Clients-CD5022-24.pdf",
+  "confidence": "high",
+  "notes": "CD5024 is the Zero+ Client variant with an integrated PKI-approved CAC/smart card reader (CD5022 is the same unit without it) — the smart card slot itself is not included as a port since it's not a signal/power connector on the given list. Datasheet text lists \"Mic+Speaker 3.5mm\" as one spec line but the front-panel photo shows two separate icons/jacks (mic and speaker), so they are listed as separate input/output 3.5mm TRS jacks. One additional internal-only USB 2.0 port exists per the datasheet but is omitted here since it is not externally accessible. Desktop/VESA-mount unit, not rack-mountable (rackUnits omitted). Also cross-checked against the product page at https://clearcube.com/products/zero-clients/zero/zero-client-cd5022-24-zero-plus/, which corroborates all port counts.",
+  "ports": [
+    {
+      "name": "DisplayPort 1",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Dual-mode DisplayPort++ (DP0 on rear panel); accepts passive adapters for HDMI/DVI output"
+    },
+    {
+      "name": "DisplayPort 2",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2",
+      "note": "Dual-mode DisplayPort++ (DP1 on rear panel); accepts passive adapters for HDMI/DVI output"
+    },
+    {
+      "name": "USB 3.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g",
+      "note": "Front panel, qty 4"
+    },
+    {
+      "name": "USB 2.0",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "Rear panel, qty 2"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g",
+      "note": "1 x Copper 1Gbps network port"
+    },
+    {
+      "name": "Mic In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Speaker Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External power adapter, DC 19V/3A, max 12.8W consumption"
+    }
+  ]
+}

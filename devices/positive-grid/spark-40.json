@@ -1,0 +1,42 @@
+{
+  "manufacturer": "Positive Grid",
+  "model": "Spark 40",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://www.thomannmusic.com/positive_grid_spark_40_pw.htm",
+  "confidence": "medium",
+  "notes": "Positive Grid's own Help Center spec pages (help.positivegrid.com articles \"Technical Specification for Spark (40)\" and \"...Spark (40)'s Power Supply\") are the primary manufacturer source but returned HTTP 403 to direct fetch (Cloudflare bot protection); their content was cross-checked via search-engine snippets and matches the retailer data used here. Thomann's product page (a major reputable music/AV retailer) was successfully fetched directly and used as sourceUrl since it lists the same jack sizes (6.3mm input, two 3.5mm jacks, USB, power connector). Sweetwater's listing (fetch blocked, 403) corroborates DC 19V/2.5A. The Spark 40 also has Bluetooth 4.2 audio streaming, which is wireless and not listed as a physical port. USB connector type (USB-B) and speed grade (USB 2.0) are inferred from Positive Grid's own \"USB-A to USB-B Cable\" accessory product and third-party \"USB 2.0\" replacement cables sold specifically for this amp — no source explicitly states the port's USB version, hence medium confidence rather than high. No rack-mount option; this is a desktop/tabletop combo amp (rackUnits omitted). Category set to \"amplifier\"/\"Amplifier\" since it is a self-contained guitar combo amp with built-in speakers rather than a pure power amp, but no more specific category exists in the taxonomy provided.",
+  "ports": [
+    {
+      "name": "Guitar Input",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "1/4\" (6.3mm) unbalanced instrument input, front panel"
+    },
+    {
+      "name": "Aux In",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) stereo mini jack, rear panel; disables USB/Bluetooth audio playback when connected"
+    },
+    {
+      "name": "Headphones / Rec Out",
+      "direction": "output",
+      "connector": "trs-3.5",
+      "note": "1/8\" (3.5mm) stereo mini jack; mutes internal speakers when connected"
+    },
+    {
+      "name": "USB",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "grade": "usb-2.0",
+      "note": "Used for USB audio recording (class-compliant interface, 2 in x 2 out) and firmware updates; connector type and USB 2.0 speed inferred from Positive Grid's official USB-A-to-USB-B replacement cable and third-party USB 2.0 replacement cables, not stated explicitly on a spec sheet"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "19V/2.5A center-positive barrel, 5.5mm OD / 2.1mm ID, supplied external power adapter (100-240V mains input)"
+    }
+  ]
+}

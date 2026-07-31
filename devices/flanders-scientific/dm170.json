@@ -1,0 +1,79 @@
+{
+  "manufacturer": "Flanders Scientific",
+  "model": "DM170",
+  "category": "display",
+  "type": "Display",
+  "sourceUrl": "https://web.archive.org/web/20210302195333/https://flandersscientific.com/DM170/tech-specs.php",
+  "confidence": "high",
+  "notes": "Manufacturer's own DM170 tech-specs page no longer exists on the live flandersscientific.com (DM170 has been superseded in FSI's current lineup by models like DM160/DM211/DM231/DM242; live URL 404s), so sourced via the Wayback Machine's 2021-03-02 capture of that same manufacturer page — content and formatting confirm it is FSI's authentic spec sheet, not a reseller reproduction. Cross-checked against a Rentex-hosted FSI spec-sheet PDF (https://www.rentex.com/wp-content/uploads/2019/05/17-Flanders-Scientific-DM170-Spec-Sheet-from-Rentex-1.pdf) which agrees on all overlapping fields (screen size, bit depth, contrast, DC In \"4 PIN XLR\", AC In \"IEC/C14\", power draw, weight). SDI is confirmed 3Gbps/HD/SD-SDI (grade sdi-3g) for the 2 BNC inputs and the 2 BNC loop-through outputs; the 2 \"2nd Monitor Output\" BNCs are listed without a restated grade on the spec sheet, so sdi-3g is inferred there (noted per-port) rather than confirmed word-for-word. DVI-D input and DisplayPort input have no HDMI/DP version stated, so grade was omitted per instructions. A third-party listing (AV-iQ) additionally claims USB host/device ports and RS-232/RS-485 control, but these do NOT appear on FSI's own DM170 spec page, so they were excluded rather than guessed — flag this if USB/serial control ports are needed and cannot be confirmed elsewhere. Audio In/Out are 3.5mm mini-jack (mapped to trs-3.5) for disembedded SDI audio monitoring, not primary program audio I/O. rackUnits omitted: FSI ships DM170 with a \"Standard\" desktop stand and a \"Standard\" rack mount kit, but no rack-unit (U) height is published for this bench/utility monitor, so it reads as a desktop-primary unit here.",
+  "ports": [
+    {
+      "name": "SDI In 1",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI In 2",
+      "direction": "input",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "DVI-D In",
+      "direction": "input",
+      "connector": "dvi"
+    },
+    {
+      "name": "DisplayPort In",
+      "direction": "input",
+      "connector": "dp"
+    },
+    {
+      "name": "SDI Loop-Through Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Loop-Through Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "2nd Monitor Out 1",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Mirrors on-screen view; grade inferred to match the monitor's 3G-SDI I/O since the spec page does not restate it separately"
+    },
+    {
+      "name": "2nd Monitor Out 2",
+      "direction": "output",
+      "connector": "sdi",
+      "grade": "sdi-3g",
+      "note": "Mirrors on-screen view; grade inferred to match the monitor's 3G-SDI I/O since the spec page does not restate it separately"
+    },
+    {
+      "name": "Audio In",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AC In",
+      "direction": "input",
+      "connector": "iec"
+    },
+    {
+      "name": "DC In",
+      "direction": "input",
+      "connector": "xlr4-dc"
+    }
+  ]
+}

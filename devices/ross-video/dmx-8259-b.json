@@ -1,0 +1,71 @@
+{
+  "manufacturer": "Ross Video",
+  "model": "DMX-8259-B",
+  "category": "converter",
+  "type": "Converter",
+  "sourceUrl": "https://documentation.rossvideo.com/files/Manuals/Signal%20Processing/openGear/DMX_8259.pdf",
+  "confidence": "high",
+  "notes": "DMX-8259-B is Ross Video's openGear-format modular AES/EBU audio de-multiplexer/de-embedder card (110ohm balanced AES output variant, companion to the 75ohm-unbalanced DMX-8259-A and the analog DMX-8259-4C/-8C). It de-embeds up to 8 AES/EBU pairs (16 channels) from an SD/HD/3G-SDI signal. Data pulled from Ross Video's own DMX-8259 Series User Guide (v8-rev2, Oct 2026 rev, official PDF at documentation.rossvideo.com), which gives full connector/spec tables; cross-checked against the product page at https://www.rossvideo.com/products/signal-processing/opengear/audio-embedding/dmx-8259-b/. This is a card, not a standalone chassis: it requires an openGear frame (DFR-8310, DFR-8320, OG3-FR, or OGX-FR) plus a matching rear I/O module (8310AR-034 for DFR-8310 frames, or 8320AR-034/8320AR-034A for DFR-8320/OG3-FR/OGX-FR frames) - rackUnits omitted since the card itself isn't a rack-mount enclosure. Power (12W total) is drawn from the frame backplane, so no discrete power connector is listed. SDI in/out are BNC 75ohm supporting SD/HD/3G-SDI (SMPTE 259M/292M/424M); graded sdi-3g as the top supported rate, though a manual footnote notes 3G/HD SDI is not supported when the card is installed in the legacy DFR-8310 series frame. The 8 AES outputs use WECO-brand 3-pin pluggable screw-terminal blocks (+, -, ground per channel) rather than XLR or BNC; \"euroblock\" is the closest id in the allowed connector list. AES outputs are not graded (not in the graded connector scale list per spec).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g"
+    },
+    {
+      "name": "AES 1 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "110ohm balanced AES-3id; connector labeled as WECO 3-pin pluggable terminal block (+/-/gnd), closest listed id is euroblock"
+    },
+    {
+      "name": "AES 2 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 3 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 4 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 5 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 6 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 7 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    },
+    {
+      "name": "AES 8 Out",
+      "direction": "output",
+      "connector": "euroblock",
+      "note": "WECO 3-pin terminal block, closest listed id euroblock"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "model": "Audio Monitor 12G G3",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 1,
+  "sourceUrl": "https://www.blackmagicdesign.com/products/blackmagicaudiomonitor/techspecs",
+  "confidence": "high",
+  "notes": "Sourced from Blackmagic Design's official Tech Specs page for the current-generation \"Blackmagic Audio Monitor 12G G3\" (the model the manufacturer currently sells under the \"Audio Monitor 12G\" name; earlier non-G3 revisions existed but this is the authoritative current spec sheet, fetched via https://www.blackmagicdesign.com/products/blackmagicaudiomonitor/techspecs). All video/audio/network grades (12G-SDI, HDMI 2.0, 10G Ethernet) are explicitly confirmed in the spec text. The AC power inlet connector style (IEC C13/C14 vs other) is not spelled out in the text spec sheet -- it is inferred as a standard IEC inlet based on Blackmagic's typical 1RU product design; treat that one port as medium confidence. The 2 analog XLR inputs and 2 RCA HiFi inputs are listed as counts without individual per-jack labels on the rear panel silkscreen, so port names here are inferred/generic rather than verbatim panel labels. Device also has a 2.2\" built-in color LCD, front-panel LED meter bridge, and internal stereo speakers with dual subwoofers (not physical I/O ports, so omitted from the port list).",
+  "ports": [
+    {
+      "name": "SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Auto-switching SD/HD/3G/6G/12G-SDI"
+    },
+    {
+      "name": "SDI Out",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-12g",
+      "note": "Reclocked loop-through output of the SDI input"
+    },
+    {
+      "name": "HDMI Out",
+      "direction": "output",
+      "connector": "hdmi",
+      "grade": "hdmi-2.0",
+      "note": "For monitoring SDI/IP video source"
+    },
+    {
+      "name": "Analog Audio In 1",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog line input"
+    },
+    {
+      "name": "Analog Audio In 2",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced analog line input"
+    },
+    {
+      "name": "HiFi Audio In L",
+      "direction": "input",
+      "connector": "rca",
+      "note": "One of a stereo pair of unbalanced HiFi/consumer RCA inputs"
+    },
+    {
+      "name": "HiFi Audio In R",
+      "direction": "input",
+      "connector": "rca",
+      "note": "One of a stereo pair of unbalanced HiFi/consumer RCA inputs"
+    },
+    {
+      "name": "AES/EBU In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Single XLR carrying 2 channels of balanced 110-ohm AES/EBU digital audio"
+    },
+    {
+      "name": "Headphone Out",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "6.5mm headphone jack"
+    },
+    {
+      "name": "Ethernet",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-10g",
+      "note": "10G BASE-T; SMPTE-2110 IP video input, configuration and firmware updates"
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Computer interface for configuration and firmware updates; no data-rate grade published"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Internal 100-240V AC supply, 55W; exact inlet style (C13/C14) not stated in the spec sheet text, inferred from Blackmagic's standard 1RU design"
+    }
+  ]
+}

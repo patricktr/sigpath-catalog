@@ -1,0 +1,104 @@
+{
+  "manufacturer": "Dell",
+  "model": "OptiPlex 5070 Small Form Factor",
+  "category": "source",
+  "type": "Computer",
+  "sourceUrl": "https://doi-product-assets.s3.amazonaws.com/pub/User-Manual/1059926121.pdf",
+  "confidence": "high",
+  "notes": "Device identified as the Dell OptiPlex 5070 desktop PC (a computer, commonly used in AV/classroom/conference setups as a media source). Dell sells 5070 in three chassis variants — Tower, Small Form Factor (SFF), and Micro — with different port counts; ports above are for the SFF variant, taken from Dell's own official \"OptiPlex 5070 Small Form Factor Setup and Specifications\" manual (2019-06, Rev A00), External Ports and Connectors / Graphics-Video / Audio tables. Not included as standard (build-to-order/optional, so omitted from the port list): a 3rd rear video output (config-dependent — HDMI 2.0, additional DisplayPort, VGA, or USB-C w/ DisplayPort Alt Mode), an optional RS-232 serial port, an optional PS/2 port, and an optional front memory-card reader. AC power: SFF/Tower units use an internal desktop-style power supply; the document did not explicitly state the AC inlet connector or wattage, so \"iec\" (standard IEC C13/C14 kettle-cord inlet, typical for Dell OptiPlex desktop PSUs) and the \"AC Power In\" entry are inferred rather than directly confirmed — Dell community threads reference a stock PSU under 300W with 360W (L360EGM-00) as a common upgrade. Dell's own dell.com pages blocked automated/bot fetches (403/anti-bot \"Sorry\" page), so the manufacturer's official PDF was retrieved via a legitimate HTTPS document-hosting mirror (doi-product-assets S3 bucket) rather than dell.com directly; document content, branding, and regulatory model (D11S) confirm it is Dell's authentic official manual.",
+  "ports": [
+    {
+      "name": "Universal Audio Jack (Front)",
+      "direction": "bidirectional",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "USB 2.0 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 PowerShare (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.1 Gen 2 Type-C PowerShare (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "grade": "usb-10g"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (Front)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 2.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 2.0 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "USB 3.1 Gen 1 (Rear)",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-5g"
+    },
+    {
+      "name": "DisplayPort 1.2 (Rear)",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "DisplayPort 1.2 (Rear)",
+      "direction": "output",
+      "connector": "dp",
+      "grade": "dp-1.2"
+    },
+    {
+      "name": "Line-out (Rear)",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "Ethernet (RJ-45)",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-1g"
+    },
+    {
+      "name": "AC Power In",
+      "direction": "input",
+      "connector": "iec"
+    }
+  ]
+}

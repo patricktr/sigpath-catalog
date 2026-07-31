@@ -1,0 +1,35 @@
+{
+  "manufacturer": "ARRI",
+  "model": "Hi-5",
+  "category": "control",
+  "type": "Control processor",
+  "sourceUrl": "https://www.arri.com/en/cine-systems/electronic-control-system/hi-5",
+  "confidence": "medium",
+  "notes": "The ARRI Hi-5 is not a traditional AV source/display/switcher device — it is the 5th-generation wireless hand unit of ARRI's Electronic Control System (ECS), used for wireless multi-axis lens/focus pulling and camera control. It was mapped to category \"control\" / type \"Control processor\" as the closest fit in the required enum; \"Other\" would also be defensible. It is a handheld unit (not rack-mountable), so rackUnits is omitted. Primary power is the ARRI LBP-3500 battery pack (or NP-F550-compatible), not a fixed AC/DC inlet, so no dedicated power-input port (e.g. dc-barrel) was added — power can also come in via the USB-C port or the LBUS interface. A \"Radio Module Interface\" (proprietary bay for swappable RF-EMIP/RF-2400/RF-900 modules) was omitted from the ports list since it is a module bay, not a cable connector. Two of the four ports (LBUS, SERIAL) use ARRI's 4-pin Lemo connector, which has no matching id in the provided connector list; closest functional analogs (rs485, rs232) were substituted per instructions and flagged. No bandwidth-graded connectors (HDMI/SDI/USB-speed/Ethernet-speed) are present, so no \"grade\" fields were set. Manufacturer page had no separate downloadable spec-sheet PDF found; the product page's own \"Connectivity & Interfaces\" and \"Power Supply\" tables were used verbatim.",
+  "ports": [
+    {
+      "name": "LBUS",
+      "direction": "bidirectional",
+      "connector": "rs485",
+      "note": "Physical connector is a 4-pin Lemo (not in the allowed id list); LBUS is ARRI's proprietary serial data bus, electrically based on RS-485, so rs485 was chosen as the closest functional match. Also carries power to/from LBUS-powered devices (10.5-34V)."
+    },
+    {
+      "name": "SERIAL",
+      "direction": "bidirectional",
+      "connector": "rs232",
+      "note": "Physical connector is a 4-pin Lemo (not in the allowed id list). ARRI documents this port only as 'reserved for future use' with no protocol specified; rs232 chosen as a generic serial placeholder — unconfirmed."
+    },
+    {
+      "name": "USB-A",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "Used for lens-file exchange via integrated Bluetooth stick and the ECS Sync App. USB speed/version not stated by ARRI."
+    },
+    {
+      "name": "USB-C",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Used for software updates via flash drive, file transfer, and as an external power input. USB speed/version not stated by ARRI."
+    }
+  ]
+}

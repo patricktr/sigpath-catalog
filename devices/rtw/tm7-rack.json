@@ -1,0 +1,71 @@
+{
+  "manufacturer": "RTW",
+  "model": "TM7-Rack",
+  "category": "audio",
+  "type": "Other",
+  "rackUnits": 3,
+  "sourceUrl": "https://www.rtw.com/web/content/10456",
+  "confidence": "high",
+  "notes": "RTW TM7-Rack is the panel/rack-oriented variant of RTW's TouchMonitor TM7 series (7\" touchscreen audio/loudness/PPM meter with SDI de-embed capability), built on the bare \"20700OEM\" chassis (no table-top frame, no bundled power supply) fitted at the factory with the HW20714 audio interface: 8-channel AES3 digital I/O (4x25-pin Sub-D, transformer-balanced 110 ohm, sample rates 44.1/48/96 kHz) plus a 3G/HD/SD-SDI interface (2x BNC, In + Through, unbalanced 75 ohm) for embedded-audio de-embedding. Common to all TM7 hardware regardless of audio interface: VGA output, RJ-45 LAN (10/100), RJ-12 GPIO, 2x USB-A 2.0, and a 4-pin Binder-710 locking DC power inlet (12-24 V DC nominal). Category/type were set generically (\"audio\"/\"Other\") because the enum has no dedicated \"audio meter/loudness monitor\" type — it is not a mixer, amplifier, or DSP in the conventional sense but a metering/monitoring display device. rackUnits (3) reflects that a TM7-Rack is meant to occupy a 19\"/3U rack space, but a mounting kit (TM7-MA3U 19\"/3U adapter, or TM7-MAVID video-rack adapter) is sold separately — the bare unit's own footprint is a compact panel (~214 x 132 mm front, ~49mm deep chassis + adapter rails). Source: RTW \"TouchMonitor TM7 Series\" data sheet (08/2021 revision), fetched via https://www.rtw.com/web/content/10456 (linked from the official product page https://www.rtw.com/touchmonitor-tm7-and-tm9 → Downloads). All connector pin-outs (AES3 D-sub, SDI BNC, DC Binder-710, GPIO RJ-12, VGA, LAN) were confirmed against the datasheet's \"Pin Assignment\" page. No region/variant differences were noted for TM7-Rack specifically.",
+  "ports": [
+    {
+      "name": "3G-SDI In",
+      "direction": "input",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Unbalanced 75 ohm, 3G/HD/SD-SDI, permanently terminated with 75 ohm"
+    },
+    {
+      "name": "3G-SDI Through",
+      "direction": "output",
+      "connector": "bnc",
+      "grade": "sdi-3g",
+      "note": "Active loop-through / re-clocked copy of SDI In for daisy-chaining, not an independent source output"
+    },
+    {
+      "name": "AES3 I/O 1-4",
+      "direction": "bidirectional",
+      "connector": "aes3",
+      "note": "Physically a single 25-pin D-sub (Sub-D) breakout carrying 4 AES3 inputs + 4 AES3 outputs, transformer-balanced 110 ohm. No D-sub AES3 breakout id exists in the allowed connector list; 'aes3' used as closest match."
+    },
+    {
+      "name": "VGA Out",
+      "direction": "output",
+      "connector": "vga",
+      "note": "15-pin Sub-D, drives external 16:9 VGA monitor up to 800x480 @ 65,536 colors, 60 Hz; cable must not exceed 15 m"
+    },
+    {
+      "name": "LAN",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "grade": "eth-100m",
+      "note": "10/100 Mbit standard network connector"
+    },
+    {
+      "name": "GPIO",
+      "direction": "bidirectional",
+      "connector": "rj45",
+      "note": "Physically a 6-pin RJ-12 (6P6C) modular jack, not 8P8C RJ-45; mapped to 'rj45' as the closest available modular-jack id. 5 user-defined GPIO lines + GND."
+    },
+    {
+      "name": "USB-A 1",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Full Speed, for USB stick (licence/preset handling), mouse, or Wacom tablet"
+    },
+    {
+      "name": "USB-A 2",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "grade": "usb-2.0",
+      "note": "USB 2.0 Full Speed, for USB stick (licence/preset handling), mouse, or Wacom tablet"
+    },
+    {
+      "name": "DC Power In (24V)",
+      "direction": "input",
+      "connector": "xlr4-dc",
+      "note": "4-pin locking low-voltage connector, Binder Series 710 type (not literally XLR — closest available 4-pin-DC connector id used per spec). Nominal +24 V DC (accepts +12 to +24 V DC on some units), 1 A nominal / 2.5 A power-up. TM7-Rack ships without a power supply; RTW specifies external PSU 1178-R (100-240 V AC in / 24 V DC out, 2.71 A) as the required accessory, with a 2 A external overcurrent protection device required."
+    }
+  ]
+}

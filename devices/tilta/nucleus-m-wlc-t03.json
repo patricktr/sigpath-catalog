@@ -1,0 +1,23 @@
+{
+  "manufacturer": "Tilta",
+  "model": "Nucleus-M (WLC-T03)",
+  "category": "control",
+  "type": "Other",
+  "sourceUrl": "https://www.bhphotovideo.com/c/product/1367922-REG/tilta_nucleus_m_wireless_follow_focus.html/specs",
+  "confidence": "medium",
+  "notes": "Nucleus-M (WLC-T03) is a modular wireless lens-control (follow-focus/FIZ) kit, not a single fixed-I/O box: 1x Wireless FIZ Hand Unit, 2x Wireless Motors (built-in RF receivers), and 2x wireless handgrips (Focus / Iris+Zoom), packaged together. All external physical connectivity lives on the motors — each has two identical 7-pin LEMO-type locking ports used interchangeably for power-in (D-Tap-to-7-pin cable, included), motor daisy-chain (7-pin-to-7-pin cable, included), or an aftermarket Run/Stop camera-trigger cable (e.g. RS-03-AM, sold separately). No exact \"7-pin Lemo\" connector id exists in the allowed schema list; xlr4-dc was chosen only as the closest locking DC-power analog — it is not actually an XLR shell, and the port also carries RS-485-style control/daisy-chain data alongside DC power, so treat this mapping as approximate. Confirmed via manufacturer site (tilta.com) that motor DC input is 7.2-24 VDC, matching B&H's spec table exactly. Hand unit and both handgrips are each powered by 2x user-supplied 18650 Li-ion batteries (3.7 VDC) with no external charging port on the units themselves; a separate 4-slot 18650 charger (with its own AC cord) ships in the kit but is a distinct accessory, not part of this device's own I/O. No ports meet any graded connector category (SDI/HDMI/DP/USB/Ethernet), so grade is omitted throughout. Max peak torque 2.5 Nm, 1000 ft wireless range, 3-channel (focus/iris/zoom) control — included for context, not part of physical I/O. Category/type were force-fit to the closest available enum values (control / Other) since this is a cine lens-motor accessory, not a conventional AV control processor.",
+  "ports": [
+    {
+      "name": "Motor Port 1 (7-Pin)",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "Real connector is a proprietary 7-pin LEMO-type locking connector, not an XLR — closest schema analog for a locking DC-power connector. Carries 7.2-24 VDC motor power plus RS-485-style daisy-chain/control data. Interchangeably used as power input (via included D-Tap-to-7-pin cable), motor-to-motor daisy chain (7-pin-to-7-pin cable), or a Run/Stop camera-trigger cable."
+    },
+    {
+      "name": "Motor Port 2 (7-Pin)",
+      "direction": "bidirectional",
+      "connector": "xlr4-dc",
+      "note": "Second, identical 7-pin LEMO-type port on the same motor; functionally interchangeable with Motor Port 1 (power/daisy-chain/R-S)."
+    }
+  ]
+}

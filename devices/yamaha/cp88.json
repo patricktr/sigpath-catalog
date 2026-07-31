@@ -1,0 +1,105 @@
+{
+  "manufacturer": "Yamaha",
+  "model": "CP88",
+  "category": "audio",
+  "type": "Other",
+  "sourceUrl": "https://usa.yamaha.com/products/music_production/stagekeyboards/cp88_73/specs.html",
+  "confidence": "medium",
+  "notes": "Ports pulled verbatim from Yamaha USA's official CP88/CP73 spec table (fetched and grepped from raw HTML, TLS-verified, 2026-07-31). Confirmed connectors: 6.3mm (1/4\") TS phone jacks for unbalanced L/MONO+R line outs and AUX L/MONO+R inputs, XLR3 for balanced line outs, 6.3mm stereo phone jack (TRS) for headphones, 5-pin DIN MIDI In/Out, USB-B (TO HOST, doubles as USB audio/MIDI interface) and USB-A (TO DEVICE) ports. Not explicitly specified by Yamaha and therefore inferred/lower-confidence: (1) foot controller/footswitch jack types (TRS vs TS) — assigned TRS to FOOT CONTROLLER 1/2 and FOOT SWITCH SUSTAIN (continuous-sensing use cases, matching the bundled FC3A half-damper pedal) and TS to FOOT SWITCH ASSIGNABLE (simple on/off); (2) AC IN inlet standard — spec table only shows the label \"[AC IN]\" with a separate detachable \"Power cord x 1\" listed in box contents, so an IEC (C13/14) inlet was assumed rather than a captive cord; (3) no USB speed (e.g. USB 2.0) is published by Yamaha for either USB port, so grade was omitted per instructions. Desktop stage-piano form factor, not rack-mountable (rackUnits omitted). No listed \"type\" enum value fits a musical instrument/stage piano, so \"Other\" was used; category set to \"audio\" as the closest fit. Yamaha's official CP88 owner's manual PDF link found in search results returned 404 and was not used to cross-check.",
+  "ports": [
+    {
+      "name": "OUTPUT [L/MONO]",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced standard phone jack"
+    },
+    {
+      "name": "OUTPUT [R]",
+      "direction": "output",
+      "connector": "ts-6.35",
+      "note": "Unbalanced standard phone jack"
+    },
+    {
+      "name": "OUTPUT [L]",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR"
+    },
+    {
+      "name": "OUTPUT [R]",
+      "direction": "output",
+      "connector": "xlr3",
+      "note": "Balanced XLR"
+    },
+    {
+      "name": "PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Standard stereo phone jack"
+    },
+    {
+      "name": "FOOT CONTROLLER [1]",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Continuous foot controller jack; TRS inferred (needed for continuous-controller pedals like FC7), not explicitly stated by Yamaha"
+    },
+    {
+      "name": "FOOT CONTROLLER [2]",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Continuous foot controller jack; TRS inferred, not explicitly stated by Yamaha"
+    },
+    {
+      "name": "FOOT SWITCH [SUSTAIN]",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "TRS inferred to support half-damper continuous sensing with the bundled FC3A pedal; not explicitly stated by Yamaha"
+    },
+    {
+      "name": "FOOT SWITCH [ASSIGNABLE]",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "TS inferred for simple on/off footswitch; not explicitly stated by Yamaha"
+    },
+    {
+      "name": "MIDI [IN]",
+      "direction": "input",
+      "connector": "midi-din"
+    },
+    {
+      "name": "MIDI [OUT]",
+      "direction": "output",
+      "connector": "midi-din"
+    },
+    {
+      "name": "USB [TO HOST]",
+      "direction": "bidirectional",
+      "connector": "usb-b",
+      "note": "Carries MIDI and USB audio interface data; no USB speed grade published"
+    },
+    {
+      "name": "USB [TO DEVICE]",
+      "direction": "bidirectional",
+      "connector": "usb-a",
+      "note": "For USB storage devices; no USB speed grade published"
+    },
+    {
+      "name": "INPUT [L/MONO]",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "AUX audio input, standard phone jack"
+    },
+    {
+      "name": "INPUT [R]",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "AUX audio input, standard phone jack"
+    },
+    {
+      "name": "AC IN",
+      "direction": "input",
+      "connector": "iec",
+      "note": "Detachable power cord included in box; Yamaha's spec table labels this only as \"[AC IN]\" without stating the physical inlet standard (IEC C13/14 inferred from region-specific detachable cord)"
+    }
+  ]
+}

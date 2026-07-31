@@ -1,0 +1,53 @@
+{
+  "manufacturer": "DJI",
+  "model": "Focus Pro",
+  "category": "control",
+  "type": "Other",
+  "sourceUrl": "https://www.dji.com/focus-pro/specs",
+  "confidence": "high",
+  "notes": "DJI Focus Pro is a modular cinema lens-control (Automated Manual Focus / follow-focus) system, not a conventional AV routing/display device — category/type were mapped to the closest available schema values (\"control\"/\"Other\"); none of the provided `type` enum values (e.g. \"Control processor\") precisely describes a camera lens-control accessory, so treat that field as approximate. The system comprises 4 components: Hand Unit (wireless wheel controller), Motor (F/I/Z lens motor, sold in sets up to 3), LiDAR/AF module, and Grip (handgrip with built-in BG21 battery, \"Creator Combo\" only). The Hand Unit has NO physical data/power ports at all — it is powered solely by a removable Sony NP-F550-type battery via internal electronic contact pads and communicates purely over 2.4GHz wireless; this was confirmed against both the DJI spec page and the official PDF user manual (no port omitted). All data/power interconnects across the other three components use USB-C mechanically, but carry different protocols depending on port (plain USB data+power, CAN-bus motor/lens control signaling, or CVBS video passthrough) — DJI's spec sheet does not publish a USB signaling speed/version for any of them, so no `grade` was set on any port per the omit-when-unstated rule. Mechanical-only interfaces (cold shoe, NATO rail, 1/4\"-20 threaded holes) were excluded as they are not signal/power connectors. Cross-verified against the official DJI Focus Pro User Manual PDF (https://dl.djicdn.com/downloads/DJI_Focus_Pro/DJI_Focus_Pro_User_Manual_enII.pdf), fetched over verified HTTPS, which supplied the port diagrams/callouts (Grip Buttons and Ports, Hand Unit Buttons and Ports, Motor/LiDAR overviews) that the marketing spec page alone did not fully itemize.",
+  "ports": [
+    {
+      "name": "LiDAR Firmware Update Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Power/USB — used to connect the LiDAR/AF module to a computer for firmware updates"
+    },
+    {
+      "name": "LiDAR Data Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Carries Power/CVBS/CAN per DJI spec sheet — connects LiDAR module to the Grip's LiDAR port or to DJI RS 4 Pro/Ronin gimbal video-transmission port; CVBS video is passed over this USB-C connector via cable, not exposed as its own video jack"
+    },
+    {
+      "name": "Grip RSS Camera Control Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Camera control/shutter cable connection"
+    },
+    {
+      "name": "Grip Charging Port (USB-C)",
+      "direction": "input",
+      "connector": "usb-c",
+      "note": "Battery charging input, supports 18W USB-PD fast charging"
+    },
+    {
+      "name": "Grip LiDAR Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Powers and exchanges data with the LiDAR/AF module"
+    },
+    {
+      "name": "Grip Motor Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Powers and exchanges data with the Motor unit"
+    },
+    {
+      "name": "Motor Data Port (USB-C)",
+      "direction": "bidirectional",
+      "connector": "usb-c",
+      "note": "Each Motor unit has USB-C data/power port(s) (A1/B1/A12/B12 signal+GND, A2/B2 remote rec start/stop, IO tolerance <=5V); manual/usage instructions indicate motors can be daisy-chained up to 3 in series (F/I/Z), implying 2 USB-C ports per motor, though the overview diagram calls out only one labeled 'Data Port (USB-C)'. Powerable via provided D-TAP-to-USB-C cable from a V-mount battery, or via Grip/gimbal Motor port. Power input/output rated 6.6-17.2V"
+    }
+  ]
+}

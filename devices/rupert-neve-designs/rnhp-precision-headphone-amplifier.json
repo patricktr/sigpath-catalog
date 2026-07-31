@@ -1,0 +1,59 @@
+{
+  "manufacturer": "Rupert Neve Designs",
+  "model": "RNHP Precision Headphone Amplifier",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://rupertneve.com/s/775-00024RNHP-Manual_RevB.pdf",
+  "confidence": "high",
+  "notes": "Source is the manufacturer's own RNHP User Guide (p/n 775-00024 Rev B), linked from the product page at https://rupertneve.com/products/rnhp, which includes an annotated front/back panel diagram confirming every physical connector. Desktop/VESA-mountable unit, not rack-mountable, so rackUnits is omitted. Input A is a stereo pair of combo jacks (XLR3 primary, accepts 1/4\" TRS) calibrated for +4dBu balanced line level; Input B is a stereo pair of RCA jacks calibrated for -10dBV; Input C is a single 3.5mm stereo jack for mobile-device sources. Only one input is active at a time via the front-panel A/B/C selector switch (not a physical port). The single front-panel headphone output is a 1/4\" (6.35mm) stereo TRS jack rated for 16-600 ohm headphones. Power is via an external 24VDC/0.25A (6W min) adapter into a rear-panel barrel-style DC jack; no internal AC power connector exists on the chassis itself. No bandwidth-graded connectors are present (pure analog audio device), so no \"grade\" fields apply.",
+  "ports": [
+    {
+      "name": "Line Input A - Left",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack, calibrated +4dBu balanced line level"
+    },
+    {
+      "name": "Line Input A - Right",
+      "direction": "input",
+      "connector": "xlr3",
+      "accepts": [
+        "trs-6.35"
+      ],
+      "note": "Combo XLR/TRS jack, calibrated +4dBu balanced line level"
+    },
+    {
+      "name": "RCA Input B - Left",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced, calibrated -10dBV"
+    },
+    {
+      "name": "RCA Input B - Right",
+      "direction": "input",
+      "connector": "rca",
+      "note": "Unbalanced, calibrated -10dBV"
+    },
+    {
+      "name": "3.5mm Input C",
+      "direction": "input",
+      "connector": "trs-3.5",
+      "note": "Single stereo 3.5mm jack, calibrated for mobile-device line levels"
+    },
+    {
+      "name": "Headphone Output",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" stereo output, near-zero (.08 ohm) output impedance, drives 16-600 ohm headphones"
+    },
+    {
+      "name": "Power Input",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "24VDC, 0.25A min (6W); use with supplied external power adapter"
+    }
+  ]
+}

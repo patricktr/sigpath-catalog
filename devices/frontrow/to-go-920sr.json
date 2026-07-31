@@ -1,0 +1,26 @@
+{
+  "manufacturer": "FrontRow",
+  "model": "To Go 920SR",
+  "category": "amplifier",
+  "type": "Amplifier",
+  "sourceUrl": "https://manuals.plus/m/f79419d811450f66d1f14245525352a4186d141e3261ae4986161b8eecfa8589.pdf",
+  "confidence": "medium",
+  "notes": "\"FrontRow To Go\" is a 216 MHz wireless classroom sound-field/active-learning system made by FrontRow (a Phonic Ear brand), consisting of a 920SR two-channel column speaker/receiver (the mains-powered \"hub\"), a 921T body-worn transmitter and/or 922T handheld wireless microphone transmitter, and a 923C charging stand — all battery-powered/wireless except the 920SR. Ports above are for the 920SR receiver/speaker, the only component with wired signal/power connectors: AUX IN and AUX OUT are 3.5mm MONO jacks (mapped to trs-3.5 as the closest listed connector; no dedicated mono-3.5mm id exists). Power In is a DC barrel jack fed by an external 110/240V AC adaptor outputting 15V DC/2A (mapped to dc-barrel; the AC-mains side of that external adaptor is not modeled as a device port). The 920SR also has a detachable FM whip antenna (not in the connector list, omitted) and a separate 2.5mm microphone input jack on the 921T body-worn transmitter (a battery-powered wireless accessory, not included as a port of the 920SR). The 923C charging stand has its own DC power socket (12V/0.5A AC adaptor) but is a separate accessory. No digital (HDMI/USB/RJ45/SDI) ports exist on this legacy analog FM system, so no bandwidth grades apply. Source used is the original FrontRow/Phonic Ear \"FrontRow To Go\" user guide (model no. 4750, dated 5/9/05), which includes a full product-specifications table (pp. 55-57) for the 920SR, 921T, 922T, and 923C, hosted on manuals.plus; the manufacturer's original frontrowcompany.com domain no longer hosts this product (it now resolves to an unrelated business), so a live first-party spec page could not be used — confidence set to medium for that reason, though the manual content itself is authoritative and complete.",
+  "ports": [
+    {
+      "name": "AUX IN",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "AUX OUT",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "manufacturer": "PreSonus",
+  "model": "HP60",
+  "category": "audio",
+  "type": "Amplifier",
+  "rackUnits": 1,
+  "sourceUrl": "https://studiocare.com/products/presonus-hp60-6-channel-headphone-distribution-amplifier",
+  "confidence": "medium",
+  "notes": "6-channel, 1U (19\"W x 1.75\"H x 5.5\"D) rack-mount headphone distribution amplifier/mixer. Two global stereo mix buses (Mix A, Mix B) feed all 6 channels, each with separate balanced 1/4\" TRS Left/Right input jacks (4 jacks total for A+B). Each of the 6 channels additionally has its own rear-panel \"Stereo Ext. In\" (1/4\" TRS, unbalanced, for a third/local source) and its own \"Stereo Out\" (1/4\" TRS line-level copy of that channel's headphone mix) plus a front-panel 1/4\" TRS headphone jack. Talkback section has a balanced XLR mic input plus a 1/4\" TS external footswitch control jack. Power is via IEC inlet; sources disagree on whether voltage selection is a factory-set switch (115V/230V) or auto-sensing (100-240V) — this does not affect the port list. PreSonus's own product page (presonus.com) returned HTTP 429 (rate-limited) on every attempt and could not be fetched directly; B&H, Sweetwater, Crutchfield, and zZounds all returned 403 to automated fetch. Port list and labels were corroborated against the official PreSonus HP60 owner's manual (v1.1, rear-panel/back-panel-layout sections) as hosted on manualslib.com, in addition to the Studiocare retailer spec table used as sourceUrl.",
+  "ports": [
+    {
+      "name": "Mix A Left In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS, part of global Mix A stereo bus feeding all 6 channels"
+    },
+    {
+      "name": "Mix A Right In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS, part of global Mix A stereo bus feeding all 6 channels"
+    },
+    {
+      "name": "Mix B Left In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS, part of global Mix B stereo bus feeding all 6 channels"
+    },
+    {
+      "name": "Mix B Right In",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Balanced 1/4\" TRS, part of global Mix B stereo bus feeding all 6 channels"
+    },
+    {
+      "name": "Ext In 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 1 local/third-source input"
+    },
+    {
+      "name": "Ext In 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 2 local/third-source input"
+    },
+    {
+      "name": "Ext In 3",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 3 local/third-source input"
+    },
+    {
+      "name": "Ext In 4",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 4 local/third-source input"
+    },
+    {
+      "name": "Ext In 5",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 5 local/third-source input"
+    },
+    {
+      "name": "Ext In 6",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "Stereo unbalanced, channel 6 local/third-source input"
+    },
+    {
+      "name": "Talkback Mic In",
+      "direction": "input",
+      "connector": "xlr3",
+      "note": "Balanced XLR input for dynamic talkback microphone"
+    },
+    {
+      "name": "External Control",
+      "direction": "input",
+      "connector": "ts-6.35",
+      "note": "1/4\" TS footswitch jack, toggles talkback mic on/off"
+    },
+    {
+      "name": "Output 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 1's headphone mix"
+    },
+    {
+      "name": "Output 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 2's headphone mix"
+    },
+    {
+      "name": "Output 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 3's headphone mix"
+    },
+    {
+      "name": "Output 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 4's headphone mix"
+    },
+    {
+      "name": "Output 5",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 5's headphone mix"
+    },
+    {
+      "name": "Output 6",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Stereo line-level copy of channel 6's headphone mix"
+    },
+    {
+      "name": "Headphone 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Headphone 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Headphone 3",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Headphone 4",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Headphone 5",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Headphone 6",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "Front-panel 1/4\" TRS headphone output, 150 mW"
+    },
+    {
+      "name": "Power",
+      "direction": "input",
+      "connector": "iec",
+      "note": "IEC AC power inlet; sources disagree on factory-fixed 115/230V vs auto-switching 100-240V"
+    }
+  ]
+}

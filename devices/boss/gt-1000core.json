@@ -1,0 +1,95 @@
+{
+  "manufacturer": "Boss",
+  "model": "GT-1000CORE",
+  "category": "audio",
+  "type": "DSP",
+  "sourceUrl": "https://www.boss.info/global/products/gt-1000core/",
+  "confidence": "medium",
+  "notes": "Boss GT-1000CORE is a compact desktop guitar multi-effects/amp-modeling processor (not rack-mountable, no rackUnits). Categorized as DSP (closest fit among allowed types) since \"guitar effects processor\" is not a listed type option. Port list compiled from the official Boss.info product/spec page, cross-checked against the Owner's Manual panel-description pages (via ManualsLib mirror, since static.roland.com blocked direct fetch with HTTP 403) and Roland support articles for power-adaptor spec. INPUT L and R/MONO are both 1/4\" TS (unbalanced) instrument jacks — R/MONO is the primary guitar input; L is used only for stereo external-source input. OUTPUT R/MONO is 1/4\" TS; OUTPUT L/PHONES is 1/4\" TRS (doubles as a headphone jack). SEND1/2 and RETURN1/2 are TRS 1/4\" jacks that can alternately function as stereo SEND(L,R)/RETURN(L,R) or as SUB OUT/AUX IN — modeled per their default SEND/RETURN roles. MIDI IN/OUT use 3.5mm TRS mini-jacks (TRS-MIDI convention, not 5-pin DIN) — mapped to midi-din as the closest listed connector id since no TRS-MIDI id exists in the allowed list; a standard TRS/MIDI adaptor cable is required in practice. USB COMPUTER port is USB Micro-B for audio/MIDI to a computer (bidirectional) — no USB speed/grade stated in spec, so grade omitted. DC IN is an external 9V DC barrel-type power input (uses included PSA-series AC adaptor, ~670 mA draw); modeled as dc-barrel. No Ethernet, video, or other connector types are present on this device — it is a pure guitar-effects audio processor.",
+  "ports": [
+    {
+      "name": "INPUT R/MONO",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TS guitar/instrument input; used alone for mono input"
+    },
+    {
+      "name": "INPUT L",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TS; used together with R/MONO for stereo input from another effects unit"
+    },
+    {
+      "name": "OUTPUT R/MONO",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TS output to amp/mixer; used alone for mono output"
+    },
+    {
+      "name": "OUTPUT L/PHONES",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS; doubles as stereo headphone output"
+    },
+    {
+      "name": "SEND 1",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS; send to external effects loop 1 (can alternately serve as stereo SEND L or SUB OUT)"
+    },
+    {
+      "name": "RETURN 1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS; return from external effects loop 1 (can alternately serve as stereo RETURN L or AUX IN)"
+    },
+    {
+      "name": "SEND 2",
+      "direction": "output",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS; send to external effects loop 2 (can alternately serve as stereo SEND R or SUB OUT)"
+    },
+    {
+      "name": "RETURN 2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS; return from external effects loop 2 (can alternately serve as stereo RETURN R or AUX IN)"
+    },
+    {
+      "name": "CTL2,3/EXP1",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS jack for an expression pedal or dual footswitch"
+    },
+    {
+      "name": "CTL4,5/EXP2",
+      "direction": "input",
+      "connector": "trs-6.35",
+      "note": "1/4\" TRS jack for an expression pedal or dual footswitch; can also switch guitar-amp channels"
+    },
+    {
+      "name": "MIDI IN",
+      "direction": "input",
+      "connector": "midi-din",
+      "note": "3.5mm TRS mini-jack (TRS-MIDI), requires TRS/MIDI adaptor cable; closest available connector id to the actual 3.5mm mini-jack used"
+    },
+    {
+      "name": "MIDI OUT",
+      "direction": "output",
+      "connector": "midi-din",
+      "note": "3.5mm TRS mini-jack (TRS-MIDI), requires TRS/MIDI adaptor cable; closest available connector id to the actual 3.5mm mini-jack used"
+    },
+    {
+      "name": "USB COMPUTER",
+      "direction": "bidirectional",
+      "connector": "usb-micro",
+      "note": "USB Micro-B port for audio/MIDI interfacing with a computer"
+    },
+    {
+      "name": "DC IN",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "External 9V DC input from included PSA-series AC adaptor; also functions as the power switch"
+    }
+  ]
+}

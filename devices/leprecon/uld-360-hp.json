@@ -1,0 +1,61 @@
+{
+  "manufacturer": "Leprecon",
+  "model": "ULD-360-HP",
+  "category": "power",
+  "type": "Other",
+  "sourceUrl": "https://www.manualslib.com/manual/4389616/Leprecon-Uld-Series.html",
+  "confidence": "medium",
+  "notes": "ULD-360-HP is a portable, 6-channel, 3,600 W \"tree-mount\" dimmer/relay pack for entertainment lighting (vertical-mount via 1/2\" pipe clamp — not rack-mount, so rackUnits is omitted). Leprecon has discontinued all products; leprecon.com now 301-redirects to littlite.com/leprecon, which offers only email support/legacy docs, so no live manufacturer spec page exists. Specs here come from the official Leprecon \"ULD Series\" user manual (hosted at ManualsLib, sourceUrl) — specifically its \"Endplate Illustration – ULD-360DMX-HP\" and Specifications sections — corroborated by retailer listings (Markertek P/N 90-06-0270, ProAV Products, Used Lighting, Full Compass).\n\nConnector choices: the manual states factory output-connector options are \"stage pin, Nema 5-15 duplex, and Nema L5-20\" — none is a perfect match to the given taxonomy (no \"stage pin\" or twist-lock option exists in it), so this record documents the NEMA 5-15 Duplex variant, the closest clean match. A Stage Pin variant of the ULD-360-HP exists with identical power/DMX I/O but non-standard round stage-pin output connectors not representable in the given connector list. Each physical \"duplex\" receptacle (2 sockets) per channel is modeled as a single output port.\n\nPower input: the manual explicitly states the HP model is \"15 Amps per line cord (30 amps total capacity)\" via two separate line cords (Line A / Line B), each terminating in a standard NEMA 5-15 plug — consistent with the commonly quoted 3,600 W total (2 × 15 A × 120 V). One retailer (Markertek) instead lists \"2 Nema 5-20\" connectors / 20 A breakers for the same SKU; this discrepancy with the manual could not be resolved from available sources and may reflect a running product change or listing error. Single-breaker-per-line design; no individual per-channel fuses/breakers.\n\nDMX In/Out confirmed in the manual as standard 5-pin XLR (DMX512). No connector in this device qualifies for a bandwidth \"grade\" under the given rules (power, DMX/XLR5, and Edison-style connectors are outside the graded SDI/HDMI/DP/USB/Ethernet families), so grade is omitted on all ports. Physical size/weight (from ProAV Products listing, medium confidence): approx. 15.9\" H x 5.85\" W x 4.1\" D, 12 lb.",
+  "ports": [
+    {
+      "name": "Line A",
+      "direction": "input",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Line B",
+      "direction": "input",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 1",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 2",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 3",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 4",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 5",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "Channel 6",
+      "direction": "output",
+      "connector": "nema-5-15"
+    },
+    {
+      "name": "DMX In",
+      "direction": "input",
+      "connector": "xlr5"
+    },
+    {
+      "name": "DMX Out",
+      "direction": "output",
+      "connector": "xlr5"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "manufacturer": "FrontRow",
+  "model": "Juno",
+  "category": "audio",
+  "type": "Amplifier",
+  "sourceUrl": "https://boxlight.canto.com/direct/document/cns6fdj4lp1nvevio87vhhvn5q/bly7URanxvaYCpd39vsfTLIvHIk/original?content-type=application%2Fpdf&name=Juno+Datasheet-RevH.pdf",
+  "confidence": "high",
+  "notes": "FrontRow (a Boxlight brand) classroom sound-reinforcement \"digital communication platform\" — a self-amplified 2.1 speaker tower with mixed audio inputs, IR reception for wireless pendant/student microphones, and Bluetooth. Ports listed are for the base \"Juno\" tower (front + back panel) per the manufacturer datasheet (Juno Datasheet-RevH). Bluetooth is wireless-only and is not listed as a physical port. The datasheet lists \"3 RCA stereo audio in jacks\" (interpreted here as 3 L/R pairs = 6 RCA jacks) and \"2 RCA jacks for external sensor connection\" — exact rear-panel silkscreen labels were not confirmed beyond the spec-table wording. DC power input is a barrel/coaxial jack fed by an external 18VDC @ 3.3A supply; exact barrel diameter not stated for the Juno tower itself (a related accessory, the POE Extractor, uses a 2.1mm barrel, used here as the closest connector match: dc-barrel). No bandwidth-graded ports exist on the base unit, so no \"grade\" fields are set. Installing the optional Communication Module converts the unit into \"Juno Connect,\" adding: an RJ45 Intercom port, an RJ45 LAN port (for FrontRow Conductor campus communication), and an RS-232 serial control port on a captive terminal block (labeled \"COM (RS232)\") — these are NOT included in the port list below since they belong to the optional module/variant, not the base Juno. Rack units omitted — this is a freestanding/portable tower, not rack-mountable. Manufacturer sold under \"FrontRow by Boxlight\" branding; \"FrontRow\" used as manufacturer per on-product branding.",
+  "ports": [
+    {
+      "name": "3.5mm Audio In (Front)",
+      "direction": "input",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "RCA Audio In 1 (L)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 1 (R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 2 (L)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 2 (R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 3 (L)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "RCA Audio In 3 (R)",
+      "direction": "input",
+      "connector": "rca"
+    },
+    {
+      "name": "External Sensor In 1",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA jack for external IR sensor connection"
+    },
+    {
+      "name": "External Sensor In 2",
+      "direction": "input",
+      "connector": "rca",
+      "note": "RCA jack for external IR sensor connection"
+    },
+    {
+      "name": "Audio Out",
+      "direction": "output",
+      "connector": "trs-3.5"
+    },
+    {
+      "name": "DC Power In",
+      "direction": "input",
+      "connector": "dc-barrel",
+      "note": "18VDC @ 3.3A external power supply; barrel diameter not explicitly stated in datasheet"
+    }
+  ]
+}
